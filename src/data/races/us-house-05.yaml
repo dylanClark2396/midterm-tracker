@@ -1,35 +1,166 @@
-# Seeded from the Secretary of State's certified candidate list by
-# scripts/seed-from-certified-list.py. research_status: pending —
-# platforms and arguments not yet compiled.
+# U.S. House, District 5 — open seat in the general election. Rep. Andy Ogles lost the Aug. 6, 2026
+# Republican primary to Charlie Hatcher. District redrawn in the May 2026 special session.
+# Candidate order follows the Secretary of State's certified candidate list.
+_sources:
+  ch_home: &ch_home { url: "https://charliehatcher.com/", title: "Charlie Hatcher for Congress (Hatcher campaign)", accessed: 2026-10-13 }
+  ch_platform: &ch_platform { url: "https://charliehatcher.com/platform/", title: "Platform (Hatcher campaign)", accessed: 2026-10-13 }
+  ch_about: &ch_about { url: "https://charliehatcher.com/about/", title: "About Charlie (Hatcher campaign)", accessed: 2026-10-13 }
+  bp_hatcher: &bp_hatcher { url: "https://ballotpedia.org/Charlie_Hatcher", title: "Charlie Hatcher (Ballotpedia)", accessed: 2026-10-13 }
+  cm_home: &cm_home { url: "https://chazmolder.com/", title: "Chaz Molder for Congress (Molder campaign)", accessed: 2026-10-13 }
+  cm_issues: &cm_issues { url: "https://chazmolder.com/issues/", title: "Issues (Molder campaign)", accessed: 2026-10-13 }
+  cm_meet: &cm_meet { url: "https://chazmolder.com/meet-chaz/", title: "Meet Chaz (Molder campaign)", accessed: 2026-10-13 }
+  bp_molder: &bp_molder { url: "https://ballotpedia.org/Chaz_Molder", title: "Chaz Molder (Ballotpedia, incl. 2026 Candidate Connection survey)", accessed: 2026-10-13 }
+  lookout_guide: &lookout_guide { url: "https://tennesseelookout.com/voter-guides/contests/congressional-district-5-u-s-house-of-representatives/", title: "U.S. House, 5th Congressional District voter guide (Tennessee Lookout)", accessed: 2026-10-13 }
+  lookout_primary: &lookout_primary { url: "https://tennesseelookout.com/2026/08/06/draft-congressional-district-5/", title: "Former Tennessee agriculture commissioner Charlie Hatcher knocks Andy Ogles out of 5th District race (Tennessee Lookout)", accessed: 2026-10-13 }
+  lookout_debate: &lookout_debate { url: "https://tennesseelookout.com/2026/09/10/hatcher-says-hes-amenable-to-molders-challenge-to-debate-before-5th-district-election/", title: "Hatcher says he's amenable to Molder's challenge to debate before 5th District election (Tennessee Lookout)", accessed: 2026-10-13 }
+  nc5_molder: &nc5_molder { url: "https://www.newschannel5.com/news/newschannel-5-investigates/democrat-chaz-molder-seeks-tennessees-5th-district-seat-after-primary-upset-reshaped-the-race", title: "Democrat Chaz Molder seeks Tennessee's 5th District seat after primary upset reshaped the race (NewsChannel 5)", accessed: 2026-10-13 }
+  nc5_hatcher: &nc5_hatcher { url: "https://www.newschannel5.com/news/newschannel-5-investigates/it-still-feels-like-a-dream-dairy-farmer-beats-incumbent-andy-ogles-in-tenn-republican-primary-race", title: "'It still feels like a dream:' Dairy farmer beats incumbent Andy Ogles in Tenn. Republican primary race (NewsChannel 5)", accessed: 2026-10-13 }
+  wsmv_primary: &wsmv_primary { url: "https://www.wsmv.com/2026/08/07/trump-backed-incumbent-loses-tennessee-primary-fifth-generation-farmer/", title: "Trump-backed incumbent loses Tennessee primary to fifth-generation farmer (WSMV)", accessed: 2026-10-13 }
+  wkms_lee: &wkms_lee { url: "https://www.wkms.org/government-politics/2026-08-05/tennessee-gov-lee-endorses-hatcher-over-incumbent-ogles-in-gop-primary", title: "Tennessee Gov. Lee endorses Hatcher over incumbent Ogles in GOP primary (WKMS)", accessed: 2026-10-13 }
+  wpln_primary: &wpln_primary { url: "https://wpln.org/post/incumbent-and-trump-pick-ogles-loses-gop-primary-for-tennessee-district-5/", title: "Incumbent and Trump pick Ogles loses GOP primary for Tennessee District 5 (WPLN)", accessed: 2026-10-13 }
+  scene_hatcher: &scene_hatcher { url: "https://www.williamsonscene.com/news/charlie-hatcher-andy-ogles-tennessee-congressional-seat/article_dee10a5c-5296-488d-acda-888f8f1ef9b2.html", title: "Charlie Hatcher frames redrawn Congressional District 5 map as strength to unseat Andy Ogles (Williamson Scene)", accessed: 2026-10-13 }
+
 id: us-house-05
 office: "U.S. House, District 5"
 level: us_house
 district: 5
-research_status: pending
+research_status: complete
 candidate_list_source: "https://sos-prod.tnsosgovfiles.com/s3fs-public/document/USHouse_Nov2026.pdf"
+
 candidates:
   - name: "Charlie Hatcher"
     ballot_party: Republican
     city: "College Grove"
-    why_running: { text: null, sources: [] }
-    platform: []
-    arguments: []
+    incumbent: false
+    website: "https://charliehatcher.com/"
+    bio_facts:
+      - { text: "Tennessee Commissioner of Agriculture, 2019–2025.", sources: [*bp_hatcher] }
+      - { text: "Served as Tennessee State Veterinarian before becoming agriculture commissioner; joined the state agriculture department in 2009.", sources: [*bp_hatcher, *scene_hatcher] }
+      - { text: "Livestock veterinarian and dairy farmer who operates Hatcher Family Dairy in College Grove.", sources: [*lookout_guide, *bp_hatcher] }
+      - { text: "Defeated incumbent U.S. Rep. Andy Ogles in the Aug. 6, 2026 Republican primary, 53.3% to 46.7%. This is his first campaign for office.", sources: [*bp_molder, *lookout_guide] }
+      - { text: "His College Grove home was drawn out of the 5th District in the May 2026 redistricting; he continued his campaign under state rules that suspended candidate residency requirements.", sources: [*nc5_molder, *wpln_primary] }
+    why_running:
+      text: >-
+        He says he is running to bring real-world experience as a farmer, veterinarian, business owner, and agriculture
+        commissioner to Washington, and to make sure Washington remembers the people it is supposed to serve. He says
+        the President is the most impactful president of our lifetime but needs help from someone with a farmer's work-hard mentality, and
+        that he wants to be a congressman who answers the phone, shows up, and listens.
+      sources: [*ch_about, *ch_home, *ch_platform]
+    platform:
+      - category: cost_of_living
+        text: "Lower the cost of living by fighting inflationary federal spending, unnecessary regulations, and policies that raise energy and business costs."
+        sources: [*ch_platform]
+      - category: taxes
+        text: "Cut wasteful federal spending and fraud and work toward reducing the national debt without breaking promises to seniors and veterans."
+        sources: [*ch_platform]
+      - category: agriculture
+        text: "Protect American farmers and the food supply through stronger agricultural biosecurity, and bar foreign adversaries from buying American farmland, especially near sensitive sites."
+        sources: [*ch_platform]
+      - category: immigration
+        text: "Enforce immigration laws, give Border Patrol more personnel, technology, and resources, and keep a legal immigration system for those who follow the rules."
+        sources: [*ch_platform]
+      - category: infrastructure
+        text: "An all-of-the-above domestic energy strategy (natural gas, nuclear, renewables), faster permitting, and federal help for roads, bridges, water systems, and broadband."
+        sources: [*ch_platform]
+      - category: guns
+        text: "Defend the Second Amendment and oppose new federal restrictions on law-abiding gun owners."
+        sources: [*ch_platform]
+      - category: abortion
+        text: "Supports the sanctity of human life."
+        sources: [*ch_platform]
+      - category: veterans
+        text: "Demand better accountability and service from the VA and support law enforcement and first responders."
+        sources: [*ch_platform]
+    arguments:
+      - stance: for
+        text: >-
+          As a working farmer, veterinarian, former State Veterinarian, and agriculture commissioner, he understands
+          threats to the nation's food supply and how federal decisions affect farmers and small businesses.
+        sources: [*ch_platform, *ch_about, *lookout_primary]
+      - stance: for
+        text: >-
+          People who have known him for decades vouch for his values and love of country, and say he raises the
+          standard of what Tennessee expects.
+        sources: [*wkms_lee, *scene_hatcher]
+      - stance: for
+        text: >-
+          He promises hands-on constituent service: meeting voters where they are, returning calls, and continuing to
+          visit communities across the district once in office.
+        sources: [*ch_platform, *wsmv_primary, *lookout_debate]
+      - stance: for
+        text: >-
+          He would work closely with the current administration on its policy initiatives, while saying he will vote
+          the way he believes best represents the district even when that differs from the White House.
+        sources: [*wsmv_primary, *ch_home, *scene_hatcher]
+      - stance: against
+        text: >-
+          He supports the same national policies that got Washington into its current problems, some of which have
+          raised the cost of living; electing him would continue them rather than fix them.
+        sources: [*nc5_molder]
+
   - name: "Chaz Molder"
     ballot_party: Democratic
     city: "Columbia"
-    why_running: { text: null, sources: [] }
-    platform: []
-    arguments: []
+    incumbent: false
+    website: "https://chazmolder.com/"
+    bio_facts:
+      - { text: "Mayor of Columbia since 2018; re-elected in 2022.", sources: [*cm_meet, *cm_home] }
+      - { text: "Attorney; graduate of the University of Tennessee (2005) and the University of Memphis law school (2009).", sources: [*bp_molder] }
+      - { text: "Won the Aug. 6, 2026 Democratic primary with about 41% of the vote in a five-candidate field.", sources: [*bp_molder] }
+      - { text: "His Columbia home was drawn out of the 5th District in the May 2026 redistricting; he continued his campaign under state rules that suspended candidate residency requirements.", sources: [*wpln_primary] }
+    why_running:
+      text: >-
+        He says he is running to combat corruption and rising costs in Washington, and that the failed policies behind
+        the problems there remain no matter who his opponent is. He says his loyalty will be to the people of the 5th
+        District rather than to any one person, and that he wants a representative who listens, responds, and acts on
+        local concerns.
+      sources: [*cm_home, *nc5_molder, *cm_issues]
+    platform:
+      - category: cost_of_living
+        text: "Lower everyday costs such as health care, housing, and groceries for families, farmers, and seniors."
+        sources: [*cm_issues, *bp_molder]
+      - category: economy
+        text: "Stand up for workers' right to organize and strengthen labor protections."
+        sources: [*cm_issues, *bp_molder]
+      - category: health_care
+        text: "Lower health care costs, support rural hospitals so they stay open, expand insurance coverage, and invest in preventive care."
+        sources: [*cm_issues, *bp_molder]
+      - category: government
+        text: "Ban stock trading by members of Congress."
+        sources: [*cm_issues, *bp_molder]
+    arguments:
+      - stance: for
+        text: >-
+          As mayor he passed balanced budgets every year with no property tax increases while investing in education,
+          public safety, and infrastructure.
+        sources: [*cm_meet, *nc5_molder]
+      - stance: for
+        text: >-
+          As mayor he has focused on practical local issues rather than national fights, and his campaign draws support
+          from voters of every party.
+        sources: [*cm_home]
+      - stance: for
+        text: >-
+          His loyalty would be to the people of the district rather than to any single figure in Washington; he says he
+          would be neither "an enemy or employee" of the President.
+        sources: [*nc5_molder]
+      - stance: for
+        text: >-
+          He would restore trust in Congress by pushing to ban members from trading stocks so lawmakers put
+          constituents ahead of personal gain.
+        sources: [*cm_issues, *bp_molder]
+      - stance: for
+        text: >-
+          He proposed three debates in different regions of the district so residents need not drive hours to hear both
+          nominees, saying the candidates should do the traveling.
+        sources: [*lookout_debate]
+
   - name: "James A. Johnson"
     ballot_party: Independent
     city: "Memphis"
-    why_running: { text: null, sources: [] }
-    platform: []
-    arguments: []
+
   - name: "Micheál (Me-Haul) O'Leary"
     ballot_party: Independent
     city: "Nashville"
-    why_running: { text: null, sources: [] }
-    platform: []
-    arguments: []
+
 last_verified: 2026-10-13
