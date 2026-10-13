@@ -4,7 +4,6 @@ _sources:
   oped: &oped { url: "https://www.timesfreepress.com/news/2026/oct/06/opinion-vote-yes-on-amendment-2-to-keep-tennessee/", title: "Vote Yes on Amendment 2 to keep Tennessee free from a state property tax (op-ed, Chattanooga Times Free Press)", accessed: 2026-10-13 }
   fox17: &fox17 { url: "https://fox17.com/news/local/2025-3-18-tennessee-senate-advances-amendment-to-ban-state-property-tax-nashville-tn", title: "Tennessee Senate advances amendment to ban state property tax (FOX 17)", accessed: 2026-10-13 }
   wkrn: &wkrn { url: "https://www.yahoo.com/news/politics/articles/tennessee-voters-decide-whether-ban-224041063.html", title: "Tennessee voters to decide whether to ban a tax the state hasn't collected in 77 years (WKRN, via Yahoo News)", accessed: 2026-10-13 }
-  tcn: &tcn { url: "https://tennesseeconservativenews.com/initiative-permanently-banning-tennessee-statewide-property-tax-anticipated-for-upcoming-legislative-session/", title: "Initiative permanently banning Tennessee statewide property tax anticipated for upcoming legislative session (Tennessee Conservative News)", accessed: 2026-10-13 }
   claiborne: &claiborne { url: "https://claiborneprogress.net/?p=24488", title: "Tennessee Senate votes for resolution blocking statewide property tax (Claiborne Progress / The Center Square)", accessed: 2026-10-13 }
   lk0602: &lk0602 { url: "https://tennesseelookout.com/2026/06/02/tennessee-lawmakers-push-ban-on-state-property-tax/", title: "Tennessee lawmakers push ban on state property tax (Tennessee Lookout)", accessed: 2026-10-13 }
   beacon: &beacon { url: "https://www.beacontn.org/why-tennessee-doesnt-need-a-state-property-tax/", title: "Why Tennessee Doesn't Need a State Property Tax (Beacon Center)", accessed: 2026-10-13 }
@@ -102,11 +101,6 @@ arguments:
       The amendment is unnecessary. The state has not taxed property since 1949, no one is proposing to bring it back,
       and there is no threat to guard against.
     sources: [*wkrn, *lkguide, *explained]
-  - stance: no
-    text: >-
-      The broad phrase "levy, authorize, or otherwise permit" could be read to reach state taxes on businesses that are
-      based partly on property values, which could cost the state millions in revenue and threaten its bond rating.
-    sources: [*tcn, *wkrn]
   - stance: no
     text: >-
       Locking the ban into the Constitution binds lawmakers decades from now, whatever circumstances they face,
