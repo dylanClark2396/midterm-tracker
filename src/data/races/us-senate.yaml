@@ -1,0 +1,233 @@
+# U.S. Senate — Sen. Bill Hagerty is seeking a second term.
+# Candidate order follows the Secretary of State's certified candidate list.
+# teamhagerty.com blocks automated access, so its pages are cited via Internet Archive snapshots.
+_sources:
+  bh_announce: &bh_announce { url: "https://web.archive.org/web/20250423203409/https://www.teamhagerty.com/news/senator-bill-hagerty-announces-re-election-for-united-states-senate", title: "Senator Bill Hagerty announces re-election for United States Senate (Hagerty campaign, archived)", accessed: 2026-10-13 }
+  bh_meet: &bh_meet { url: "https://web.archive.org/web/20250125015803/https://teamhagerty.com/meet-bill/", title: "Meet Bill (Hagerty campaign, archived)", accessed: 2026-10-13 }
+  bh_support: &bh_support { url: "https://web.archive.org/web/20250423210905/https://www.teamhagerty.com/news/what-they-are-saying-support-for-senator-hagertys-re-election-rolls-in", title: "What they are saying: support for Senator Hagerty's re-election (Hagerty campaign, archived)", accessed: 2026-10-13 }
+  bh_senate: &bh_senate { url: "https://www.hagerty.senate.gov/about/", title: "About Senator Hagerty (U.S. Senate)", accessed: 2026-10-13 }
+  firefly_bh: &firefly_bh { url: "https://tnfirefly.com/news/us-senator-bill-hagerty-shakes-up-next-years-governors-race-by-opting-to-run-for-re-election", title: "Hagerty opts to run for re-election (Tennessee Firefly)", accessed: 2026-10-13 }
+  mqb_priorities: &mqb_priorities { url: "https://www.marquitabradshaw.com/priorities", title: "Priorities (Bradshaw campaign)", accessed: 2026-10-13 }
+  mqb_meet: &mqb_meet { url: "https://www.marquitabradshaw.com/meet-marquita", title: "Meet Marquita (Bradshaw campaign)", accessed: 2026-10-13 }
+  knox: &knox { url: "https://www.yahoo.com/news/politics/articles/u-senate-voters-guide-tennessee-080120700.html", title: "U.S. Senate voter's guide for Tennessee: Meet candidates Bradshaw and Hagerty (Knox News)", accessed: 2026-10-13 }
+  banner: &banner { url: "https://nashvillebanner.com/2026/08/06/marquita-bradshaw-bill-hagerty-tennessee-senate-rematch/", title: "Hagerty, Bradshaw set for 2020 rematch in U.S. Senate race (Nashville Banner)", accessed: 2026-10-13 }
+  lookout: &lookout { url: "https://tennesseelookout.com/voter-guides/contests/2026-u-s-senate/", title: "U.S. Senate voter guide (Tennessee Lookout)", accessed: 2026-10-13 }
+  gerena_home: &gerena_home { url: "https://jeranimo4senate.org/", title: "Andrew Gerena for US Senate (Gerena campaign)", accessed: 2026-10-13 }
+  gerena_issues: &gerena_issues { url: "https://jeranimo4senate.org/issues", title: "My Political Stance (Gerena campaign)", accessed: 2026-10-13 }
+
+id: us-senate
+office: "U.S. Senate"
+level: statewide
+district: null
+research_status: complete
+candidate_list_source: "https://sos-prod.tnsosgovfiles.com/s3fs-public/document/USSenate_Nov2026.pdf"
+
+candidates:
+  - name: "Bill Hagerty"
+    ballot_party: Republican
+    city: Nashville
+    incumbent: true
+    website: "https://teamhagerty.com/"
+    bio_facts:
+      - { text: "U.S. Senator from Tennessee, elected in 2020.", sources: [*bh_senate] }
+      - { text: "U.S. Ambassador to Japan before joining the Senate.", sources: [*bh_senate] }
+      - { text: "Commissioner of the Tennessee Department of Economic and Community Development, 2011–2014.", sources: [*bh_senate] }
+    why_running:
+      text: >-
+        He says there is more work to do on inflation, threats from China, and the southern border, and that he is
+        running to keep fighting for lower taxes, energy independence, secure borders, and the rule of law, and to help
+        the current administration's agenda succeed.
+      sources: [*bh_announce, *firefly_bh]
+    platform:
+      - category: taxes
+        text: "Lower taxes."
+        sources: [*bh_announce]
+      - category: infrastructure
+        text: "Pursue American energy independence."
+        sources: [*bh_announce]
+      - category: immigration
+        text: "Secure the southern border and stop illegal immigration."
+        sources: [*bh_announce, *bh_meet]
+      - category: economy
+        text: "Support small businesses, reduce federal regulatory overreach, and bring critical supply chains back to the U.S. from China."
+        sources: [*bh_announce, *bh_meet]
+      - category: foreign_policy
+        text: "Counter threats from the Chinese Communist Party and strengthen national security."
+        sources: [*bh_announce, *bh_meet]
+      - category: public_safety
+        text: "Uphold the rule of law and support law enforcement officers."
+        sources: [*bh_announce, *bh_meet]
+      - category: guns
+        text: "Defend Second Amendment rights."
+        sources: [*bh_meet]
+      - category: abortion
+        text: "Protect unborn life."
+        sources: [*bh_meet]
+    arguments:
+      - stance: for
+        text: >-
+          His background in business, as the state's economic development commissioner, and as U.S. Ambassador to Japan
+          gives him rare experience in job creation, trade, and foreign affairs.
+        sources: [*bh_meet, *bh_senate]
+      - stance: for
+        text: >-
+          He has already delivered results for Tennessee, and his leadership matters as the state advances economic
+          opportunity, public safety, and energy security.
+        sources: [*bh_support]
+      - stance: for
+        text: >-
+          He has been a consistent advocate for small businesses, border security, fighting crime, protecting
+          constitutional rights, and cutting wasteful federal spending.
+        sources: [*bh_support]
+      - stance: for
+        text: >-
+          He is a close ally of the current White House, giving Tennessee a strong voice as the administration's agenda
+          moves through Congress.
+        sources: [*bh_support, *bh_announce]
+      - stance: against
+        text: >-
+          Before he was sworn in, he publicly questioned the 2020 presidential election results, citing unspecified
+          irregularities.
+        sources: [*lookout]
+      - stance: against
+        text: >-
+          He did not take part in a major newspaper's voter guide interview or questionnaire, leaving voters fewer
+          chances to hear him answer questions directly.
+        sources: [*knox]
+      - stance: against
+        text: >-
+          Families are struggling to afford basics like milk, eggs, and diapers, and tariffs have hit Tennessee farmers
+          hard. He has committed to advancing the federal agenda behind those policies.
+        sources: [*knox, *bh_announce]
+      - stance: against
+        text: >-
+          Tennessee deserves a senator who answers to voters rather than to the corporations and billionaires that fund
+          large campaigns.
+        sources: [*mqb_priorities]
+
+  - name: "Marquita Bradshaw"
+    ballot_party: Democratic
+    city: Memphis
+    incumbent: false
+    website: "https://www.marquitabradshaw.com"
+    bio_facts:
+      - { text: "Executive director of Sowing Justice, an environmental justice nonprofit.", sources: [*mqb_meet] }
+      - { text: "Was the 2020 nominee for this Senate seat and lost to Bill Hagerty by 27 percentage points.", sources: [*banner] }
+    why_running:
+      text: >-
+        She says Tennesseans deserve a senator who answers to them rather than to corporations and billionaires, and
+        that her public service is rooted in the challenges working families face and in giving them a stronger voice
+        in Washington.
+      sources: [*mqb_priorities, *mqb_meet]
+    platform:
+      - category: education
+        text: "Well-funded public schools and competitive pay and resources for teachers."
+        sources: [*mqb_priorities]
+      - category: economy
+        text: "Expand access to good-paying jobs, support small businesses, ensure fair wages, and raise the federal minimum wage."
+        sources: [*mqb_priorities, *knox]
+      - category: cost_of_living
+        text: "Expand affordable housing, help renters and first-time homebuyers, and address homelessness."
+        sources: [*mqb_priorities]
+      - category: health_care
+        text: "Affordable care regardless of income or preexisting conditions; lower prescription drug costs; protect rural hospitals; expand mental health and maternal care."
+        sources: [*mqb_priorities, *knox]
+      - category: government
+        text: "Equal access to the ballot and independent redistricting."
+        sources: [*mqb_priorities]
+      - category: infrastructure
+        text: "Affordable, reliable high-speed internet for every Tennessean, especially in rural areas."
+        sources: [*mqb_priorities]
+      - category: environment
+        text: "Advance clean energy, reduce pollution, and prepare communities for climate threats."
+        sources: [*mqb_priorities]
+      - category: agriculture
+        text: "Pursue mutually beneficial trade agreements, saying tariffs have hit farmers hard."
+        sources: [*knox]
+    arguments:
+      - stance: for
+        text: >-
+          Her years of community work on environmental health and workers' rights give her direct insight into what
+          working families need, and she has experienced firsthand how housing and unemployment policy can keep a
+          family in its home.
+        sources: [*mqb_meet, *knox]
+      - stance: for
+        text: >-
+          Her focus on everyday costs — groceries, rent, health care, and rural hospital closures — addresses the
+          problems families feel most directly.
+        sources: [*knox]
+      - stance: for
+        text: >-
+          She is running a grassroots campaign that does not depend on corporate money, so she would answer to
+          Tennesseans.
+        sources: [*mqb_priorities]
+      - stance: against
+        text: >-
+          After losing the 2020 race by 27 points, she refused to concede and later called conceding an "antiquated
+          tradition."
+        sources: [*banner]
+
+  - name: "Tharon Chandler"
+    ballot_party: Independent
+    city: Lawrenceburg
+
+  - name: "Andrew Gerena"
+    ballot_party: Independent
+    city: Knoxville
+    website: "https://jeranimo4senate.org/"
+    why_running:
+      text: >-
+        He says politics has drifted away from basic principles, that officials should serve the public rather than
+        foreign governments or corporations, and that he is tired of the status quo.
+      sources: [*gerena_home]
+    platform:
+      - category: foreign_policy
+        text: "Shift money from the military budget to education, infrastructure, research, and job training; cut military aid to countries suspected of war crimes; investigate the lobbying group AIPAC; repeal the Patriot Act."
+        sources: [*gerena_issues]
+      - category: taxes
+        text: "Reject any tax increase and budget conservatively."
+        sources: [*gerena_issues]
+      - category: health_care
+        text: "Overhaul the profit-based health care system and let veterans choose their own providers."
+        sources: [*gerena_issues]
+      - category: government
+        text: "End public-facing mass surveillance systems and investigate companies that run them; release the Epstein files."
+        sources: [*gerena_issues]
+      - category: infrastructure
+        text: "Build modern nuclear and renewable power plants and high-speed passenger rail."
+        sources: [*gerena_issues]
+      - category: economy
+        text: "Protect the right to repair, add truck terminals for drivers, and require financial literacy classes in high schools."
+        sources: [*gerena_issues]
+      - category: public_safety
+        text: "Make the death penalty available by jury decision for child sex offenders and traffickers, and make AI-generated news about real people a felony."
+        sources: [*gerena_issues]
+      - category: environment
+        text: "Expand protections for parks and wildlife and regulate the environmental and privacy effects of AI data centers."
+        sources: [*gerena_issues]
+
+  - name: "Jeremy Dean Hearn"
+    ballot_party: Independent
+    city: Collierville
+
+  - name: "Robert Jones"
+    ballot_party: Independent
+    city: Jonesborough
+
+  - name: "James William Macon III"
+    ballot_party: Independent
+    city: Memphis
+
+  - name: "Yoshi D. Matthews"
+    ballot_party: Independent
+    city: Goodlettsville
+
+  - name: "David Sutman, Jr."
+    ballot_party: Independent
+    city: Gray
+
+  - name: "Catherine Barcel \"Barcy\" Whitson"
+    ballot_party: Independent
+    city: Chattanooga
+
+last_verified: 2026-10-13

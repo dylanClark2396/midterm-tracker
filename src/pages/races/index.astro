@@ -1,0 +1,44 @@
+---
+import { getCollection } from 'astro:content';
+import Base from '../../layouts/Base.astro';
+import { url, LEVELS } from '../../lib/site';
+
+const races = (await getCollection('races')).map((r) => r.data);
+const groups = (Object.keys(LEVELS) as (keyof typeof LEVELS)[]).map((level) => ({
+  level,
+  label: LEVELS[level],
+  races: races
+    .filter((r) => r.level === level)
+    .sort((a, b) => (a.district ?? 0) - (b.district ?? 0) || a.office.localeCompare(b.office)),
+}));
+---
+
+<Base title="Races" description="Every race on the November 3, 2026 Tennessee ballot, grouped by level.">
+  <h1>Races</h1>
+  <p class="lede">
+    Every race on the November 3, 2026 ballot, from the Secretary of State's certified candidate lists. Use
+    <a href={url('districts')}>Find your districts</a> if you're not sure which district races are on your ballot.
+  </p>
+  <p class="muted small">
+    <span class="badge">Full profile</span> means candidate platforms and arguments have been compiled.
+    <span class="badge">Candidates only</span> means the page currently lists the certified candidates; platforms and
+    arguments are still being compiled.
+  </p>
+
+  {groups.map((g) => (
+    <section aria-labelledby={g.level}>
+      <h2 id={g.level}>{g.label}</h2>
+      <ul class="race-list">
+        {g.races.map((r) => (
+          <li>
+            <a href={url(`races/${r.id}`)}>{g.level === 'statewide' ? r.office : `District ${r.district}`}</a>{' '}
+            <span class="muted small">
+              ({r.candidates.length === 0 ? 'no candidate qualified' : `${r.candidates.length} ${r.candidates.length === 1 ? 'candidate' : 'candidates'}`})
+            </span>{' '}
+            <span class="badge">{r.research_status === 'complete' ? 'Full profile' : 'Candidates only'}</span>
+          </li>
+        ))}
+      </ul>
+    </section>
+  ))}
+</Base>

@@ -1,0 +1,143 @@
+# Amendment 3 — Crime victims' rights (Article I, Section 35)
+_sources:
+  wpln: &wpln { url: "https://wpln.org/post/tennessee-amendment-3-gives-voters-say-on-marsys-law-and-expanded-crime-victim-rights/", title: "Tennessee Amendment 3 gives voters say on Marsy's Law and expanded crime victim rights (WPLN)", accessed: 2026-10-13 }
+  fox: &fox { url: "https://foxchattanooga.com/news/local/tennessee-voters-to-weigh-in-on-crime-victims-rights-amendment-in-november-election", title: "Tennessee voters to weigh in on crime victims' rights amendment in November election (FOX Chattanooga)", accessed: 2026-10-13 }
+  aclu: &aclu { url: "https://www.aclu-tn.org/news/what-is-on-the-ballot-in-tennessee/", title: "What's on the ballot in Tennessee? (ACLU of Tennessee)", accessed: 2026-10-13 }
+
+id: victims-rights
+number: 3
+title: "Crime victims' rights"
+article: "Article I, Section 35"
+resolutions:
+  - { name: "HJR 94 (113th General Assembly)", url: "https://publications.tnsosfiles.com/acts/113/resolutions/hjr0094.pdf" }
+  - { name: "SJR 9 (114th General Assembly)", url: "https://publications.tnsosfiles.com/acts/114/resolutions/sjr0009.pdf" }
+
+ballot_question: |
+  Shall Article I, Section 35 of the Constitution of Tennessee be amended by deleting the section in its entirety and substituting the following:
+
+  Section 35. That to preserve and protect the rights of victims of crime to justice and due process throughout the criminal and juvenile justice systems, a victim, as defined by law and which may be expanded by the General Assembly, shall have the following rights, which shall be protected:
+
+  (1) The right to be treated with fairness for the victim's safety and dignity;
+
+  (2) The right, upon request, to reasonable notice of all public criminal proceedings and all public juvenile delinquency proceedings involving the accused;
+
+  (3) The right to be present at all public criminal proceedings and all public juvenile delinquency proceedings involving the accused;
+
+  (4) The right upon request to be heard in any proceeding involving release, plea, sentencing, disposition, and parole, as well as any public proceeding when relevant during which a right of the victim is implicated;
+
+  (5) The right to be heard and informed of all parole procedures, to participate in the parole process, to provide information to the parole authority to be considered before the parole of the offender, and to be notified, upon request, of the parole or other release of the offender;
+
+  (6) The right to be free from harassment, intimidation, and abuse throughout the criminal justice system, including reasonable protection, as defined by the General Assembly, from the accused or any person acting on behalf of the accused;
+
+  (7) The right, upon request, to reasonable notice of any release, transfer, or escape of the accused or convicted person;
+
+  (8) The right to full and timely restitution from the offender;
+
+  (9) The right to a speedy trial or disposition and a prompt and final conclusion of the case after the conviction or sentence;
+
+  (10) The right to be informed of the minimum sentence the offender will serve in custody and the scheduled release date;
+
+  (11) The right to have the safety of the victim, the victim's family, and the general public considered before any parole or other post-judgment release decision is made;
+
+  (12) The right, upon request, to confer with the prosecution; and
+
+  (13) The right to be fully informed of all rights afforded to crime victims.
+
+  A victim may assert the rights enumerated in this section, not as a party, but in the manner further provided by the General Assembly protecting the victim's right to standing. The General Assembly has the authority to enact substantive and procedural laws to further define, implement, preserve, and protect the rights guaranteed to victims by this section. This section must be interpreted to preserve and protect the rights of all persons to due process. This section, or any law enacted under this section, does not create a basis for vacating a conviction. This section does not restrict the powers of the District Attorney General or the inherent authority of the court.
+
+  Other than as provided in the preceding paragraph, this section does not create a cause of action or claim for damages against the state or a political subdivision of the state; an officer, employee, or agent of the state or of any of its political subdivisions; or an officer or employee of the court.
+
+official_summary: >-
+  This amendment changes Article I, section 35 of the Tennessee Constitution by clarifying existing rights for
+  crime victims and adding new rights. The amendment gives victims new rights: to fair treatment; to be informed
+  about and participate in the parole process; to be protected from harassment, intimidation, and abuse; to be
+  informed of the minimum sentence the convicted criminal will serve, as well as their scheduled release date; and
+  to have their safety, their family's safety, and the public's safety taken into account before any decision is
+  made to release the convicted criminal. The amendment also maintains or clarifies victims' existing rights: to
+  be informed about legal proceedings involving the accused or convicted criminal; to be present at public criminal
+  proceedings; to be informed of any release, transfer, or escape of the accused or convicted criminal; to talk to
+  prosecutors; to make statements about conviction, sentencing, or release of the accused person; to a speedy
+  resolution of the case; to restitution from the convicted criminal; and to be informed of their rights. The
+  amendment does not restrict the powers of prosecutors or courts and does not create a cause of action or claim
+  for damages against the State of Tennessee.
+
+summary_plain: >-
+  Tennessee's Constitution has listed rights for crime victims since 1998. This amendment would replace that
+  section with a longer list of 13 rights, adding rights in the parole process, protection from harassment, notice
+  of the offender's minimum sentence and release date, and consideration of safety before release. It also covers
+  juvenile delinquency proceedings. Victims could assert these rights in ways the legislature defines, but the
+  amendment does not limit prosecutors or courts and does not let anyone sue the state for damages. A YES vote
+  adopts the new section; a NO vote keeps the current section.
+
+fiscal_note:
+  summary: >-
+    The Fiscal Review Committee estimates a one-time increase in local government expenditures of $9,400 in
+    FY 2026-27 for the cost of publishing a longer sample ballot. The note does not estimate any other costs.
+  url: "https://www.capitol.tn.gov/Bills/114/Fiscal/SJR0009.pdf"
+
+legislative_votes:
+  - { resolution: "HJR 94 (113th)", chamber: House, date: 2023-04-21, yes: 92, no: 0, present_not_voting: 1, url: "https://wapp.capitol.tn.gov/apps/BillInfo/Default.aspx?BillNumber=HJR0094&GA=113" }
+  - { resolution: "HJR 94 (113th)", chamber: Senate, date: 2024-02-22, yes: 27, no: 3, present_not_voting: 3, url: "https://wapp.capitol.tn.gov/apps/BillInfo/Default.aspx?BillNumber=HJR0094&GA=113" }
+  - { resolution: "SJR 9 (114th)", chamber: Senate, date: 2025-03-03, yes: 27, no: 5, url: "https://wapp.capitol.tn.gov/apps/BillInfo/Default.aspx?BillNumber=SJR0009&GA=114" }
+  - { resolution: "SJR 9 (114th)", chamber: House, date: 2025-04-21, yes: 93, no: 0, present_not_voting: 0, url: "https://wapp.capitol.tn.gov/apps/BillInfo/Default.aspx?BillNumber=SJR0009&GA=114" }
+
+official_source: "https://sos.tn.gov/elections/announcements/2026-proposed-constitutional-amendments"
+
+arguments:
+  - stance: yes
+    text: >-
+      The victims' rights added in 1998 have proven inadequate and largely unenforceable in practice. This version
+      gives victims rights they can actually assert, with a process the legislature must create.
+    sources: [*wpln, *fox]
+  - stance: yes
+    text: >-
+      Victims gain a real voice in parole: the right to be informed, to take part, and to have their safety and their
+      family's safety considered before an offender is released.
+    sources: [*wpln]
+  - stance: yes
+    text: >-
+      A victim's concern about an attacker's release does not depend on the attacker's age, so these rights should
+      also apply when the offender is a juvenile.
+    sources: [*wpln]
+  - stance: yes
+    text: >-
+      Notifications become something a victim asks for, rather than something they must opt out of, so victims who
+      do not want updates are not forced to relive the crime.
+    sources: [*wpln]
+  - stance: yes
+    text: >-
+      Defendants' rights are spelled out in the Constitution; placing victims' rights there too brings them closer
+      to equal footing in the justice system.
+    sources: [*fox]
+  - stance: yes
+    text: >-
+      Unlike versions adopted in some other states, this one leaves out language on keeping victims' records
+      private, which elsewhere was used to withhold the names of officers involved in use-of-force cases. It also
+      does not limit prosecutors or courts.
+    sources: [*wpln]
+  - stance: no
+    text: >-
+      Crime victims already have rights in the Tennessee Constitution. The state can improve services for victims and
+      awareness of existing rights without amending the Constitution again.
+    sources: [*aclu, *wpln]
+  - stance: no
+    text: >-
+      Laws can be strengthened year after year, but constitutional text is slow to change. Fixing this list in the
+      Constitution could make it harder to expand victims' rights later and could end up hurting victims.
+    sources: [*wpln]
+  - stance: no
+    text: >-
+      Comparing victims' rights to the rights of the accused is misleading. The accused's protections exist to limit
+      the government's power to arrest, prosecute, and punish.
+    sources: [*aclu]
+  - stance: no
+    text: >-
+      Adding new rights for victims at every stage of a case could erode the presumption of innocence, especially in
+      juvenile cases.
+    sources: [*aclu]
+  - stance: no
+    text: >-
+      It is unclear how the state would pay for the extra work these rights could create for courts.
+    sources: [*wpln]
+
+last_verified: 2026-10-13

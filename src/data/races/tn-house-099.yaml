@@ -1,0 +1,16 @@
+# Generated from the Secretary of State's certified candidate list (TNHouse_Nov2026.xlsx).
+# research_status: pending — platforms and arguments not yet compiled.
+id: tn-house-099
+office: "Tennessee House, District 99"
+level: state_house
+district: 99
+research_status: pending
+candidate_list_source: "https://sos-prod.tnsosgovfiles.com/s3fs-public/document/TNHouse_Nov2026.pdf"
+candidates:
+  - name: "Tom Leatherwood"
+    ballot_party: Republican
+    city: "Arlington"
+  - name: "William P Mouzon"
+    ballot_party: Independent
+    city: "Bartlett"
+last_verified: 2026-10-13

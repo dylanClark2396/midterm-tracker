@@ -1,0 +1,31 @@
+# Generated from the Secretary of State's certified candidate list (USHouse_Nov2026.xlsx).
+# research_status: pending — platforms and arguments not yet compiled.
+id: us-house-03
+office: "U.S. House, District 3"
+level: us_house
+district: 3
+research_status: pending
+candidate_list_source: "https://sos-prod.tnsosgovfiles.com/s3fs-public/document/USHouse_Nov2026.pdf"
+candidates:
+  - name: "Chuck Fleischmann"
+    ballot_party: Republican
+    city: "Ooltewah"
+  - name: "Anna Golladay"
+    ballot_party: Democratic
+    city: "Chattanooga"
+  - name: "Dean Arnold"
+    ballot_party: Independent
+    city: "East Ridge"
+  - name: "Jean Howard-Hill"
+    ballot_party: Independent
+    city: "Chattanooga"
+  - name: "Rodney Joe King"
+    ballot_party: Independent
+    city: "Powell"
+  - name: "Donnie Lynn Ownby"
+    ballot_party: Independent
+    city: "Philadelphia"
+  - name: "Edward John Roland"
+    ballot_party: Independent
+    city: "Chattanooga"
+last_verified: 2026-10-13

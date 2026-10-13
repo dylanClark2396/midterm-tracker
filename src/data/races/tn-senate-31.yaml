@@ -1,0 +1,16 @@
+# Generated from the Secretary of State's certified candidate list (TNSenate_Nov2026.xlsx).
+# research_status: pending — platforms and arguments not yet compiled.
+id: tn-senate-31
+office: "Tennessee Senate, District 31"
+level: state_senate
+district: 31
+research_status: pending
+candidate_list_source: "https://sos-prod.tnsosgovfiles.com/s3fs-public/document/TNSenate_Nov2026.pdf"
+candidates:
+  - name: "Brent Taylor"
+    ballot_party: Republican
+    city: "Eads"
+  - name: "David Weatherspoon"
+    ballot_party: Democratic
+    city: "Germantown"
+last_verified: 2026-10-13

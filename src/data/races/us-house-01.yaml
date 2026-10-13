@@ -1,0 +1,31 @@
+# Generated from the Secretary of State's certified candidate list (USHouse_Nov2026.xlsx).
+# research_status: pending — platforms and arguments not yet compiled.
+id: us-house-01
+office: "U.S. House, District 1"
+level: us_house
+district: 1
+research_status: pending
+candidate_list_source: "https://sos-prod.tnsosgovfiles.com/s3fs-public/document/USHouse_Nov2026.pdf"
+candidates:
+  - name: "Diana Harshbarger"
+    ballot_party: Republican
+    city: "Kingsport"
+  - name: "Kristi Burke"
+    ballot_party: Democratic
+    city: "Chuckey"
+  - name: "Joshua Ray Ashburn"
+    ballot_party: Independent
+    city: "Bristol"
+  - name: "Richard G. Baker"
+    ballot_party: Independent
+    city: "Johnson City"
+  - name: "Chris Campbell"
+    ballot_party: Independent
+    city: "Bristol"
+  - name: "Billy Cody"
+    ballot_party: Independent
+    city: "Kingsport"
+  - name: "Tyler Brice Mitchell McClain"
+    ballot_party: Independent
+    city: "Kingsport"
+last_verified: 2026-10-13

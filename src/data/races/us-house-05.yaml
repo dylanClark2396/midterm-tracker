@@ -1,0 +1,22 @@
+# Generated from the Secretary of State's certified candidate list (USHouse_Nov2026.xlsx).
+# research_status: pending — platforms and arguments not yet compiled.
+id: us-house-05
+office: "U.S. House, District 5"
+level: us_house
+district: 5
+research_status: pending
+candidate_list_source: "https://sos-prod.tnsosgovfiles.com/s3fs-public/document/USHouse_Nov2026.pdf"
+candidates:
+  - name: "Charlie Hatcher"
+    ballot_party: Republican
+    city: "College Grove"
+  - name: "Chaz Molder"
+    ballot_party: Democratic
+    city: "Columbia"
+  - name: "James A. Johnson"
+    ballot_party: Independent
+    city: "Memphis"
+  - name: "Micheál (Me-Haul) O'Leary"
+    ballot_party: Independent
+    city: "Nashville"
+last_verified: 2026-10-13

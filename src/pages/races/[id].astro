@@ -1,0 +1,143 @@
+---
+import { getCollection } from 'astro:content';
+import Base from '../../layouts/Base.astro';
+import ArgColumns from '../../components/ArgColumns.astro';
+import Refs from '../../components/Refs.astro';
+import Sources from '../../components/Sources.astro';
+import { url, formatDate, prepareRace, LEVELS, GOVOTETN } from '../../lib/site';
+import { categories } from '../../lib/rules';
+
+export async function getStaticPaths() {
+  const races = await getCollection('races');
+  return races.map((r) => ({ params: { id: r.data.id }, props: { race: r.data } }));
+}
+
+const { race } = Astro.props;
+const label = Object.fromEntries(categories.map((c) => [c.id, c.label]));
+const view = prepareRace(
+  race,
+  categories.map((c) => c.id),
+);
+const checked = formatDate(race.last_verified);
+const slug = (name: string) => name.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '');
+const complete = race.research_status === 'complete';
+---
+
+<Base title={race.office} description={`${race.office}: candidates on the November 3, 2026 Tennessee ballot${complete ? ', their platforms, and arguments for and against each' : ''}.`}>
+  <p class="breadcrumb"><a href={url('races')}>Races</a> · {LEVELS[race.level]}</p>
+  <h1>{race.office}</h1>
+  <p class="muted">
+    {race.candidates.length} {race.candidates.length === 1 ? 'candidate' : 'candidates'} on the ballot · Last verified {checked} ·{' '}
+    <a href={race.candidate_list_source}>Official candidate list</a>
+  </p>
+
+  {race.candidates.length === 0 && (
+    <div class="notice"><p style="margin:0">No candidate qualified for this race, according to the Secretary of State's certified candidate list.</p></div>
+  )}
+
+  {!complete && race.candidates.length > 0 && (
+    <>
+      <div class="notice">
+        <p style="margin:0">
+          <strong>Candidates only, for now.</strong> This page lists the certified candidates. Platforms and arguments for
+          this race have not been compiled yet. For your exact ballot, see <a href={GOVOTETN}>GoVoteTN</a>.
+        </p>
+      </div>
+      <h2>Candidates</h2>
+      <ul class="plain-list">
+        {race.candidates.map((c) => (
+          <li>{c.name}<span class="party">{c.ballot_party}</span>{c.city && <span class="muted small"> · {c.city}</span>}</li>
+        ))}
+      </ul>
+      <p class="small muted">Party is shown as printed on the official ballot. Candidates are listed in the order of the certified candidate list.</p>
+    </>
+  )}
+
+  {complete && (
+    <>
+      <h2>Candidates</h2>
+      <p class="small muted">
+        Party is shown as printed on the official ballot. Candidates are listed in the order of the Secretary of State's
+        certified candidate list.
+      </p>
+      <ul class="candidate-list">
+        {race.candidates.map((c) => (
+          <li><a href={`#${slug(c.name)}`}>{c.name}</a><span class="party">{c.ballot_party}</span></li>
+        ))}
+      </ul>
+
+      <h2 id="compare">Compare platforms</h2>
+      <p class="small muted">
+        Each cell paraphrases what the candidate says they will do, from their own campaign materials, questionnaires,
+        or interviews. Rows are shared issue categories; only categories at least one candidate addressed are shown.
+      </p>
+      {view.tableCandidates.length > 0 && (
+        <div class="table-scroll" tabindex="0" role="region" aria-label="Platform comparison table">
+          <table class="compare">
+            <thead>
+              <tr>
+                <th scope="col">Issue</th>
+                {view.tableCandidates.map((c) => <th scope="col">{c.name}<br /><span class="party" style="margin:0">{c.ballot_party}</span></th>)}
+              </tr>
+            </thead>
+            <tbody>
+              {view.usedCategories.map((cat) => (
+                <tr>
+                  <th scope="row">{label[cat]}</th>
+                  {view.tableCandidates.map((c) => {
+                    const p = c.planks?.get(cat);
+                    return <td>{p ? <>{p.text}<Refs refs={p.refs} /></> : <span class="none">No stated position</span>}</td>;
+                  })}
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </div>
+      )}
+      {view.noPlatform.length > 0 && (
+        <p class="small">
+          <strong>No published platform found</strong> (checked {checked}) for: {view.noPlatform.map((c) => c.name).join(', ')}.
+        </p>
+      )}
+
+      {view.candidates.map((c) => (
+        <article class="candidate" id={slug(c.name)} aria-labelledby={`${slug(c.name)}-h`}>
+          <h2 id={`${slug(c.name)}-h`}>{c.name}<span class="party">{c.ballot_party}{c.incumbent ? ' · incumbent' : ''}</span></h2>
+          <p class="muted small">
+            {c.city && <>{c.city}</>}
+            {c.website && <> · <a href={c.website} rel="noopener">Campaign website</a></>}
+          </p>
+
+          {c.bio.length > 0 && (
+            <>
+              <h3>Facts</h3>
+              <ul class="plain-list">{c.bio.map((b) => <li>{b.text}<Refs refs={b.refs} /></li>)}</ul>
+            </>
+          )}
+
+          <h3>Why they're running</h3>
+          {c.why ? <p>{c.why.text}<Refs refs={c.why.refs} /></p> : <p class="none">No stated reason found (checked {checked}).</p>}
+
+          <h3>Platform</h3>
+          {c.platformItems.length > 0 ? (
+            <dl class="planks">
+              {c.platformItems.map((p) => (
+                <>
+                  <dt>{label[p.category]}</dt>
+                  <dd>{p.text}<Refs refs={p.refs} /></dd>
+                </>
+              ))}
+            </dl>
+          ) : (
+            <p class="none">No published platform found (checked {checked}).</p>
+          )}
+
+          <h3>Arguments</h3>
+          <ArgColumns id={slug(c.name)} labels={['Arguments for', 'Arguments against']} columns={[c.forArgs, c.againstArgs]} checked={race.last_verified} headingLevel="h4" />
+        </article>
+      ))}
+    </>
+  )}
+
+  <Sources sources={view.sources} />
+</Base>

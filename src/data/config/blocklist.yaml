@@ -1,0 +1,25 @@
+# Terms that may not appear in any argument text. Arguments are shown without
+# labels, so wording that reveals a party or ideology is rejected at build time.
+# Matching is case-insensitive on whole words; a trailing * matches any suffix.
+terms:
+  - Republican*
+  - Democrat*
+  - GOP
+  - conservative*
+  - liberal*
+  - progressive*
+  - MAGA
+  - left-wing
+  - right-wing
+  - far-left
+  - far-right
+  - socialist*
+  - libertarian*
+  - leftist*
+  - "America First"
+  - woke
+  - Trump*
+  - Biden*
+  - Harris
+  - partisan
+  - bipartisan

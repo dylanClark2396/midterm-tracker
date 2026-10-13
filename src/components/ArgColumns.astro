@@ -1,0 +1,39 @@
+---
+import Refs from './Refs.astro';
+import type { Item } from '../lib/site';
+import { formatDate } from '../lib/site';
+
+// Two equal columns. On narrow screens they become tabs; the first tab (YES /
+// For) is always the default, as documented on the method page.
+interface Props {
+  id: string;
+  labels: [string, string];
+  columns: [Item[], Item[]];
+  checked: Date;
+  headingLevel?: 'h3' | 'h4';
+}
+const { id, labels, columns, checked, headingLevel = 'h3' } = Astro.props;
+const Heading = headingLevel;
+---
+
+<div class="cols" data-tabs>
+  <div class="tablist" role="tablist" aria-label="Arguments">
+    {labels.map((label, i) => (
+      <button type="button" role="tab" id={`${id}-tab-${i}`} aria-controls={`${id}-panel-${i}`} aria-selected={i === 0 ? 'true' : 'false'}>
+        {label} ({columns[i].length})
+      </button>
+    ))}
+  </div>
+  {labels.map((label, i) => (
+    <section class:list={['col', { active: i === 0 }]} role="tabpanel" id={`${id}-panel-${i}`} aria-labelledby={`${id}-tab-${i}`}>
+      <Heading class="col-h">{label}</Heading>
+      {columns[i].length > 0 ? (
+        <ul class="args">
+          {columns[i].map((a) => <li>{a.text}<Refs refs={a.refs} /></li>)}
+        </ul>
+      ) : (
+        <p class="none">No published arguments found (checked {formatDate(checked)}).</p>
+      )}
+    </section>
+  ))}
+</div>

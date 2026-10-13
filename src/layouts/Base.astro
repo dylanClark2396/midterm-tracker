@@ -1,0 +1,95 @@
+---
+import '../styles/global.css';
+import { url, REPO_URL, CORRECTION_URL } from '../lib/site';
+
+interface Props {
+  title: string;
+  description?: string;
+}
+
+const { title, description = 'Arguments for and against everything on the November 3, 2026 Tennessee ballot, shown without party or group labels.' } = Astro.props;
+const path = Astro.url.pathname;
+const nav = [
+  { href: url('amendments'), label: 'Amendments' },
+  { href: url('races'), label: 'Races' },
+  { href: url('districts'), label: 'Find your districts' },
+  { href: url('method'), label: 'How this guide works' },
+];
+const pageTitle = title === 'Home' ? 'TN 2026 Ballot Guide' : `${title} · TN 2026 Ballot Guide`;
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>{pageTitle}</title>
+    <meta name="description" content={description} />
+    <link rel="icon" type="image/svg+xml" href={`${import.meta.env.BASE_URL.replace(/\/$/, '')}/favicon.svg`} />
+    <meta name="color-scheme" content="light dark" />
+    <script is:inline>document.documentElement.classList.add('js');</script>
+  </head>
+  <body>
+    <a class="skip" href="#main">Skip to content</a>
+    <header class="site-header">
+      <div class="wrap">
+        <a class="brand" href={url()}>TN 2026 Ballot Guide</a>
+        <nav class="site-nav" aria-label="Main">
+          <ul>
+            {nav.map((n) => <li><a href={n.href} aria-current={path.startsWith(n.href) ? 'page' : undefined}>{n.label}</a></li>)}
+          </ul>
+        </nav>
+      </div>
+    </header>
+    <main id="main">
+      <div class="wrap">
+        <slot />
+      </div>
+    </main>
+    <footer class="site-footer">
+      <div class="wrap">
+        <p>
+          <strong>Not affiliated</strong> with any party, campaign, candidate, or government agency. This is not voting
+          advice: the guide never tells you how to vote. Arguments are paraphrased from published sources and shown
+          without labels; see <a href={url('method')}>how this guide works</a>.
+        </p>
+        <p>
+          Spotted an error? <a href={CORRECTION_URL}>Suggest a correction</a> (a source link is required). ·
+          <a href={REPO_URL}>Source code and data</a>
+        </p>
+      </div>
+    </footer>
+    <script>
+      // Mobile tabs for argument columns. Without JS both columns simply stack.
+      for (const group of document.querySelectorAll<HTMLElement>('[data-tabs]')) {
+        const buttons = [...group.querySelectorAll<HTMLButtonElement>('[role="tab"]')];
+        const panels = [...group.querySelectorAll<HTMLElement>('[role="tabpanel"]')];
+        const select = (i: number, focus = false) => {
+          buttons.forEach((b, j) => {
+            b.setAttribute('aria-selected', String(i === j));
+            b.tabIndex = i === j ? 0 : -1;
+            panels[j].classList.toggle('active', i === j);
+          });
+          if (focus) buttons[i].focus();
+        };
+        buttons.forEach((b, i) => {
+          b.addEventListener('click', () => select(i));
+          b.addEventListener('keydown', (e) => {
+            if (e.key === 'ArrowRight' || e.key === 'ArrowLeft') {
+              e.preventDefault();
+              select((i + (e.key === 'ArrowRight' ? 1 : buttons.length - 1)) % buttons.length, true);
+            }
+          });
+        });
+        select(0);
+      }
+      // Open the collapsed sources list when a footnote marker is followed.
+      const openSources = () => {
+        const target = location.hash && document.getElementById(location.hash.slice(1));
+        target?.closest('details')?.setAttribute('open', '');
+      };
+      addEventListener('hashchange', openSources);
+      openSources();
+    </script>
+  </body>
+</html>

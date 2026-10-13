@@ -1,0 +1,12 @@
+---
+// Footnote markers. Sources are never named next to text; readers who want to
+// know where an item came from follow the number to the Sources list.
+interface Props {
+  refs: number[];
+}
+const { refs } = Astro.props;
+---
+
+{refs.length > 0 && (
+  <sup class="refs">{refs.map((n, i) => <>{i > 0 && ' '}<a href={`#src-${n}`} aria-label={`Source ${n}`}>[{n}]</a></>)}</sup>
+)}

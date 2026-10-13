@@ -1,0 +1,18 @@
+# Shared issue categories for candidate platforms. Every race uses this list,
+# so readers can compare candidates side by side. Order here = row order in
+# the compare table.
+- { id: economy, label: "Economy & jobs" }
+- { id: taxes, label: "Taxes & spending" }
+- { id: cost_of_living, label: "Cost of living & housing" }
+- { id: education, label: "Education" }
+- { id: health_care, label: "Health care" }
+- { id: public_safety, label: "Public safety & justice" }
+- { id: immigration, label: "Immigration" }
+- { id: infrastructure, label: "Infrastructure & energy" }
+- { id: environment, label: "Environment & land" }
+- { id: guns, label: "Firearms" }
+- { id: abortion, label: "Abortion" }
+- { id: government, label: "Government & elections" }
+- { id: agriculture, label: "Agriculture & rural" }
+- { id: veterans, label: "Military & veterans" }
+- { id: foreign_policy, label: "Foreign policy & national security" }

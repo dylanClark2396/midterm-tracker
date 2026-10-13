@@ -1,0 +1,22 @@
+# Generated from the Secretary of State's certified candidate list (USHouse_Nov2026.xlsx).
+# research_status: pending — platforms and arguments not yet compiled.
+id: us-house-07
+office: "U.S. House, District 7"
+level: us_house
+district: 7
+research_status: pending
+candidate_list_source: "https://sos-prod.tnsosgovfiles.com/s3fs-public/document/USHouse_Nov2026.pdf"
+candidates:
+  - name: "Matt Van Epps"
+    ballot_party: Republican
+    city: "Nashville"
+  - name: "Darden Copeland"
+    ballot_party: Democratic
+    city: "Nashville"
+  - name: "Andrew J. Koontz"
+    ballot_party: Independent
+    city: "Portland"
+  - name: "Lowell Reynolds"
+    ballot_party: Independent
+    city: "Nashville"
+last_verified: 2026-10-13

@@ -1,0 +1,34 @@
+# Generated from the Secretary of State's certified candidate list (USHouse_Nov2026.xlsx).
+# research_status: pending — platforms and arguments not yet compiled.
+id: us-house-08
+office: "U.S. House, District 8"
+level: us_house
+district: 8
+research_status: pending
+candidate_list_source: "https://sos-prod.tnsosgovfiles.com/s3fs-public/document/USHouse_Nov2026.pdf"
+candidates:
+  - name: "David Kustoff"
+    ballot_party: Republican
+    city: "Germantown"
+  - name: "Heidi Kuhn"
+    ballot_party: Democratic
+    city: "Cordova"
+  - name: "Adam D. Austill"
+    ballot_party: Independent
+    city: "Covington"
+  - name: "Wendell \"Wells\" Blankenship"
+    ballot_party: Independent
+    city: "Memphis"
+  - name: "Antonio Futch"
+    ballot_party: Independent
+    city: "Memphis"
+  - name: "Pamela Jeanine \"P.\" Moses"
+    ballot_party: Independent
+    city: "Memphis"
+  - name: "Horace Taylor"
+    ballot_party: Independent
+    city: "Germantown"
+  - name: "Henry J. Ward, III"
+    ballot_party: Independent
+    city: "Millington"
+last_verified: 2026-10-13

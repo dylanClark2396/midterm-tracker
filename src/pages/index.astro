@@ -1,0 +1,59 @@
+---
+import { getCollection } from 'astro:content';
+import Base from '../layouts/Base.astro';
+import { url, GOVOTETN, LEVELS } from '../lib/site';
+
+const amendments = (await getCollection('amendments')).sort((a, b) => a.data.number - b.data.number);
+const races = (await getCollection('races')).map((r) => r.data);
+const statewide = races.filter((r) => r.level === 'statewide').sort((a, b) => a.office.localeCompare(b.office));
+const count = (level: keyof typeof LEVELS) => races.filter((r) => r.level === level).length;
+---
+
+<Base title="Home">
+  <p class="breadcrumb">Tennessee general election</p>
+  <h1>Tuesday, November 3, 2026</h1>
+  <p class="lede">
+    What's on the ballot, and the arguments for and against each item — shown without party, ideology, or group
+    labels so every argument stands on its own. This guide never tells you how to vote.
+  </p>
+
+  <div class="notice">
+    <p style="margin:0">
+      <strong>Early voting:</strong> October 14 through October 29. Bring a valid photo ID. For your exact sample
+      ballot, polling place, and hours, use the state's <a href={GOVOTETN}>GoVoteTN</a> tools.
+    </p>
+  </div>
+
+  <h2>Constitutional amendments</h2>
+  <p>Three proposed amendments appear directly after the governor's race. <a href={url('amendments')}>How they pass</a>.</p>
+  <div class="grid">
+    {amendments.map((a) => (
+      <a class="card-link" href={url(`amendments/${a.data.id}`)}>
+        <div class="card">
+          <h3>Amendment {a.data.number}: {a.data.title}</h3>
+          <p class="muted small" style="margin:0">{a.data.article}</p>
+        </div>
+      </a>
+    ))}
+  </div>
+
+  <h2>Statewide races</h2>
+  <div class="grid">
+    {statewide.map((r) => (
+      <a class="card-link" href={url(`races/${r.id}`)}>
+        <div class="card">
+          <h3>{r.office}</h3>
+          <p class="muted small" style="margin:0">{r.candidates.length} candidates on the ballot</p>
+        </div>
+      </a>
+    ))}
+  </div>
+
+  <h2>District races</h2>
+  <ul class="plain-list">
+    <li><a href={url('races/#us_house')}>U.S. House</a> — all {count('us_house')} districts, under the map adopted in May 2026</li>
+    <li><a href={url('races/#state_senate')}>Tennessee Senate</a> — {count('state_senate')} odd-numbered districts</li>
+    <li><a href={url('races/#state_house')}>Tennessee House</a> — all {count('state_house')} districts</li>
+  </ul>
+  <p>Not sure which districts you live in? <a href={url('districts')}>Find your districts</a>.</p>
+</Base>

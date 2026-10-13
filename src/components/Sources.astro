@@ -1,0 +1,23 @@
+---
+import type { Source } from '../lib/site';
+import { formatDate } from '../lib/site';
+
+interface Props {
+  sources: Source[];
+}
+const { sources } = Astro.props;
+---
+
+{sources.length > 0 && (
+  <details class="sources" id="sources">
+    <summary>Sources ({sources.length})</summary>
+    <p class="muted small">Listed in numeric order. Numbers match the markers in the text above.</p>
+    <ol>
+      {sources.map((s, i) => (
+        <li id={`src-${i + 1}`}>
+          <a href={s.url} rel="noopener">{s.title}</a> <span class="muted">— {new URL(s.url).hostname.replace(/^www\./, '')}, accessed {formatDate(s.accessed)}</span>
+        </li>
+      ))}
+    </ol>
+  </details>
+)}

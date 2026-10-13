@@ -1,0 +1,25 @@
+---
+import { getCollection } from 'astro:content';
+import Base from '../../layouts/Base.astro';
+import PassageRule from '../../components/PassageRule.astro';
+import { url } from '../../lib/site';
+
+const amendments = (await getCollection('amendments')).sort((a, b) => a.data.number - b.data.number);
+---
+
+<Base title="Constitutional amendments" description="The three proposed Tennessee constitutional amendments on the November 3, 2026 ballot, with arguments for and against.">
+  <h1>Constitutional amendments</h1>
+  <p class="lede">Three proposed changes to the Tennessee Constitution are on the November 3, 2026 ballot.</p>
+  <PassageRule />
+  <div class="grid">
+    {amendments.map((a) => (
+      <a class="card-link" href={url(`amendments/${a.data.id}`)}>
+        <div class="card">
+          <h2 style="margin-top:0.25rem">Amendment {a.data.number}: {a.data.title}</h2>
+          <p class="muted small">{a.data.article}</p>
+          <p style="margin:0">{a.data.summary_plain.split('. ').slice(0, 2).join('. ')}.</p>
+        </div>
+      </a>
+    ))}
+  </div>
+</Base>

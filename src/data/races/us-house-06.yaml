@@ -1,0 +1,22 @@
+# Generated from the Secretary of State's certified candidate list (USHouse_Nov2026.xlsx).
+# research_status: pending — platforms and arguments not yet compiled.
+id: us-house-06
+office: "U.S. House, District 6"
+level: us_house
+district: 6
+research_status: pending
+candidate_list_source: "https://sos-prod.tnsosgovfiles.com/s3fs-public/document/USHouse_Nov2026.pdf"
+candidates:
+  - name: "Johnny Garrett"
+    ballot_party: Republican
+    city: "Goodlettsville"
+  - name: "Mike Croley"
+    ballot_party: Democratic
+    city: "Crossville"
+  - name: "Christopher B. Monday"
+    ballot_party: Independent
+    city: "Cookeville"
+  - name: "Angus Purdy"
+    ballot_party: Independent
+    city: "Nashville"
+last_verified: 2026-10-13

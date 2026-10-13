@@ -1,0 +1,45 @@
+name: Suggest a correction
+description: Report an error, a missing argument, or a candidate platform we haven't included. A source link is required.
+title: "[Correction] "
+labels: [correction]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for helping keep this guide accurate. Every change must trace to a published source.
+        Arguments are added **without** labels (no party, group, or person), and a candidate's platform comes only from the candidate's own materials.
+  - type: input
+    id: page
+    attributes:
+      label: Page
+      description: Link to the page on the guide (or the amendment / race name).
+    validations:
+      required: true
+  - type: dropdown
+    id: kind
+    attributes:
+      label: What kind of change?
+      options:
+        - Factual error
+        - Missing argument
+        - Argument wording is unfair or reveals its origin
+        - Candidate platform or reason for running
+        - Broken or outdated source link
+        - Other
+    validations:
+      required: true
+  - type: textarea
+    id: details
+    attributes:
+      label: What should change?
+      description: Describe the change. For a new argument, state it as a plain claim.
+    validations:
+      required: true
+  - type: input
+    id: source
+    attributes:
+      label: Source URL (required)
+      description: A published source that supports the change. For official facts, use a .gov source.
+      placeholder: https://
+    validations:
+      required: true

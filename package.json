@@ -1,0 +1,21 @@
+{
+  "name": "tn-ballot-guide",
+  "type": "module",
+  "version": "0.0.1",
+  "engines": {
+    "node": ">=22.12.0"
+  },
+  "scripts": {
+    "dev": "astro dev",
+    "validate": "astro sync",
+    "build": "astro build",
+    "preview": "astro preview",
+    "check:links": "node scripts/check-links.mjs",
+    "astro": "astro"
+  },
+  "dependencies": {
+    "astro": "^7.3.8",
+    "yaml": "^2.9.1"
+  },
+  "description": "Tennessee November 3, 2026 ballot guide: arguments for and against each amendment and candidate, shown without labels."
+}

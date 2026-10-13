@@ -1,0 +1,13 @@
+# Generated from the Secretary of State's certified candidate list (TNHouse_Nov2026.xlsx).
+# research_status: pending — platforms and arguments not yet compiled.
+id: tn-house-096
+office: "Tennessee House, District 96"
+level: state_house
+district: 96
+research_status: pending
+candidate_list_source: "https://sos-prod.tnsosgovfiles.com/s3fs-public/document/TNHouse_Nov2026.pdf"
+candidates:
+  - name: "Telisa Franklin"
+    ballot_party: Democratic
+    city: "Memphis"
+last_verified: 2026-10-13

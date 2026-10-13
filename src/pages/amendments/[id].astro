@@ -1,0 +1,81 @@
+---
+import { getCollection } from 'astro:content';
+import Base from '../../layouts/Base.astro';
+import ArgColumns from '../../components/ArgColumns.astro';
+import PassageRule from '../../components/PassageRule.astro';
+import Sources from '../../components/Sources.astro';
+import { url, formatDate, prepareAmendment } from '../../lib/site';
+
+export async function getStaticPaths() {
+  const amendments = await getCollection('amendments');
+  return amendments.map((a) => ({ params: { id: a.data.id }, props: { a: a.data } }));
+}
+
+const { a } = Astro.props;
+const view = prepareAmendment(a);
+---
+
+<Base
+  title={`Amendment ${a.number}: ${a.title}`}
+  description={`Tennessee Amendment ${a.number} (${a.title}) on the November 3, 2026 ballot: official text, fiscal note, and arguments for and against.`}
+>
+  <p class="breadcrumb"><a href={url('amendments')}>Amendments</a></p>
+  <h1>Amendment {a.number}: {a.title}</h1>
+  <p class="muted">{a.article} of the Tennessee Constitution · Last verified {formatDate(a.last_verified)}</p>
+
+  <section class="facts" aria-labelledby="facts">
+    <h2 id="facts">Just the facts</h2>
+
+    <h3>Plain-English summary</h3>
+    <p>{a.summary_plain}</p>
+
+    <h3>Official summary (Attorney General)</h3>
+    <p>{a.official_summary}</p>
+
+    <h3>Official ballot question</h3>
+    <div class="ballot-text" tabindex="0" role="region" aria-label="Official ballot question">{a.ballot_question.trim()}</div>
+    <p class="small muted">Verbatim from the <a href={a.official_source}>Tennessee Secretary of State</a>.</p>
+
+    <h3>Fiscal note</h3>
+    <p>{a.fiscal_note.summary} <a href={a.fiscal_note.url}>Read the fiscal note</a>.</p>
+
+    <h3>How the legislature voted</h3>
+    <p class="small muted">
+      A proposed amendment must pass two consecutive General Assemblies — a majority in the first, two-thirds in the
+      second — before it goes to voters.
+    </p>
+    <div class="table-scroll">
+      <table class="votes">
+        <thead>
+          <tr><th scope="col">Resolution</th><th scope="col">Chamber</th><th scope="col">Date</th><th scope="col">Yes</th><th scope="col">No</th><th scope="col">Present, not voting</th></tr>
+        </thead>
+        <tbody>
+          {a.legislative_votes.map((v) => (
+            <tr>
+              <td><a href={v.url}>{v.resolution}</a></td>
+              <td>{v.chamber}</td>
+              <td>{formatDate(v.date)}</td>
+              <td class="num">{v.yes}</td>
+              <td class="num">{v.no}</td>
+              <td class="num">{v.present_not_voting}</td>
+            </tr>
+          ))}
+        </tbody>
+      </table>
+    </div>
+
+    <h3>Full text of the resolutions</h3>
+    <ul class="plain-list">{a.resolutions.map((r) => <li><a href={r.url}>{r.name}</a></li>)}</ul>
+  </section>
+
+  <h2>Arguments</h2>
+  <p class="muted small">
+    Each argument is paraphrased from a published source and shown without saying who made it. Order within each
+    column is shuffled. <a href={url('method')}>Why?</a>
+  </p>
+  <ArgColumns id="args" labels={['Reasons to vote YES', 'Reasons to vote NO']} columns={[view.yes, view.no]} checked={a.last_verified} />
+
+  <PassageRule />
+
+  <Sources sources={view.sources} />
+</Base>

@@ -1,0 +1,100 @@
+---
+import { getCollection } from 'astro:content';
+import Base from '../layouts/Base.astro';
+import { url, formatDate, CORRECTION_URL, REPO_URL } from '../lib/site';
+
+const amendments = (await getCollection('amendments')).map((a) => a.data).sort((a, b) => a.number - b.number);
+const races = (await getCollection('races')).map((r) => r.data).filter((r) => r.research_status === 'complete');
+---
+
+<Base title="How this guide works" description="Why arguments are shown without labels, how they were gathered, and the sourcing and ordering rules this guide follows.">
+  <h1>How this guide works</h1>
+  <p class="lede">The idea: let every argument stand on its own.</p>
+
+  <h2>Why arguments are unlabeled</h2>
+  <p>
+    Most voter guides tell you who is making an argument — a party, a campaign, an advocacy group. That is useful
+    information, but it also invites readers to accept or reject an argument based on who said it rather than what it
+    says. This guide shows each argument as plain text, with no party, ideology, organization, or person attached, so
+    you can weigh it on its merits.
+  </p>
+  <p>
+    Nothing is hidden: every argument has a numbered footnote, and the collapsed <strong>Sources</strong> section at the
+    bottom of each page lists where it came from. You can look; you just aren't nudged by default.
+  </p>
+
+  <h2>How arguments were gathered</h2>
+  <ul class="plain-list">
+    <li>
+      Arguments were collected from across the political spectrum: candidates' campaign materials, party and
+      legislative statements, recorded legislative debate as reported, advocacy organizations, independent candidates,
+      and established news outlets reporting what supporters and opponents say.
+    </li>
+    <li>Each argument is paraphrased in plain language and stated in its strongest fair form, as its supporters would make it.</li>
+    <li>
+      Wording that identifies a side ("As conservatives…", "Progressives believe…") is rewritten as a plain claim. The
+      build fails if any argument contains a party or ideology term from a <a href={`${REPO_URL}/blob/main/src/data/config/blocklist.yaml`}>published blocklist</a>.
+    </li>
+    <li>When different sources make the same argument, it appears once with several footnotes.</li>
+    <li>Arguments are never invented to fill a gap. If none was found, the page says "No published arguments found" with the date checked.</li>
+    <li>Direct quotes are short and never attributed to a named person in the text.</li>
+  </ul>
+
+  <h2>Candidates' platforms and reasons for running</h2>
+  <p>
+    "Why they're running" and "Platform" describe each candidate's <em>own</em> stated positions, taken only from their
+    campaign websites, announcements, questionnaires they answered, and interviews where they speak directly. What
+    opponents say about a candidate goes under "Arguments against," never under "Platform." Planks are paraphrased
+    neutrally, capped at eight per candidate, and grouped into shared issue categories so you can compare candidates
+    side by side. Where a candidate has not addressed a category, the compare table says "No stated position."
+    Positions are never inferred from party.
+  </p>
+  <p>
+    A candidate's party appears only because it is printed on the official ballot, styled identically for every party.
+    Candidates are listed in the order of the Secretary of State's certified candidate list.
+  </p>
+
+  <h2>Sourcing rules</h2>
+  <ul class="plain-list">
+    <li>Every argument, platform plank, and reason for running has at least one source URL. Content without a source fails the build and does not publish.</li>
+    <li>
+      Official text, ballot language, summaries, fiscal notes, and legislative votes in the "Just the facts" blocks come
+      from government sources: the Secretary of State and the Tennessee General Assembly (capitol.tn.gov).
+    </li>
+    <li>Government sites don't publish pros and cons, so arguments come from the non-government sources listed above.</li>
+    <li>Every source link is checked automatically when the site is built.</li>
+  </ul>
+
+  <h2>Ordering rule</h2>
+  <p>
+    Order can suggest importance, so arguments within each column are shuffled using a fixed seed for each item when
+    the site is built. The order is effectively random but stays the same between visits. On small screens the two
+    columns become tabs; the first tab shown is always <strong>YES</strong> for amendments and
+    <strong>Arguments for</strong> for candidates. Both columns get the same styling and space.
+  </p>
+
+  <h2>What this guide doesn't do</h2>
+  <ul class="plain-list">
+    <li>It doesn't tell you how to vote, rate candidates, or score positions.</li>
+    <li>It doesn't use candidate photos or party logos.</li>
+    <li>It isn't affiliated with any party, campaign, candidate, or government agency.</li>
+  </ul>
+
+  <h2>Coverage and last-updated dates</h2>
+  <p>Fully researched so far:</p>
+  <ul class="plain-list">
+    {amendments.map((a) => <li><a href={url(`amendments/${a.id}`)}>Amendment {a.number}: {a.title}</a> — verified {formatDate(a.last_verified)}</li>)}
+    {races.map((r) => <li><a href={url(`races/${r.id}`)}>{r.office}</a> — verified {formatDate(r.last_verified)}</li>)}
+  </ul>
+  <p>
+    U.S. House, state Senate, and state House pages currently list the certified candidates from the Secretary of
+    State. Platforms and arguments for those races are being added.
+  </p>
+
+  <h2>Suggest a correction</h2>
+  <p>
+    Found an error, a missing argument, or a candidate's published platform we haven't included?
+    <a href={CORRECTION_URL}>Open a correction request</a> on GitHub. A source link is required, and the same rules
+    apply: arguments are added without labels, and platforms come only from the candidate's own materials.
+  </p>
+</Base>

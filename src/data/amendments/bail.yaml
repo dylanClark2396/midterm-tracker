@@ -1,0 +1,134 @@
+# Amendment 1 — Bail eligibility (Article I, Section 15)
+# `_sources` holds reusable YAML anchors; it is ignored by the schema.
+_sources:
+  banner: &banner { url: "https://nashvillebanner.com/2026/10/09/tennessee-proposed-constitutional-amendment-bail/", title: "Amendment No. 1 seeks to limit Tennessee right to bail (Nashville Banner)", accessed: 2026-10-13 }
+  wkms: &wkms { url: "https://www.wkms.org/government-politics/2026-10-12/tennessee-amendment-1-asks-voters-to-change-bail-rules", title: "Tennessee Amendment 1 asks voters to change bail rules (WKMS)", accessed: 2026-10-13 }
+  aclu: &aclu { url: "https://www.aclu-tn.org/news/what-is-on-the-ballot-in-tennessee/", title: "What's on the ballot in Tennessee? (ACLU of Tennessee)", accessed: 2026-10-13 }
+
+id: bail
+number: 1
+title: "Bail eligibility"
+article: "Article I, Section 15"
+resolutions:
+  - { name: "SJR 919 (113th General Assembly)", url: "https://publications.tnsosfiles.com/acts/113/resolutions/sjr0919.pdf" }
+  - { name: "SJR 25 (114th General Assembly)", url: "https://publications.tnsosfiles.com/acts/114/resolutions/sjr0025.pdf" }
+
+# Verbatim from the Secretary of State's 2026 proposed amendments page.
+ballot_question: |
+  Shall Article I, Section 15 of the Constitution of Tennessee be amended by deleting the following:
+
+  That all prisoners shall be bailable by sufficient sureties, unless for capital offences, when the proof is evident, or the presumption great. And the privilege of the writ of Habeas Corpus shall not be suspended, unless when in case of rebellion or invasion, the General Assembly shall declare the public safety requires it.
+
+  and substituting instead the following:
+
+  (a) All prisoners shall be bailable by sufficient sureties unless for the following when the proof is evident or the presumption great:
+
+  (1) A capital offense;
+
+  (2) An act of terrorism;
+
+  (3) Second degree murder;
+
+  (4) Aggravated rape of a child;
+
+  (5) Aggravated rape;
+
+  (6) Grave torture; and
+
+  (7) Any other offense for which, as of November 3, 2026, a defendant, if convicted, could not be released prior to the expiration of at least eighty-five percent of the entire sentence imposed.
+
+  (b) In any case in which bail for an offense listed in subsection (a) is granted or denied before conviction, the judge or magistrate shall place in the record the judge's or magistrate's reasons for granting or denying bail.
+
+  (c) The privilege of the writ of Habeas Corpus shall not be suspended, unless when in case of rebellion or invasion, the General Assembly shall declare the public safety requires it.
+
+# Attorney General's summary, as published by the Secretary of State.
+official_summary: >-
+  This amendment changes Article I, section 15 of the Tennessee Constitution by allowing a court to hold a
+  defendant without bail before trial when that defendant is accused of: an offense punishable by the death
+  penalty, an act of terrorism, second degree murder, aggravated rape of a child, aggravated rape, grave torture,
+  or any crime for which a convicted person would be required to serve eighty-five percent of their sentence.
+  This amendment requires courts to state on the record the reasons for their decision to grant or deny bail in
+  those cases.
+
+summary_plain: >-
+  Today the Tennessee Constitution guarantees bail before trial for every charge except capital offenses. This
+  amendment would let a judge hold a person without bail before trial for a longer list of charges — terrorism,
+  second-degree murder, aggravated rape of a child, aggravated rape, grave torture, and any offense that, as of
+  November 3, 2026, requires a convicted person to serve at least 85% of the sentence — when the proof is evident
+  or the presumption great. Judges would have to record their reasons for granting or denying bail in those cases.
+  A YES vote adopts the new language; a NO vote keeps the current language.
+
+fiscal_note:
+  summary: >-
+    The Fiscal Review Committee estimates a one-time increase in local government expenditures of $9,400 in
+    FY 2026-27 for the cost of publishing a longer sample ballot. The note does not estimate any other costs.
+  url: "https://www.capitol.tn.gov/Bills/114/Fiscal/SJR0025.pdf"
+
+legislative_votes:
+  - { resolution: "SJR 919 (113th)", chamber: Senate, date: 2024-03-07, yes: 22, no: 6, present_not_voting: 2, url: "https://wapp.capitol.tn.gov/apps/BillInfo/Default.aspx?BillNumber=SJR0919&GA=113" }
+  - { resolution: "SJR 919 (113th)", chamber: House, date: 2024-04-23, yes: 82, no: 15, present_not_voting: 1, url: "https://wapp.capitol.tn.gov/apps/BillInfo/Default.aspx?BillNumber=SJR0919&GA=113" }
+  - { resolution: "SJR 25 (114th)", chamber: Senate, date: 2025-03-17, yes: 23, no: 6, present_not_voting: 1, url: "https://wapp.capitol.tn.gov/apps/BillInfo/Default.aspx?BillNumber=SJR0025&GA=114" }
+  - { resolution: "SJR 25 (114th)", chamber: House, date: 2025-04-21, yes: 84, no: 10, present_not_voting: 1, url: "https://wapp.capitol.tn.gov/apps/BillInfo/Default.aspx?BillNumber=SJR0025&GA=114" }
+
+official_source: "https://sos.tn.gov/elections/announcements/2026-proposed-constitutional-amendments"
+
+arguments:
+  - stance: yes
+    text: >-
+      Judges currently cannot deny bail for charges like second-degree murder or aggravated rape, even when the
+      evidence is strong and the defendant poses a clear danger. This gives judges the option to keep the most
+      dangerous violent defendants from harming others while they await trial.
+    sources: [*banner, *wkms]
+  - stance: yes
+    text: >-
+      The change gives judges discretion, not a mandate. Bail can still be granted, the high "proof is evident or
+      the presumption great" standard still applies, and a defendant can still appeal a denial.
+    sources: [*banner, *wkms]
+  - stance: yes
+    text: >-
+      Under the current rule, a defendant whom a judge considers dangerous can still go free by paying a large bail
+      amount. Letting judges deny bail in these cases keeps release decisions from turning on how much money a
+      defendant has.
+    sources: [*wkms]
+  - stance: yes
+    text: >-
+      Judges would have to put their reasons for granting or denying bail on the record, making these decisions
+      public and open to review.
+    sources: [*banner]
+  - stance: yes
+    text: >-
+      When the bail clause was first written, many more crimes were capital offenses, so judges could hold many
+      more defendants. This restores comparable authority for the most serious crimes of today.
+    sources: [*banner]
+  - stance: no
+    text: >-
+      People charged with a crime are presumed innocent. Holding them for months before trial can cost them their
+      job, home, and family stability, and those later found not guilty get nothing back for that lost time.
+    sources: [*aclu, *wkms]
+  - stance: no
+    text: >-
+      The change is broader than the six crimes named on the ballot. The 85% clause covers roughly 73 offenses that
+      are not listed, and that list has grown as sentencing laws have changed.
+    sources: [*wkms, *banner]
+  - stance: no
+    text: >-
+      More pretrial detention means more people in county jails that are already near capacity, and the state does
+      not reimburse counties for those costs. The official fiscal note covers only ballot printing, not jail costs.
+    sources: [*wkms, *aclu]
+  - stance: no
+    text: >-
+      Judges already have tools to manage risk: they can set high bail, weigh criminal history and past failures to
+      appear, order no-contact conditions and electronic monitoring, and revoke bail after a hearing.
+    sources: [*banner, *aclu, *wkms]
+  - stance: no
+    text: >-
+      Studies find that holding more people before trial does not reliably reduce future crime, and violent crime in
+      Tennessee has already been falling.
+    sources: [*banner]
+  - stance: no
+    text: >-
+      Pretrial detention makes it harder for defendants to work with their lawyers and prepare a defense, which
+      weakens a fair trial.
+    sources: [*aclu]
+
+last_verified: 2026-10-13

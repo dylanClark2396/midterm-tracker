@@ -1,0 +1,16 @@
+# Generated from the Secretary of State's certified candidate list (TNSenate_Nov2026.xlsx).
+# research_status: pending — platforms and arguments not yet compiled.
+id: tn-senate-11
+office: "Tennessee Senate, District 11"
+level: state_senate
+district: 11
+research_status: pending
+candidate_list_source: "https://sos-prod.tnsosgovfiles.com/s3fs-public/document/TNSenate_Nov2026.pdf"
+candidates:
+  - name: "Bo Watson"
+    ballot_party: Republican
+    city: "Chattanooga"
+  - name: "Tim Roberts"
+    ballot_party: Democratic
+    city: "Chattanooga"
+last_verified: 2026-10-13

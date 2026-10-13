@@ -1,0 +1,40 @@
+---
+import Base from '../layouts/Base.astro';
+import { url } from '../lib/site';
+---
+
+<Base title="Find your districts" description="How to find your U.S. House, state Senate, and state House districts for the November 3, 2026 Tennessee election.">
+  <h1>Find your districts</h1>
+  <p class="lede">
+    Everyone in Tennessee votes on the three amendments, the governor's race, and the U.S. Senate race. Which U.S.
+    House, state Senate, and state House races are on your ballot depends on your address.
+  </p>
+
+  <h2>Use the state's official tools</h2>
+  <ul class="plain-list">
+    <li>
+      <a href="https://tnmap.tn.gov/voterlookup/">Voter Registration Information Lookup</a> — shows your registration,
+      polling place, and the districts you vote in.
+    </li>
+    <li>
+      <a href="https://govote.tnsos.gov/">GoVoteTN polling locations and sample ballots</a> — see and mark your exact
+      sample ballot before you vote.
+    </li>
+    <li>
+      <a href="https://sos.tn.gov/govotetn">GoVoteTN election information</a> — early voting (October 14–29), photo ID
+      rules, and absentee voting.
+    </li>
+  </ul>
+
+  <div class="notice">
+    <p style="margin:0">
+      <strong>New U.S. House map.</strong> Tennessee's congressional districts were redrawn in a May 2026 special
+      session. Your U.S. House district may be different from the one you voted in before. See the Secretary of
+      State's <a href="https://sos.tn.gov/announcements/2026-congressional-redistricting">2026 congressional redistricting</a>
+      page, and confirm your district with the voter lookup above.
+    </p>
+  </div>
+
+  <p>Once you know your districts, find them on the <a href={url('races')}>races page</a>.</p>
+  <p class="small muted">This guide does not look up addresses itself; the state's tools are the authoritative source.</p>
+</Base>

@@ -1,0 +1,22 @@
+# Generated from the Secretary of State's certified candidate list (USHouse_Nov2026.xlsx).
+# research_status: pending — platforms and arguments not yet compiled.
+id: us-house-09
+office: "U.S. House, District 9"
+level: us_house
+district: 9
+research_status: pending
+candidate_list_source: "https://sos-prod.tnsosgovfiles.com/s3fs-public/document/USHouse_Nov2026.pdf"
+candidates:
+  - name: "Brent Taylor"
+    ballot_party: Republican
+    city: "Eads"
+  - name: "Justin J. Pearson"
+    ballot_party: Democratic
+    city: "Memphis"
+  - name: "Dennis Clark"
+    ballot_party: Independent
+    city: "Memphis"
+  - name: "Michelle Davis Head"
+    ballot_party: Independent
+    city: "Lewisburg"
+last_verified: 2026-10-13

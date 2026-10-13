@@ -1,0 +1,13 @@
+# Generated from the Secretary of State's certified candidate list (TNSenate_Nov2026.xlsx).
+# research_status: pending — platforms and arguments not yet compiled.
+id: tn-senate-09
+office: "Tennessee Senate, District 9"
+level: state_senate
+district: 9
+research_status: pending
+candidate_list_source: "https://sos-prod.tnsosgovfiles.com/s3fs-public/document/TNSenate_Nov2026.pdf"
+candidates:
+  - name: "Steve Southerland"
+    ballot_party: Republican
+    city: "Morristown"
+last_verified: 2026-10-13

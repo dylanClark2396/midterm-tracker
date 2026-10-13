@@ -1,0 +1,97 @@
+# Amendment 2 — Ban on a state property tax (Article II, Section 28)
+_sources:
+  tfp: &tfp { url: "https://www.timesfreepress.com/news/2026/oct/06/ban-on-state-property-tax-on-november-ballot-for/", title: "Ban on state property tax on November ballot for Tennessee voters (Chattanooga Times Free Press)", accessed: 2026-10-13 }
+  oped: &oped { url: "https://www.timesfreepress.com/news/2026/oct/06/opinion-vote-yes-on-amendment-2-to-keep-tennessee/", title: "Vote Yes on Amendment 2 to keep Tennessee free from a state property tax (op-ed, Chattanooga Times Free Press)", accessed: 2026-10-13 }
+  fox17: &fox17 { url: "https://fox17.com/news/local/2025-3-18-tennessee-senate-advances-amendment-to-ban-state-property-tax-nashville-tn", title: "Tennessee Senate advances amendment to ban state property tax (FOX 17)", accessed: 2026-10-13 }
+  explained: &explained { url: "https://ballotexplained.com/measures/tennessee/amendment-2", title: "Tennessee Amendment 2 — Prohibit a state property tax (Ballot Explained)", accessed: 2026-10-13 }
+
+id: property-tax
+number: 2
+title: "Ban on a state property tax"
+article: "Article II, Section 28"
+resolutions:
+  - { name: "HJR 81 (113th General Assembly)", url: "https://publications.tnsosfiles.com/acts/113/resolutions/hjr0081.pdf" }
+  - { name: "SJR 1 (114th General Assembly)", url: "https://publications.tnsosfiles.com/acts/114/resolutions/sjr0001.pdf" }
+
+ballot_question: |
+  Shall Article II, Section 28 of the Constitution of the State of Tennessee be amended by deleting the following language from the first sentence:
+
+  In accordance with the following provisions, all property real, personal or mixed shall be subject to taxation, but the Legislature
+
+  and substituting instead the following:
+
+  In accordance with the following provisions, all property real, personal, or mixed shall be subject to taxation, but the Legislature shall not levy, authorize, or otherwise permit any state tax upon such property, and the Legislature
+
+official_summary: >-
+  This amendment adds text to Article II, section 28 of the Tennessee Constitution that prohibits the Legislature
+  from imposing a State property tax on real, personal, or mixed property.
+
+summary_plain: >-
+  Tennessee has not collected a state-level property tax since 1949, but the legislature could create one today
+  with an ordinary law. This amendment would write a ban on any state property tax into the Constitution, so a
+  future state property tax would require another constitutional amendment approved by voters. Property taxes
+  set by counties and cities are not affected. A YES vote adds the ban; a NO vote keeps the current language.
+
+fiscal_note:
+  summary: >-
+    The Fiscal Review Committee estimates a one-time increase in local government expenditures of $9,400 in
+    FY 2026-27 for the cost of publishing a longer sample ballot. The note does not estimate any other costs.
+  url: "https://www.capitol.tn.gov/Bills/114/Fiscal/SJR0001.pdf"
+
+legislative_votes:
+  - { resolution: "HJR 81 (113th)", chamber: House, date: 2023-04-21, yes: 81, no: 11, present_not_voting: 0, url: "https://wapp.capitol.tn.gov/apps/BillInfo/Default.aspx?BillNumber=HJR0081&GA=113" }
+  - { resolution: "HJR 81 (113th)", chamber: Senate, date: 2024-03-28, yes: 26, no: 6, url: "https://wapp.capitol.tn.gov/apps/BillInfo/Default.aspx?BillNumber=HJR0081&GA=113" }
+  - { resolution: "SJR 1 (114th)", chamber: Senate, date: 2025-03-26, yes: 26, no: 5, present_not_voting: 1, url: "https://wapp.capitol.tn.gov/apps/BillInfo/Default.aspx?BillNumber=SJR0001&GA=114" }
+  - { resolution: "SJR 1 (114th)", chamber: House, date: 2025-04-21, yes: 89, no: 6, present_not_voting: 0, url: "https://wapp.capitol.tn.gov/apps/BillInfo/Default.aspx?BillNumber=SJR0001&GA=114" }
+
+official_source: "https://sos.tn.gov/elections/announcements/2026-proposed-constitutional-amendments"
+
+arguments:
+  - stance: yes
+    text: >-
+      Right now a future legislature could bring back a state property tax with a simple majority vote. Putting the
+      ban in the Constitution means reversing it would take two separate legislatures, a two-thirds vote, and
+      approval from voters.
+    sources: [*oped, *tfp]
+  - stance: yes
+    text: >-
+      Homeowners, farmers, and businesses already pay local property taxes. The ban protects them from ever being
+      taxed twice on the same property by both the state and local government.
+    sources: [*tfp, *explained, *fox17]
+  - stance: yes
+    text: >-
+      Keeping the cost of owning property predictable helps with housing affordability, supports first-time
+      buyers, and can keep rents lower and encourage building and maintaining affordable housing.
+    sources: [*tfp, *fox17, *oped]
+  - stance: yes
+    text: >-
+      Farmers can owe more tax when land values rise even if their income does not, and older residents on fixed
+      incomes are especially exposed to property tax bills. A permanent ban removes that risk at the state level.
+    sources: [*oped]
+  - stance: yes
+    text: >-
+      Like the 2014 ban on a state income tax, this puts a basic tax decision in the hands of voters rather than
+      lawmakers, and locks in the low-tax approach that has drawn residents and businesses to the state.
+    sources: [*tfp]
+  - stance: yes
+    text: >-
+      Counties and cities keep full authority to levy property taxes, so local funding for schools, roads, and
+      first responders is not affected.
+    sources: [*oped]
+  - stance: no
+    text: >-
+      The amendment is unnecessary. Tennessee has not taxed property at the state level in decades, and a ban
+      written into ordinary law would accomplish the same thing without changing the Constitution.
+    sources: [*explained]
+  - stance: no
+    text: >-
+      The phrase "levy, authorize, or otherwise permit" could be read to reach beyond a state property tax, which
+      could cost the state millions in revenue and threaten its bond rating.
+    sources: [*explained]
+  - stance: no
+    text: >-
+      Locking the ban into the Constitution limits the options of future lawmakers to raise revenue for statewide
+      services, including during a fiscal emergency.
+    sources: [*fox17, *explained]
+
+last_verified: 2026-10-13
