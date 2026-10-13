@@ -1,5 +1,6 @@
-# Generated from the Secretary of State's certified candidate list (USHouse_Nov2026.xlsx).
-# research_status: pending — platforms and arguments not yet compiled.
+# Seeded from the Secretary of State's certified candidate list by
+# scripts/seed-from-certified-list.py. research_status: pending —
+# platforms and arguments not yet compiled.
 id: us-house-01
 office: "U.S. House, District 1"
 level: us_house
@@ -10,22 +11,43 @@ candidates:
   - name: "Diana Harshbarger"
     ballot_party: Republican
     city: "Kingsport"
+    why_running: { text: null, sources: [] }
+    platform: []
+    arguments: []
   - name: "Kristi Burke"
     ballot_party: Democratic
     city: "Chuckey"
+    why_running: { text: null, sources: [] }
+    platform: []
+    arguments: []
   - name: "Joshua Ray Ashburn"
     ballot_party: Independent
     city: "Bristol"
+    why_running: { text: null, sources: [] }
+    platform: []
+    arguments: []
   - name: "Richard G. Baker"
     ballot_party: Independent
     city: "Johnson City"
+    why_running: { text: null, sources: [] }
+    platform: []
+    arguments: []
   - name: "Chris Campbell"
     ballot_party: Independent
     city: "Bristol"
+    why_running: { text: null, sources: [] }
+    platform: []
+    arguments: []
   - name: "Billy Cody"
     ballot_party: Independent
     city: "Kingsport"
+    why_running: { text: null, sources: [] }
+    platform: []
+    arguments: []
   - name: "Tyler Brice Mitchell McClain"
     ballot_party: Independent
     city: "Kingsport"
+    why_running: { text: null, sources: [] }
+    platform: []
+    arguments: []
 last_verified: 2026-10-13
