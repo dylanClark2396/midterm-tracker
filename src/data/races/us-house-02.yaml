@@ -1,35 +1,292 @@
-# Seeded from the Secretary of State's certified candidate list by
-# scripts/seed-from-certified-list.py. research_status: pending —
-# platforms and arguments not yet compiled.
+# U.S. House, District 2 — Rep. Tim Burchett is seeking re-election.
+# Candidate order follows the Secretary of State's certified candidate list.
+# burchettforcongress.com issue pages appear to date from his first campaign (2018); they are his own published positions.
+# fineforcongresstn.com is a JavaScript app; its text was read from the site's published script bundle.
+_sources:
+  tb_house: &tb_house { url: "https://burchett.house.gov/about", title: "About (Rep. Tim Burchett, U.S. House)", accessed: 2026-10-13 }
+  tb_bp: &tb_bp { url: "https://ballotpedia.org/Tim_Burchett", title: "Tim Burchett (Ballotpedia)", accessed: 2026-10-13 }
+  tb_meet: &tb_meet { url: "https://burchettforcongress.com/meet-tim/", title: "Meet Tim (Burchett campaign)", accessed: 2026-10-13 }
+  tb_stock: &tb_stock { url: "https://burchettforcongress.com/issue/end-congressional-stock-trading/", title: "End Congressional Stock Trading (Burchett campaign)", accessed: 2026-10-13 }
+  tb_term: &tb_term { url: "https://burchettforcongress.com/issue/term-limits/", title: "Term Limits (Burchett campaign)", accessed: 2026-10-13 }
+  tb_tax: &tb_tax { url: "https://burchettforcongress.com/issue/taxes-and-spending/", title: "Taxes and Spending (Burchett campaign)", accessed: 2026-10-13 }
+  tb_guns: &tb_guns { url: "https://burchettforcongress.com/issue/guns/", title: "Guns (Burchett campaign)", accessed: 2026-10-13 }
+  tb_life: &tb_life { url: "https://burchettforcongress.com/issue/life/", title: "Life (Burchett campaign)", accessed: 2026-10-13 }
+  tb_h_border: &tb_h_border { url: "https://burchett.house.gov/issues/border-security", title: "Border Security (Rep. Tim Burchett, U.S. House)", accessed: 2026-10-13 }
+  tb_h_vets: &tb_h_vets { url: "https://burchett.house.gov/issues/veterans", title: "Veterans (Rep. Tim Burchett, U.S. House)", accessed: 2026-10-13 }
+  tb_h_abortion: &tb_h_abortion { url: "https://burchett.house.gov/issues/abortion", title: "Abortion (Rep. Tim Burchett, U.S. House)", accessed: 2026-10-13 }
+  tb_h_debt: &tb_h_debt { url: "https://burchett.house.gov/issues/debt-deficit", title: "Debt & Deficit (Rep. Tim Burchett, U.S. House)", accessed: 2026-10-13 }
+  congress_tb: &congress_tb { url: "https://www.congress.gov/member/tim-burchett/B001309", title: "Rep. Tim Burchett, sponsored legislation (Congress.gov)", accessed: 2026-10-13 }
+  tb_jobs: &tb_jobs { url: "https://burchettforcongress.com/issue/jobs-and-regulation/", title: "Jobs and Regulation (Burchett campaign)", accessed: 2026-10-13 }
+  wvlt_endorse: &wvlt_endorse { url: "https://www.wvlt.tv/2025/11/09/trump-endorses-burchett-fleischmann-harshbarger-re-election-congress", title: "Trump endorses Burchett, Fleischmann, Harshbarger for re-election to Congress (WVLT)", accessed: 2026-10-13 }
+  ibt: &ibt { url: "https://www.ibtimes.co.uk/tim-burchett-name-recognition-tennessee-voters-1820334", title: "Tennessee voters admit backing Tim Burchett without knowing his record (IBTimes UK)", accessed: 2026-10-13 }
+  lookout_townhall: &lookout_townhall { url: "https://tennesseelookout.com/2025/04/07/u-s-rep-tim-burchett-and-other-tennessee-congresspeople-avoid-town-halls/", title: "U.S. Rep. Tim Burchett and other Tennessee congresspeople avoid town halls (Tennessee Lookout commentary)", accessed: 2026-10-13 }
+  lookout_guide: &lookout_guide { url: "https://tennesseelookout.com/voter-guides/contests/congressional-district-2-u-s-house-of-representatives/", title: "U.S. House, 2nd Congressional District voter guide (Tennessee Lookout)", accessed: 2026-10-13 }
+  mb_about: &mb_about { url: "https://www.michaelafortennessee.com/about", title: "Meet Michaela Barnett (Barnett campaign)", accessed: 2026-10-13 }
+  mb_gov: &mb_gov { url: "https://www.michaelafortennessee.com/a-government-that-actually-represents-us", title: "A Government that Actually Represents Us (Barnett campaign)", accessed: 2026-10-13 }
+  mb_econ: &mb_econ { url: "https://www.michaelafortennessee.com/an-economy-that-works-for-all", title: "An Economy that Works for All (Barnett campaign)", accessed: 2026-10-13 }
+  mb_infra: &mb_infra { url: "https://www.michaelafortennessee.com/building-better-infrastructure", title: "Building Better Infrastructure (Barnett campaign)", accessed: 2026-10-13 }
+  mb_health: &mb_health { url: "https://www.michaelafortennessee.com/healthcare-focused-on-people-not-profits", title: "Healthcare Focused on People, Not Profits (Barnett campaign)", accessed: 2026-10-13 }
+  mb_opp: &mb_opp { url: "https://www.michaelafortennessee.com/my-opponent", title: "My Opponent (Barnett campaign)", accessed: 2026-10-13 }
+  mb_bp: &mb_bp { url: "https://ballotpedia.org/Michaela_Barnett", title: "Michaela Barnett, Candidate Connection survey (Ballotpedia)", accessed: 2026-10-13 }
+  tndp_mb: &tndp_mb { url: "https://tndp.org/michaela-barnett/", title: "Michaela Barnett (Tennessee Democratic Party)", accessed: 2026-10-13 }
+  bf_bp: &bf_bp { url: "https://ballotpedia.org/Bruce_Fine", title: "Bruce Fine, Candidate Connection survey (Ballotpedia)", accessed: 2026-10-13 }
+  bf_site: &bf_site { url: "https://fineforcongresstn.com/", title: "Bruce Fine for Congress (Fine campaign)", accessed: 2026-10-13 }
+  ah_bp: &ah_bp { url: "https://ballotpedia.org/Adam_Heimerman", title: "Adam Heimerman, Candidate Connection survey (Ballotpedia)", accessed: 2026-10-13 }
+  ah_site: &ah_site { url: "https://www.vote4heimerman.com/", title: "Heimerman for Congress (Heimerman campaign)", accessed: 2026-10-13 }
+
 id: us-house-02
 office: "U.S. House, District 2"
 level: us_house
 district: 2
-research_status: pending
+research_status: complete
 candidate_list_source: "https://sos-prod.tnsosgovfiles.com/s3fs-public/document/USHouse_Nov2026.pdf"
+
 candidates:
   - name: "Tim Burchett"
     ballot_party: Republican
     city: "Knoxville"
-    why_running: { text: null, sources: [] }
-    platform: []
-    arguments: []
+    incumbent: true
+    website: "https://www.burchettforcongress.com/"
+    bio_facts:
+      - { text: "U.S. Representative for Tennessee's 2nd District since January 2019.", sources: [*tb_house, *tb_bp] }
+      - { text: "Knox County Mayor, 2010–2018.", sources: [*tb_bp, *tb_house] }
+      - { text: "Tennessee House of Representatives, 1994–1998, and Tennessee Senate, 1998–2010.", sources: [*tb_bp, *tb_house] }
+      - { text: "Serves on the House Oversight and Government Reform, Foreign Affairs, and Transportation and Infrastructure committees; chairman of the Oversight subcommittee on Delivering on Government Efficiency.", sources: [*tb_house] }
+      - { text: "Bachelor's degree in education from the University of Tennessee.", sources: [*tb_meet] }
+      - { text: "Previously ran a small business converting grass waste into mulch and compost.", sources: [*tb_meet, *tb_house] }
+    why_running:
+      text: >-
+        He says he ran for Congress because he was fed up with the status quo in Washington. He says he wants to keep
+        fighting for East Tennessee's families, factory workers, and small business owners as the divide grows between
+        Washington politicians and their constituents.
+      sources: [*tb_meet]
+    platform:
+      - category: government
+        text: "Ban members of Congress and their immediate families from owning or trading individual stocks (his End Congressional Stock Trading Act), and support congressional term limits."
+        sources: [*tb_stock, *tb_term]
+      - category: taxes
+        text: "Oppose tax increases, support a Balanced Budget Amendment, and cut wasteful spending."
+        sources: [*tb_tax, *tb_h_debt]
+      - category: economy
+        text: "Remove burdensome federal regulations that discourage investment and job creation."
+        sources: [*tb_jobs]
+      - category: immigration
+        text: "Complete the border wall, implement the Remain in Mexico policy, and end catch-and-release."
+        sources: [*tb_h_border]
+      - category: veterans
+        text: "Fight for veterans and make sure they receive recognition and respect for their service."
+        sources: [*tb_h_vets]
+      - category: guns
+        text: "Protect Second Amendment rights."
+        sources: [*tb_guns]
+      - category: abortion
+        text: "Protect unborn life and keep taxpayer dollars from funding abortions."
+        sources: [*tb_life, *tb_h_abortion]
+    arguments:
+      - stance: for
+        text: >-
+          As county mayor he blocked one of the largest property tax increases in county history, never raised taxes
+          over eight years, and cut county debt by $45 million.
+        sources: [*tb_meet, *tb_tax, *tb_house]
+      - stance: for
+        text: >-
+          He is leading the push to ban members of Congress from trading individual stocks, with steep fines for
+          violators, so lawmakers serve the public rather than their own portfolios.
+        sources: [*tb_stock]
+      - stance: for
+        text: >-
+          He votes his conscience and has broken with his own party's leadership, including voting to remove the House
+          speaker in 2023 and initially opposing a 2025 spending bill over deficit concerns.
+        sources: [*ibt]
+      - stance: for
+        text: >-
+          Decades of service in the state legislature, as county mayor, and in Congress have given him a long record of
+          accomplishments for his community.
+        sources: [*wvlt_endorse, *tb_house]
+      - stance: for
+        text: >-
+          Having run his own small business, he knows firsthand how government regulations and red tape burden small
+          businesses.
+        sources: [*tb_meet]
+      - stance: against
+        text: >-
+          He has not held an in-person town hall since 2020, declined to attend a 2025 constituent town hall in
+          Knoxville, and has skipped debates with his challengers.
+        sources: [*mb_opp, *lookout_townhall]
+      - stance: against
+        text: >-
+          He voted for the 2025 tax-and-spending law, which added trillions to the national debt, gave nearly half of its
+          tax cuts to the wealthiest 5 percent, and paid for them by cutting Medicaid and food assistance, raising health
+          costs, ending coverage for more than 29,000 East Tennesseans, and cutting funding for rural hospitals.
+        sources: [*mb_opp, *mb_health]
+      - stance: against
+        text: >-
+          He has voted repeatedly to continue the war in Iran, which has driven up gas, diesel, and grocery prices for
+          East Tennessee households.
+        sources: [*mb_opp]
+      - stance: against
+        text: >-
+          He voted to block states from regulating artificial intelligence and data centers for 10 years, limiting local
+          control over water, land, and electricity.
+        sources: [*mb_opp]
+      - stance: against
+        text: >-
+          He voted against federal investments in the district's energy, industry, and transportation that would have
+          lowered energy costs and created jobs, and he voted against capping insulin prices.
+        sources: [*mb_opp]
+      - stance: against
+        text: >-
+          After more than three decades in elected office and seven years in Congress, none of the bills he has
+          introduced in Congress has itself become law.
+        sources: [*mb_opp, *tndp_mb, *congress_tb]
+
   - name: "Michaela Barnett"
     ballot_party: Democratic
     city: "Knoxvile"
-    why_running: { text: null, sources: [] }
-    platform: []
-    arguments: []
+    incumbent: false
+    website: "https://michaelafortennessee.com/"
+    bio_facts:
+      - { text: "Small business owner; opened KnoxFill, a Knoxville refill store for household goods.", sources: [*lookout_guide, *mb_bp] }
+      - { text: "Holds a Ph.D. in civil engineering.", sources: [*mb_about, *lookout_guide] }
+      - { text: "Worked in Congress as a science policy fellow, in the office of U.S. Rep. Paul Tonko of New York.", sources: [*mb_about, *lookout_guide] }
+      - { text: "Former AmeriCorps member who launched programs at the University of Tennessee.", sources: [*mb_about] }
+    why_running:
+      text: >-
+        She says that while working in Congress she saw that government is not working for East Tennesseans, as gas,
+        grocery, and rent costs climb and leaders in both parties wait it out. She says it is not enough to be a voice
+        in opposition and that she is running to offer, and fight for, a concrete plan for the region's future.
+      sources: [*mb_about, *mb_bp]
+    platform:
+      - category: government
+        text: "Overturn Citizens United by constitutional amendment, ban congressional stock trading, set term limits and age limits for members of Congress, require independent redistricting commissions, and adopt Supreme Court term limits and a binding ethics code."
+        sources: [*mb_gov, *mb_bp]
+      - category: economy
+        text: "Raise the federal minimum wage to at least $15 an hour in phases, fund workforce training, and invest in research, national labs, and domestic semiconductor production."
+        sources: [*mb_econ]
+      - category: taxes
+        text: "Close tax loopholes for billionaires, end the carried interest deduction, and set a minimum tax on extreme wealth."
+        sources: [*mb_econ]
+      - category: health_care
+        text: "Restore and expand ACA premium tax credits, offer a universal health care option alongside private coverage, extend drug price caps to all Americans, and raise rural Medicare and Medicaid reimbursement rates."
+        sources: [*mb_health, *mb_opp]
+      - category: infrastructure
+        text: "Direct federal dollars to road and bridge repairs, clean water upgrades, rural broadband, transit, and school construction across the district."
+        sources: [*mb_infra, *mb_bp]
+      - category: cost_of_living
+        text: "Expand the Low-Income Housing Tax Credit and cut red tape in existing urban and suburban areas to ease the housing shortage while protecting farmland."
+        sources: [*mb_infra]
+      - category: environment
+        text: "Protect cities' and states' power to regulate or ban data centers, and require data centers to pay their full share of energy and water costs."
+        sources: [*mb_opp]
+      - category: foreign_policy
+        text: "End the war in Iran."
+        sources: [*mb_opp]
+    arguments:
+      - stance: for
+        text: >-
+          As an engineer, small business owner, and former science policy fellow in Congress, she knows firsthand what it
+          takes to make payroll and solve problems, and has seen up close how Congress works.
+        sources: [*mb_about, *tndp_mb]
+      - stance: for
+        text: >-
+          She is already holding regular town halls across the district and has committed to keep holding in-person town
+          halls if elected.
+        sources: [*mb_opp]
+
   - name: "Bruce Fine"
     ballot_party: Independent
     city: "Thornhill"
-    why_running: { text: null, sources: [] }
-    platform: []
-    arguments: []
+    incumbent: false
+    website: "https://fineforcongresstn.com/"
+    bio_facts:
+      - { text: "Bachelor's degree from the University of Florida, 1997.", sources: [*bf_bp] }
+      - { text: "Has worked as a farmer, marine mechanic, and journalist.", sources: [*bf_bp] }
+      - { text: "Formerly a registered Republican; running as an independent.", sources: [*bf_site, *bf_bp] }
+    why_running:
+      text: >-
+        He says he left his former party because both parties have abandoned everyday people, and that he is running as
+        an independent with no ties to special interests. He says he wants to lower the cost of living, protect local
+        clinics and hospitals, restore fiscal responsibility, and improve children's education.
+      sources: [*bf_bp, *bf_site]
+    platform:
+      - category: taxes
+        text: "Restore fiscal responsibility on the national debt rather than cutting taxes for the wealthy."
+        sources: [*bf_bp, *bf_site]
+      - category: cost_of_living
+        text: "Lower the cost of living and expand affordable housing."
+        sources: [*bf_bp, *bf_site]
+      - category: health_care
+        text: "Make health care more affordable, protect coverage for pre-existing conditions, lower prescription drug costs, and protect local clinics and hospitals from funding cuts."
+        sources: [*bf_site, *bf_bp]
+      - category: education
+        text: "Invest in public schools and teachers, and expand vocational training and community college opportunities."
+        sources: [*bf_site, *lookout_guide]
+      - category: government
+        text: "Enact term limits and campaign finance reform, and end the revolving door between Congress and lobbyists."
+        sources: [*bf_site, *lookout_guide]
+      - category: economy
+        text: "Support small businesses and bring good-paying jobs to East Tennessee."
+        sources: [*bf_site]
+      - category: veterans
+        text: "Ensure veterans receive the benefits they have earned and service members have the support they need."
+        sources: [*bf_site]
+      - category: infrastructure
+        text: "Pursue an all-of-the-above energy strategy that keeps costs low while protecting Tennessee's natural beauty."
+        sources: [*bf_site]
+    arguments:
+      - stance: for
+        text: >-
+          He is not a career politician and has no ties to any party machine or special interests, so he would answer
+          only to the voters of the district.
+        sources: [*bf_bp, *bf_site]
+      - stance: for
+        text: >-
+          Having worked in farming, mechanics, and journalism, he has lived the same financial pressures as the working
+          families he would represent.
+        sources: [*bf_bp]
+
   - name: "Adam Heimerman"
     ballot_party: Independent
     city: "Lenoir City"
-    why_running: { text: null, sources: [] }
-    platform: []
-    arguments: []
+    incumbent: false
+    website: "https://www.vote4heimerman.com/"
+    bio_facts:
+      - { text: "Raised in Loudon County; graduated from Lenoir City High School in 2007.", sources: [*ah_bp] }
+      - { text: "Spent about ten years working as a river guide and in the outdoor and camera industries.", sources: [*ah_site, *ah_bp] }
+      - { text: "Small business owner.", sources: [*ah_bp] }
+    why_running:
+      text: >-
+        He says East Tennessee deserves a representative who listens to the people rather than corporate donors or
+        foreign governments. He says he wants to defend the Constitution and unite Americans behind common goals instead
+        of dividing along party lines.
+      sources: [*ah_site, *ah_bp]
+    platform:
+      - category: government
+        text: "Overturn Citizens United and abolish super PACs; post biweekly video updates and hold monthly online town halls while in office."
+        sources: [*ah_site, *ah_bp]
+      - category: economy
+        text: "Redirect federal subsidies from large corporations toward public education and health programs to strengthen the workforce and middle class."
+        sources: [*ah_bp]
+      - category: taxes
+        text: "Rein in the national debt and stop borrowing to subsidize large corporations."
+        sources: [*ah_site]
+      - category: cost_of_living
+        text: "Make home ownership affordable again for working families."
+        sources: [*ah_site]
+      - category: immigration
+        text: "Secure the border while creating better paths to citizenship for those seeking to come legally."
+        sources: [*ah_site]
+      - category: environment
+        text: "Protect clean water, air, and soil, and keep national parks and public lands from being sold to corporations."
+        sources: [*ah_site, *lookout_guide]
+      - category: public_safety
+        text: "Uphold the rule of law and guarantee due process to everyone under U.S. jurisdiction, with no one above the law."
+        sources: [*ah_bp]
+    arguments:
+      - stance: for
+        text: >-
+          He is not seeking a political career or personal enrichment, and he would vote based on what constituents want
+          rather than what party lines demand.
+        sources: [*ah_site, *ah_bp]
+
 last_verified: 2026-10-13
