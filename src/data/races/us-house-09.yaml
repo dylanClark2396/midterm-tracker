@@ -1,31 +1,177 @@
-# Seeded from the Secretary of State's certified candidate list by
-# scripts/seed-from-certified-list.py. research_status: pending —
-# platforms and arguments not yet compiled.
+# U.S. House, District 9 — open seat in a district redrawn in the May 2026 special session.
+# Rep. Steve Cohen, who represented the previous 9th District since 2007, withdrew after the map was redrawn.
+# Candidate order follows the Secretary of State's certified candidate list.
+_sources:
+  bp_race: &bp_race { url: "https://ballotpedia.org/Tennessee%27s_9th_Congressional_District_election,_2026", title: "Tennessee's 9th Congressional District election, 2026 (Ballotpedia)", accessed: 2026-10-13 }
+  bp_taylor: &bp_taylor { url: "https://ballotpedia.org/Brent_Taylor_(Tennessee)", title: "Brent Taylor (Tennessee) (Ballotpedia)", accessed: 2026-10-13 }
+  bp_pearson: &bp_pearson { url: "https://ballotpedia.org/Justin_Pearson_(Tennessee)", title: "Justin Pearson (Tennessee) (Ballotpedia)", accessed: 2026-10-13 }
+  bt_home: &bt_home { url: "https://brenttaylorforcongress.com/", title: "Brent Taylor for Tennessee (Taylor campaign)", accessed: 2026-10-13 }
+  bt_about: &bt_about { url: "https://brenttaylorforcongress.com/about/", title: "About (Taylor campaign)", accessed: 2026-10-13 }
+  bt_issues: &bt_issues { url: "https://brenttaylorforcongress.com/issues/", title: "Issues (Taylor campaign)", accessed: 2026-10-13 }
+  jp_issues: &jp_issues { url: "https://votejustinj.com/issues", title: "Justin J. Pearson's Core Issues (Pearson campaign)", accessed: 2026-10-13 }
+  jp_about: &jp_about { url: "https://votejustinj.com/get-to-know-jjp", title: "Get to Know Justin J. Pearson (Pearson campaign)", accessed: 2026-10-13 }
+  lookout_guide: &lookout_guide { url: "https://tennesseelookout.com/voter-guides/contests/congressional-district-9-u-s-house-of-representatives/", title: "U.S. House of Representatives, 9th District voter guide (Tennessee Lookout)", accessed: 2026-10-13 }
+  lookout_primary: &lookout_primary { url: "https://tennesseelookout.com/2026/08/06/tennessee-us-house-district-9-republican-taylor-and-democrat-pearson-set-for-general-election/", title: "Tennessee US House District 9: Taylor and Pearson set for general election (Tennessee Lookout)", accessed: 2026-10-13 }
+  lookout_dc: &lookout_dc { url: "https://tennesseelookout.com/2026/09/24/democrat-leaning-pac-goes-after-republican-congressional-candidate-over-data-centers/", title: "PAC goes after congressional candidate over data centers (Tennessee Lookout)", accessed: 2026-10-13 }
+  flyer_sale: &flyer_sale { url: "https://www.memphisflyer.com/?p=25163382", title: "Company: Brent Taylor no longer associated with Collierville funeral home (Memphis Flyer)", accessed: 2026-10-13 }
+  lookout_sb: &lookout_sb { url: "https://tennesseelookout.com/2026/04/28/tennessee-bill-gives-data-centers-ability-to-self-power-with-limited-regulation/", title: "Tennessee bill gives data centers ability to self-power with limited regulation (Tennessee Lookout)", accessed: 2026-10-13 }
+  wsmv_wage: &wsmv_wage { url: "https://www.wsmv.com/2025/02/08/new-bill-filed-renew-push-raising-minimum-wage-tennessee/", title: "New bill filed to renew push for raising minimum wage in Tennessee (WSMV)", accessed: 2026-10-13 }
+  nc5: &nc5 { url: "https://www.newschannel5.com/news/newschannel-5-investigates/tennessees-9th-congressional-district-race-pits-democrat-pearson-against-republican-taylor", title: "Pearson, Taylor clash in Tennessee's 9th Congressional District race (NewsChannel 5)", accessed: 2026-10-13 }
+
 id: us-house-09
 office: "U.S. House, District 9"
 level: us_house
 district: 9
-research_status: pending
+research_status: complete
 candidate_list_source: "https://sos-prod.tnsosgovfiles.com/s3fs-public/document/USHouse_Nov2026.pdf"
 candidates:
   - name: "Brent Taylor"
     ballot_party: Republican
     city: "Eads"
-    why_running: { text: null, sources: [] }
-    platform: []
-    arguments: []
+    incumbent: false
+    website: "https://brenttaylorforcongress.com/"
+    bio_facts:
+      - { text: "Tennessee state senator for District 31, elected in 2022.", sources: [*bp_race, *lookout_guide] }
+      - { text: "Elected to the Memphis City Council in 1995 and served 12 years.", sources: [*bt_about] }
+      - { text: "Filled a vacancy on the Shelby County Commission on an interim basis and later served on the Shelby County Election Commission, including as chairman.", sources: [*bt_about, *bp_race] }
+      - { text: "Funeral director who built a Mid-South funeral home business and later sold it; earned a degree in mortuary science from Northwest Mississippi Community College.", sources: [*bt_about, *bp_taylor, *flyer_sale] }
+    why_running:
+      text: >-
+        He says he is running to fight for the people of Middle and West Tennessee and to support the current
+        administration's agenda in Congress, including border security, cuts to federal spending, expanded domestic
+        energy production, and support for law enforcement.
+      sources: [*bt_issues, *bt_home]
+    platform:
+      - category: immigration
+        text: "Finish the border wall, deport immigrants in the country illegally who have committed crimes, end sanctuary policies, and strengthen cooperation among federal, state, and local law enforcement."
+        sources: [*bt_issues, *bp_race]
+      - category: cost_of_living
+        text: "Bring inflation under control and lower the cost of living through cuts to federal spending and regulations."
+        sources: [*bt_issues]
+      - category: infrastructure
+        text: "Expand domestic oil, natural gas, and nuclear power to lower energy costs and improve national security."
+        sources: [*bt_issues]
+      - category: taxes
+        text: "Cut wasteful federal programs and fraud, oppose large omnibus spending bills, and let families keep more of what they earn."
+        sources: [*bt_issues]
+      - category: public_safety
+        text: "Seek more federal resources for police recruitment and retention, long sentences for repeat violent offenders, limits on early release, and a crackdown on gangs and fentanyl traffickers."
+        sources: [*bt_issues]
+      - category: agriculture
+        text: "Protect private property rights, support voluntary farmland preservation programs, require honest labeling of lab-grown meat, and lower production costs for farmers."
+        sources: [*bt_issues]
+      - category: veterans
+        text: "Rebuild military readiness, modernize the armed forces, and strengthen the defense industrial base to deter China, Iran, and other adversaries."
+        sources: [*bt_issues]
+    arguments:
+      - stance: for
+        text: >-
+          The Memphis-area district has long been underserved in Congress, and he has been a strong voice for safer
+          streets and tackling crime that has affected families across Shelby County.
+        sources: [*bt_home]
+      - stance: for
+        text: >-
+          As a state senator he has delivered results on public safety and immigration enforcement, including bail
+          reform and a law requiring sheriffs to honor federal immigration detainers.
+        sources: [*bt_issues, *bt_about]
+      - stance: for
+        text: >-
+          He passed the only data center regulation of the legislative session, a measure that keeps data centers from
+          driving up utility rates for other customers.
+        sources: [*lookout_dc, *bt_issues]
+      - stance: for
+        text: >-
+          He has a record of cutting wasteful spending in the state Senate and would bring that approach to federal
+          spending in Washington.
+        sources: [*nc5, *bt_issues]
+      - stance: against
+        text: >-
+          He sponsored the state law that lets large data centers generate their own power with limited regulation,
+          and he has taken more than $100,000 from data center companies.
+        sources: [*lookout_dc, *lookout_sb]
+      - stance: against
+        text: >-
+          The data center law he helped write has so many carve-outs that it fails to protect residents from gas
+          turbines, heavy water use, and other harms of large data centers.
+        sources: [*lookout_dc]
+
   - name: "Justin J. Pearson"
     ballot_party: Democratic
     city: "Memphis"
-    why_running: { text: null, sources: [] }
-    platform: []
-    arguments: []
+    incumbent: false
+    website: "https://votejustinj.com/"
+    bio_facts:
+      - { text: "Member of the Tennessee House of Representatives since winning a 2023 special election; reelected in 2024.", sources: [*lookout_guide] }
+      - { text: "Expelled from the Tennessee House in April 2023 after a gun-control protest on the House floor; reappointed by the Shelby County Commission days later.", sources: [*bp_pearson, *lookout_guide, *lookout_primary] }
+      - { text: "Co-founder of Memphis Community Against the Pipeline, which opposed the Byhalia Pipeline through South Memphis.", sources: [*lookout_guide, *jp_about] }
+    why_running:
+      text: >-
+        He says he is running to make government work for working families rather than billionaires and corporations,
+        and to make life more affordable by passing Medicare for All, raising wages, and lowering food, gas, housing,
+        and energy costs. He also says he will push for a national moratorium on data centers until their effects can
+        be studied and regulated.
+      sources: [*jp_about]
+    platform:
+      - category: economy
+        text: "Create a federal jobs program guaranteeing a job for every American, make the minimum wage a living wage with support for small businesses, and pass the PRO Act to protect workers' right to organize."
+        sources: [*jp_issues]
+      - category: taxes
+        text: "Make billionaires and large corporations pay their fair share."
+        sources: [*jp_issues]
+      - category: health_care
+        text: "Pass Medicare for All and invest in rural hospitals and the Veterans Affairs health care system."
+        sources: [*jp_issues, *jp_about]
+      - category: guns
+        text: "Ban assault rifles and require background checks and cooling-off periods for firearm purchases."
+        sources: [*jp_issues]
+      - category: education
+        text: "Fully fund public education and rein in school voucher programs."
+        sources: [*jp_issues]
+      - category: environment
+        text: "Pause construction of hyperscale data centers until protections for health, the environment, and the economy are passed, including a national moratorium."
+        sources: [*jp_issues, *jp_about]
+      - category: government
+        text: "Overturn Citizens United to reduce corporate money in politics and ban members of Congress from trading stocks."
+        sources: [*jp_issues]
+      - category: foreign_policy
+        text: "End the war in Iran, which he says has driven up gas prices."
+        sources: [*nc5]
+    arguments:
+      - stance: for
+        text: >-
+          He rejects corporate PAC money, backs a ban on congressional stock trading, and is committed to removing
+          undisclosed money from elections.
+        sources: [*lookout_dc, *jp_issues]
+      - stance: for
+        text: >-
+          He has a record of organizing residents against pollution, leading the effort that stopped an oil pipeline in
+          South Memphis and pushing for accountability from a large data center in his district.
+        sources: [*jp_about, *lookout_guide]
+      - stance: for
+        text: >-
+          He would be a congressman who listens, and he has visited all 15 counties in the new district more than once
+          to meet voters face to face.
+        sources: [*nc5, *jp_about]
+      - stance: against
+        text: >-
+          He has no private-sector or business-ownership experience, and his push for a $20 minimum wage would impose
+          costs many businesses cannot afford.
+        sources: [*nc5, *wsmv_wage]
+      - stance: against
+        text: >-
+          He voted against the state measure requiring data centers to cover their own power-infrastructure costs so
+          other utility customers do not pay more.
+        sources: [*lookout_dc]
+
   - name: "Dennis Clark"
     ballot_party: Independent
     city: "Memphis"
+    bio_facts:
+      - { text: "Ran as an independent candidate for the 9th Congressional District in 2020, 2022, and 2024.", sources: [*lookout_guide] }
     why_running: { text: null, sources: [] }
     platform: []
     arguments: []
+
   - name: "Michelle Davis Head"
     ballot_party: Independent
     city: "Lewisburg"
