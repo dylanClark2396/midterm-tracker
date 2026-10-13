@@ -4,6 +4,10 @@ _sources:
   banner: &banner { url: "https://nashvillebanner.com/2026/10/09/tennessee-proposed-constitutional-amendment-bail/", title: "Amendment No. 1 seeks to limit Tennessee right to bail (Nashville Banner)", accessed: 2026-10-13 }
   wkms: &wkms { url: "https://www.wkms.org/government-politics/2026-10-12/tennessee-amendment-1-asks-voters-to-change-bail-rules", title: "Tennessee Amendment 1 asks voters to change bail rules (WKMS)", accessed: 2026-10-13 }
   aclu: &aclu { url: "https://www.aclu-tn.org/news/what-is-on-the-ballot-in-tennessee/", title: "What's on the ballot in Tennessee? (ACLU of Tennessee)", accessed: 2026-10-13 }
+  lk0318: &lk0318 { url: "https://tennesseelookout.com/2025/03/18/amendment-stripping-right-to-bail-for-some-felonies-closer-to-tennessee-voters-ballots/", title: "Amendment stripping right to bail for some felonies closer to Tennessee voters' ballots (Tennessee Lookout)", accessed: 2026-10-13 }
+  lk0422: &lk0422 { url: "https://tennesseelookout.com/2025/04/22/tennessee-voters-will-decide-whether-those-accused-of-some-felonies-lose-right-to-pretrial-bail/", title: "Tennessee voters will decide whether those accused of some felonies lose right to pretrial bail (Tennessee Lookout)", accessed: 2026-10-13 }
+  lk0214: &lk0214 { url: "https://tennesseelookout.com/2025/02/14/stockard-on-the-stump-sexton-and-bail-bond-industry-headed-for-collision/", title: "Stockard on the Stump: Sexton and bail bond industry headed for collision (Tennessee Lookout)", accessed: 2026-10-13 }
+  lk0529: &lk0529 { url: "https://tennesseelookout.com/2024/05/29/bail-industry-gears-up-for-battle-over-next-tennessee-constitutional-amendment/", title: "Bail industry gears up for battle over next Tennessee constitutional amendment (Tennessee Lookout)", accessed: 2026-10-13 }
 
 id: bail
 number: 1
@@ -51,7 +55,8 @@ official_summary: >-
   those cases.
 
 summary_plain: >-
-  Today the Tennessee Constitution guarantees bail before trial for every charge except capital offenses. This
+  Today the Tennessee Constitution guarantees bail before trial for every charge except capital offenses when the proof is evident or the
+  presumption great. This
   amendment would let a judge hold a person without bail before trial for a longer list of charges — terrorism,
   second-degree murder, aggravated rape of a child, aggravated rape, grave torture, and any offense that, as of
   November 3, 2026, requires a convicted person to serve at least 85% of the sentence — when the proof is evident
@@ -81,15 +86,16 @@ arguments:
     sources: [*banner, *wkms]
   - stance: yes
     text: >-
-      The change gives judges discretion, not a mandate. Bail can still be granted, the high "proof is evident or
-      the presumption great" standard still applies, and a defendant can still appeal a denial.
+      The change gives judges discretion, not a mandate. Bail can still be granted, the "proof is evident or the
+      presumption great" standard still applies, and a defendant can still appeal a denial.
     sources: [*banner, *wkms]
   - stance: yes
     text: >-
       Under the current rule, a defendant whom a judge considers dangerous can still go free by paying a large bail
       amount. Letting judges deny bail in these cases keeps release decisions from turning on how much money a
-      defendant has.
-    sources: [*wkms]
+      defendant has, and removes the incentive to inflate charges or set bail no one could pay just to keep someone
+      jailed.
+    sources: [*wkms, *lk0318, *lk0422]
   - stance: yes
     text: >-
       Judges would have to put their reasons for granting or denying bail on the record, making these decisions
@@ -100,21 +106,36 @@ arguments:
       When the bail clause was first written, many more crimes were capital offenses, so judges could hold many
       more defendants. This restores comparable authority for the most serious crimes of today.
     sources: [*banner]
+  - stance: yes
+    text: >-
+      Judges are expected to deny bail in relatively few cases, so the change is not expected to bring a large rise
+      in jail costs or crowding.
+    sources: [*wkms, *lk0318]
   - stance: no
     text: >-
-      People charged with a crime are presumed innocent. Holding them for months before trial can cost them their
-      job, home, and family stability, and those later found not guilty get nothing back for that lost time.
+      People charged with a crime are presumed innocent, and many cases end in dismissal: about one in five
+      statewide over 2011–2017, and one in three violent cases in Shelby County in December 2025. Holding people for
+      months before trial can cost them their job, home, and family stability, with nothing given back if the case
+      falls apart.
     sources: [*aclu, *wkms]
   - stance: no
     text: >-
-      The change is broader than the six crimes named on the ballot. The 85% clause covers roughly 73 offenses that
-      are not listed, and that list has grown as sentencing laws have changed.
-    sources: [*wkms, *banner]
+      The change reaches well beyond the six crimes named on the ballot. The 85% clause adds dozens of offenses —
+      estimates run from about 60 to more than 70 — that voters will not see listed, so voters and defendants lack
+      clear notice of which charges lose the right to bail.
+    sources: [*wkms, *banner, *aclu, *lk0214]
+  - stance: no
+    text: >-
+      The text does not say bail may be denied for these charges; it removes the right to bail for them. That makes
+      detention the starting point rather than the exception.
+    sources: [*lk0318, *wkms]
   - stance: no
     text: >-
       More pretrial detention means more people in county jails that are already near capacity, and the state does
-      not reimburse counties for those costs. The official fiscal note covers only ballot printing, not jail costs.
-    sources: [*wkms, *aclu]
+      not reimburse counties for those costs. Counties without beds may have to release people held on lesser
+      charges or build new jails, which can cost hundreds of millions of dollars. The official fiscal note covers
+      only ballot printing.
+    sources: [*wkms, *aclu, *lk0529]
   - stance: no
     text: >-
       Judges already have tools to manage risk: they can set high bail, weigh criminal history and past failures to
@@ -127,8 +148,12 @@ arguments:
     sources: [*banner]
   - stance: no
     text: >-
-      Pretrial detention makes it harder for defendants to work with their lawyers and prepare a defense, which
-      weakens a fair trial.
+      Even a short time in jail before trial can make it harder for a defendant to help prepare a defense.
     sources: [*aclu]
+  - stance: no
+    text: >-
+      Judges bring their own biases into the courtroom, so wider power to deny bail could fall hardest on poor
+      defendants and defendants of color.
+    sources: [*lk0422]
 
 last_verified: 2026-10-13
