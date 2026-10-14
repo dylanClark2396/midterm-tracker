@@ -242,6 +242,10 @@ const statewide = races.filter((r) => r.level === 'statewide').sort((a, b) => a.
       filter: grayscale(0.7) invert(1) hue-rotate(180deg) brightness(0.85) contrast(0.9);
     }
   }
+  /* Clicking a district focuses its shape; the picked-district highlight already shows it. */
+  .finder-map :global(path.leaflet-interactive:focus) {
+    outline: none;
+  }
   /* Leaflet's controls on the site's palette. */
   .finder-map :global(.leaflet-control-attribution) {
     font-size: 0.7rem;
