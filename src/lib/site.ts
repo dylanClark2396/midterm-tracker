@@ -5,6 +5,9 @@ export const GOVOTETN = 'https://sos.tn.gov/govotetn';
 export const REPO_URL = 'https://github.com/dylanClark2396/midterm-tracker';
 export const CORRECTION_URL = `${REPO_URL}/issues/new?template=correction.yml`;
 export const CONTACT_EMAIL = 'contact@tnelection.org';
+// Contact form backend (workers/contact) and its Turnstile site key (public).
+export const CONTACT_ENDPOINT = 'https://tnelection-contact.dylanclark2396.workers.dev';
+export const TURNSTILE_SITE_KEY = '0x4AAAAAAFW5X6phBQpA05yS';
 
 /** Prefix an internal path with the configured base path. */
 export function url(path = ''): string {
