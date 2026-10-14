@@ -136,8 +136,8 @@ candidates:
         sources: [*cm_meet, *nc5_molder]
       - stance: for
         text: >-
-          As mayor he has focused on practical local issues rather than national fights, and his campaign draws support
-          from voters of every party.
+          As mayor he has made progress across party lines by focusing on practical local issues rather than national
+          fights.
         sources: [*cm_home]
       - stance: for
         text: >-
