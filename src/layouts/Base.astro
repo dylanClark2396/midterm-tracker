@@ -112,7 +112,7 @@ const jsonLd = isHome
       }
       // Open the collapsed sources list when a footnote marker is followed.
       const openSources = () => {
-        const target = location.hash && document.getElementById(location.hash.slice(1));
+        const target = location.hash ? document.getElementById(location.hash.slice(1)) : null;
         target?.closest('details')?.setAttribute('open', '');
       };
       addEventListener('hashchange', openSources);

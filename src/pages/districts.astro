@@ -1,16 +1,86 @@
 ---
+import { getCollection } from 'astro:content';
 import Base from '../layouts/Base.astro';
 import { url } from '../lib/site';
+
+// District number -> race page, for the map's results panel.
+const races = (await getCollection('races')).map((r) => r.data);
+const byDistrict = (level: string) =>
+  Object.fromEntries(
+    races
+      .filter((r) => r.level === level && r.district !== null)
+      .map((r) => [r.district, { href: url(`races/${r.id}`), candidates: r.candidates.length }]),
+  );
+const raceIndex = {
+  us_house: byDistrict('us_house'),
+  state_senate: byDistrict('state_senate'),
+  state_house: byDistrict('state_house'),
+};
+const statewide = races.filter((r) => r.level === 'statewide').sort((a, b) => a.office.localeCompare(b.office));
 ---
 
-<Base title="Find your districts" description="How to find your U.S. House, state Senate, and state House districts for the November 3, 2026 Tennessee election.">
-  <h1>Find your districts</h1>
+<Base
+  title="Find your district races"
+  description="Search your address or tap a map of Tennessee to see which U.S. House, state Senate, and state House races are on your November 3, 2026 ballot."
+>
+  <h1>Find your district races</h1>
   <p class="lede">
-    Everyone in Tennessee votes on the three amendments, the governor's race, and the U.S. Senate race. Which U.S.
-    House, state Senate, and state House races are on your ballot depends on your address.
+    You don't need to know your district numbers. Search your address, use your location, or tap the map where you
+    live, and you'll see the U.S. House, state Senate, and state House races on your ballot.
   </p>
 
-  <h2>Use the state's official tools</h2>
+  <div class="district-finder" data-races={JSON.stringify(raceIndex)} data-maps={url('maps')}>
+    <form class="finder-search" role="search">
+      <label for="address">Your home address</label>
+      <div class="finder-row">
+        <input id="address" name="address" type="text" autocomplete="street-address" placeholder="e.g. 301 6th Ave N, Nashville" required />
+        <button type="submit">Search</button>
+        <button type="button" class="secondary" data-locate>Use my location</button>
+      </div>
+      <p class="finder-status small muted" role="status"></p>
+    </form>
+
+    <div class="finder-layout">
+      <div class="finder-map-wrap">
+        <fieldset class="finder-layers">
+          <legend class="small">Show district lines for</legend>
+          <label><input type="radio" name="layer" value="state_house" checked /> TN House</label>
+          <label><input type="radio" name="layer" value="state_senate" /> TN Senate</label>
+          <label><input type="radio" name="layer" value="us_house" /> U.S. House</label>
+        </fieldset>
+        <div class="finder-map" aria-label="Map of Tennessee districts. Tap a spot to see its races." role="application"></div>
+      </div>
+
+      <section class="finder-results" aria-live="polite" aria-labelledby="results-heading">
+        <h2 id="results-heading">Your district races</h2>
+        <div data-results>
+          <p class="muted">Search an address or tap the map to see the races for that spot.</p>
+        </div>
+      </section>
+    </div>
+
+    <noscript>
+      <p class="notice">
+        The map needs JavaScript. You can still use the state's tools below, then find your districts on the{' '}
+        <a href={url('races')}>races page</a>.
+      </p>
+    </noscript>
+  </div>
+
+  <template id="statewide-template">
+    <p class="small">
+      Everyone in Tennessee also votes on{' '}
+      {statewide.map((r, i) => <><a href={url(`races/${r.id}`)}>{r.office}</a>{i < statewide.length - 1 ? ', ' : ''}</>)}
+      {' '}and the <a href={url('amendments')}>three constitutional amendments</a>.
+    </p>
+  </template>
+
+  <p class="small muted">
+    Your address is sent to the U.S. Census Bureau's geocoder to find where it is; this site doesn't store it. Your
+    location (if you use it) never leaves your browser. Prefer to browse by number? See <a href={url('races')}>all races</a>.
+  </p>
+
+  <h2>Confirm with the state's official tools</h2>
   <ul class="plain-list">
     <li>
       <a href="https://tnmap.tn.gov/voterlookup/">Voter Registration Information Lookup</a> — shows your registration,
@@ -30,11 +100,179 @@ import { url } from '../lib/site';
     <p style="margin:0">
       <strong>New U.S. House map.</strong> Tennessee's congressional districts were redrawn in a May 2026 special
       session. Your U.S. House district may be different from the one you voted in before. See the Secretary of
-      State's <a href="https://sos.tn.gov/announcements/2026-congressional-redistricting">2026 congressional redistricting</a>
+      State's <a href="https://sos.tn.gov/announcements/2026-congressional-redistricting">2026 congressional redistricting</a>{' '}
       page, and confirm your district with the voter lookup above.
     </p>
   </div>
 
-  <p>Once you know your districts, find them on the <a href={url('races')}>races page</a>.</p>
-  <p class="small muted">This guide does not look up addresses itself; the state's tools are the authoritative source.</p>
+  <p class="small muted">
+    Map boundaries: U.S. House districts adopted May 7, 2026, from the{' '}
+    <a href="https://comptroller.tn.gov/maps/u-s--congress-districts.html">Tennessee Comptroller of the Treasury</a>;
+    state Senate and House districts (2022 plans) from the{' '}
+    <a href="https://www.census.gov/geographies/mapping-files/time-series/geo/tiger-line-file.html">U.S. Census Bureau</a>.
+    Lines are simplified for the web, so the state's lookup is the authoritative source. Basemap ©{' '}
+    <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors.
+  </p>
 </Base>
+
+<style>
+  .finder-search {
+    margin: 1.5rem 0 1rem;
+  }
+  .finder-search label {
+    display: block;
+    font-weight: 600;
+    margin-bottom: 0.3rem;
+  }
+  .finder-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+  }
+  .finder-row input {
+    flex: 1 1 18rem;
+    min-width: 0;
+    font: inherit;
+    color: var(--ink);
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 6px;
+    padding: 0.5rem 0.6rem;
+  }
+  .finder-row button {
+    font: inherit;
+    font-weight: 600;
+    color: var(--bg);
+    background: var(--ink);
+    border: 1px solid var(--ink);
+    border-radius: 6px;
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+  }
+  .finder-row button.secondary {
+    color: var(--ink);
+    background: transparent;
+    border-color: var(--border);
+  }
+  .finder-row button:disabled {
+    opacity: 0.6;
+    cursor: wait;
+  }
+  .finder-status {
+    margin: 0.4rem 0 0;
+    min-height: 1.5em;
+  }
+  .finder-layout {
+    display: grid;
+    gap: 1rem;
+  }
+  @media (min-width: 900px) {
+    .finder-layout {
+      grid-template-columns: minmax(0, 1fr) 20rem;
+      align-items: start;
+    }
+  }
+  .finder-layers {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.25rem 1rem;
+    align-items: center;
+    border: 0;
+    padding: 0;
+    margin: 0 0 0.5rem;
+  }
+  .finder-layers legend {
+    float: left;
+    margin-right: 0.5rem;
+    color: var(--muted);
+  }
+  .finder-layers label {
+    display: inline-flex;
+    gap: 0.3rem;
+    align-items: center;
+    cursor: pointer;
+  }
+  .finder-map {
+    height: min(65vh, 34rem);
+    min-height: 20rem;
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    background: var(--surface-2);
+  }
+  .finder-results {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    padding: 1rem 1.1rem;
+  }
+  .finder-results h2 {
+    margin-top: 0;
+    font-size: 1.3rem;
+  }
+  .finder-results :global(ul) {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 1rem;
+  }
+  .finder-results :global(li) {
+    padding: 0.6rem 0;
+    border-bottom: 1px solid var(--border);
+  }
+  .finder-results :global(li:last-child) {
+    border-bottom: 0;
+  }
+  .finder-results :global(.office) {
+    display: block;
+    font-size: 0.85rem;
+    color: var(--muted);
+  }
+  .finder-results :global(.district) {
+    font-weight: 600;
+  }
+  .finder-results :global(.notice) {
+    margin: 0 0 1rem;
+    font-size: 0.95rem;
+  }
+  /* A standard street map in both themes, slightly muted so district lines read first. */
+  .finder-map :global(.leaflet-tile-pane) {
+    filter: grayscale(0.35);
+  }
+  .finder-map :global(.finder-map-hint) {
+    position: absolute;
+    inset: 0;
+    z-index: 1000;
+    display: grid;
+    place-items: center;
+    padding: 1rem;
+    text-align: center;
+    font-weight: 600;
+    font-size: 1.15rem;
+    color: #fff;
+    background: rgb(0 0 0 / 0.45);
+    pointer-events: none;
+    opacity: 0;
+    transition: opacity 0.25s;
+  }
+  .finder-map :global(.finder-map-hint.shown) {
+    opacity: 1;
+  }
+  /* Clicking a district focuses its shape; the picked-district highlight already shows it. */
+  .finder-map :global(path.leaflet-interactive:focus) {
+    outline: none;
+  }
+  /* Leaflet's controls on the site's palette. */
+  .finder-map :global(.leaflet-control-attribution) {
+    font-size: 0.7rem;
+  }
+  :global(.leaflet-container) {
+    font: inherit;
+  }
+</style>
+
+<script>
+  import 'leaflet/dist/leaflet.css';
+  import { initDistrictFinder } from '../scripts/district-finder';
+
+  const root = document.querySelector<HTMLElement>('.district-finder');
+  if (root) initDistrictFinder(root);
+</script>
