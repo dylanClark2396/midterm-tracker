@@ -33,10 +33,20 @@ _sources:
   lookout_green: &lookout_green { url: "https://tennesseelookout.com/2026/09/28/democratic-gubernatorial-contender-jerri-green-talks-affordability-republican-supermajority/", title: "Democratic gubernatorial contender Jerri Green talks affordability, Republican supermajority (Tennessee Lookout)", accessed: 2026-10-13 }
   wtvf_green: &wtvf_green { url: "https://www.newschannel5.com/news/newschannel-5-investigates/democratic-nominee-jerri-green-says-tennessee-needs-new-leadership-ahead-of-historic-governors-race", title: "Democratic nominee Jerri Green says Tennessee needs new leadership (NewsChannel 5)", accessed: 2026-10-13 }
   wsmv_debate: &wsmv_debate { url: "https://www.wsmv.com/2026/09/08/jerri-green-formally-challenges-marsha-blackburn-series-gubernatorial-debates-ahead-tn-midterms/", title: "Marsha Blackburn rejects Jerri Green's request for series of gubernatorial debates (WSMV)", accessed: 2026-10-13 }
-  wsmv_pinkston: &wsmv_pinkston { url: "https://www.wsmv.com/2026/09/24/independent-not-backing-down-after-democratic-nominee-urges-her-end-run-tn-governor/", title: "Independent 'not backing down' after Democratic nominee urges her to end run (WSMV)", accessed: 2026-10-13 }
   primary: &primary { url: "https://www.newschannel5.com/news/blackburn-and-green-win-primaries-will-compete-to-be-tenn-s-first-woman-governor", title: "Blackburn and Green win primaries (Nashville Banner, via NewsChannel 5)", accessed: 2026-10-13 }
   tfp_indep: &tfp_indep { url: "https://www.timesfreepress.com/news/2026/sep/15/spoilers-or-contenders-independent-candidates-for/", title: "Spoilers or contenders? Independent candidates for Tennessee governor (Chattanooga Times Free Press)", accessed: 2026-10-13 }
   rally: &rally { url: "https://tennesseelookout.com/2026/10/10/trump-touts-memphis-law-enforcement-surge-in-tennessee-rally-meant-to-shore-up-midterm-support/", title: "Trump touts Memphis law enforcement surge in Tennessee rally (Tennessee Lookout)", accessed: 2026-10-13 }
+  bannerq_major: &bannerq_major { url: "https://nashvillebanner.com/2026/09/08/tennessee-governor-marsha-blackburn-jerri-green/", title: "Tennessee governor race: Blackburn, Green clash on policy (Nashville Banner questionnaire)", accessed: 2026-10-13 }
+  banner_green: &banner_green { url: "https://nashvillebanner.com/2026/09/29/jerri-green-tennessee-governor-campaign/", title: "Jerri Green breaks down her campaign for Tennessee governor (Nashville Banner)", accessed: 2026-10-13 }
+  tpa_forum: &tpa_forum { url: "https://tennesseelookout.com/2026/10/12/green-hatley-pinkston-to-participate-in-tennessee-press-association-governors-forum/", title: "Green, Hatley, Pinkston to participate in Tennessee Press Association governor's forum (Tennessee Lookout)", accessed: 2026-10-13 }
+  fox17_debate: &fox17_debate { url: "https://fox17.com/news/local/sen-blackburn-refuses-debate-against-jerri-green-in-tennessee-governor-race", title: "Sen. Blackburn refuses debate against Jerri Green in Tennessee governor race (FOX 17)", accessed: 2026-10-13 }
+  bp_green: &bp_green { url: "https://ballotpedia.org/Jerri_Green", title: "Jerri Green (Ballotpedia)", accessed: 2026-10-13 }
+  pinkston_issues: &pinkston_issues { url: "https://www.pinkstonfortn.com/issues", title: "Where Lauren Stands, Issue by Issue (Pinkston campaign)", accessed: 2026-10-13 }
+  nc5_indep: &nc5_indep { url: "https://www.newschannel5.com/news/newschannel-5-investigates/independent-candidates-reject-calls-to-leave-tennessee-governors-race-hope-to-shake-up-two-party-system", title: "Independent candidates make their case for Tennessee governor (NewsChannel 5)", accessed: 2026-10-13 }
+  abidi_letter: &abidi_letter { url: "https://daughteroftennessee.substack.com/p/a-letter-from-misam-abidi-to-tennessee", title: "A Letter from Misam Abidi to Tennessee Voters (signed letter, June 2026)", accessed: 2026-10-13 }
+  seeman_home: &seeman_home { url: "https://davefortn.com/", title: "Dave Seeman for Governor of Tennessee (Seeman campaign)", accessed: 2026-10-13 }
+  seeman_platform: &seeman_platform { url: "https://davefortn.com/platform", title: "Platform: The Volunteer Plan (Seeman campaign)", accessed: 2026-10-13 }
+  seeman_bp: &seeman_bp { url: "https://ballotpedia.org/Dave_Seeman", title: "Dave Seeman, Candidate Connection survey (Ballotpedia)", accessed: 2026-10-13 }
 
 id: governor
 office: "Governor"
@@ -70,7 +80,7 @@ candidates:
         sources: [*mb_tax, *mb_waste]
       - category: education
         text: "Supports school choice and expanding the Education Freedom Scholarship program; wants parents to have the main say in their children's education; would strengthen the state 529 college savings program."
-        sources: [*mb_parents, *firefly_mb, *mb_highered]
+        sources: [*bannerq_major, *mb_parents, *mb_highered]
       - category: public_safety
         text: "Pledges to seek the removal of district attorneys she says are failing to prosecute crime, oppose cuts to police funding, and work with Shelby County officials on crime in Memphis."
         sources: [*mb_safety]
@@ -78,8 +88,8 @@ candidates:
         text: "Enforce immigration law, keep sanctuary cities out of Tennessee, penalize officials who do not follow federal law, and have the state help carry out mass deportations."
         sources: [*mb_immig]
       - category: infrastructure
-        text: "Expand transportation capacity to keep up with population growth and close the rural broadband gap."
-        sources: [*mb_infra]
+        text: "Invest in infrastructure that keeps up with growth — roads, rails, rivers, runways, water systems — and close the rural broadband gap."
+        sources: [*bannerq_major, *mb_infra]
       - category: guns
         text: "Protect the right to bear arms while working on mental health system reforms aimed at preventing gun violence."
         sources: [*mb_guns]
@@ -114,24 +124,26 @@ candidates:
         sources: [*firefly_mb]
       - stance: against
         text: >-
-          She declined to debate her primary opponents and has rejected debates in the general election, so voters
-          have not seen her answer unscripted, side-by-side questions about her plans for the state.
-        sources: [*wsmv_debate, *primary]
+          She declined to debate her primary opponents, has rejected debates in the general election, and did not
+          respond to a statewide press association forum invitation, so voters have not seen her answer unscripted,
+          side-by-side questions about her plans for the state.
+        sources: [*wsmv_debate, *primary, *tpa_forum]
       - stance: against
         text: >-
-          Her campaign relies on broad national themes rather than concrete plans for the grocery, housing, and health
-          care costs that Tennessee families face.
-        sources: [*wsmv_debate, *wtvf_green]
+          Her education plan centers on private school vouchers and says little about teacher pay, testing, school
+          safety, or pre-K in the public schools most children attend. In many small towns the only school is also the
+          largest employer, so moving money away from it hurts the whole community.
+        sources: [*firefly_mb_profile, *bannerq_major]
       - stance: against
         text: >-
-          Her campaign is heavily backed by corporate and wealthy donors, and she has not held a public town hall in
-          years, which raises the question of whom she would answer to as governor.
-        sources: [*wsmv_pinkston, *wsmv_debate]
+          Her policy answers mostly defend the state's current direction rather than lay out specific new plans for the
+          grocery, housing, and health care costs Tennessee families face.
+        sources: [*bannerq_major, *wsmv_debate]
       - stance: against
         text: >-
-          Ideas she has promoted, such as bringing back the electric chair, would do nothing to protect Tennesseans;
-          public safety comes from preventing crime and supporting the officers who do that work.
-        sources: [*banner_q]
+          Her plan to bring back the electric chair would do nothing to protect Tennesseans; public safety comes from
+          preventing crime and supporting the officers who do that work.
+        sources: [*bannerq_major, *banner_q]
 
   - name: "Jerri Green"
     ballot_party: Democratic
@@ -139,9 +151,9 @@ candidates:
     incumbent: false
     website: "https://greenforgovernor.com"
     bio_facts:
-      - { text: "Memphis City Council member, District 2, since 2024.", sources: [*firefly_jg_profile, *jg_about] }
+      - { text: "Memphis City Council member, District 2, since January 2024.", sources: [*bp_green, *firefly_jg_profile] }
       - { text: "Appointed interim Chief Public Defender of Shelby County in January 2026.", sources: [*firefly_jg_profile, *jg_about] }
-      - { text: "Deputy chief of staff and senior policy advisor to the Shelby County mayor, 2021–2025.", sources: [*firefly_jg_profile] }
+      - { text: "Former deputy chief of staff and senior policy advisor to the Shelby County mayor.", sources: [*firefly_jg_profile, *jg_about] }
       - { text: "Law degree from Georgetown University Law Center.", sources: [*jg_about] }
     why_running:
       text: >-
@@ -154,17 +166,17 @@ candidates:
         text: "Use unspent federal TANF funds to waive housing security deposits, clear child care waitlists, and erase medical debt; increase funding for affordable housing."
         sources: [*jg_policy, *lookout_green]
       - category: taxes
-        text: "End the state sales tax on groceries and on diapers and menstrual products, and stop tax rebates for large businesses."
-        sources: [*jg_policy, *lookout_green]
+        text: "End the state sales tax on groceries and on diapers and menstrual products, end the state's annual tax rebate program for corporations, and create a minimum tax so corporations cannot pay little or nothing."
+        sources: [*jg_policy, *bannerq_major]
       - category: economy
-        text: "Expand paid family and medical leave, push for a living wage, support collective bargaining, and invest in small businesses and vocational training."
-        sources: [*jg_policy]
+        text: "Raise the state minimum wage to at least $20 an hour, expand paid family and medical leave, support collective bargaining, and invest in small businesses and vocational training."
+        sources: [*jg_policy, *bannerq_major]
       - category: education
         text: "Fully fund K-12 public schools instead of private school vouchers, raise teacher pay, expand universal pre-K, and create a special education equity fund."
         sources: [*jg_policy]
       - category: health_care
-        text: "Expand Medicaid, protect TennCare, curb prescription drug middleman markups, and legalize marijuana for medical and recreational use."
-        sources: [*jg_policy]
+        text: "Expand Medicaid, protect TennCare and rural hospitals, curb prescription drug middleman markups, and legalize marijuana for medical and recreational use."
+        sources: [*jg_policy, *bannerq_major]
       - category: abortion
         text: "Repeal the state's near-total abortion ban and issue an executive order so doctors can provide women's health care without fear of prosecution."
         sources: [*jg_policy]
@@ -172,8 +184,8 @@ candidates:
         text: "Require universal background checks, adopt red flag laws, close domestic violence loopholes, provide free gun locks, and restore permit training."
         sources: [*jg_policy]
       - category: immigration
-        text: "End the Tennessee Highway Patrol's cooperation with U.S. Immigration and Customs Enforcement."
-        sources: [*jg_policy, *lookout_green]
+        text: "End state and local law enforcement cooperation with U.S. Immigration and Customs Enforcement, including ending 287(g) agreements on her first day."
+        sources: [*jg_policy, *bannerq_major]
     arguments:
       - stance: for
         text: >-
@@ -183,14 +195,14 @@ candidates:
         sources: [*jg_about]
       - stance: for
         text: >-
-          She has held more than 170 public town halls across the state and has offered to debate on any date, showing
+          She has held more than 200 public town halls across the state and has offered to debate on any date, showing
           a willingness to answer voters' questions directly.
-        sources: [*wsmv_debate]
+        sources: [*fox17_debate, *wsmv_debate]
       - stance: for
         text: >-
           Her plan offers immediate relief on child care, housing deposits, and medical debt using federal funds the
           state is already holding, rather than new taxes.
-        sources: [*lookout_green]
+        sources: [*lookout_green, *jg_policy]
       - stance: for
         text: >-
           Expanding Medicaid would extend coverage to about 300,000 uninsured Tennesseans and help keep rural hospitals
@@ -198,23 +210,45 @@ candidates:
         sources: [*lookout_green, *jg_policy]
       - stance: for
         text: >-
-          Her campaign is funded mostly by small, in-state donations and takes no corporate PAC money, so she would not
-          owe special interests.
+          She says 95% of her donations come from Tennessee, with an average gift under $50, and that she takes no
+          corporate PAC money.
         sources: [*lookout_green]
       - stance: against
         text: >-
-          Her platform would reverse the low-tax, limited-government approach that has drawn people and businesses to
-          Tennessee, and would steer the state toward the policies of higher-cost states like New York and California.
-        sources: [*primary, *wsmv_debate, *rally]
+          Her plans to raise taxes on corporations and create a corporate minimum tax would move Tennessee away from the
+          low-tax approach that attracts businesses and residents to the state.
+        sources: [*bannerq_major, *primary]
       - stance: against
         text: >-
-          Her elected experience is a single city council term, a short record for running a state government.
-        sources: [*lookout_green]
+          Raising the minimum wage to $20 an hour would lead businesses to cut staff or hours and raise prices, with
+          rural employers hit hardest by a wage set for big cities.
+        sources: [*bannerq_major]
+      - stance: against
+        text: >-
+          Much of her agenda would need approval from a legislature that opposes it and can override a governor's veto,
+          so many of her proposals are unlikely to become law.
+        sources: [*bannerq_major, *banner_green]
+      - stance: against
+        text: >-
+          Ending the state's agreements with federal immigration enforcement would weaken the partnership needed to
+          enforce immigration law in Tennessee.
+        sources: [*bannerq_major]
+      - stance: against
+        text: >-
+          Her only elected office is a city council seat she has held since 2024, a short record for running a state
+          government.
+        sources: [*lookout_green, *bp_green]
 
   - name: "Misam Abidi"
     ballot_party: Independent
     city: Nolensville
     website: "https://www.misamforgovernor.com/"
+    why_running:
+      text: >-
+        He says he did not seek politics but decided to run after concluding that government has forgotten its purpose
+        is to serve people. He wants every major state decision to start with the well-being of individual
+        Tennesseans.
+      sources: [*abidi_letter]
     platform:
       - category: cost_of_living
         text: "Train more construction tradespeople, speed up permitting, encourage starter and modular homes, and create a \"Tennessee First Home Account\" with state matching for families saving toward a home."
@@ -299,17 +333,17 @@ candidates:
         sources: [*tfp_indep, *hatley]
       - stance: for
         text: >-
-          He has been open about a mistake decades ago and the business record he built afterward, which shows the
-          kind of persistence the job requires.
-        sources: [*tfp_indep]
+          He has spoken openly about a fraud conviction from when he was 21 and how he rebuilt afterward, growing a
+          Tennessee manufacturer and keeping its jobs in the state.
+        sources: [*tfp_indep, *nc5_indep, *hatley]
       - stance: against
         text: >-
           He has a 1998 felony conviction for bank fraud, which weighs against trusting him with the state's finances.
         sources: [*lookout_green, *tfp_indep]
       - stance: against
         text: >-
-          He declined to answer a standard newspaper policy questionnaire that other candidates completed, leaving
-          voters with less detail about where he stands.
+          He declined to answer a newspaper's policy questionnaire, calling the questions "too hard," while several
+          rivals submitted answers, leaving voters with less detail about where he stands.
         sources: [*banner_q]
 
   - name: "Wendell Jackson"
@@ -352,13 +386,13 @@ candidates:
     why_running:
       text: >-
         She says the greatest injustice she sees is a system that suggests you have to be a political extremist to be
-        represented. She points to independents now outnumbering both parties' registrants and says voters want
-        solutions, not sides.
+        represented. She says independents now outnumber members of either major party in Tennessee because voters
+        want solutions, not sides.
       sources: [*pinkston]
     platform:
       - category: taxes
         text: "Eliminate the 4% grocery tax, offset by closing corporate affiliate loopholes; opposes a state income tax."
-        sources: [*pinkston, *banner_q]
+        sources: [*pinkston_issues, *pinkston, *banner_q]
       - category: cost_of_living
         text: "Cap how much local governments can raise property tax revenue each year, fully fund the senior property tax freeze, and redirect state housing loans to first-time buyers."
         sources: [*pinkston, *banner_q]
@@ -383,9 +417,9 @@ candidates:
     arguments:
       - stance: for
         text: >-
-          Running without a party, she can work with lawmakers from either side, and many voters say they want a
-          viable option outside the two-party system.
-        sources: [*wsmv_pinkston, *pinkston]
+          Without a party to answer to, she would be free to work with lawmakers from either side and bring them
+          together around workable policies.
+        sources: [*nc5_indep, *banner_q]
       - stance: for
         text: >-
           She pairs her tax cuts with specific ways to cover the lost revenue, such as closing corporate affiliate
@@ -403,8 +437,8 @@ candidates:
     website: "https://captvicscoggin4tngov.us/"
     why_running:
       text: >-
-        He says career politicians have failed to address crime and other problems because they want to keep their
-        jobs. He presents himself as an outsider who takes no outside funding.
+        He says career politicians have done nothing about violent crime and other problems and want to hold office
+        forever. He says he is not funded by anybody and answers only to taxpayers.
       sources: [*scoggin]
     platform:
       - category: public_safety
@@ -435,6 +469,37 @@ candidates:
   - name: "Dave Seeman"
     ballot_party: Independent
     city: Nashville
+    website: "https://davefortn.com/"
+    why_running:
+      text: >-
+        He says he is running to challenge the systems that keep politics divided rather than take part in them, and to
+        build better government by design. He calls climate action his top priority.
+      sources: [*seeman_home]
+    platform:
+      - category: taxes
+        text: "Phase the 4% state grocery tax to zero over three years, paid for by closing corporate tax loopholes."
+        sources: [*seeman_platform]
+      - category: education
+        text: "Repeal the Education Freedom Scholarship program and redirect its funding to putting qualified teachers in classrooms."
+        sources: [*seeman_platform]
+      - category: economy
+        text: "Raise the minimum wage to $21 an hour over four years, let cities set higher wage floors, and provide 12 weeks of family leave."
+        sources: [*seeman_platform, *seeman_home]
+      - category: health_care
+        text: "Cover every adult below the poverty line through a Medicaid waiver and expand community health centers to every county."
+        sources: [*seeman_platform]
+      - category: cost_of_living
+        text: "Cover child care costs for working families earning up to $99,000, with parents choosing the provider."
+        sources: [*seeman_platform]
+      - category: infrastructure
+        text: "Place a 24-month moratorium on new data centers while the state sets regulatory standards."
+        sources: [*seeman_platform, *seeman_home]
+      - category: environment
+        text: "Create a Tennessee Green Bank and a Tennessee Renewable Power Authority."
+        sources: [*seeman_bp]
+      - category: government
+        text: "Repeal the ban on ranked-choice voting, open primary elections, and draw fair districts."
+        sources: [*seeman_platform, *seeman_home]
 
   - name: "Karl Knox Smithson"
     ballot_party: Independent
@@ -447,7 +512,7 @@ candidates:
   - name: "Robert C. Vick"
     ballot_party: Independent
     city: Dandridge
-    website: "https://www.drvick4tn.com/meet_dr_robert_c"
+    website: "https://www.drvick4tn.com/"
     bio_facts:
       - { text: "Retired after 40 years in public education.", sources: [*banner_q] }
       - { text: "Doctorate in school leadership from East Tennessee State University (2004).", sources: [*vick_about] }

@@ -1,35 +1,163 @@
-# Seeded from the Secretary of State's certified candidate list by
-# scripts/seed-from-certified-list.py. research_status: pending —
-# platforms and arguments not yet compiled.
+# U.S. House, District 6 — open seat: Rep. John Rose is running for governor instead of re-election.
+# Candidate order follows the Secretary of State's certified candidate list.
+# District lines were redrawn in a May 2026 special session.
+# cmondayforliberty.com is behind a Cloudflare challenge and was not readable; Monday's entries use his Ballotpedia survey.
+_sources:
+  lookout_guide: &lookout_guide { url: "https://tennesseelookout.com/voter-guides/contests/congressional-district-6-2/", title: "U.S. House, 6th Congressional District voter guide (Tennessee Lookout)", accessed: 2026-10-13 }
+  lookout_primary: &lookout_primary { url: "https://tennesseelookout.com/2026/08/06/state-rep-garrett-prevails-in-republican-primary-for-tennessees-6th-district/", title: "State Rep. Garrett prevails in Republican primary for Tennessee's 6th District (Tennessee Lookout)", accessed: 2026-10-13 }
+  wpln: &wpln { url: "https://wpln.org/post/in-the-6th-district-state-rep-johnny-garrett-grabs-republican-ticket/", title: "In the 6th District, State Rep. Johnny Garrett will face Democrat Mike Croley (WPLN)", accessed: 2026-10-13 }
+  jg_bp: &jg_bp { url: "https://ballotpedia.org/Johnny_Garrett", title: "Johnny Garrett (Ballotpedia)", accessed: 2026-10-13 }
+  jg_meet: &jg_meet { url: "https://johnnygarrettforcongress.com/meet-johnny", title: "Meet Johnny (Garrett campaign)", accessed: 2026-10-13 }
+  jg_issues: &jg_issues { url: "https://johnnygarrettforcongress.com/issues", title: "Issues (Garrett campaign)", accessed: 2026-10-13 }
+  jg_mp: &jg_mp { url: "https://www.themountainpress.com/lafollette/news/state-rep-garrett-is-running-for-district-6-u-s-house-seat-wants-to-make/article_6416a4d6-0e99-50d9-818c-ce2ab21f3d81.html", title: "State Rep. Garrett is running for District 6 U.S. House seat (LaFollette Press / The Mountain Press)", accessed: 2026-10-13 }
+  mc_bp: &mc_bp { url: "https://ballotpedia.org/Mike_Croley", title: "Mike Croley, Candidate Connection survey (Ballotpedia)", accessed: 2026-10-13 }
+  mc_meet: &mc_meet { url: "https://croleyforcongress.com/meet-mike/", title: "Meet Mike (Croley campaign)", accessed: 2026-10-13 }
+  mc_home: &mc_home { url: "https://croleyforcongress.com/", title: "The AAA Blueprint (Croley campaign home page)", accessed: 2026-10-13 }
+  mc_gen: &mc_gen { url: "https://croleyforcongress.com/did-the-last-generation-really-do-better/", title: "Did the Last Generation Really Do Better? (Croley campaign blog)", accessed: 2026-10-13 }
+  cm_bp: &cm_bp { url: "https://ballotpedia.org/Christopher_B._Monday", title: "Christopher Monday, Candidate Connection survey (Ballotpedia)", accessed: 2026-10-13 }
+  ap_bp: &ap_bp { url: "https://ballotpedia.org/Angus_Purdy", title: "Angus Purdy (Ballotpedia)", accessed: 2026-10-13 }
+
 id: us-house-06
 office: "U.S. House, District 6"
 level: us_house
 district: 6
-research_status: pending
+research_status: complete
 candidate_list_source: "https://sos-prod.tnsosgovfiles.com/s3fs-public/document/USHouse_Nov2026.pdf"
+
 candidates:
   - name: "Johnny Garrett"
     ballot_party: Republican
     city: "Goodlettsville"
-    why_running: { text: null, sources: [] }
-    platform: []
-    arguments: []
+    incumbent: false
+    website: "https://johnnygarrettforcongress.com/"
+    bio_facts:
+      - { text: "Member of the Tennessee House of Representatives, elected in 2018.", sources: [*lookout_guide, *jg_meet] }
+      - { text: "Tennessee House Majority Whip since 2019.", sources: [*jg_meet, *lookout_guide] }
+      - { text: "Attorney in private practice in Sumner County; J.D. from the Nashville School of Law (2006) and B.S. in general business from the University of Tennessee, Knoxville.", sources: [*jg_meet, *jg_bp] }
+      - { text: "Running for the open seat left by Rep. John Rose, who ran for governor; won the August 2026 Republican primary.", sources: [*lookout_guide, *wpln] }
+    why_running:
+      text: >-
+        He says he wants to bring to Congress the approach he has supported in the state House: cutting taxes, keeping
+        regulations down, and expanding the workforce for good-paying jobs, and to help pass the current
+        administration's agenda. His campaign says he is running to stand up for family values, fix the economy, and
+        keep the country safe.
+      sources: [*jg_mp, *jg_meet]
+    platform:
+      - category: immigration
+        text: "Build a physical border wall and support deporting people in the country illegally, including use of the military to remove criminal offenders."
+        sources: [*jg_issues]
+      - category: taxes
+        text: "Make the 2017 tax cuts permanent and expand them, end taxes on Social Security, tips, and overtime, and require the federal government to balance its budget."
+        sources: [*jg_issues]
+      - category: economy
+        text: "Make the U.S. the world leader in artificial intelligence through a national standard, protection of American intellectual property, and domestic energy to power AI."
+        sources: [*jg_issues]
+      - category: guns
+        text: "Defend Second Amendment rights."
+        sources: [*jg_issues]
+      - category: abortion
+        text: "Oppose abortion; he says life begins at conception."
+        sources: [*jg_issues]
+      - category: foreign_policy
+        text: "Ensure Israel has the resources to defend itself, and counter China, including blocking Chinese purchases of farmland."
+        sources: [*jg_issues]
+      - category: public_safety
+        text: "Support law enforcement officers and first responders, and support the military and care for veterans."
+        sources: [*jg_issues]
+      - category: agriculture
+        text: "Support a farm bill and give farmers and ranchers the tools they need without government encroachment."
+        sources: [*jg_issues]
+    arguments:
+      - stance: for
+        text: >-
+          His eight years in the state House show what he would do in Congress: he helped pass balanced budgets, tax
+          cuts, state immigration enforcement, and limits on transgender athletes in women's sports.
+        sources: [*jg_issues, *jg_mp]
+      - stance: for
+        text: >-
+          Deep local roots and years of community service, including co-founding a nonprofit that aids families of
+          fallen first responders, keep him connected to the people he would represent.
+        sources: [*jg_meet]
+
   - name: "Mike Croley"
     ballot_party: Democratic
     city: "Crossville"
-    why_running: { text: null, sources: [] }
-    platform: []
-    arguments: []
+    incumbent: false
+    website: "https://croleyforcongress.com/"
+    bio_facts:
+      - { text: "Served in the U.S. Navy, 1999–2009, and was commissioned as an officer in 2005.", sources: [*mc_bp, *mc_meet] }
+      - { text: "Degree in civil and environmental engineering from Vanderbilt University (2005); master's degree in public safety from Tennessee Tech.", sources: [*mc_meet, *mc_bp] }
+      - { text: "Worked as an efficiency engineer with TVA's EnergyRight program and as a Tennessee State Park ranger.", sources: [*mc_meet, *lookout_guide] }
+      - { text: "Presidential Management Fellow at the U.S. Departments of State and Agriculture and NOAA.", sources: [*mc_meet, *lookout_guide] }
+      - { text: "Won the August 2026 Democratic primary.", sources: [*wpln] }
+    why_running:
+      text: >-
+        He says working families in the district are being left behind while wealthy interests shape policy, and that
+        he decided to run after losing his federal fellowship in 2025 job cuts without help from his representative. He
+        says he wants to represent everyone in the district, not a party, and to rebuild trust in government.
+      sources: [*mc_meet, *mc_home, *mc_bp]
+    platform:
+      - category: economy
+        text: "End the current tariffs, invest in American industry and trades, and strengthen labor standards and make it easier to unionize."
+        sources: [*mc_home]
+      - category: taxes
+        text: "Repeal the 2025 federal tax-and-spending law, redirect money to assistance programs, tax the wealthy fairly, and close tax loopholes."
+        sources: [*mc_home]
+      - category: cost_of_living
+        text: "Build more affordable housing and cap private equity firms' housing holdings."
+        sources: [*mc_home]
+      - category: health_care
+        text: "Limit insurers' ability to deny claims, strengthen rural health care, improve veterans' access to care, and protect Social Security without cuts or a higher retirement age."
+        sources: [*mc_home, *mc_gen]
+      - category: education
+        text: "Raise teacher pay and invest in public schools."
+        sources: [*mc_bp]
+      - category: environment
+        text: "Protect the environment and clean water, and promote ecotourism that supports local jobs."
+        sources: [*mc_bp]
+      - category: government
+        text: "Ban members of Congress from trading stocks and becoming lobbyists, overturn Citizens United, enact congressional term limits, and make voting more accessible."
+        sources: [*mc_home]
+      - category: immigration
+        text: "Sharply scale back funding for DHS and ICE so reforms cannot be sidestepped."
+        sources: [*mc_home]
+    arguments:
+      - stance: for
+        text: >-
+          A career of public service as a Navy officer, park ranger, and federal fellow has given him leadership
+          experience across several federal agencies.
+        sources: [*mc_bp, *mc_meet]
+
   - name: "Christopher B. Monday"
     ballot_party: Independent
     city: "Cookeville"
-    why_running: { text: null, sources: [] }
-    platform: []
-    arguments: []
+    website: "https://cmondayforliberty.com/"
+    bio_facts:
+      - { text: "Independent candidate for this seat in 2020.", sources: [*cm_bp, *lookout_guide] }
+      - { text: "Graduate of Cookeville High School.", sources: [*cm_bp] }
+    why_running:
+      text: >-
+        He says he wants to defend individual liberties by taking the oath of office seriously, defending the
+        Constitution, and representing the people of the district instead of himself or lobbyists.
+      sources: [*cm_bp]
+    platform:
+      - category: taxes
+        text: "Reduce federal spending, including cutting spending on projects with no benefit to Americans, without harming Americans."
+        sources: [*cm_bp]
+      - category: foreign_policy
+        text: "Reduce foreign aid."
+        sources: [*cm_bp]
+      - category: immigration
+        text: "Make legal immigration and citizenship less difficult so people are encouraged to come legally."
+        sources: [*cm_bp]
+      - category: government
+        text: "Leave term limits to voters at the ballot box."
+        sources: [*cm_bp]
+
   - name: "Angus Purdy"
     ballot_party: Independent
     city: "Nashville"
-    why_running: { text: null, sources: [] }
-    platform: []
-    arguments: []
+    bio_facts:
+      - { text: "Candidate for Nashville Metro Council District 18 in 2023.", sources: [*ap_bp] }
+
 last_verified: 2026-10-13
