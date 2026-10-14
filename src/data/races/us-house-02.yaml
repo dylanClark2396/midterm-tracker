@@ -10,11 +10,11 @@ _sources:
   tb_term: &tb_term { url: "https://burchettforcongress.com/issue/term-limits/", title: "Term Limits (Burchett campaign)", accessed: 2026-10-13 }
   tb_tax: &tb_tax { url: "https://burchettforcongress.com/issue/taxes-and-spending/", title: "Taxes and Spending (Burchett campaign)", accessed: 2026-10-13 }
   tb_guns: &tb_guns { url: "https://burchettforcongress.com/issue/guns/", title: "Guns (Burchett campaign)", accessed: 2026-10-13 }
-  tb_life: &tb_life { url: "https://burchettforcongress.com/issue/life/", title: "Life (Burchett campaign)", accessed: 2026-10-13 }
   tb_h_border: &tb_h_border { url: "https://burchett.house.gov/issues/border-security", title: "Border Security (Rep. Tim Burchett, U.S. House)", accessed: 2026-10-13 }
   tb_h_vets: &tb_h_vets { url: "https://burchett.house.gov/issues/veterans", title: "Veterans (Rep. Tim Burchett, U.S. House)", accessed: 2026-10-13 }
   tb_h_abortion: &tb_h_abortion { url: "https://burchett.house.gov/issues/abortion", title: "Abortion (Rep. Tim Burchett, U.S. House)", accessed: 2026-10-13 }
   tb_h_debt: &tb_h_debt { url: "https://burchett.house.gov/issues/debt-deficit", title: "Debt & Deficit (Rep. Tim Burchett, U.S. House)", accessed: 2026-10-13 }
+  tb_h_2a: &tb_h_2a { url: "https://burchett.house.gov/issues/second-amendment", title: "Second Amendment (Rep. Tim Burchett, U.S. House)", accessed: 2026-10-13 }
   congress_tb: &congress_tb { url: "https://www.congress.gov/member/tim-burchett/B001309", title: "Rep. Tim Burchett, sponsored legislation (Congress.gov)", accessed: 2026-10-13 }
   tb_jobs: &tb_jobs { url: "https://burchettforcongress.com/issue/jobs-and-regulation/", title: "Jobs and Regulation (Burchett campaign)", accessed: 2026-10-13 }
   wvlt_endorse: &wvlt_endorse { url: "https://www.wvlt.tv/2025/11/09/trump-endorses-burchett-fleischmann-harshbarger-re-election-congress", title: "Trump endorses Burchett, Fleischmann, Harshbarger for re-election to Congress (WVLT)", accessed: 2026-10-13 }
@@ -71,17 +71,17 @@ candidates:
         text: "Remove burdensome federal regulations that discourage investment and job creation."
         sources: [*tb_jobs]
       - category: immigration
-        text: "Complete the border wall, implement the Remain in Mexico policy, and end catch-and-release."
+        text: "Complete the border wall and deport anyone who enters the country illegally, while welcoming immigrants who come legally."
         sources: [*tb_h_border]
       - category: veterans
         text: "Fight for veterans and make sure they receive recognition and respect for their service."
         sources: [*tb_h_vets]
       - category: guns
-        text: "Protect Second Amendment rights."
-        sources: [*tb_guns]
+        text: "Protect the constitutional right of law-abiding citizens to keep and bear arms."
+        sources: [*tb_h_2a, *tb_guns]
       - category: abortion
         text: "Protect unborn life and keep taxpayer dollars from funding abortions."
-        sources: [*tb_life, *tb_h_abortion]
+        sources: [*tb_h_abortion]
     arguments:
       - stance: for
         text: >-
@@ -111,7 +111,7 @@ candidates:
       - stance: against
         text: >-
           He has not held an in-person town hall since 2020, declined to attend a 2025 constituent town hall in
-          Knoxville, and has skipped debates with his challengers.
+          Knoxville, and did not debate his challengers in 2020, 2022, or 2024.
         sources: [*mb_opp, *lookout_townhall]
       - stance: against
         text: >-
@@ -121,8 +121,8 @@ candidates:
         sources: [*mb_opp, *mb_health]
       - stance: against
         text: >-
-          He has voted repeatedly to continue the war in Iran, which has driven up gas, diesel, and grocery prices for
-          East Tennessee households.
+          He voted to extend the war in Iran, which has driven up gas, diesel, and grocery prices for East Tennessee
+          households.
         sources: [*mb_opp]
       - stance: against
         text: >-
@@ -201,7 +201,6 @@ candidates:
     bio_facts:
       - { text: "Bachelor's degree from the University of Florida, 1997.", sources: [*bf_bp] }
       - { text: "Has worked as a farmer, marine mechanic, and journalist.", sources: [*bf_bp] }
-      - { text: "Formerly a registered Republican; running as an independent.", sources: [*bf_site, *bf_bp] }
     why_running:
       text: >-
         He says he left his former party because both parties have abandoned everyday people, and that he is running as
