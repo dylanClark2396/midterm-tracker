@@ -1,0 +1,16 @@
+// Contact form backend for tnelection.org. Deployed by hand with `npx wrangler deploy`
+// from this directory (not part of the site build or CI).
+{
+  "name": "tnelection-contact",
+  "main": "src/index.js",
+  "compatibility_date": "2026-09-01",
+  "workers_dev": true,
+  // Delivers to the Email Routing destination address (must be verified on the zone).
+  "send_email": [{ "name": "MAILER", "destination_address": "tnelectionguide@gmail.com" }],
+  "vars": {
+    "FROM_ADDRESS": "form@tnelection.org",
+    "TO_ADDRESS": "tnelectionguide@gmail.com",
+    "ALLOWED_ORIGINS": "https://tnelection.org,https://www.tnelection.org,http://localhost:4321"
+  }
+  // Secret (set with `wrangler secret put TURNSTILE_SECRET`): TURNSTILE_SECRET
+}
