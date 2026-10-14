@@ -1,59 +1,265 @@
-# Seeded from the Secretary of State's certified candidate list by
-# scripts/seed-from-certified-list.py. research_status: pending —
-# platforms and arguments not yet compiled.
+# U.S. House, District 8 — Rep. David Kustoff (first elected 2016) faces former Shelby County Criminal Court Clerk
+# Heidi Kuhn and six independents in the district as redrawn in May 2026.
+# Candidate order follows the Secretary of State's certified candidate list.
+# kustoffforcongress.com issue pages date from the 2018 cycle and are NOT used for positions; his platform comes from
+# current kustoff.house.gov issue pages.
+_sources:
+  dk_about: &dk_about { url: "https://kustoff.house.gov/about", title: "About David (Office of Rep. David Kustoff)", accessed: 2026-10-13 }
+  dk_economy: &dk_economy { url: "https://kustoff.house.gov/issues/economy", title: "Economy (Office of Rep. David Kustoff)", accessed: 2026-10-13 }
+  dk_ag: &dk_ag { url: "https://kustoff.house.gov/issues/agriculture", title: "Agriculture (Office of Rep. David Kustoff)", accessed: 2026-10-13 }
+  dk_border: &dk_border { url: "https://kustoff.house.gov/issues/homeland-security", title: "Immigration (Office of Rep. David Kustoff)", accessed: 2026-10-13 }
+  dk_law: &dk_law { url: "https://kustoff.house.gov/issues/maintaining-law-and-order", title: "Maintaining Law and Order (Office of Rep. David Kustoff)", accessed: 2026-10-13 }
+  dk_health: &dk_health { url: "https://kustoff.house.gov/issues/health", title: "Health (Office of Rep. David Kustoff)", accessed: 2026-10-13 }
+  dk_life: &dk_life { url: "https://kustoff.house.gov/issues/protecting-life", title: "Protecting Life (Office of Rep. David Kustoff)", accessed: 2026-10-13 }
+  dk_guns: &dk_guns { url: "https://kustoff.house.gov/issues/protecting-your-right-keep-and-bear-arms", title: "Protecting Your Right to Keep and Bear Arms (Office of Rep. David Kustoff)", accessed: 2026-10-13 }
+  dk_vets: &dk_vets { url: "https://kustoff.house.gov/issues/veterans", title: "Veterans (Office of Rep. David Kustoff)", accessed: 2026-10-13 }
+  dk_camp: &dk_camp { url: "https://www.kustoffforcongress.com/", title: "David Kustoff for Congress (Kustoff campaign)", accessed: 2026-10-13 }
+  wmc_dk: &wmc_dk { url: "https://www.actionnews5.com/2025/11/04/david-kustoff-announces-re-election-campaign-us-congress", title: "David Kustoff announces re-election campaign for U.S. Congress (WMC Action News 5)", accessed: 2026-10-13 }
+  hk_home: &hk_home { url: "https://kuhnforcongress.com/", title: "Kuhn for Congress (Kuhn campaign)", accessed: 2026-10-13 }
+  hk_issues: &hk_issues { url: "https://kuhnforcongress.com/issues/", title: "Issues (Kuhn campaign)", accessed: 2026-10-13 }
+  hk_about: &hk_about { url: "https://kuhnforcongress.com/about/", title: "Meet Heidi Kuhn (Kuhn campaign)", accessed: 2026-10-13 }
+  hk_bills: &hk_bills { url: "https://kuhnforcongress.com/heidi-talks/videos/almost-ten-years-of-david-kustoff-only-5-bills-passed-into-law-time-for-a-change/", title: "Almost ten years of David Kustoff, only 5 bills passed into law (Kuhn campaign)", accessed: 2026-10-13 }
+  hk_hosp: &hk_hosp { url: "https://kuhnforcongress.com/heidi-talks/photos/when-a-rural-hospital-closes-families-lose-more-than-a-building/", title: "When a rural hospital closes, families lose more than a building (Kuhn campaign)", accessed: 2026-10-13 }
+  tsd_hk: &tsd_hk { url: "https://tri-statedefender.com/?p=380840", title: "Heidi Kuhn urges Shelby County voters to show up for 8th District race (Tri-State Defender)", accessed: 2026-10-13 }
+  wmc_hk: &wmc_hk { url: "https://www.wsmv.com/2026/08/07/heidi-kuhn-wins-democratic-nomination-district-8-congressional-seat/", title: "Heidi Kuhn wins Democratic nomination for District 8 congressional seat (WMC via WSMV)", accessed: 2026-10-13 }
+  lookout: &lookout { url: "https://tennesseelookout.com/voter-guides/contests/congressional-district-8-u-s-house-of-representatives/", title: "U.S. House, 8th District voter guide (Tennessee Lookout)", accessed: 2026-10-13 }
+  af_home: &af_home { url: "https://www.misterfutch.com/", title: "Mister Futch (Futch campaign)", accessed: 2026-10-13 }
+  af_bio: &af_bio { url: "https://www.misterfutch.com/mister-futch/", title: "Mister Futch (Futch campaign biography)", accessed: 2026-10-13 }
+  af_future: &af_future { url: "https://www.misterfutch.com/for-the-future/", title: "For the Future (Futch campaign)", accessed: 2026-10-13 }
+  pm_home: &pm_home { url: "https://pamelamosesforsenate.com/", title: "Pamela Jeanine Moses for U.S. Congress (Moses campaign)", accessed: 2026-10-13 }
+  pm_plan: &pm_plan { url: "https://pamelamosesforsenate.com/moses-seven-point-plan-policies/", title: "Moses' Seven Point Plan & Policies (Moses campaign)", accessed: 2026-10-13 }
+  ht_home: &ht_home { url: "https://horacetaylortn.com/", title: "Horace Taylor for Congress (Taylor campaign)", accessed: 2026-10-13 }
+  ht_vision: &ht_vision { url: "https://horacetaylortn.com/vision", title: "Vision & Core Values (Taylor campaign)", accessed: 2026-10-13 }
+  ht_br: &ht_br { url: "https://www.ballotready.org/people/horace-taylor-d1ef6b77-1c72-46aa-b36c-2ab8fbe5e847", title: "Horace Taylor (BallotReady)", accessed: 2026-10-13 }
+
 id: us-house-08
 office: "U.S. House, District 8"
 level: us_house
 district: 8
-research_status: pending
+research_status: complete
 candidate_list_source: "https://sos-prod.tnsosgovfiles.com/s3fs-public/document/USHouse_Nov2026.pdf"
+
 candidates:
   - name: "David Kustoff"
     ballot_party: Republican
     city: "Germantown"
-    why_running: { text: null, sources: [] }
-    platform: []
-    arguments: []
+    incumbent: true
+    website: "https://www.kustoffforcongress.com/"
+    bio_facts:
+      - { text: "U.S. Representative for Tennessee's 8th District since 2017; elected in 2016 and re-elected in 2018, 2020, 2022, and 2024.", sources: [*dk_about] }
+      - { text: "Member of the House Ways and Means Committee, including its Tax and Health subcommittees.", sources: [*dk_about] }
+      - { text: "U.S. Attorney for the Western District of Tennessee, appointed in 2006; oversaw most of the Tennessee Waltz public-corruption trials.", sources: [*dk_about, *lookout] }
+      - { text: "Appointed to the Tennessee Higher Education Commission in 2015.", sources: [*dk_about] }
+      - { text: "The 8th District was redrawn in a May 2026 special session and now includes the largest share of Shelby County.", sources: [*lookout, *wmc_hk] }
+    why_running:
+      text: >-
+        He says he is proud to keep working with the current president, and that, drawing on his experience as U.S.
+        Attorney, he wants to work together to keep the community safe, secure, and prosperous.
+      sources: [*wmc_dk, *dk_camp]
+    platform:
+      - category: taxes
+        text: "Cut taxes, strengthen U.S. trade agreements, and advance pro-growth policies for workers, families, farms, and small businesses."
+        sources: [*dk_economy]
+      - category: agriculture
+        text: "Advocate for farmers and producers, including a proposed federal tax credit for businesses that buy more U.S.-grown agricultural commodities."
+        sources: [*dk_ag]
+      - category: immigration
+        text: "Secure the border to deter threats, prevent crime, and keep dangerous drugs out of communities."
+        sources: [*dk_border]
+      - category: public_safety
+        text: "Give law enforcement the support and resources it needs, and restore tougher federal penalties for violent repeat offenders."
+        sources: [*dk_law]
+      - category: health_care
+        text: "Expand access to care, especially in rural areas, through market-based reforms and fixes to Medicare payment formulas that strain rural hospitals."
+        sources: [*dk_health]
+      - category: abortion
+        text: "Holds that life begins at conception and backs policies that protect unborn children."
+        sources: [*dk_life]
+      - category: guns
+        text: "Protect and defend the Second Amendment rights of law-abiding citizens."
+        sources: [*dk_guns]
+      - category: veterans
+        text: "Hold the Department of Veterans Affairs to the highest standard so veterans get the support and care they need."
+        sources: [*dk_vets]
+    arguments:
+      - stance: for
+        text: >-
+          His experience as a former federal prosecutor gives him the judgment to uphold the Constitution and keep law and
+          order.
+        sources: [*wmc_dk, *dk_about]
+      - stance: for
+        text: >-
+          His seat on the tax-writing committee lets him push for lower taxes, stronger trade deals, and policies that help
+          West Tennessee workers, farms, and small businesses.
+        sources: [*dk_economy, *dk_about]
+      - stance: for
+        text: >-
+          He has passed legislation into law, including a measure giving tax-filing relief to people hit by natural
+          disasters.
+        sources: [*dk_economy]
+      - stance: against
+        text: >-
+          In nearly ten years in Congress, only five of his bills have become law, so the district needs a change.
+        sources: [*hk_bills]
+      - stance: against
+        text: >-
+          He backed cuts to food assistance that thousands of working Tennesseans rely on, and four rural hospitals in
+          West Tennessee have closed since he went to Washington.
+        sources: [*hk_issues]
+      - stance: against
+        text: >-
+          He has supported tariffs that are driving up costs for working families, and a farm bill that does nothing about
+          rising costs, market swings, and shrinking margins for farmers.
+        sources: [*hk_issues]
+      - stance: against
+        text: >-
+          He has repeatedly voted to continue the war in Iran, which has hit fertilizer and fuel costs hard.
+        sources: [*hk_issues]
+
   - name: "Heidi Kuhn"
     ballot_party: Democratic
     city: "Cordova"
-    why_running: { text: null, sources: [] }
-    platform: []
-    arguments: []
+    incumbent: false
+    website: "https://kuhnforcongress.com/"
+    bio_facts:
+      - { text: "Shelby County Criminal Court Clerk since 2018; re-elected in 2022 and did not seek another term.", sources: [*wmc_hk, *tsd_hk] }
+      - { text: "Worked in Shelby County government since 2000, including as executive director of the Crime Victims Center and deputy director of Community Services.", sources: [*lookout] }
+      - { text: "Ran for Shelby County mayor in 2026 and lost the May Democratic primary.", sources: [*wmc_hk, *tsd_hk] }
+      - { text: "Won the August 6, 2026 Democratic primary for this seat with about 52% of the vote.", sources: [*tsd_hk] }
+    why_running:
+      text: >-
+        She says voters are tired of high prices for gas and groceries and want change, and that she would put their
+        concerns first rather than special interests, personal gain, or the president. She says she will make decisions
+        based on what West Tennesseans need, talking with them rather than at them.
+      sources: [*tsd_hk, *hk_home]
+    platform:
+      - category: economy
+        text: "Raise the federal minimum wage from $7.25 to $17 by 2030, strengthen union bargaining rights, and protect Social Security from cuts and privatization."
+        sources: [*hk_issues, *tsd_hk]
+      - category: cost_of_living
+        text: "Expand the Child Tax Credit and the Low-Income Housing Tax Credit, confront investors buying up housing, and lower utility bills by cracking down on energy price gouging."
+        sources: [*hk_issues]
+      - category: health_care
+        text: "Cap out-of-pocket prescription drug costs, reverse Medicare and Medicaid cuts, and fund rural health care to stop hospital closures."
+        sources: [*hk_issues, *hk_hosp]
+      - category: agriculture
+        text: "Oppose tariffs on farm equipment and fertilizer, challenge equipment-repair monopolies, expand rural high-speed internet, and seek a stronger safety net for small farmers."
+        sources: [*hk_issues]
+      - category: immigration
+        text: "Enforce immigration law with due process and without racial profiling, and seek independent review and transparency of local enforcement and detention operations."
+        sources: [*hk_issues, *tsd_hk]
+      - category: infrastructure
+        text: "Pause new data centers until communities have a say, and require developers to cover grid upgrades, create local jobs, and protect water."
+        sources: [*hk_issues, *tsd_hk]
+      - category: government
+        text: "Restore federal preclearance of election-law changes, oppose proof-of-citizenship rules for voter registration, and restore voting rights automatically after release from prison."
+        sources: [*tsd_hk]
+      - category: education
+        text: "Oppose taxpayer-funded private school vouchers and raise teacher pay."
+        sources: [*tsd_hk]
+    arguments:
+      - stance: for
+        text: >-
+          More than 26 years in county government, including running the criminal court clerk's office, show a record of
+          modernizing government and removing barriers for residents.
+        sources: [*hk_about, *lookout]
+      - stance: for
+        text: >-
+          As clerk she expanded access to expungements, with her office processing nearly 10,000 that helped people
+          rebuild their lives.
+        sources: [*hk_about, *tsd_hk]
+      - stance: for
+        text: >-
+          She would put working families' concerns ahead of special interests, personal gain, or loyalty to the
+          president.
+        sources: [*hk_home]
+
   - name: "Adam D. Austill"
     ballot_party: Independent
     city: "Covington"
-    why_running: { text: null, sources: [] }
-    platform: []
-    arguments: []
+
   - name: "Wendell \"Wells\" Blankenship"
     ballot_party: Independent
     city: "Memphis"
-    why_running: { text: null, sources: [] }
-    platform: []
-    arguments: []
+
   - name: "Antonio Futch"
     ballot_party: Independent
     city: "Memphis"
-    why_running: { text: null, sources: [] }
-    platform: []
-    arguments: []
+    website: "https://www.misterfutch.com/"
+    bio_facts:
+      - { text: "U.S. Marine Corps veteran who served as a sergeant.", sources: [*af_bio] }
+      - { text: "Holds bachelor's and master's degrees from Christian Brothers University; licensed educator and business consultant.", sources: [*af_bio, *af_home] }
+    why_running:
+      text: >-
+        He says his decision grew out of years of work with young people, families, entrepreneurs, veterans, educators,
+        and community leaders, and that running for Congress is a chance to learn, listen, serve, and bring more people
+        into the conversation.
+      sources: [*af_future]
+
   - name: "Pamela Jeanine \"P.\" Moses"
     ballot_party: Independent
     city: "Memphis"
-    why_running: { text: null, sources: [] }
-    platform: []
-    arguments: []
+    website: "https://pamelamosesforsenate.com/"
+    bio_facts:
+      - { text: "Former ex-officio District 7 chair on the Shelby County Democratic Executive Committee.", sources: [*pm_home] }
+      - { text: "Holds a master's degree in intercultural studies from Union University.", sources: [*pm_home] }
+    why_running:
+      text: >-
+        Her campaign says she is running to become the first Black congresswoman from Tennessee and the first
+        justice-impacted person elected to federal office from the state, and describes her as an advocate for voting
+        rights and for marginalized communities.
+      sources: [*pm_home]
+    platform:
+      - category: public_safety
+        text: "Pursue criminal justice reform, including workforce programs for formerly incarcerated people and diverting people with mental health and substance use disorders into treatment."
+        sources: [*pm_plan]
+      - category: health_care
+        text: "Support universal health care access and expand mental health services, especially in underserved communities."
+        sources: [*pm_plan]
+      - category: agriculture
+        text: "Eliminate food deserts by supporting farmers' markets in underserved areas and local farmers."
+        sources: [*pm_plan]
+      - category: environment
+        text: "Reduce carbon emissions through green energy and a high-speed rail line."
+        sources: [*pm_plan]
+      - category: guns
+        text: "Impose stricter regulation of gun manufacturing and sales, including a moratorium on bullets and gun manufacturers."
+        sources: [*pm_plan]
+
   - name: "Horace Taylor"
     ballot_party: Independent
     city: "Germantown"
-    why_running: { text: null, sources: [] }
-    platform: []
-    arguments: []
+    website: "https://horacetaylortn.com/"
+    bio_facts:
+      - { text: "Retired U.S. Army officer (major) with 27 years in uniform.", sources: [*ht_vision, *lookout] }
+      - { text: "Cybersecurity professional and founder of Germantown Small Engine Repair, LLC.", sources: [*ht_home, *ht_br, *lookout] }
+    why_running:
+      text: >-
+        He says he is not a career politician but a West Tennessean who has lived the issues that matter to the district,
+        and that he is running for its farmers, families, and veterans without answering to a party. He says he wants to
+        restore civility, humility, and respect to public service.
+      sources: [*ht_home, *ht_vision]
+    platform:
+      - category: agriculture
+        text: "Seek immediate tariff relief for West Tennessee farms, restore stable export markets, and protect generational family farms."
+        sources: [*ht_vision]
+      - category: health_care
+        text: "Protect rural hospitals, lower prescription drug costs, expand cancer screening and treatment, and protect Medicare and Medicaid from cuts."
+        sources: [*ht_vision]
+      - category: veterans
+        text: "Fully fund VA health care and benefits, reduce VA wait times, and expand mental health services."
+        sources: [*ht_vision]
+      - category: government
+        text: "Hold regular town halls in every county and publish explanations for his votes."
+        sources: [*ht_vision]
+    arguments:
+      - stance: for
+        text: >-
+          Without party loyalty to answer to, he would vote the district's interests and explain each vote publicly.
+        sources: [*ht_vision, *ht_home]
+
   - name: "Henry J. Ward, III"
     ballot_party: Independent
     city: "Millington"
-    why_running: { text: null, sources: [] }
-    platform: []
-    arguments: []
+
 last_verified: 2026-10-13
