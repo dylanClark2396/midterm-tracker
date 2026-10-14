@@ -71,8 +71,10 @@ candidates:
         sources: [*ed_beher]
       - stance: against
         text: >-
-          She co-sponsored a bill requiring voters to register with a party before voting in a primary, under which
-          voters switching parties would have had to file written notice at least 90 days before an election.
+          She co-sponsored a bill to close primaries to voters not registered with a party. Critics say its 90-day
+          deadline for switching parties would have fallen before candidates even filed, forcing voters to commit
+          without knowing who would be on the ballot, and that it would shut many voters out of the primary that
+          effectively decides who holds office.
         sources: [*hb0886, *lt_closed]
 
   - name: "Bryan Goldberg"
