@@ -1,35 +1,250 @@
-# Seeded from the Secretary of State's certified candidate list by
-# scripts/seed-from-certified-list.py. research_status: pending —
-# platforms and arguments not yet compiled.
+# U.S. House, District 4 — Rep. Scott DesJarlais is seeking re-election in the district as redrawn in 2026.
+# Candidate order follows the Secretary of State's certified candidate list.
+# Note: scottdesjarlais.com issue/about pages appear to date from earlier cycles; planks used here are positions still stated on the live pages.
+_sources:
+  sdh_health: &sdh_health { url: "https://desjarlais.house.gov/health-care", title: "Health Care (Rep. Scott DesJarlais, U.S. House)", accessed: 2026-10-13 }
+  sdh_border: &sdh_border { url: "https://desjarlais.house.gov/border-immigration-enforcement", title: "Border & Immigration Enforcement (Rep. Scott DesJarlais, U.S. House)", accessed: 2026-10-13 }
+  sdh_energy: &sdh_energy { url: "https://desjarlais.house.gov/energy-infrastructure", title: "Energy & Infrastructure (Rep. Scott DesJarlais, U.S. House)", accessed: 2026-10-13 }
+  sdh_ag: &sdh_ag { url: "https://desjarlais.house.gov/agriculture", title: "Agriculture (Rep. Scott DesJarlais, U.S. House)", accessed: 2026-10-13 }
+  sdh_natsec: &sdh_natsec { url: "https://desjarlais.house.gov/national-security", title: "National Security (Rep. Scott DesJarlais, U.S. House)", accessed: 2026-10-13 }
+  sd_house: &sd_house { url: "https://desjarlais.house.gov/biography", title: "Biography (Rep. Scott DesJarlais, U.S. House)", accessed: 2026-10-13 }
+  sd_home: &sd_home { url: "https://scottdesjarlais.com/", title: "Scott DesJarlais for Congress (DesJarlais campaign)", accessed: 2026-10-13 }
+  sd_about: &sd_about { url: "https://scottdesjarlais.com/about_scott/", title: "About Dr. Scott (DesJarlais campaign)", accessed: 2026-10-13 }
+  sd_issues: &sd_issues { url: "https://scottdesjarlais.com/issues/", title: "Issues (DesJarlais campaign)", accessed: 2026-10-13 }
+  bp_race: &bp_race { url: "https://ballotpedia.org/Tennessee%27s_4th_Congressional_District_election,_2026", title: "Tennessee's 4th Congressional District election, 2026 (Ballotpedia, incl. Candidate Connection surveys)", accessed: 2026-10-13 }
+  lookout_guide: &lookout_guide { url: "https://tennesseelookout.com/voter-guides/contests/congressional-district-4-u-s-house-of-representatives/", title: "U.S. House, 4th Congressional District voter guide (Tennessee Lookout)", accessed: 2026-10-13 }
+  sidelines_2024: &sidelines_2024 { url: "https://mtsusidelines.com/2024/11/05/desjarlais-defeats-broderick-retains-4th-congressional-district", title: "DesJarlais defeats Broderick, retains 4th Congressional District (MTSU Sidelines)", accessed: 2026-10-13 }
+  nc5: &nc5 { url: "https://www.newschannel5.com/plus/inside-politics/election-2026-tn-04-congressional-race", title: "Election 2026: TN-04 Congressional Race (NewsChannel 5 Inside Politics)", accessed: 2026-10-13 }
+  vb_home: &vb_home { url: "https://www.victoria4tennessee.org/", title: "Victoria Broderick for U.S. Congress (Broderick campaign)", accessed: 2026-10-13 }
+  vb_about: &vb_about { url: "https://www.victoria4tennessee.org/about", title: "About (Broderick campaign)", accessed: 2026-10-13 }
+  vb_issues: &vb_issues { url: "https://www.victoria4tennessee.org/more-about-my-platform", title: "Issues: S.A.F.E. plan (Broderick campaign)", accessed: 2026-10-13 }
+  ja_home: &ja_home { url: "https://jacobanders.org/", title: "Jacob Anders, 2026 Congressional Candidate (Anders campaign)", accessed: 2026-10-13 }
+  cf_home: &cf_home { url: "https://claycares.org/", title: "Faircloth for Congress / Clay Cares (Faircloth campaign)", accessed: 2026-10-13 }
+  cf_about: &cf_about { url: "https://claycares.org/about-2/", title: "Meet Clay (Faircloth campaign)", accessed: 2026-10-13 }
+  cf_priorities: &cf_priorities { url: "https://claycares.org/top-priorities/", title: "Top Priorities (Faircloth campaign)", accessed: 2026-10-13 }
+  cf_corruption: &cf_corruption { url: "https://claycares.org/corruption-elimination-plan/", title: "Corruption Elimination Plan (Faircloth campaign)", accessed: 2026-10-13 }
+  cf_health: &cf_health { url: "https://claycares.org/healthcare-plan/", title: "Healthcare Plan (Faircloth campaign)", accessed: 2026-10-13 }
+  cf_housing: &cf_housing { url: "https://claycares.org/housing-plan/", title: "Housing Plan (Faircloth campaign)", accessed: 2026-10-13 }
+  cf_safety: &cf_safety { url: "https://claycares.org/public-safety-plan/", title: "Public Safety Plan (Faircloth campaign)", accessed: 2026-10-13 }
+  cf_childcare: &cf_childcare { url: "https://claycares.org/childcare-plan/", title: "Childcare Plan (Faircloth campaign)", accessed: 2026-10-13 }
+
 id: us-house-04
 office: "U.S. House, District 4"
 level: us_house
 district: 4
-research_status: pending
+research_status: complete
 candidate_list_source: "https://sos-prod.tnsosgovfiles.com/s3fs-public/document/USHouse_Nov2026.pdf"
+
 candidates:
   - name: "Scott DesJarlais"
     ballot_party: Republican
     city: "Sherwood"
-    why_running: { text: null, sources: [] }
-    platform: []
-    arguments: []
+    incumbent: true
+    website: "https://scottdesjarlais.com/"
+    bio_facts:
+      - { text: "U.S. Representative for Tennessee's 4th District, first elected in 2010; serving his eighth term.", sources: [*sd_house, *sidelines_2024] }
+      - { text: "Member of the House Armed Services and Agriculture committees; named chairman of the Armed Services Strategic Forces Subcommittee in the 119th Congress.", sources: [*sd_house] }
+      - { text: "Physician; earned a medical degree from the University of South Dakota and practiced general medicine in Marion County, Tennessee.", sources: [*sd_house, *sd_about] }
+      - { text: "Won the August 6, 2026 Republican primary for the redrawn 4th District.", sources: [*bp_race] }
+    why_running:
+      text: >-
+        His campaign says he first ran for Congress after patients in his medical practice raised concerns about jobs,
+        government spending, and health care. It says he continues to fight for fiscal discipline in Washington, a
+        stronger economy, and an end to illegal immigration.
+      sources: [*sd_about, *sd_home]
+    platform:
+      - category: taxes
+        text: "Supports a constitutional balanced budget amendment and tax cuts and simplification for middle-class Americans and job creators."
+        sources: [*sd_issues]
+      - category: economy
+        text: "Reduce the national debt and cut regulations that raise costs for farmers and small businesses."
+        sources: [*sd_issues]
+      - category: health_care
+        text: "Opposes the Affordable Care Act and a single government-run \"Medicare for All\" system; favors buying insurance across state lines, short-term plans, and returning health decisions to patients and their doctors."
+        sources: [*sdh_health]
+      - category: immigration
+        text: "Build a physical wall along the southern border, add border agents and technology, and quickly arrest and deport immigrants who commit crimes."
+        sources: [*sdh_border]
+      - category: infrastructure
+        text: "Expand domestic energy production, including new pipelines, natural gas exports, and coal and nuclear power."
+        sources: [*sdh_energy, *sd_issues]
+      - category: agriculture
+        text: "Open foreign markets for farm products, enforce fair trade, and expand rural opportunity, including broadband."
+        sources: [*sdh_ag]
+      - category: foreign_policy
+        text: "Maintain peace through strength with a strong military, and give service members the best tools to defend the country."
+        sources: [*sdh_natsec, *sd_issues]
+      - category: guns
+        text: "Protect Second Amendment rights."
+        sources: [*sd_issues]
+    arguments:
+      - stance: for
+        text: >-
+          He has voted to cut income taxes and wasteful spending, balance the budget, and reform food assistance to
+          help people find work.
+        sources: [*sd_house, *sd_about]
+      - stance: for
+        text: >-
+          His legislation allowing service members to carry firearms at recruiting stations, written after the 2015
+          Chattanooga attack, became law in 2016.
+        sources: [*sd_house]
+      - stance: for
+        text: >-
+          His seats on the Armed Services and Agriculture committees let him advocate for service members and
+          Tennessee farmers.
+        sources: [*sd_about, *sd_house]
+      - stance: against
+        text: >-
+          After 15 years in office he is rarely seen in the district, and constituents say calls to his office go
+          unanswered.
+        sources: [*nc5]
+      - stance: against
+        text: >-
+          He strongly backed a federal budget law that cuts Medicaid (TennCare) in a district where, in some counties,
+          about half of children rely on that coverage.
+        sources: [*nc5]
+      - stance: against
+        text: >-
+          Despite his role shaping defense policy, he has not pushed back on the war in Iran, which is raising
+          fertilizer and diesel costs for a rural farming district.
+        sources: [*nc5, *vb_issues]
+      - stance: against
+        text: >-
+          He signed a court brief supporting a lawsuit that challenged the results of the 2020 presidential election.
+        sources: [*lookout_guide]
+
   - name: "Victoria Broderick"
     ballot_party: Democratic
     city: "Fayetteville"
-    why_running: { text: null, sources: [] }
-    platform: []
-    arguments: []
+    incumbent: false
+    website: "https://www.victoria4tennessee.org/"
+    bio_facts:
+      - { text: "Works in the technology industry; has also worked in logistics.", sources: [*bp_race, *lookout_guide] }
+      - { text: "Has served as chair of the Lincoln County Democratic Party.", sources: [*lookout_guide, *vb_about] }
+      - { text: "Democratic nominee for this seat in 2024; lost the general election to Scott DesJarlais.", sources: [*sidelines_2024, *lookout_guide] }
+      - { text: "Won the August 6, 2026 Democratic primary with about 38% of the vote in a five-candidate field.", sources: [*bp_race] }
+    why_running:
+      text: >-
+        She says she is a working-class mom from rural Tennessee running because the district deserves better than
+        being treated as an afterthought. She says she entered politics after the Supreme Court overturned Roe v. Wade
+        and first ran in 2024 when the incumbent was set to run unopposed, and that she is still running because
+        things have not gotten better for families here.
+      sources: [*vb_home, *vb_about, *bp_race]
+    platform:
+      - category: health_care
+        text: "Strengthen the Affordable Care Act, create a Medicare-like option for Tennesseans in the Medicaid coverage gap, and back the Save Struggling Hospitals Act to help rural hospitals."
+        sources: [*vb_issues]
+      - category: guns
+        text: "Close background-check loopholes, fund state red flag programs and community violence intervention, while protecting responsible gun ownership."
+        sources: [*vb_issues]
+      - category: foreign_policy
+        text: "Demand oversight of war and defense spending and oppose open-ended military engagements without a defined end."
+        sources: [*vb_issues]
+      - category: education
+        text: "Create a federal-state partnership offering voluntary pre-K to every 3- and 4-year-old through existing providers."
+        sources: [*vb_issues]
+      - category: cost_of_living
+        text: "Expand paths to homeownership through rural housing reform and housing tax credits such as the Neighborhood Homes Investment Act."
+        sources: [*vb_issues]
+      - category: abortion
+        text: "Codify abortion access in federal law and protect access to IVF and contraception."
+        sources: [*vb_issues]
+      - category: immigration
+        text: "Pass comprehensive immigration reform that secures the border, reduces the legal-immigration backlog, adds accountability for enforcement, and creates a pathway to citizenship for Dreamers."
+        sources: [*vb_issues]
+      - category: taxes
+        text: "Raise the corporate tax rate on the largest, most profitable companies while expanding incentives for domestic investment and protecting small businesses."
+        sources: [*vb_issues, *vb_about]
+    arguments:
+      - stance: for
+        text: >-
+          As a working mom who has struggled to stretch a paycheck, she understands firsthand the costs families in the
+          district face.
+        sources: [*vb_about, *nc5]
+      - stance: for
+        text: >-
+          She will make sure the district is no longer overlooked and will show up for constituents, not just at
+          election time.
+        sources: [*vb_about, *nc5]
+
   - name: "Jacob Kristopher Anders"
     ballot_party: Independent
     city: "Tullahoma"
-    why_running: { text: null, sources: [] }
-    platform: []
-    arguments: []
+    website: "https://jacobanders.org/"
+    bio_facts:
+      - { text: "Earned a bachelor's degree from Hiwassee College in 2016; studied psychology at the University of Alabama in Huntsville.", sources: [*bp_race] }
+      - { text: "Historian and author.", sources: [*bp_race, *ja_home] }
+    why_running:
+      text: >-
+        He says he is running to bring back servant leadership and to put "Humanity First." He says he is focused on
+        protecting workers and communities from the effects of AI and automation, keeping the country out of
+        unnecessary foreign wars, and providing economic security through universal basic income.
+      sources: [*ja_home, *bp_race]
+    platform:
+      - category: health_care
+        text: "Move to a single-payer health system with no premiums, including dental, vision, and hearing coverage."
+        sources: [*ja_home]
+      - category: taxes
+        text: "Eliminate federal income tax on income under $500,000, apply a 50% flat rate above that, and raise the corporate tax rate to 42%."
+        sources: [*ja_home]
+      - category: economy
+        text: "Protect workers from AI and automation through universal basic income; raise the minimum wage to $15 and pass the PRO Act."
+        sources: [*bp_race, *ja_home]
+      - category: foreign_policy
+        text: "Avoid unnecessary foreign wars and repeal existing war authorizations; support NATO, Ukraine, and Palestinian statehood."
+        sources: [*ja_home, *bp_race]
+      - category: government
+        text: "Enact congressional term limits, ban stock trading by members of Congress, repeal Citizens United, and adopt ranked-choice voting."
+        sources: [*ja_home]
+      - category: cost_of_living
+        text: "Bar large institutional investors from buying up residential neighborhoods and offer down-payment tax credits to first-time buyers."
+        sources: [*ja_home]
+      - category: education
+        text: "Provide universal pre-K, tuition-free public college and trade school, and higher teacher pay."
+        sources: [*ja_home]
+      - category: immigration
+        text: "Secure the border while replacing ICE with a new agency and simplifying the legal immigration process."
+        sources: [*ja_home]
+    arguments:
+      - stance: for
+        text: >-
+          He refuses corporate PAC money and would ban congressional stock trading so lawmakers serve the public, not
+          their own portfolios.
+        sources: [*ja_home]
+
   - name: "Clay Faircloth"
     ballot_party: Independent
     city: "Nashville"
-    why_running: { text: null, sources: [] }
-    platform: []
-    arguments: []
+    website: "https://claycares.org/"
+    bio_facts:
+      - { text: "Counselor with a master's degree and an ordained minister, according to his campaign.", sources: [*cf_home] }
+      - { text: "Ran in primary elections for the 6th Congressional District seat in 2022 and 2024.", sources: [*lookout_guide] }
+    why_running:
+      text: >-
+        He says he is running as an independent voice to put people over parties, protect freedoms, and deliver
+        practical solutions for families, farms, small towns, and workers in the 4th District.
+      sources: [*cf_about, *cf_home]
+    platform:
+      - category: government
+        text: "Fight corruption at every level, including dark money in federal and state elections."
+        sources: [*cf_corruption]
+      - category: health_care
+        text: "Expand access to quality health care in rural and urban areas, with health decisions made privately with a medical professional."
+        sources: [*cf_health]
+      - category: cost_of_living
+        text: "Help young families and young people find a first home."
+        sources: [*cf_housing]
+      - category: public_safety
+        text: "Support police and community partners in keeping communities safe."
+        sources: [*cf_safety]
+      - category: education
+        text: "Overhaul child care to better prepare children for school, with financial relief for parents and better facilities and pay."
+        sources: [*cf_childcare]
+    arguments:
+      - stance: for
+        text: >-
+          As someone who is not a professional politician, he would stand up to party pressure and work across party
+          lines on practical solutions.
+        sources: [*cf_home, *cf_priorities]
+
 last_verified: 2026-10-13
