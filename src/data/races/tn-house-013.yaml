@@ -7,7 +7,6 @@ _sources:
   hb1967: &hb1967 { url: "https://wapp.capitol.tn.gov/apps/BillInfo/Default.aspx?BillNumber=HB1967&GA=114", title: "HB1967 bill information (Tennessee General Assembly)", accessed: 2026-10-13 }
   hb0780: &hb0780 { url: "https://wapp.capitol.tn.gov/apps/BillInfo/Default.aspx?BillNumber=HB0780&GA=114", title: "HB0780 bill information (Tennessee General Assembly)", accessed: 2026-10-13 }
   hb2464: &hb2464 { url: "https://wapp.capitol.tn.gov/apps/BillInfo/Default.aspx?BillNumber=HB2464&GA=113", title: "HB2464 bill information (Tennessee General Assembly)", accessed: 2026-10-13 }
-  hb6004: &hb6004 { url: "https://wapp.capitol.tn.gov/apps/BillInfo/Default.aspx?BillNumber=HB6004&GA=114", title: "HB6004 (Education Freedom Scholarship Act) bill information and House vote (Tennessee General Assembly)", accessed: 2026-10-13 }
   lookout13: &lookout13 { url: "https://tennesseelookout.com/voter-guides/contests/house-district-13/", title: "Tennessee House of Representatives, 13th District voter guide (Tennessee Lookout)", accessed: 2026-10-13 }
   win_home: &win_home { url: "https://winwithwindrow.com/", title: "Win with Windrow, Candidate for Tennessee State House 13 (Windrow campaign)", accessed: 2026-10-13 }
   bp_win: &bp_win { url: "https://ballotpedia.org/Brett_Windrow", title: "Brett Windrow (Ballotpedia, incl. Candidate Connection survey)", accessed: 2026-10-13 }
@@ -64,11 +63,6 @@ candidates:
         text: >-
           He has had perfect attendance in the State House and never missed a full County Commission meeting.
         sources: [*stev_home]
-      - stance: against
-        text: >-
-          He voted for the 2025 law creating statewide private school vouchers, which subsidizes private school for
-          wealthy families while the county's overloaded public schools need that money.
-        sources: [*hb6004, *win_home, *bp_win]
 
   - name: "Brett Windrow"
     ballot_party: Democratic
