@@ -1,5 +1,6 @@
-# Generated from the Secretary of State's certified candidate list (TNHouse_Nov2026.xlsx).
-# research_status: pending — platforms and arguments not yet compiled.
+# Seeded from the Secretary of State's certified candidate list by
+# scripts/seed-from-certified-list.py. research_status: pending —
+# platforms and arguments not yet compiled.
 id: tn-house-028
 office: "Tennessee House, District 28"
 level: state_house
@@ -10,10 +11,19 @@ candidates:
   - name: "Yusuf A. Hakeem"
     ballot_party: Democratic
     city: "Chattanooga"
+    why_running: { text: null, sources: [] }
+    platform: []
+    arguments: []
   - name: "Demetrus \"Meechie\" Coonrod"
     ballot_party: Independent
     city: "Chattanooga"
+    why_running: { text: null, sources: [] }
+    platform: []
+    arguments: []
   - name: "Johnny Horne"
     ballot_party: Independent
     city: "Chattanooga"
+    why_running: { text: null, sources: [] }
+    platform: []
+    arguments: []
 last_verified: 2026-10-13
