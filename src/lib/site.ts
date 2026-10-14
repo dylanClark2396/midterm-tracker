@@ -1,5 +1,6 @@
 import type { CollectionEntry } from 'astro:content';
 
+export const SITE_NAME = 'TN 2026 Ballot Guide';
 export const ELECTION_DATE = new Date('2026-11-03T12:00:00Z');
 export const GOVOTETN = 'https://sos.tn.gov/govotetn';
 export const REPO_URL = 'https://github.com/dylanClark2396/midterm-tracker';
