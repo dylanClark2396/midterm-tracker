@@ -1,7 +1,7 @@
 ---
 import { getCollection } from 'astro:content';
 import Base from '../layouts/Base.astro';
-import { url, formatDate, CORRECTION_URL, REPO_URL } from '../lib/site';
+import { url, formatDate, CORRECTION_URL, CONTACT_EMAIL, REPO_URL } from '../lib/site';
 
 const amendments = (await getCollection('amendments')).map((a) => a.data).sort((a, b) => a.number - b.number);
 const races = (await getCollection('races')).map((r) => r.data).filter((r) => r.research_status === 'complete');
@@ -94,7 +94,8 @@ const races = (await getCollection('races')).map((r) => r.data).filter((r) => r.
   <h2>Suggest a correction</h2>
   <p>
     Found an error, a missing argument, or a candidate's published platform we haven't included?
-    <a href={CORRECTION_URL}>Open a correction request</a> on GitHub. A source link is required, and the same rules
+    Email <a href={`mailto:${CONTACT_EMAIL}`}>{CONTACT_EMAIL}</a>, or <a href={CORRECTION_URL}>open a correction
+    request</a> on GitHub. A source link is required, and the same rules
     apply: arguments are added without labels, and platforms come only from the candidate's own materials.
   </p>
 </Base>

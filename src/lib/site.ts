@@ -4,8 +4,9 @@ export const ELECTION_DATE = new Date('2026-11-03T12:00:00Z');
 export const GOVOTETN = 'https://sos.tn.gov/govotetn';
 export const REPO_URL = 'https://github.com/dylanClark2396/midterm-tracker';
 export const CORRECTION_URL = `${REPO_URL}/issues/new?template=correction.yml`;
+export const CONTACT_EMAIL = 'contact@tnelection.org';
 
-/** Prefix an internal path with the configured base (GitHub Pages project path). */
+/** Prefix an internal path with the configured base path. */
 export function url(path = ''): string {
   const base = import.meta.env.BASE_URL.replace(/\/$/, '');
   const clean = path.replace(/^\//, '');

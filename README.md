@@ -1,7 +1,7 @@
 # TN 2026 Ballot Guide — Arguments Without Labels
 
 A static, mobile-friendly voter guide for the **November 3, 2026 Tennessee general election**, published at
-**https://dylanclark2396.github.io/midterm-tracker/**.
+**https://tnelection.org/**.
 
 It covers the three proposed constitutional amendments and the races on the ballot, and presents the arguments for
 and against each one — **without any party, ideology, or group label**. Readers judge each argument on what it says,
@@ -23,7 +23,7 @@ not on who says it. The guide never tells anyone how to vote.
 - **Never invent.** If nothing is published, the page says "No published arguments found" / "No published platform
   found" with the date checked.
 
-The full editorial rules are on the site's [How this guide works](https://dylanclark2396.github.io/midterm-tracker/method/) page.
+The full editorial rules are on the site's [How this guide works](https://tnelection.org/method/) page.
 
 ## Coverage
 
@@ -73,7 +73,7 @@ schema ignores that key.
 
 ```sh
 npm install
-npm run dev          # http://localhost:4321/midterm-tracker/
+npm run dev          # http://localhost:4321/
 npm run validate     # schema + blocklist checks only
 npm run build        # full static build into dist/
 npm run check:links  # internal links + every source URL (run after build)

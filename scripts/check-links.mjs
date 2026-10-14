@@ -12,7 +12,7 @@ import { join, extname } from 'node:path';
 import { parse } from 'yaml';
 
 const args = new Set(process.argv.slice(2));
-const BASE = '/midterm-tracker';
+const BASE = ''; // site is served from the domain root
 const DIST = 'dist';
 const UA = 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/130.0 Safari/537.36';
 
@@ -43,7 +43,7 @@ function checkInternal() {
         if (ref.length > 1 && !ids.has(ref.slice(1))) fail(`${page}: missing anchor ${ref}`);
         continue;
       }
-      if (!ref.startsWith('/')) continue;
+      if (!ref.startsWith('/') || ref.startsWith('//')) continue;
       if (!ref.startsWith(`${BASE}/`) && ref !== BASE) {
         fail(`${page}: internal link without base path: ${ref}`);
         continue;
