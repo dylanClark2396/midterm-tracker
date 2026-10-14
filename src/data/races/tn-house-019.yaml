@@ -9,9 +9,6 @@ _sources:
   hb0766: &hb0766 { url: "https://wapp.capitol.tn.gov/apps/BillInfo/Default.aspx?BillNumber=HB0766&GA=114", title: "HB0766 bill information (Tennessee General Assembly)", accessed: 2026-10-13 }
   hb0617: &hb0617 { url: "https://wapp.capitol.tn.gov/apps/BillInfo/Default.aspx?BillNumber=HB0617&GA=114", title: "HB0617 bill information (Tennessee General Assembly)", accessed: 2026-10-13 }
   hb1680: &hb1680 { url: "https://wapp.capitol.tn.gov/apps/BillInfo/Default.aspx?BillNumber=HB1680&GA=114", title: "HB1680 bill information (Tennessee General Assembly)", accessed: 2026-10-13 }
-  hb6004: &hb6004 { url: "https://wapp.capitol.tn.gov/apps/BillInfo/Default.aspx?BillNumber=HB6004&GA=114", title: "HB6004 (Education Freedom Act of 2025) bill information and votes (Tennessee General Assembly)", accessed: 2026-10-13 }
-  hb0843: &hb0843 { url: "https://wapp.capitol.tn.gov/apps/BillInfo/Default.aspx?BillNumber=HB0843&GA=113", title: "HB0843 bill information and votes (Tennessee General Assembly)", accessed: 2026-10-13 }
-  hb7003: &hb7003 { url: "https://wapp.capitol.tn.gov/apps/BillInfo/Default.aspx?BillNumber=HB7003&GA=114", title: "HB7003 (2026 congressional districts) bill information and votes (Tennessee General Assembly)", accessed: 2026-10-13 }
   compass19: &compass19 { url: "https://compassknox.com/2026/10/08/election-2026-state-house-districts-19-and-89/", title: "Election 2026: State House Districts 19 and 89 (Compass Knox)", accessed: 2026-10-13 }
   lookout19: &lookout19 { url: "https://tennesseelookout.com/voter-guides/contests/house-district-19/", title: "Tennessee House of Representatives, 19th District voter guide (Tennessee Lookout)", accessed: 2026-10-13 }
   jf_home: &jf_home { url: "https://jennyfortn.com/", title: "Jenny Fowler for Tennessee House District 19 (Fowler campaign)", accessed: 2026-10-13 }
@@ -51,12 +48,7 @@ candidates:
       - category: infrastructure
         text: "Sponsored a bill to tax the electric power used to charge all-electric and plug-in hybrid vehicles."
         sources: [*hb1680]
-    arguments:
-      - stance: against
-        text: >-
-          He has voted for the statewide private-school voucher program, restrictions on school library materials,
-          and the 2026 congressional map that divided Memphis.
-        sources: [*compass19, *hb6004, *hb0843, *hb7003]
+    arguments: []
 
   - name: "Jenny Fowler"
     ballot_party: Democratic
