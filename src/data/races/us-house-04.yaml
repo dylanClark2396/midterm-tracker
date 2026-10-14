@@ -108,6 +108,10 @@ candidates:
           Despite his role shaping defense policy, he has not pushed back on the war in Iran, which is raising
           fertilizer and diesel costs for a rural farming district.
         sources: [*nc5, *vb_issues]
+      - stance: against
+        text: >-
+          He signed a court brief supporting a lawsuit that challenged the results of the 2020 presidential election.
+        sources: [*lookout_guide]
 
   - name: "Victoria Broderick"
     ballot_party: Democratic
@@ -214,7 +218,7 @@ candidates:
     website: "https://claycares.org/"
     bio_facts:
       - { text: "Counselor with a master's degree and an ordained minister, according to his campaign.", sources: [*cf_home] }
-      - { text: "Ran in the Democratic primary for the 6th Congressional District in 2022 and 2024.", sources: [*lookout_guide] }
+      - { text: "Ran in primary elections for the 6th Congressional District seat in 2022 and 2024.", sources: [*lookout_guide] }
     why_running:
       text: >-
         He says he is running as an independent voice to put people over parties, protect freedoms, and deliver
