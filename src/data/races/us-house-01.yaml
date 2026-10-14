@@ -82,8 +82,8 @@ candidates:
         sources: [*dh_issues, *dh_house]
       - stance: for
         text: >-
-          She has been endorsed for re-election as doing an incredible job for the district, including work to cut
-          taxes and regulations, keep the border secure, and support farmers, veterans, and gun rights.
+          She has been endorsed for re-election for her work to cut taxes and regulations, keep the border secure, and
+          support farmers, veterans, and gun rights.
         sources: [*gs_announce, *wvlt_endorse]
       - stance: against
         text: >-
