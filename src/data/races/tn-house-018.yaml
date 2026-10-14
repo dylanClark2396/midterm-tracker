@@ -1,23 +1,135 @@
-# Seeded from the Secretary of State's certified candidate list by
-# scripts/seed-from-certified-list.py. research_status: pending —
-# platforms and arguments not yet compiled.
+# Tennessee House, District 18 (west and south Knoxville) — Rep. Elaine Davis, in office since 2022,
+# faces Bryan Goldberg in a 2024 rematch.
+# Candidate order follows the Secretary of State's certified candidate list.
+_sources:
+  cga_h18: &cga_h18 { url: "https://wapp.capitol.tn.gov/apps/legislatorinfo/member.aspx?district=H18", title: "Representative Elaine Davis (Tennessee General Assembly)", accessed: 2026-10-13 }
+  bp_davis: &bp_davis { url: "https://ballotpedia.org/Elaine_Davis", title: "Elaine Davis (Ballotpedia)", accessed: 2026-10-13 }
+  ed_home: &ed_home { url: "https://electelainedavis.com/", title: "Re-Elect Elaine Davis (Davis campaign)", accessed: 2026-10-13 }
+  hb0021: &hb0021 { url: "https://wapp.capitol.tn.gov/apps/BillInfo/Default.aspx?BillNumber=HB0021&GA=114", title: "HB0021 bill information (Tennessee General Assembly)", accessed: 2026-10-13 }
+  hb0022: &hb0022 { url: "https://wapp.capitol.tn.gov/apps/BillInfo/Default.aspx?BillNumber=HB0022&GA=114", title: "HB0022 bill information (Tennessee General Assembly)", accessed: 2026-10-13 }
+  hb0817: &hb0817 { url: "https://wapp.capitol.tn.gov/apps/BillInfo/Default.aspx?BillNumber=HB0817&GA=113", title: "HB0817 bill information (Tennessee General Assembly)", accessed: 2026-10-13 }
+  hb0886: &hb0886 { url: "https://wapp.capitol.tn.gov/apps/BillInfo/Default.aspx?BillNumber=HB0886&GA=114", title: "HB0886 bill information (Tennessee General Assembly)", accessed: 2026-10-13 }
+  lt_closed: &lt_closed { url: "https://thelynchburgtimes.com/tn-open-primary-2026/", title: "State bill to close TN primaries dies in committee on 6-6 tie (The Lynchburg Times)", accessed: 2026-10-13 }
+  hb0039: &hb0039 { url: "https://wapp.capitol.tn.gov/apps/BillInfo/Default.aspx?BillNumber=HB0039&GA=114", title: "HB0039 (Menstrual Hygiene Products Accessibility Act) bill information (Tennessee General Assembly)", accessed: 2026-10-13 }
+  hb2153: &hb2153 { url: "https://wapp.capitol.tn.gov/apps/BillInfo/Default.aspx?BillNumber=HB2153&GA=114", title: "HB2153 (Katherine's Law) bill information (Tennessee General Assembly)", accessed: 2026-10-13 }
+  hb0786: &hb0786 { url: "https://wapp.capitol.tn.gov/apps/BillInfo/Default.aspx?BillNumber=HB0786&GA=114", title: "HB0786 bill information (Tennessee General Assembly)", accessed: 2026-10-13 }
+  ed_rideshare: &ed_rideshare { url: "https://tnhousegop.org/press-releases/2025/02/rep-elaine-davis-proposes-enhanced-penalty-for-impersonating-taxi-ride-share-drivers/", title: "Rep. Elaine Davis proposes enhanced penalty for impersonating taxi, ride-share drivers (Tennessee House Republican Caucus)", accessed: 2026-10-13 }
+  ed_beher: &ed_beher { url: "https://tnhousegop.org/press-releases/2026/05/rep-elaine-davis-secures-50k-for-be-her-hero/", title: "Rep. Elaine Davis secures $50K for Be Her Hero (Tennessee House Republican Caucus)", accessed: 2026-10-13 }
+  hb6004: &hb6004 { url: "https://wapp.capitol.tn.gov/apps/BillInfo/Default.aspx?BillNumber=HB6004&GA=114", title: "HB6004 (Education Freedom Act of 2025) bill information and votes (Tennessee General Assembly)", accessed: 2026-10-13 }
+  lookout18: &lookout18 { url: "https://tennesseelookout.com/voter-guides/contests/house-district-18/", title: "Tennessee House of Representatives, 18th District voter guide (Tennessee Lookout)", accessed: 2026-10-13 }
+  kn_guide: &kn_guide { url: "https://www.knoxnews.com/story/news/politics/elections/2026/10/02/tennessee-house-midterm-election-voters-guide-meet-the-candidates/92005545007/", title: "Tennessee House midterm election voter's guide: Meet the candidates (Knox News)", accessed: 2026-10-13 }
+  bg_home: &bg_home { url: "https://www.votebryangoldberg.com", title: "Bryan Goldberg for State House District 18 (Goldberg campaign)", accessed: 2026-10-13 }
+  bg_issues: &bg_issues { url: "https://www.votebryangoldberg.com/issues-new", title: "Issues (Goldberg campaign)", accessed: 2026-10-13 }
+  bp_goldberg: &bp_goldberg { url: "https://ballotpedia.org/Bryan_Goldberg", title: "Bryan Goldberg (Ballotpedia)", accessed: 2026-10-13 }
+
 id: tn-house-018
 office: "Tennessee House, District 18"
 level: state_house
 district: 18
-research_status: pending
+research_status: complete
 candidate_list_source: "https://sos-prod.tnsosgovfiles.com/s3fs-public/document/TNHouse_Nov2026.pdf"
+
 candidates:
   - name: "Elaine Davis"
     ballot_party: Republican
     city: "Knoxville"
-    why_running: { text: null, sources: [] }
-    platform: []
-    arguments: []
+    incumbent: true
+    website: "https://electelainedavis.com/"
+    bio_facts:
+      - { text: "State representative for District 18 since November 2022; House member of the 113th and 114th General Assemblies.", sources: [*bp_davis, *cga_h18, *lookout18] }
+      - { text: "Vice chair of the House Judiciary Committee; also serves on the Transportation, Ethics, and Private Acts committees and the Civil Justice Subcommittee.", sources: [*cga_h18] }
+      - { text: "B.A. in psychology and criminal justice from the University of Tennessee (1997); Farragut High School graduate.", sources: [*bp_davis, *cga_h18] }
+      - { text: "Previously owned Smoky Spots and worked as a morning show co-host on Knoxville's Morning News and as an account executive.", sources: [*bp_davis] }
+      - { text: "Former vice chair of the Knox County Republican Party; ran for Knox County Commission as a Democrat in 2006 before switching parties.", sources: [*cga_h18, *bp_davis, *lookout18] }
+    why_running:
+      text: >-
+        Her campaign says she has been an advocate for infrastructure, public safety, education, health care, low
+        taxes, election integrity, job creation and lowering the cost of doing business.
+      sources: [*ed_home]
+    platform:
+      - category: taxes
+        text: "Sponsored a bill to exempt groceries from the state sales tax."
+        sources: [*hb0021]
+      - category: government
+        text: "Sponsored laws requiring local governing bodies to hold a public comment period at meetings and requiring that city council district members be elected only by voters who live in the district."
+        sources: [*hb0022, *hb0817, *ed_home]
+      - category: public_safety
+        text: "Sponsored a bill creating the offense of aggravated domestic assault (Katherine's Law) and co-sponsored a 2025 law making it a crime to impersonate a taxi or ride-share driver."
+        sources: [*hb2153, *hb0786, *ed_rideshare]
+      - category: education
+        text: "Sponsored a bill to require free menstrual hygiene products in public high schools."
+        sources: [*hb0039]
+    arguments:
+      - stance: for
+        text: >-
+          She has passed laws guaranteeing residents a chance to speak at local government meetings and ensuring
+          city council district members are chosen by the voters in their own districts.
+        sources: [*ed_home, *hb0022, *hb0817]
+      - stance: for
+        text: >-
+          She secured $50,000 in state funding for a nonprofit that supplies feminine hygiene products to schools
+          across East Tennessee, helping keep girls in class.
+        sources: [*ed_beher]
+      - stance: against
+        text: >-
+          She voted for the 2025 law creating a statewide private-school voucher program, which takes money out of
+          public schools and gives it to private ones.
+        sources: [*hb6004, *bg_issues]
+      - stance: against
+        text: >-
+          She co-sponsored a bill requiring voters to register with a party before voting in a primary, under which
+          voters switching parties would have had to file written notice at least 90 days before an election.
+        sources: [*hb0886, *lt_closed]
+
   - name: "Bryan Goldberg"
     ballot_party: Democratic
     city: "Knoxville"
-    why_running: { text: null, sources: [] }
-    platform: []
-    arguments: []
+    incumbent: false
+    website: "https://www.votebryangoldberg.com"
+    bio_facts:
+      - { text: "General manager of the Knoxville office of BELFOR Property Restoration for 16 years.", sources: [*bg_home, *kn_guide] }
+      - { text: "Swam for the University of Tennessee on scholarship, was an All-American, and made the USA National Team; later coached swimming at Halls High and Middle School for eight years.", sources: [*bg_home] }
+      - { text: "President of the Knoxville Jewish Alliance from 2020 to 2024; member of Leadership Knoxville's 2022 class.", sources: [*bg_home] }
+      - { text: "Ran for this seat in 2024 and lost to Elaine Davis, 53.8% to 46.2%.", sources: [*bp_goldberg] }
+    why_running:
+      text: >-
+        He says he is running to represent the entire community and is willing to sit down and listen to District
+        18's residents, making decisions based on the common good. He says his focus is lowering the cost of living
+        without raising taxes, and that as a father of two public school students he is running so public education
+        is invested in, not abandoned.
+      sources: [*bg_home, *bg_issues]
+    platform:
+      - category: cost_of_living
+        text: "Require cost-of-living impact statements for major legislation, create a Tennessee Family Budget Index, eliminate junk fees, and allow more housing and child care by reducing zoning and permitting delays."
+        sources: [*bg_issues]
+      - category: taxes
+        text: "Eliminate the state sales tax on groceries, temporarily cut the gas tax, and create a refundable child tax credit for middle- and lower-income families."
+        sources: [*bg_issues, *kn_guide]
+      - category: education
+        text: "Oppose vouchers, fully fund public schools and support teachers, review how testing serves students, and create universal pre-K."
+        sources: [*bg_issues]
+      - category: health_care
+        text: "Expand Medicaid to bring federal dollars back to Tennessee and help keep rural hospitals open."
+        sources: [*bg_issues]
+      - category: guns
+        text: "Again require handgun carriers to pass a basic permit class."
+        sources: [*bg_issues]
+      - category: abortion
+        text: "Restore a woman's right to make reproductive decisions with her doctor, without government interference."
+        sources: [*bg_issues]
+      - category: infrastructure
+        text: "Relieve congestion on corridors such as Pellissippi Parkway, I-40 and Alcoa Highway, and require transportation impact assessments for major developments."
+        sources: [*bg_issues]
+    arguments:
+      - stance: for
+        text: >-
+          Sixteen years managing a disaster-restoration team and four years leading a community organization have
+          given him experience listening to people and making decisions for the common good.
+        sources: [*bg_home]
+      - stance: for
+        text: >-
+          He has proposed a plan to lower everyday costs, from grocery tax relief to cost-of-living reviews of new
+          laws, without raising taxes.
+        sources: [*bg_issues]
+
 last_verified: 2026-10-13
