@@ -1,23 +1,123 @@
-# Seeded from the Secretary of State's certified candidate list by
-# scripts/seed-from-certified-list.py. research_status: pending —
-# platforms and arguments not yet compiled.
+# Tennessee Senate, District 13 — Sen. Dawn White, Senate Education Committee chair, seeks re-election.
+# Candidate order follows the Secretary of State's certified candidate list.
+_sources:
+  cap_white: &cap_white { url: "https://www.capitol.tn.gov/senate/members/s13.html", title: "Senator Dawn White (Tennessee General Assembly)", accessed: 2026-10-13 }
+  bp_white: &bp_white { url: "https://ballotpedia.org/Dawn_White", title: "Dawn White (Ballotpedia)", accessed: 2026-10-13 }
+  dw_home: &dw_home { url: "https://www.votedawn.com/", title: "Dawn White for State Senate (White campaign)", accessed: 2026-10-13 }
+  dw_about: &dw_about { url: "https://www.votedawn.com/about", title: "Dawn's Story (White campaign)", accessed: 2026-10-13 }
+  dw_issues: &dw_issues { url: "https://www.votedawn.com/issues", title: "On The Issues (White campaign)", accessed: 2026-10-13 }
+  firefly_chair: &firefly_chair { url: "https://tnfirefly.com/news/senator-dawn-white-named-new-senate-education-committee-chair", title: "Senator Dawn White named new Senate Education Committee Chair (Tennessee Firefly)", accessed: 2026-10-13 }
+  bill_sb6001: &bill_sb6001 { url: "https://wapp.capitol.tn.gov/apps/BillInfo/Default.aspx?BillNumber=SB6001&GA=114", title: "SB 6001, Education Freedom Act of 2025 (Tennessee General Assembly)", accessed: 2026-10-13 }
+  wsmv_vouchers: &wsmv_vouchers { url: "https://www.wsmv.com/2024/02/09/rutherford-county-school-leaders-oppose-proposed-voucher-program", title: "Rutherford County school leaders oppose proposed voucher program (WSMV)", accessed: 2026-10-13 }
+  aw_site: &aw_site { url: "https://awynnforsenate.my.canva.site/", title: "Angela Wynn for State Senate District 13 (Wynn campaign)", accessed: 2026-10-13 }
+  lookout_13: &lookout_13 { url: "https://tennesseelookout.com/voter-guides/contests/state-senate-district-13/", title: "State Senate, 13th District voter guide (Tennessee Lookout)", accessed: 2026-10-13 }
+  wsmv_guide: &wsmv_guide { url: "https://www.wsmv.com/2026/09/28/election-2026-is-almost-here-heres-everything-you-need-know-about-tn-house-senate-candidates/", title: "Election 2026: Everything you need to know about TN House and Senate candidates (WSMV)", accessed: 2026-10-13 }
+
 id: tn-senate-13
 office: "Tennessee Senate, District 13"
 level: state_senate
 district: 13
-research_status: pending
+research_status: complete
 candidate_list_source: "https://sos-prod.tnsosgovfiles.com/s3fs-public/document/TNSenate_Nov2026.pdf"
+
 candidates:
   - name: "Dawn White"
     ballot_party: Republican
     city: "Murfreesboro"
-    why_running: { text: null, sources: [] }
-    platform: []
-    arguments: []
+    incumbent: true
+    website: "https://www.votedawn.com/"
+    bio_facts:
+      - { text: "Member of the Tennessee Senate for District 13 since 2018 (111th through 114th General Assemblies); earlier represented District 37 in the state House from 2012 to 2018.", sources: [*cap_white, *bp_white] }
+      - { text: "Chair of the Senate Education Committee and member of the Senate Judiciary Committee.", sources: [*cap_white, *firefly_chair] }
+      - { text: "Former kindergarten teacher in Murfreesboro City Schools for seven years.", sources: [*dw_about, *wsmv_guide] }
+      - { text: "Started an internet retail business selling vacuum cleaners, sewing machines, and related supplies in 2005.", sources: [*dw_about, *wsmv_guide] }
+      - { text: "B.S., M.Ed., and Ed.S. from Middle Tennessee State University.", sources: [*cap_white, *dw_about] }
+    why_running:
+      text: >-
+        Her campaign says she is focused on continuing to advance policies that strengthen the state and safeguard
+        the principles she has championed throughout her career: protecting communities, empowering parents, and
+        keeping Tennessee moving forward. It says Tennessee must stand with leaders who defend freedoms, protect
+        communities, and put working families first.
+      sources: [*dw_home]
+    platform:
+      - category: immigration
+        text: "Fight illegal immigration and sanctuary-city policies, including laws holding local officials accountable if they defy state law, oppose benefits for people in the country illegally, and support the President's border agenda; she passed a resolution urging Congress to fund a border wall."
+        sources: [*dw_issues, *dw_home]
+      - category: public_safety
+        text: "Support law enforcement and Truth in Sentencing laws requiring violent offenders to serve 100% of their sentences."
+        sources: [*dw_issues]
+      - category: education
+        text: "Give parents more choice in their children's schooling, keep education standards set in Tennessee rather than Washington, support teachers, shrink class sizes in Rutherford County, and address teacher shortages."
+        sources: [*dw_issues, *dw_home, *firefly_chair]
+      - category: taxes
+        text: "Oppose any state income tax, cut the sales tax on groceries, reduce state spending, and support tax relief for seniors and veterans."
+        sources: [*dw_issues]
+      - category: economy
+        text: "Cut red tape and roll back unnecessary regulations so small businesses can grow."
+        sources: [*dw_issues]
+      - category: abortion
+        text: "Oppose abortion and ensure no taxpayer money goes to abortion providers."
+        sources: [*dw_issues]
+      - category: guns
+        text: "Protect Second Amendment rights."
+        sources: [*dw_issues]
+    arguments:
+      - stance: for
+        text: >-
+          A former kindergarten teacher who now chairs the Senate Education Committee, she brings classroom
+          experience to education policy and is working to reduce overcrowding and teacher shortages.
+        sources: [*dw_about, *firefly_chair]
+      - stance: for
+        text: >-
+          Having built and grown her own small business, she understands budgeting, payroll, and regulation, and has
+          worked to make the state friendlier to job creators.
+        sources: [*dw_about, *dw_issues]
+      - stance: for
+        text: >-
+          She has voted to cut the grocery tax, repeal the Hall income tax, and put a ban on any state income tax in
+          the constitution.
+        sources: [*dw_issues]
+      - stance: against
+        text: >-
+          She co-sponsored the 2025 law creating state-funded scholarships for private school, although both school
+          districts in her home county passed resolutions against the voucher proposal in 2024; vouchers take money
+          out of public classrooms and could lead to higher taxes to offset the lost state funding.
+        sources: [*bill_sb6001, *wsmv_vouchers]
+
   - name: "Angela Evans Wynn"
     ballot_party: Democratic
     city: "Smyrna"
-    why_running: { text: null, sources: [] }
-    platform: []
-    arguments: []
+    incumbent: false
+    website: "https://awynnforsenate.my.canva.site/"
+    bio_facts:
+      - { text: "Director of stewardship and donor relations for Tennessee State University.", sources: [*lookout_13] }
+      - { text: "Has more than 20 years of experience in organizational leadership, advocacy, and public engagement, including work with the YWCA and The Decarceration Collective.", sources: [*aw_site] }
+      - { text: "Bachelor's degree in business administration (marketing) from Howard University; MBA from the University of Phoenix.", sources: [*wsmv_guide] }
+      - { text: "Moved to Tennessee in 2015.", sources: [*aw_site] }
+    why_running:
+      text: >-
+        She says District 13 deserves a senator who understands real life and is ready to fight for families every
+        day, and that voters deserve leaders who show up, listen, and act. She says her career solving problems
+        through advocacy, public engagement, justice work, and community leadership has taught her how to get results.
+      sources: [*aw_site]
+    platform:
+      - category: education
+        text: "Fully fund public schools and invest in solutions that strengthen neighborhood schools."
+        sources: [*aw_site]
+      - category: health_care
+        text: "Expand Medicaid for working families, and improve maternal health through better access to care and expanded postpartum support."
+        sources: [*aw_site]
+      - category: public_safety
+        text: "Pursue justice policy that keeps communities safe through accountability, prevention, and community investment rather than private systems that profit from punishment."
+        sources: [*aw_site]
+      - category: government
+        text: "Promote transparent, accountable government and stronger representation for working families."
+        sources: [*aw_site]
+    arguments:
+      - stance: for
+        text: >-
+          A mother of five who has been a single parent and survived domestic violence, she brings lived experience
+          and two decades of advocacy work to the needs of families.
+        sources: [*aw_site]
+
 last_verified: 2026-10-13
