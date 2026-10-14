@@ -1,23 +1,95 @@
-# Seeded from the Secretary of State's certified candidate list by
-# scripts/seed-from-certified-list.py. research_status: pending —
-# platforms and arguments not yet compiled.
+# Tennessee House, District 3 — Rep. Timothy Hill (in office since 2023) faces Lori Love for the third time.
+# Candidate order follows the Secretary of State's certified candidate list.
+_sources:
+  bp_hill: &bp_hill { url: "https://ballotpedia.org/Timothy_Hill", title: "Timothy Hill (Ballotpedia)", accessed: 2026-10-13 }
+  cga_h3: &cga_h3 { url: "https://wapp.capitol.tn.gov/apps/legislatorinfo/member.aspx?district=H3", title: "Representative Timothy Hill (Tennessee General Assembly)", accessed: 2026-10-13 }
+  sp_h3: &sp_h3 { url: "https://wapp.capitol.tn.gov/apps/LegislatorInfo/SponsorList?district=H030&ga=114", title: "Rep. Hill: bills sponsored, 114th General Assembly (Tennessee General Assembly)", accessed: 2026-10-13 }
+  hb1283: &hb1283 { url: "https://wapp.capitol.tn.gov/apps/BillInfo/Default.aspx?BillNumber=HB1283&GA=114", title: "HB1283 bill information (Tennessee General Assembly)", accessed: 2026-10-13 }
+  hb1281: &hb1281 { url: "https://wapp.capitol.tn.gov/apps/BillInfo/Default.aspx?BillNumber=HB1281&GA=114", title: "HB1281 bill information (Tennessee General Assembly)", accessed: 2026-10-13 }
+  hb1984: &hb1984 { url: "https://wapp.capitol.tn.gov/apps/BillInfo/Default.aspx?BillNumber=HB1984&GA=114", title: "HB1984 bill information (Tennessee General Assembly)", accessed: 2026-10-13 }
+  hb1278: &hb1278 { url: "https://wapp.capitol.tn.gov/apps/BillInfo/Default.aspx?BillNumber=HB1278&GA=114", title: "HB1278 bill information (Tennessee General Assembly)", accessed: 2026-10-13 }
+  lookout3: &lookout3 { url: "https://tennesseelookout.com/voter-guides/contests/house-district-3/", title: "Tennessee House of Representatives, 3rd District voter guide (Tennessee Lookout)", accessed: 2026-10-13 }
+  bp_love: &bp_love { url: "https://ballotpedia.org/Lori_Love", title: "Lori Love (Ballotpedia, incl. 2023 Candidate Connection survey)", accessed: 2026-10-13 }
+  love_home: &love_home { url: "https://electlorilove.com/", title: "Elect Lori Love to House District 3 (Love campaign)", accessed: 2026-10-13 }
+  love_about: &love_about { url: "https://electlorilove.com/About-me/", title: "About me (Love campaign)", accessed: 2026-10-13 }
+
 id: tn-house-003
 office: "Tennessee House, District 3"
 level: state_house
 district: 3
-research_status: pending
+research_status: complete
 candidate_list_source: "https://sos-prod.tnsosgovfiles.com/s3fs-public/document/TNHouse_Nov2026.pdf"
+
 candidates:
   - name: "Timothy Hill"
     ballot_party: Republican
     city: "Blountville"
+    incumbent: true
+    website: null
+    bio_facts:
+      - { text: "State representative for District 3 since 2023; appointed as interim representative after Rep. Scotty Campbell resigned, then won the 2023 special election.", sources: [*bp_hill, *lookout3] }
+      - { text: "Previously won election to the District 3 seat in 2012, 2014, 2016, and 2018; ran for U.S. House in Tennessee's 1st District in 2020 and lost the Republican primary.", sources: [*bp_hill] }
+      - { text: "Vice-chair of the House Insurance Committee and a member of the Health Committee.", sources: [*cga_h3] }
+      - { text: "Career includes owning a business, working as a radio host and audio/visual director, and serving as press secretary and communications director for Tennessee's 1st Congressional District.", sources: [*bp_hill] }
+      - { text: "Associate degree from Northeast State Community College and bachelor's degree from East Tennessee State University.", sources: [*bp_hill] }
     why_running: { text: null, sources: [] }
-    platform: []
+    platform:
+      - category: government
+        text: "Sponsored a 2025 law requiring training for election officials on temporary IDs issued to non-U.S. citizens, which cannot be used as voter identification; also sponsored a 2026 bill, not passed, to shorten early voting from 15 days to seven."
+        sources: [*hb1283, *sp_h3]
+      - category: education
+        text: "Sponsored a 2025 law limiting when students may be excused from school to attend released-time religious instruction; also sponsored a 2026 bill, not passed, to let schools choose, rather than be required, to hold back third graders who fall short in reading."
+        sources: [*hb1281, *sp_h3]
+      - category: health_care
+        text: "Sponsored a 2026 law allowing more health care providers to directly administer certain buprenorphine products used to treat opioid use disorder."
+        sources: [*hb1984]
+      - category: infrastructure
+        text: "Sponsored a 2025 law allowing the state's Hurricane Helene interest payment fund to cover local governments' loan charges."
+        sources: [*hb1278]
     arguments: []
+
   - name: "Lori Love"
     ballot_party: Democratic
     city: "Kingsport"
-    why_running: { text: null, sources: [] }
-    platform: []
-    arguments: []
+    incumbent: false
+    website: "https://electlorilove.com/"
+    bio_facts:
+      - { text: "Retired; previously owned a small business, worked in human resources for Fingerhut, and was office manager for the Johnson City Symphony Orchestra.", sources: [*love_about, *bp_love] }
+      - { text: "Elected member of the Tennessee Democratic Party executive committee since 2014, representing State Senate District 4.", sources: [*love_about] }
+      - { text: "Treasurer of the Blountville Farmers Market and former treasurer of the Johnson City Farmers Market; an officer of the local Central Labor Council.", sources: [*love_about, *love_home] }
+      - { text: "Ran against Timothy Hill for this seat in the 2023 special election and in 2024.", sources: [*bp_love, *lookout3] }
+      - { text: "Married to a 22-year Air Force veteran; has lived in Sullivan County for about 30 years.", sources: [*love_about] }
+    why_running:
+      text: >-
+        She says the legislature's supermajority acts as if it answers to no one, keeps passing laws it knows will be
+        challenged as unconstitutional, and has lost sight of serving the people. She says she wants to restore morals,
+        ethics, and accountability to the legislature and bring back government "for the people," meaning all of them.
+      sources: [*love_about, *love_home]
+    platform:
+      - category: education
+        text: "Fully fund public schools, support teachers, and let schools operate without censorship or political influence."
+        sources: [*love_home]
+      - category: health_care
+        text: "Improve access to health care in a region facing rural hospital closures and lost trauma care, where one hospital system holds a monopoly."
+        sources: [*love_home]
+      - category: guns
+        text: "Pass gun safety legislation; she says no one wants to take guns from law-abiding citizens, but doing nothing about gun violence is not an option."
+        sources: [*love_home]
+      - category: infrastructure
+        text: "Treat internet service as a necessary utility that every household should be able to connect to."
+        sources: [*love_home]
+      - category: economy
+        text: "Advocate for unions and oppose legislation aimed at weakening them."
+        sources: [*love_home]
+      - category: government
+        text: "Restore morals, ethics, and accountability in the legislature."
+        sources: [*love_home, *bp_love]
+    arguments:
+      - stance: for
+        text: "She would push to restore ethics and accountability in the legislature."
+        sources: [*love_home]
+      - stance: for
+        text: "As an officer of the local labor council, she would advocate for unions at every opportunity."
+        sources: [*love_home, *love_about]
+
 last_verified: 2026-10-13
