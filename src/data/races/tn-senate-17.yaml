@@ -1,23 +1,116 @@
-# Seeded from the Secretary of State's certified candidate list by
-# scripts/seed-from-certified-list.py. research_status: pending —
-# platforms and arguments not yet compiled.
+# Tennessee Senate, District 17 — Sen. Mark Pody seeks re-election against librarian Lindsey Patrick-Wright.
+# Candidate order follows the Secretary of State's certified candidate list.
+_sources:
+  pody_home: &pody_home { url: "https://www.markpody.com/", title: "Mark Pody for Tennessee State Senate (Pody campaign)", accessed: 2026-10-13 }
+  pody_about: &pody_about { url: "https://www.markpody.com/about-mark", title: "About Mark Pody (Pody campaign)", accessed: 2026-10-13 }
+  pody_issues: &pody_issues { url: "https://www.markpody.com/issues", title: "Issues - Mark Pody for State Senate (Pody campaign)", accessed: 2026-10-13 }
+  bp_pody: &bp_pody { url: "https://ballotpedia.org/Mark_Pody", title: "Mark Pody (Ballotpedia)", accessed: 2026-10-13 }
+  lookout_guide: &lookout_guide { url: "https://tennesseelookout.com/voter-guides/contests/state-senate-district-17/", title: "State Senate, 17th District voter guide (Tennessee Lookout)", accessed: 2026-10-13 }
+  wsmv_race: &wsmv_race { url: "https://www.wsmv.com/2026/09/28/turnout-not-political-persuasion-may-decide-pody-patrick-wright-state-senate-race-tennessee/", title: "Turnout, not political persuasion, may decide Pody-Patrick-Wright state Senate race in Tennessee (WSMV)", accessed: 2026-10-13 }
+  lpw_home: &lpw_home { url: "https://www.lindseyfortn.com/", title: "Lindsey for TN (Patrick-Wright campaign)", accessed: 2026-10-13 }
+  lpw_issues: &lpw_issues { url: "https://www.lindseyfortn.com/issues", title: "Issues (Patrick-Wright campaign)", accessed: 2026-10-13 }
+  bp_lpw: &bp_lpw { url: "https://ballotpedia.org/Lindsey_Patrick-Wright", title: "Lindsey Patrick-Wright (Ballotpedia, incl. Candidate Connection survey)", accessed: 2026-10-13 }
+
 id: tn-senate-17
 office: "Tennessee Senate, District 17"
 level: state_senate
 district: 17
-research_status: pending
+research_status: complete
 candidate_list_source: "https://sos-prod.tnsosgovfiles.com/s3fs-public/document/TNSenate_Nov2026.pdf"
+
 candidates:
   - name: "Mark Pody"
     ballot_party: Republican
     city: "Lebanon"
-    why_running: { text: null, sources: [] }
-    platform: []
-    arguments: []
+    incumbent: true
+    website: "https://www.markpody.com/"
+    bio_facts:
+      - { text: "State Senator for District 17 since winning a 2017 special election to fill the seat vacated by Mae Beavers; earlier elected to the Tennessee House of Representatives in 2010.", sources: [*lookout_guide, *wsmv_race] }
+      - { text: "Served in the House in the 107th through 110th General Assemblies and in the Senate in the 110th through 114th General Assemblies.", sources: [*pody_about] }
+      - { text: "Owner of a financial planning and insurance business.", sources: [*bp_pody, *pody_about, *wsmv_race] }
+      - { text: "First Vice-Chair of the Senate Transportation and Safety Committee; member of the Education Committee and the Energy, Agriculture and Natural Resources Committee; chairman of the Tennessee Legislative Prayer Caucus.", sources: [*pody_about] }
+    why_running:
+      text: >-
+        His campaign says he is running to fight for Tennessee values, protect constitutional rights, and ensure a
+        prosperous economy for hardworking families across the district.
+      sources: [*pody_home]
+    platform:
+      - category: economy
+        text: "Keep taxes low, cut red tape, and foster an environment where small businesses can create good-paying jobs."
+        sources: [*pody_issues]
+      - category: taxes
+        text: "Practice fiscal responsibility, balance the budget, and oppose any effort to implement a state income tax."
+        sources: [*pody_issues]
+      - category: education
+        text: "Support teachers, respect parents' role, and keep curriculum focused on foundational academics rather than political agendas."
+        sources: [*pody_issues]
+      - category: public_safety
+        text: "Back law enforcement, support strict penalties for violent offenders, and provide resources to keep streets secure."
+        sources: [*pody_issues]
+      - category: infrastructure
+        text: "Make strategic investments in roads, bridges, and rural broadband so infrastructure keeps pace with growth."
+        sources: [*pody_issues]
+      - category: health_care
+        text: "Pursue free-market solutions to lower health care costs, increase transparency, and protect the doctor-patient relationship from government interference."
+        sources: [*pody_issues]
+    arguments:
+      - stance: for
+        text: >-
+          He owns a financial planning and insurance business with locations around the state, giving him broad
+          knowledge of economic issues to bring to the Senate.
+        sources: [*pody_home, *bp_pody]
+
   - name: "Lindsey Patrick-Wright"
     ballot_party: Democratic
     city: "Mt Juliet"
-    why_running: { text: null, sources: [] }
-    platform: []
-    arguments: []
+    incumbent: false
+    website: "https://www.lindseyfortn.com/"
+    bio_facts:
+      - { text: "Librarian with about 20 years of experience in public libraries in Tennessee, including at Nashville Public Library.", sources: [*bp_lpw, *lpw_issues, *wsmv_race] }
+      - { text: "Bachelor's degree from Rhodes College (2000) and a graduate degree from the University of Southern Mississippi (2007).", sources: [*bp_lpw] }
+      - { text: "Won the August 2026 Democratic primary for Senate District 17 over Joni Cochran.", sources: [*bp_lpw, *lookout_guide] }
+      - { text: "Former member of SEIU during her years at Nashville Public Library.", sources: [*lpw_issues, *lpw_home] }
+    why_running:
+      text: >-
+        She says she is running to bring a practical, community-focused voice to the Legislature and to give
+        Tennessee families a real voice. She says government should work for working families, with priorities
+        including affordability, public education, voluntary universal pre-K, and responsible growth.
+      sources: [*bp_lpw, *lpw_home]
+    platform:
+      - category: education
+        text: "Fully fund public schools, oppose private school vouchers, support teachers, strengthen IEPs and 504 plans, oppose book bans, and expand voluntary universal pre-K."
+        sources: [*lpw_issues, *bp_lpw]
+      - category: taxes
+        text: "Eliminate the state sales tax on groceries and require large corporations to pay their fair share, including through taxation of corporate tangible property."
+        sources: [*bp_lpw, *lpw_issues]
+      - category: cost_of_living
+        text: "Treat child care as essential infrastructure with universal access and public investment to lower costs, and increase the supply of attainable housing."
+        sources: [*lpw_issues, *bp_lpw]
+      - category: health_care
+        text: "Pursue universal access to health care, lower prescription drug costs, eliminate medical debt, and expand mental health care."
+        sources: [*lpw_issues]
+      - category: infrastructure
+        text: "Invest in roads, schools, water, and emergency services before approving new development, keep zoning decisions local and transparent, and protect farmland."
+        sources: [*bp_lpw, *lpw_issues]
+      - category: abortion
+        text: "Treat abortion as health care, with medical decisions left to patients and their doctors."
+        sources: [*lpw_issues]
+      - category: guns
+        text: "Require universal background checks and safe storage of firearms while respecting responsible gun ownership."
+        sources: [*lpw_issues]
+      - category: immigration
+        text: "Supports abolishing ICE in its current form and replacing it with a humane, accountable system."
+        sources: [*lpw_issues]
+    arguments:
+      - stance: for
+        text: >-
+          She has spent twenty years in public library service making sure every person, regardless of zip code or
+          income, has access to the same resources and opportunities.
+        sources: [*lpw_home]
+      - stance: for
+        text: >-
+          Long before running, she was already serving the community by leading library services, listening to
+          residents and building connections across neighborhoods, and she understands the district's local needs.
+        sources: [*lpw_home]
+
 last_verified: 2026-10-13
