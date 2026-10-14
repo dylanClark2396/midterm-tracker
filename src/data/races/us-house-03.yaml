@@ -65,18 +65,14 @@ candidates:
         sources: [*cf_about]
       - stance: for
         text: >-
-          He has the current President's endorsement and has pledged to work with the administration to secure the
-          border, fix the economy, and rebuild the military.
+          He has been endorsed for re-election and has pledged to work with the administration to secure the border,
+          fix the economy, and rebuild the military.
         sources: [*bp_cf, *cf_119]
       - stance: against
         text: >-
           He has said he intends never to host another public town hall meeting with constituents, and has declined to
           debate his general-election opponents in recent years.
         sources: [*l3_townhall, *ag_home]
-      - stance: against
-        text: >-
-          He is more responsive to donors and party leaders than to working families in the district who are struggling.
-        sources: [*ag_home, *l3_ag]
 
   - name: "Anna Golladay"
     ballot_party: Democratic
