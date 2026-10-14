@@ -86,7 +86,7 @@ const pageTitle = title === 'Home' ? 'TN 2026 Ballot Guide' : `${title} · TN 20
       }
       // Open the collapsed sources list when a footnote marker is followed.
       const openSources = () => {
-        const target = location.hash && document.getElementById(location.hash.slice(1));
+        const target = location.hash ? document.getElementById(location.hash.slice(1)) : null;
         target?.closest('details')?.setAttribute('open', '');
       };
       addEventListener('hashchange', openSources);
