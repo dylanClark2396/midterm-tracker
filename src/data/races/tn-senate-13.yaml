@@ -7,8 +7,6 @@ _sources:
   dw_about: &dw_about { url: "https://www.votedawn.com/about", title: "Dawn's Story (White campaign)", accessed: 2026-10-13 }
   dw_issues: &dw_issues { url: "https://www.votedawn.com/issues", title: "On The Issues (White campaign)", accessed: 2026-10-13 }
   firefly_chair: &firefly_chair { url: "https://tnfirefly.com/news/senator-dawn-white-named-new-senate-education-committee-chair", title: "Senator Dawn White named new Senate Education Committee Chair (Tennessee Firefly)", accessed: 2026-10-13 }
-  bill_sb6001: &bill_sb6001 { url: "https://wapp.capitol.tn.gov/apps/BillInfo/Default.aspx?BillNumber=SB6001&GA=114", title: "SB 6001, Education Freedom Act of 2025 (Tennessee General Assembly)", accessed: 2026-10-13 }
-  wsmv_vouchers: &wsmv_vouchers { url: "https://www.wsmv.com/2024/02/09/rutherford-county-school-leaders-oppose-proposed-voucher-program", title: "Rutherford County school leaders oppose proposed voucher program (WSMV)", accessed: 2026-10-13 }
   aw_site: &aw_site { url: "https://awynnforsenate.my.canva.site/", title: "Angela Wynn for State Senate District 13 (Wynn campaign)", accessed: 2026-10-13 }
   lookout_13: &lookout_13 { url: "https://tennesseelookout.com/voter-guides/contests/state-senate-district-13/", title: "State Senate, 13th District voter guide (Tennessee Lookout)", accessed: 2026-10-13 }
   wsmv_guide: &wsmv_guide { url: "https://www.wsmv.com/2026/09/28/election-2026-is-almost-here-heres-everything-you-need-know-about-tn-house-senate-candidates/", title: "Election 2026: Everything you need to know about TN House and Senate candidates (WSMV)", accessed: 2026-10-13 }
@@ -77,12 +75,6 @@ candidates:
           She has voted to cut the grocery tax, repeal the Hall income tax, and put a ban on any state income tax in
           the constitution.
         sources: [*dw_issues]
-      - stance: against
-        text: >-
-          She co-sponsored the 2025 law creating state-funded scholarships for private school, although both school
-          districts in her home county passed resolutions against the voucher proposal in 2024; vouchers take money
-          out of public classrooms and could lead to higher taxes to offset the lost state funding.
-        sources: [*bill_sb6001, *wsmv_vouchers]
 
   - name: "Angela Evans Wynn"
     ballot_party: Democratic
