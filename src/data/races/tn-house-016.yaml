@@ -8,7 +8,6 @@ _sources:
   hb1922: &hb1922 { url: "https://wapp.capitol.tn.gov/apps/BillInfo/Default.aspx?BillNumber=HB1922&GA=114", title: "HB1922 bill information (Tennessee General Assembly)", accessed: 2026-10-13 }
   hb0640: &hb0640 { url: "https://wapp.capitol.tn.gov/apps/BillInfo/Default.aspx?BillNumber=HB0640&GA=114", title: "HB0640 bill information (Tennessee General Assembly)", accessed: 2026-10-13 }
   hb0643: &hb0643 { url: "https://wapp.capitol.tn.gov/apps/BillInfo/Default.aspx?BillNumber=HB0643&GA=114", title: "HB0643 bill information (Tennessee General Assembly)", accessed: 2026-10-13 }
-  hb6004: &hb6004 { url: "https://wapp.capitol.tn.gov/apps/BillInfo/Default.aspx?BillNumber=HB6004&GA=114", title: "HB6004 (Education Freedom Act of 2025) bill information and votes (Tennessee General Assembly)", accessed: 2026-10-13 }
   lookout16: &lookout16 { url: "https://tennesseelookout.com/voter-guides/contests/house-district-16/", title: "Tennessee House of Representatives, 16th District voter guide (Tennessee Lookout)", accessed: 2026-10-13 }
   kn_guide: &kn_guide { url: "https://www.knoxnews.com/story/news/politics/elections/2026/10/02/tennessee-house-midterm-election-voters-guide-meet-the-candidates/92005545007/", title: "Tennessee House midterm election voter's guide: Meet the candidates (Knox News)", accessed: 2026-10-13 }
   eb_about: &eb_about { url: "https://www.elizafortn16.com/about", title: "About Eliza (Boles campaign)", accessed: 2026-10-13 }
@@ -51,11 +50,6 @@ candidates:
           She has led the House health subcommittee on population health since its creation in 2023, working to make
           sure health bills are fully prepared before they reach the full committee.
         sources: [*carr_chair]
-      - stance: against
-        text: >-
-          She voted for the 2025 law creating a statewide private-school voucher program, which diverts public money
-          away from the public schools most children attend.
-        sources: [*hb6004, *eb_prior]
 
   - name: "Eliza Boles"
     ballot_party: Democratic
