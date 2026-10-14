@@ -33,7 +33,6 @@ _sources:
   lookout_green: &lookout_green { url: "https://tennesseelookout.com/2026/09/28/democratic-gubernatorial-contender-jerri-green-talks-affordability-republican-supermajority/", title: "Democratic gubernatorial contender Jerri Green talks affordability, Republican supermajority (Tennessee Lookout)", accessed: 2026-10-13 }
   wtvf_green: &wtvf_green { url: "https://www.newschannel5.com/news/newschannel-5-investigates/democratic-nominee-jerri-green-says-tennessee-needs-new-leadership-ahead-of-historic-governors-race", title: "Democratic nominee Jerri Green says Tennessee needs new leadership (NewsChannel 5)", accessed: 2026-10-13 }
   wsmv_debate: &wsmv_debate { url: "https://www.wsmv.com/2026/09/08/jerri-green-formally-challenges-marsha-blackburn-series-gubernatorial-debates-ahead-tn-midterms/", title: "Marsha Blackburn rejects Jerri Green's request for series of gubernatorial debates (WSMV)", accessed: 2026-10-13 }
-  wsmv_pinkston: &wsmv_pinkston { url: "https://www.wsmv.com/2026/09/24/independent-not-backing-down-after-democratic-nominee-urges-her-end-run-tn-governor/", title: "Independent 'not backing down' after Democratic nominee urges her to end run (WSMV)", accessed: 2026-10-13 }
   primary: &primary { url: "https://www.newschannel5.com/news/blackburn-and-green-win-primaries-will-compete-to-be-tenn-s-first-woman-governor", title: "Blackburn and Green win primaries (Nashville Banner, via NewsChannel 5)", accessed: 2026-10-13 }
   tfp_indep: &tfp_indep { url: "https://www.timesfreepress.com/news/2026/sep/15/spoilers-or-contenders-independent-candidates-for/", title: "Spoilers or contenders? Independent candidates for Tennessee governor (Chattanooga Times Free Press)", accessed: 2026-10-13 }
   rally: &rally { url: "https://tennesseelookout.com/2026/10/10/trump-touts-memphis-law-enforcement-surge-in-tennessee-rally-meant-to-shore-up-midterm-support/", title: "Trump touts Memphis law enforcement surge in Tennessee rally (Tennessee Lookout)", accessed: 2026-10-13 }
@@ -140,12 +139,6 @@ candidates:
           Her policy answers mostly defend the state's current direction rather than lay out specific new plans for the
           grocery, housing, and health care costs Tennessee families face.
         sources: [*bannerq_major, *wsmv_debate]
-      - stance: against
-        text: >-
-          A committee supporting her was anchored by a $1 million gift from a single investor, and she has not taken
-          part in a public forum or debate since 2018, which raises the question of whom she would answer to as
-          governor.
-        sources: [*firefly_mb_profile, *tpa_forum]
       - stance: against
         text: >-
           Her plan to bring back the electric chair would do nothing to protect Tennesseans; public safety comes from
@@ -349,8 +342,8 @@ candidates:
         sources: [*lookout_green, *tfp_indep]
       - stance: against
         text: >-
-          He declined to answer a newspaper's policy questionnaire that several rivals completed, leaving voters with
-          less detail about where he stands.
+          He declined to answer a newspaper's policy questionnaire, calling the questions "too hard," while several
+          rivals submitted answers, leaving voters with less detail about where he stands.
         sources: [*banner_q]
 
   - name: "Wendell Jackson"
@@ -393,8 +386,8 @@ candidates:
     why_running:
       text: >-
         She says the greatest injustice she sees is a system that suggests you have to be a political extremist to be
-        represented. She points to independents now outnumbering both parties' registrants and says voters want
-        solutions, not sides.
+        represented. She says independents now outnumber members of either major party in Tennessee because voters
+        want solutions, not sides.
       sources: [*pinkston]
     platform:
       - category: taxes
@@ -425,8 +418,8 @@ candidates:
       - stance: for
         text: >-
           Without a party to answer to, she would be free to work with lawmakers from either side and bring them
-          together around workable policies, and most voters say they want an independent option.
-        sources: [*nc5_indep, *banner_q, *wsmv_pinkston]
+          together around workable policies.
+        sources: [*nc5_indep, *banner_q]
       - stance: for
         text: >-
           She pairs her tax cuts with specific ways to cover the lost revenue, such as closing corporate affiliate
