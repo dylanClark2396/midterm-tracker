@@ -233,14 +233,9 @@ const statewide = races.filter((r) => r.level === 'statewide').sort((a, b) => a.
     margin: 0 0 1rem;
     font-size: 0.95rem;
   }
-  /* Mute the basemap so district lines read first; flip it for dark mode. */
+  /* A standard street map in both themes, slightly muted so district lines read first. */
   .finder-map :global(.leaflet-tile-pane) {
-    filter: grayscale(0.7) contrast(0.9);
-  }
-  @media (prefers-color-scheme: dark) {
-    .finder-map :global(.leaflet-tile-pane) {
-      filter: grayscale(0.7) invert(1) hue-rotate(180deg) brightness(0.85) contrast(0.9);
-    }
+    filter: grayscale(0.35);
   }
   .finder-map :global(.finder-map-hint) {
     position: absolute;

@@ -64,8 +64,9 @@ export function initDistrictFinder(root: HTMLElement) {
   const results = root.querySelector<HTMLElement>('[data-results]')!;
   const statewide = document.querySelector<HTMLTemplateElement>('#statewide-template')!.innerHTML;
 
-  const css = getComputedStyle(document.documentElement);
-  const color = (name: string) => css.getPropertyValue(name).trim();
+  // The street map is light in both themes, so the overlay uses the light-theme ink and accent.
+  const INK = '#1e1f21';
+  const ACCENT = '#7a5a1f';
 
   const map = L.map(root.querySelector<HTMLElement>('.finder-map')!, {
     maxBounds: TN_BOUNDS.pad(0.5),
@@ -112,8 +113,8 @@ export function initDistrictFinder(root: HTMLElement) {
     { passive: false },
   );
 
-  const baseStyle = (): L.PathOptions => ({ color: color('--ink'), weight: 1.2, opacity: 0.55, fillOpacity: 0 });
-  const pickedStyle = (): L.PathOptions => ({ color: color('--accent'), weight: 3, opacity: 1, fillColor: color('--accent'), fillOpacity: 0.15 });
+  const baseStyle = (): L.PathOptions => ({ color: INK, weight: 1.4, opacity: 0.6, fillOpacity: 0 });
+  const pickedStyle = (): L.PathOptions => ({ color: ACCENT, weight: 3.5, opacity: 1, fillColor: ACCENT, fillOpacity: 0.12 });
 
   const data = {} as Record<Level, DistrictCollection>;
   const overlays = {} as Record<Level, L.GeoJSON>;
@@ -168,9 +169,9 @@ export function initDistrictFinder(root: HTMLElement) {
     marker?.remove();
     marker = L.circleMarker([lat, lng], {
       radius: 7,
-      color: color('--bg'),
+      color: '#fff',
       weight: 2,
-      fillColor: color('--ink'),
+      fillColor: INK,
       fillOpacity: 1,
     }).addTo(map);
 
