@@ -1,35 +1,206 @@
-# Seeded from the Secretary of State's certified candidate list by
-# scripts/seed-from-certified-list.py. research_status: pending —
-# platforms and arguments not yet compiled.
+# U.S. House, District 7 — Rep. Matt Van Epps (elected in a December 2025 special election) seeks a full term
+# in a district redrawn in the May 2026 special session.
+# Candidate order follows the Secretary of State's certified candidate list.
+_sources:
+  mve_house: &mve_house { url: "https://vanepps.house.gov/about", title: "About Congressman Matt Van Epps (U.S. House)", accessed: 2026-10-13 }
+  mve_shield: &mve_shield { url: "https://vanepps.house.gov/media/press-releases/rep-van-epps-bill-empowers-domestic-violence-victims-to-seek-help", title: "Rep. Van Epps' bill empowers domestic violence victims to seek help (U.S. House)", accessed: 2026-10-13 }
+  mve_cmfa: &mve_cmfa { url: "https://vanepps.house.gov/media/press-releases/van-epps-and-mccollum-introduce-bipartisan-critical-materials-future-act", title: "Van Epps and McCollum introduce Critical Materials Future Act (U.S. House)", accessed: 2026-10-13 }
+  mve_issues: &mve_issues { url: "https://www.mattfortn.com/issues", title: "Where Matt Stands on the Issues (Van Epps campaign)", accessed: 2026-10-13 }
+  mve_endorse: &mve_endorse { url: "https://www.mattfortn.com/endorsements", title: "Endorsements (Van Epps campaign)", accessed: 2026-10-13 }
+  bp_mve: &bp_mve { url: "https://ballotpedia.org/Matt_Van_Epps", title: "Matt Van Epps (Ballotpedia)", accessed: 2026-10-13 }
+  dc_home: &dc_home { url: "https://www.dardenforcongress.com/", title: "Darden Copeland for Congress (Copeland campaign)", accessed: 2026-10-13 }
+  dc_issues: &dc_issues { url: "https://www.dardenforcongress.com/home-2", title: "The Issues (Copeland campaign)", accessed: 2026-10-13 }
+  bp_dc: &bp_dc { url: "https://ballotpedia.org/Darden_Copeland", title: "Darden Copeland (Ballotpedia, incl. Candidate Connection surveys)", accessed: 2026-10-13 }
+  lr_home: &lr_home { url: "https://www.lowellforcongress.com/", title: "Lowell Reynolds for Congress (Reynolds campaign)", accessed: 2026-10-13 }
+  bp_lr: &bp_lr { url: "https://ballotpedia.org/Lowell_Reynolds", title: "Lowell Reynolds (Ballotpedia, incl. Candidate Connection survey)", accessed: 2026-10-13 }
+  lookout_guide: &lookout_guide { url: "https://tennesseelookout.com/voter-guides/contests/congressional-district-7-2/", title: "U.S. House, 7th Congressional District voter guide (Tennessee Lookout)", accessed: 2026-10-13 }
+  nc5: &nc5 { url: "https://www.newschannel5.com/news/newschannel-5-investigates/countdown-to-mid-terms-candidates-clash-over-ideology-in-tennessees-7th-district-race", title: "Countdown to midterms: candidates clash over ideology in Tennessee's 7th District race (NewsChannel 5)", accessed: 2026-10-13 }
+  fox17: &fox17 { url: "https://fox17.com/news/local/7-th-district-race-where-is-matt-van-epps", title: "7th district race: Where is Matt Van Epps? (FOX 17)", accessed: 2026-10-13 }
+  fox17_ethics: &fox17_ethics { url: "https://fox17.com/news/local/copeland-files-ethics-complaint-against-van-epps-over-campaign-manager-on-the-tax-payroll", title: "Darden Copeland files ethics complaint against Matt Van Epps (FOX 17)", accessed: 2026-10-13 }
+  wsmv_ethics: &wsmv_ethics { url: "https://www.wsmv.com/2026/10/06/democrat-darden-copeland-files-ethics-complaint-accusing-gop-competitor-matt-van-epps-using-tax-dollars-campaign/", title: "Copeland files ethics complaint accusing Van Epps of using tax dollars on campaign (WSMV)", accessed: 2026-10-13 }
+
 id: us-house-07
 office: "U.S. House, District 7"
 level: us_house
 district: 7
-research_status: pending
+research_status: complete
 candidate_list_source: "https://sos-prod.tnsosgovfiles.com/s3fs-public/document/USHouse_Nov2026.pdf"
+
 candidates:
   - name: "Matt Van Epps"
     ballot_party: Republican
     city: "Nashville"
-    why_running: { text: null, sources: [] }
-    platform: []
-    arguments: []
+    incumbent: true
+    website: "https://www.mattfortn.com/"
+    bio_facts:
+      - { text: "U.S. Representative for Tennessee's 7th District since December 4, 2025, after winning a special election to succeed Mark Green.", sources: [*mve_house, *bp_mve] }
+      - { text: "Member of the House Committee on Homeland Security and the Committee on Science, Space, and Technology.", sources: [*bp_mve] }
+      - { text: "Commissioner of the Tennessee Department of General Services; earlier Deputy Chief Operating Officer in the Tennessee Governor's Office.", sources: [*mve_house] }
+      - { text: "Served ten years on active duty as an Army aviator, deploying to Iraq and Afghanistan, including with the 160th Special Operations Aviation Regiment; later a Lieutenant Colonel in the Tennessee Army National Guard.", sources: [*mve_house] }
+      - { text: "Graduate of the U.S. Military Academy at West Point; Master of Public Administration from the University of North Carolina at Chapel Hill.", sources: [*mve_house, *bp_mve] }
+    why_running:
+      text: >-
+        He says he is running on the same message of security, opportunity, and prosperity he ran on in the 2025
+        special election, and that he is committed to strengthening national security, growing the economy, and
+        delivering results for the people he serves. His campaign says he will work with the current administration
+        to secure the border, rebuild military strength, and rein in federal spending.
+      sources: [*nc5, *mve_house, *mve_issues]
+    platform:
+      - category: economy
+        text: "Cut red tape, bring manufacturing back to the U.S., expand American energy production, and pass legislation to regulate and encourage innovation in cryptocurrency and artificial intelligence."
+        sources: [*mve_issues]
+      - category: immigration
+        text: "Finish the border wall and give Border Patrol more support to stop fentanyl and human trafficking."
+        sources: [*mve_issues]
+      - category: veterans
+        text: "Reform the VA and cut red tape so veterans can get the health care and benefits they earned."
+        sources: [*mve_issues]
+      - category: agriculture
+        text: "Protect farmers from overregulation and foreign land purchases, defend property rights, and expand rural health care."
+        sources: [*mve_issues]
+      - category: public_safety
+        text: "Train federal law enforcement officers to conduct lethality assessments in domestic violence cases and connect high-risk victims with crisis hotlines (SHIELD for Victims Act)."
+        sources: [*mve_shield]
+      - category: foreign_policy
+        text: "Support Israel and oppose Iran's aggression; reduce U.S. dependence on China by funding domestic critical mineral processing."
+        sources: [*mve_issues, *mve_cmfa]
+      - category: guns
+        text: "Defend the Second Amendment right of law-abiding Americans to keep and bear arms."
+        sources: [*mve_issues]
+      - category: abortion
+        text: "Protect unborn life and keep taxpayer dollars from funding abortion."
+        sources: [*mve_issues]
+    arguments:
+      - stance: for
+        text: >-
+          As a West Point graduate and combat-decorated Army helicopter pilot, he brings firsthand knowledge of what it
+          takes to defend the country and support service members and veterans.
+        sources: [*mve_endorse, *mve_house]
+      - stance: for
+        text: >-
+          As a state commissioner he oversaw procurement, real estate, and operations involving billions of taxpayer
+          dollars and delivered efficiency, transparency, and measurable cost savings.
+        sources: [*mve_house]
+      - stance: for
+        text: >-
+          Local police and domestic violence advocates say his bill to train federal officers in lethality assessments
+          would bring a proven, life-saving approach to more victims.
+        sources: [*mve_shield]
+      - stance: against
+        text: >-
+          He has backed the current administration's tariffs and military campaign instead of acting as an independent
+          check on the executive branch.
+        sources: [*nc5]
+      - stance: against
+        text: >-
+          He has kept a low profile in the campaign, rarely attending events or speaking with voters, as if taking
+          their votes for granted; he has also declined to debate.
+        sources: [*fox17, *nc5]
+      - stance: against
+        text: >-
+          A pending ethics complaint, not yet acted on by House investigators, alleges that a senior adviser paid by
+          his congressional office was also paid by his campaign, and asks whether taxpayer-funded staff did campaign
+          work; his office calls the complaint misleading, factually unsupported, and based on a misunderstanding of
+          the law.
+        sources: [*wsmv_ethics, *fox17_ethics]
+
   - name: "Darden Copeland"
     ballot_party: Democratic
     city: "Nashville"
-    why_running: { text: null, sources: [] }
-    platform: []
-    arguments: []
+    incumbent: false
+    website: "https://www.dardenforcongress.com/"
+    bio_facts:
+      - { text: "Founder and CEO of Calvert Street Group, a public affairs firm based in Nashville.", sources: [*lookout_guide, *dc_home] }
+      - { text: "Ran in the 2025 special-election Democratic primary for the 7th District and finished second.", sources: [*lookout_guide] }
+      - { text: "Worked as a campaign manager and strategist on congressional and presidential campaigns before leaving electoral politics in 2005.", sources: [*dc_home, *bp_dc] }
+      - { text: "Graduate of the University of Richmond.", sources: [*dc_home] }
+      - { text: "Elder at Woodmont Christian Church; board member of Historic Nashville, Inc.", sources: [*bp_dc] }
+    why_running:
+      text: >-
+        He says Congress has abandoned the middle class, raising costs and adding trillions to the national debt while
+        cutting safety-net programs such as Medicaid, and he wants to bring his career of advocating for working and
+        middle-class families to Washington. He says too many members of Congress are more loyal to the President and
+        party leaders than to their constituents, and that he would restore checks and balances.
+      sources: [*dc_home, *bp_dc, *dc_issues]
+    platform:
+      - category: health_care
+        text: "Protect Medicaid, Medicare, and Social Security from cuts and privatization, oppose raising the retirement age, lower prescription drug costs, and keep rural hospitals open."
+        sources: [*dc_issues]
+      - category: cost_of_living
+        text: "Take on price gouging, expand affordable housing, cap prescription drug prices, and make child care affordable."
+        sources: [*dc_issues]
+      - category: taxes
+        text: "Make corporations and the wealthiest pay their fair share instead of the middle class."
+        sources: [*dc_issues, *dc_home, *bp_dc]
+      - category: government
+        text: "Ban stock trading by members of Congress, their families, and executive branch officials; enact term limits; refuse corporate PAC money; and act as a check on any president."
+        sources: [*dc_issues, *bp_dc]
+      - category: economy
+        text: "Protect working Americans and the small businesses that employ them."
+        sources: [*bp_dc]
+    arguments:
+      - stance: for
+        text: >-
+          He is not a career politician; as a business owner he has spent years building consensus and winning
+          approvals for projects such as rural hospitals, affordable housing, and solar farms in communities of both
+          parties.
+        sources: [*dc_home, *dc_issues]
+      - stance: for
+        text: >-
+          He would be an independent check on the executive branch and has pledged to call out corruption in his own
+          party, backed by a refusal to take corporate PAC money.
+        sources: [*dc_issues, *nc5]
+      - stance: for
+        text: >-
+          He has campaigned actively across the redrawn district, appearing at many events and forums to listen to
+          voters.
+        sources: [*fox17]
+      - stance: against
+        text: >-
+          He appealed to a different set of voters in the last race than he is courting now, so it is hard to know
+          how he would vote in Washington.
+        sources: [*nc5, *fox17]
+      - stance: against
+        text: "He has declined to debate his opponent before the election."
+        sources: [*nc5]
+
   - name: "Andrew J. Koontz"
     ballot_party: Independent
     city: "Portland"
     why_running: { text: null, sources: [] }
     platform: []
     arguments: []
+
   - name: "Lowell Reynolds"
     ballot_party: Independent
     city: "Nashville"
-    why_running: { text: null, sources: [] }
-    platform: []
-    arguments: []
+    website: "https://www.lowellforcongress.com/"
+    bio_facts:
+      - { text: "Music producer and audio engineer for more than 20 years; received a Grammy statuette for his engineering work.", sources: [*lr_home, *bp_lr] }
+      - { text: "Bachelor's degree from Indiana University East School of Business and Economics (2019); third-year law student at Syracuse University College of Law.", sources: [*bp_lr, *lr_home] }
+    why_running:
+      text: >-
+        He says Congress has failed to do its job and has handed too much power to the executive branch, and that he
+        is running to restore checks and balances. He says he is not beholden to either party and wants to represent
+        the people of the district rather than a party or special interest.
+      sources: [*lr_home, *bp_lr]
+    platform:
+      - category: government
+        text: "Have Congress reclaim its constitutional role, defend the separation of powers, and keep as much money out of politics as possible."
+        sources: [*bp_lr, *lr_home]
+      - category: economy
+        text: "Reduce unnecessary burdens, encourage small business growth, and protect fair competition."
+        sources: [*bp_lr]
+    arguments:
+      - stance: for
+        text: >-
+          Not tied to either party, he would bring an independent voice that listens to all sides and focuses on
+          solutions for the district.
+        sources: [*bp_lr]
+      - stance: for
+        text: >-
+          His business degree, two decades in the music industry, and legal training give him practical insight into
+          budgets, small businesses, and the Constitution.
+        sources: [*bp_lr]
+
 last_verified: 2026-10-13
