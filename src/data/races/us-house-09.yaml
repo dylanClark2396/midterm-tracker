@@ -17,6 +17,7 @@ _sources:
   lookout_sb: &lookout_sb { url: "https://tennesseelookout.com/2026/04/28/tennessee-bill-gives-data-centers-ability-to-self-power-with-limited-regulation/", title: "Tennessee bill gives data centers ability to self-power with limited regulation (Tennessee Lookout)", accessed: 2026-10-13 }
   wsmv_wage: &wsmv_wage { url: "https://www.wsmv.com/2025/02/08/new-bill-filed-renew-push-raising-minimum-wage-tennessee/", title: "New bill filed to renew push for raising minimum wage in Tennessee (WSMV)", accessed: 2026-10-13 }
   nc5: &nc5 { url: "https://www.newschannel5.com/news/newschannel-5-investigates/tennessees-9th-congressional-district-race-pits-democrat-pearson-against-republican-taylor", title: "Pearson, Taylor clash in Tennessee's 9th Congressional District race (NewsChannel 5)", accessed: 2026-10-13 }
+  tn_hb1847: &tn_hb1847 { url: "https://wapp.capitol.tn.gov/apps/BillInfo/Default.aspx?BillNumber=SB2128&GA=114", title: "SB 2128 / HB 1847 bill history and House floor vote, 114th General Assembly (Tennessee General Assembly)", accessed: 2026-10-13 }
 
 id: us-house-09
 office: "U.S. House, District 9"
@@ -159,9 +160,9 @@ candidates:
         sources: [*nc5, *wsmv_wage]
       - stance: against
         text: >-
-          He voted against the state measure requiring data centers to cover their own power-infrastructure costs so
-          other utility customers do not pay more.
-        sources: [*lookout_dc]
+          He voted against the 2026 state data center law, which requires data centers that buy utility power to cover
+          their own infrastructure-upgrade costs so other utility customers do not pay more.
+        sources: [*lookout_dc, *tn_hb1847]
 
   - name: "Dennis Clark"
     ballot_party: Independent
