@@ -1,23 +1,110 @@
-# Seeded from the Secretary of State's certified candidate list by
-# scripts/seed-from-certified-list.py. research_status: pending —
-# platforms and arguments not yet compiled.
+# Tennessee Senate, District 31 — Sen. Brent Taylor (also the nominee for U.S. House District 9) faces David Weatherspoon.
+# Candidate order follows the Secretary of State's certified candidate list.
+_sources:
+  bt_home: &bt_home { url: "https://brenttaylorforsenate.com/", title: "Brent Taylor for State Senate (Taylor campaign)", accessed: 2026-10-13 }
+  bt_about: &bt_about { url: "https://brenttaylorforsenate.com/about/", title: "Meet Brent Taylor (Taylor campaign)", accessed: 2026-10-13 }
+  bt_issues: &bt_issues { url: "https://brenttaylorforsenate.com/issues/", title: "Issues: Trusted Conservative Leadership (Taylor campaign)", accessed: 2026-10-13 }
+  bp_bt: &bp_bt { url: "https://ballotpedia.org/Brent_Taylor_(Tennessee)", title: "Brent Taylor (Tennessee) (Ballotpedia)", accessed: 2026-10-13 }
+  lookout_guide: &lookout_guide { url: "https://tennesseelookout.com/voter-guides/contests/state-senate-district-31/", title: "State Senate, 31st District voter guide (Tennessee Lookout)", accessed: 2026-10-13 }
+  lookout_blended: &lookout_blended { url: "https://tennesseelookout.com/2024/06/05/critics-say-tennessees-blended-sentencing-law-needs-changes-after-expedited-passage/", title: "Critics say Tennessee's blended sentencing law needs changes after expedited passage (Tennessee Lookout)", accessed: 2026-10-13 }
+  dw_home: &dw_home { url: "https://www.davidweatherspoonfortn.com/", title: "Elect David Weatherspoon for TN State Senate District 31 (Weatherspoon campaign)", accessed: 2026-10-13 }
+  dw_about: &dw_about { url: "https://www.davidweatherspoonfortn.com/about", title: "Meet David (Weatherspoon campaign)", accessed: 2026-10-13 }
+  dw_platform: &dw_platform { url: "https://www.davidweatherspoonfortn.com/platform", title: "My Platform (Weatherspoon campaign)", accessed: 2026-10-13 }
+  bp_dw: &bp_dw { url: "https://ballotpedia.org/David_Weatherspoon", title: "David Weatherspoon (Ballotpedia)", accessed: 2026-10-13 }
+
 id: tn-senate-31
 office: "Tennessee Senate, District 31"
 level: state_senate
 district: 31
-research_status: pending
+research_status: complete
 candidate_list_source: "https://sos-prod.tnsosgovfiles.com/s3fs-public/document/TNSenate_Nov2026.pdf"
+
 candidates:
   - name: "Brent Taylor"
     ballot_party: Republican
     city: "Eads"
-    why_running: { text: null, sources: [] }
-    platform: []
-    arguments: []
+    incumbent: true
+    website: "https://brenttaylorforsenate.com/"
+    bio_facts:
+      - { text: "State Senator for District 31 since his election in 2022.", sources: [*bt_about, *lookout_guide] }
+      - { text: "Also the Republican nominee for U.S. House District 9 in the November 3, 2026 election.", sources: [*bp_bt, *lookout_guide] }
+      - { text: "Vice Chairman of the Senate Commerce Committee and member of the Judiciary and Transportation committees.", sources: [*bt_about] }
+      - { text: "Elected to the Memphis City Council in 1995 at age 27; later served three years on the Shelby County Election Commission.", sources: [*bt_about] }
+      - { text: "Funeral director with a degree in mortuary science; he and his wife bought their first funeral home in 2004 and built a family-owned funeral business.", sources: [*bt_about, *bp_bt] }
+    why_running:
+      text: >-
+        He says he promised in 2022 to make fighting crime his top priority and has kept his word, and that getting
+        crime under control is key to growing Memphis' economy. He says he is also working to grow the economy,
+        improve schools, and upgrade infrastructure, and asks for support to continue working to "Make Memphis Matter."
+      sources: [*bt_home, *bt_issues]
+    platform:
+      - category: public_safety
+        text: "Make fighting crime the top priority: stricter bail standards that put community safety first, blended sentencing for serious juvenile offenders, more State Troopers in Shelby County, and a law barring local governments from banning routine traffic stops."
+        sources: [*bt_issues, *bt_home]
+      - category: education
+        text: "Increase oversight of Memphis-Shelby County Schools, including a forensic audit, and direct added funding to high-achieving districts in East Shelby County."
+        sources: [*bt_issues]
+      - category: infrastructure
+        text: "Secure state investment in Shelby County roads and bridges, including a new I-55 bridge over the Mississippi River, and dedicate new-tire sales tax revenue to roads and bridges."
+        sources: [*bt_issues]
+      - category: economy
+        text: "Grow the local economy by getting crime under control and reducing red tape, including barring local governments from adding labor rules to government projects."
+        sources: [*bt_home, *bt_issues]
+    arguments:
+      - stance: for
+        text: >-
+          He kept his promise to make crime his top priority, sponsoring bail and juvenile sentencing laws, helping
+          bring more State Troopers to Shelby County, and pressing for accountability from judges and prosecutors.
+        sources: [*bt_home, *bt_issues]
+      - stance: for
+        text: >-
+          He has secured more than $800 million in infrastructure investment for Shelby County, including $250
+          million for a new Mississippi River bridge.
+        sources: [*bt_issues]
+      - stance: against
+        text: >-
+          A juvenile blended-sentencing law he sponsored was rushed through at the end of session without returning to
+          committee, and critics say it has gaps that make it hard to apply and may be
+          unconstitutional.
+        sources: [*lookout_blended]
+
   - name: "David Weatherspoon"
     ballot_party: Democratic
     city: "Germantown"
-    why_running: { text: null, sources: [] }
-    platform: []
-    arguments: []
+    incumbent: false
+    website: "https://www.davidweatherspoonfortn.com/"
+    bio_facts:
+      - { text: "Ordained Baptist minister and chaplain; has worked as a college chaplain at Franklin College in Indiana and as a pediatric chaplain in Tennessee, and with Methodist Le Bonheur Healthcare.", sources: [*dw_home, *bp_dw] }
+      - { text: "Bachelor's degree from Belmont University (1998) in religion and education; Master of Divinity (2003) and Doctor of Ministry from Mercer University's McAfee School of Theology.", sources: [*dw_home, *bp_dw, *lookout_guide] }
+      - { text: "Grew up on a farm in Hickman County, Tennessee.", sources: [*dw_about] }
+      - { text: "Ran in the 2018 Democratic primary for Senate District 31.", sources: [*bp_dw] }
+    why_running:
+      text: >-
+        He says he is running to bring steadiness, compassion, and courage to the statehouse and to return
+        neighborliness to it, and that leadership should listen first and bring people together. He says it is
+        important to have leaders who fully embrace and love the community.
+      sources: [*dw_home, *dw_about]
+    platform:
+      - category: education
+        text: "Increase investment in teachers and public schools, expand pre-K and early childhood care, oppose a state takeover of Memphis-Shelby County Schools, and end the private school voucher program."
+        sources: [*dw_platform]
+      - category: health_care
+        text: "Ensure everyone has ready access to health care, lower costs, expand Medicaid, and invest in preventive care, elder care, and mental health services."
+        sources: [*dw_platform]
+      - category: cost_of_living
+        text: "Make child care more affordable and accessible and address rising housing, grocery, and gas costs."
+        sources: [*dw_platform]
+      - category: public_safety
+        text: "Fund more state prosecutors and public defenders, a dedicated crime lab for Memphis and Shelby County, mental health training for police, and grants for violence intervention programs."
+        sources: [*dw_platform]
+      - category: guns
+        text: "Pass an extreme risk law covering domestic abusers and people in a mental health crisis, and require background checks for private and gun show sales."
+        sources: [*dw_platform]
+    arguments:
+      - stance: for
+        text: >-
+          As a chaplain, husband, and father who believes public service begins with care for others, he would bring
+          listening, honesty, and a focus on the common good to the statehouse.
+        sources: [*dw_home]
+
 last_verified: 2026-10-13
