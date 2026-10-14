@@ -1,24 +1,24 @@
 # U.S. House, District 1 — Rep. Diana Harshbarger is seeking a fourth term.
-# Candidate order follows the Secretary of State's certified candidate list (USHouse_Nov2026.xlsx).
-# votediana.com is the committee website on file with the FEC (Diana for Congress, C00741090); its issues page
-# still refers to the prior administration but is the campaign's current published platform.
-# No published arguments against Kristi Burke were found as of last_verified.
-# No published information was found for the five independent candidates as of last_verified.
+# Candidate order follows the Secretary of State's certified candidate list.
+# Note: votediana.com/issues still contains Biden-era wording; planks used here are positions that remain stated on the live page.
 _sources:
-  dh_home: &dh_home { url: "https://www.votediana.com/", title: "Diana Harshbarger for Congress (Harshbarger campaign)", accessed: 2026-10-14 }
-  dh_issues: &dh_issues { url: "https://www.votediana.com/issues", title: "Issues (Harshbarger campaign)", accessed: 2026-10-14 }
-  dh_house: &dh_house { url: "https://harshbarger.house.gov/about", title: "About Congresswoman Harshbarger (U.S. House)", accessed: 2026-10-14 }
-  gsun_dh: &gsun_dh { url: "https://www.greenevillesun.com/news/local_news/harshbarger-announces-reelection-bid-for-congress/article_17fd61c7-00f1-4811-8c57-14d739ddbe32.html", title: "Harshbarger announces reelection bid for Congress (Greeneville Sun)", accessed: 2026-10-14 }
+  dh_house: &dh_house { url: "https://harshbarger.house.gov/about", title: "About Representative Diana Harshbarger (U.S. House)", accessed: 2026-10-13 }
+  dh_home: &dh_home { url: "https://www.votediana.com", title: "Diana Harshbarger for Congress (Harshbarger campaign)", accessed: 2026-10-13 }
+  dh_issues: &dh_issues { url: "https://www.votediana.com/issues", title: "Issues (Harshbarger campaign)", accessed: 2026-10-13 }
+  gs_announce: &gs_announce { url: "https://www.greenevillesun.com/news/local_news/harshbarger-announces-reelection-bid-for-congress/article_17fd61c7-00f1-4811-8c57-14d739ddbe32.html", title: "Harshbarger announces reelection bid for Congress (Greeneville Sun)", accessed: 2026-10-13 }
+  wvlt_endorse: &wvlt_endorse { url: "https://www.wvlt.tv/2025/11/09/trump-endorses-burchett-fleischmann-harshbarger-re-election-congress", title: "Trump endorses Burchett, Fleischmann, Harshbarger for re-election to Congress (WVLT)", accessed: 2026-10-13 }
+  lookout_guide: &lookout_guide { url: "https://tennesseelookout.com/voter-guides/contests/congressional-district-1-u-s-house-of-representatives/", title: "U.S. House, 1st Congressional District voter guide (Tennessee Lookout)", accessed: 2026-10-13 }
+  lookout_race: &lookout_race { url: "https://tennesseelookout.com/2026/06/30/inside-the-race-for-tennessees-1st-congressional-district/", title: "Inside the race for Tennessee's 1st Congressional District (Tennessee Lookout)", accessed: 2026-10-13 }
+  gs_forum: &gs_forum { url: "https://www.greenevillesun.com/news/local_news/greene-co-democrats-hear-from-two-congressional-candidates/article_a956a8a2-3e8e-469a-a24e-dfbc7b32f388.html", title: "Greene Co. Democrats hear from two congressional candidates (Greeneville Sun)", accessed: 2026-10-13 }
+  kb_bp: &kb_bp { url: "https://ballotpedia.org/Kristi_Burke", title: "Kristi Burke (Ballotpedia, incl. Candidate Connection survey)", accessed: 2026-10-13 }
+  kb_home: &kb_home { url: "https://www.votekristiburke.com/", title: "Kristi for Congress (Burke campaign)", accessed: 2026-10-13 }
+  kb_story: &kb_story { url: "https://www.votekristiburke.com/mystory", title: "My Story (Burke campaign)", accessed: 2026-10-13 }
+  kb_nn: &kb_nn { url: "https://www.votekristiburke.com/non-negotiables", title: "Non-Negotiables (Burke campaign)", accessed: 2026-10-13 }
+  ja_bp: &ja_bp { url: "https://ballotpedia.org/Joshua_Ray_Ashburn", title: "Joshua Ray Ashburn (Ballotpedia, incl. Candidate Connection survey)", accessed: 2026-10-13 }
+  rb_bp: &rb_bp { url: "https://ballotpedia.org/Richard_Baker_(Tennessee)", title: "Richard Baker (Ballotpedia)", accessed: 2026-10-13 }
+  cc_bp: &cc_bp { url: "https://ballotpedia.org/Chris_Campbell_(Tennessee)", title: "Chris Campbell (Ballotpedia, incl. Candidate Connection survey)", accessed: 2026-10-13 }
+  cc_home: &cc_home { url: "https://campbellforcongress2026.com/", title: "Campbell for Congress (Campbell campaign)", accessed: 2026-10-13 }
   wjhl_debate: &wjhl_debate { url: "https://www.yahoo.com/news/politics/articles/diana-harshbarger-responds-kristi-burke-221247009.html", title: "Diana Harshbarger responds to Kristi Burke's debate challenge in TN-01 race (WJHL)", accessed: 2026-10-14 }
-  wcyb_kb: &wcyb_kb { url: "https://wcyb.com/newsletter-daily/beyond-the-podium-kristi-burke-tns-1st-congressional-district", title: "Beyond the Podium: Kristi Burke, TN's 1st Congressional District (WCYB)", accessed: 2026-10-14 }
-  lookout: &lookout { url: "https://tennesseelookout.com/2026/06/30/inside-the-race-for-tennessees-1st-congressional-district/", title: "Inside the race for Tennessee's 1st Congressional District (Tennessee Lookout)", accessed: 2026-10-14 }
-  lookout_guide: &lookout_guide { url: "https://tennesseelookout.com/voter-guides/contests/congressional-district-1-u-s-house-of-representatives/", title: "U.S. House, 1st Congressional District voter guide (Tennessee Lookout)", accessed: 2026-10-14 }
-  kb_home: &kb_home { url: "https://www.votekristiburke.com/", title: "Kristi for Congress (Burke campaign)", accessed: 2026-10-14 }
-  kb_story: &kb_story { url: "https://www.votekristiburke.com/mystory", title: "My Story (Burke campaign)", accessed: 2026-10-14 }
-  kb_platform: &kb_platform { url: "https://www.votekristiburke.com/non-negotiables", title: "Non-Negotiables (Burke campaign)", accessed: 2026-10-14 }
-  kb_why: &kb_why { url: "https://votekristiburke.substack.com/p/whyimrunning", title: "I was thrown out of Diana Harshbarger's town hall. Now I'm running to replace her in Congress. (Burke campaign)", accessed: 2026-10-14 }
-  kb_100k: &kb_100k { url: "https://votekristiburke.substack.com/p/kristi-burke-campaign-reaches-100000", title: "Kristi Burke campaign reaches $100,000 milestone ahead of Tennessee primary (Burke campaign)", accessed: 2026-10-14 }
-  gsun_kb: &gsun_kb { url: "https://www.greenevillesun.com/news/local_news/greene-co-democrats-hear-from-two-congressional-candidates/article_a956a8a2-3e8e-469a-a24e-dfbc7b32f388.html", title: "Greene Co. Democrats hear from two congressional candidates (Greeneville Sun)", accessed: 2026-10-14 }
 
 id: us-house-01
 office: "U.S. House, District 1"
@@ -32,74 +32,70 @@ candidates:
     ballot_party: Republican
     city: "Kingsport"
     incumbent: true
-    website: "https://www.votediana.com/"
+    website: "https://www.votediana.com"
     bio_facts:
-      - { text: "U.S. Representative for this district since 2021.", sources: [*dh_house] }
+      - { text: "U.S. Representative for Tennessee's 1st Congressional District since 2021; first elected in 2020.", sources: [*lookout_guide, *gs_announce] }
       - { text: "Serves on the House Energy and Commerce Committee and is vice chair of its Subcommittee on Health.", sources: [*dh_house] }
-      - { text: "Licensed pharmacist since 1987 and a pharmacy business owner for over 30 years; Doctor of Pharmacy from Mercer University.", sources: [*dh_home, *dh_house] }
-      - { text: "Won the 2022 and 2024 general elections with more than 78% of the vote.", sources: [*lookout] }
+      - { text: "Licensed pharmacist since 1987 and a business owner for over 30 years; Doctor of Pharmacy from Mercer University College of Pharmacy.", sources: [*dh_home, *dh_house] }
+      - { text: "Former board member of the International Academy of Compounding Pharmacists.", sources: [*dh_house] }
     why_running:
       text: >-
-        She says she is running to keep up the progress she has made with the current administration on lower costs,
-        border security, rural health care, and cutting federal red tape, and that she will run on her record and her
-        values.
-      sources: [*gsun_dh, *wjhl_debate]
+        She says that, working with the current administration and House majority, she has helped lower costs, secure
+        the border, strengthen rural health care, and cut federal red tape, and that she is running for re-election to
+        keep that progress going. She says her focus remains serving local communities, supporting local businesses and
+        farmers, and protecting East Tennessee's values.
+      sources: [*gs_announce, *wvlt_endorse]
     platform:
       - category: immigration
-        text: "Secure the border: finish the border wall, defund sanctuary cities, end catch-and-release, and restore the remain-in-Mexico policy."
-        sources: [*dh_issues]
-      - category: health_care
-        text: "Reduce government interference in health care, lower drug prices, expand access for seniors and rural residents, and increase price transparency."
-        sources: [*dh_issues]
-      - category: economy
-        text: "Cut regulations, negotiate trade deals that benefit ordinary citizens, and lower taxes."
-        sources: [*dh_issues]
-      - category: public_safety
-        text: "Fight the opioid crisis by stopping illegal drugs at the border, funding rehabilitation, and holding those responsible accountable."
-        sources: [*dh_issues]
-      - category: foreign_policy
-        text: "Give the military the tools and training to deter Russia, China, and Iran; hold China accountable for COVID-19 and reduce reliance on it for medicines."
+        text: "Complete the border wall and defund sanctuary cities."
         sources: [*dh_issues]
       - category: guns
-        text: "Defend Second Amendment rights."
+        text: "Oppose efforts to restrict the right of law-abiding citizens to keep and bear arms."
+        sources: [*dh_issues]
+      - category: government
+        text: "Pass legislation imposing term limits on all federal offices."
+        sources: [*dh_issues]
+      - category: health_care
+        text: "Lower drug prices, increase health care access for seniors and rural residents, promote transparency, and increase funding for addiction rehabilitation to address the opioid crisis."
+        sources: [*dh_issues]
+      - category: economy
+        text: "Cut regulations, negotiate trade deals that benefit everyday citizens, and lower taxes."
+        sources: [*dh_issues]
+      - category: foreign_policy
+        text: "Give the military the tools, training, and resources to protect the country from adversaries such as Russia, China, and Iran."
+        sources: [*dh_issues]
+      - category: education
+        text: "Expand education options, including trade and technical schools, and reduce federal involvement in classrooms."
         sources: [*dh_issues]
       - category: abortion
-        text: "Oppose abortion and protect unborn life."
-        sources: [*dh_issues]
-      - category: veterans
-        text: "Expand veterans' access to health care and mental health services."
+        text: "Pro-life; says late-term abortion and other expanded abortion policies must be countered in Congress."
         sources: [*dh_issues]
     arguments:
       - stance: for
         text: >-
-          Three decades as a community pharmacist and small-business owner give her firsthand knowledge of rural health
-          care and drug costs, which she now applies as a leader on the House health subcommittee.
-        sources: [*dh_home, *dh_house]
+          She has delivered results for the district: lowering costs, securing the border, strengthening rural health
+          care, and cutting federal red tape for families, veterans, and small businesses.
+        sources: [*gs_announce]
       - stance: for
         text: >-
-          Working with the current administration, she has delivered lower costs, stronger border security, support for
-          rural health care, and less federal red tape for East Tennessee families, veterans, and small businesses.
-        sources: [*gsun_dh]
+          More than three decades as a community pharmacist and business owner give her firsthand knowledge of rural
+          health care, drug shortages, and drug pricing, which she brings to her work on the House health subcommittee.
+        sources: [*dh_issues, *dh_house]
       - stance: for
         text: >-
-          She has a proven record and values that match the district, and voters have re-elected her by wide margins.
-        sources: [*wjhl_debate, *lookout]
+          She has been endorsed for re-election for her work to cut taxes and regulations, keep the border secure, and
+          support farmers, veterans, and gun rights.
+        sources: [*gs_announce, *wvlt_endorse]
       - stance: against
         text: >-
-          She has refused to debate her opponent or answer a written debate request, saying she does not want to give
-          her opponent a platform, so voters cannot compare the candidates side by side.
-        sources: [*wjhl_debate, *wcyb_kb]
+          At a 2025 town hall, a constituent trying to ask about Medicaid cuts was removed by security, and attendees'
+          concerns were brushed aside rather than answered.
+        sources: [*gs_forum, *lookout_guide]
       - stance: against
         text: >-
-          Constituents worried about losing insurance, closing rural hospitals, and the cost of groceries and rent say
-          they call and write her office but are not heard, and a constituent who tried to ask about Medicaid cuts at a
-          town hall was removed by deputies.
-        sources: [*wcyb_kb, *kb_why, *lookout]
-      - stance: against
-        text: >-
-          Much of her campaign money comes from corporate political action committees and large donors, including a
-          company seeking to expand a uranium facility in the district.
-        sources: [*lookout, *kb_100k]
+          She has declined her opponent's repeated requests for a debate, saying she does not want to give her opponent
+          a platform, so voters will not get to hear both candidates present their plans side by side before they vote.
+        sources: [*wjhl_debate]
 
   - name: "Kristi Burke"
     ballot_party: Democratic
@@ -107,68 +103,136 @@ candidates:
     incumbent: false
     website: "https://www.votekristiburke.com/"
     bio_facts:
-      - { text: "Muralist who built and ran a mural business; first-time candidate.", sources: [*kb_story, *kb_100k] }
-      - { text: "Lives in the Chuckey community in Greene County.", sources: [*gsun_kb] }
-      - { text: "Won a three-way primary for her party's nomination in August 2026.", sources: [*lookout_guide] }
+      - { text: "Artist who ran a mural business; has also worked in the beauty industry and produced YouTube content.", sources: [*kb_story, *kb_bp] }
+      - { text: "Won the August 6, 2026 Democratic primary with about 77% of the vote.", sources: [*kb_bp] }
+      - { text: "First run for public office.", sources: [*gs_forum] }
     why_running:
       text: >-
-        She says she decided to run after being removed from a town hall where she tried to question the incumbent, and
-        that people in the district who are struggling with health care, groceries, rent, and gas are not being heard.
-        She says health care, housing, and education are human rights.
-      sources: [*kb_why, *wcyb_kb, *kb_home]
+        She says she decided to run after being removed from a 2025 town hall while trying to question the incumbent
+        about Medicaid cuts, and because she believes the district's concerns are being ignored. She says she is running
+        to challenge a political system that protects corporate profits at the expense of human dignity and to give the
+        district a representative who lives the same struggles as its residents, including renting and going without
+        health insurance.
+      sources: [*kb_bp, *kb_story, *gs_forum]
     platform:
       - category: health_care
-        text: "Create a universal single-payer system (Medicare for All) so coverage never depends on a job or ability to pay."
-        sources: [*kb_platform]
+        text: "Replace the current system with a universal, single-payer Medicare for All program."
+        sources: [*kb_nn]
       - category: education
-        text: "Fully fund public schools instead of private-school vouchers, raise teacher pay, restore the U.S. Department of Education, and support tuition-free community college."
-        sources: [*kb_platform]
+        text: "Fully fund public schools rather than private school vouchers, restore the U.S. Department of Education and expand Title I, raise teacher pay, and support tuition-free community college."
+        sources: [*kb_nn]
       - category: taxes
-        text: "Cut taxes for working families, raise them on the wealthiest Americans, and close corporate loopholes and subsidies for outsourcing jobs."
-        sources: [*kb_platform]
-      - category: infrastructure
-        text: "Invest in hospitals, schools, roads, internet access, and water and sewer systems in rural areas the local tax base can't support."
-        sources: [*kb_platform]
+        text: "Cut taxes for working families, raise taxes on the wealthiest Americans and corporations, and end loopholes and subsidies for companies that move jobs overseas."
+        sources: [*kb_nn, *kb_bp]
       - category: immigration
-        text: "Lawful, humane border security with no mass deportations or family separation."
-        sources: [*kb_platform, *gsun_kb]
+        text: "No mass deportations or family separation; replace agencies like ICE with a system that prioritizes human rights; federal agents should not wear masks."
+        sources: [*kb_nn, *kb_bp, *gs_forum]
+      - category: environment
+        text: "Hold corporate polluters accountable, oppose privatizing public lands, and require an accountable TVA for East Tennessee."
+        sources: [*kb_nn, *kb_bp]
       - category: abortion
         text: "Protect access to abortion, birth control, and reproductive health care."
-        sources: [*kb_platform]
+        sources: [*kb_nn]
       - category: government
-        text: "Get big money out of politics, increase transparency, and end gerrymandering."
-        sources: [*kb_platform]
-      - category: environment
-        text: "Hold polluters accountable and keep public lands from being privatized or exploited."
-        sources: [*kb_platform]
+        text: "Get corporate and dark money out of politics, increase transparency, and end gerrymandering."
+        sources: [*kb_nn]
+      - category: foreign_policy
+        text: "Prioritize diplomacy, reclaim congressional war powers, and avoid unnecessary military intervention."
+        sources: [*kb_nn, *kb_bp]
     arguments:
       - stance: for
         text: >-
-          Her campaign is funded entirely by thousands of small individual donations and takes no corporate PAC money, so
-          she would answer to voters in the district rather than donors.
-        sources: [*kb_100k, *kb_why, *lookout]
+          She shares the struggles of many district residents, renting her home, living without health insurance, and
+          working out of debt, so she would bring their experience to Congress.
+        sources: [*kb_bp, *kb_story]
       - stance: for
         text: >-
-          She has lived the same struggles as many in the district, including years spent climbing out of debt, and
-          would bring an outsider's perspective rather than a career in politics.
-        sources: [*kb_story, *kb_why]
+          She is not a career politician, and her campaign is funded entirely by individual contributions rather than
+          corporate political action committee money.
+        sources: [*kb_bp, *lookout_race]
       - stance: for
         text: >-
-          Her focus on rural hospital closures, medical debt, and the cost of insurance and prescriptions addresses
-          problems families in the district feel most directly.
-        sources: [*wcyb_kb, *kb_platform]
+          She tried to question the incumbent about Medicaid cuts at a town hall and refused to stay silent, showing she
+          will speak up for constituents whose concerns are being ignored.
+        sources: [*gs_forum, *kb_story]
 
   - name: "Joshua Ray Ashburn"
     ballot_party: Independent
     city: "Bristol"
+    bio_facts:
+      - { text: "Works in customer service; 36 years old and a father of two.", sources: [*ja_bp] }
+      - { text: "Filed as an independent for this seat in 2024 but is listed as having withdrawn or been disqualified before that election.", sources: [*ja_bp] }
+    why_running:
+      text: >-
+        He says he is running because he is tired of career politicians being re-elected without truly helping the
+        American people, and that he believes in term limits and in putting people ahead of politics.
+      sources: [*ja_bp]
+    platform:
+      - category: immigration
+        text: "Make border security a top priority to reduce drug trafficking and give law enforcement more resources."
+        sources: [*ja_bp]
+      - category: foreign_policy
+        text: "Pursue peace and diplomacy and avoid unnecessary wars and overseas involvement."
+        sources: [*ja_bp]
+      - category: economy
+        text: "Reduce taxes and cut red tape for small businesses and farmers."
+        sources: [*ja_bp]
+      - category: cost_of_living
+        text: "Make housing affordable again."
+        sources: [*ja_bp]
+      - category: government
+        text: "Supports term limits."
+        sources: [*ja_bp]
+    arguments:
+      - stance: for
+        text: >-
+          He is not a career politician and has run without endorsements, offering voters a candidate focused on
+          hardworking families rather than on politics.
+        sources: [*ja_bp]
 
   - name: "Richard G. Baker"
     ballot_party: Independent
     city: "Johnson City"
+    bio_facts:
+      - { text: "Ran for this seat as an independent in 2022 (1.3% of the vote) and 2024 (1.7%), and in the 2020 Republican primary.", sources: [*rb_bp] }
 
   - name: "Chris Campbell"
     ballot_party: Independent
     city: "Bristol"
+    website: "https://campbellforcongress2026.com/"
+    bio_facts:
+      - { text: "Grew up in southwestern Virginia and moved to Tennessee in 1991; has spent his career supporting manufacturers.", sources: [*cc_bp] }
+    why_running:
+      text: >-
+        He says he is running an independent campaign to restore faith in government and give working-class families
+        economic relief. He says finding his late father's decades-long paycheck ledger confirmed his view that
+        trickle-down economics has left wages stagnant while Wall Street prospers.
+      sources: [*cc_home, *cc_bp]
+    platform:
+      - category: economy
+        text: "Prioritize legislation that brings manufacturing back to the U.S. and showcases the East Tennessee workforce."
+        sources: [*cc_bp, *cc_home]
+      - category: taxes
+        text: "Tie corporate tax rates to pay disparities, with a higher rate for companies with a larger pay differential."
+        sources: [*cc_home]
+      - category: health_care
+        text: "Leave treatment decisions to patients and providers rather than insurers, and sponsor legislation to lower insurance premiums."
+        sources: [*cc_bp, *cc_home]
+      - category: cost_of_living
+        text: "Abolish tariffs, restore Social Security's solvency, and reform the credit reporting system."
+        sources: [*cc_home, *cc_bp]
+      - category: foreign_policy
+        text: "End U.S. involvement in the current war."
+        sources: [*cc_bp]
+      - category: government
+        text: "Term and age limits for members of Congress and Supreme Court justices, and an end to governing by executive order."
+        sources: [*cc_bp]
+    arguments:
+      - stance: for
+        text: >-
+          As an independent, he is not tied to either major party and offers an alternative for voters who feel
+          unrepresented by the two-party system.
+        sources: [*cc_home]
 
   - name: "Billy Cody"
     ballot_party: Independent
@@ -178,4 +242,4 @@ candidates:
     ballot_party: Independent
     city: "Kingsport"
 
-last_verified: 2026-10-14
+last_verified: 2026-10-13
