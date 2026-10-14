@@ -1,10 +1,9 @@
 // @ts-check
 import { defineConfig } from 'astro/config';
 
-// GitHub Pages project site: https://<user>.github.io/<repo>/
+// GitHub Pages with the custom domain tnelection.org (DNS on Cloudflare).
 export default defineConfig({
-  site: 'https://dylanclark2396.github.io',
-  base: '/midterm-tracker',
+  site: 'https://tnelection.org',
   trailingSlash: 'always',
   output: 'static',
 });

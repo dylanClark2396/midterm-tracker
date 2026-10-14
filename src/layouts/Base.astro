@@ -1,6 +1,6 @@
 ---
 import '../styles/global.css';
-import { url, REPO_URL, CORRECTION_URL } from '../lib/site';
+import { url, REPO_URL, CONTACT_EMAIL } from '../lib/site';
 
 interface Props {
   title: string;
@@ -54,7 +54,8 @@ const pageTitle = title === 'Home' ? 'TN 2026 Ballot Guide' : `${title} · TN 20
           without labels; see <a href={url('method')}>how this guide works</a>.
         </p>
         <p>
-          Spotted an error? <a href={CORRECTION_URL}>Suggest a correction</a> (a source link is required). ·
+          Spotted an error or a missing argument? Email <a href={`mailto:${CONTACT_EMAIL}`}>{CONTACT_EMAIL}</a>
+          (corrections need a source link). ·
           <a href={REPO_URL}>Source code and data</a>
         </p>
       </div>
