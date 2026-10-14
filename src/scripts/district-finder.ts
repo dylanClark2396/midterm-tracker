@@ -13,6 +13,8 @@ const LAYERS: { level: Level; file: string; office: string }[] = [
   { level: 'state_house', file: 'tn-house.json', office: 'Tennessee House' },
 ];
 const TN_BOUNDS = L.latLngBounds([34.98, -90.31], [36.68, -81.65]);
+// Panning stops about 50 km past the state line, enough to see border towns.
+const PAN_BOUNDS = L.latLngBounds([34.53, -90.86], [37.13, -81.1]);
 const VOTER_LOOKUP = 'https://tnmap.tn.gov/voterlookup/';
 const GEOCODER = 'https://geocoding.geo.census.gov/geocoder/locations/onelineaddress';
 // OpenStreetMap's standard tiles: free, no key, attribution required.
@@ -69,11 +71,15 @@ export function initDistrictFinder(root: HTMLElement) {
   const ACCENT = '#7a5a1f';
 
   const map = L.map(root.querySelector<HTMLElement>('.finder-map')!, {
-    maxBounds: TN_BOUNDS.pad(0.5),
-    minZoom: 6,
+    maxBounds: PAN_BOUNDS,
+    maxBoundsViscosity: 1, // hard stop at the edge, no rubber-banding
     zoomSnap: 0.25,
     scrollWheelZoom: false, // handled below so plain scrolling still moves the page
   }).fitBounds(TN_BOUNDS);
+  // Don't zoom out past the whole state; recheck when the map changes size (e.g. a phone rotates).
+  const limitZoomOut = () => map.setMinZoom(map.getBoundsZoom(TN_BOUNDS));
+  limitZoomOut();
+  map.on('resize', limitZoomOut);
   L.tileLayer(TILES, {
     maxZoom: 19,
     attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors',
