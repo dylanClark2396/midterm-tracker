@@ -15,7 +15,6 @@ _sources:
   hb0786: &hb0786 { url: "https://wapp.capitol.tn.gov/apps/BillInfo/Default.aspx?BillNumber=HB0786&GA=114", title: "HB0786 bill information (Tennessee General Assembly)", accessed: 2026-10-13 }
   ed_rideshare: &ed_rideshare { url: "https://tnhousegop.org/press-releases/2025/02/rep-elaine-davis-proposes-enhanced-penalty-for-impersonating-taxi-ride-share-drivers/", title: "Rep. Elaine Davis proposes enhanced penalty for impersonating taxi, ride-share drivers (Tennessee House Republican Caucus)", accessed: 2026-10-13 }
   ed_beher: &ed_beher { url: "https://tnhousegop.org/press-releases/2026/05/rep-elaine-davis-secures-50k-for-be-her-hero/", title: "Rep. Elaine Davis secures $50K for Be Her Hero (Tennessee House Republican Caucus)", accessed: 2026-10-13 }
-  hb6004: &hb6004 { url: "https://wapp.capitol.tn.gov/apps/BillInfo/Default.aspx?BillNumber=HB6004&GA=114", title: "HB6004 (Education Freedom Act of 2025) bill information and votes (Tennessee General Assembly)", accessed: 2026-10-13 }
   lookout18: &lookout18 { url: "https://tennesseelookout.com/voter-guides/contests/house-district-18/", title: "Tennessee House of Representatives, 18th District voter guide (Tennessee Lookout)", accessed: 2026-10-13 }
   kn_guide: &kn_guide { url: "https://www.knoxnews.com/story/news/politics/elections/2026/10/02/tennessee-house-midterm-election-voters-guide-meet-the-candidates/92005545007/", title: "Tennessee House midterm election voter's guide: Meet the candidates (Knox News)", accessed: 2026-10-13 }
   bg_home: &bg_home { url: "https://www.votebryangoldberg.com", title: "Bryan Goldberg for State House District 18 (Goldberg campaign)", accessed: 2026-10-13 }
@@ -40,7 +39,7 @@ candidates:
       - { text: "Vice chair of the House Judiciary Committee; also serves on the Transportation, Ethics, and Private Acts committees and the Civil Justice Subcommittee.", sources: [*cga_h18] }
       - { text: "B.A. in psychology and criminal justice from the University of Tennessee (1997); Farragut High School graduate.", sources: [*bp_davis, *cga_h18] }
       - { text: "Previously owned Smoky Spots and worked as a morning show co-host on Knoxville's Morning News and as an account executive.", sources: [*bp_davis] }
-      - { text: "Former vice chair of the Knox County Republican Party; ran for Knox County Commission as a Democrat in 2006 before switching parties.", sources: [*cga_h18, *bp_davis, *lookout18] }
+      - { text: "Former vice chair of the Knox County Republican Party.", sources: [*cga_h18, *bp_davis] }
     why_running:
       text: >-
         Her campaign says she has been an advocate for infrastructure, public safety, education, health care, low
@@ -70,11 +69,6 @@ candidates:
           She secured $50,000 in state funding for a nonprofit that supplies feminine hygiene products to schools
           across East Tennessee, helping keep girls in class.
         sources: [*ed_beher]
-      - stance: against
-        text: >-
-          She voted for the 2025 law creating a statewide private-school voucher program, which takes money out of
-          public schools and gives it to private ones.
-        sources: [*hb6004, *bg_issues]
       - stance: against
         text: >-
           She co-sponsored a bill requiring voters to register with a party before voting in a primary, under which
