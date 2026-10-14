@@ -1,23 +1,104 @@
-# Seeded from the Secretary of State's certified candidate list by
-# scripts/seed-from-certified-list.py. research_status: pending —
-# platforms and arguments not yet compiled.
+# Tennessee House, District 5 (Greene County) — Rep. David Hawk, in office since 2003, faces Catherine Bacon.
+# Candidate order follows the Secretary of State's certified candidate list.
+_sources:
+  bp_hawk: &bp_hawk { url: "https://ballotpedia.org/David_Hawk", title: "David Hawk (Ballotpedia)", accessed: 2026-10-13 }
+  cga_h5: &cga_h5 { url: "https://wapp.capitol.tn.gov/apps/legislatorinfo/member.aspx?district=H5", title: "Representative David Hawk (Tennessee General Assembly)", accessed: 2026-10-13 }
+  sp_h5: &sp_h5 { url: "https://wapp.capitol.tn.gov/apps/LegislatorInfo/SponsorList?district=H050&ga=114", title: "Rep. Hawk: bills sponsored, 114th General Assembly (Tennessee General Assembly)", accessed: 2026-10-13 }
+  hb0969: &hb0969 { url: "https://wapp.capitol.tn.gov/apps/BillInfo/Default.aspx?BillNumber=HB0969&GA=114", title: "HB0969 bill information (Tennessee General Assembly)", accessed: 2026-10-13 }
+  hb2313: &hb2313 { url: "https://wapp.capitol.tn.gov/apps/BillInfo/Default.aspx?BillNumber=HB2313&GA=114", title: "HB2313 bill information (Tennessee General Assembly)", accessed: 2026-10-13 }
+  hb0964: &hb0964 { url: "https://wapp.capitol.tn.gov/apps/BillInfo/Default.aspx?BillNumber=HB0964&GA=114", title: "HB0964 bill information (Tennessee General Assembly)", accessed: 2026-10-13 }
+  hb0965: &hb0965 { url: "https://wapp.capitol.tn.gov/apps/BillInfo/Default.aspx?BillNumber=HB0965&GA=114", title: "HB0965 bill information (Tennessee General Assembly)", accessed: 2026-10-13 }
+  hawk_rail: &hawk_rail { url: "https://tnhousegop.org/press-releases/2026/06/rep-hawk-secures-20-million-to-sustain-short-line-rail-infrastructure-program/", title: "Rep. Hawk secures $20 million to sustain short-line rail infrastructure program (Tennessee House Republican Caucus)", accessed: 2026-10-13 }
+  sun_hawk: &sun_hawk { url: "https://www.greenevillesun.com/news/david-hawk-a-candidate-running-for-tennessee-state-representative---district-5/article_1e4d08b6-23eb-4644-b2f7-5d5a6218a9ab.html", title: "David Hawk, a candidate running for Tennessee State Representative - District 5 (Greeneville Sun)", accessed: 2026-10-13 }
+  wjhl_split: &wjhl_split { url: "https://www.yahoo.com/news/ne-tn-house-delegation-splits-202000592.html", title: "NE TN House delegation splits 4-4 as vouchers pass (WJHL via Yahoo News)", accessed: 2026-10-13 }
+  wjhl_albright: &wjhl_albright { url: "https://www.wjhl.com/news/your-local-election-hq/ballad-health-leader-to-challenge-state-rep-david-hawk-in-gop-primary/amp/", title: "Ballad Health leader to challenge state Rep. David Hawk in GOP primary (WJHL)", accessed: 2026-10-13 }
+  lookout5: &lookout5 { url: "https://tennesseelookout.com/voter-guides/contests/house-district-5/", title: "Tennessee House of Representatives, 5th District voter guide (Tennessee Lookout)", accessed: 2026-10-13 }
+  sun_bacon: &sun_bacon { url: "https://www.greenevillesun.com/news/catherine-bacon-a-candidate-for-tennessee-state-representative---district-5/article_6cb05e74-a4f7-419b-8a2e-1dcdce7296dd.html", title: "Catherine Bacon, a candidate for Tennessee State Representative - District 5 (Greeneville Sun)", accessed: 2026-10-13 }
+
 id: tn-house-005
 office: "Tennessee House, District 5"
 level: state_house
 district: 5
-research_status: pending
+research_status: complete
 candidate_list_source: "https://sos-prod.tnsosgovfiles.com/s3fs-public/document/TNHouse_Nov2026.pdf"
+
 candidates:
   - name: "David B. Hawk"
     ballot_party: Republican
     city: "Greeneville"
-    why_running: { text: null, sources: [] }
-    platform: []
-    arguments: []
+    incumbent: true
+    website: "https://www.davidhawkfortennessee.com/"
+    bio_facts:
+      - { text: "State representative for District 5 since 2003 (first elected in 2002), serving in the 103rd through 114th General Assemblies; Majority Assistant Leader in the 110th General Assembly.", sources: [*cga_h5, *bp_hawk, *lookout5] }
+      - { text: "Chair of the House Transportation Subcommittee and a member of the Finance, Ways, and Means Committee.", sources: [*cga_h5] }
+      - { text: "Vice president of clothing sales at his family's Tailor Shop Men's Clothing in Greeneville, where he has worked since 1985.", sources: [*bp_hawk, *lookout5] }
+      - { text: "Bachelor's degree in marketing from East Tennessee State University (1990); attended Tusculum College and Harvard Kennedy School's Senior Executive Program for State and Local Government (2006).", sources: [*bp_hawk, *cga_h5] }
+      - { text: "Ran for U.S. House in Tennessee's 1st District in 2020 and lost the Republican primary.", sources: [*bp_hawk] }
+    why_running:
+      text: >-
+        He says he is running to continue work already under way, including the redevelopment of the former Greene
+        Valley Developmental Center and the rebuilding of David Crockett Birthplace State Park after Hurricane Helene
+        flooding. He says his top priorities are working with local governments to handle Greene County's rapid
+        population growth and continuing economic development to keep and recruit jobs.
+      sources: [*sun_hawk]
+    platform:
+      - category: economy
+        text: "Keep and recruit jobs for the next generation, linking training at Walters State and the new technical college to local jobs; sponsored a 2025 law encouraging state construction contractors to hire apprentices from registered programs."
+        sources: [*sun_hawk, *hb0965]
+      - category: infrastructure
+        text: "Secured $20 million in 2026 to continue the state's short-line railroad grant program and sponsored a 2025 law sending all sales tax on tires to the highway fund."
+        sources: [*hawk_rail, *hb0969]
+      - category: education
+        text: "Voted against the 2025 statewide school voucher plan, saying he followed the wishes of most of Greene County; sponsored a 2025 law updating entry-resistant window standards for new and remodeled school buildings."
+        sources: [*wjhl_split, *hb0964]
+      - category: health_care
+        text: "Sponsored a 2026 law allowing the state health department to run a voluntary home-visiting program supporting the mental health and development of children from birth to age five."
+        sources: [*hb2313]
+      - category: environment
+        text: "Keep the post-Hurricane Helene rebuilding of David Crockett Birthplace State Park on track."
+        sources: [*sun_hawk]
+    arguments:
+      - stance: for
+        text: >-
+          With more than 20 years as a local businessman and 24 years in the legislature, he is one of the most senior
+          members of the House and has helped bring higher-education and job-training improvements to Greene County.
+        sources: [*sun_hawk, *cga_h5]
+      - stance: for
+        text: >-
+          He has sponsored legislation to dissolve the board of any hospital system operating under the state's monopoly
+          agreement and have the governor appoint a new one, and has publicly called for the regional system's chief
+          executive to resign.
+        sources: [*sp_h5, *wjhl_albright]
+
   - name: "Catherine Bacon"
     ballot_party: Democratic
     city: "Greeneville"
-    why_running: { text: null, sources: [] }
-    platform: []
-    arguments: []
+    incumbent: false
+    website: null
+    bio_facts:
+      - { text: "Retired U.S. Air Force colonel who served 30 years as an officer, in roles from aircraft maintenance to squadron commander, including service at the Pentagon.", sources: [*sun_bacon, *lookout5] }
+      - { text: "Taught Air Force JROTC for 13 years; earlier earned a master's degree in English and taught in Japan while serving as a missionary.", sources: [*sun_bacon] }
+      - { text: "Serves on the Greeneville Airport Authority and works on her family's farm.", sources: [*sun_bacon] }
+    why_running:
+      text: >-
+        She says that wherever she has lived or worked she has tried to serve and make improvements, and that she is
+        committed to serving the people of District 5 and making lives better in East Tennessee.
+      sources: [*sun_bacon]
+    platform:
+      - category: education
+        text: "Defend public schools."
+        sources: [*sun_bacon]
+      - category: health_care
+        text: "Improve regional medical services."
+        sources: [*sun_bacon]
+      - category: agriculture
+        text: "Support farmers and their farms."
+        sources: [*sun_bacon]
+    arguments:
+      - stance: for
+        text: >-
+          Thirty years as a military officer and years as a teacher have given her the leadership experience and
+          temperament to listen to constituents and work with colleagues to find solutions.
+        sources: [*sun_bacon]
+
 last_verified: 2026-10-13

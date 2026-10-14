@@ -3,7 +3,6 @@
 # teamhagerty.com blocks automated access, so its pages are cited via Internet Archive snapshots.
 _sources:
   bh_announce: &bh_announce { url: "https://web.archive.org/web/20250423203409/https://www.teamhagerty.com/news/senator-bill-hagerty-announces-re-election-for-united-states-senate", title: "Senator Bill Hagerty announces re-election for United States Senate (Hagerty campaign, archived)", accessed: 2026-10-13 }
-  bh_meet: &bh_meet { url: "https://web.archive.org/web/20250125015803/https://teamhagerty.com/meet-bill/", title: "Meet Bill (Hagerty campaign, archived)", accessed: 2026-10-13 }
   bh_support: &bh_support { url: "https://web.archive.org/web/20250423210905/https://www.teamhagerty.com/news/what-they-are-saying-support-for-senator-hagertys-re-election-rolls-in", title: "What they are saying: support for Senator Hagerty's re-election (Hagerty campaign, archived)", accessed: 2026-10-13 }
   bh_senate: &bh_senate { url: "https://www.hagerty.senate.gov/about/", title: "About Senator Hagerty (U.S. Senate)", accessed: 2026-10-13 }
   firefly_bh: &firefly_bh { url: "https://tnfirefly.com/news/us-senator-bill-hagerty-shakes-up-next-years-governors-race-by-opting-to-run-for-re-election", title: "Hagerty opts to run for re-election (Tennessee Firefly)", accessed: 2026-10-13 }
@@ -14,6 +13,26 @@ _sources:
   lookout: &lookout { url: "https://tennesseelookout.com/voter-guides/contests/2026-u-s-senate/", title: "U.S. Senate voter guide (Tennessee Lookout)", accessed: 2026-10-13 }
   gerena_home: &gerena_home { url: "https://jeranimo4senate.org/", title: "Andrew Gerena for US Senate (Gerena campaign)", accessed: 2026-10-13 }
   gerena_issues: &gerena_issues { url: "https://jeranimo4senate.org/issues", title: "My Political Stance (Gerena campaign)", accessed: 2026-10-13 }
+  bh_2a: &bh_2a { url: "https://www.hagerty.senate.gov/press-releases/2022/06/23/hagerty-statement-on-u-s-supreme-courts-decision-affirming-americans-second-amendment-right/", title: "Hagerty statement on Supreme Court decision affirming Second Amendment right (U.S. Senate office)", accessed: 2026-10-13 }
+  bh_dobbs: &bh_dobbs { url: "https://www.hagerty.senate.gov/press-releases/2022/06/24/hagerty-statement-on-u-s-supreme-courts-decision-properly-returning-abortion-authority-to-the-american-people/", title: "Hagerty statement on Supreme Court decision returning abortion authority to the people (U.S. Senate office)", accessed: 2026-10-13 }
+  bh_memphis: &bh_memphis { url: "https://www.hagerty.senate.gov/op-eds/2026/03/10/senator-hagerty-on-making-memphis-the-safest-city-in-america", title: "Senator Hagerty on making Memphis the safest city in America (op-ed, U.S. Senate office)", accessed: 2026-10-13 }
+  bh_afford: &bh_afford { url: "https://www.hagerty.senate.gov/press-releases/2026/09/09/icymi-hagerty-joins-varney-co-on-fox-business-to-discuss-tariffs-on-israel-affordability/", title: "Hagerty discusses affordability on Fox Business (U.S. Senate office)", accessed: 2026-10-13 }
+  bh_ratepayer: &bh_ratepayer { url: "https://www.hagerty.senate.gov/press-releases/2026/09/30/hagerty-advocates-for-the-ratepayer-protection-act/", title: "Hagerty advocates for the Ratepayer Protection Act (U.S. Senate office)", accessed: 2026-10-13 }
+  bh_housing: &bh_housing { url: "https://www.hagerty.senate.gov/press-releases/2026/08/06/hagerty-introduces-bill-to-end-housing-welfare-for-illegal-aliens/", title: "Hagerty introduces bill on federal housing aid and immigration status (U.S. Senate office)", accessed: 2026-10-13 }
+  nbc_tariffs: &nbc_tariffs { url: "https://www.nbcnews.com/politics/white-house/sen-bill-hagerty-access-us-economy-privilege-trump-tariffs-rcna182332", title: "Sen. Bill Hagerty says access to the U.S. economy is a 'privilege' amid tariff threats (NBC News)", accessed: 2026-10-13 }
+  wkrn_tariffs: &wkrn_tariffs { url: "https://www.yahoo.com/news/talking-big-money-tennessee-farmers-013702408.html", title: "'We are talking big money': Tennessee farmers and business owners discuss tariffs (WKRN, via Yahoo News)", accessed: 2026-10-13 }
+  electoral: &electoral { url: "https://www.blackburn.senate.gov/index.php/2021/1/blackburn-hagerty-and-colleagues-will-vote-to-oppose-electoral-college-results", title: "Senators will vote to oppose Electoral College results (U.S. Senate office release, January 2021)", accessed: 2026-10-13 }
+  npost: &npost { url: "https://www.nashvillepost.com/elections/tennessee-senators-abandon-objections-congress-certifies-biden-win/article_f2a51c9b-0126-59f4-ba12-d8704026ad9b.html", title: "Tennessee senators abandon objections, Congress certifies Biden win (Nashville Post)", accessed: 2026-10-13 }
+  jones_issues: &jones_issues { url: "https://www.robertfortn.com/issues", title: "Issues (Robert Jones campaign)", accessed: 2026-10-13 }
+  jones_about: &jones_about { url: "https://www.robertfortn.com/about", title: "About (Robert Jones campaign)", accessed: 2026-10-13 }
+  macon_bp: &macon_bp { url: "https://ballotpedia.org/James_William_Macon_III", title: "James Macon III, Candidate Connection survey (Ballotpedia)", accessed: 2026-10-13 }
+  matthews_issues: &matthews_issues { url: "https://yoshimatthewssenate.com/issues/", title: "Issues (Yoshi Matthews campaign)", accessed: 2026-10-13 }
+  matthews_about: &matthews_about { url: "https://yoshimatthewssenate.com/about-yoshi/", title: "About Yoshi (Matthews campaign)", accessed: 2026-10-13 }
+  sutman: &sutman { url: "https://sutmanjr4senate.com/", title: "David Sutman Jr. for U.S. Senate (Sutman campaign)", accessed: 2026-10-13 }
+  whitson_issues: &whitson_issues { url: "https://senatorbarcy.org/issues", title: "Issues & Platform (Whitson campaign)", accessed: 2026-10-13 }
+  whitson_home: &whitson_home { url: "https://senatorbarcy.org/", title: "Barcy Whitson for U.S. Senate (Whitson campaign)", accessed: 2026-10-13 }
+  hearn_home: &hearn_home { url: "https://www.jeremydeanhearnforsenate.com/", title: "JDH for US Senate 2026 (Hearn campaign)", accessed: 2026-10-13 }
+  bh_2a25: &bh_2a25 { url: "https://www.hagerty.senate.gov/press-releases/2025/05/15/hagerty-colleagues-reintroduce-legislation-to-block-unconstitutional-tracking-of-gun-store-purchases/", title: "Hagerty, colleagues reintroduce legislation to block tracking of gun store purchases (U.S. Senate office)", accessed: 2026-10-13 }
 
 id: us-senate
 office: "U.S. Senate"
@@ -40,35 +59,35 @@ candidates:
       sources: [*bh_announce, *firefly_bh]
     platform:
       - category: taxes
-        text: "Lower taxes."
+        text: "Lower taxes and cut the federal regulatory overreach he says burdens small businesses."
         sources: [*bh_announce]
+      - category: cost_of_living
+        text: "Lower housing costs by reducing permitting and regulatory costs on new homes."
+        sources: [*bh_afford]
       - category: infrastructure
-        text: "Pursue American energy independence."
-        sources: [*bh_announce]
+        text: "Pursue American energy independence, and make data center operators rather than families and small businesses pay for added power infrastructure, with local communities deciding whether to permit them."
+        sources: [*bh_announce, *bh_ratepayer]
       - category: immigration
-        text: "Secure the southern border and stop illegal immigration."
-        sources: [*bh_announce, *bh_meet]
-      - category: economy
-        text: "Support small businesses, reduce federal regulatory overreach, and bring critical supply chains back to the U.S. from China."
-        sources: [*bh_announce, *bh_meet]
+        text: "Secure the southern border, and require public housing authorities to verify citizenship before providing federal housing aid."
+        sources: [*bh_announce, *bh_housing]
       - category: foreign_policy
         text: "Counter threats from the Chinese Communist Party and strengthen national security."
-        sources: [*bh_announce, *bh_meet]
+        sources: [*bh_announce]
       - category: public_safety
-        text: "Uphold the rule of law and support law enforcement officers."
-        sources: [*bh_announce, *bh_meet]
+        text: "Uphold the rule of law and give law enforcement the support to do their jobs, as in the federal-state crime effort in Memphis."
+        sources: [*bh_announce, *bh_memphis]
       - category: guns
-        text: "Defend Second Amendment rights."
-        sources: [*bh_meet]
+        text: "Defend Tennesseans' Second Amendment right to protect themselves and their families."
+        sources: [*bh_2a25, *bh_2a]
       - category: abortion
-        text: "Protect unborn life."
-        sources: [*bh_meet]
+        text: "Says there is a moral duty to protect unborn children and that he will advocate for policies opposing abortion."
+        sources: [*bh_dobbs]
     arguments:
       - stance: for
         text: >-
           His background in business, as the state's economic development commissioner, and as U.S. Ambassador to Japan
-          gives him rare experience in job creation, trade, and foreign affairs.
-        sources: [*bh_meet, *bh_senate]
+          gives him experience in job creation, trade, and foreign affairs.
+        sources: [*bh_senate]
       - stance: for
         text: >-
           He has already delivered results for Tennessee, and his leadership matters as the state advances economic
@@ -84,11 +103,16 @@ candidates:
           He is a close ally of the current White House, giving Tennessee a strong voice as the administration's agenda
           moves through Congress.
         sources: [*bh_support, *bh_announce]
+      - stance: for
+        text: >-
+          He helped organize the federal, state, and local effort against violent crime in Memphis, which he says took
+          more than 600 of the most dangerous offenders off the streets.
+        sources: [*bh_memphis]
       - stance: against
         text: >-
-          Before he was sworn in, he publicly questioned the 2020 presidential election results, citing unspecified
-          irregularities.
-        sources: [*lookout]
+          Before taking office, he pledged to vote against certifying the 2020 presidential results, calling them
+          "tainted," then reversed course when Congress met to certify them.
+        sources: [*electoral, *npost, *lookout]
       - stance: against
         text: >-
           He did not take part in a major newspaper's voter guide interview or questionnaire, leaving voters fewer
@@ -96,14 +120,9 @@ candidates:
         sources: [*knox]
       - stance: against
         text: >-
-          Families are struggling to afford basics like milk, eggs, and diapers, and tariffs have hit Tennessee farmers
-          hard. He has committed to advancing the federal agenda behind those policies.
-        sources: [*knox, *bh_announce]
-      - stance: against
-        text: >-
-          Tennessee deserves a senator who answers to voters rather than to the corporations and billionaires that fund
-          large campaigns.
-        sources: [*mqb_priorities]
+          He has backed broad tariffs on imports, including from Canada and Mexico, which Tennessee farmers and business
+          owners say could cost them billions, while families already struggle to afford basics.
+        sources: [*nbc_tariffs, *wkrn_tariffs, *knox]
 
   - name: "Marquita Bradshaw"
     ballot_party: Democratic
@@ -158,14 +177,19 @@ candidates:
         sources: [*knox]
       - stance: for
         text: >-
-          She is running a grassroots campaign that does not depend on corporate money, so she would answer to
-          Tennesseans.
+          She is running a grassroots campaign and says Tennessee deserves a senator who answers to voters rather than to
+          corporations and billionaires.
         sources: [*mqb_priorities]
       - stance: against
         text: >-
           After losing the 2020 race by 27 points, she refused to concede and later called conceding an "antiquated
           tradition."
         sources: [*banner]
+      - stance: against
+        text: >-
+          She did not complete a major newspaper's written voter guide questionnaire, leaving voters less detail on her
+          positions.
+        sources: [*knox]
 
   - name: "Tharon Chandler"
     ballot_party: Independent
@@ -182,7 +206,7 @@ candidates:
       sources: [*gerena_home]
     platform:
       - category: foreign_policy
-        text: "Shift money from the military budget to education, infrastructure, research, and job training; cut military aid to countries suspected of war crimes; investigate the lobbying group AIPAC; repeal the Patriot Act."
+        text: "Shift money from the military budget to education, infrastructure, research, and job training; cut military aid to countries suspected of war crimes; investigate the lobbying group AIPAC for espionage and treason; repeal the Patriot Act."
         sources: [*gerena_issues]
       - category: taxes
         text: "Reject any tax increase and budget conservatively."
@@ -209,25 +233,149 @@ candidates:
   - name: "Jeremy Dean Hearn"
     ballot_party: Independent
     city: Collierville
+    website: "https://www.jeremydeanhearnforsenate.com/"
+    platform:
+      - category: government
+        text: "Lists his priorities as defending the Constitution, clarifying the nation's history, and restoring equality, including drafting what he calls an \"Equal Earnings Act.\""
+        sources: [*hearn_home]
+      - category: taxes
+        text: "Proposes what he calls activating the \"US Fort Knox\" treasury to fund a year of legislation and resolve the national debt."
+        sources: [*hearn_home]
+      - category: foreign_policy
+        text: "Offer economic alternatives to war and pursue peace negotiations."
+        sources: [*hearn_home]
 
   - name: "Robert Jones"
     ballot_party: Independent
     city: Jonesborough
+    website: "https://www.robertfortn.com/"
+    why_running:
+      text: >-
+        He says the country is going through a transition that demands service and that the seat would be better
+        served by someone outside the constraints of the traditional parties.
+      sources: [*jones_about]
+    platform:
+      - category: government
+        text: "Pass an Accountability Act creating a secure app or website through which public officials can see what their constituents want."
+        sources: [*jones_issues]
+      - category: cost_of_living
+        text: "Make quality housing achievable through lower-cost prefabricated designs and recycled materials."
+        sources: [*jones_issues]
+      - category: health_care
+        text: "Completely rethink the health care system, including what insurers must provide and where government should step in."
+        sources: [*jones_issues]
+      - category: environment
+        text: "Focus on renewable energy, conservation, and responsible resource management."
+        sources: [*jones_issues]
+      - category: guns
+        text: "Law-abiding gun owners should not be punished, but some controls and procedures are acceptable to prevent needless tragedies."
+        sources: [*jones_issues]
+      - category: abortion
+        text: "Opposes a blanket abortion ban, saying it undermines a woman's freedom to protect her own life and that of her potential child."
+        sources: [*jones_issues]
+      - category: immigration
+        text: "Supports lawful immigration and due process; those who endanger others should be punished under the law."
+        sources: [*jones_issues]
 
   - name: "James William Macon III"
     ballot_party: Independent
     city: Memphis
+    why_running:
+      text: >-
+        He says Tennesseans deserve a government that solves problems instead of arguing about them, and that his focus
+        is lower costs, better jobs, and stronger communities.
+      sources: [*macon_bp]
+    platform:
+      - category: economy
+        text: "Bring advanced manufacturing, infrastructure investment, and workforce training to every part of the state."
+        sources: [*macon_bp]
+      - category: health_care
+        text: "Expand access to doctors and strengthen mental health services."
+        sources: [*macon_bp]
+      - category: public_safety
+        text: "Support law enforcement while demanding accountability."
+        sources: [*macon_bp]
+      - category: education
+        text: "Invest in education from early childhood through career training."
+        sources: [*macon_bp]
+      - category: infrastructure
+        text: "Modern infrastructure and high-speed internet access."
+        sources: [*macon_bp]
+      - category: taxes
+        text: "Transparent government and responsible spending."
+        sources: [*macon_bp]
 
   - name: "Yoshi D. Matthews"
     ballot_party: Independent
     city: Goodlettsville
+    website: "https://yoshimatthewssenate.com/"
+    why_running:
+      text: >-
+        The campaign says Tennesseans deserve leadership that reflects the state's values of fiscal responsibility,
+        public safety, strong local communities, and limited government.
+      sources: [*matthews_about]
+    platform:
+      - category: cost_of_living
+        text: "Lower the cost of living and support working families and small businesses."
+        sources: [*matthews_issues]
+      - category: taxes
+        text: "Protect seniors from losing their homes to property taxes."
+        sources: [*matthews_issues]
+      - category: economy
+        text: "Proposes a universal basic income for eligible Americans and a narrowly defined, Tennessee-based reparations program addressing a specific historic injustice."
+        sources: [*matthews_issues]
+      - category: immigration
+        text: "Secure the border, enforce immigration laws, and support a functional legal immigration system."
+        sources: [*matthews_issues]
+      - category: education
+        text: "Strengthen education and expand workforce opportunities so students are prepared for careers."
+        sources: [*matthews_issues]
 
   - name: "David Sutman, Jr."
     ballot_party: Independent
     city: Gray
+    website: "https://sutmanjr4senate.com/"
+    why_running:
+      text: >-
+        He says he is a working Tennessean, not a career politician, running to fight rising costs, restore
+        accountability, and put people ahead of party.
+      sources: [*sutman]
+    platform:
+      - category: cost_of_living
+        text: "Focus on practical solutions that reduce everyday costs."
+        sources: [*sutman]
+      - category: government
+        text: "Push for term limits, increase transparency in federal spending, and hold elected officials to performance standards."
+        sources: [*sutman]
 
   - name: "Catherine Barcel \"Barcy\" Whitson"
     ballot_party: Independent
     city: Chattanooga
+    website: "https://senatorbarcy.org/"
+    platform:
+      - category: economy
+        text: "Lower costs, create high-paying jobs, and support local small businesses and entrepreneurs."
+        sources: [*whitson_issues]
+      - category: health_care
+        text: "Reduce prescription drug costs and protect and improve rural hospitals."
+        sources: [*whitson_issues]
+      - category: education
+        text: "Increase public school funding and expand vocational training, while also promoting private and home schooling."
+        sources: [*whitson_issues]
+      - category: cost_of_living
+        text: "Partner with churches and businesses to build tiny-house communities for Tennesseans without housing."
+        sources: [*whitson_issues]
+      - category: public_safety
+        text: "Use trauma-informed police training for encounters involving mental illness."
+        sources: [*whitson_issues]
+      - category: immigration
+        text: "Protect migrant workers' right to be here without fear of deportation and help refugees and immigrants rebuild their lives."
+        sources: [*whitson_home, *whitson_issues]
+      - category: infrastructure
+        text: "Expand mass transit, including reviving a Chattanooga–Atlanta bullet train initiative."
+        sources: [*whitson_home]
+      - category: environment
+        text: "Promote green energy, safe water, and better waste management."
+        sources: [*whitson_issues]
 
 last_verified: 2026-10-13
