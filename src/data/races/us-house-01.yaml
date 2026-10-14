@@ -18,6 +18,7 @@ _sources:
   rb_bp: &rb_bp { url: "https://ballotpedia.org/Richard_Baker_(Tennessee)", title: "Richard Baker (Ballotpedia)", accessed: 2026-10-13 }
   cc_bp: &cc_bp { url: "https://ballotpedia.org/Chris_Campbell_(Tennessee)", title: "Chris Campbell (Ballotpedia, incl. Candidate Connection survey)", accessed: 2026-10-13 }
   cc_home: &cc_home { url: "https://campbellforcongress2026.com/", title: "Campbell for Congress (Campbell campaign)", accessed: 2026-10-13 }
+  wjhl_debate: &wjhl_debate { url: "https://www.yahoo.com/news/politics/articles/diana-harshbarger-responds-kristi-burke-221247009.html", title: "Diana Harshbarger responds to Kristi Burke's debate challenge in TN-01 race (WJHL)", accessed: 2026-10-14 }
 
 id: us-house-01
 office: "U.S. House, District 1"
@@ -90,6 +91,11 @@ candidates:
           At a 2025 town hall, a constituent trying to ask about Medicaid cuts was removed by security, and attendees'
           concerns were brushed aside rather than answered.
         sources: [*gs_forum, *lookout_guide]
+      - stance: against
+        text: >-
+          She has declined her opponent's repeated requests for a debate, saying she does not want to give her opponent
+          a platform, so voters will not get to hear both candidates present their plans side by side before they vote.
+        sources: [*wjhl_debate]
 
   - name: "Kristi Burke"
     ballot_party: Democratic
