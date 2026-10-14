@@ -1,23 +1,135 @@
-# Seeded from the Secretary of State's certified candidate list by
-# scripts/seed-from-certified-list.py. research_status: pending —
-# platforms and arguments not yet compiled.
+# Tennessee Senate, District 11 — Sen. Bo Watson, Senate finance committee chair, seeks re-election.
+# Candidate order follows the Secretary of State's certified candidate list.
+_sources:
+  cap_watson: &cap_watson { url: "https://www.capitol.tn.gov/senate/members/s11.html", title: "Senator Bo Watson (Tennessee General Assembly)", accessed: 2026-10-13 }
+  bp_watson: &bp_watson { url: "https://ballotpedia.org/Bo_Watson", title: "Bo Watson (Ballotpedia)", accessed: 2026-10-13 }
+  bw_home: &bw_home { url: "https://www.bofortn.com/", title: "Senator Bo Watson (Watson campaign)", accessed: 2026-10-13 }
+  bw_about: &bw_about { url: "https://www.bofortn.com/about", title: "About Bo (Watson campaign)", accessed: 2026-10-13 }
+  bw_deliver: &bw_deliver { url: "https://www.bofortn.com/delivering-for-district-11", title: "Delivering for District 11 (Watson campaign)", accessed: 2026-10-13 }
+  bw_endorse: &bw_endorse { url: "https://www.bofortn.com/endorsements", title: "Endorsements (Watson campaign)", accessed: 2026-10-13 }
+  local3_watson: &local3_watson { url: "https://www.local3news.com/local-news/republican-bo-watson-announces-2026-re-election-bid-for-tennessee-state-senate/article_aaf798a4-aa4c-44a2-b6d3-dc1a616e5c18.html", title: "Republican Bo Watson announces 2026 re-election bid for Tennessee State Senate (Local 3 News)", accessed: 2026-10-13 }
+  wdef_sb836: &wdef_sb836 { url: "https://www.wdef.com/?p=2129474", title: "Undocumented student bill stalls out in Tennessee Legislature (WDEF)", accessed: 2026-10-13 }
+  firefly_sb836: &firefly_sb836 { url: "https://tnfirefly.com/news/hamilton-county-senator-bo-watson-faces-pushback-from-chattanooga-educators-and-business-leaders-for-bill-impacting-undocumented-students", title: "Hamilton County Senator Bo Watson faces pushback from Chattanooga educators and business leaders for bill impacting undocumented students (Tennessee Firefly)", accessed: 2026-10-13 }
+  bill_sb836: &bill_sb836 { url: "https://wapp.capitol.tn.gov/apps/BillInfo/Default.aspx?BillNumber=SB0836&GA=114", title: "SB 836 / HB 793 (Tennessee General Assembly)", accessed: 2026-10-13 }
+  tr_home: &tr_home { url: "https://votetimroberts.com/", title: "Vote Tim Roberts (Roberts campaign)", accessed: 2026-10-13 }
+  v411_11: &v411_11 { url: "https://onyourballot.vote411.org/m/race-detail.do?id=3670842", title: "State Senate District 11 (VOTE411, League of Women Voters candidate questionnaire)", accessed: 2026-10-13 }
+  bp_roberts: &bp_roberts { url: "https://ballotpedia.org/Tim_Roberts", title: "Tim Roberts (Ballotpedia)", accessed: 2026-10-13 }
+
 id: tn-senate-11
 office: "Tennessee Senate, District 11"
 level: state_senate
 district: 11
-research_status: pending
+research_status: complete
 candidate_list_source: "https://sos-prod.tnsosgovfiles.com/s3fs-public/document/TNSenate_Nov2026.pdf"
+
 candidates:
   - name: "Bo Watson"
     ballot_party: Republican
     city: "Chattanooga"
-    why_running: { text: null, sources: [] }
-    platform: []
-    arguments: []
+    incumbent: true
+    website: "https://www.bofortn.com/"
+    bio_facts:
+      - { text: "Member of the Tennessee Senate for District 11 since 2006 (105th through 114th General Assemblies); earlier served one term in the state House (104th General Assembly).", sources: [*cap_watson, *bp_watson] }
+      - { text: "Chair of the Senate Finance, Ways and Means Committee since 2017 and chair of the Senate Rules Committee.", sources: [*cap_watson, *bw_about] }
+      - { text: "Speaker Pro Tempore of the Senate in the 108th and 109th General Assemblies.", sources: [*cap_watson] }
+      - { text: "Physical therapist for more than 30 years; Director of Sports Medicine and Therapy Services at Parkridge Medical Center in Chattanooga.", sources: [*bw_about, *cap_watson] }
+      - { text: "B.A. in biology from the University of Tennessee at Chattanooga; physical therapy degree from the University of Tennessee Health Science Center in Memphis.", sources: [*cap_watson, *bw_about] }
+    why_running:
+      text: >-
+        Announcing his re-election bid, he said he remains committed to keeping Tennessee a national leader in
+        economic growth, fiscal stewardship, and quality of life, and that he believes in results-driven, transparent
+        leadership that reflects the community's values. He said he is eager to continue that work in the next term.
+      sources: [*local3_watson]
+    platform:
+      - category: taxes
+        text: "Reduce taxes and keep the state's tradition of balanced budgets, with responsible spending overseen through the Senate finance committee."
+        sources: [*local3_watson, *bw_home, *bw_deliver]
+      - category: economy
+        text: "Keep Tennessee's economy strong, support families and small businesses, and expand job opportunities."
+        sources: [*local3_watson]
+      - category: immigration
+        text: "Combat illegal immigration; sponsored SB 836, which would require students to document citizenship or lawful immigration status to enroll and let districts charge tuition to, or decline to enroll, students who cannot. It passed the Senate in 2025 and the House in amended form in 2026 but was not enacted. He says it is about ensuring districts can afford to educate children who are lawfully present."
+        sources: [*local3_watson, *bill_sb836, *wdef_sb836, *firefly_sb836]
+      - category: public_safety
+        text: "Keep communities safe; passed a law allowing injured police K-9s to receive emergency medical care and transport, and supports volunteer first responders."
+        sources: [*local3_watson, *bw_home, *bw_deliver]
+      - category: education
+        text: "Expand educational opportunity and early childhood education; points to his role passing the TISA student-based school funding formula and his literacy summit."
+        sources: [*local3_watson, *bw_home, *bw_deliver]
+      - category: infrastructure
+        text: "Invest in roads and bridges, including funding to rebuild the I-24/I-75 interchange; ended vehicle emissions testing in Hamilton County."
+        sources: [*bw_home, *bw_deliver]
+      - category: health_care
+        text: "Expanded presumptive cancer coverage for firefighters, helped pass Tennessee's Right to Try law, and modernized physical therapy laws to ease patient access."
+        sources: [*bw_deliver]
+    arguments:
+      - stance: for
+        text: >-
+          As chair of the Senate finance committee, he has helped keep the state fiscally strong by holding the line on
+          spending and cutting taxes when possible.
+        sources: [*bw_endorse, *bw_about]
+      - stance: for
+        text: >-
+          He has delivered for the district, securing money to rebuild the congested I-24/I-75 interchange, ending
+          emissions testing in Hamilton County, and expanding cancer coverage for firefighters.
+        sources: [*bw_deliver]
+      - stance: for
+        text: >-
+          He is accessible and active in the community, listening to constituents and helping them navigate
+          government.
+        sources: [*bw_endorse]
+      - stance: against
+        text: >-
+          His bill letting schools refuse to enroll children who cannot document legal status unless they pay
+          tuition conflicts with educators' ethical duties and could jeopardize federal education funding, while no
+          data shows how many English learners are undocumented.
+        sources: [*firefly_sb836, *bill_sb836]
+
   - name: "Tim Roberts"
     ballot_party: Democratic
     city: "Chattanooga"
-    why_running: { text: null, sources: [] }
-    platform: []
-    arguments: []
+    incumbent: false
+    website: "https://votetimroberts.com/"
+    bio_facts:
+      - { text: "Stay-at-home father who worked more than 15 years in the service industry.", sources: [*tr_home] }
+      - { text: "Earned a degree in political science from the University of Tennessee at Chattanooga in 2016.", sources: [*tr_home, *bp_roberts] }
+      - { text: "Has lived in Hamilton County for 26 years.", sources: [*v411_11] }
+      - { text: "Ran unsuccessfully in a 2022 primary for Tennessee House District 26.", sources: [*bp_roberts] }
+    why_running:
+      text: >-
+        He says he wants to help others because he has lived the struggles many residents face, including growing up
+        poor on food stamps and free school lunch and dealing with medical debt and insurance companies. He pledges to
+        fight for personal freedoms, treat all residents with fairness, and always put people's needs ahead of party
+        politics.
+      sources: [*v411_11, *tr_home]
+    platform:
+      - category: education
+        text: "Repeal the school voucher program and provide free school lunch for all children."
+        sources: [*tr_home]
+      - category: taxes
+        text: "Repeal the sales tax on groceries."
+        sources: [*tr_home]
+      - category: health_care
+        text: "Accept federal money to expand Medicaid."
+        sources: [*tr_home]
+      - category: public_safety
+        text: "Ban for-profit prisons and legalize medical and recreational marijuana."
+        sources: [*tr_home]
+      - category: infrastructure
+        text: "Repair crumbling infrastructure and ban AI data centers."
+        sources: [*tr_home]
+      - category: government
+        text: "Stop the state takeover of Memphis government."
+        sources: [*tr_home]
+    arguments:
+      - stance: for
+        text: >-
+          Having grown up poor and dealt with medical debt, he has lived the struggles many residents face and says
+          he wants to help others rather than grow his own wealth.
+        sources: [*v411_11]
+      - stance: for
+        text: >-
+          He pledges to put the community's needs ahead of party politics.
+        sources: [*tr_home]
+
 last_verified: 2026-10-13
