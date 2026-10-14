@@ -1,23 +1,122 @@
-# Seeded from the Secretary of State's certified candidate list by
-# scripts/seed-from-certified-list.py. research_status: pending —
-# platforms and arguments not yet compiled.
+# Tennessee House, District 7 (part of Washington County) — Rep. Rebecca Alexander, in office since 2021,
+# faces Sarah Jayne Della Vecchia.
+# Candidate order follows the Secretary of State's certified candidate list.
+_sources:
+  bp_alex: &bp_alex { url: "https://ballotpedia.org/Rebecca_Alexander", title: "Rebecca Alexander (Ballotpedia)", accessed: 2026-10-13 }
+  cga_h7: &cga_h7 { url: "https://wapp.capitol.tn.gov/apps/legislatorinfo/member.aspx?district=H7", title: "Representative Rebecca Alexander (Tennessee General Assembly)", accessed: 2026-10-13 }
+  hb0932: &hb0932 { url: "https://wapp.capitol.tn.gov/apps/BillInfo/Default.aspx?BillNumber=HB0932&GA=114", title: "HB0932 bill information (Tennessee General Assembly)", accessed: 2026-10-13 }
+  hb1956: &hb1956 { url: "https://wapp.capitol.tn.gov/apps/BillInfo/Default.aspx?BillNumber=HB1956&GA=114", title: "HB1956 bill information (Tennessee General Assembly)", accessed: 2026-10-13 }
+  hb1254: &hb1254 { url: "https://wapp.capitol.tn.gov/apps/BillInfo/Default.aspx?BillNumber=HB1254&GA=114", title: "HB1254 bill information (Tennessee General Assembly)", accessed: 2026-10-13 }
+  hb1034: &hb1034 { url: "https://wapp.capitol.tn.gov/apps/BillInfo/Default.aspx?BillNumber=HB1034&GA=114", title: "HB1034 bill information (Tennessee General Assembly)", accessed: 2026-10-13 }
+  alex_phone: &alex_phone { url: "https://tnhousegop.org/press-releases/2025/02/state-rep-rebecca-alexander-proposes-cell-phone-restrictions-in-classrooms/", title: "State Rep. Rebecca Alexander proposes cell phone restrictions in classrooms (Tennessee House Republican Caucus)", accessed: 2026-10-13 }
+  alex_step: &alex_step { url: "https://tnhousegop.org/press-releases/2026/05/rep-rebecca-alexander-passes-step-therapy-exemptions-for-all-cancer-patients/", title: "Rep. Rebecca Alexander passes step therapy exemptions for all cancer patients (Tennessee House Republican Caucus)", accessed: 2026-10-13 }
+  hb2532: &hb2532 { url: "https://wapp.capitol.tn.gov/apps/BillInfo/Default.aspx?BillNumber=HB2532&GA=114", title: "HB2532 (2026 education freedom scholarship expansion) bill information and votes (Tennessee General Assembly)", accessed: 2026-10-13 }
+  wjhl_split: &wjhl_split { url: "https://www.yahoo.com/news/ne-tn-house-delegation-splits-202000592.html", title: "NE TN House delegation splits 4-4 as vouchers pass (WJHL via Yahoo News)", accessed: 2026-10-13 }
+  wjhl_odds: &wjhl_odds { url: "https://www.yahoo.com/news/local-lawmakers-odds-regarding-vouchers-000950675.html", title: "Local lawmakers at odds regarding vouchers ahead of Tennessee Special Session (WJHL via Yahoo News)", accessed: 2026-10-13 }
+  lookout7: &lookout7 { url: "https://tennesseelookout.com/voter-guides/contests/house-district-7/", title: "Tennessee House of Representatives, 7th District voter guide (Tennessee Lookout)", accessed: 2026-10-13 }
+  dv_home: &dv_home { url: "https://www.votesarahjayne.com/", title: "Sarah Jayne Della Vecchia for Tennessee State House District 7 (Della Vecchia campaign)", accessed: 2026-10-13 }
+  dv_about: &dv_about { url: "https://www.votesarahjayne.com/about-me.html", title: "About Me (Della Vecchia campaign)", accessed: 2026-10-13 }
+  dv_platform: &dv_platform { url: "https://www.votesarahjayne.com/platform.html", title: "Platform (Della Vecchia campaign)", accessed: 2026-10-13 }
+
 id: tn-house-007
 office: "Tennessee House, District 7"
 level: state_house
 district: 7
-research_status: pending
+research_status: complete
 candidate_list_source: "https://sos-prod.tnsosgovfiles.com/s3fs-public/document/TNHouse_Nov2026.pdf"
+
 candidates:
   - name: "Rebecca Keefauver Alexander"
     ballot_party: Republican
     city: "Jonesborough"
+    incumbent: true
+    website: null
+    bio_facts:
+      - { text: "State representative for District 7 since 2021 (elected in 2020); treasurer of the House majority caucus in the 114th General Assembly.", sources: [*bp_alex, *lookout7, *cga_h7] }
+      - { text: "Member of the House Agriculture and Natural Resources, Judiciary, and Transportation committees.", sources: [*cga_h7] }
+      - { text: "Former English teacher who co-owned Dillow-Taylor Funeral Home; also a motivational speaker and storyteller.", sources: [*bp_alex, *cga_h7] }
+      - { text: "B.A. in English and sociology/psychology from Milligan College and M.Ed. from East Tennessee State University.", sources: [*bp_alex, *cga_h7] }
     why_running: { text: null, sources: [] }
-    platform: []
-    arguments: []
+    platform:
+      - category: education
+        text: "Sponsored the 2025 law requiring school boards to bar student cell phone use during instructional time, with a process for notifying parents in emergencies; voted against the 2025 voucher bill, saying it would make taxpayers pay twice for one child's education. In 2026 she voted against House passage of a bill expanding the voucher program from 25,000 to 35,000 scholarships, then voted to concur in the Senate's amendment, the final House vote before it became law."
+        sources: [*alex_phone, *hb0932, *wjhl_split, *wjhl_odds, *hb2532]
+      - category: health_care
+        text: "Sponsored a 2026 law barring health insurers from requiring any cancer patient to try cheaper drugs first (step therapy) before covering an approved prescription."
+        sources: [*alex_step, *hb1956]
+      - category: public_safety
+        text: "Sponsored a 2026 law requiring prosecuting agencies that keep a Brady list to adopt a policy meeting certain requirements."
+        sources: [*hb1254]
+      - category: economy
+        text: "Sponsored a 2026 law directing courts to apply rebuttable presumptions when judging whether the length of a non-compete agreement is reasonable."
+        sources: [*hb1034]
+    arguments:
+      - stance: for
+        text: >-
+          She voted against the 2025 voucher bill after constituent calls and letters ran about 10 to 1 against it and
+          local school boards asked her to oppose it.
+        sources: [*wjhl_split, *wjhl_odds]
+      - stance: for
+        text: >-
+          Her classroom cell phone law gives teachers and administrators a tool to cut distractions while keeping a
+          process for parents to get emergency information.
+        sources: [*alex_phone, *hb0932]
+      - stance: for
+        text: >-
+          Her step therapy law lets cancer patients get the right medication from the start instead of first trying
+          less effective options, which can save lives.
+        sources: [*alex_step]
+
   - name: "Sarah Jayne Della Vecchia"
     ballot_party: Democratic
     city: "Johnson City"
-    why_running: { text: null, sources: [] }
-    platform: []
-    arguments: []
+    incumbent: false
+    website: "https://www.votesarahjayne.com/"
+    bio_facts:
+      - { text: "Worked as a registered nurse for six years before staying home full-time with her twin sons; she and her husband have been foster parents.", sources: [*dv_about, *lookout7] }
+      - { text: "Originally from the South Carolina Lowcountry; has lived in Washington County for seven years.", sources: [*dv_about] }
+    why_running:
+      text: >-
+        She says she is running for everyday people and for a Tennessee where everyone has a chance to build the life
+        they want. She says Washington County needs someone outside the status quo, pointing to people going without
+        health care, families struggling to keep a roof over their heads, and children failed by the Department of
+        Children's Services while the state funds corporate handouts.
+      sources: [*dv_platform, *dv_home]
+    platform:
+      - category: health_care
+        text: "Expand Medicaid, pass safe staffing laws for health care workers, prioritize prevention, hold health care executives accountable, and coordinate a state response to addiction."
+        sources: [*dv_platform]
+      - category: cost_of_living
+        text: "Prioritize affordable housing through builder incentives and work with local governments, fight corporate influence in local housing markets, coordinate a statewide response to homelessness, and end policies that criminalize homelessness."
+        sources: [*dv_platform]
+      - category: government
+        text: "Reform the Department of Children's Services, including its staffing structure; prioritize youth mental health care and support young people aging out of foster care."
+        sources: [*dv_platform]
+      - category: public_safety
+        text: "Remove barriers to work, housing, and health care for people leaving prison, require evidence-based addiction treatment in all jails and prisons, reduce youth incarceration, and ban Flock cameras and other AI mass surveillance."
+        sources: [*dv_platform]
+      - category: environment
+        text: "Strictly regulate data centers, give the state clear authority to shut down violators, and let local governments ban data centers."
+        sources: [*dv_platform, *lookout7]
+      - category: education
+        text: "Oppose school vouchers; tax revenue should go to public schools that are open to every child."
+        sources: [*dv_platform]
+      - category: abortion
+        text: "Ensure access to the full range of reproductive health care, including abortion, and let physicians practice without fear of litigation or criminal charges."
+        sources: [*dv_platform]
+      - category: immigration
+        text: "Supports a secure border and a pathway to lawful status for people living and working here; Tennessee should not take part in immigration enforcement beyond what federal law requires."
+        sources: [*dv_platform]
+    arguments:
+      - stance: for
+        text: >-
+          As a former nurse and foster parent whose every job has involved advocating for others, she would bring that
+          experience to Nashville as an advocate for the district.
+        sources: [*dv_about]
+      - stance: for
+        text: >-
+          She would bring a perspective from outside the status quo and shift state priorities toward health care,
+          housing, and children in state custody rather than corporate incentives.
+        sources: [*dv_home]
+
 last_verified: 2026-10-13

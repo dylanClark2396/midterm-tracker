@@ -3,6 +3,9 @@ _sources:
   wpln: &wpln { url: "https://wpln.org/post/tennessee-amendment-3-gives-voters-say-on-marsys-law-and-expanded-crime-victim-rights/", title: "Tennessee Amendment 3 gives voters say on Marsy's Law and expanded crime victim rights (WPLN)", accessed: 2026-10-13 }
   fox: &fox { url: "https://foxchattanooga.com/news/local/tennessee-voters-to-weigh-in-on-crime-victims-rights-amendment-in-november-election", title: "Tennessee voters to weigh in on crime victims' rights amendment in November election (FOX Chattanooga)", accessed: 2026-10-13 }
   aclu: &aclu { url: "https://www.aclu-tn.org/news/what-is-on-the-ballot-in-tennessee/", title: "What's on the ballot in Tennessee? (ACLU of Tennessee)", accessed: 2026-10-13 }
+  bp: &bp { url: "https://ballotpedia.org/Tennessee_Marsy%27s_Law_Crime_Victims_Rights_Amendment_(2026)", title: "Tennessee Marsy's Law Crime Victims Rights Amendment (2026) (Ballotpedia)", accessed: 2026-10-13 }
+  scene: &scene { url: "https://www.nashvillescene.com/news/pithinthewind/constitutional-amendments-2026/article_e8af0a93-fef4-598b-b654-c50c1c42906a.html", title: "Three State Constitutional Amendments Head to 2026 Ballot (Nashville Scene)", accessed: 2026-10-13 }
+  sos: &sos { url: "https://sos.tn.gov/elections/announcements/2026-proposed-constitutional-amendments", title: "2026 proposed constitutional amendments (Tennessee Secretary of State)", accessed: 2026-10-13 }
 
 id: victims-rights
 number: 3
@@ -91,8 +94,8 @@ arguments:
     sources: [*wpln, *fox]
   - stance: yes
     text: >-
-      Victims gain a real voice in parole: the right to be informed, to take part, and to have their safety and their
-      family's safety considered before an offender is released.
+      Victims gain a formal role in parole: the right to be informed, to take part, and to have their own, their
+      family's, and the public's safety considered before an offender is released.
     sources: [*wpln]
   - stance: yes
     text: >-
@@ -102,19 +105,29 @@ arguments:
   - stance: yes
     text: >-
       Notifications become something a victim asks for, rather than something they must opt out of, so victims who
-      do not want updates are not forced to relive the crime.
+      do not want updates are not re-victimized against their wishes.
     sources: [*wpln]
   - stance: yes
     text: >-
-      Defendants' rights are spelled out in the Constitution; placing victims' rights there too brings them closer
-      to equal footing in the justice system.
-    sources: [*fox]
+      Defendants' rights are spelled out in detail in the Constitution. Expanding victims' constitutional rights
+      brings them closer to the rights defendants already have and gives victims more equal access to justice.
+    sources: [*fox, *bp]
   - stance: yes
     text: >-
-      Unlike versions adopted in some other states, this one leaves out language on keeping victims' records
-      private, which elsewhere was used to withhold the names of officers involved in use-of-force cases. It also
-      does not limit prosecutors or courts.
-    sources: [*wpln]
+      Unlike another state's version, which was used to keep secret the identities of officers who used lethal
+      force, this amendment has no language barring disclosure of victims' records or information. It also states
+      that it does not restrict prosecutors or courts.
+    sources: [*wpln, *sos]
+  - stance: yes
+    text: >-
+      When victims know their rights are protected, they are more likely to speak up and stay involved in a case,
+      which helps hold offenders accountable and can help prevent future crimes.
+    sources: [*bp]
+  - stance: yes
+    text: >-
+      The current right to be heard depends on how the legislature defines a case's "critical stages." This version
+      names the proceedings where victims may be heard: release, plea, sentencing, disposition, and parole.
+    sources: [*bp, *sos]
   - stance: no
     text: >-
       Crime victims already have rights in the Tennessee Constitution. The state can improve services for victims and
@@ -124,12 +137,17 @@ arguments:
     text: >-
       Laws can be strengthened year after year, but constitutional text is slow to change. Fixing this list in the
       Constitution could make it harder to expand victims' rights later and could end up hurting victims.
-    sources: [*wpln]
+    sources: [*wpln, *bp]
   - stance: no
     text: >-
       Comparing victims' rights to the rights of the accused is misleading. The accused's protections exist to limit
       the government's power to arrest, prosecute, and punish.
-    sources: [*aclu]
+    sources: [*aclu, *bp]
+  - stance: no
+    text: >-
+      Giving victims constitutional rights inside a criminal case risks undercutting a defendant's due process and
+      increases the potential for wrongful convictions.
+    sources: [*bp]
   - stance: no
     text: >-
       Adding new rights for victims at every stage of a case could erode the presumption of innocence, especially in
@@ -138,6 +156,6 @@ arguments:
   - stance: no
     text: >-
       It is unclear how the state would pay for the extra work these rights could create for courts.
-    sources: [*wpln]
+    sources: [*wpln, *scene]
 
 last_verified: 2026-10-13

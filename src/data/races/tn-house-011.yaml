@@ -1,29 +1,119 @@
-# Seeded from the Secretary of State's certified candidate list by
-# scripts/seed-from-certified-list.py. research_status: pending —
-# platforms and arguments not yet compiled.
+# Tennessee House, District 11 (Cocke and parts of Hamblen and Jefferson counties) — open seat; Rep. Jeremy Faison
+# announced in January 2026 that he would not seek reelection.
+# Candidate order follows the Secretary of State's certified candidate list.
+_sources:
+  cody_home: &cody_home { url: "https://votekennycody.com/", title: "Kenny Cody for State House (Cody campaign)", accessed: 2026-10-13 }
+  bp_cody: &bp_cody { url: "https://ballotpedia.org/Kenny_Cody", title: "Kenny Cody (Ballotpedia, incl. Candidate Connection survey)", accessed: 2026-10-13 }
+  pm_vance: &pm_vance { url: "https://thepostmillennial.com/jd-vance-endorses-kenny-cody-for-tennessee-state-house", title: "JD Vance endorses Kenny Cody for Tennessee State House (The Post Millennial)", accessed: 2026-10-13 }
+  bullmoose: &bullmoose { url: "https://bullmooseproject.org/press/endorsement-of-kenny-cody", title: "Endorsement of Kenny Cody (The Bull Moose Project)", accessed: 2026-10-13 }
+  mcm_about: &mcm_about { url: "https://www.sheila4tn.com/about", title: "About (McMahan campaign)", accessed: 2026-10-13 }
+  mcm_issues: &mcm_issues { url: "https://www.sheila4tn.com/issues-1", title: "Issues (McMahan campaign)", accessed: 2026-10-13 }
+  bp_mcm: &bp_mcm { url: "https://ballotpedia.org/Sheila_McMahan", title: "Sheila McMahan (Ballotpedia, incl. Candidate Connection survey)", accessed: 2026-10-13 }
+  lookout11: &lookout11 { url: "https://tennesseelookout.com/voter-guides/contests/house-district-11/", title: "Tennessee House of Representatives, 11th District voter guide (Tennessee Lookout)", accessed: 2026-10-13 }
+
 id: tn-house-011
 office: "Tennessee House, District 11"
 level: state_house
 district: 11
-research_status: pending
+research_status: complete
 candidate_list_source: "https://sos-prod.tnsosgovfiles.com/s3fs-public/document/TNHouse_Nov2026.pdf"
+
 candidates:
   - name: "Kenny Cody"
     ballot_party: Republican
     city: "Cosby"
-    why_running: { text: null, sources: [] }
-    platform: []
-    arguments: []
+    incumbent: false
+    website: "https://votekennycody.com/"
+    bio_facts:
+      - { text: "Public school teacher at Cosby High School and Cosby Elementary School (U.S. government and civics, English, speech and communication); coaches girls' basketball.", sources: [*cody_home, *bp_cody, *lookout11] }
+      - { text: "Chairman of the Cocke County Republican Party from 2019, when he was elected at age 22, until 2026.", sources: [*cody_home, *bp_cody, *lookout11] }
+      - { text: "Political columnist; senior contributor to Human Events.", sources: [*cody_home, *pm_vance] }
+      - { text: "Bachelor's degree in English from the University of Tennessee, Knoxville (2018); master's in education from Tusculum University (2020); educational specialist degree from Lincoln Memorial University (2022).", sources: [*bp_cody, *cody_home] }
+    why_running:
+      text: >-
+        He says he wants to represent the district's conservative values in Nashville, putting low taxes, less
+        government intervention, cutting red tape, and service members at the forefront. He says locals deserve an
+        advocate at the state level so Nashville knows District 11's needs.
+      sources: [*cody_home, *bp_cody]
+    platform:
+      - category: public_safety
+        text: "Make funding for emergency services, law enforcement, and civil servants a priority after Hurricane Helene's flooding, and support tough-on-crime legislation."
+        sources: [*cody_home, *bp_cody]
+      - category: economy
+        text: "Cut red tape and loosen regulations on hunting, fishing, agriculture, education, and small businesses to spur job growth."
+        sources: [*cody_home, *bp_cody]
+      - category: taxes
+        text: "Advocate for lower taxes so families keep more of what they earn."
+        sources: [*cody_home, *bp_cody]
+      - category: education
+        text: "Halt what he calls the indoctrination of children, keep male athletes out of women's sports, and push back against DEI policies."
+        sources: [*cody_home, *bp_cody]
+      - category: abortion
+        text: "Push for anti-abortion policy to protect the unborn."
+        sources: [*cody_home, *bp_cody]
+    arguments:
+      - stance: for
+        text: >-
+          He knows the working-class issues of Cocke, Jefferson, and Hamblen counties and will make sure the district's
+          people are properly heard in Nashville.
+        sources: [*pm_vance]
+      - stance: for
+        text: >-
+          A teacher and civic leader with a record of community service, he would work to cut taxes and regulations
+          and rebuild a resilient economy for working families.
+        sources: [*pm_vance, *bullmoose]
+
   - name: "Sheila Grooms McMahan"
     ballot_party: Democratic
     city: "Cosby"
-    why_running: { text: null, sources: [] }
-    platform: []
-    arguments: []
+    incumbent: false
+    website: "https://www.sheila4tn.com"
+    bio_facts:
+      - { text: "Respiratory therapist who has worked in emergency rooms and intensive care units, including during the COVID-19 pandemic.", sources: [*mcm_about, *bp_mcm, *lookout11] }
+      - { text: "Born and raised in Cosby; graduate of Cosby High School, with an associate degree from Walters State Community College (2013) and a bachelor's degree from East Tennessee State University (2022).", sources: [*bp_mcm, *mcm_about, *lookout11] }
+    why_running:
+      text: >-
+        She says she never set out to run for office, but when corporate tax giveaways were prioritized over rural
+        schools, hospitals, and working families, she decided the community needed someone to stand up. She says she is
+        running to invest in public education, strengthen rural health care, support local jobs, protect property
+        owners, and preserve Appalachian land and culture, and to give back to the community that raised her.
+      sources: [*mcm_about, *bp_mcm]
+    platform:
+      - category: education
+        text: "Fully fund public education, protect local schools from being drained by voucher programs, and expand vocational programs so young people can build careers without leaving home."
+        sources: [*mcm_issues, *bp_mcm]
+      - category: economy
+        text: "Her first bill would offer incentives to businesses that invest in rural and distressed communities only if they hire locally, pay a living wage, and contribute to the community; end corporate giveaways."
+        sources: [*bp_mcm, *mcm_about]
+      - category: cost_of_living
+        text: "Lower everyday costs such as housing, health care, utilities, and childcare, and push for wages that keep up with the cost of living."
+        sources: [*mcm_issues]
+      - category: health_care
+        text: "Make health care accessible and affordable and strengthen rural health care where hospitals are closing and providers are scarce."
+        sources: [*bp_mcm, *mcm_about]
+      - category: environment
+        text: "Protect clean air, drinking water, rivers, and forests, and oppose corporate practices that pollute rural communities."
+        sources: [*mcm_issues, *bp_mcm]
+      - category: agriculture
+        text: "Protect farmland and invest in rural economic development and small businesses."
+        sources: [*bp_mcm]
+      - category: government
+        text: "Expand early voting days and locations, adopt automatic voter registration, create a statewide ballot initiative process, and keep legislative oversight of emergency powers."
+        sources: [*bp_mcm]
+    arguments:
+      - stance: for
+        text: >-
+          Her loyalty is only to the people of the district: she will back any bill that helps local families, schools,
+          or small businesses no matter who wrote it, and oppose one that hurts them even if it comes from her own side.
+        sources: [*bp_mcm]
+      - stance: for
+        text: >-
+          Years as a respiratory therapist in emergency rooms and ICUs give her firsthand knowledge of the strain on
+          rural health care and the families who struggle to get care covered.
+        sources: [*mcm_about, *bp_mcm]
+
   - name: "Larry Jeremiah Brown"
     ballot_party: Independent
     city: "Cosby"
-    why_running: { text: null, sources: [] }
-    platform: []
-    arguments: []
+
 last_verified: 2026-10-13

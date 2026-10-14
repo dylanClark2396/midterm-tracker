@@ -1,53 +1,164 @@
-# Seeded from the Secretary of State's certified candidate list by
-# scripts/seed-from-certified-list.py. research_status: pending —
-# platforms and arguments not yet compiled.
+# U.S. House, District 3 — Rep. Chuck Fleischmann is seeking re-election under the May 2026 map.
+# Candidate order follows the Secretary of State's certified candidate list.
+_sources:
+  cf_about: &cf_about { url: "https://fleischmann.house.gov/about", title: "About Chuck (Congressman Chuck Fleischmann, U.S. House)", accessed: 2026-10-13 }
+  cf_119: &cf_119 { url: "https://fleischmann.house.gov/media/press-releases/fleischmann-i-am-honored-to-serve-my-fellow-tennesseans-to-make-america-great-again", title: "Fleischmann: I am honored to serve my fellow Tennesseans (Congressman Chuck Fleischmann press release)", accessed: 2026-10-13 }
+  bp_cf: &bp_cf { url: "https://ballotpedia.org/Charles_Fleischmann", title: "Charles Fleischmann (Ballotpedia)", accessed: 2026-10-13 }
+  l3_townhall: &l3_townhall { url: "https://www.local3news.com/local-news/rep-chuck-fleischmann-will-never-hold-a-town-hall-meeting/article_c63b30c0-63ff-4e5e-b51e-0f854dd84c54.html", title: "Rep. Chuck Fleischmann will 'never' hold a town hall meeting (Local 3 News)", accessed: 2026-10-13 }
+  lookout: &lookout { url: "https://tennesseelookout.com/voter-guides/contests/congressional-district-3-u-s-house-of-representatives/", title: "U.S. House of Representatives, 3rd Congressional District voter guide (Tennessee Lookout)", accessed: 2026-10-13 }
+  ag_home: &ag_home { url: "https://annagolladay.com/", title: "Golladay for Congress (Golladay campaign)", accessed: 2026-10-13 }
+  ag_policy: &ag_policy { url: "https://annagolladay.com/policy/", title: "Policy (Golladay campaign)", accessed: 2026-10-13 }
+  ag_about: &ag_about { url: "https://annagolladay.com/about-anna/", title: "About Anna (Golladay campaign)", accessed: 2026-10-13 }
+  bp_ag: &bp_ag { url: "https://ballotpedia.org/Anna_Golladay", title: "Anna Golladay, including Candidate Connection survey (Ballotpedia)", accessed: 2026-10-13 }
+  l3_ag: &l3_ag { url: "https://www.local3news.com/local-news/democrat-anna-golladay-challenging-rep-chuck-fleischmann-for-congress/article_4b4c90a3-ed6e-4be9-94b6-a5fd6a53863b.html", title: "Democrat Anna Golladay challenging Rep. Chuck Fleischmann for Congress (Local 3 News)", accessed: 2026-10-13 }
+  wdef_ag: &wdef_ag { url: "https://www.wdef.com/?p=2385175", title: "Democrat Anna Golladay announces run for 3rd District (WDEF)", accessed: 2026-10-13 }
+  da_site: &da_site { url: "https://dean-w-arnold.com/bio", title: "Bio (Dean W. Arnold)", accessed: 2026-10-13 }
+  da_br: &da_br { url: "https://www.ballotready.org/people/dean-arnold", title: "Dean Arnold (BallotReady)", accessed: 2026-10-13 }
+
 id: us-house-03
 office: "U.S. House, District 3"
 level: us_house
 district: 3
-research_status: pending
+research_status: complete
 candidate_list_source: "https://sos-prod.tnsosgovfiles.com/s3fs-public/document/USHouse_Nov2026.pdf"
+
 candidates:
   - name: "Chuck Fleischmann"
     ballot_party: Republican
     city: "Ooltewah"
+    incumbent: true
+    website: "https://fleischmann.house.gov/"
+    bio_facts:
+      - { text: "Has represented Tennessee's 3rd Congressional District since 2011, after first being elected in 2010.", sources: [*lookout, *l3_ag] }
+      - { text: "Named chairman of the House Appropriations Subcommittee on Energy and Water Development in the 119th Congress; also serves on the House Science, Space, and Technology Committee.", sources: [*cf_about] }
+      - { text: "Attorney who ran a law practice in Chattanooga with his wife for 24 years.", sources: [*cf_about, *bp_cf] }
+      - { text: "Former president of the Chattanooga Bar Association.", sources: [*cf_about, *bp_cf] }
+      - { text: "Bachelor's degree in political science from the University of Illinois and law degree from the University of Tennessee.", sources: [*cf_about, *bp_cf] }
     why_running: { text: null, sources: [] }
-    platform: []
-    arguments: []
+    platform:
+      - category: immigration
+        text: "Secure the border and end illegal immigration."
+        sources: [*cf_119]
+      - category: economy
+        text: "Pass the current administration's agenda to fix the economy."
+        sources: [*cf_119]
+      - category: veterans
+        text: "Rebuild the military."
+        sources: [*cf_119]
+      - category: foreign_policy
+        text: "Restore American leadership around the world."
+        sources: [*cf_119]
+      - category: infrastructure
+        text: "As Energy and Water appropriations chairman, fund the national laboratories, nuclear security, energy independence, and the Chickamauga Lock project."
+        sources: [*cf_about]
+      - category: abortion
+        text: "Opposes abortion; cites a 100% pro-life voting record."
+        sources: [*cf_about]
+      - category: guns
+        text: "Supports legislation protecting Second Amendment rights."
+        sources: [*cf_about]
+    arguments:
+      - stance: for
+        text: >-
+          As chairman of the House panel that funds energy and water programs, he is positioned to secure money for
+          Oak Ridge National Laboratory, the Y-12 complex, environmental cleanup, and the Chickamauga Lock.
+        sources: [*cf_about]
+      - stance: for
+        text: >-
+          He has been endorsed for re-election and has pledged to work with the administration to secure the border,
+          fix the economy, and rebuild the military.
+        sources: [*bp_cf, *cf_119]
+      - stance: against
+        text: >-
+          He has said he intends never to host another public town hall meeting with constituents, and has declined to
+          debate his general-election opponents in recent years.
+        sources: [*l3_townhall, *ag_home]
+
   - name: "Anna Golladay"
     ballot_party: Democratic
     city: "Chattanooga"
-    why_running: { text: null, sources: [] }
-    platform: []
-    arguments: []
+    incumbent: false
+    website: "https://annagolladay.com/"
+    bio_facts:
+      - { text: "Founded the clothing company Biased Apparel in 2011 and owns and operates it.", sources: [*ag_about, *lookout] }
+      - { text: "CEO of Work of Place, a consulting firm that works with faith communities on using their buildings and assets to improve neighborhood economic stability.", sources: [*ag_about, *lookout] }
+      - { text: "Former associate pastor at St. Elmo United Methodist Church in Chattanooga.", sources: [*ag_about, *lookout] }
+      - { text: "Senior director of communications and marketing for Convergence, a nonprofit network.", sources: [*ag_about] }
+      - { text: "Ran for Chattanooga City Council District 8 in 2025 and lost in an April runoff.", sources: [*l3_ag] }
+      - { text: "Holds a Bachelor of Fine Arts from Shepherd University, a master's degree from West Virginia University, and a Master of Theological Studies from Iliff School of Theology.", sources: [*ag_about] }
+    why_running:
+      text: >-
+        She says she is running to bring moral courage back to leadership and to fight for the dignity of every person
+        in Tennessee. She argues the district deserves a representative who shows up for working families rather than
+        for donors and party leaders, and describes her campaign as choosing care over cruelty.
+      sources: [*ag_home, *ag_about, *bp_ag]
+    platform:
+      - category: economy
+        text: "Raise the federal minimum wage, strengthen workers' freedom to organize and bargain collectively, and enforce antitrust laws in food and agriculture."
+        sources: [*ag_policy, *bp_ag]
+      - category: cost_of_living
+        text: "Expand the Low-Income Housing Tax Credit, create a down-payment tax credit of up to $50,000, fund community land trusts, restore and expand the Child Tax Credit, and fully fund SNAP and WIC."
+        sources: [*ag_policy]
+      - category: taxes
+        text: "Enact an annual wealth tax on billionaires and remove the Social Security payroll tax cap so high earners pay on all income."
+        sources: [*ag_policy, *bp_ag]
+      - category: health_care
+        text: "Expand Medicaid, protect Medicare and the ACA, cap insulin at $25 and family deductibles at $5,000, and invest in keeping rural hospitals open."
+        sources: [*ag_policy, *bp_ag]
+      - category: environment
+        text: "Protect Tennessee's waterways, including from data-center water use, and continue mercury cleanup at Y-12 while keeping Oak Ridge National Laboratory fully funded."
+        sources: [*ag_policy, *bp_ag]
+      - category: government
+        text: "Pass the John Lewis Voting Rights Advancement Act, oppose the SAVE Act, ban partisan gerrymandering, and restore voting rights to people who have completed their sentences; accepts no corporate PAC money."
+        sources: [*ag_policy, *ag_home]
+      - category: immigration
+        text: "Create an earned pathway to citizenship, pass the American Dream and Promise Act, oppose 287(g) agreements, and wind down and ultimately abolish ICE."
+        sources: [*ag_policy]
+      - category: abortion
+        text: "Pass the Women's Health Protection Act to restore the protections of Roe v. Wade."
+        sources: [*ag_policy]
+    arguments:
+      - stance: for
+        text: >-
+          As a longtime small-business owner and community leader, she understands what it means to make payroll and
+          to carry responsibility for others.
+        sources: [*bp_ag, *ag_about]
+      - stance: for
+        text: >-
+          She refuses corporate PAC money, so she would answer to the people of the district rather than to
+          Washington power brokers.
+        sources: [*ag_home, *ag_policy]
+      - stance: for
+        text: >-
+          She would push to expand Medicaid and stabilize rural hospitals in a district where two have closed and nine
+          more are at risk.
+        sources: [*ag_policy, *bp_ag]
+
   - name: "Dean Arnold"
     ballot_party: Independent
     city: "East Ridge"
-    why_running: { text: null, sources: [] }
-    platform: []
-    arguments: []
+    website: "https://dean-w-arnold.com/congress"
+    bio_facts:
+      - { text: "Author and filmmaker.", sources: [*da_site, *da_br] }
+      - { text: "Graduate of Covenant College.", sources: [*da_br] }
+
   - name: "Jean Howard-Hill"
     ballot_party: Independent
     city: "Chattanooga"
-    why_running: { text: null, sources: [] }
-    platform: []
-    arguments: []
+    bio_facts:
+      - { text: "Former political science professor at the University of Tennessee at Chattanooga.", sources: [*lookout] }
+      - { text: "Ran for this congressional seat as an independent in 2024 and for mayor of Chattanooga in 2021.", sources: [*lookout, *bp_cf] }
+
   - name: "Rodney Joe King"
     ballot_party: Independent
     city: "Powell"
-    why_running: { text: null, sources: [] }
-    platform: []
-    arguments: []
+
   - name: "Donnie Lynn Ownby"
     ballot_party: Independent
     city: "Philadelphia"
-    why_running: { text: null, sources: [] }
-    platform: []
-    arguments: []
+
   - name: "Edward John Roland"
     ballot_party: Independent
     city: "Chattanooga"
-    why_running: { text: null, sources: [] }
-    platform: []
-    arguments: []
+
 last_verified: 2026-10-13
