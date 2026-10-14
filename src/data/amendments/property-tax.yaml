@@ -3,6 +3,12 @@ _sources:
   tfp: &tfp { url: "https://www.timesfreepress.com/news/2026/oct/06/ban-on-state-property-tax-on-november-ballot-for/", title: "Ban on state property tax on November ballot for Tennessee voters (Chattanooga Times Free Press)", accessed: 2026-10-13 }
   oped: &oped { url: "https://www.timesfreepress.com/news/2026/oct/06/opinion-vote-yes-on-amendment-2-to-keep-tennessee/", title: "Vote Yes on Amendment 2 to keep Tennessee free from a state property tax (op-ed, Chattanooga Times Free Press)", accessed: 2026-10-13 }
   fox17: &fox17 { url: "https://fox17.com/news/local/2025-3-18-tennessee-senate-advances-amendment-to-ban-state-property-tax-nashville-tn", title: "Tennessee Senate advances amendment to ban state property tax (FOX 17)", accessed: 2026-10-13 }
+  wkrn: &wkrn { url: "https://www.yahoo.com/news/politics/articles/tennessee-voters-decide-whether-ban-224041063.html", title: "Tennessee voters to decide whether to ban a tax the state hasn't collected in 77 years (WKRN, via Yahoo News)", accessed: 2026-10-13 }
+  claiborne: &claiborne { url: "https://claiborneprogress.net/?p=24488", title: "Tennessee Senate votes for resolution blocking statewide property tax (Claiborne Progress / The Center Square)", accessed: 2026-10-13 }
+  lk0602: &lk0602 { url: "https://tennesseelookout.com/2026/06/02/tennessee-lawmakers-push-ban-on-state-property-tax/", title: "Tennessee lawmakers push ban on state property tax (Tennessee Lookout)", accessed: 2026-10-13 }
+  beacon: &beacon { url: "https://www.beacontn.org/why-tennessee-doesnt-need-a-state-property-tax/", title: "Why Tennessee Doesn't Need a State Property Tax (Beacon Center)", accessed: 2026-10-13 }
+  farmbureau: &farmbureau { url: "https://tnfarmbureau.org/yes-on-2-launches-to-support-constitutional-amendment-to-ban-state-property-tax", title: "'Yes on 2' launches to support constitutional amendment to ban state property tax (Tennessee Farm Bureau)", accessed: 2026-10-13 }
+  lkguide: &lkguide { url: "https://tennesseelookout.com/voter-guides/ballot-measures/constitutional-amendment-2/", title: "Constitutional Amendment #2 voter guide (Tennessee Lookout)", accessed: 2026-10-13 }
   explained: &explained { url: "https://ballotexplained.com/measures/tennessee/amendment-2", title: "Tennessee Amendment 2 — Prohibit a state property tax (Ballot Explained)", accessed: 2026-10-13 }
 
 id: property-tax
@@ -40,7 +46,7 @@ fiscal_note:
 
 legislative_votes:
   - { resolution: "HJR 81 (113th)", chamber: House, date: 2023-04-21, yes: 81, no: 11, present_not_voting: 0, url: "https://wapp.capitol.tn.gov/apps/BillInfo/Default.aspx?BillNumber=HJR0081&GA=113" }
-  - { resolution: "HJR 81 (113th)", chamber: Senate, date: 2024-03-28, yes: 26, no: 6, url: "https://wapp.capitol.tn.gov/apps/BillInfo/Default.aspx?BillNumber=HJR0081&GA=113" }
+  - { resolution: "HJR 81 (113th)", chamber: Senate, date: 2024-03-28, yes: 26, no: 6, present_not_voting: 0, url: "https://wapp.capitol.tn.gov/apps/BillInfo/Default.aspx?BillNumber=HJR0081&GA=113" }
   - { resolution: "SJR 1 (114th)", chamber: Senate, date: 2025-03-26, yes: 26, no: 5, present_not_voting: 1, url: "https://wapp.capitol.tn.gov/apps/BillInfo/Default.aspx?BillNumber=SJR0001&GA=114" }
   - { resolution: "SJR 1 (114th)", chamber: House, date: 2025-04-21, yes: 89, no: 6, present_not_voting: 0, url: "https://wapp.capitol.tn.gov/apps/BillInfo/Default.aspx?BillNumber=SJR0001&GA=114" }
 
@@ -49,8 +55,8 @@ official_source: "https://sos.tn.gov/elections/announcements/2026-proposed-const
 arguments:
   - stance: yes
     text: >-
-      Right now a future legislature could bring back a state property tax with a simple majority vote. Putting the
-      ban in the Constitution means reversing it would take two separate legislatures, a two-thirds vote, and
+      Today a future legislature could create a state property tax with an ordinary majority vote. Once the ban is in
+      the Constitution, undoing it would take passage by two legislatures, a two-thirds vote in the second, and
       approval from voters.
     sources: [*oped, *tfp]
   - stance: yes
@@ -60,9 +66,10 @@ arguments:
     sources: [*tfp, *explained, *fox17]
   - stance: yes
     text: >-
-      Keeping the cost of owning property predictable helps with housing affordability, supports first-time
-      buyers, and can keep rents lower and encourage building and maintaining affordable housing.
-    sources: [*tfp, *fox17, *oped]
+      Avoiding an extra state tax keeps the cost of owning property down, which helps first-time buyers and renters,
+      since property taxes are passed on to tenants as higher rent, and encourages building and maintaining
+      affordable housing.
+    sources: [*tfp, *fox17, *oped, *beacon]
   - stance: yes
     text: >-
       Farmers can owe more tax when land values rise even if their income does not, and older residents on fixed
@@ -70,28 +77,44 @@ arguments:
     sources: [*oped]
   - stance: yes
     text: >-
-      Like the 2014 ban on a state income tax, this puts a basic tax decision in the hands of voters rather than
-      lawmakers, and locks in the low-tax approach that has drawn residents and businesses to the state.
-    sources: [*tfp]
+      Like the 2014 amendment banning a state tax on payroll and earned income, this puts a basic tax decision in the
+      hands of voters rather than lawmakers, and locks in the low-tax approach that has drawn residents and
+      businesses to the state.
+    sources: [*tfp, *wkrn, *beacon]
   - stance: yes
     text: >-
       Counties and cities keep full authority to levy property taxes, so local funding for schools, roads, and
       first responders is not affected.
     sources: [*oped]
+  - stance: yes
+    text: >-
+      Property tax should remain a local revenue source. A state levy would compete with counties and cities for the
+      same tax base, and would be a tempting alternative to cutting spending when budgets get tight.
+    sources: [*lk0602, *claiborne]
+  - stance: yes
+    text: >-
+      Even the possibility of a state property tax is a barrier for businesses large and small deciding whether to
+      locate or expand in Tennessee and create jobs.
+    sources: [*farmbureau]
   - stance: no
     text: >-
-      The amendment is unnecessary. Tennessee has not taxed property at the state level in decades, and a ban
-      written into ordinary law would accomplish the same thing without changing the Constitution.
-    sources: [*explained]
+      The amendment is unnecessary. The state has not taxed property since 1949, no one is proposing to bring it back,
+      and there is no threat to guard against.
+    sources: [*wkrn, *lkguide, *explained]
   - stance: no
     text: >-
-      The phrase "levy, authorize, or otherwise permit" could be read to reach beyond a state property tax, which
-      could cost the state millions in revenue and threaten its bond rating.
-    sources: [*explained]
+      Locking the ban into the Constitution binds lawmakers decades from now, whatever circumstances they face,
+      including war, economic collapse, or another genuine state emergency.
+    sources: [*wkrn, *fox17]
   - stance: no
     text: >-
-      Locking the ban into the Constitution limits the options of future lawmakers to raise revenue for statewide
-      services, including during a fiscal emergency.
-    sources: [*fox17, *explained]
+      The amendment limits a taxing power the state does not use while leaving untouched the taxes it actually
+      collects. A serious effort to limit taxing authority would start with those.
+    sources: [*wkrn]
+  - stance: no
+    text: >-
+      The state already requires local governments to levy property taxes, so banning a state property tax does not
+      take the state out of property taxation.
+    sources: [*claiborne]
 
 last_verified: 2026-10-13

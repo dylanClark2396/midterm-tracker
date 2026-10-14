@@ -1,23 +1,69 @@
-# Seeded from the Secretary of State's certified candidate list by
-# scripts/seed-from-certified-list.py. research_status: pending —
-# platforms and arguments not yet compiled.
+# Tennessee Senate, District 5 — open seat (Lt. Gov. Randy McNally is retiring).
+# Candidate order follows the Secretary of State's certified candidate list.
+_sources:
+  bp_matlock: &bp_matlock { url: "https://ballotpedia.org/Jimmy_Matlock", title: "Jimmy Matlock (Ballotpedia)", accessed: 2026-10-13 }
+  cap_matlock: &cap_matlock { url: "https://www.capitol.tn.gov/house/archives/110GA/members/h21.html", title: "Representative Jimmy Matlock, 110th General Assembly (Tennessee General Assembly)", accessed: 2026-10-13 }
+  nh_matlock: &nh_matlock { url: "https://www.news-herald.net/news/matlock-runs-for-senate-campfield-bows-out-of-primary/article_8424b94b-241d-439f-877b-275117a3b0cc.html", title: "Matlock runs for Senate; Campfield bows out of primary (News-Herald)", accessed: 2026-10-13 }
+  bp_miller: &bp_miller { url: "https://ballotpedia.org/David_Miller_(Tennessee)", title: "David Miller (Ballotpedia, incl. 2026 Candidate Connection survey)", accessed: 2026-10-13 }
+  dm_home: &dm_home { url: "https://davidmillerfortennessee.com/", title: "David Miller for Tennessee (Miller campaign)", accessed: 2026-10-13 }
+  dm_meet: &dm_meet { url: "https://davidmillerfortennessee.com/meet-david", title: "Meet David (Miller campaign)", accessed: 2026-10-13 }
+  dm_pri: &dm_pri { url: "https://davidmillerfortennessee.com/our-priorities", title: "Our Priorities (Miller campaign)", accessed: 2026-10-13 }
+
 id: tn-senate-05
 office: "Tennessee Senate, District 5"
 level: state_senate
 district: 5
-research_status: pending
+research_status: complete
 candidate_list_source: "https://sos-prod.tnsosgovfiles.com/s3fs-public/document/TNSenate_Nov2026.pdf"
+
 candidates:
   - name: "Jimmy Matlock"
     ballot_party: Republican
     city: "Lenoir City"
-    why_running: { text: null, sources: [] }
+    incumbent: false
+    bio_facts:
+      - { text: "Member of the Tennessee House of Representatives for District 21 (parts of Loudon and Monroe counties) from 2007 to 2018, serving in the 105th through 110th General Assemblies.", sources: [*cap_matlock, *bp_matlock] }
+      - { text: "Chaired the House Transportation Committee during the 2015 legislative session.", sources: [*bp_matlock] }
+      - { text: "Ran in the 2018 Republican primary for Tennessee's 2nd Congressional District and finished second.", sources: [*bp_matlock] }
+      - { text: "Owner of Matlock Tire, a business with locations in Lenoir City, Knoxville, Maryville, Athens, and Hardin Valley.", sources: [*nh_matlock, *bp_matlock] }
+      - { text: "Attended Middle Tennessee State University and the University of Tennessee.", sources: [*cap_matlock, *bp_matlock] }
+    why_running:
+      text: >-
+        In his March 2026 announcement, he said many friends, neighbors, and supporters across Loudon, Anderson, and
+        Knox counties had asked him to run after the incumbent announced his retirement, and that it is an honor to
+        follow in the footsteps of a longtime friend. He said his family has served East Tennessee in business and
+        public service for more than 60 years and is ready to answer the call again.
+      sources: [*nh_matlock]
     platform: []
     arguments: []
+
   - name: "David Miller"
     ballot_party: Democratic
     city: "Oak Ridge"
-    why_running: { text: null, sources: [] }
-    platform: []
-    arguments: []
+    incumbent: false
+    website: "https://davidmillerfortennessee.com/"
+    bio_facts:
+      - { text: "Retired educator who taught for more than 35 years, including in public schools, correctional facilities, and a drug-abuse prevention center; chaired a special education department and taught English as a Second Language.", sources: [*dm_meet, *bp_miller] }
+      - { text: "Member of the Anderson County School Board (District 8).", sources: [*bp_miller, *dm_meet] }
+      - { text: "Has served as president of three local unions and was elected to the governing board of the Georgia Association of Educators.", sources: [*bp_miller] }
+    why_running:
+      text: >-
+        He says he has spent his life helping people learn and thrive and is running to fight for strong schools,
+        tax-free groceries, and East Tennessee values that put people first. His campaign, built around the
+        slogan "Let's send a teacher to Nashville," says he will fight for putting people over profits.
+      sources: [*dm_home, *dm_meet]
+    platform:
+      - category: education
+        text: "Oppose school vouchers and keep public tax dollars in public schools, create universal pre-K, and address the state's last-place ranking in per-pupil spending."
+        sources: [*bp_miller, *dm_meet, *dm_pri]
+      - category: taxes
+        text: "End the state sales tax on groceries and require corporations to pay their fair share of taxes."
+        sources: [*bp_miller, *dm_pri]
+    arguments:
+      - stance: for
+        text: >-
+          A lifelong teacher and current school board member, he would bring more than 35 years of classroom
+          experience to the state's education decisions.
+        sources: [*dm_home, *dm_meet]
+
 last_verified: 2026-10-13

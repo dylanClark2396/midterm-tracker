@@ -1,23 +1,88 @@
-# Seeded from the Secretary of State's certified candidate list by
-# scripts/seed-from-certified-list.py. research_status: pending —
-# platforms and arguments not yet compiled.
+# Tennessee House, District 8 (part of Blount County) — open seat; Rep. Jerome Moon withdrew from the 2026 race.
+# Candidate order follows the Secretary of State's certified candidate list.
+_sources:
+  bp_hen: &bp_hen { url: "https://ballotpedia.org/Jordan_Henderson", title: "Jordan Henderson (Ballotpedia, incl. Candidate Connection survey)", accessed: 2026-10-13 }
+  hen_meet: &hen_meet { url: "https://www.hendersonforstatehouse.com/meet-jordan", title: "Meet Jordan (Henderson campaign)", accessed: 2026-10-13 }
+  bp_tru: &bp_tru { url: "https://ballotpedia.org/Hilary_Trudell", title: "Hilary Trudell (Ballotpedia, incl. Candidate Connection survey)", accessed: 2026-10-13 }
+  tru_home: &tru_home { url: "https://www.trudellfortennessee.com", title: "Hilary Trudell District 8 (Trudell campaign)", accessed: 2026-10-13 }
+  lookout8: &lookout8 { url: "https://tennesseelookout.com/voter-guides/contests/house-district-8/", title: "Tennessee House of Representatives, 8th District voter guide (Tennessee Lookout)", accessed: 2026-10-13 }
+
 id: tn-house-008
 office: "Tennessee House, District 8"
 level: state_house
 district: 8
-research_status: pending
+research_status: complete
 candidate_list_source: "https://sos-prod.tnsosgovfiles.com/s3fs-public/document/TNHouse_Nov2026.pdf"
+
 candidates:
   - name: "Jordan Henderson"
     ballot_party: Republican
     city: "Maryville"
-    why_running: { text: null, sources: [] }
-    platform: []
-    arguments: []
+    incumbent: false
+    website: "https://www.hendersonforstatehouse.com/"
+    bio_facts:
+      - { text: "High school criminal justice teacher in a Career and Technical Education program.", sources: [*hen_meet, *bp_hen] }
+      - { text: "Served nearly a decade in the Tennessee Air National Guard with the 134th Security Forces Squadron, deploying to Baghdad, Iraq, in 2010.", sources: [*hen_meet, *bp_hen] }
+      - { text: "Knoxville Police Department officer from 2014, including on a gang task force; medically retired in 2021 after injuries from a 2016 on-duty car accident.", sources: [*hen_meet] }
+      - { text: "Born in Maryville; graduate of William Blount High School, with bachelor's degrees from Bethel University (2013) and King University (2021).", sources: [*bp_hen] }
+    why_running:
+      text: >-
+        He says he is running to protect the hometown that raised him and to make sure freedom and families thrive in
+        Blount County for generations, so that children do not have to leave the county to find opportunity. He says
+        the district needs transparent, accessible leadership and fresh eyes on current and coming challenges.
+      sources: [*bp_hen]
+    platform:
+      - category: taxes
+        text: "Keep taxes as low as possible and watch for legislation and policies that lead to fraud, waste, and abuse of taxpayer dollars."
+        sources: [*bp_hen]
+      - category: infrastructure
+        text: "Plan ahead for Tennessee's growth so infrastructure, education, public safety, health care, and economic needs keep pace without sacrificing quality of life."
+        sources: [*bp_hen]
+    arguments:
+      - stance: for
+        text: >-
+          As a veteran, former police officer, and teacher, he has spent his life serving others and would bring that
+          service and fresh eyes to the district's challenges.
+        sources: [*bp_hen, *hen_meet]
+
   - name: "Hilary Trudell"
     ballot_party: Democratic
     city: "Maryville"
-    why_running: { text: null, sources: [] }
-    platform: []
-    arguments: []
+    incumbent: false
+    website: "https://www.trudellfortennessee.com"
+    bio_facts:
+      - { text: "Nonprofit professional who has trained community leaders, taught future public servants, and led organizations; facilitates workshops for corporate and nonprofit clients on creating diverse workplaces.", sources: [*tru_home, *bp_tru, *lookout8] }
+      - { text: "Grew up in East Tennessee; graduate of Bearden High School and the College of Charleston (2004).", sources: [*bp_tru, *tru_home] }
+    why_running:
+      text: >-
+        She says she is running because she is concerned about the Tennessee her son and other children will inherit,
+        and that political decisions too often benefit special interests and the very wealthy. She says she wants to
+        protect public schools, support working families, and make sure everyone has a voice, and that the times call
+        for leaders who listen to different viewpoints and work across differences.
+      sources: [*bp_tru, *tru_home]
+    platform:
+      - category: education
+        text: "Oppose any expansion of school vouchers in Blount County and invest the money in public schools instead."
+        sources: [*bp_tru, *tru_home]
+      - category: environment
+        text: "Work to stop development of new data centers until stricter regulations, including job protections, are in place, and give residents a say in how the community grows."
+        sources: [*bp_tru, *tru_home]
+      - category: taxes
+        text: "Repeal Tennessee's sales tax on groceries."
+        sources: [*bp_tru, *tru_home]
+      - category: health_care
+        text: "Expand TennCare so everyone has access to comprehensive health care, and address the state's maternal mortality rate."
+        sources: [*bp_tru]
+    arguments:
+      - stance: for
+        text: >-
+          Voucher money largely goes to households whose children already attended private school, and private schools
+          answer to no public oversight; she would keep that money in Blount County's public schools.
+        sources: [*bp_tru]
+      - stance: for
+        text: >-
+          Repealing the grocery tax, among the highest in the nation, would lift the heaviest burden from low-income
+          households and leave families more money for food.
+        sources: [*bp_tru, *tru_home]
+
 last_verified: 2026-10-13

@@ -1,23 +1,120 @@
-# Seeded from the Secretary of State's certified candidate list by
-# scripts/seed-from-certified-list.py. research_status: pending —
-# platforms and arguments not yet compiled.
+# Tennessee Senate, District 27 — Senate Majority Leader Jack Johnson seeks re-election against David Hardy.
+# Candidate order follows the Secretary of State's certified candidate list.
+_sources:
+  jj_home: &jj_home { url: "https://www.johnsonfortennessee.com/", title: "Jack Johnson for Tennessee State Senate (Johnson campaign)", accessed: 2026-10-13 }
+  jj_meet: &jj_meet { url: "https://www.johnsonfortennessee.com/meet-jack", title: "Meet Jack (Johnson campaign)", accessed: 2026-10-13 }
+  jj_issues: &jj_issues { url: "https://www.johnsonfortennessee.com/issues", title: "Issues (Johnson campaign)", accessed: 2026-10-13 }
+  lookout_guide: &lookout_guide { url: "https://tennesseelookout.com/voter-guides/contests/state-senate-district-27/", title: "State Senate, 27th District voter guide (Tennessee Lookout)", accessed: 2026-10-13 }
+  lookout_tcog: &lookout_tcog { url: "https://tennesseelookout.com/2026/01/20/coalition-for-open-government-questions-law-enforcement-identity-bill/", title: "Coalition for Open Government questions law enforcement identity bill (Tennessee Lookout)", accessed: 2026-10-13 }
+  dh_home: &dh_home { url: "https://www.davidhardy4tn.com/", title: "David Hardy for TN (Hardy campaign)", accessed: 2026-10-13 }
+  dh_about: &dh_about { url: "https://www.davidhardy4tn.com/about", title: "About David Hardy (Hardy campaign)", accessed: 2026-10-13 }
+  dh_issues: &dh_issues { url: "https://www.davidhardy4tn.com/issues", title: "Priority Issues (Hardy campaign)", accessed: 2026-10-13 }
+  bp_dh: &bp_dh { url: "https://ballotpedia.org/David_Hardy_(Tennessee)", title: "David Hardy (Tennessee) (Ballotpedia)", accessed: 2026-10-13 }
+
 id: tn-senate-27
 office: "Tennessee Senate, District 27"
 level: state_senate
 district: 27
-research_status: pending
+research_status: complete
 candidate_list_source: "https://sos-prod.tnsosgovfiles.com/s3fs-public/document/TNSenate_Nov2026.pdf"
+
 candidates:
   - name: "Jack Johnson"
     ballot_party: Republican
     city: "Franklin"
-    why_running: { text: null, sources: [] }
-    platform: []
-    arguments: []
+    incumbent: true
+    website: "https://www.johnsonfortennessee.com/"
+    bio_facts:
+      - { text: "State Senator representing most of Williamson County since his 2006 election; Senate Majority Leader since December 2018.", sources: [*jj_meet, *lookout_guide] }
+      - { text: "Earlier chaired the Senate Government Operations Committee and, for nine years, the Senate Commerce and Labor Committee.", sources: [*jj_meet] }
+      - { text: "More than 20 years in the financial industry, including as a senior vice president at Studio Bank; now works in public relations for a Fortune 500 company.", sources: [*jj_meet] }
+      - { text: "Graduate of Texas State University with a degree in education.", sources: [*jj_meet] }
+    why_running:
+      text: >-
+        His campaign says he has represented the state's values since he was first elected and that he fights to
+        lower taxes, defend constitutional rights, secure the southern border, protect the most vulnerable, and make
+        sure parents have a voice in their children's education.
+      sources: [*jj_home, *jj_meet]
+    platform:
+      - category: taxes
+        text: "Keep Tennessee one of the lowest-taxed states by cutting government waste and unnecessary regulation; co-sponsored the constitutional amendment banning a state income tax."
+        sources: [*jj_issues]
+      - category: guns
+        text: "Oppose any effort to weaken gun rights; sponsored the permitless carry law and a law barring financial institutions from tracking firearm purchases, and backed tougher penalties for firearm theft and illegal possession by felons."
+        sources: [*jj_issues]
+      - category: immigration
+        text: "Sponsored SB 6002, which holds officials accountable for sanctuary policies and created a state immigration enforcement division to work with federal authorities; supports requiring employers to verify workers' legal status."
+        sources: [*jj_issues]
+      - category: government
+        text: "Sponsored laws requiring post-election audits and voter-verified paper records, supports voter ID, and is co-sponsoring legislation to create party registration for primaries."
+        sources: [*jj_issues]
+      - category: health_care
+        text: "Oppose vaccine and mask mandates; sponsored laws protecting workers who decline vaccines and barring denial of organ transplants based on vaccination status."
+        sources: [*jj_issues]
+      - category: abortion
+        text: "Describes himself as 100% pro-life; supported the state's Human Life Protection Act and wants to strengthen foster care and adoption."
+        sources: [*jj_issues]
+      - category: education
+        text: "Supports universal school choice and parental control over children's education; sponsored legislation creating a statewide Public Charter School Commission."
+        sources: [*jj_issues]
+    arguments:
+      - stance: for
+        text: >-
+          As majority leader he has helped make Tennessee the lowest-taxed and least-indebted state in the nation, and
+          he has long fought against a state income tax.
+        sources: [*jj_meet, *jj_issues]
+      - stance: for
+        text: >-
+          He has a long record of passing laws, including tougher penalties for child rape, measures against human
+          trafficking, and permitless carry, and he holds an A+ rating from a national gun-rights group.
+        sources: [*jj_meet, *jj_issues]
+      - stance: for
+        text: >-
+          Bills he sponsored added random post-election audits and required voting machines to produce a
+          voter-verified paper audit trail, which he says have made the state's elections among the most secure in
+          the nation.
+        sources: [*jj_issues]
+      - stance: against
+        text: >-
+          A bill he sponsored would keep secret the names of all officers involved in immigration enforcement with no
+          end date; critics say this sacrifices transparency and that "secrecy can protect bad actors."
+        sources: [*lookout_tcog]
+
   - name: "David A Hardy"
     ballot_party: Democratic
     city: "Franklin"
-    why_running: { text: null, sources: [] }
-    platform: []
-    arguments: []
+    incumbent: false
+    website: "https://www.davidhardy4tn.com/"
+    bio_facts:
+      - { text: "Nashville native; CEO of a technology advising firm with a career in health care systems and technology.", sources: [*lookout_guide, *dh_about] }
+      - { text: "Unopposed in the August 2026 Democratic primary for Senate District 27.", sources: [*bp_dh] }
+    why_running:
+      text: >-
+        He says representatives should bring people together and support thriving, safe communities rather than fuel
+        division, and that every voice deserves to be heard. He says his family's values of hard work, leadership, and
+        respect inspired him to run.
+      sources: [*dh_home, *dh_about]
+    platform:
+      - category: health_care
+        text: "Make health care affordable and accessible so people seek preventive care and treatment early."
+        sources: [*dh_issues]
+      - category: infrastructure
+        text: "Invest in roads, bridges, and sewer systems to keep pace with Williamson County's growth."
+        sources: [*dh_issues]
+      - category: economy
+        text: "Support local businesses and entrepreneurs to strengthen the local economy and create jobs."
+        sources: [*dh_issues]
+      - category: education
+        text: "Fund public education to provide qualified teachers, updated materials, safe facilities, and technology."
+        sources: [*dh_issues]
+      - category: government
+        text: "Hold elected officials accountable to voters and make government transparent and responsive."
+        sources: [*dh_issues]
+    arguments:
+      - stance: for
+        text: >-
+          His years improving health care through better systems and technology have given him the problem-solving
+          skills the legislature needs.
+        sources: [*dh_about]
+
 last_verified: 2026-10-13
