@@ -13,7 +13,6 @@ _sources:
   mc_bp: &mc_bp { url: "https://ballotpedia.org/Mike_Croley", title: "Mike Croley, Candidate Connection survey (Ballotpedia)", accessed: 2026-10-13 }
   mc_meet: &mc_meet { url: "https://croleyforcongress.com/meet-mike/", title: "Meet Mike (Croley campaign)", accessed: 2026-10-13 }
   mc_home: &mc_home { url: "https://croleyforcongress.com/", title: "The AAA Blueprint (Croley campaign home page)", accessed: 2026-10-13 }
-  mc_money: &mc_money { url: "https://croleyforcongress.com/when-money-gets-a-vote/", title: "When Money Gets a Vote (Croley campaign blog)", accessed: 2026-10-13 }
   mc_gen: &mc_gen { url: "https://croleyforcongress.com/did-the-last-generation-really-do-better/", title: "Did the Last Generation Really Do Better? (Croley campaign blog)", accessed: 2026-10-13 }
   cm_bp: &cm_bp { url: "https://ballotpedia.org/Christopher_B._Monday", title: "Christopher Monday, Candidate Connection survey (Ballotpedia)", accessed: 2026-10-13 }
   ap_bp: &ap_bp { url: "https://ballotpedia.org/Angus_Purdy", title: "Angus Purdy (Ballotpedia)", accessed: 2026-10-13 }
@@ -79,11 +78,6 @@ candidates:
           Deep local roots and years of community service, including co-founding a nonprofit that aids families of
           fallen first responders, keep him connected to the people he would represent.
         sources: [*jg_meet]
-      - stance: against
-        text: >-
-          Most donations to his campaign have been gifts of $2,000 or more, raising the question of whether he would
-          answer to voters or to large donors.
-        sources: [*mc_money]
 
   - name: "Mike Croley"
     ballot_party: Democratic
@@ -133,11 +127,6 @@ candidates:
           A career of public service as a Navy officer, park ranger, and federal fellow has given him leadership
           experience across several federal agencies.
         sources: [*mc_bp, *mc_meet]
-      - stance: for
-        text: >-
-          His campaign is powered by volunteers and small-dollar donors rather than corporate money, so he would answer
-          to the people of the district.
-        sources: [*mc_bp, *mc_money]
 
   - name: "Christopher B. Monday"
     ballot_party: Independent
