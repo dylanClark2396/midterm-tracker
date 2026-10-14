@@ -21,9 +21,16 @@ const view = prepareRace(
 const checked = formatDate(race.last_verified);
 const slug = (name: string) => name.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '');
 const complete = race.research_status === 'complete';
+// Search snippets: people often search candidates by name, so list them.
+const names = race.candidates.map((c) => c.name);
+const nameList = names.length <= 2 ? names.join(' and ') : `${names.slice(0, -1).join(', ')}, and ${names.at(-1)}`;
+const description =
+  names.length === 0
+    ? `${race.office}: no candidate qualified for the November 3, 2026 Tennessee ballot.`
+    : `${race.office} on the November 3, 2026 Tennessee ballot: ${nameList}${complete ? '. Platforms and arguments for and against each candidate, with sources' : ''}.`;
 ---
 
-<Base title={race.office} description={`${race.office}: candidates on the November 3, 2026 Tennessee ballot${complete ? ', their platforms, and arguments for and against each' : ''}.`}>
+<Base title={`${race.office} candidates`} description={description}>
   <p class="breadcrumb"><a href={url('races')}>Races</a> · {LEVELS[race.level]}</p>
   <h1>{race.office}</h1>
   <p class="muted">

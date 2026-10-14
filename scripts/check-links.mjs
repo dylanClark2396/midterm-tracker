@@ -72,7 +72,8 @@ function collectExternal() {
   }
   for (const file of walk('src').filter((f) => ['.astro', '.ts'].includes(extname(f)))) {
     for (const [u] of readFileSync(file, 'utf8').matchAll(/https?:\/\/[^\s"'`<>)]+/g)) {
-      if (!/\$\{/.test(u)) add(u.replace(/[.,;]+$/, ''), file);
+      // Skip template literals and map tile URL templates ({z}/{x}/{y}).
+      if (!/[{}]/.test(u)) add(u.replace(/[.,;]+$/, ''), file);
     }
   }
   return urls;

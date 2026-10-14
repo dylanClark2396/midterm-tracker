@@ -1,13 +1,19 @@
 ---
 import '../styles/global.css';
-import { url, REPO_URL } from '../lib/site';
+import { url, SITE_NAME } from '../lib/site';
 
 interface Props {
   title: string;
   description?: string;
+  /** Keep the page out of search results (e.g. the 404 page). */
+  noindex?: boolean;
 }
 
-const { title, description = 'Arguments for and against everything on the November 3, 2026 Tennessee ballot, shown without party or group labels.' } = Astro.props;
+const {
+  title,
+  description = 'Candidates, constitutional amendments, and arguments for and against everything on the November 3, 2026 Tennessee ballot, shown without party or group labels.',
+  noindex = false,
+} = Astro.props;
 const path = Astro.url.pathname;
 const nav = [
   { href: url('amendments'), label: 'Amendments' },
@@ -16,7 +22,14 @@ const nav = [
   { href: url('ballot'), label: 'Ballot cheat sheet' },
   { href: url('method'), label: 'How this guide works' },
 ];
-const pageTitle = title === 'Home' ? 'TN 2026 Ballot Guide' : `${title} · TN 2026 Ballot Guide`;
+const isHome = title === 'Home';
+const pageTitle = isHome ? 'Tennessee 2026 Ballot Guide: Candidates and Amendments' : `${title} · ${SITE_NAME}`;
+const canonical = new URL(path, Astro.site).href;
+const socialImage = new URL(url('og-image.png').replace(/\/$/, ''), Astro.site).href;
+// Structured data for search engines: the site itself, on the home page only.
+const jsonLd = isHome
+  ? { '@context': 'https://schema.org', '@type': 'WebSite', name: SITE_NAME, url: new URL('/', Astro.site).href, description, inLanguage: 'en-US' }
+  : null;
 ---
 
 <!doctype html>
@@ -26,6 +39,20 @@ const pageTitle = title === 'Home' ? 'TN 2026 Ballot Guide' : `${title} · TN 20
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>{pageTitle}</title>
     <meta name="description" content={description} />
+    {noindex ? <meta name="robots" content="noindex" /> : <link rel="canonical" href={canonical} />}
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content={SITE_NAME} />
+    <meta property="og:title" content={isHome ? pageTitle : title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:url" content={canonical} />
+    <meta property="og:locale" content="en_US" />
+    <meta property="og:image" content={socialImage} />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content={`${SITE_NAME}: what's on the November 3, 2026 Tennessee ballot`} />
+    <meta name="twitter:card" content="summary_large_image" />
+    <link rel="sitemap" href={url('sitemap-index.xml').replace(/\/$/, '')} />
+    {jsonLd && <script type="application/ld+json" set:html={JSON.stringify(jsonLd)} />}
     <link rel="icon" type="image/svg+xml" href={`${import.meta.env.BASE_URL.replace(/\/$/, '')}/favicon.svg`} />
     <meta name="color-scheme" content="light dark" />
     <script is:inline>document.documentElement.classList.add('js');</script>
@@ -34,7 +61,7 @@ const pageTitle = title === 'Home' ? 'TN 2026 Ballot Guide' : `${title} · TN 20
     <a class="skip" href="#main">Skip to content</a>
     <header class="site-header">
       <div class="wrap">
-        <a class="brand" href={url()}>TN 2026 Ballot Guide</a>
+        <a class="brand" href={url()}>{SITE_NAME}</a>
         <nav class="site-nav" aria-label="Main">
           <ul>
             {nav.map((n) => <li><a href={n.href} aria-current={path.startsWith(n.href) ? 'page' : undefined}>{n.label}</a></li>)}
@@ -56,8 +83,7 @@ const pageTitle = title === 'Home' ? 'TN 2026 Ballot Guide' : `${title} · TN 20
         </p>
         <p>
           Spotted an error or a missing argument? <a href={url('contact')}>Contact us</a> (corrections need a source
-          link). ·
-          <a href={REPO_URL}>Source code and data</a>
+          link).
         </p>
       </div>
     </footer>
