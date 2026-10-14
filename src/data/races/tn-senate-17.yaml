@@ -59,11 +59,6 @@ candidates:
           He owns a financial planning and insurance business with locations around the state, giving him broad
           knowledge of economic issues to bring to the Senate.
         sources: [*pody_home, *bp_pody]
-      - stance: against
-        text: >-
-          In January 2021 he was among the state senators who signed a letter endorsing efforts to overturn the 2020
-          presidential election result.
-        sources: [*lookout_guide]
 
   - name: "Lindsey Patrick-Wright"
     ballot_party: Democratic
