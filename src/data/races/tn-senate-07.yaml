@@ -1,23 +1,123 @@
-# Seeded from the Secretary of State's certified candidate list by
-# scripts/seed-from-certified-list.py. research_status: pending —
-# platforms and arguments not yet compiled.
+# Tennessee Senate, District 7 — Sen. Richard Briggs seeks a fourth term; a 2022 rematch with Bryan Langan.
+# Candidate order follows the Secretary of State's certified candidate list.
+_sources:
+  cap_briggs: &cap_briggs { url: "https://www.capitol.tn.gov/senate/members/s7.html", title: "Senator Richard Briggs (Tennessee General Assembly)", accessed: 2026-10-13 }
+  bp_briggs: &bp_briggs { url: "https://ballotpedia.org/Richard_Briggs_(Tennessee)", title: "Richard Briggs (Ballotpedia)", accessed: 2026-10-13 }
+  rb_home: &rb_home { url: "https://www.briggsforsenate.com/", title: "Dr. Richard Briggs, Tennessee Senate (Briggs campaign)", accessed: 2026-10-13 }
+  rb_about: &rb_about { url: "https://www.briggsforsenate.com/about/", title: "About (Briggs campaign)", accessed: 2026-10-13 }
+  wkms_abortion: &wkms_abortion { url: "https://www.wkms.org/government-politics/2025-02-26/tennessee-republicans-sponsor-abortion-ban-exception-bill", title: "Tennessee Republicans sponsor abortion ban exception bill (Tennessee Lookout via WKMS)", accessed: 2026-10-13 }
+  wkms_thca: &wkms_thca { url: "https://www.wkms.org/government-politics/2025-04-18/tennessee-lawmakers-vote-to-ban-most-cannabis-products-despite-protest-from-local-businesses", title: "Tennessee lawmakers vote to ban most cannabis products, despite protest from local businesses (WKMS)", accessed: 2026-10-13 }
+  compass_primary: &compass_primary { url: "https://compassknox.com/2026/07/28/election-2026-legislative-primaries/", title: "Election 2026: Legislative Primaries (Compass)", accessed: 2026-10-13 }
+  bill_hb1241: &bill_hb1241 { url: "https://wapp.capitol.tn.gov/apps/BillInfo/Default.aspx?BillNumber=HB1241&GA=114", title: "HB 1241 / SB 1425 (Tennessee General Assembly)", accessed: 2026-10-13 }
+  bl_home: &bl_home { url: "https://www.langan4tn.com/", title: "Langan for Tennessee (Langan campaign)", accessed: 2026-10-13 }
+  bl_about: &bl_about { url: "https://www.langan4tn.com/about-me", title: "About Me (Langan campaign)", accessed: 2026-10-13 }
+  bp_langan: &bp_langan { url: "https://ballotpedia.org/Bryan_Langan", title: "Bryan Langan (Ballotpedia)", accessed: 2026-10-13 }
+
 id: tn-senate-07
 office: "Tennessee Senate, District 7"
 level: state_senate
 district: 7
-research_status: pending
+research_status: complete
 candidate_list_source: "https://sos-prod.tnsosgovfiles.com/s3fs-public/document/TNSenate_Nov2026.pdf"
+
 candidates:
   - name: "Richard M. Briggs"
     ballot_party: Republican
     city: "Knoxville"
-    why_running: { text: null, sources: [] }
-    platform: []
-    arguments: []
+    incumbent: true
+    website: "https://www.briggsforsenate.com/"
+    bio_facts:
+      - { text: "Member of the Tennessee Senate for District 7 since November 2014 (109th through 114th General Assemblies).", sources: [*cap_briggs, *bp_briggs] }
+      - { text: "Chair of the Senate State and Local Government Committee; member of the Senate Transportation and Safety Committee and the Senate Rules Committee.", sources: [*cap_briggs] }
+      - { text: "Member of the Knox County Commission, elected in 2008 and re-elected in 2010.", sources: [*rb_about] }
+      - { text: "Heart and lung surgeon in Knoxville for more than 30 years; M.D., University of Kentucky College of Medicine.", sources: [*rb_about, *cap_briggs] }
+      - { text: "Retired U.S. Army colonel; served as a combat trauma surgeon in Operation Desert Storm, receiving the Bronze Star, and later completed tours in Afghanistan and Iraq.", sources: [*rb_about, *cap_briggs] }
+    why_running:
+      text: >-
+        His campaign says he stands for improving education, creating jobs, and keeping taxes low, and that he
+        promises to continue serving the district with honor and integrity. It says he believes the community and the
+        state can do better.
+      sources: [*rb_home]
+    platform:
+      - category: abortion
+        text: "Sponsored a 2025 bill (SB1425) to let physicians end pregnancies involving a lethal fetal anomaly without committing criminal abortion; he said he wants to redefine medically necessary terminations, separate medical care from cultural fights, and that the current law is flawed and vulnerable in court."
+        sources: [*wkms_abortion, *bill_hb1241]
+      - category: public_safety
+        text: "Sponsored the 2025 law banning THCA hemp products and shifting hemp regulation to the Alcoholic Beverage Commission, which he said supports Tennessee hemp growers competing against out-of-state sellers of products that are not legal."
+        sources: [*wkms_thca, *compass_primary]
+    arguments:
+      - stance: for
+        text: >-
+          A heart surgeon and retired Army trauma surgeon, he brings decades of medical experience to the
+          legislature's health care decisions.
+        sources: [*rb_about]
+      - stance: for
+        text: >-
+          His bill would let physicians end pregnancies with a fatal fetal condition and would protect doctors from
+          criminal charges when they treat dangerous pregnancies.
+        sources: [*wkms_abortion]
+      - stance: for
+        text: >-
+          His limits on hemp-derived THC products help in-state hemp farmers who follow the rules compete with
+          out-of-state sellers of products that are not legal.
+        sources: [*wkms_thca]
+      - stance: against
+        text: >-
+          His ban on THCA products hurts small Tennessee businesses rather than out-of-state corporations and could
+          shutter a multi-million-dollar industry.
+        sources: [*wkms_thca]
+      - stance: against
+        text: >-
+          He has not supported school voucher programs and has introduced bills to allow more medical exceptions to
+          the state's abortion ban.
+        sources: [*compass_primary, *wkms_abortion]
+
   - name: "Bryan Langan"
     ballot_party: Democratic
     city: "Knoxville"
-    why_running: { text: null, sources: [] }
-    platform: []
-    arguments: []
+    incumbent: false
+    website: "https://www.langan4tn.com/"
+    bio_facts:
+      - { text: "Graduate of the University of Tennessee; lives in the Karns community and has lived in Knoxville for more than 25 years.", sources: [*bl_home, *bl_about] }
+      - { text: "Has worked for nearly three decades in blue-collar jobs, including the service industry, management, and the trades.", sources: [*bl_home] }
+      - { text: "Was the 2022 nominee for state Senate District 7 and lost the general election to Richard Briggs.", sources: [*bp_langan, *compass_primary] }
+    why_running:
+      text: >-
+        He says he is running to bring accountability to state government and affordability to Tennesseans, and that
+        the legislature has sided with corporations and special interests over working people. He says he wants to
+        deliver tangible benefits and make sure people's voices are heard, and to defend the rights of all
+        Tennesseans and protect the state's natural beauty for future generations.
+      sources: [*bl_home, *bl_about]
+    platform:
+      - category: government
+        text: "Reform campaign finance laws to curb corporate and special-interest money; enact term limits for state senators, representatives, and judges; draw nonpartisan districts that keep communities together; adopt ranked-choice voting; and pass a privacy act ending mass surveillance of residents, such as by networked cameras."
+        sources: [*bl_home]
+      - category: taxes
+        text: "End the state sales tax on groceries, clothing under $50, and footwear under $100; legalize and tax cannabis sales, using the revenue for infrastructure and education."
+        sources: [*bl_home]
+      - category: cost_of_living
+        text: "Raise the minimum wage, repeal the 2018 ban on local affordable-housing requirements, return housing decisions to cities and counties, and ban surge pricing and surveillance pricing."
+        sources: [*bl_home]
+      - category: health_care
+        text: "Expand Medicaid."
+        sources: [*bl_home]
+      - category: education
+        text: "Fully fund public schools, support teachers, and expand pre-K."
+        sources: [*bl_home]
+      - category: infrastructure
+        text: "Repair and upgrade roads, bridges, and sewers."
+        sources: [*bl_home]
+      - category: environment
+        text: "Protect mountains, waterways, and wildlife, and invest in water conservation, reclamation, and upgraded sewage systems to stop contamination of waterways."
+        sources: [*bl_about]
+      - category: abortion
+        text: "Restore the right to bodily autonomy; he opposes the state's abortion ban."
+        sources: [*bl_home, *bl_about]
+    arguments:
+      - stance: for
+        text: >-
+          After nearly three decades in service, management, and skilled-trade jobs, he knows firsthand the challenges
+          working Tennesseans face.
+        sources: [*bl_home]
+
 last_verified: 2026-10-13

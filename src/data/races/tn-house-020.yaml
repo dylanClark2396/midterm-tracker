@@ -1,29 +1,100 @@
-# Seeded from the Secretary of State's certified candidate list by
-# scripts/seed-from-certified-list.py. research_status: pending —
-# platforms and arguments not yet compiled.
+# Tennessee House, District 20 (western Blount County, including Maryville) — Rep. Tom Stinnett, in office since
+# 2024, faces Karen Gertz (a 2024 rematch) and independent Jeff "Cog" Coggin.
+# Candidate order follows the Secretary of State's certified candidate list.
+_sources:
+  cga_h20: &cga_h20 { url: "https://wapp.capitol.tn.gov/apps/legislatorinfo/member.aspx?district=H20", title: "Representative Tom Stinnett (Tennessee General Assembly)", accessed: 2026-10-13 }
+  bp_stinnett: &bp_stinnett { url: "https://ballotpedia.org/Tom_Stinnett", title: "Tom Stinnett (Ballotpedia)", accessed: 2026-10-13 }
+  ts_home: &ts_home { url: "https://www.tomstinnett4blount.com/", title: "Tom Stinnett for State House (Stinnett campaign)", accessed: 2026-10-13 }
+  ts_ag: &ts_ag { url: "https://tnhousegop.org/press-releases/2026/02/rep-tom-stinnett-appointed-vice-chair-of-agriculture-and-natural-resources-committee/", title: "Rep. Tom Stinnett appointed vice-chair of Agriculture and Natural Resources Committee (Tennessee House Republican Caucus)", accessed: 2026-10-13 }
+  ts_haven: &ts_haven { url: "https://tnhousegop.org/press-releases/2025/03/rep-tom-stinnett-seeks-to-add-safe-haven-law-education-to-tennessee-curriculum/", title: "Rep. Tom Stinnett seeks to add Safe Haven Law education to Tennessee curriculum (Tennessee House Republican Caucus)", accessed: 2026-10-13 }
+  hb0368: &hb0368 { url: "https://wapp.capitol.tn.gov/apps/BillInfo/Default.aspx?BillNumber=HB0368&GA=114", title: "HB0368 bill information (Tennessee General Assembly)", accessed: 2026-10-13 }
+  hb1525: &hb1525 { url: "https://wapp.capitol.tn.gov/apps/BillInfo/Default.aspx?BillNumber=HB1525&GA=114", title: "HB1525 bill information (Tennessee General Assembly)", accessed: 2026-10-13 }
+  lookout20: &lookout20 { url: "https://tennesseelookout.com/voter-guides/contests/house-district-20/", title: "Tennessee House of Representatives, 20th District voter guide (Tennessee Lookout)", accessed: 2026-10-13 }
+  kg_home: &kg_home { url: "https://karengertztn.com/", title: "Karen Gertz for District 20 (Gertz campaign)", accessed: 2026-10-13 }
+  bp_gertz: &bp_gertz { url: "https://ballotpedia.org/Karen_Gertz", title: "Karen Gertz (Ballotpedia)", accessed: 2026-10-13 }
+
 id: tn-house-020
 office: "Tennessee House, District 20"
 level: state_house
 district: 20
-research_status: pending
+research_status: complete
 candidate_list_source: "https://sos-prod.tnsosgovfiles.com/s3fs-public/document/TNHouse_Nov2026.pdf"
+
 candidates:
   - name: "Tom Stinnett"
     ballot_party: Republican
     city: "Friendsville"
+    incumbent: true
+    website: "https://www.tomstinnett4blount.com/"
+    bio_facts:
+      - { text: "State representative for District 20 since November 2024, when he defeated Karen Gertz with 74.8% of the vote.", sources: [*bp_stinnett, *cga_h20] }
+      - { text: "Vice chair of the House Agriculture & Natural Resources Committee; also serves on the Judiciary Committee and the Agriculture & Natural Resources and Civil Justice subcommittees.", sources: [*cga_h20, *ts_ag] }
+      - { text: "Blount County commissioner from 2014 to 2024.", sources: [*cga_h20] }
+      - { text: "Retired career and technical education teacher (37 years) in Maryville City Schools, where he also coached football and track.", sources: [*cga_h20, *ts_home, *lookout20] }
+      - { text: "B.S. in industrial education from East Tennessee State University (1979), master's from the University of Tennessee (1982), and education specialist degree from Lincoln Memorial University (1986).", sources: [*cga_h20] }
     why_running: { text: null, sources: [] }
-    platform: []
-    arguments: []
+    platform:
+      - category: taxes
+        text: "Cut taxes for families and businesses."
+        sources: [*ts_home]
+      - category: immigration
+        text: "Deny sanctuary for people in the country illegally."
+        sources: [*ts_home]
+      - category: public_safety
+        text: "Back law enforcement and hold criminals accountable; sponsored a law generally requiring consecutive sentences for offenses against more than one minor victim."
+        sources: [*ts_home, *hb1525]
+      - category: infrastructure
+        text: "Make sure infrastructure keeps up with growth."
+        sources: [*ts_home]
+      - category: guns
+        text: "Defend the Constitution and gun rights."
+        sources: [*ts_home]
+      - category: education
+        text: "Keep schools strong; sponsored a 2025 law adding instruction on the state's Safe Haven Law for newborns to the high school family life curriculum."
+        sources: [*ts_home, *hb0368, *ts_haven]
+      - category: agriculture
+        text: "Support Tennessee's farmers and protect the state's land, natural resources and agricultural heritage."
+        sources: [*ts_ag]
+    arguments:
+      - stance: for
+        text: >-
+          A longtime teacher and coach, he worked as a county commissioner to improve infrastructure, create jobs,
+          increase public safety and strengthen public education.
+        sources: [*ts_home]
+
   - name: "Karen Gertz"
     ballot_party: Democratic
     city: "Maryville"
-    why_running: { text: null, sources: [] }
-    platform: []
+    incumbent: false
+    website: "https://karengertztn.com/"
+    bio_facts:
+      - { text: "Bachelor's degree in biology from Maryville College (2000).", sources: [*bp_gertz, *kg_home, *lookout20] }
+      - { text: "Has worked in technical writing, quality assurance and auditing in the science industry.", sources: [*kg_home, *bp_gertz, *lookout20] }
+      - { text: "Ran for this seat in 2024 and lost to Tom Stinnett, receiving 25.2% of the vote.", sources: [*bp_gertz] }
+    why_running:
+      text: >-
+        She says she is running to provide a voice for everyone in her community, arguing that the legislature's
+        majority does not represent its citizens' needs and is passing laws that diminish Tennesseans' rights,
+        freedoms and safety. She wants residents to know they have a representative who listens and puts their needs
+        first.
+      sources: [*kg_home]
+    platform:
+      - category: abortion
+        text: "Guarantee in state law the right to abortion, IVF and birth control."
+        sources: [*kg_home]
+      - category: education
+        text: "Fund public schools so they can pay educators well, and use public funds only for public schools, not vouchers."
+        sources: [*kg_home]
+      - category: guns
+        text: "Pass gun safety laws such as a red flag law and expanded background checks."
+        sources: [*kg_home]
+      - category: health_care
+        text: "Expand Medicaid to cover the uninsured, reduce rural hospital closures, and provide mental health and substance abuse care."
+        sources: [*kg_home]
     arguments: []
+
   - name: "Jeff \"Cog\" Coggin"
     ballot_party: Independent
     city: "Maryville"
-    why_running: { text: null, sources: [] }
-    platform: []
-    arguments: []
+
 last_verified: 2026-10-13
