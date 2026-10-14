@@ -157,8 +157,8 @@ candidates:
         sources: [*fox17]
       - stance: against
         text: >-
-          He courted the most ideological voters in the last race and is now presenting himself as a moderate, so
-          voters cannot be sure how he would vote in Washington.
+          He appealed to a different set of voters in the last race than he is courting now, so it is hard to know
+          how he would vote in Washington.
         sources: [*nc5, *fox17]
       - stance: against
         text: "He has declined to debate his opponent before the election."
