@@ -1,23 +1,127 @@
-# Seeded from the Secretary of State's certified candidate list by
-# scripts/seed-from-certified-list.py. research_status: pending —
-# platforms and arguments not yet compiled.
+# Tennessee House, District 14 (southwest Knox County) — Deputy Speaker Jason Zachary, in office since 2015,
+# faces Lindsay Young Honaker.
+# Candidate order follows the Secretary of State's certified candidate list.
+_sources:
+  cga_h14: &cga_h14 { url: "https://wapp.capitol.tn.gov/apps/legislatorinfo/member.aspx?district=H14", title: "Representative Jason Zachary (Tennessee General Assembly)", accessed: 2026-10-13 }
+  bp_zach: &bp_zach { url: "https://ballotpedia.org/Jason_Zachary", title: "Jason Zachary (Ballotpedia)", accessed: 2026-10-13 }
+  gop_zach: &gop_zach { url: "https://tnhousegop.org/members/representative-jason-zachary/", title: "Deputy Speaker Representative Jason Zachary (Tennessee House Republican Caucus)", accessed: 2026-10-13 }
+  zach_cdl: &zach_cdl { url: "https://tnhousegop.org/press-releases/2026/04/rep-jason-zachary-passes-protections-for-tennesseans-against-illegal-alien-commercial-drivers/", title: "Rep. Jason Zachary passes protections for Tennesseans against illegal alien commercial drivers (Tennessee House Republican Caucus)", accessed: 2026-10-13 }
+  hb1706: &hb1706 { url: "https://wapp.capitol.tn.gov/apps/BillInfo/Default.aspx?BillNumber=HB1706&GA=114", title: "HB1706 bill information (Tennessee General Assembly)", accessed: 2026-10-13 }
+  zach_snap: &zach_snap { url: "https://tnhousegop.org/press-releases/2025/02/deputy-speaker-jason-zachary-proposes-tennessee-health-snap-act/", title: "Deputy Speaker Jason Zachary proposes Tennessee Health SNAP Act (Tennessee House Republican Caucus)", accessed: 2026-10-13 }
+  zach_leic: &zach_leic { url: "https://tnhousegop.org/press-releases/2025/05/deputy-speaker-jason-zachary-secures-500k-for-university-of-tennessee-law-enforcement-innovation-center/", title: "Deputy Speaker Jason Zachary secures $500K for University of Tennessee Law Enforcement Innovation Center (Tennessee House Republican Caucus)", accessed: 2026-10-13 }
+  hb2194: &hb2194 { url: "https://wapp.capitol.tn.gov/apps/BillInfo/Default.aspx?BillNumber=HB2194&GA=114", title: "HB2194 bill information (Tennessee General Assembly)", accessed: 2026-10-13 }
+  hb0793: &hb0793 { url: "https://wapp.capitol.tn.gov/apps/BillInfo/Default.aspx?BillNumber=HB0793&GA=114", title: "HB0793 bill information (Tennessee General Assembly)", accessed: 2026-10-13 }
+  hb6004: &hb6004 { url: "https://wapp.capitol.tn.gov/apps/BillInfo/Default.aspx?BillNumber=HB6004&GA=114", title: "HB6004 (Education Freedom Scholarship Act) bill information and House vote (Tennessee General Assembly)", accessed: 2026-10-13 }
+  scene_imm: &scene_imm { url: "https://www.nashvillescene.com/news/citylimits/2026-legislature-immigration-vouchers/article_10c74a04-ad7d-4df0-be0c-2b8ad7a69778.html", title: "Legislature to focus on immigration, voucher expansion (Nashville Scene)", accessed: 2026-10-13 }
+  lookout14: &lookout14 { url: "https://tennesseelookout.com/voter-guides/contests/house-district-14/", title: "Tennessee House of Representatives, 14th District voter guide (Tennessee Lookout)", accessed: 2026-10-13 }
+  lyh_home: &lyh_home { url: "https://lindsayfortennessee.com/", title: "Lindsay for Tennessee (Honaker campaign)", accessed: 2026-10-13 }
+  lyh_meet: &lyh_meet { url: "https://lindsayfortennessee.com/meet-lindsay/", title: "Meet Lindsay (Honaker campaign)", accessed: 2026-10-13 }
+  lyh_issues: &lyh_issues { url: "https://lindsayfortennessee.com/issues/", title: "Where I Stand on the Issues (Honaker campaign)", accessed: 2026-10-13 }
+
 id: tn-house-014
 office: "Tennessee House, District 14"
 level: state_house
 district: 14
-research_status: pending
+research_status: complete
 candidate_list_source: "https://sos-prod.tnsosgovfiles.com/s3fs-public/document/TNHouse_Nov2026.pdf"
+
 candidates:
   - name: "Jason Zachary"
     ballot_party: Republican
     city: "Knoxville"
+    incumbent: true
+    website: null
+    bio_facts:
+      - { text: "State representative for District 14 since August 2015 (House member of the 109th through 114th General Assemblies); Deputy Speaker of the House.", sources: [*cga_h14, *bp_zach, *gop_zach] }
+      - { text: "Member of the House Finance, Ways, and Means; Calendar and Rules; Commerce; and Ethics committees.", sources: [*cga_h14, *gop_zach] }
+      - { text: "Principal/president of Americomm, a telecommunications firm.", sources: [*cga_h14, *bp_zach] }
+      - { text: "B.S. from Middle Tennessee State University; also attended Pellissippi State Community College and the University of Tennessee.", sources: [*cga_h14] }
     why_running: { text: null, sources: [] }
-    platform: []
-    arguments: []
+    platform:
+      - category: immigration
+        text: "Sponsored a 2026 law making it a crime for a person unlawfully in the U.S. to drive a commercial motor vehicle in Tennessee, or for an employer to knowingly allow it, and requiring police to notify federal immigration authorities after such arrests; called the 2026 immigration bill package one of the session's primary objectives."
+        sources: [*hb1706, *zach_cdl, *scene_imm]
+      - category: health_care
+        text: "Proposed the 2025 Tennessee Health SNAP Act directing the state to seek a federal waiver to bar SNAP benefits from being used on candy and soft drinks."
+        sources: [*zach_snap]
+      - category: public_safety
+        text: "Secured $500,000 in 2025 for a law enforcement leadership training center at the University of Tennessee Law Enforcement Innovation Center."
+        sources: [*zach_leic]
+      - category: education
+        text: "Sponsored a 2026 law requiring public university governing boards to adopt policies that clearly separate faculty tenure decisions from disciplinary actions; co-sponsored a bill, passed by the House in 2026 but not enacted, that as introduced would let public schools refuse to enroll students unlawfully present in the U.S."
+        sources: [*hb2194, *hb0793]
+    arguments:
+      - stance: for
+        text: >-
+          His commercial driver law keeps families safe on the roads by ensuring only lawful residents can operate
+          commercial vehicles in Tennessee.
+        sources: [*zach_cdl]
+      - stance: for
+        text: >-
+          He secured state funding for a training center to better prepare police officers for emerging leadership
+          challenges.
+        sources: [*zach_leic]
+      - stance: against
+        text: >-
+          He has backed sending public money to private schools: in 2019 he switched his vote to pass the state's
+          education savings account program, and in 2025 he voted for statewide vouchers that have no accountability to
+          taxpayers.
+        sources: [*lookout14, *hb6004, *lyh_issues]
+      - stance: against
+        text: >-
+          He called the 2026 immigration bills, including one letting schools turn away students without legal status,
+          one of the session's primary objectives, when the legislature should be focused on school funding, grocery
+          costs, roads, and health care.
+        sources: [*scene_imm, *hb0793, *lyh_issues]
+
   - name: "Lindsay Young Honaker"
     ballot_party: Democratic
     city: "Knoxville"
-    why_running: { text: null, sources: [] }
-    platform: []
-    arguments: []
+    incumbent: false
+    website: "https://lindsayfortennessee.com/"
+    bio_facts:
+      - { text: "Works on the project management team at Cellular Sales' corporate office.", sources: [*lyh_meet, *lookout14] }
+      - { text: "Farragut native who attended Farragut schools; political science degree from Maryville College.", sources: [*lyh_meet] }
+      - { text: "First campaign for public office.", sources: [*lookout14] }
+    why_running:
+      text: >-
+        She says she did not set out to run for office, but realized that caring about the community is not enough
+        without stepping up to serve it. She says she wants to bring practical, people-first leadership to Nashville
+        focused on affordability, education, health care, responsible growth, and giving the community a real voice,
+        so her children can build a life in Tennessee.
+      sources: [*lyh_home, *lyh_meet]
+    platform:
+      - category: education
+        text: "Oppose voucher programs, fully fund public schools, and pay teachers as professionals."
+        sources: [*lyh_issues]
+      - category: cost_of_living
+        text: "Help seniors age in place through tax relief, health care access, and transportation; improve disability services with better caregiver pay and shorter waitlists; ease childcare and housing pressures on working families."
+        sources: [*lyh_issues]
+      - category: infrastructure
+        text: "Fix existing roads first, push TDOT's corridor improvements and congestion relief on I-40, Pellissippi Parkway, and Northshore, and phase in park-and-ride routes and senior and medical shuttles; she opposes toll lanes as the answer."
+        sources: [*lyh_issues]
+      - category: taxes
+        text: "Repeal the 2006 state ban on development impact fees so developers help pay for the roads, schools, and services their projects require."
+        sources: [*lyh_issues]
+      - category: environment
+        text: "Invest in flood mitigation, stormwater systems, resilient roads and bridges, and disaster preparedness; support solar expansion and grid resilience; protect mountains, waterways, and green spaces."
+        sources: [*lyh_issues]
+      - category: health_care
+        text: "Expand Medicaid to close the coverage gap, protect rural hospitals, keep health decisions between patients and doctors, and require prescription drug pricing transparency."
+        sources: [*lyh_issues]
+      - category: immigration
+        text: "Oppose an ICE facility in West Knoxville and Hardin Valley, laws requiring schools to check students' immigration status, and penalties on local governments that decline to enforce federal immigration law."
+        sources: [*lyh_issues]
+    arguments:
+      - stance: for
+        text: >-
+          She would be a hands-on advocate who helps constituents cut through red tape in state systems, so government
+          works for people rather than against them.
+        sources: [*lyh_issues]
+      - stance: for
+        text: >-
+          Letting local governments charge impact fees would make developers, not residents, pay for the roads and
+          services strained by rapid growth in Farragut and West Knoxville.
+        sources: [*lyh_issues]
+
 last_verified: 2026-10-13
