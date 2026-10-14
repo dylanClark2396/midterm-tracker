@@ -1,23 +1,95 @@
-# Seeded from the Secretary of State's certified candidate list by
-# scripts/seed-from-certified-list.py. research_status: pending —
-# platforms and arguments not yet compiled.
+# Tennessee House, District 19 (east and northeast Knox County) — Rep. Dave Wright, in office since 2018,
+# faces Jenny Fowler.
+# Candidate order follows the Secretary of State's certified candidate list.
+_sources:
+  cga_h19: &cga_h19 { url: "https://wapp.capitol.tn.gov/apps/legislatorinfo/member.aspx?district=H19", title: "Representative Dave Wright (Tennessee General Assembly)", accessed: 2026-10-13 }
+  bp_wright: &bp_wright { url: "https://ballotpedia.org/Dave_Wright_(Tennessee)", title: "Dave Wright (Ballotpedia)", accessed: 2026-10-13 }
+  hb0618: &hb0618 { url: "https://wapp.capitol.tn.gov/apps/BillInfo/Default.aspx?BillNumber=HB0618&GA=114", title: "HB0618 bill information (Tennessee General Assembly)", accessed: 2026-10-13 }
+  hb0765: &hb0765 { url: "https://wapp.capitol.tn.gov/apps/BillInfo/Default.aspx?BillNumber=HB0765&GA=114", title: "HB0765 bill information (Tennessee General Assembly)", accessed: 2026-10-13 }
+  hb0766: &hb0766 { url: "https://wapp.capitol.tn.gov/apps/BillInfo/Default.aspx?BillNumber=HB0766&GA=114", title: "HB0766 bill information (Tennessee General Assembly)", accessed: 2026-10-13 }
+  hb0617: &hb0617 { url: "https://wapp.capitol.tn.gov/apps/BillInfo/Default.aspx?BillNumber=HB0617&GA=114", title: "HB0617 bill information (Tennessee General Assembly)", accessed: 2026-10-13 }
+  hb1680: &hb1680 { url: "https://wapp.capitol.tn.gov/apps/BillInfo/Default.aspx?BillNumber=HB1680&GA=114", title: "HB1680 bill information (Tennessee General Assembly)", accessed: 2026-10-13 }
+  compass19: &compass19 { url: "https://compassknox.com/2026/10/08/election-2026-state-house-districts-19-and-89/", title: "Election 2026: State House Districts 19 and 89 (Compass Knox)", accessed: 2026-10-13 }
+  lookout19: &lookout19 { url: "https://tennesseelookout.com/voter-guides/contests/house-district-19/", title: "Tennessee House of Representatives, 19th District voter guide (Tennessee Lookout)", accessed: 2026-10-13 }
+  jf_home: &jf_home { url: "https://jennyfortn.com/", title: "Jenny Fowler for Tennessee House District 19 (Fowler campaign)", accessed: 2026-10-13 }
+  jf_about: &jf_about { url: "https://jennyfortn.com/about/", title: "About Jenny (Fowler campaign)", accessed: 2026-10-13 }
+  jf_issues: &jf_issues { url: "https://jennyfortn.com/core-issues/", title: "Core Issues (Fowler campaign)", accessed: 2026-10-13 }
+  jf_civic: &jf_civic { url: "https://jennyfortn.com/civic-values/", title: "Civic Values (Fowler campaign)", accessed: 2026-10-13 }
+
 id: tn-house-019
 office: "Tennessee House, District 19"
 level: state_house
 district: 19
-research_status: pending
+research_status: complete
 candidate_list_source: "https://sos-prod.tnsosgovfiles.com/s3fs-public/document/TNHouse_Nov2026.pdf"
+
 candidates:
   - name: "Dave Wright"
     ballot_party: Republican
     city: "Corryton"
+    incumbent: true
+    website: null
+    bio_facts:
+      - { text: "State representative for District 19 since November 2018; House member of the 111th through 114th General Assemblies.", sources: [*bp_wright, *cga_h19] }
+      - { text: "Vice chair of the House State & Local Government Committee; also serves on the Transportation Committee and the Cities & Counties, Elections & Campaign Finance, and Transportation subcommittees.", sources: [*cga_h19, *compass19] }
+      - { text: "Knox County commissioner from 2008 to 2018, serving as vice chairman in 2014 and chairman in 2015 and 2016.", sources: [*cga_h19, *compass19] }
+      - { text: "Retired from AT&T; B.S. in business administration from the University of Tennessee; attended U.S. Army Officer Candidate School.", sources: [*cga_h19, *lookout19] }
     why_running: { text: null, sources: [] }
-    platform: []
+    platform:
+      - category: government
+        text: "Sponsored a law barring local elected officials from holding a second elected office in the state at the same time."
+        sources: [*hb0618]
+      - category: taxes
+        text: "Sponsored bills to fund property tax relief for low-income elderly, disabled, and disabled-veteran homeowners from delinquent property tax proceeds and penalties."
+        sources: [*hb0765, *hb0766]
+      - category: education
+        text: "Sponsored a bill to designate October as Fentanyl Poisoning Awareness Month in public schools, with age-appropriate instruction on fentanyl."
+        sources: [*hb0617]
+      - category: infrastructure
+        text: "Sponsored a bill to tax the electric power used to charge all-electric and plug-in hybrid vehicles."
+        sources: [*hb1680]
     arguments: []
+
   - name: "Jenny Fowler"
     ballot_party: Democratic
     city: "Kodak"
-    why_running: { text: null, sources: [] }
-    platform: []
-    arguments: []
+    incumbent: false
+    website: "https://jennyfortn.com"
+    bio_facts:
+      - { text: "Distinguished Lecturer of Mathematics at the University of Tennessee, Knoxville, for about 30 years until retiring in 2024; served seven years on the UT Faculty Senate.", sources: [*jf_about, *compass19, *lookout19] }
+      - { text: "Graduate of The Ohio State University; master's degree in mathematics from the University of Kentucky.", sources: [*jf_about] }
+      - { text: "Raised in rural southern Ohio; has lived in Knox County for more than 30 years and in the Seven Islands area of District 19 since 2016.", sources: [*jf_about, *compass19] }
+      - { text: "First campaign for public office.", sources: [*lookout19] }
+    why_running:
+      text: >-
+        She says she wants to be a fresh voice for East Knox County that puts people over special interests and
+        will take residents' stories and concerns to Nashville. She says she will listen to District 19's needs and
+        bring common-sense leadership grounded in empathy and civil discourse.
+      sources: [*jf_home, *jf_civic]
+    platform:
+      - category: health_care
+        text: "Expand affordable health care and school nutrition programs."
+        sources: [*jf_issues]
+      - category: education
+        text: "Fund public schools, trade schools, community colleges and universities; oppose school vouchers and school-sponsored religious education."
+        sources: [*jf_issues]
+      - category: agriculture
+        text: "Support local farmers and conserve farmland, and require careful planning for roads, utilities and schools when farmland is developed."
+        sources: [*jf_issues]
+      - category: environment
+        text: "Preserve public lands, parks and greenways for future generations."
+        sources: [*jf_issues]
+      - category: taxes
+        text: "Reduce or eliminate the state tax on groceries; avoid tax increases on residents while asking large corporations and the very wealthy to pay more."
+        sources: [*jf_issues, *jf_civic]
+      - category: cost_of_living
+        text: "Build affordable housing responsibly and look for ways to lower electricity and natural gas costs."
+        sources: [*jf_issues]
+    arguments:
+      - stance: for
+        text: >-
+          After three decades teaching at the University of Tennessee, she promises to listen to residents and
+          work with people of differing views to get results for the district.
+        sources: [*jf_about, *jf_civic]
+
 last_verified: 2026-10-13
