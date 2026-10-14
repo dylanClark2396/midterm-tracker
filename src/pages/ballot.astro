@@ -1,0 +1,357 @@
+---
+import { getCollection } from 'astro:content';
+import Base from '../layouts/Base.astro';
+import { url } from '../lib/site';
+
+const races = (await getCollection('races')).map((r) => r.data);
+const amendments = (await getCollection('amendments')).map((a) => a.data).sort((a, b) => a.number - b.number);
+
+const byDistrict = (level: string) =>
+  races.filter((r) => r.level === level).sort((a, b) => (a.district ?? 0) - (b.district ?? 0));
+const statewide = ['governor', 'us-senate'].map((id) => races.find((r) => r.id === id)!);
+const districtLevels = [
+  { level: 'us_house', label: 'U.S. House district', races: byDistrict('us_house') },
+  { level: 'state_senate', label: 'Tennessee Senate district', races: byDistrict('state_senate') },
+  { level: 'state_house', label: 'Tennessee House district', races: byDistrict('state_house') },
+];
+const leaveBlank = 'Leave blank';
+---
+
+<Base title="Ballot cheat sheet" description="Mark a practice ballot and get a short list of your picks to print, download, or copy. Nothing is saved.">
+  <h1>Ballot cheat sheet</h1>
+  <p class="lede">
+    Fill in as much or as little of this practice ballot as you like, then make a short list of your picks to print,
+    download, or copy onto paper and take with you when you vote.
+  </p>
+
+  <div class="notice">
+    <p style="margin:0">
+      <strong>Nothing here is saved.</strong> Your choices are never stored or sent anywhere, not even in your browser.
+      They exist only in this open tab and are gone when you reload, close, or leave the page, so print, download, or
+      copy your cheat sheet before you go.
+    </p>
+  </div>
+
+  <noscript>
+    <div class="notice"><p style="margin:0">The cheat sheet needs JavaScript. You can still read every race on the <a href={url('races')}>races page</a>.</p></div>
+  </noscript>
+
+  <form class="ballot-form" id="ballot-form" autocomplete="off">
+    <fieldset class="step">
+      <legend>Your districts</legend>
+      <p class="small muted" style="margin-top:0">
+        Pick your districts to show the races on your ballot. Not sure?{' '}
+        <a href={url('districts')} target="_blank" rel="noopener">Find your districts</a> (opens in a new tab so you
+        don't lose your picks).
+      </p>
+      <div class="district-pickers">
+        {districtLevels.map((d) => (
+          <label>
+            <span>{d.label}</span>
+            <select data-district={d.level}>
+              <option value="">Not sure / skip</option>
+              {d.races.map((r) => <option value={r.id}>District {r.district}</option>)}
+            </select>
+          </label>
+        ))}
+      </div>
+      <p class="small muted" style="margin-bottom:0">
+        Only odd-numbered Tennessee Senate districts are on the ballot this year. If yours isn't listed, you have no
+        state Senate race.
+      </p>
+    </fieldset>
+
+    {[statewide, ...districtLevels.map((d) => d.races)].flat().map((r) => (
+      <fieldset class="race" data-race={r.id} data-label={r.office} data-level={r.level} hidden={r.level !== 'statewide'}>
+        <legend>{r.office}</legend>
+        {r.candidates.length === 0 ? (
+          <p class="none" style="margin:0">No candidate qualified for this race.</p>
+        ) : (
+          <>
+            {r.candidates.map((c) => (
+              <label class="choice">
+                <input type="radio" name={r.id} value={c.name} />
+                <span>{c.name}<span class="party">{c.ballot_party}</span></span>
+              </label>
+            ))}
+            <label class="choice blank">
+              <input type="radio" name={r.id} value="" checked />
+              <span>{leaveBlank}</span>
+            </label>
+            <p class="small" style="margin:0.4rem 0 0"><a href={url(`races/${r.id}`)} target="_blank" rel="noopener">Read about this race</a></p>
+          </>
+        )}
+      </fieldset>
+    ))}
+
+    {amendments.map((a) => (
+      <fieldset class="race" data-race={a.id} data-label={`Amendment ${a.number} (${a.title})`}>
+        <legend>Amendment {a.number}: {a.title}</legend>
+        {['Yes', 'No'].map((v) => (
+          <label class="choice">
+            <input type="radio" name={a.id} value={v} />
+            <span>{v}</span>
+          </label>
+        ))}
+        <label class="choice blank">
+          <input type="radio" name={a.id} value="" checked />
+          <span>{leaveBlank}</span>
+        </label>
+        <p class="small" style="margin:0.4rem 0 0"><a href={url(`amendments/${a.id}`)} target="_blank" rel="noopener">Read about this amendment</a></p>
+      </fieldset>
+    ))}
+
+    <div class="actions">
+      <button type="submit">Make my cheat sheet</button>
+      <button type="reset" class="secondary">Clear everything</button>
+    </div>
+  </form>
+
+  <section class="sheet" id="sheet" hidden aria-labelledby="sheet-h" tabindex="-1">
+    <h2 id="sheet-h">My ballot cheat sheet</h2>
+    <p class="muted small">Tennessee general election · November 3, 2026</p>
+    <ol id="sheet-list"></ol>
+    <p class="none" id="sheet-empty" hidden>You haven't picked anything yet.</p>
+    <div class="actions no-print">
+      <button type="button" data-action="print">Print</button>
+      <button type="button" data-action="download">Download</button>
+      <button type="button" data-action="copy">Copy</button>
+      <button type="button" data-action="edit" class="secondary">Change my picks</button>
+    </div>
+    <p class="small muted no-print" id="sheet-status" role="status"></p>
+    <p class="small muted no-print">Reminder: this cheat sheet isn't saved. Print, download, or copy it before you leave this page.</p>
+  </section>
+</Base>
+
+<script>
+  const form = document.getElementById('ballot-form') as HTMLFormElement;
+  const sheet = document.getElementById('sheet') as HTMLElement;
+  const list = document.getElementById('sheet-list') as HTMLOListElement;
+  const empty = document.getElementById('sheet-empty') as HTMLElement;
+  const status = document.getElementById('sheet-status') as HTMLElement;
+  const races = [...form.querySelectorAll<HTMLFieldSetElement>('fieldset[data-race]')];
+  const selects = [...form.querySelectorAll<HTMLSelectElement>('select[data-district]')];
+
+  // Show only the district races the voter picked. Hidden races drop off the sheet.
+  const showDistricts = () => {
+    for (const select of selects) {
+      for (const fs of races.filter((r) => r.dataset.level === select.dataset.district)) {
+        fs.hidden = fs.dataset.race !== select.value;
+      }
+    }
+  };
+  selects.forEach((s) => s.addEventListener('change', showDistricts));
+
+  const picks = () =>
+    races
+      .filter((fs) => !fs.hidden)
+      .map((fs) => ({
+        label: fs.dataset.label!,
+        choice: fs.querySelector<HTMLInputElement>('input[type="radio"]:checked')?.value ?? '',
+      }))
+      .filter((p) => p.choice);
+
+  const asText = () =>
+    ['My ballot cheat sheet', 'Tennessee general election, November 3, 2026', '', ...picks().map((p) => `${p.label}: ${p.choice}`)].join('\n');
+
+  // Warn before leaving once anything is picked, since nothing is kept.
+  let dirty = false;
+  form.addEventListener('change', () => (dirty = picks().length > 0));
+  addEventListener('beforeunload', (e) => {
+    if (dirty) e.preventDefault();
+  });
+
+  form.addEventListener('submit', (e) => {
+    e.preventDefault();
+    const items = picks();
+    list.replaceChildren(
+      ...items.map((p) => {
+        const li = document.createElement('li');
+        const office = document.createElement('span');
+        office.className = 'office';
+        office.textContent = p.label;
+        const choice = document.createElement('strong');
+        choice.textContent = p.choice;
+        li.append(office, choice);
+        return li;
+      }),
+    );
+    list.hidden = items.length === 0;
+    empty.hidden = items.length > 0;
+    status.textContent = '';
+    sheet.hidden = false;
+    sheet.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    sheet.focus({ preventScroll: true });
+  });
+
+  form.addEventListener('reset', () => {
+    // Let the browser reset the inputs first, then re-sync what's shown.
+    setTimeout(() => {
+      showDistricts();
+      dirty = false;
+      sheet.hidden = true;
+    });
+  });
+
+  sheet.addEventListener('click', async (e) => {
+    const action = (e.target as HTMLElement).closest<HTMLButtonElement>('button[data-action]')?.dataset.action;
+    if (action === 'print') {
+      print();
+    } else if (action === 'download') {
+      const link = document.createElement('a');
+      link.href = URL.createObjectURL(new Blob([asText()], { type: 'text/plain' }));
+      link.download = 'ballot-cheat-sheet.txt';
+      link.click();
+      URL.revokeObjectURL(link.href);
+      status.textContent = 'Downloaded ballot-cheat-sheet.txt.';
+    } else if (action === 'copy') {
+      try {
+        await navigator.clipboard.writeText(asText());
+        status.textContent = 'Copied. Paste it anywhere, or write it down.';
+      } catch {
+        status.textContent = "Couldn't copy automatically. Select the list above and copy it by hand.";
+      }
+    } else if (action === 'edit') {
+      form.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
+  });
+
+  // A back/forward cache restore can bring old picks back; start fresh instead.
+  addEventListener('pageshow', (e) => {
+    if (e.persisted) form.reset();
+  });
+  showDistricts();
+</script>
+
+<style>
+  .ballot-form {
+    display: grid;
+    gap: 1rem;
+    max-width: 40rem;
+    margin: 1.5rem 0;
+  }
+  fieldset {
+    margin: 0;
+    padding: 1rem 1.25rem 1.1rem;
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+  }
+  fieldset[hidden] {
+    display: none;
+  }
+  legend {
+    font-family: var(--serif);
+    font-size: 1.15rem;
+    font-weight: 700;
+    padding: 0 0.35rem;
+    margin-left: -0.35rem;
+  }
+  .district-pickers {
+    display: grid;
+    gap: 0.75rem;
+    grid-template-columns: repeat(auto-fit, minmax(11rem, 1fr));
+  }
+  .district-pickers label {
+    display: grid;
+    gap: 0.3rem;
+  }
+  .district-pickers span {
+    font-weight: 600;
+    font-size: 0.95rem;
+  }
+  select {
+    width: 100%;
+    font: inherit;
+    color: var(--ink);
+    background: var(--bg);
+    border: 1px solid var(--border);
+    border-radius: 6px;
+    padding: 0.5rem 0.6rem;
+  }
+  .choice {
+    display: flex;
+    align-items: baseline;
+    gap: 0.6rem;
+    padding: 0.35rem 0;
+    cursor: pointer;
+  }
+  .choice input {
+    accent-color: var(--accent);
+    transform: translateY(0.1rem);
+  }
+  .choice.blank {
+    color: var(--muted);
+  }
+  .actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.6rem;
+  }
+  button {
+    font: inherit;
+    font-weight: 600;
+    color: var(--bg);
+    background: var(--ink);
+    border: 1px solid var(--ink);
+    border-radius: 6px;
+    padding: 0.55rem 1.1rem;
+    cursor: pointer;
+  }
+  button.secondary {
+    color: var(--ink);
+    background: transparent;
+    border-color: var(--border);
+  }
+  .sheet {
+    max-width: 40rem;
+    margin: 2rem 0;
+    padding: 1.25rem 1.5rem;
+    background: var(--surface);
+    border: 2px solid var(--ink);
+    border-radius: var(--radius);
+  }
+  .sheet h2 {
+    margin-top: 0;
+  }
+  .sheet ol {
+    list-style: none;
+    padding: 0;
+    margin: 1rem 0;
+  }
+  .sheet :global(li) {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 0.25rem 1rem;
+    padding: 0.45rem 0;
+    border-bottom: 1px dashed var(--border);
+  }
+  .sheet :global(.office) {
+    color: var(--muted);
+  }
+  #sheet-status:empty {
+    display: none;
+  }
+
+  /* Print only the cheat sheet once it has been made. */
+  @media print {
+    :global(body:has(#sheet:not([hidden]))) :global(.site-header),
+    :global(body:has(#sheet:not([hidden]))) :global(.site-footer),
+    :global(body:has(#sheet:not([hidden]))) :global(main .wrap > :not(#sheet)),
+    .no-print {
+      display: none !important;
+    }
+    .sheet {
+      max-width: none;
+      margin: 0;
+      border: 0;
+      padding: 0;
+      background: none;
+      color: #000;
+    }
+    .sheet :global(.office) {
+      color: #444;
+    }
+  }
+</style>
