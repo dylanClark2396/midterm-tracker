@@ -1,23 +1,78 @@
-# Seeded from the Secretary of State's certified candidate list by
-# scripts/seed-from-certified-list.py. research_status: pending —
-# platforms and arguments not yet compiled.
+# Tennessee Senate, District 23 — Sen. Kerry Roberts seeks re-election against independent David Lee Marcum.
+# No Democratic candidate qualified. Candidate order follows the Secretary of State's certified candidate list.
+_sources:
+  kr_home: &kr_home { url: "https://www.kerryroberts.com/", title: "Senator Kerry Roberts (Roberts campaign)", accessed: 2026-10-13 }
+  kr_message: &kr_message { url: "https://www.kerryroberts.com/message", title: "Hard at Work for Tennessee (Roberts campaign)", accessed: 2026-10-13 }
+  kr_bio: &kr_bio { url: "https://www.kerryroberts.com/bio", title: "Official Bio - Senator Kerry Roberts (Roberts campaign)", accessed: 2026-10-13 }
+  kr_arming: &kr_arming { url: "https://www.kerryroberts.com/arming_teachers", title: "Arming Teachers? (Roberts campaign, 2024)", accessed: 2026-10-13 }
+  kr_nfib: &kr_nfib { url: "https://www.kerryroberts.com/nfib_tn_pac_endorses_senator_roberts", title: "NFIB Tennessee PAC Endorses Senator Kerry Roberts (Roberts campaign)", accessed: 2026-10-13 }
+  kr_tsea: &kr_tsea { url: "https://www.kerryroberts.com/2026_state_employees_endorse_kerry_roberts", title: "2026 State Employees Endorse Kerry Roberts (Roberts campaign)", accessed: 2026-10-13 }
+  kr_rtl: &kr_rtl { url: "https://www.kerryroberts.com/2026_right_to_life_endorses_kerry_roberts", title: "2026 Right To Life Endorses Kerry Roberts (Roberts campaign)", accessed: 2026-10-13 }
+  bp_kr: &bp_kr { url: "https://ballotpedia.org/Kerry_Roberts", title: "Kerry Roberts (Ballotpedia)", accessed: 2026-10-13 }
+  lookout_guide: &lookout_guide { url: "https://tennesseelookout.com/voter-guides/contests/state-senate-district-23/", title: "State Senate, 23rd District voter guide (Tennessee Lookout)", accessed: 2026-10-13 }
+
 id: tn-senate-23
 office: "Tennessee Senate, District 23"
 level: state_senate
 district: 23
-research_status: pending
+research_status: complete
 candidate_list_source: "https://sos-prod.tnsosgovfiles.com/s3fs-public/document/TNSenate_Nov2026.pdf"
+
 candidates:
   - name: "Kerry Roberts"
     ballot_party: Republican
     city: "Springfield"
-    why_running: { text: null, sources: [] }
-    platform: []
-    arguments: []
+    incumbent: true
+    website: "https://www.kerryroberts.com/"
+    bio_facts:
+      - { text: "State Senator since winning a 2011 special election; re-elected in 2014, 2018, and 2022.", sources: [*kr_bio, *lookout_guide] }
+      - { text: "Vice Chair of the Senate Judiciary Committee and member of the Senate Education and State and Local Government committees; earlier chaired the Senate Government Operations Committee.", sources: [*kr_bio, *bp_kr] }
+      - { text: "Certified public accountant; started an accounting practice in 1984, sold it in 1990 to start a bicycle business, and later served as President and Chairman of the National Bicycle Dealers Association.", sources: [*kr_bio, *bp_kr] }
+      - { text: "1983 graduate of Lipscomb University, where he was adjunct business faculty from 1984 to 1990.", sources: [*kr_bio, *bp_kr] }
+    why_running:
+      text: >-
+        He says voters hired him to listen, represent them, and work on their behalf, and that his office acts as a
+        help desk for constituents dealing with schools, state agencies, veterans' benefits, regulations, and roads.
+        He says there is more work to do on addiction, generational poverty, education, crime, and the cost of
+        everyday life, and he asks to keep working for the district.
+      sources: [*kr_message]
+    platform:
+      - category: taxes
+        text: "Keep taxes low, spend taxpayer dollars wisely, and balance the budget."
+        sources: [*kr_message]
+      - category: economy
+        text: "Reduce unnecessary government burdens on small businesses and farmers and create opportunities for them."
+        sources: [*kr_message]
+      - category: infrastructure
+        text: "Build roads and infrastructure that keep pace with growing communities."
+        sources: [*kr_message]
+      - category: abortion
+        text: "Protection of unborn life is among the priorities he lists for his work in the Senate."
+        sources: [*kr_message]
+      - category: guns
+        text: "Defends the 2024 law allowing teachers and administrators to carry concealed handguns under strict conditions, including local agreement, training, and background checks."
+        sources: [*kr_arming]
+    arguments:
+      - stance: for
+        text: >-
+          He has consistently supported small business, understands the challenges small businesses face, and is
+          committed to a business-friendly environment; he is a small business owner himself.
+        sources: [*kr_nfib]
+      - stance: for
+        text: >-
+          He values the work state employees do and has been a fair and thoughtful voice when workforce issues come
+          before the legislature.
+        sources: [*kr_tsea]
+      - stance: for
+        text: >-
+          He has used his voice and vote to keep strong protections for unborn children in state law.
+        sources: [*kr_rtl]
+
   - name: "David Lee Marcum"
     ballot_party: Independent
     city: "McEwen"
     why_running: { text: null, sources: [] }
     platform: []
     arguments: []
+
 last_verified: 2026-10-13
