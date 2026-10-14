@@ -11,7 +11,6 @@ _sources:
   zach_leic: &zach_leic { url: "https://tnhousegop.org/press-releases/2025/05/deputy-speaker-jason-zachary-secures-500k-for-university-of-tennessee-law-enforcement-innovation-center/", title: "Deputy Speaker Jason Zachary secures $500K for University of Tennessee Law Enforcement Innovation Center (Tennessee House Republican Caucus)", accessed: 2026-10-13 }
   hb2194: &hb2194 { url: "https://wapp.capitol.tn.gov/apps/BillInfo/Default.aspx?BillNumber=HB2194&GA=114", title: "HB2194 bill information (Tennessee General Assembly)", accessed: 2026-10-13 }
   hb0793: &hb0793 { url: "https://wapp.capitol.tn.gov/apps/BillInfo/Default.aspx?BillNumber=HB0793&GA=114", title: "HB0793 bill information (Tennessee General Assembly)", accessed: 2026-10-13 }
-  hb6004: &hb6004 { url: "https://wapp.capitol.tn.gov/apps/BillInfo/Default.aspx?BillNumber=HB6004&GA=114", title: "HB6004 (Education Freedom Scholarship Act) bill information and House vote (Tennessee General Assembly)", accessed: 2026-10-13 }
   scene_imm: &scene_imm { url: "https://www.nashvillescene.com/news/citylimits/2026-legislature-immigration-vouchers/article_10c74a04-ad7d-4df0-be0c-2b8ad7a69778.html", title: "Legislature to focus on immigration, voucher expansion (Nashville Scene)", accessed: 2026-10-13 }
   lookout14: &lookout14 { url: "https://tennesseelookout.com/voter-guides/contests/house-district-14/", title: "Tennessee House of Representatives, 14th District voter guide (Tennessee Lookout)", accessed: 2026-10-13 }
   lyh_home: &lyh_home { url: "https://lindsayfortennessee.com/", title: "Lindsay for Tennessee (Honaker campaign)", accessed: 2026-10-13 }
@@ -61,12 +60,6 @@ candidates:
           He secured state funding for a training center to better prepare police officers for emerging leadership
           challenges.
         sources: [*zach_leic]
-      - stance: against
-        text: >-
-          He has backed sending public money to private schools: in 2019 he switched his vote to pass the state's
-          education savings account program, and in 2025 he voted for statewide vouchers that have no accountability to
-          taxpayers.
-        sources: [*lookout14, *hb6004, *lyh_issues]
       - stance: against
         text: >-
           He called the 2026 immigration bills, including one letting schools turn away students without legal status,
