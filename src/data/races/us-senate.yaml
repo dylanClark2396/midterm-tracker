@@ -3,7 +3,6 @@
 # teamhagerty.com blocks automated access, so its pages are cited via Internet Archive snapshots.
 _sources:
   bh_announce: &bh_announce { url: "https://web.archive.org/web/20250423203409/https://www.teamhagerty.com/news/senator-bill-hagerty-announces-re-election-for-united-states-senate", title: "Senator Bill Hagerty announces re-election for United States Senate (Hagerty campaign, archived)", accessed: 2026-10-13 }
-  bh_meet: &bh_meet { url: "https://web.archive.org/web/20250125015803/https://teamhagerty.com/meet-bill/", title: "Meet Bill (Hagerty campaign, archived)", accessed: 2026-10-13 }
   bh_support: &bh_support { url: "https://web.archive.org/web/20250423210905/https://www.teamhagerty.com/news/what-they-are-saying-support-for-senator-hagertys-re-election-rolls-in", title: "What they are saying: support for Senator Hagerty's re-election (Hagerty campaign, archived)", accessed: 2026-10-13 }
   bh_senate: &bh_senate { url: "https://www.hagerty.senate.gov/about/", title: "About Senator Hagerty (U.S. Senate)", accessed: 2026-10-13 }
   firefly_bh: &firefly_bh { url: "https://tnfirefly.com/news/us-senator-bill-hagerty-shakes-up-next-years-governors-race-by-opting-to-run-for-re-election", title: "Hagerty opts to run for re-election (Tennessee Firefly)", accessed: 2026-10-13 }
@@ -32,6 +31,8 @@ _sources:
   sutman: &sutman { url: "https://sutmanjr4senate.com/", title: "David Sutman Jr. for U.S. Senate (Sutman campaign)", accessed: 2026-10-13 }
   whitson_issues: &whitson_issues { url: "https://senatorbarcy.org/issues", title: "Issues & Platform (Whitson campaign)", accessed: 2026-10-13 }
   whitson_home: &whitson_home { url: "https://senatorbarcy.org/", title: "Barcy Whitson for U.S. Senate (Whitson campaign)", accessed: 2026-10-13 }
+  hearn_home: &hearn_home { url: "https://www.jeremydeanhearnforsenate.com/", title: "JDH for US Senate 2026 (Hearn campaign)", accessed: 2026-10-13 }
+  bh_2a25: &bh_2a25 { url: "https://www.hagerty.senate.gov/press-releases/2025/05/15/hagerty-colleagues-reintroduce-legislation-to-block-unconstitutional-tracking-of-gun-store-purchases/", title: "Hagerty, colleagues reintroduce legislation to block tracking of gun store purchases (U.S. Senate office)", accessed: 2026-10-13 }
 
 id: us-senate
 office: "U.S. Senate"
@@ -77,7 +78,7 @@ candidates:
         sources: [*bh_announce, *bh_memphis]
       - category: guns
         text: "Defend Tennesseans' Second Amendment right to protect themselves and their families."
-        sources: [*bh_2a]
+        sources: [*bh_2a25, *bh_2a]
       - category: abortion
         text: "Says there is a moral duty to protect unborn children and that he will advocate for policies opposing abortion."
         sources: [*bh_dobbs]
@@ -86,7 +87,7 @@ candidates:
         text: >-
           His background in business, as the state's economic development commissioner, and as U.S. Ambassador to Japan
           gives him experience in job creation, trade, and foreign affairs.
-        sources: [*bh_meet, *bh_senate]
+        sources: [*bh_senate]
       - stance: for
         text: >-
           He has already delivered results for Tennessee, and his leadership matters as the state advances economic
@@ -232,6 +233,17 @@ candidates:
   - name: "Jeremy Dean Hearn"
     ballot_party: Independent
     city: Collierville
+    website: "https://www.jeremydeanhearnforsenate.com/"
+    platform:
+      - category: government
+        text: "Lists his priorities as defending the Constitution, clarifying the nation's history, and restoring equality, including drafting what he calls an \"Equal Earnings Act.\""
+        sources: [*hearn_home]
+      - category: taxes
+        text: "Proposes what he calls activating the \"US Fort Knox\" treasury to fund a year of legislation and resolve the national debt."
+        sources: [*hearn_home]
+      - category: foreign_policy
+        text: "Offer economic alternatives to war and pursue peace negotiations."
+        sources: [*hearn_home]
 
   - name: "Robert Jones"
     ballot_party: Independent
