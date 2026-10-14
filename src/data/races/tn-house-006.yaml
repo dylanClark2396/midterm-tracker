@@ -1,29 +1,154 @@
-# Seeded from the Secretary of State's certified candidate list by
-# scripts/seed-from-certified-list.py. research_status: pending —
-# platforms and arguments not yet compiled.
+# Tennessee House, District 6 (part of Washington County) — Rep. Tim Hicks, in office since 2021, faces
+# Brad Batt and independent Rodger Broadwater.
+# Candidate order follows the Secretary of State's certified candidate list.
+_sources:
+  bp_hicks: &bp_hicks { url: "https://ballotpedia.org/Tim_Hicks_(Tennessee)", title: "Tim Hicks (Tennessee) (Ballotpedia)", accessed: 2026-10-13 }
+  cga_h6: &cga_h6 { url: "https://wapp.capitol.tn.gov/apps/legislatorinfo/member.aspx?district=H6", title: "Representative Tim Hicks (Tennessee General Assembly)", accessed: 2026-10-13 }
+  hb1470: &hb1470 { url: "https://wapp.capitol.tn.gov/apps/BillInfo/Default.aspx?BillNumber=HB1470&GA=114", title: "HB1470 bill information (Tennessee General Assembly)", accessed: 2026-10-13 }
+  hb1471: &hb1471 { url: "https://wapp.capitol.tn.gov/apps/BillInfo/Default.aspx?BillNumber=HB1471&GA=114", title: "HB1471 bill information (Tennessee General Assembly)", accessed: 2026-10-13 }
+  hb1720: &hb1720 { url: "https://wapp.capitol.tn.gov/apps/BillInfo/Default.aspx?BillNumber=HB1720&GA=114", title: "HB1720 bill information (Tennessee General Assembly)", accessed: 2026-10-13 }
+  hb0865: &hb0865 { url: "https://wapp.capitol.tn.gov/apps/BillInfo/Default.aspx?BillNumber=HB0865&GA=114", title: "HB0865 bill information (Tennessee General Assembly)", accessed: 2026-10-13 }
+  hb2532: &hb2532 { url: "https://wapp.capitol.tn.gov/apps/BillInfo/Default.aspx?BillNumber=HB2532&GA=114", title: "HB2532 (2026 education freedom scholarship expansion) bill information and votes (Tennessee General Assembly)", accessed: 2026-10-13 }
+  wjhl_split: &wjhl_split { url: "https://www.yahoo.com/news/ne-tn-house-delegation-splits-202000592.html", title: "NE TN House delegation splits 4-4 as vouchers pass (WJHL via Yahoo News)", accessed: 2026-10-13 }
+  wjhl_odds: &wjhl_odds { url: "https://www.yahoo.com/news/local-lawmakers-odds-regarding-vouchers-000950675.html", title: "Local lawmakers at odds regarding vouchers ahead of Tennessee Special Session (WJHL via Yahoo News)", accessed: 2026-10-13 }
+  lookout6: &lookout6 { url: "https://tennesseelookout.com/voter-guides/contests/house-district-6/", title: "Tennessee House of Representatives, 6th District voter guide (Tennessee Lookout)", accessed: 2026-10-13 }
+  bp_batt: &bp_batt { url: "https://ballotpedia.org/Brad_Batt", title: "Brad Batt (Ballotpedia)", accessed: 2026-10-13 }
+  batt_home: &batt_home { url: "https://bradbatt.com/", title: "Brad Batt for TN House District 6 (Batt campaign)", accessed: 2026-10-13 }
+  batt_issues: &batt_issues { url: "https://bradbatt.com/issues", title: "The Issues (Batt campaign)", accessed: 2026-10-13 }
+  batt_meet: &batt_meet { url: "https://bradbatt.com/meet-brad", title: "Meet Brad (Batt campaign)", accessed: 2026-10-13 }
+  batt_cams: &batt_cams { url: "https://takedownthesecameras.com", title: "Take Down These Cameras (Batt campaign)", accessed: 2026-10-13 }
+  bp_broad: &bp_broad { url: "https://ballotpedia.org/Rodger_Broadwater", title: "Rodger Broadwater (Ballotpedia, incl. 2026 Candidate Connection survey)", accessed: 2026-10-13 }
+
 id: tn-house-006
 office: "Tennessee House, District 6"
 level: state_house
 district: 6
-research_status: pending
+research_status: complete
 candidate_list_source: "https://sos-prod.tnsosgovfiles.com/s3fs-public/document/TNHouse_Nov2026.pdf"
+
 candidates:
   - name: "Tim Hicks"
     ballot_party: Republican
     city: "Gray"
+    incumbent: true
+    website: null
+    bio_facts:
+      - { text: "State representative for District 6 since 2021 (elected in 2020), serving in the 112th through 114th General Assemblies.", sources: [*cga_h6, *bp_hicks] }
+      - { text: "Member of the House Education, Health, and Finance, Ways, and Means committees and the Fiscal Review Committee.", sources: [*cga_h6] }
+      - { text: "Owner of Hicks Construction; two-time Builder of the Year (1990 and 2014) and a life director of the Johnson City Area Home Builders.", sources: [*cga_h6, *bp_hicks] }
+      - { text: "Served on the Washington County Planning Commission from 2016 to 2020.", sources: [*cga_h6] }
+      - { text: "Graduate of Daniel Boone High School (1981).", sources: [*cga_h6, *bp_hicks] }
     why_running: { text: null, sources: [] }
-    platform: []
-    arguments: []
+    platform:
+      - category: education
+        text: "Voted in 2026 for the law expanding the state's school voucher program from 25,000 to 35,000 scholarships, both on House passage and on final concurrence; also supported the 2025 voucher law, saying parents should be able to choose the education that best fits their child and that public schools are held harmless on funding."
+        sources: [*hb2532, *wjhl_odds, *wjhl_split]
+      - category: health_care
+        text: "Sponsored a 2026 law prohibiting artificial intelligence systems from being advertised as able to act as a qualified mental health professional."
+        sources: [*hb1470]
+      - category: public_safety
+        text: "Sponsored a 2026 law narrowing who counts as a violent offender barred from drug treatment courts, removing domestic assault convictions and limiting it to certain felonies within the past 10 years."
+        sources: [*hb1471]
+      - category: government
+        text: "Sponsored a 2026 law allowing certain counties to bar cities and regional zoning commissions from exercising zoning authority outside city limits."
+        sources: [*hb1720]
+      - category: economy
+        text: "Sponsored a 2025 law requiring the Board of Nursing to let qualifying students enroll in practical nursing programs at Board of Regents colleges."
+        sources: [*hb0865]
+    arguments:
+      - stance: for
+        text: >-
+          He backed letting parents choose the school that best fits their child's needs while keeping funding for
+          public schools that lose students held harmless.
+        sources: [*wjhl_odds, *wjhl_split]
+
   - name: "Brad Batt"
     ballot_party: Democratic
     city: "Johnson City"
-    why_running: { text: null, sources: [] }
-    platform: []
-    arguments: []
+    incumbent: false
+    website: "https://bradbatt.com/"
+    bio_facts:
+      - { text: "Small business owner who has run an online software company for more than 20 years.", sources: [*bp_batt, *batt_meet] }
+      - { text: "Bachelor's degree from Louisiana Tech University (1995) and graduate degree from Regis University (2003).", sources: [*bp_batt] }
+      - { text: "Member of the Tennessee Democratic Party executive committee; this is his fourth run for House District 6, including races against Hicks in 2020 and 2024.", sources: [*lookout6, *bp_batt] }
+    why_running:
+      text: >-
+        He says too many people in the area are falling behind: unable to afford rent, skipping the doctor over cost,
+        and paying tax on groceries, while teachers buy supplies out of pocket and the government spends on AI
+        surveillance. He says Washington County deserves a representative who works for the people who live there,
+        not for the legislature's supermajority.
+      sources: [*batt_meet, *batt_home]
+    platform:
+      - category: taxes
+        text: "Abolish the state sales tax on groceries and give tax credits to small businesses that pay a living wage."
+        sources: [*batt_issues, *batt_home]
+      - category: economy
+        text: "Repeal the 2023 state ban on local wage and benefit rules and provide paid family leave for all workers, not only state employees."
+        sources: [*batt_issues]
+      - category: cost_of_living
+        text: "Ban landlords from setting rents with price-fixing software, restore $90 million in cut down-payment assistance for first-time buyers, and fund the Tennessee Housing Trust Fund."
+        sources: [*batt_issues]
+      - category: health_care
+        text: "Break up the Ballad Health monopoly, restore the state quality standards that were lowered, and expand Medicaid."
+        sources: [*batt_issues]
+      - category: abortion
+        text: "Protect IVF, birth control, and women's reproductive rights."
+        sources: [*batt_issues, *batt_home]
+      - category: education
+        text: "End school vouchers and put the money into public schools; raise teacher pay, fund classroom supplies, provide free school breakfast and lunch, and offer universal pre-K for 4-year-olds."
+        sources: [*batt_issues]
+      - category: public_safety
+        text: "Remove AI surveillance cameras in Washington County, require a warrant before police search data on private citizens, ban the sale or sharing of personal data, and ban AI surveillance cameras and drones statewide."
+        sources: [*batt_issues, *batt_cams]
+    arguments:
+      - stance: for
+        text: >-
+          He is a local small business owner who has never taken corporate money and would answer to his neighbors
+          rather than to Nashville.
+        sources: [*batt_meet]
+      - stance: for
+        text: >-
+          Records show police agencies ran over a million searches of Johnson City's AI cameras in one month, 95% from
+          outside Tennessee; he would take the cameras down and require warrants for searches.
+        sources: [*batt_cams, *batt_issues]
+
   - name: "Rodger Broadwater"
     ballot_party: Independent
     city: "Limestone"
-    why_running: { text: null, sources: [] }
-    platform: []
-    arguments: []
+    incumbent: false
+    website: null
+    bio_facts:
+      - { text: "Lifelong East Tennessee resident; graduated from North Greene High School in 2014.", sources: [*bp_broad] }
+    why_running:
+      text: >-
+        He says he wants to give power back to the people: he would build a public platform where every District 6
+        resident can weigh in on major bills before he votes, and he would follow the district's majority position. He
+        says special interests and lobbyists should have no place in politics.
+      sources: [*bp_broad]
+    platform:
+      - category: government
+        text: "Create a public platform for residents to vote yes or no on major bills and follow the district majority; keep special interests and lobbyists out of politics."
+        sources: [*bp_broad]
+      - category: environment
+        text: "Protect clean water and stop the BWXT expansion."
+        sources: [*bp_broad]
+      - category: cost_of_living
+        text: "Help renters become homeowners through a proposed Paper Trail Credit Act."
+        sources: [*bp_broad]
+      - category: taxes
+        text: "Cap rising property taxes."
+        sources: [*bp_broad]
+      - category: education
+        text: "Strengthen public schools."
+        sources: [*bp_broad]
+      - category: health_care
+        text: "Lower health care costs."
+        sources: [*bp_broad]
+    arguments:
+      - stance: for
+        text: >-
+          He would let district residents weigh in on major bills through a public platform and vote the way the
+          majority wants, keeping lobbyists and special interests out of the process.
+        sources: [*bp_broad]
+
 last_verified: 2026-10-13
