@@ -9,7 +9,6 @@ _sources:
   hb1720: &hb1720 { url: "https://wapp.capitol.tn.gov/apps/BillInfo/Default.aspx?BillNumber=HB1720&GA=114", title: "HB1720 bill information (Tennessee General Assembly)", accessed: 2026-10-13 }
   hb0865: &hb0865 { url: "https://wapp.capitol.tn.gov/apps/BillInfo/Default.aspx?BillNumber=HB0865&GA=114", title: "HB0865 bill information (Tennessee General Assembly)", accessed: 2026-10-13 }
   hb2532: &hb2532 { url: "https://wapp.capitol.tn.gov/apps/BillInfo/Default.aspx?BillNumber=HB2532&GA=114", title: "HB2532 (2026 education freedom scholarship expansion) bill information and votes (Tennessee General Assembly)", accessed: 2026-10-13 }
-  hb6004: &hb6004 { url: "https://wapp.capitol.tn.gov/apps/BillInfo/Default.aspx?BillNumber=HB6004&GA=114", title: "HB6004 (Education Freedom Scholarship Act) bill information and votes (Tennessee General Assembly)", accessed: 2026-10-13 }
   wjhl_split: &wjhl_split { url: "https://www.yahoo.com/news/ne-tn-house-delegation-splits-202000592.html", title: "NE TN House delegation splits 4-4 as vouchers pass (WJHL via Yahoo News)", accessed: 2026-10-13 }
   wjhl_odds: &wjhl_odds { url: "https://www.yahoo.com/news/local-lawmakers-odds-regarding-vouchers-000950675.html", title: "Local lawmakers at odds regarding vouchers ahead of Tennessee Special Session (WJHL via Yahoo News)", accessed: 2026-10-13 }
   lookout6: &lookout6 { url: "https://tennesseelookout.com/voter-guides/contests/house-district-6/", title: "Tennessee House of Representatives, 6th District voter guide (Tennessee Lookout)", accessed: 2026-10-13 }
@@ -62,12 +61,6 @@ candidates:
           He backed letting parents choose the school that best fits their child's needs while keeping funding for
           public schools that lose students held harmless.
         sources: [*wjhl_odds, *wjhl_split]
-      - stance: against
-        text: >-
-          He voted for the 2025 statewide voucher law and for its 2026 expansion to 35,000 scholarships, which send
-          public tax dollars to private schools; the Washington County school board had passed a resolution opposing
-          the 2025 bill.
-        sources: [*hb2532, *hb6004, *wjhl_odds, *batt_issues]
 
   - name: "Brad Batt"
     ballot_party: Democratic
