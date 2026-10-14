@@ -71,7 +71,7 @@ export function initDistrictFinder(root: HTMLElement) {
     maxBounds: TN_BOUNDS.pad(0.5),
     minZoom: 6,
     zoomSnap: 0.25,
-    scrollWheelZoom: false, // don't hijack page scrolling; +/- and pinch still zoom
+    scrollWheelZoom: false, // handled below so plain scrolling still moves the page
   }).fitBounds(TN_BOUNDS);
   L.tileLayer(TILES, {
     maxZoom: 19,
@@ -79,8 +79,38 @@ export function initDistrictFinder(root: HTMLElement) {
   }).addTo(map);
   // Leaflet's default prefix carries a flag; this guide shows no political symbols.
   map.attributionControl.setPrefix('<a href="https://leafletjs.com">Leaflet</a>');
-  map.on('focus', () => map.scrollWheelZoom.enable());
-  map.on('blur', () => map.scrollWheelZoom.disable());
+
+  // A plain scroll moves the page; Ctrl/Shift/⌘ + scroll zooms around the cursor.
+  // (Trackpad pinch arrives as Ctrl + wheel, so it zooms too.)
+  const container = map.getContainer();
+  const isMac = /Mac|iPhone|iPad/.test(navigator.platform);
+  const hint = L.DomUtil.create('div', 'finder-map-hint', container);
+  hint.textContent = isMac ? 'Hold ⌘ or Shift and scroll to zoom' : 'Hold Ctrl or Shift and scroll to zoom';
+  hint.setAttribute('aria-hidden', 'true');
+  let hintTimer: ReturnType<typeof setTimeout>;
+  let wheelZoom = 0;
+  container.addEventListener(
+    'wheel',
+    (e) => {
+      if (!(e.ctrlKey || e.shiftKey || e.metaKey)) {
+        hint.classList.add('shown');
+        clearTimeout(hintTimer);
+        hintTimer = setTimeout(() => hint.classList.remove('shown'), 1500);
+        return;
+      }
+      e.preventDefault(); // stop the browser's own Ctrl+scroll page zoom
+      hint.classList.remove('shown');
+      // Shift+wheel scrolls sideways in most browsers, so the motion may be in deltaX.
+      const px = (e.deltaY || e.deltaX) * (e.deltaMode === 1 ? 40 : e.deltaMode === 2 ? 800 : 1);
+      wheelZoom -= px / 200; // one mouse notch (~100px) = half a zoom level
+      const step = Math.trunc(wheelZoom / 0.25) * 0.25;
+      if (!step) return;
+      wheelZoom -= step;
+      // No animation: Leaflet drops zoom requests that arrive mid-animation.
+      map.setZoomAround(map.mouseEventToContainerPoint(e), map.getZoom() + step, { animate: false });
+    },
+    { passive: false },
+  );
 
   const baseStyle = (): L.PathOptions => ({ color: color('--ink'), weight: 1.2, opacity: 0.55, fillOpacity: 0 });
   const pickedStyle = (): L.PathOptions => ({ color: color('--accent'), weight: 3, opacity: 1, fillColor: color('--accent'), fillOpacity: 0.15 });
