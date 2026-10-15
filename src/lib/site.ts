@@ -1,7 +1,10 @@
 import type { CollectionEntry } from 'astro:content';
+import type { Level } from './levels';
 
 export const SITE_NAME = 'TN 2026 Ballot Guide';
 export const ELECTION_DATE = new Date('2026-11-03T12:00:00Z');
+// First and last days of early voting (inclusive).
+export const EARLY_VOTING = { start: new Date('2026-10-14T12:00:00Z'), end: new Date('2026-10-29T12:00:00Z') };
 export const GOVOTETN = 'https://sos.tn.gov/govotetn';
 export const REPO_URL = 'https://github.com/dylanClark2396/midterm-tracker';
 export const CORRECTION_URL = `${REPO_URL}/issues/new?template=correction.yml`;
@@ -20,6 +23,33 @@ export function url(path = ''): string {
 
 export function formatDate(d: Date): string {
   return d.toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric', timeZone: 'UTC' });
+}
+
+/** "October 14" */
+export function formatMonthDay(d: Date): string {
+  return d.toLocaleDateString('en-US', { month: 'long', day: 'numeric', timeZone: 'UTC' });
+}
+
+/** "Tuesday" */
+export function formatWeekday(d: Date): string {
+  return d.toLocaleDateString('en-US', { weekday: 'long', timeZone: 'UTC' });
+}
+
+/** "October 14–29", or "October 30–November 2" across a month boundary. */
+export function formatDayRange(start: Date, end: Date): string {
+  const sameMonth = start.getUTCMonth() === end.getUTCMonth();
+  return `${formatMonthDay(start)}–${sameMonth ? end.getUTCDate() : formatMonthDay(end)}`;
+}
+
+/** "November 3, 2026" */
+export const ELECTION_DAY = formatDate(ELECTION_DATE);
+
+const NUMBER_WORDS = ['zero', 'one', 'two', 'three', 'four', 'five', 'six', 'seven', 'eight', 'nine', 'ten'];
+
+/** Spelled-out count for prose: 3 -> "three" (or "Three"); 11 and up stay as digits. */
+export function numberWord(n: number, capitalize = false): string {
+  const word = NUMBER_WORDS[n] ?? String(n);
+  return capitalize ? word[0].toUpperCase() + word.slice(1) : word;
 }
 
 // ---------------------------------------------------------------------------
@@ -107,10 +137,6 @@ export function prepareAmendment(a: Amendment) {
 type Race = CollectionEntry<'races'>['data'];
 type Candidate = Race['candidates'][number];
 
-export function hasProfile(c: Candidate): boolean {
-  return c.platform.length > 0 || c.why_running.text !== null || c.arguments.length > 0 || c.bio_facts.length > 0;
-}
-
 export function prepareRace(race: Race, categoryOrder: string[]) {
   const notes = new Footnotes();
   const withPlatform = race.candidates.filter((c) => c.platform.length > 0);
@@ -157,4 +183,4 @@ export const LEVELS = {
   us_house: 'U.S. House of Representatives',
   state_senate: 'Tennessee Senate',
   state_house: 'Tennessee House of Representatives',
-} as const;
+} as const satisfies Record<Level, string>;

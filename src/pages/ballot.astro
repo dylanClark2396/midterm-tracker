@@ -1,15 +1,16 @@
 ---
 import { getCollection } from 'astro:content';
 import Base from '../layouts/Base.astro';
-import { url } from '../lib/site';
+import { url, ELECTION_DAY } from '../lib/site';
+import type { DistrictLevel } from '../lib/levels';
 
 const races = (await getCollection('races')).map((r) => r.data);
 const amendments = (await getCollection('amendments')).map((a) => a.data).sort((a, b) => a.number - b.number);
 
-const byDistrict = (level: string) =>
+const byDistrict = (level: DistrictLevel) =>
   races.filter((r) => r.level === level).sort((a, b) => (a.district ?? 0) - (b.district ?? 0));
-const statewide = ['governor', 'us-senate'].map((id) => races.find((r) => r.id === id)!);
-const districtLevels = [
+const statewide = races.filter((r) => r.level === 'statewide').sort((a, b) => a.office.localeCompare(b.office));
+const districtLevels: { level: DistrictLevel; label: string; races: typeof races }[] = [
   { level: 'us_house', label: 'U.S. House district', races: byDistrict('us_house') },
   { level: 'state_senate', label: 'Tennessee Senate district', races: byDistrict('state_senate') },
   { level: 'state_house', label: 'Tennessee House district', races: byDistrict('state_house') },
@@ -109,7 +110,7 @@ const leaveBlank = 'Leave blank';
 
   <section class="sheet" id="sheet" hidden aria-labelledby="sheet-h" tabindex="-1">
     <h2 id="sheet-h">My ballot cheat sheet</h2>
-    <p class="muted small">Tennessee general election · November 3, 2026</p>
+    <p class="muted small">Tennessee general election · {ELECTION_DAY}</p>
     <ol id="sheet-list"></ol>
     <p class="none" id="sheet-empty" hidden>You haven't picked anything yet.</p>
     <div class="actions no-print">
@@ -124,6 +125,8 @@ const leaveBlank = 'Leave blank';
 </Base>
 
 <script>
+  import { ELECTION_DAY } from '../lib/site';
+
   const form = document.getElementById('ballot-form') as HTMLFormElement;
   const sheet = document.getElementById('sheet') as HTMLElement;
   const list = document.getElementById('sheet-list') as HTMLOListElement;
@@ -152,7 +155,7 @@ const leaveBlank = 'Leave blank';
       .filter((p) => p.choice);
 
   const asText = () =>
-    ['My ballot cheat sheet', 'Tennessee general election, November 3, 2026', '', ...picks().map((p) => `${p.label}: ${p.choice}`)].join('\n');
+    ['My ballot cheat sheet', `Tennessee general election, ${ELECTION_DAY}`, '', ...picks().map((p) => `${p.label}: ${p.choice}`)].join('\n');
 
   // Warn before leaving once anything is picked, since nothing is kept.
   let dirty = false;

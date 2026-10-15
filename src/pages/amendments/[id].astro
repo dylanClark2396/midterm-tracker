@@ -4,7 +4,7 @@ import Base from '../../layouts/Base.astro';
 import ArgColumns from '../../components/ArgColumns.astro';
 import PassageRule from '../../components/PassageRule.astro';
 import Sources from '../../components/Sources.astro';
-import { url, formatDate, prepareAmendment } from '../../lib/site';
+import { url, formatDate, prepareAmendment, ELECTION_DAY } from '../../lib/site';
 
 export async function getStaticPaths() {
   const amendments = await getCollection('amendments');
@@ -17,7 +17,7 @@ const view = prepareAmendment(a);
 
 <Base
   title={`Tennessee Amendment ${a.number}: ${a.title}`}
-  description={`Tennessee Amendment ${a.number} (${a.title}) on the November 3, 2026 ballot: official text, fiscal note, and arguments for and against.`}
+  description={`Tennessee Amendment ${a.number} (${a.title}) on the ${ELECTION_DAY} ballot: official text, fiscal note, and arguments for and against.`}
 >
   <p class="breadcrumb"><a href={url('amendments')}>Amendments</a></p>
   <h1>Amendment {a.number}: {a.title}</h1>

@@ -3,8 +3,8 @@
 // headers) and the resulting point is matched against public/maps/*.json.
 import L from 'leaflet';
 import { districtAt, nearLine, type DistrictCollection } from '../lib/geo';
+import type { DistrictLevel as Level } from '../lib/levels';
 
-type Level = 'us_house' | 'state_senate' | 'state_house';
 type RaceIndex = Record<Level, Record<string, { href: string; candidates: number }>>;
 
 const LAYERS: { level: Level; file: string; office: string }[] = [
@@ -66,9 +66,11 @@ export function initDistrictFinder(root: HTMLElement) {
   const results = root.querySelector<HTMLElement>('[data-results]')!;
   const statewide = document.querySelector<HTMLTemplateElement>('#statewide-template')!.innerHTML;
 
-  // The street map is light in both themes, so the overlay uses the light-theme ink and accent.
-  const INK = '#1e1f21';
-  const ACCENT = '#7a5a1f';
+  // The street map is light in both themes, so the overlay uses the light-theme
+  // colors from --map-ink / --map-accent in styles/base.css.
+  const css = getComputedStyle(document.documentElement);
+  const INK = css.getPropertyValue('--map-ink').trim() || '#1e1f21';
+  const ACCENT = css.getPropertyValue('--map-accent').trim() || '#7a5a1f';
 
   const map = L.map(root.querySelector<HTMLElement>('.finder-map')!, {
     maxBounds: PAN_BOUNDS,

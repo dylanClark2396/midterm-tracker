@@ -40,6 +40,7 @@ UA = "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like 
 PARTIES = {"Republican", "Democratic", "Independent"}
 
 # (file stem, level, id format, office format; None = statewide, single race)
+# Levels must match LEVEL_IDS in src/lib/levels.ts.
 LISTS = [
     ("Governor", "statewide", "governor", "Governor"),
     ("USSenate", "statewide", "us-senate", "U.S. Senate"),

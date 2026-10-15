@@ -1,0 +1,143 @@
+/* Argument columns (tabs on narrow screens), footnote markers, and the Sources list. Imported by global.css. */
+
+/* Argument columns: equal weight, identical styling for both sides. */
+.cols {
+  margin: 1rem 0;
+}
+
+.tablist {
+  display: none;
+  gap: 0;
+  margin-bottom: 0.75rem;
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  overflow: hidden;
+}
+
+.tablist button {
+  flex: 1 1 0;
+  font: inherit;
+  font-weight: 600;
+  padding: 0.6rem 0.5rem;
+  border: 0;
+  background: var(--surface);
+  color: var(--ink);
+  cursor: pointer;
+}
+
+.tablist button + button {
+  border-left: 1px solid var(--border);
+}
+
+.tablist button[aria-selected='true'] {
+  background: var(--surface-2);
+  text-decoration: underline;
+  text-underline-offset: 0.25em;
+}
+
+.col {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 0.25rem 1.25rem 1rem;
+}
+
+.col + .col {
+  margin-top: 1rem;
+}
+
+.col-h {
+  font-family: var(--serif);
+  font-size: 1.15rem;
+  margin: 1rem 0 0.5rem;
+}
+
+.args {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.args li {
+  padding: 0.75rem 0;
+  border-top: 1px solid var(--border);
+}
+
+.args li:first-child {
+  border-top: 0;
+}
+
+@media (min-width: 721px) {
+  .cols {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+    align-items: start;
+  }
+
+  .col + .col {
+    margin-top: 0;
+  }
+}
+
+@media (max-width: 720px) {
+  html.js .tablist {
+    display: flex;
+  }
+
+  html.js .cols .col:not(.active) {
+    display: none;
+  }
+
+  html.js .col-h {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    clip: rect(0 0 0 0);
+  }
+}
+
+/* Footnote markers */
+.refs {
+  font-size: 0.75em;
+  white-space: nowrap;
+  margin-left: 0.15em;
+}
+
+.refs a {
+  text-decoration: none;
+  color: var(--muted);
+}
+
+.refs a:hover {
+  text-decoration: underline;
+}
+
+/* Sources */
+.sources {
+  margin-top: 2.5rem;
+  border-top: 1px solid var(--border);
+  padding-top: 1rem;
+}
+
+.sources summary {
+  cursor: pointer;
+  font-weight: 600;
+  font-family: var(--serif);
+  font-size: 1.2rem;
+}
+
+.sources ol {
+  font-size: 0.9rem;
+  padding-left: 2.2rem;
+}
+
+.sources li {
+  margin: 0.35rem 0;
+  overflow-wrap: anywhere;
+}
+
+.sources li:target {
+  background: var(--surface-2);
+}

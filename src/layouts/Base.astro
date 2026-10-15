@@ -1,6 +1,6 @@
 ---
 import '../styles/global.css';
-import { url, SITE_NAME } from '../lib/site';
+import { url, SITE_NAME, ELECTION_DAY } from '../lib/site';
 
 interface Props {
   title: string;
@@ -11,7 +11,7 @@ interface Props {
 
 const {
   title,
-  description = 'Candidates, constitutional amendments, and arguments for and against everything on the November 3, 2026 Tennessee ballot, shown without party or group labels.',
+  description = `Candidates, constitutional amendments, and arguments for and against everything on the ${ELECTION_DAY} Tennessee ballot, shown without party or group labels.`,
   noindex = false,
 } = Astro.props;
 const path = Astro.url.pathname;
@@ -49,7 +49,7 @@ const jsonLd = isHome
     <meta property="og:image" content={socialImage} />
     <meta property="og:image:width" content="1200" />
     <meta property="og:image:height" content="630" />
-    <meta property="og:image:alt" content={`${SITE_NAME}: what's on the November 3, 2026 Tennessee ballot`} />
+    <meta property="og:image:alt" content={`${SITE_NAME}: what's on the ${ELECTION_DAY} Tennessee ballot`} />
     <meta name="twitter:card" content="summary_large_image" />
     <link rel="sitemap" href={url('sitemap-index.xml').replace(/\/$/, '')} />
     {jsonLd && <script type="application/ld+json" set:html={JSON.stringify(jsonLd)} />}
