@@ -2,14 +2,14 @@
 import { getCollection } from 'astro:content';
 import Base from '../../layouts/Base.astro';
 import PassageRule from '../../components/PassageRule.astro';
-import { url } from '../../lib/site';
+import { url, ELECTION_DAY, numberWord } from '../../lib/site';
 
 const amendments = (await getCollection('amendments')).sort((a, b) => a.data.number - b.data.number);
 ---
 
-<Base title="Constitutional amendments" description="The three proposed Tennessee constitutional amendments on the November 3, 2026 ballot, with arguments for and against.">
+<Base title="Constitutional amendments" description={`The ${numberWord(amendments.length)} proposed Tennessee constitutional amendments on the ${ELECTION_DAY} ballot, with arguments for and against.`}>
   <h1>Constitutional amendments</h1>
-  <p class="lede">Three proposed changes to the Tennessee Constitution are on the November 3, 2026 ballot.</p>
+  <p class="lede">{numberWord(amendments.length, true)} proposed changes to the Tennessee Constitution are on the {ELECTION_DAY} ballot.</p>
   <PassageRule />
   <div class="grid">
     {amendments.map((a) => (

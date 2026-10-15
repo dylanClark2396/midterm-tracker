@@ -4,7 +4,7 @@ import Base from '../../layouts/Base.astro';
 import ArgColumns from '../../components/ArgColumns.astro';
 import Refs from '../../components/Refs.astro';
 import Sources from '../../components/Sources.astro';
-import { url, formatDate, prepareRace, LEVELS, GOVOTETN } from '../../lib/site';
+import { url, formatDate, prepareRace, LEVELS, GOVOTETN, ELECTION_DAY } from '../../lib/site';
 import { categories } from '../../lib/rules';
 
 export async function getStaticPaths() {
@@ -26,8 +26,8 @@ const names = race.candidates.map((c) => c.name);
 const nameList = names.length <= 2 ? names.join(' and ') : `${names.slice(0, -1).join(', ')}, and ${names.at(-1)}`;
 const description =
   names.length === 0
-    ? `${race.office}: no candidate qualified for the November 3, 2026 Tennessee ballot.`
-    : `${race.office} on the November 3, 2026 Tennessee ballot: ${nameList}${complete ? '. Platforms and arguments for and against each candidate, with sources' : ''}.`;
+    ? `${race.office}: no candidate qualified for the ${ELECTION_DAY} Tennessee ballot.`
+    : `${race.office} on the ${ELECTION_DAY} Tennessee ballot: ${nameList}${complete ? '. Platforms and arguments for and against each candidate, with sources' : ''}.`;
 ---
 
 <Base title={`${race.office} candidates`} description={description}>

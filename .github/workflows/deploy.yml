@@ -29,6 +29,12 @@ jobs:
       - run: npm ci
       # Schema validation: sources required, label blocklist, platform rules.
       - run: npm run validate
+      # Type errors in .astro and .ts files (the build doesn't report them).
+      - run: npm run check
+      # Contact form fields, topics and limits match the Worker (deployed separately).
+      - run: npm run check:contact
+      # Relative links in the CLAUDE.md agent guides.
+      - run: npm run docs:check
       - run: npm run build
       # Fails on broken internal links, missing anchors, and dead (404/410/DNS) source URLs.
       - run: npm run check:links

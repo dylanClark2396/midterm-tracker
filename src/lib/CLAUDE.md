@@ -6,6 +6,7 @@ Plain TypeScript used by the schema, the pages and the browser. No components he
 | --- | --- | --- |
 | [rules.ts](rules.ts) | Node only (build) | [../content.config.ts](../content.config.ts) and the compare-table labels in [../pages/races/[id].astro](../pages/races/[id].astro) |
 | [site.ts](site.ts) | Build (Astro only) | Every page, [../layouts/Base.astro](../layouts/Base.astro) and the components |
+| [levels.ts](levels.ts) | Anywhere | The schema, `LEVELS` in site.ts, the districts and ballot pages, the district finder |
 | [geo.ts](geo.ts) | Browser | [../scripts/district-finder.ts](../scripts/district-finder.ts) |
 
 ## Rules for each file
@@ -13,7 +14,10 @@ Plain TypeScript used by the schema, the pages and the browser. No components he
 - **rules.ts reads YAML with `fs` from `process.cwd()/src/data`**, because the bundled module ends up in a different
   directory. Run builds and scripts from the project root, and never import it into browser code.
 - **site.ts uses `import.meta.env.BASE_URL`**, so plain Node scripts can't import it. Pages use its `url()` helper
-  for every internal link (see the [root guide](../../CLAUDE.md)).
+  for every internal link (see the [root guide](../../CLAUDE.md)). A browser script may import its pure constants
+  and helpers (the ballot page imports `ELECTION_DAY`), and Vite bundles only what it uses.
+- **levels.ts must stay import-free** so the schema, pages and browser code can all share it. `LEVELS` is typed
+  `satisfies Record<Level, string>`, so a new level without a label fails `npm run check`.
 - **geo.ts must stay free of Leaflet and DOM code** so the point-in-polygon logic stays pure. Coordinates are
   `[lng, lat]` (GeoJSON order) but Leaflet uses `[lat, lng]`; the finder converts at the call site.
 
@@ -43,8 +47,8 @@ the same way, or the footnote numbers will jump around. Never call `ref()` from 
 
 ## Gotchas
 
-- Adding a race `level` means updating `LEVELS` here and several other files; see "If you change X" in the
-  [root guide](../../CLAUDE.md).
-- `hasProfile` and `ELECTION_DATE` are exported but not used anywhere.
+- Adding a race level touches a few other files; see "If you change X" in the [root guide](../../CLAUDE.md).
+- Dates are built at noon UTC and formatted with `timeZone: 'UTC'`, so they never shift a day in any timezone.
+  Keep both halves of that when adding a date.
 - `CONTACT_ENDPOINT` and `TURNSTILE_SITE_KEY` are public by design. The Turnstile secret lives only in the Worker
   ([../../workers/contact/](../../workers/contact/CLAUDE.md)).

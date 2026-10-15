@@ -1,7 +1,7 @@
 ---
 import { getCollection } from 'astro:content';
 import Base from '../layouts/Base.astro';
-import { url, GOVOTETN, LEVELS } from '../lib/site';
+import { url, GOVOTETN, LEVELS, ELECTION_DATE, ELECTION_DAY, EARLY_VOTING, formatMonthDay, formatWeekday, numberWord } from '../lib/site';
 
 const amendments = (await getCollection('amendments')).sort((a, b) => a.data.number - b.data.number);
 const races = (await getCollection('races')).map((r) => r.data);
@@ -11,7 +11,7 @@ const count = (level: keyof typeof LEVELS) => races.filter((r) => r.level === le
 
 <Base title="Home">
   <p class="breadcrumb">Tennessee general election</p>
-  <h1>Tuesday, November 3, 2026</h1>
+  <h1>{formatWeekday(ELECTION_DATE)}, {ELECTION_DAY}</h1>
   <p class="lede">
     What's on the ballot, and the arguments for and against each item — shown without party, ideology, or group
     labels so every argument stands on its own. This guide never tells you how to vote.
@@ -19,13 +19,13 @@ const count = (level: keyof typeof LEVELS) => races.filter((r) => r.level === le
 
   <div class="notice">
     <p style="margin:0">
-      <strong>Early voting:</strong> October 14 through October 29. Bring a valid photo ID. For your exact sample
+      <strong>Early voting:</strong> {formatMonthDay(EARLY_VOTING.start)} through {formatMonthDay(EARLY_VOTING.end)}. Bring a valid photo ID. For your exact sample
       ballot, polling place, and hours, use the state's <a href={GOVOTETN}>GoVoteTN</a> tools.
     </p>
   </div>
 
   <h2>Constitutional amendments</h2>
-  <p>Three proposed amendments appear directly after the governor's race. <a href={url('amendments')}>How they pass</a>.</p>
+  <p>{numberWord(amendments.length, true)} proposed amendments appear directly after the governor's race. <a href={url('amendments')}>How they pass</a>.</p>
   <div class="grid">
     {amendments.map((a) => (
       <a class="card-link" href={url(`amendments/${a.data.id}`)}>

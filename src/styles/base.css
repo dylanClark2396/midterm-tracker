@@ -13,6 +13,10 @@
   --maxw: 72rem;
   --font: system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
   --serif: 'Iowan Old Style', 'Palatino Linotype', Palatino, Georgia, serif;
+  /* District-map overlay (src/scripts/district-finder.ts). The street map is light in both themes, so these
+     stay the light --ink and --accent and are not redefined for dark mode. */
+  --map-ink: #1e1f21;
+  --map-accent: #7a5a1f;
   color-scheme: light;
 }
 

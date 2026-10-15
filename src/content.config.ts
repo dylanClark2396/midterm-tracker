@@ -2,6 +2,7 @@ import { defineCollection } from 'astro:content';
 import { glob } from 'astro/loaders';
 import { z } from 'astro/zod';
 import { blockedTerms, categoryIds, PLATFORM_MAX } from './lib/rules';
+import { LEVEL_IDS } from './lib/levels';
 
 const date = z.coerce.date();
 
@@ -103,7 +104,7 @@ const races = defineCollection({
   schema: z.object({
     id: z.string(),
     office: z.string(),
-    level: z.enum(['statewide', 'us_house', 'state_senate', 'state_house']),
+    level: z.enum(LEVEL_IDS),
     district: z.number().int().positive().nullable(),
     // complete = platforms and arguments researched; pending = official candidate list only.
     research_status: z.enum(['complete', 'pending']),

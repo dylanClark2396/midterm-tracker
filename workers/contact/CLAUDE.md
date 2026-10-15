@@ -11,12 +11,12 @@ Cloudflare Email Routing.
 
 ## Rules
 
-- **Not part of the site build or CI.** Deploy by hand with `npx wrangler deploy` from this folder. A site deploy
-  doesn't update the Worker, so ship form changes in both places.
+- **Not deployed by the site build or CI.** Deploy by hand with `npx wrangler deploy` from this folder. A site
+  deploy doesn't update the Worker, so ship form changes in both places.
 - The form contract is the field names (`topic`, `message`, `source`, `name`, `email`, `website`, `page`,
   `cf-turnstile-response`), the `TOPICS` keys, and the `LIMITS`, which mirror the `maxlength`s in `contact.astro`.
-  The response is `{ ok: true }` or `{ ok: false, error }`, and the page shows `error` to the visitor, so write it
-  for voters.
+  `npm run check:contact` (also run in CI) fails if the two drift. The response is `{ ok: true }` or
+  `{ ok: false, error }`, and the page shows `error` to the visitor, so write it for voters.
 - `TURNSTILE_SECRET` is a Worker secret (`wrangler secret put`); never commit it. The site key in
   [../../src/lib/site.ts](../../src/lib/site.ts) is public.
 - `ALLOWED_ORIGINS` includes `http://localhost:4321` so the dev server can post to the live Worker. A message sent

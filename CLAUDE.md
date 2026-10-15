@@ -34,7 +34,8 @@ src/data/**/*.yaml ──► content.config.ts (Zod schema + lib/rules.ts: block
 | Data shape, validation, build-failing rules | [src/content.config.ts](src/content.config.ts), [src/lib/rules.ts](src/lib/rules.ts) |
 | Writing or researching race/amendment YAML | [src/data/CLAUDE.md](src/data/CLAUDE.md) |
 | Argument order, footnote numbering, view models | [src/lib/site.ts](src/lib/site.ts) |
-| Site constants (URLs, contact endpoint, Turnstile key) | [src/lib/site.ts](src/lib/site.ts) |
+| Site constants (URLs, election and early-voting dates, contact endpoint, Turnstile key) | [src/lib/site.ts](src/lib/site.ts) |
+| Race levels (statewide, U.S. House, TN Senate, TN House) | [src/lib/levels.ts](src/lib/levels.ts) |
 | Page shell, nav, meta tags, mobile argument tabs | [src/layouts/Base.astro](src/layouts/Base.astro) |
 | Race and amendment pages | [src/pages/races/[id].astro](src/pages/races/[id].astro), [src/pages/amendments/[id].astro](src/pages/amendments/[id].astro) |
 | District finder (map + address search) | [src/pages/districts.astro](src/pages/districts.astro), [src/scripts/district-finder.ts](src/scripts/district-finder.ts), [src/lib/geo.ts](src/lib/geo.ts) |
@@ -52,12 +53,13 @@ status`, `astro dev logs`). Stop it before `npm ci`, or Windows file locks cause
 | `npm run validate` | `astro sync`: schema and blocklist checks only (fast) |
 | `npm run build` | Full static build into `dist/` |
 | `npm run check:links` | Internal links in `dist/` plus every external URL (needs network and a build first; add `-- --internal-only` to skip the network) |
+| `npm run check` | `astro check`: type errors in `.astro` and `.ts` files |
+| `npm run check:contact` | Contact form and Worker agree on fields, topics and limits |
 | `npm run docs:check` | Every relative link in every `CLAUDE.md` resolves |
 | `python scripts/seed-from-certified-list.py [--dry-run]` | Re-seed race files from the certified candidate lists |
 | `node scripts/build-district-maps.mjs` | Rebuild `public/maps/*.json` (network + npx) |
 
-There is no test suite and no typecheck script; `npm run build` is the gate CI uses. For a quick TS check without
-adding dependencies: `npx -p typescript tsc --noEmit -p .` (covers `.ts` files only, not `.astro`).
+There is no test suite. CI runs validate → check → check:contact → docs:check → build → check:links.
 
 ## Project-wide rules
 
@@ -70,21 +72,22 @@ adding dependencies: `npx -p typescript tsc --noEmit -p .` (covers `.ts` files o
 - **Every external URL in `src/**/*.astro` and `src/**/*.ts` gets probed** by `check:links` in CI, as do all YAML
   URLs. Don't add placeholder URLs, and expect URLs with `{` or `}` to be skipped.
 - **Astro drops the space** when a line break sits next to an `<a>` tag. End such lines with `{' '}`.
-- The election date and early-voting dates are hardcoded in page copy. `ELECTION_DATE` exists but nothing uses it.
+- **Dates and counts in copy come from code.** Use `ELECTION_DAY`, `EARLY_VOTING` and the date helpers in
+  [src/lib/site.ts](src/lib/site.ts), and `numberWord()` for counts like "three amendments". Don't type
+  "November 3, 2026" into a page.
 
 ## If you change X, also update Y
 
 | If you change… | Also update… |
 | --- | --- |
-| Race `level` enum in [content.config.ts](src/content.config.ts) | `LEVELS` in [site.ts](src/lib/site.ts); `raceIndex` in [districts.astro](src/pages/districts.astro); `Level` and `LAYERS` in [district-finder.ts](src/scripts/district-finder.ts); `districtLevels` in [ballot.astro](src/pages/ballot.astro); `LISTS` in the [seed script](scripts/seed-from-certified-list.py) |
+| Race levels (`LEVEL_IDS` / `DISTRICT_LEVELS` in [levels.ts](src/lib/levels.ts)) | The label in `LEVELS` in [site.ts](src/lib/site.ts) (`npm run check` flags a missing one); for a district level, its map entry in `LAYERS` in [district-finder.ts](src/scripts/district-finder.ts) and its label in `districtLevels` in [ballot.astro](src/pages/ballot.astro); `LISTS` in the [seed script](scripts/seed-from-certified-list.py) |
 | `ballot_party` enum | `PARTIES` in the [seed script](scripts/seed-from-certified-list.py) |
 | Issue categories | Only [categories.yaml](src/data/categories.yaml); the schema and the compare table read it, and its order is the row order |
-| Statewide race ids (`governor`, `us-senate`) | The hardcoded list in [ballot.astro](src/pages/ballot.astro) |
-| Contact form fields, topics, or `maxlength`s in [contact.astro](src/pages/contact.astro) | `TOPICS` and `LIMITS` in [workers/contact/src/index.js](workers/contact/src/index.js), then redeploy the Worker by hand |
+| Contact form fields, topics, or `maxlength`s in [contact.astro](src/pages/contact.astro) | `TOPICS` and `LIMITS` in [workers/contact/src/index.js](workers/contact/src/index.js) (`npm run check:contact` catches a mismatch), then redeploy the Worker by hand |
 | Site domain (`site` in [astro.config.mjs](astro.config.mjs)) | [public/robots.txt](public/robots.txt), `ALLOWED_ORIGINS` in [wrangler.jsonc](workers/contact/wrangler.jsonc), the Message-ID domain in the Worker |
 | Worker name or account | `CONTACT_ENDPOINT` in [site.ts](src/lib/site.ts) |
 | Map file names in [build-district-maps.mjs](scripts/build-district-maps.mjs) | `LAYERS[].file` in [district-finder.ts](src/scripts/district-finder.ts) |
-| Light-theme `--ink` / `--accent` in [base.css](src/styles/base.css) | `INK` / `ACCENT` in [district-finder.ts](src/scripts/district-finder.ts) (the map overlay is always light) |
+| Light-theme `--ink` / `--accent` in [base.css](src/styles/base.css) | `--map-ink` / `--map-accent` in the same file, which the district map reads (the map is always light) |
 | Default argument tab or ordering rules | The explanation on [method.astro](src/pages/method.astro) |
 | Main nav | `nav` in [Base.astro](src/layouts/Base.astro) |
 
@@ -95,7 +98,7 @@ adding dependencies: `npx -p typescript tsc --noEmit -p .` (covers `.ts` files o
 | [src/data/CLAUDE.md](src/data/CLAUDE.md) | YAML content: schema rules, sourcing, research status, editorial rulings |
 | [src/lib/CLAUDE.md](src/lib/CLAUDE.md) | Shared logic: rules, view models, shuffle/footnotes, geometry |
 | [src/CLAUDE.md](src/CLAUDE.md) | Site UI: routes, layout, components, browser scripts, styles |
-| [scripts/CLAUDE.md](scripts/CLAUDE.md) | Link checkers, map rebuild, candidate seeding |
+| [scripts/CLAUDE.md](scripts/CLAUDE.md) | Link and contact checkers, map rebuild, candidate seeding |
 | [workers/contact/CLAUDE.md](workers/contact/CLAUDE.md) | Contact form Worker |
 
 Astro docs: [routing](https://docs.astro.build/en/guides/routing/),

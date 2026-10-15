@@ -60,6 +60,7 @@ import { url } from '../lib/site';
   state's lookup" notice near any line (`nearLine` in [lib/geo.ts](lib/geo.ts)). Map tiles are OpenStreetMap
   (CARTO now needs a key), and Leaflet's flag prefix is removed on purpose.
 - **Contact**: the Worker answers `{ ok, error? }` JSON, and the page shows `error` as written. The hidden
-  `website` field is a honeypot and `page` is filled from the referrer. Field names must match the Worker.
-- Hardcoded copy (election date, early-voting dates, "three amendments") appears on several pages. Search for it
-  before changing any of it.
+  `website` field is a honeypot and `page` is filled from the referrer. Field names, topic values and
+  `maxlength`s must match the Worker; `npm run check:contact` verifies that.
+- Write dates and counts with the helpers in [lib/site.ts](lib/site.ts) (`ELECTION_DAY`, `EARLY_VOTING`,
+  `formatDayRange`, `numberWord`), not as literal text. Statewide races are found by `level`, never by id.

@@ -1,7 +1,7 @@
 ---
 import { getCollection } from 'astro:content';
 import Base from '../../layouts/Base.astro';
-import { url, LEVELS } from '../../lib/site';
+import { url, LEVELS, ELECTION_DAY } from '../../lib/site';
 
 const races = (await getCollection('races')).map((r) => r.data);
 const groups = (Object.keys(LEVELS) as (keyof typeof LEVELS)[]).map((level) => ({
@@ -13,10 +13,10 @@ const groups = (Object.keys(LEVELS) as (keyof typeof LEVELS)[]).map((level) => (
 }));
 ---
 
-<Base title="Races" description="Every race on the November 3, 2026 Tennessee ballot, grouped by level.">
+<Base title="Races" description={`Every race on the ${ELECTION_DAY} Tennessee ballot, grouped by level.`}>
   <h1>Races</h1>
   <p class="lede">
-    Every race on the November 3, 2026 ballot, from the Secretary of State's certified candidate lists. Use{' '}
+    Every race on the {ELECTION_DAY} ballot, from the Secretary of State's certified candidate lists. Use{' '}
     <a href={url('districts')}>Find your districts</a> if you're not sure which district races are on your ballot.
   </p>
   <p class="muted small">

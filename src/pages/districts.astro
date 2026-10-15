@@ -1,27 +1,25 @@
 ---
 import { getCollection } from 'astro:content';
 import Base from '../layouts/Base.astro';
-import { url } from '../lib/site';
+import { DISTRICT_LEVELS, type DistrictLevel } from '../lib/levels';
+import { url, ELECTION_DAY, EARLY_VOTING, formatDayRange, numberWord } from '../lib/site';
 
 // District number -> race page, for the map's results panel.
 const races = (await getCollection('races')).map((r) => r.data);
-const byDistrict = (level: string) =>
+const byDistrict = (level: DistrictLevel) =>
   Object.fromEntries(
     races
       .filter((r) => r.level === level && r.district !== null)
       .map((r) => [r.district, { href: url(`races/${r.id}`), candidates: r.candidates.length }]),
   );
-const raceIndex = {
-  us_house: byDistrict('us_house'),
-  state_senate: byDistrict('state_senate'),
-  state_house: byDistrict('state_house'),
-};
+const raceIndex = Object.fromEntries(DISTRICT_LEVELS.map((level) => [level, byDistrict(level)]));
+const amendmentCount = (await getCollection('amendments')).length;
 const statewide = races.filter((r) => r.level === 'statewide').sort((a, b) => a.office.localeCompare(b.office));
 ---
 
 <Base
   title="Find your district races"
-  description="Search your address or tap a map of Tennessee to see which U.S. House, state Senate, and state House races are on your November 3, 2026 ballot."
+  description={`Search your address or tap a map of Tennessee to see which U.S. House, state Senate, and state House races are on your ${ELECTION_DAY} ballot.`}
 >
   <h1>Find your district races</h1>
   <p class="lede">
@@ -71,7 +69,7 @@ const statewide = races.filter((r) => r.level === 'statewide').sort((a, b) => a.
     <p class="small">
       Everyone in Tennessee also votes on{' '}
       {statewide.map((r, i) => <><a href={url(`races/${r.id}`)}>{r.office}</a>{i < statewide.length - 1 ? ', ' : ''}</>)}
-      {' '}and the <a href={url('amendments')}>three constitutional amendments</a>.
+      {' '}and the <a href={url('amendments')}>{numberWord(amendmentCount)} constitutional amendments</a>.
     </p>
   </template>
 
@@ -91,7 +89,7 @@ const statewide = races.filter((r) => r.level === 'statewide').sort((a, b) => a.
       sample ballot before you vote.
     </li>
     <li>
-      <a href="https://sos.tn.gov/govotetn">GoVoteTN election information</a> — early voting (October 14–29), photo ID
+      <a href="https://sos.tn.gov/govotetn">GoVoteTN election information</a> — early voting ({formatDayRange(EARLY_VOTING.start, EARLY_VOTING.end)}), photo ID
       rules, and absentee voting.
     </li>
   </ul>
