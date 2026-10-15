@@ -77,9 +77,13 @@ npm run dev          # http://localhost:4321/
 npm run validate     # schema + blocklist checks only
 npm run build        # full static build into dist/
 npm run check:links  # internal links + every source URL (run after build)
+npm run docs:check   # relative links in the CLAUDE.md agent guides
 ```
 
 Requires Node 22.12+.
+
+Coding agents (and people new to the code) should start with [CLAUDE.md](CLAUDE.md): architecture, where things
+live, which files must change together, and links to per-folder guides.
 
 ## Deployment
 
