@@ -9,7 +9,6 @@ _sources:
   lr_home: &lr_home { url: "https://www.leereeves.com/", title: "Lee Reeves for State House (Reeves campaign)", accessed: 2026-10-16 }
   wh_2nd: &wh_2nd { url: "https://www.williamsonherald.com/news/local_news/rep-lee-reeves-seeks-2nd-term-in-tennessee-house/article_dae1feec-65f8-4c74-9a0c-6df51be4a441.html", title: "Rep. Lee Reeves seeks 2nd term in Tennessee House (Williamson Herald)", accessed: 2026-10-16 }
   wh_foreman: &wh_foreman { url: "https://www.williamsonherald.com/news/local_news/foreman-making-another-run-for-district-65/article_d8334898-5949-4b8b-8464-7fa7a46daab1.html", title: "Foreman Making Another Run for District 65 (Williamson Herald)", accessed: 2026-10-16 }
-  ww65: &ww65 { url: "https://williamsonwrong.substack.com/p/round-two-in-district-65", title: "Round Two in District 65 (Williamson Wrong)", accessed: 2026-10-16 }
   hb0749: &hb0749 { url: "https://wapp.capitol.tn.gov/apps/BillInfo/Default.aspx?BillNumber=HB0749&GA=114", title: "HB0749 bill information (Tennessee General Assembly)", accessed: 2026-10-16 }
 
 id: tn-house-065
@@ -60,9 +59,8 @@ candidates:
     arguments:
       - stance: for
         text: >-
-          He says 13 of his bills became law in his first two sessions, and he was named one of the Tennessee
-          Journal's freshman legislators of the year.
-        sources: [*wh_2nd, *lr_home]
+          He says 13 of his bills were signed into law during his first two legislative sessions.
+        sources: [*wh_2nd]
       - stance: for
         text: >-
           He says he helped secure $3 million for the state's battlefield preservation fund and an extra $15
@@ -70,15 +68,9 @@ candidates:
         sources: [*wh_2nd]
       - stance: against
         text: >-
-          A primary challenger said he has not been available to constituents and that the seat should not go to
-          someone seeking a next political promotion, pointing to his run for Congress during his first term.
+          A primary challenger said he has not been available to his constituents and that the district needs a
+          representative who is present for the people who elected them.
         sources: [*wh_foreman]
-      - stance: against
-        text: >-
-          A local commentary argued that his vote to expand school choice sends public money to private-school
-          tuition in a county whose public schools draw families there, and that his short run for Congress
-          raises questions about his commitment to the seat.
-        sources: [*ww65]
 
   - name: "Julian Herbert Pierre-Griffin"
     ballot_party: Democratic
