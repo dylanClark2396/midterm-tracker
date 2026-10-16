@@ -1,23 +1,133 @@
-# Seeded from the Secretary of State's certified candidate list by
-# scripts/seed-from-certified-list.py. research_status: pending —
-# platforms and arguments not yet compiled.
+# Tennessee House, District 33 (most of Anderson County, including Oak Ridge and Clinton) — Rep. Rick Scarbrough,
+# in office since 2024, faces Anne Backus in a rematch of 2024.
+# Candidate order follows the Secretary of State's certified candidate list.
+_sources:
+  cga_h33: &cga_h33 { url: "https://wapp.capitol.tn.gov/apps/legislatorinfo/member.aspx?district=H33", title: "Representative Rick Scarbrough (Tennessee General Assembly)", accessed: 2026-10-15 }
+  bp_scarbrough: &bp_scarbrough { url: "https://ballotpedia.org/Richard_Scarbrough", title: "Richard Scarbrough (Ballotpedia)", accessed: 2026-10-15 }
+  lookout33: &lookout33 { url: "https://tennesseelookout.com/voter-guides/contests/house-district-33/", title: "Tennessee House of Representatives, 33rd District voter guide (Tennessee Lookout)", accessed: 2026-10-15 }
+  hb0370: &hb0370 { url: "https://wapp.capitol.tn.gov/apps/BillInfo/Default.aspx?BillNumber=HB0370&GA=114", title: "HB0370 bill information (Tennessee General Assembly)", accessed: 2026-10-15 }
+  hb0587: &hb0587 { url: "https://wapp.capitol.tn.gov/apps/BillInfo/Default.aspx?BillNumber=HB0587&GA=114", title: "HB0587 bill information (Tennessee General Assembly)", accessed: 2026-10-15 }
+  hb0920: &hb0920 { url: "https://wapp.capitol.tn.gov/apps/BillInfo/Default.aspx?BillNumber=HB0920&GA=114", title: "HB0920 bill information (Tennessee General Assembly)", accessed: 2026-10-15 }
+  hb1707: &hb1707 { url: "https://wapp.capitol.tn.gov/apps/BillInfo/Default.aspx?BillNumber=HB1707&GA=114", title: "HB1707 bill information (Tennessee General Assembly)", accessed: 2026-10-15 }
+  tl_ice_house: &tl_ice_house { url: "https://tennesseelookout.com/2026/04/03/tennessee-house-approves-bill-to-discipline-judges-who-obstruct-ice/", title: "Tennessee House approves bill to discipline judges who obstruct ICE (Tennessee Lookout)", accessed: 2026-10-15 }
+  tl_ice_law: &tl_ice_law { url: "https://tennesseelookout.com/2026/05/12/tennessee-judges-could-be-ousted-for-not-cooperating-with-ice-in-new-law-signed-by-the-governor/", title: "Tennessee judges could be ousted for not cooperating with ICE in new law signed by the governor (Tennessee Lookout)", accessed: 2026-10-15 }
+  rs_home: &rs_home { url: "https://rickscarbrough.com/", title: "Rick Scarbrough for State Representative (Scarbrough campaign)", accessed: 2026-10-15 }
+  rs_about: &rs_about { url: "https://rickscarbrough.com/about/", title: "Meet Rick (Scarbrough campaign)", accessed: 2026-10-15 }
+  rs_why: &rs_why { url: "https://rickscarbrough.com/why/", title: "Why I'm Running (Scarbrough campaign)", accessed: 2026-10-15 }
+  cn_rs: &cn_rs { url: "https://mycouriernews.com/articles/2026/07/11308/scarbrough-seeks-second-term", title: "Scarbrough seeks second term (The Courier News)", accessed: 2026-10-15 }
+  ab_home: &ab_home { url: "https://www.backusfortn33.com/", title: "Anne Backus for State House (TN 33) (Backus campaign)", accessed: 2026-10-15 }
+  ab_issues: &ab_issues { url: "https://www.backusfortn33.com/issues", title: "Issues (Backus campaign)", accessed: 2026-10-15 }
+  bp_backus: &bp_backus { url: "https://ballotpedia.org/Anne_Backus", title: "Anne Backus (Ballotpedia)", accessed: 2026-10-15 }
+  cn_ab: &cn_ab { url: "https://mycouriernews.com/articles/2026/03/10821/backus-announces-house-district-33-bid", title: "Backus announces House District 33 bid (The Courier News)", accessed: 2026-10-15 }
+
 id: tn-house-033
 office: "Tennessee House, District 33"
 level: state_house
 district: 33
-research_status: pending
+research_status: complete
 candidate_list_source: "https://sos-prod.tnsosgovfiles.com/s3fs-public/document/TNHouse_Nov2026.pdf"
+
 candidates:
   - name: "Rick Scarbrough"
     ballot_party: Republican
     city: "Oak Ridge"
-    why_running: { text: null, sources: [] }
-    platform: []
-    arguments: []
+    incumbent: true
+    website: "https://rickscarbrough.com"
+    bio_facts:
+      - { text: "State representative for District 33 since November 2024; House member of the 114th General Assembly. Won the 2024 primary over the sitting representative and the 2024 general election with 67.7% of the vote.", sources: [*bp_scarbrough, *cga_h33, *lookout33] }
+      - { text: "Serves on the House Judiciary and Insurance committees and the Criminal Justice and Insurance subcommittees.", sources: [*cga_h33] }
+      - { text: "Spent six years with the Anderson County Sheriff's Office and 23 years with the Clinton Police Department, the last 16 as chief of police; named Tennessee Police Chief of the Year in 2014.", sources: [*cga_h33, *rs_about, *lookout33] }
+      - { text: "Executive director of the University of Tennessee's Law Enforcement Innovation Center since 2018; graduate of the FBI National Academy.", sources: [*rs_about, *cga_h33] }
+      - { text: "Bachelor's and master's degrees in organizational management from Tusculum College.", sources: [*cga_h33, *rs_about] }
+      - { text: "Sponsored enacted laws expanding the harassment offense to in-person communication (HB0370), adding organized retail crime and carjacking to racketeering activity (HB0587), and barring release on personal recognizance or unsecured bond for certain charges (HB0920).", sources: [*hb0370, *hb0587, *hb0920] }
+      - { text: "Sponsored a 2026 law (HB1707) requiring courts to cooperate with federal immigration authorities until February 2029 and allowing a judge who obstructs that enforcement to be referred for misconduct proceedings.", sources: [*hb1707, *tl_ice_law] }
+    why_running:
+      text: >-
+        He says becoming a grandfather changed his perspective and that he wants every child in Tennessee to have
+        the chance at a prosperous and free life. He says the district needs leaders who listen and solve problems
+        rather than chase headlines, and a stronger voice in Nashville so the community is not left behind.
+      sources: [*rs_why, *rs_about]
+    platform:
+      - category: economy
+        text: "Support small businesses, lower regulations and attract high-paying jobs, with opportunity spread to every part of the state."
+        sources: [*rs_home]
+      - category: taxes
+        text: "Keep Tennessee free of a state income tax by holding down state spending and balancing budgets."
+        sources: [*rs_home]
+      - category: education
+        text: "Hold schools to high standards and accountability, give parents information and options, invest in career and technical education, fund schools based on each student's needs, and pay teachers well."
+        sources: [*rs_home]
+      - category: public_safety
+        text: "Fight drug addiction by giving law enforcement resources, stopping drugs from entering the community and helping affected families; do more to protect seniors from scams and elder abuse."
+        sources: [*rs_home]
+      - category: immigration
+        text: "Enforce federal immigration law, support border states, hold the federal government accountable for the costs of border policy, and make sure local police get the information they need."
+        sources: [*rs_home]
+      - category: guns
+        text: "Protect constitutional rights, including the right to keep and bear arms."
+        sources: [*rs_home]
+    arguments:
+      - stance: for
+        text: >-
+          Nearly 30 years in Anderson County law enforcement, the last 16 as Clinton's police chief, give him
+          firsthand knowledge of keeping local communities safe and tackling addiction.
+        sources: [*rs_about, *rs_home]
+      - stance: for
+        text: >-
+          His campaign says that in his first term he passed laws allowing tougher punishment for harassment and
+          racketeering and making it harder for violent offenders to get out of jail.
+        sources: [*cn_rs]
+      - stance: against
+        text: >-
+          During House debate on his bill letting judges be disciplined for obstructing federal immigration
+          enforcement, a colleague asked for examples of such obstruction and noted that judges can already be
+          referred for discipline over any alleged misconduct; he said he could not cite a specific event. The
+          enacted law does not define what counts as obstruction.
+        sources: [*tl_ice_house, *tl_ice_law]
+
   - name: "Anne Backus"
     ballot_party: Democratic
     city: "Oak Ridge"
-    why_running: { text: null, sources: [] }
-    platform: []
-    arguments: []
-last_verified: 2026-10-13
+    incumbent: false
+    website: "https://www.backusfortn33.com"
+    bio_facts:
+      - { text: "Worked 33 years as a project manager at the Y-12 National Security Complex in Oak Ridge, retiring in 2014.", sources: [*ab_home, *cn_ab, *lookout33] }
+      - { text: "Industrial engineering degree from Mississippi State University (1980).", sources: [*ab_home, *bp_backus] }
+      - { text: "Volunteers as a Court Appointed Special Advocate (CASA) in Anderson County Juvenile Court and tutors young people in math.", sources: [*ab_home, *cn_ab] }
+      - { text: "Ran for this seat in 2024 and lost the general election with 32.3% of the vote; won the August 2026 primary with 62%.", sources: [*bp_backus] }
+    why_running:
+      text: >-
+        She says government needs to refocus its priorities and truly serve the people, and that she will listen
+        to residents' concerns and take their voice to Nashville. She says her 2024 campaign showed her how much
+        she values hearing from voters and the need for stronger representation for the district.
+      sources: [*ab_home, *cn_ab, *bp_backus]
+    platform:
+      - category: economy
+        text: "Ensure all working Tennesseans earn a living wage."
+        sources: [*ab_issues, *bp_backus]
+      - category: taxes
+        text: "Eliminate the state sales tax on groceries."
+        sources: [*ab_issues, *bp_backus]
+      - category: cost_of_living
+        text: "Make housing more affordable."
+        sources: [*ab_issues]
+      - category: education
+        text: "Use tax dollars to strengthen public schools rather than expand private school vouchers."
+        sources: [*ab_issues, *bp_backus]
+      - category: health_care
+        text: "Make health care affordable for everyone, with a focus on improving care for mothers and infants."
+        sources: [*ab_issues]
+      - category: immigration
+        text: "Oppose proposed state laws that would label all undocumented immigrants as criminals, noting that immigration status is now a civil matter."
+        sources: [*ab_issues]
+      - category: government
+        text: "Stop efforts to limit public input in House committee hearings and floor sessions."
+        sources: [*ab_issues]
+    arguments:
+      - stance: for
+        text: >-
+          Her 33 years managing projects at Y-12 taught her to bring diverse groups together, manage budgets and
+          deliver on time, skills she says carry over to lawmaking.
+        sources: [*cn_ab, *bp_backus]
+
+last_verified: 2026-10-15
