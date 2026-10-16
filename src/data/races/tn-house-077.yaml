@@ -1,23 +1,83 @@
-# Seeded from the Secretary of State's certified candidate list by
-# scripts/seed-from-certified-list.py. research_status: pending —
-# platforms and arguments not yet compiled.
+# Tennessee House, District 77 (Dyer and Lake counties and part of Obion County) — Rep. Rusty Grills, in office
+# since January 2020, faces Erin Jerrod Reid.
+# Candidate order follows the Secretary of State's certified candidate list.
+_sources:
+  cga_h77: &cga_h77 { url: "https://wapp.capitol.tn.gov/apps/legislatorinfo/member.aspx?district=H77", title: "Representative Rusty Grills (Tennessee General Assembly)", accessed: 2026-10-16 }
+  bp_grills: &bp_grills { url: "https://ballotpedia.org/Rusty_Grills", title: "Rusty Grills (Ballotpedia)", accessed: 2026-10-16 }
+  lookout77: &lookout77 { url: "https://tennesseelookout.com/voter-guides/contests/house-district-77/", title: "Tennessee House of Representatives, 77th District voter guide (Tennessee Lookout)", accessed: 2026-10-16 }
+  rg_home: &rg_home { url: "https://rustygrillsfortn.com/", title: "Rusty Grills for State Representative (Grills campaign)", accessed: 2026-10-16 }
+  hb0811: &hb0811 { url: "https://wapp.capitol.tn.gov/apps/BillInfo/Default.aspx?BillNumber=HB0811&GA=114", title: "HB0811 bill information (Tennessee General Assembly)", accessed: 2026-10-16 }
+  hb7030: &hb7030 { url: "https://wapp.capitol.tn.gov/apps/BillInfo/Default.aspx?BillNumber=HB7030&GA=113", title: "HB7030 bill information (Tennessee General Assembly)", accessed: 2026-10-16 }
+  lookout_teen_guns: &lookout_teen_guns { url: "https://tennesseelookout.com/2023/08/18/west-tenn-lawmaker-sponsors-bills-to-transfer-teen-gun-thefts-to-adult-court/", title: "West Tenn lawmaker sponsors bills to transfer teen gun thefts to adult court (Tennessee Lookout)", accessed: 2026-10-16 }
+  lookout_charities: &lookout_charities { url: "https://tennesseelookout.com/2025/02/17/bills-that-target-immigrant-serving-nonprofits-raise-criticism-from-faith-community/", title: "Bills that target immigrant-serving nonprofits raise criticism (Tennessee Lookout)", accessed: 2026-10-16 }
+
 id: tn-house-077
 office: "Tennessee House, District 77"
 level: state_house
 district: 77
-research_status: pending
+research_status: complete
 candidate_list_source: "https://sos-prod.tnsosgovfiles.com/s3fs-public/document/TNHouse_Nov2026.pdf"
+
 candidates:
   - name: "Rusty Grills"
     ballot_party: Republican
     city: "Newbern"
-    why_running: { text: null, sources: [] }
-    platform: []
-    arguments: []
+    incumbent: true
+    website: "https://rustygrillsfortn.com/"
+    bio_facts:
+      - { text: "State representative for District 77 since January 2020, after winning a December 2019 special election; House member of the 111th through 114th General Assemblies.", sources: [*bp_grills, *cga_h77, *lookout77] }
+      - { text: "Chairs the House Business & Utilities Subcommittee; also serves on the Agriculture & Natural Resources, Commerce, and Finance, Ways & Means committees and the Select Committee on Rules.", sources: [*cga_h77, *lookout77] }
+      - { text: "Dyer County commissioner from 2010 to 2020.", sources: [*cga_h77, *rg_home] }
+      - { text: "Farmer who describes himself as a ninth-generation farmer; home-school graduate (2000) who attended TCAT from 1999 to 2001.", sources: [*rg_home, *cga_h77] }
+      - { text: "Lives in Newbern with his wife and two daughters.", sources: [*rg_home, *cga_h77] }
+      - { text: "House sponsor of a 2025 bill, enacted through its Senate companion, that lets a charity be held liable for crimes committed by a person it knowingly houses who is unlawfully present in the U.S., when its conduct in providing the housing is negligent or worse.", sources: [*hb0811, *lookout_charities] }
+      - { text: "In 2023, sponsored a special-session bill to let juvenile courts transfer 16- and 17-year-olds to adult court for burglaries involving the theft of a firearm.", sources: [*hb7030, *lookout_teen_guns] }
+    why_running:
+      text: >-
+        On his campaign site, written for his 2024 re-election, he says representing District 77 has been an honor
+        and that he wants to take the region's values to Nashville and keep Tennessee's future prosperous for everyone.
+      sources: [*rg_home]
+    platform:
+      - category: guns
+        text: "Opposes red flag laws and is committed to protecting the right to keep and bear arms."
+        sources: [*rg_home]
+      - category: economy
+        text: "Continue business-friendly policies that create jobs and promote economic growth."
+        sources: [*rg_home]
+      - category: abortion
+        text: "Supports Tennessee's permanent ban on abortion; says life begins at conception."
+        sources: [*rg_home]
+      - category: agriculture
+        text: "Support farmers and ranchers by advocating for the district's agricultural needs."
+        sources: [*rg_home]
+      - category: education
+        text: "Prioritize local control of education and freedom for teachers in the classroom, along with school investment and higher teacher pay."
+        sources: [*rg_home]
+      - category: taxes
+        text: "Keep Tennessee among the lowest-taxed states and let taxpayers keep more of their money by avoiding excessive regulation."
+        sources: [*rg_home]
+    arguments:
+      - stance: for
+        text: >-
+          His campaign says he has secured more than $30 million for economic development in District 77 and
+          millions of dollars for road improvements in rural West Tennessee.
+        sources: [*rg_home]
+      - stance: for
+        text: >-
+          His campaign says that in 10 years on the Dyer County Commission he never voted to raise taxes.
+        sources: [*rg_home]
+      - stance: against
+        text: >-
+          Critics said in 2025 that his bill making charities liable for crimes by people they house who lack legal
+          immigration status would hamper charities' housing assistance and put them in conflict with federal
+          housing program rules.
+        sources: [*lookout_charities]
+
   - name: "Erin Jerrod Reid"
     ballot_party: Independent
     city: "Tiptonville"
     why_running: { text: null, sources: [] }
     platform: []
     arguments: []
-last_verified: 2026-10-13
+
+last_verified: 2026-10-16
