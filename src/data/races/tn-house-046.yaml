@@ -1,23 +1,128 @@
-# Seeded from the Secretary of State's certified candidate list by
-# scripts/seed-from-certified-list.py. research_status: pending —
-# platforms and arguments not yet compiled.
+# Tennessee House, District 46 (eastern Wilson County, including Watertown and most of Lebanon) — Rep. Clark
+# Boyd, in office since 2018, faces Dominic Howard.
+# Candidate order follows the Secretary of State's certified candidate list.
+_sources:
+  cga_h46: &cga_h46 { url: "https://wapp.capitol.tn.gov/apps/legislatorinfo/member.aspx?district=H46", title: "Representative Clark Boyd (Tennessee General Assembly)", accessed: 2026-10-16 }
+  bp_boyd: &bp_boyd { url: "https://ballotpedia.org/Clark_Boyd", title: "Clark Boyd (Ballotpedia)", accessed: 2026-10-16 }
+  lookout46: &lookout46 { url: "https://tennesseelookout.com/voter-guides/contests/house-district-46/", title: "Tennessee House of Representatives, 46th District voter guide (Tennessee Lookout)", accessed: 2026-10-16 }
+  whip: &whip { url: "https://tnhousegop.org/press-releases/2026/02/rep-clark-boyd-elected-house-majority-whip/", title: "Rep. Clark Boyd elected House Majority Whip (Tennessee House Republican Caucus)", accessed: 2026-10-16 }
+  hb1144: &hb1144 { url: "https://wapp.capitol.tn.gov/apps/BillInfo/Default.aspx?BillNumber=HB1144&GA=114", title: "HB1144 bill information (Tennessee General Assembly)", accessed: 2026-10-16 }
+  prisons: &prisons { url: "https://tennesseelookout.com/2025/04/21/tennessee-lawmakers-send-message-to-private-prisons/", title: "Tennessee lawmakers send message to private prisons (Tennessee Lookout)", accessed: 2026-10-16 }
+  oped: &oped { url: "https://tnhousegop.org/member-newsroom/2025/08/clark-boyd-fighting-for-wilson-county-values-helps-tennessee-lead-the-nation/", title: "CLARK BOYD: Fighting for Wilson County values helps Tennessee lead the nation (Tennessee House Republican Caucus)", accessed: 2026-10-16 }
+  ice: &ice { url: "https://tennesseelookout.com/2026/02/24/tennessee-house-republican-opposes-ice-detention-facility-for-lebanon/", title: "Tennessee House Republican opposes ICE detention facility for Lebanon (Tennessee Lookout)", accessed: 2026-10-16 }
+  cb_home: &cb_home { url: "https://voteclarkboyd.com/", title: "Vote Clark Boyd (Boyd campaign)", accessed: 2026-10-16 }
+  dh_home: &dh_home { url: "https://dominic4tn.com/", title: "Home (Dominic Howard for Tennessee)", accessed: 2026-10-16 }
+  dh_about: &dh_about { url: "https://dominic4tn.com/about", title: "About (Dominic Howard for Tennessee)", accessed: 2026-10-16 }
+  dh_priorities: &dh_priorities { url: "https://dominic4tn.com/priorities", title: "Priorities (Dominic Howard for Tennessee)", accessed: 2026-10-16 }
+
 id: tn-house-046
 office: "Tennessee House, District 46"
 level: state_house
 district: 46
-research_status: pending
+research_status: complete
 candidate_list_source: "https://sos-prod.tnsosgovfiles.com/s3fs-public/document/TNHouse_Nov2026.pdf"
+
 candidates:
   - name: "Clark Boyd"
     ballot_party: Republican
     city: "Lebanon"
-    why_running: { text: null, sources: [] }
-    platform: []
-    arguments: []
+    incumbent: true
+    website: "https://voteclarkboyd.com"
+    bio_facts:
+      - { text: "Appointed to the District 46 seat to fill an unexpired term, then elected in 2018; House member of the 110th through 114th General Assemblies.", sources: [*lookout46, *bp_boyd, *cga_h46] }
+      - { text: "Elected House Majority Whip by his caucus in February 2026; previously chaired the House Business & Utilities Subcommittee. Serves on the Commerce Committee and the Finance, Ways & Means Committee.", sources: [*whip, *cga_h46] }
+      - { text: "Owns a State Farm Insurance agency in Lebanon.", sources: [*lookout46, *bp_boyd] }
+      - { text: "Former captain in the U.S. Army Reserve with 11 years of service in the Army and Army National Guard; B.S. in human development and learning, with a minor in military science, from East Tennessee State University.", sources: [*cga_h46] }
+      - { text: "Former president of the Rotary Club of Lebanon and of Wilson County Habitat for Humanity.", sources: [*cga_h46] }
+      - { text: "Advanced unopposed from the August 6, 2026 primary.", sources: [*bp_boyd] }
+    why_running:
+      text: >-
+        He says serving others in the community makes it stronger, and that he will work to keep taxes low and
+        protect residents' God-given rights.
+      sources: [*cb_home]
+    platform:
+      - category: economy
+        text: "Get government out of the way so small businesses can grow and hire more people."
+        sources: [*cb_home]
+      - category: taxes
+        text: "Keep taxes low by having government live within its means and run as efficiently as possible."
+        sources: [*cb_home]
+      - category: education
+        text: "Give teachers the tools and resources to provide the nation's best public education, and give parents more choice in where their children attend school."
+        sources: [*cb_home]
+      - category: health_care
+        text: "Lower health care costs by removing regulation and increasing transparency, and confront the opioid crisis."
+        sources: [*cb_home]
+      - category: immigration
+        text: "Keep working to end illegal immigration, give law enforcement the tools to do so, and oppose any sanctuary cities in Tennessee."
+        sources: [*cb_home]
+      - category: guns
+        text: "Protect the right of law-abiding citizens to own and carry firearms from infringement by any level of government."
+        sources: [*cb_home]
+      - category: abortion
+        text: "Opposes abortion and any taxpayer funding of abortion or abortion providers."
+        sources: [*cb_home]
+    arguments:
+      - stance: for
+        text: >-
+          Carried a law, passed without a single no vote in the House, that shrinks a private prison's inmate
+          population when its death rate runs double that of state prisons, after working with a local father
+          whose son died in one.
+        sources: [*prisons, *hb1144, *oped]
+      - stance: for
+        text: >-
+          Says the Highway 109 corridor in Lebanon is not suited for a large prison-type immigration detention
+          facility, and that its roads and sewer system could not handle one; he is relaying that view to federal
+          leaders.
+        sources: [*ice]
+      - stance: for
+        text: >-
+          An Army veteran and Lebanon small-business owner who promises to keep taxes low and get government out
+          of the way so businesses can grow and hire.
+        sources: [*cb_home, *whip]
+    # No published criticism of Boyd found for this cycle.
+
   - name: "Dominic Howard"
     ballot_party: Democratic
     city: "Lebanon"
-    why_running: { text: null, sources: [] }
-    platform: []
-    arguments: []
-last_verified: 2026-10-13
+    incumbent: false
+    website: "https://dominic4tn.com"
+    bio_facts:
+      - { text: "Professional sports official for more than 30 years.", sources: [*dh_about, *dh_home] }
+      - { text: "Has about 20 years of experience managing construction and maintenance projects.", sources: [*dh_about, *dh_priorities] }
+      - { text: "Advanced unopposed from the August 6, 2026 primary.", sources: [*bp_boyd] }
+    why_running:
+      text: >-
+        He says the rules in Nashville are being ignored and the game is tilted toward big business and the
+        wealthy while Wilson County families pick up the tab. He says families deserve a representative who
+        puts them ahead of any party or special interest, and that he will bring a referee's impartial approach.
+      sources: [*dh_about, *dh_home]
+    platform:
+      - category: economy
+        text: "Raise the minimum wage to a livable wage that reflects the cost of living in Wilson and Davidson counties."
+        sources: [*dh_priorities, *dh_about]
+      - category: taxes
+        text: "Protect long-term homeowners and seniors on fixed incomes from sharp property tax increases driven by rapid growth."
+        sources: [*dh_priorities]
+      - category: cost_of_living
+        text: "Lower housing costs by encouraging \"missing middle\" housing and cutting red tape for local builders."
+        sources: [*dh_priorities]
+      - category: education
+        text: "End the school voucher program and keep public money in public schools; expand dual enrollment and trade-school partnerships; give teachers competitive pay and the resources to focus on teaching rather than testing."
+        sources: [*dh_priorities, *dh_about]
+      - category: infrastructure
+        text: "Have new development pay for the roads and utilities it needs through impact fees, prioritize state funding for projects that cut commute times, and modernize internet and water systems."
+        sources: [*dh_priorities, *dh_about]
+    arguments:
+      - stance: for
+        text: >-
+          Brings two decades of construction and maintenance management experience to the district's traffic
+          and growth problems, and wants new development to pay its own way instead of current taxpayers.
+        sources: [*dh_about, *dh_priorities]
+      - stance: for
+        text: >-
+          After more than 30 years as a sports official, he promises to make impartial calls for families
+          rather than for any party or special interest.
+        sources: [*dh_home, *dh_about]
+
+last_verified: 2026-10-16
