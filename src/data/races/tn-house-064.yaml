@@ -13,7 +13,6 @@ _sources:
   cb_retention: &cb_retention { url: "https://www.chalkbeat.org/tennessee/2023/3/15/23640372/tennessee-third-grade-retention-compromise-legislation-governor-bill-lee", title: "Bill to ease Tennessee's third-grade reading and retention law clears first legislative hurdle (Chalkbeat)", accessed: 2026-10-16 }
   cb_boards: &cb_boards { url: "https://www.chalkbeat.org/tennessee/2021/10/26/22747700/partisan-school-board-elections-tennessee-legislature-cepicky-bill", title: "Would partisan school board races shift education? Tennessee lawmaker thinks it's time (Chalkbeat)", accessed: 2026-10-16 }
   ff_forum24: &ff_forum24 { url: "https://tnfirefly.com/news/20240725/rep-scott-cepicky-calls-governor-lees-voucher-bill-terrible-despite-receiving-his-endorsement-in-next-months-primary", title: "Rep. Scott Cepicky calls Governor Lee's voucher bill \"terrible\" (Tennessee Firefly)", accessed: 2026-10-16 }
-  ff_jeter24: &ff_jeter24 { url: "https://tnfirefly.com/20240712/conservative-challenger-ray-jeter-outraises-rep-scott-cepicky-with-maury-county-contributions", title: "Challenger Ray Jeter outraises Rep. Scott Cepicky with Maury County contributions (Tennessee Firefly)", accessed: 2026-10-16 }
   cd_home: &cd_home { url: "https://www.cdapolito.com/", title: "Craig D'Apolito for Tennessee House of Representatives, 64th District (D'Apolito campaign)", accessed: 2026-10-16 }
   cd_about: &cd_about { url: "https://www.cdapolito.com/about", title: "About (D'Apolito campaign)", accessed: 2026-10-16 }
   cd_issues: &cd_issues { url: "https://www.cdapolito.com/issues", title: "The Issues (D'Apolito campaign)", accessed: 2026-10-16 }
@@ -47,13 +46,13 @@ candidates:
         text: "Never support legislation that would take away the right to keep and bear arms."
         sources: [*sc_issues]
       - category: education
-        text: "Display the national motto \"In God We Trust\" in every K-12 school and allow prayer in public schools; supports expanding private-school vouchers as an opportunity for students to excel."
+        text: "Display the national motto \"In God We Trust\" in prominent locations in every K-12 school and allow prayer in public schools; supports expanding private-school vouchers as an opportunity for students to excel."
         sources: [*sc_issues, *lk_vouchers26]
       - category: abortion
         text: "Believes life begins at conception and pledges to protect the most vulnerable at every opportunity."
         sources: [*sc_issues]
       - category: government
-        text: "Stand for state sovereignty under the 10th Amendment and take back powers ceded to the federal government; defend religious freedom in public life."
+        text: "Stand for state sovereignty under the 10th Amendment, saying the state has given up too much of its rights to the federal government; defend religious freedom at home and in public life."
         sources: [*sc_issues]
       - category: economy
         text: "Reduce and minimize government regulations so small businesses can grow and create well-paying jobs."
@@ -61,36 +60,38 @@ candidates:
     arguments:
       - stance: for
         text: >-
-          He carried a 2023 revision of the third-grade reading law that adds a second test before a student is
-          held back and creates an appeal process, which teachers' representatives called a positive step.
+          In 2023 he carried a House revision of the third-grade reading law that would weigh a second test for
+          students scoring just under proficiency and direct the state board to set appeal rules, which the
+          leader of the state's largest teachers' organization called a positive step.
         sources: [*cb_retention]
       - stance: for
         text: >-
-          He has led the push to let parents choose where their children go to school, and wrote a House plan with
-          provisions meant to hold down costs and track how participating students perform.
+          In 2024 he was the leading House voice for letting families choose where their children go to school,
+          and he said the House plan he wrote had provisions to keep costs down and give state leaders some data on
+          how participating students perform; in 2026 he spoke for expanding the state's voucher program.
         sources: [*ff_forum24, *lk_vouchers26]
       - stance: for
         text: >-
-          Letting school board candidates run with a party label, as his 2021 bill proposed, gives voters more
-          information and makes board members more accountable to the people they represent.
+          His 2021 bill would have let local parties choose to nominate school board candidates; he argued that
+          party labels give voters more information and make board members more accountable to the people they
+          represent.
         sources: [*cb_boards]
       - stance: against
         text: >-
-          His 2021 bill sought to give the state education commissioner broad power to take over local school
-          districts and replace elected school board members, going around voters and expanding a state takeover
-          model that failed.
+          Critics said in 2021 that his bill giving the state education commissioner broad power to take over local
+          school districts and replace elected school board members would go around voters and expand a state
+          takeover model that had failed.
         sources: [*lk_takeover]
       - stance: against
         text: >-
-          His 2021 bill bringing party labels to school board races would muddy the waters and scare off people
-          who run for school board to help children rather than for politics.
+          Critics said in 2021 that his bill bringing party labels to school board races would muddy the waters and
+          scare off people who run for school board to help children rather than for politics.
         sources: [*cb_boards]
       - stance: against
         text: >-
-          The 2024 House school choice plan he wrote would have added regulation to private and home schools and
-          taken needed money from public schools; improving education should build on the teachers already in
-          classrooms rather than tearing the system down.
-        sources: [*ff_forum24, *ff_jeter24]
+          In 2024, his primary challenger said the House school choice plan he wrote would have added government
+          regulation to private and home schools and taken needed money away from public schools.
+        sources: [*ff_forum24]
 
   - name: "Craig D'Apolito"
     ballot_party: Democratic
@@ -106,12 +107,13 @@ candidates:
       text: >-
         He says he decided to run after watching friends, neighbors and working families struggle with rising
         costs and prescription drug prices, while government seemed more interested in people's personal lives
-        than in maintaining the roads. He says government should work for everyday people and he wants to be a
-        practical, responsible voice for working families, small businesses, farmers and rural communities.
+        than in maintaining the roads. He says government should work for everyday people, and that Tennesseans
+        deserve practical leadership, responsible government and an advocate who understands working families,
+        small businesses, farmers and rural communities.
       sources: [*cd_about]
     platform:
       - category: infrastructure
-        text: "Pause construction of new data centers until new rules are in place, and require data centers to pay for their own water infrastructure as well as electrical infrastructure, with no exclusion for telecommunications companies."
+        text: "Pause new data centers until new rules are enacted, and expand the requirement that data centers pay for their own electrical infrastructure so it also covers water utilities and has no exclusion for telecommunications companies."
         sources: [*cd_issues, *lookout64]
       - category: health_care
         text: "Keep medical decisions between patients and doctors, add beds at the Middle Tennessee Mental Health Institute, make sure federal TennCare money is spent responsibly, and rejoin the federal Summer EBT program."
@@ -129,7 +131,7 @@ candidates:
       - stance: for
         text: >-
           As a farmer, small business owner and former jail sergeant who supervised staff and wrote policy, he
-          understands the challenges facing working families and rural communities in the district.
+          understands the opportunities and challenges facing working families and rural Tennessee.
         sources: [*cd_about]
 
 last_verified: 2026-10-16
