@@ -16,7 +16,7 @@ _sources:
   firefly_bus: &firefly_bus { url: "https://tnfirefly.com/news/rutherford-county-board-backs-house-rep-mike-sparks-push-to-lower-school-bus-driver-age-amid-shortages", title: "Rutherford County Board Backs House Rep. Mike Sparks' Push to Lower School Bus Driver Age Amid Shortages (Tennessee Firefly)", accessed: 2026-10-16 }
   lookout_juv: &lookout_juv { url: "https://tennesseelookout.com/2023/01/18/legislation-aims-at-averting-excessive-jailing-of-juveniles/", title: "Legislation aims at averting excessive jailing of juveniles (Tennessee Lookout)", accessed: 2026-10-16 }
   lookout_zoning: &lookout_zoning { url: "https://tennesseelookout.com/2024/06/04/report-identifies-single-family-zoning-as-hurdle-in-making-tennessees-housing-market-affordable/", title: "Report identifies single-family zoning as hurdle in making Tennessee's housing market affordable (Tennessee Lookout)", accessed: 2026-10-16 }
-  lookout_2024: &lookout_2024 { url: "https://tennesseelookout.com/2024/10/07/suburban-growth-fuels-democrats-hopes-of-flipping-smyrna-la-vergne-state-house-seat/", title: "Suburban growth fuels Democrats' hopes of flipping Smyrna-La Vergne state House seat (Tennessee Lookout)", accessed: 2026-10-16 }
+  lookout_2024: &lookout_2024 { url: "https://tennesseelookout.com/2024/10/07/suburban-growth-fuels-democrats-hopes-of-flipping-smyrna-la-vergne-state-house-seat/", title: "Suburban growth and the Smyrna-La Vergne state House seat (Tennessee Lookout)", accessed: 2026-10-16 }
   cc_home: &cc_home { url: "https://conniecasha4tndistrict-49.com/", title: "Connie Casha for Tennessee House District 49 (Casha campaign)", accessed: 2026-10-16 }
   cc_about: &cc_about { url: "https://conniecasha4tndistrict-49.com/about.html", title: "Meet Connie Casha (Casha campaign)", accessed: 2026-10-16 }
   cc_issues: &cc_issues { url: "https://conniecasha4tndistrict-49.com/issues.html", title: "Our Priorities (Casha campaign)", accessed: 2026-10-16 }
@@ -48,10 +48,10 @@ candidates:
     why_running: { text: null, sources: [] }
     platform:
       - category: health_care
-        text: "Require price transparency from hospitals and insurers to bring down health care costs, and address children's mental and behavioral health, including through chess in schools and music therapy."
+        text: "Wants hospitals and insurers to make their prices public to rein in health care costs, and wants to address children's mental and behavioral health through ideas like chess in schools and music therapy."
         sources: [*ms_health, *ms_oped]
       - category: immigration
-        text: "Says illegal immigration is to blame for strained county finances in Rutherford County."
+        text: "In 2024, said illegal immigration was to blame for strained county finances in Rutherford County."
         sources: [*lookout_2024]
     arguments:
       - stance: for
@@ -66,23 +66,21 @@ candidates:
         sources: [*pr_bus, *firefly_bus]
       - stance: for
         text: >-
-          After the county paid a settlement over the jailing of children, he proposed requiring a lawyer or
-          parent to be present before police question a child, and recording those interviews.
+          He proposed requiring a lawyer or parent to be present before police question a child, and recording
+          those interviews, noting that many other states already require this and that Tennessee has no rules
+          to make sure children know they have a right to a lawyer.
         sources: [*lookout_juv]
       - stance: against
         text: >-
-          School board members who opposed his push to lower the bus driver age said younger drivers add
-          liability for the school system and that data on the safety risk was never provided.
+          Two school board members who voted against backing his proposal to lower the bus driver age said
+          younger drivers are a liability for the school system and that requested data on whether age adds
+          risk was never provided.
         sources: [*firefly_bus]
       - stance: against
         text: >-
           A local juvenile court attorney said his proposal on questioning children would not get at the root
           of the problem, arguing children in minor cases should be summoned to court rather than detained.
         sources: [*lookout_juv]
-      - stance: against
-        text: >-
-          His 2024 opponent said he is too busy holding onto power and catering to special interests.
-        sources: [*lookout_2024]
 
   - name: "Connie Casha"
     ballot_party: Democratic
@@ -103,7 +101,7 @@ candidates:
       sources: [*cc_home, *cc_about]
     platform:
       - category: economy
-        text: "Set a minimum wage tied to the cost of living, so working families can thrive and not just survive."
+        text: "Set a minimum wage tied to the cost of living or inflation."
         sources: [*bp_casha]
       - category: taxes
         text: "Exempt groceries and personal hygiene products from the sales tax."
@@ -120,8 +118,8 @@ candidates:
     arguments:
       - stance: for
         text: >-
-          She helped grow the state's voluntary pre-K program from 30 pilot classrooms to 934 serving 18,000
-          children, and brings decades of work with children and families to the job.
-        sources: [*cc_about]
+          She oversaw the growth of the state's voluntary pre-K program from 30 pilot classrooms to 934 serving
+          18,000 children, and brings decades of work with children and families to the job.
+        sources: [*cc_about, *cc_home]
 
 last_verified: 2026-10-16
