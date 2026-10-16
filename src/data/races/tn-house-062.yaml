@@ -1,23 +1,92 @@
-# Seeded from the Secretary of State's certified candidate list by
-# scripts/seed-from-certified-list.py. research_status: pending —
-# platforms and arguments not yet compiled.
+# Tennessee House, District 62 (Bedford, Moore and part of Lincoln Counties, including Shelbyville) —
+# Rep. Pat Marsh, in office since 2009, faces Brieanna Akers.
+# Candidate order follows the Secretary of State's certified candidate list.
+_sources:
+  cga_h62: &cga_h62 { url: "https://wapp.capitol.tn.gov/apps/legislatorinfo/member.aspx?district=H62", title: "Representative Pat Marsh (Tennessee General Assembly)", accessed: 2026-10-16 }
+  bp_marsh: &bp_marsh { url: "https://ballotpedia.org/Pat_Marsh", title: "Pat Marsh (Ballotpedia)", accessed: 2026-10-16 }
+  hb1510: &hb1510 { url: "https://wapp.capitol.tn.gov/apps/BillInfo/Default.aspx?BillNumber=HB1510&GA=114", title: "HB1510 bill information (Tennessee General Assembly)", accessed: 2026-10-16 }
+  hb0759: &hb0759 { url: "https://wapp.capitol.tn.gov/apps/BillInfo/Default.aspx?BillNumber=HB0759&GA=114", title: "HB0759 bill information (Tennessee General Assembly)", accessed: 2026-10-16 }
+  hb2139: &hb2139 { url: "https://wapp.capitol.tn.gov/apps/BillInfo/Default.aspx?BillNumber=HB2139&GA=114", title: "HB2139 bill information (Tennessee General Assembly)", accessed: 2026-10-16 }
+  duck_mar: &duck_mar { url: "https://tennesseelookout.com/2026/03/13/bill-extending-scenic-river-protections-to-most-of-duck-buffalo-rivers-moves-forward/", title: "Bill extending scenic river protections to most of Duck, Buffalo Rivers moves forward (Tennessee Lookout)", accessed: 2026-10-16 }
+  duck_apr: &duck_apr { url: "https://tennesseelookout.com/2026/04/10/bill-granting-duck-buffalo-rivers-scenic-protections-passes-final-hurdle-in-tennessee-legislature/", title: "Bill granting Duck, Buffalo rivers scenic protections passes final hurdle in Tennessee legislature (Tennessee Lookout)", accessed: 2026-10-16 }
+  lookout62: &lookout62 { url: "https://tennesseelookout.com/voter-guides/contests/house-district-62/", title: "Tennessee House of Representatives, 62nd District voter guide (Tennessee Lookout)", accessed: 2026-10-16 }
+  bp_akers: &bp_akers { url: "https://ballotpedia.org/Brieanna_Akers", title: "Brieanna Akers (Ballotpedia)", accessed: 2026-10-16 }
+  ba_home: &ba_home { url: "https://briefortennessee.com/", title: "Brieanna Akers TN House District 62 (Akers campaign)", accessed: 2026-10-16 }
+  ba_about: &ba_about { url: "https://briefortennessee.com/about", title: "Meet Brieanna (Akers campaign)", accessed: 2026-10-16 }
+
 id: tn-house-062
 office: "Tennessee House, District 62"
 level: state_house
 district: 62
-research_status: pending
+research_status: complete
 candidate_list_source: "https://sos-prod.tnsosgovfiles.com/s3fs-public/document/TNHouse_Nov2026.pdf"
+
 candidates:
   - name: "Pat Marsh"
     ballot_party: Republican
     city: "Shelbyville"
+    incumbent: true
+    website: null
+    bio_facts:
+      - { text: "State representative for District 62 since winning a 2009 special election; House member of the 106th through 114th General Assemblies.", sources: [*lookout62, *cga_h62, *bp_marsh] }
+      - { text: "Speaker pro tempore of the House in the 112th General Assembly.", sources: [*cga_h62] }
+      - { text: "Chairs the House Ethics Committee and the Workplace Discrimination and Harassment Subcommittee; also serves on the Calendar & Rules, Commerce, Government Operations and Transportation committees.", sources: [*cga_h62] }
+      - { text: "Founded the trucking company Big G Express and sold it in 2009; now its chairman emeritus. B.S. in transportation from the University of Tennessee.", sources: [*lookout62, *cga_h62] }
+      - { text: "Sponsored a 2026 law designating nearly all of the Duck and Buffalo rivers and some of their tributaries as Class II pastoral scenic river areas.", sources: [*hb1510, *duck_apr] }
+      - { text: "Sponsored a 2025 law allowing school districts to adopt merit-based pay for high-performing educators.", sources: [*hb0759] }
+      - { text: "Sponsored a 2026 law changing state law on fraudulent freight theft.", sources: [*hb2139] }
     why_running: { text: null, sources: [] }
     platform: []
-    arguments: []
+    arguments:
+      - stance: for
+        text: >-
+          Carried the 2026 law extending scenic-river protection, including a ban on new landfills nearby, to nearly
+          all of the Duck and Buffalo rivers. He says he is looking out for landowners along the river who want to
+          protect it and their way of life.
+        sources: [*duck_mar, *duck_apr]
+      - stance: against
+        text: >-
+          A legislative opponent of his scenic-river bill argued its ban on landfills within two miles of the rivers
+          overrides landowners' constitutional property rights, and warned of legal costs to the state.
+        sources: [*duck_mar, *duck_apr]
+
   - name: "Brieanna L Akers"
     ballot_party: Democratic
     city: "Bell Buckle"
-    why_running: { text: null, sources: [] }
-    platform: []
-    arguments: []
-last_verified: 2026-10-13
+    incumbent: false
+    website: "https://briefortennessee.com"
+    bio_facts:
+      - { text: "Independent Medicare insurance agent who works in senior-market sales.", sources: [*ba_about, *bp_akers, *lookout62] }
+      - { text: "Has lived in Bedford County for 34 years and attended Cascade School; single parent of a 12-year-old.", sources: [*ba_about, *bp_akers] }
+      - { text: "First campaign for public office.", sources: [*lookout62] }
+    why_running:
+      text: >-
+        She says that as an insurance agent she has seen clients on fixed incomes struggle to budget between health
+        care and bills, and that she is running for a Tennessee where people can afford groceries, keep their land,
+        raise their kids and know their voice matters. She also says she wants equal rights for all, with laws that
+        protect rather than discriminate.
+      sources: [*ba_about, *bp_akers]
+    platform:
+      - category: economy
+        text: "Propose a gradual state minimum wage above $7.25 with a review every two years, paired with temporary tax credits for small businesses."
+        sources: [*ba_about, *ba_home, *bp_akers]
+      - category: taxes
+        text: "Raise taxes modestly on large corporations to pay for eliminating the state sales tax on groceries."
+        sources: [*ba_about, *bp_akers]
+      - category: education
+        text: "End the school voucher program and give public schools more funding and resources, working with teachers and administrators."
+        sources: [*ba_about, *ba_home, *bp_akers]
+      - category: agriculture
+        text: "Revive rural communities and help local farmers become more independent by making better use of agricultural grants and resources."
+        sources: [*ba_about, *ba_home]
+      - category: government
+        text: "Refuse PAC money and run on support from individual residents."
+        sources: [*bp_akers, *ba_about]
+    arguments:
+      - stance: for
+        text: >-
+          She pledges not to take PAC money, saying she is backed by local residents rather than big money and will
+          work for the people of the district.
+        sources: [*bp_akers, *ba_about]
+
+last_verified: 2026-10-16
