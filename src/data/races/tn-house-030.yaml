@@ -1,23 +1,89 @@
-# Seeded from the Secretary of State's certified candidate list by
-# scripts/seed-from-certified-list.py. research_status: pending —
-# platforms and arguments not yet compiled.
+# Tennessee House, District 30 (southeast Hamilton County: East Ridge, East Brainerd, Apison, Collegedale) —
+# Rep. Esther Helton-Haynes, in office since 2018, faces Art Rymer.
+# Candidate order follows the Secretary of State's certified candidate list.
+_sources:
+  cga_h30: &cga_h30 { url: "https://wapp.capitol.tn.gov/apps/legislatorinfo/member.aspx?district=H30", title: "Representative Esther Helton-Haynes (Tennessee General Assembly)", accessed: 2026-10-16 }
+  lookout30: &lookout30 { url: "https://tennesseelookout.com/voter-guides/contests/house-district-30/", title: "Tennessee House of Representatives, 30th District voter guide (Tennessee Lookout)", accessed: 2026-10-16 }
+  hb1241: &hb1241 { url: "https://wapp.capitol.tn.gov/apps/BillInfo/Default.aspx?BillNumber=HB1241&GA=114", title: "HB1241 bill information (Tennessee General Assembly)", accessed: 2026-10-16 }
+  lk_hb1241: &lk_hb1241 { url: "https://tennesseelookout.com/2025/02/25/tennessee-republicans-sponsor-abortion-ban-exception-bill/", title: "Tennessee Republicans sponsor abortion ban exception bill (Tennessee Lookout)", accessed: 2026-10-16 }
+  eh_about: &eh_about { url: "https://electesther.com/about-esther/", title: "About Esther (Helton-Haynes campaign)", accessed: 2026-10-16 }
+  eh_advocate: &eh_advocate { url: "https://electesther.com/advocating-for-you/", title: "Advocating For You (Helton-Haynes campaign)", accessed: 2026-10-16 }
+  eh_families: &eh_families { url: "https://electesther.com/protecting-families/", title: "Protecting Families (Helton-Haynes campaign)", accessed: 2026-10-16 }
+  eh_education: &eh_education { url: "https://electesther.com/supporting-public-education/", title: "Supporting Public Education (Helton-Haynes campaign)", accessed: 2026-10-16 }
+  eh_teampac: &eh_teampac { url: "https://electesther.com/team-pac-endorses-esther-helton-haynes/", title: "TEAM-PAC Endorses Esther-Helton Haynes (Helton-Haynes campaign)", accessed: 2026-10-16 }
+  eh_tha: &eh_tha { url: "https://electesther.com/rep-helton-haynes-names-2023-hospital-hero/", title: "THA Recognizes Rep. Esther Helton-Haynes as a 2023 Hospital Hero (Helton-Haynes campaign)", accessed: 2026-10-16 }
+  ar_site: &ar_site { url: "https://art4tn.com/whos-art/", title: "Who's Art? (Rymer campaign)", accessed: 2026-10-16 }
+
 id: tn-house-030
 office: "Tennessee House, District 30"
 level: state_house
 district: 30
-research_status: pending
+research_status: complete
 candidate_list_source: "https://sos-prod.tnsosgovfiles.com/s3fs-public/document/TNHouse_Nov2026.pdf"
+
 candidates:
   - name: "Esther Helton Haynes"
     ballot_party: Republican
     city: "Chattanooga"
-    why_running: { text: null, sources: [] }
-    platform: []
-    arguments: []
+    incumbent: true
+    website: "https://electesther.com"
+    bio_facts:
+      - { text: "State representative for District 30 since 2018; House member of the 111th through 114th General Assemblies.", sources: [*cga_h30, *lookout30] }
+      - { text: "Chair of the House Insurance Subcommittee; also serves on the Health Committee, the Insurance Committee and the Population Health Subcommittee.", sources: [*cga_h30, *lookout30] }
+      - { text: "Member of the East Ridge City Council beginning in 2016.", sources: [*cga_h30, *eh_about] }
+      - { text: "Nurse for nearly 44 years, many of them as a hemodialysis nurse; graduate of East Ridge High School and the Chattanooga School of Practical Nursing.", sources: [*eh_about, *cga_h30] }
+      - { text: "Lifelong resident of East Ridge.", sources: [*eh_about] }
+      - { text: "Sponsored a 2025 bill (HB1241) under which a physician would not commit criminal abortion when ending a pregnancy because of a diagnosed lethal fetal anomaly; it was assigned to a House subcommittee.", sources: [*hb1241, *lk_hb1241] }
+    why_running:
+      text: >-
+        She says she wants to keep making sure District 30's voices are heard in Nashville and to stand up for the
+        district's families, with the values of faith, family and freedom at the center of her work.
+      sources: [*eh_advocate]
+    platform:
+      - category: economy
+        text: "Support small businesses and a positive business environment for job creators while holding the line on taxes."
+        sources: [*eh_about]
+      - category: education
+        text: "Give every public school student the same opportunity to succeed; backs higher minimum teacher pay, the reworked state school funding formula, and a school resource officer in every public school."
+        sources: [*eh_education]
+      - category: health_care
+        text: "Require insurance companies to publish the costs of medical procedures upfront, and pursue patient protections, transparency and services for underserved communities."
+        sources: [*eh_families, *eh_about]
+      - category: public_safety
+        text: "Strengthen legal protections for law enforcement officers and keep dangerous offenders off the streets."
+        sources: [*eh_families]
+      - category: guns
+        text: "Safeguard Second Amendment rights."
+        sources: [*eh_advocate]
+      - category: abortion
+        text: "Protect both the unborn and the life of the mother; she has said the state's abortion ban should include an exception for fatal fetal anomalies, like the one for the mother's life."
+        sources: [*eh_families, *lk_hb1241]
+    arguments:
+      - stance: for
+        text: >-
+          A nurse for more than four decades who chairs the House Insurance Subcommittee; hospital leaders have
+          praised her willingness to tackle difficult health care issues and protect patients' access to care.
+        sources: [*eh_tha, *eh_about, *cga_h30]
+      - stance: for
+        text: >-
+          Her campaign credits her with helping bring business investment to the I-75 corridor in East Ridge,
+          which it says created nearly 1,000 new jobs.
+        sources: [*eh_about]
+      - stance: for
+        text: >-
+          As a former chair of the Public Employees Subcommittee, she was credited with guiding key legislation
+          for state employees.
+        sources: [*eh_teampac]
+
   - name: "Art Rymer"
     ballot_party: Democratic
     city: "Chattanooga"
+    incumbent: false
+    website: "https://art4tn.com"
+    bio_facts:
+      - { text: "His campaign website currently states that he is not campaigning for office.", sources: [*ar_site] }
     why_running: { text: null, sources: [] }
     platform: []
     arguments: []
-last_verified: 2026-10-13
+
+last_verified: 2026-10-16
