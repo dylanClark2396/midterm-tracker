@@ -1,23 +1,158 @@
-# Seeded from the Secretary of State's certified candidate list by
-# scripts/seed-from-certified-list.py. research_status: pending —
-# platforms and arguments not yet compiled.
+# Tennessee House, District 48 (eastern Rutherford County, including part of Murfreesboro, Lascassas and
+# Christiana) — Rep. Bryan Terry, in office since 2014, faces Matt Ferry in a rematch of 2018–2024.
+# Candidate order follows the Secretary of State's certified candidate list.
+_sources:
+  cga_h48: &cga_h48 { url: "https://wapp.capitol.tn.gov/apps/legislatorinfo/member.aspx?district=H48", title: "Representative Bryan Terry (Tennessee General Assembly)", accessed: 2026-10-16 }
+  bp_terry: &bp_terry { url: "https://ballotpedia.org/Bryan_Terry", title: "Bryan Terry (Ballotpedia)", accessed: 2026-10-16 }
+  bp_ferry: &bp_ferry { url: "https://ballotpedia.org/Matt_Ferry", title: "Matt Ferry (Ballotpedia)", accessed: 2026-10-16 }
+  lookout48: &lookout48 { url: "https://tennesseelookout.com/voter-guides/contests/house-district-48/", title: "Tennessee House of Representatives, 48th District voter guide (Tennessee Lookout)", accessed: 2026-10-16 }
+  hb1044: &hb1044 { url: "https://wapp.capitol.tn.gov/apps/BillInfo/Default.aspx?BillNumber=HB1044&GA=114", title: "HB1044 bill information (Tennessee General Assembly)", accessed: 2026-10-16 }
+  hb1904: &hb1904 { url: "https://wapp.capitol.tn.gov/apps/BillInfo/Default.aspx?BillNumber=HB1904&GA=114", title: "HB1904 bill information (Tennessee General Assembly)", accessed: 2026-10-16 }
+  ict: &ict { url: "https://ictnews.org/politics/election-2026/choctaw-tennessee-state-legislator-heads-to-general-election-following-primary/", title: "Choctaw Tennessee state legislator heads to general election following primary (ICT)", accessed: 2026-10-16 }
+  wpln: &wpln { url: "https://wpln.org/post/tennessee-joins-multi-state-effort-to-deny-medical-treatment-based-on-religious-beliefs/", title: "Tennessee joins multi-state effort to deny medical treatment based on religious beliefs (WPLN News)", accessed: 2026-10-16 }
+  fox17a: &fox17a { url: "https://fox17.com/news/local/bill-allowing-medical-workers-to-refuse-care-sparks-controversy", title: "Tennessee bill allowing medical workers to refuse care sparks controversy (FOX 17 News)", accessed: 2026-10-16 }
+  fox17b: &fox17b { url: "https://fox17.com/news/local/tensions-rise-over-tennessee-medical-ethics-bill-at-state-capitol", title: "Controversial Tennessee medical ethics bill signed into law (FOX 17 News)", accessed: 2026-10-16 }
+  bt_home: &bt_home { url: "https://bryanterry4tn.com/", title: "Bryan Terry for State Representative (Terry campaign)", accessed: 2026-10-16 }
+  bt_about: &bt_about { url: "https://bryanterry4tn.com/about/", title: "About (Terry campaign)", accessed: 2026-10-16 }
+  bt_issues: &bt_issues { url: "https://bryanterry4tn.com/issues/", title: "Issues (Terry campaign)", accessed: 2026-10-16 }
+  mf_home: &mf_home { url: "https://mattferrytn48.com/", title: "Matt Ferry for TN House 48 (Ferry campaign)", accessed: 2026-10-16 }
+  mf_about: &mf_about { url: "https://mattferrytn48.com/about-matt", title: "About Matt Ferry (Ferry campaign)", accessed: 2026-10-16 }
+  mf_health: &mf_health { url: "https://mattferrytn48.com/access-to-healthcare", title: "Access to Healthcare (Ferry campaign)", accessed: 2026-10-16 }
+  mf_guns: &mf_guns { url: "https://mattferrytn48.com/common-sense-gun-laws", title: "Common Sense Gun Laws (Ferry campaign)", accessed: 2026-10-16 }
+  mf_edu: &mf_edu { url: "https://mattferrytn48.com/public-education", title: "Public Education (Ferry campaign)", accessed: 2026-10-16 }
+  mf_transit: &mf_transit { url: "https://mattferrytn48.com/public-transportation", title: "Public Transportation (Ferry campaign)", accessed: 2026-10-16 }
+  mf_econ: &mf_econ { url: "https://mattferrytn48.com/widening-economic-divide", title: "Widening Economic Divide (Ferry campaign)", accessed: 2026-10-16 }
+  mf_repro: &mf_repro { url: "https://mattferrytn48.com/womens-reproductive-rights", title: "Women's Reproductive Rights (Ferry campaign)", accessed: 2026-10-16 }
+
 id: tn-house-048
 office: "Tennessee House, District 48"
 level: state_house
 district: 48
-research_status: pending
+research_status: complete
 candidate_list_source: "https://sos-prod.tnsosgovfiles.com/s3fs-public/document/TNHouse_Nov2026.pdf"
+
 candidates:
   - name: "Bryan Terry"
     ballot_party: Republican
     city: "Murfreesboro"
-    why_running: { text: null, sources: [] }
-    platform: []
-    arguments: []
+    incumbent: true
+    website: "https://bryanterry4tn.com"
+    bio_facts:
+      - { text: "State representative for District 48 since November 2014; House member of the 109th through 114th General Assemblies.", sources: [*bp_terry, *cga_h48] }
+      - { text: "Chair of the House Health Committee; also serves on the Calendar & Rules and Insurance committees and the Health and Population Health subcommittees.", sources: [*cga_h48] }
+      - { text: "Anesthesiologist and partner in a small medical practice in Murfreesboro; affiliated associate professor with the University of Tennessee College of Medicine and a Fellow of the American Society of Anesthesiologists.", sources: [*bt_about, *lookout48] }
+      - { text: "B.S. in psychology from the University of Oklahoma, M.D. from the Oklahoma College of Medicine, and anesthesiology residency at the University of Tennessee, Knoxville.", sources: [*cga_h48, *bt_about] }
+      - { text: "Citizen of the Choctaw Nation of Oklahoma.", sources: [*bt_about, *ict] }
+      - { text: "House sponsor of the 2025 Medical Ethics Defense Act (Public Chapter 266), which says health care providers cannot be required to take part in or pay for a procedure, treatment or service that violates their conscience; it does not apply to emergency care.", sources: [*hb1044, *fox17a] }
+      - { text: "House sponsor of a 2026 law (Public Chapter 682) that writes procedures from the federal Indian Child Welfare Act into state law for child custody cases involving an Indian child.", sources: [*hb1904, *ict] }
+    why_running:
+      text: >-
+        He says he wants to keep representing the district's values and interests with integrity, and points to
+        his track record and awards from his years in office as the reason voters should return him.
+      sources: [*ict, *bt_home]
+    platform:
+      - category: economy
+        text: "Cut unnecessary regulations to keep unemployment low; backs measures like the Right to Earn a Living Act and the Fresh Start Act."
+        sources: [*bt_issues]
+      - category: taxes
+        text: "Keep taxes and the cost of living low; says he has consistently fought for the taxpayer."
+        sources: [*bt_issues, *bt_home]
+      - category: education
+        text: "Support schools and educators while letting parents choose what is best for their children, and push for a fair, consistent and valid system to improve student outcomes."
+        sources: [*bt_home, *bt_issues]
+      - category: health_care
+        text: "Lead on health issues including the opioid crisis, mental health, children's health, care of the elderly, medical transparency, health care costs and access."
+        sources: [*bt_issues]
+      - category: public_safety
+        text: "Make sure law enforcement, firefighters and the military are appreciated and have the tools to protect communities."
+        sources: [*bt_issues, *bt_home]
+      - category: immigration
+        text: "Oppose illegal immigration and protect Tennessee jobs for citizens and legal immigrants."
+        sources: [*bt_home]
+      - category: guns
+        text: "Protect the right to keep and bear arms from being infringed."
+        sources: [*bt_issues]
+      - category: abortion
+        text: "Holds that life begins at conception and pledges to keep being an active voice for the unborn."
+        sources: [*bt_issues]
+    arguments:
+      - stance: for
+        text: >-
+          A practicing physician who chairs the House Health Committee, he has worked on the opioid crisis, mental
+          health, elder care and health care costs, and says he brings years of medical experience to those issues.
+        sources: [*bt_issues, *bt_home]
+      - stance: for
+        text: >-
+          He says his 2025 conscience law addresses burnout among doctors and will help the state recruit and keep
+          physicians, while protecting the duty to do no harm.
+        sources: [*fox17a, *fox17b]
+      - stance: for
+        text: >-
+          He points to more than a decade in office and honors such as a 2026 award from the state hospital
+          association as proof that he represents the district the way residents want.
+        sources: [*ict]
+      - stance: against
+        text: >-
+          Critics of the conscience law he sponsored warn it could let providers refuse care tied to traits patients
+          have or are at risk for, such as HIV testing and prevention, and that it makes discrimination harder for
+          patients to prove.
+        sources: [*wpln]
+      - stance: against
+        text: >-
+          Opponents of his conscience law, including a physician who testified, say it conflicts with the duty to
+          do no harm, lets providers turn patients away, and could erode patients' trust in their doctors.
+        sources: [*fox17a, *fox17b]
+      - stance: against
+        text: >-
+          His opponent says his stated defense of unborn life is not matched by policies that fund the schools,
+          health facilities and social services that help women and children.
+        sources: [*mf_repro]
+
   - name: "Matt Ferry"
     ballot_party: Democratic
     city: "Murfreesboro"
-    why_running: { text: null, sources: [] }
-    platform: []
-    arguments: []
-last_verified: 2026-10-13
+    incumbent: false
+    website: "https://mattferrytn48.com"
+    bio_facts:
+      - { text: "Small business owner who was born in Lebanon, raised in Murfreesboro, and graduated from Middle Tennessee State University.", sources: [*mf_about, *bp_ferry, *lookout48] }
+      - { text: "Chair of the Rutherford County Democratic Party from 2017 to 2019.", sources: [*bp_ferry, *mf_about] }
+      - { text: "Ran for House District 48 in 2018, 2020, 2022 and 2024, losing each general election to the incumbent.", sources: [*mf_about, *bp_terry, *lookout48] }
+    why_running:
+      text: >-
+        He says he is running because he is appalled by corruption and grift in state government, and that the state
+        budget has grown without matching benefits for ordinary residents. He promises to work on policies that lift
+        people up rather than tear them down.
+      sources: [*mf_home]
+    platform:
+      - category: taxes
+        text: "Cut the state tax on groceries instead of giving tax breaks to large corporations, and have the wealthy and big corporations pay their fair share."
+        sources: [*mf_econ, *mf_home]
+      - category: cost_of_living
+        text: "Pass a law limiting how much housing a corporation can own, and pursue policies that make homeownership affordable."
+        sources: [*mf_home]
+      - category: education
+        text: "Fully fund public schools with substantial teacher pay raises, smaller classes and well-kept buildings; keep public money out of private school tuition."
+        sources: [*mf_home, *mf_edu]
+      - category: health_care
+        text: "Accept Medicaid expansion to shore up rural hospitals and reduce the number of uninsured Tennesseans."
+        sources: [*mf_home, *mf_health]
+      - category: infrastructure
+        text: "Advocate for rail and other public transportation so the region relies less on cars."
+        sources: [*mf_home, *mf_transit]
+      - category: environment
+        text: "Work with the state environment department to regulate practices at the Middle Point Landfill, including limiting how many outside counties can dump there."
+        sources: [*mf_home]
+      - category: guns
+        text: "Pass safe storage laws to keep guns locked away from children, and make mental health care accessible to all."
+        sources: [*mf_guns]
+      - category: abortion
+        text: "Fight to protect access to IVF and birth control and women's access to reproductive health care."
+        sources: [*mf_repro]
+    arguments:
+      - stance: for
+        text: >-
+          A Murfreesboro small business owner, he promises to focus state government on policies that help ordinary
+          residents with housing, health care and school costs.
+        sources: [*mf_about, *mf_home]
+
+last_verified: 2026-10-16
