@@ -10,7 +10,7 @@ _sources:
   prisons: &prisons { url: "https://tennesseelookout.com/2025/04/21/tennessee-lawmakers-send-message-to-private-prisons/", title: "Tennessee lawmakers send message to private prisons (Tennessee Lookout)", accessed: 2026-10-16 }
   oped: &oped { url: "https://tnhousegop.org/member-newsroom/2025/08/clark-boyd-fighting-for-wilson-county-values-helps-tennessee-lead-the-nation/", title: "CLARK BOYD: Fighting for Wilson County values helps Tennessee lead the nation (Tennessee House Republican Caucus)", accessed: 2026-10-16 }
   ice: &ice { url: "https://tennesseelookout.com/2026/02/24/tennessee-house-republican-opposes-ice-detention-facility-for-lebanon/", title: "Tennessee House Republican opposes ICE detention facility for Lebanon (Tennessee Lookout)", accessed: 2026-10-16 }
-  cb_home: &cb_home { url: "https://voteclarkboyd.com/", title: "Vote Clark Boyd (Boyd campaign)", accessed: 2026-10-16 }
+  cb_home: &cb_home { url: "https://voteclarkboyd.com/", title: "Vote Clark Boyd | Conservative | Leadership | Service (Boyd campaign)", accessed: 2026-10-16 }
   dh_home: &dh_home { url: "https://dominic4tn.com/", title: "Home (Dominic Howard for Tennessee)", accessed: 2026-10-16 }
   dh_about: &dh_about { url: "https://dominic4tn.com/about", title: "About (Dominic Howard for Tennessee)", accessed: 2026-10-16 }
   dh_priorities: &dh_priorities { url: "https://dominic4tn.com/priorities", title: "Priorities (Dominic Howard for Tennessee)", accessed: 2026-10-16 }
@@ -37,8 +37,8 @@ candidates:
       - { text: "Advanced unopposed from the August 6, 2026 primary.", sources: [*bp_boyd] }
     why_running:
       text: >-
-        He says he wants to serve others in the community and will work to keep taxes low and protect residents'
-        God-given rights.
+        He says serving others in the community makes it stronger, and that he will work to keep taxes low and
+        protect residents' God-given rights.
       sources: [*cb_home]
     platform:
       - category: economy
@@ -51,7 +51,7 @@ candidates:
         text: "Give teachers the tools and resources to provide the nation's best public education, and give parents more choice in where their children attend school."
         sources: [*cb_home]
       - category: health_care
-        text: "Lower health care costs by removing regulation and increasing price transparency, and confront the opioid crisis."
+        text: "Lower health care costs by removing regulation and increasing transparency, and confront the opioid crisis."
         sources: [*cb_home]
       - category: immigration
         text: "Keep working to end illegal immigration, give law enforcement the tools to do so, and oppose any sanctuary cities in Tennessee."
@@ -60,7 +60,7 @@ candidates:
         text: "Protect the right of law-abiding citizens to own and carry firearms from infringement by any level of government."
         sources: [*cb_home]
       - category: abortion
-        text: "Opposes abortion and any taxpayer funding of abortion or abortion providers."
+        text: "Opposes abortion and any taxpayer funding of abortion or Planned Parenthood."
         sources: [*cb_home]
     arguments:
       - stance: for
@@ -71,14 +71,15 @@ candidates:
         sources: [*prisons, *hb1144, *oped]
       - stance: for
         text: >-
-          Pressed federal officials to keep a large immigration detention center out of Lebanon, arguing the
-          Highway 109 corridor's roads and sewer system could not handle it.
+          Says the Highway 109 corridor in Lebanon is not suited for a large prison-type immigration detention
+          facility, and that its roads and sewer system could not handle one; he is relaying that view to federal
+          leaders.
         sources: [*ice]
       - stance: for
         text: >-
-          An Army veteran and Lebanon small-business owner who promises to keep taxes low and let local
-          businesses grow and hire.
-        sources: [*cb_home]
+          An Army veteran and Lebanon small-business owner who promises to keep taxes low and get government out
+          of the way so businesses can grow and hire.
+        sources: [*cb_home, *whip]
     # No published criticism of Boyd found for this cycle.
 
   - name: "Dominic Howard"
@@ -107,7 +108,7 @@ candidates:
         text: "Lower housing costs by encouraging \"missing middle\" housing and cutting red tape for local builders."
         sources: [*dh_priorities]
       - category: education
-        text: "End the school voucher program and keep public money in public schools; expand dual enrollment and trade-school partnerships; raise teacher pay and reduce the focus on testing."
+        text: "End the school voucher program and keep public money in public schools; expand dual enrollment and trade-school partnerships; give teachers competitive pay and the resources to focus on teaching rather than testing."
         sources: [*dh_priorities, *dh_about]
       - category: infrastructure
         text: "Have new development pay for the roads and utilities it needs through impact fees, prioritize state funding for projects that cut commute times, and modernize internet and water systems."
