@@ -23,6 +23,9 @@ _sources:
   pb_about: &pb_about { url: "https://trekforward.org/about.html", title: "About Phil (Barnes campaign)", accessed: 2026-10-15 }
   pb_issues: &pb_issues { url: "https://trekforward.org/issues.html", title: "Issues (Barnes campaign)", accessed: 2026-10-15 }
   pb_record: &pb_record { url: "https://trekforward.org/slater.html", title: "Slater's Voting Record (Barnes campaign)", accessed: 2026-10-15 }
+  hb774_23: &hb774_23 { url: "https://wapp.capitol.tn.gov/apps/BillInfo/Default.aspx?BillNumber=HB0774&GA=113", title: "HB0774 bill information and votes (Tennessee General Assembly)", accessed: 2026-10-16 }
+  hb946_23: &hb946_23 { url: "https://wapp.capitol.tn.gov/apps/BillInfo/Default.aspx?BillNumber=HB0946&GA=113", title: "HB0946 bill information and votes (Tennessee General Assembly)", accessed: 2026-10-16 }
+  sb172_23: &sb172_23 { url: "https://wapp.capitol.tn.gov/apps/BillInfo/Default.aspx?BillNumber=SB0172&GA=113", title: "SB0172 bill information and votes (Tennessee General Assembly)", accessed: 2026-10-16 }
 
 id: tn-house-035
 office: "Tennessee House, District 35"
@@ -43,10 +46,9 @@ candidates:
       - { text: "Dean at Welch College in Gallatin since 2017, where he teaches graduate students; previously a school headmaster in Tennessee for 21 years.", sources: [*ws_bio, *cga_h35, *lookout35] }
       - { text: "B.S. from Hyles-Anderson College, M.Ed. in educational leadership from the University of South Florida, and J.D. from the Nashville School of Law.", sources: [*cga_h35, *bp_slater] }
       - { text: "President of Improve Hendersonville; former chair of the Hendersonville Chamber of Commerce and of the Sumner County Republican Party.", sources: [*cga_h35] }
-      - { text: "Endorsed by former Arkansas Gov. Mike Huckabee in his 2022 campaign.", sources: [*lookout35, *ws_home] }
-      - { text: "Sponsored 2026 laws streamlining renewal of high-performing public charter schools (HB2177), adding the Classic Learning Test alongside the ACT and SAT and changing home school testing rules (HB1729), and loosening limits on unlicensed respite care for adults (HB1495).", sources: [*hb2177, *rel_tss, *hb1729, *hb1495] }
-      - { text: "Sponsored a 2026 bill to raise court costs for violations of the state's hands-free driving law.", sources: [*hb1555] }
-      - { text: "In 2026 the House version of a bill he sponsored would have lifted the enrollment cap on the state's Education Savings Account private-school voucher program; it died after the Senate version failed.", sources: [*lookout_esa] }
+      - { text: "Sponsored 2026 laws streamlining renewal of high-performing public charter schools (HB2177), adding the Classic Learning Test alongside the ACT and SAT and changing home school testing rules (HB1729), and raising the hour and capacity limits for license-exempt adult respite care programs (HB1495).", sources: [*hb2177, *rel_tss, *hb1729, *hb1495] }
+      - { text: "Sponsored a 2026 bill to raise court costs for violations of the state's hands-free driving law; it failed on the House floor.", sources: [*hb1555] }
+      - { text: "In 2026 the House version of a bill he sponsored would have lifted the enrollment cap on the state's Education Savings Account private-school voucher program; the effort ended when the Senate version fell one vote short.", sources: [*lookout_esa] }
     why_running: { text: null, sources: [] }
     platform:
       - category: abortion
@@ -64,29 +66,29 @@ candidates:
     arguments:
       - stance: for
         text: >-
-          Legislative leaders who named him to two state education task forces cited his background in education
-          and leadership as making him well suited to help improve outcomes for students.
+          The House leader who appointed him to two state education task forces in 2025 said his background in
+          education and leadership made him an ideal choice and would help bring better outcomes for students.
         sources: [*rel_taskforce]
       - stance: for
         text: >-
-          A student-advocacy group gave him a 2026 award for reducing barriers to open enrollment and carrying a
-          law that streamlines approval of high-performing public charter schools.
+          A student-advocacy group gave him a 2026 award, saying he made the case for reducing barriers to open
+          enrollment and carried legislation that streamlines approval of high-performing public charter schools.
         sources: [*rel_tss]
       - stance: against
         text: >-
           His opponent faults his 2023 vote to bar local governments from requiring private employers to pay
           wages or benefits beyond state law, arguing it keeps wages low.
-        sources: [*pb_record]
+        sources: [*pb_record, *hb774_23]
       - stance: against
         text: >-
           His opponent criticizes his 2023 vote to count natural gas as clean energy under local energy mandates,
           saying it sidesteps environmental protections.
-        sources: [*pb_record]
+        sources: [*pb_record, *hb946_23]
       - stance: against
         text: >-
-          His opponent criticizes his 2023 vote allowing adults to carry pocket knives on school grounds when
-          voting there, warning it could lead to guns at polling places.
-        sources: [*pb_record]
+          His opponent criticizes his 2023 vote allowing adults to carry concealed pocket knives on school grounds
+          when voting there, saying it puts concealed weapons at polling places and asking whether guns come next.
+        sources: [*pb_record, *sb172_23]
       - stance: against
         text: >-
           Critics said the House version of his 2026 voucher bill, which lifted the enrollment cap and ended state
@@ -111,7 +113,7 @@ candidates:
       sources: [*pb_about, *pb_home]
     platform:
       - category: education
-        text: "End private-school vouchers; failing that, bar families whose children were already in private school and fund the program from the state lottery instead of the public school budget."
+        text: "End private-school vouchers; failing that, bar families whose children were already in private school before the program began, and fund the program from the state lottery instead of the public school budget."
         sources: [*pb_issues, *lookout35]
       - category: government
         text: "Make the voter registration card an accepted voter ID, and keep government from imposing religious beliefs through law, including faculty-led prayer in public schools."
@@ -120,7 +122,7 @@ candidates:
         text: "Stop sales of military-style weapons to the public; require gun licensing with annual certified training and liability insurance; hold owners accountable for unsafe storage."
         sources: [*pb_issues]
       - category: economy
-        text: "Overhaul public assistance to fix the benefits cliff and payment lags that leave working recipients short."
+        text: "Overhaul public assistance so people who start earning don't lose benefits before they can support themselves, and fix payment lags that leave working recipients short."
         sources: [*pb_issues]
       - category: veterans
         text: "Introduce a bill so that only Vietnam veterans' names may appear on named signs along TN-386, Vietnam Veterans Memorial Highway."
@@ -128,8 +130,8 @@ candidates:
     arguments:
       - stance: for
         text: >-
-          A U.S. Air Force veteran, he says voters deserve a real choice and promises to explain what he will
-          fight for, not just what he opposes.
-        sources: [*pb_about, *pb_issues]
+          A U.S. Air Force veteran, he says voters deserve a real choice, and he lays out what he would fight for
+          rather than only why not to vote for his opponent.
+        sources: [*pb_about, *pb_issues, *pb_home]
 
 last_verified: 2026-10-16
