@@ -9,6 +9,7 @@ it). None of them is imported by the site.
 | [check-docs.mjs](check-docs.mjs) | CI; `npm run docs:check` | Relative links in every `CLAUDE.md` |
 | [check-contact.mjs](check-contact.mjs) | CI; `npm run check:contact` | Contact form and Worker agree on field names, topics and `maxlength`s (parses both files with regexes, so keep `TOPICS`/`LIMITS` as plain object literals) |
 | [build-district-maps.mjs](build-district-maps.mjs) | By hand, rarely | Regenerates [../public/maps/](../public/maps/) GeoJSON (needs network and `npx mapshaper`) |
+| [research-queue.mjs](research-queue.mjs) | `npm run research:queue`; the [research-races skill](../.claude/skills/research-races/SKILL.md) | Where race research stands: PRs to merge or verify, claimed branches, next races (needs `gh`) |
 | [seed-from-certified-list.py](seed-from-certified-list.py) | By hand when the state updates its lists | Creates or refreshes `pending` race files; writes [../data-staging/seed-report.md](../data-staging/seed-report.md) |
 
 ## Gotchas

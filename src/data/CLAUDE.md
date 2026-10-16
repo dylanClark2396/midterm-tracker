@@ -32,6 +32,9 @@ candidates:
 last_verified: 2026-10-15
 ```
 
+To research the pending races in bulk, or to resume research someone else started, follow the
+[research-races skill](../../.claude/skills/research-races/SKILL.md).
+
 ## Gotchas
 
 - **`research_status: pending` hides research.** A pending race page lists only names, party and city, so set
@@ -62,6 +65,10 @@ last_verified: 2026-10-15
 - Neutral record facts that nobody argues about are bio facts, not arguments. A party office held is a valid bio
   fact; trivia about party switching is not.
 - Criminal charges never go in, even if dismissed.
+- A news report of the candidate's own announcement, speech or interview counts as their own material; the reporter's
+  characterization doesn't. Bills they sponsored are not platform planks; cite one as a neutral bio fact instead.
+- File a plank under a category only when the candidate's own words are about that issue (a general line about
+  "your body" or "innocent life" isn't an abortion plank unless they tie it to abortion).
 - Independents with no published information stay as name, party and city only.
 - Find a candidate's real campaign site through the FEC API (`/v1/committee/<id>/` → `website`); guessed domains
   are often parked.
