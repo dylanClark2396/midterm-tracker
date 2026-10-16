@@ -65,6 +65,8 @@ To research the pending races in bulk, or to resume research someone else starte
 - Neutral record facts that nobody argues about are bio facts, not arguments. A party office held is a valid bio
   fact; trivia about party switching is not.
 - Criminal charges never go in, even if dismissed.
+- A news report of the candidate's own announcement, speech or interview counts as their own material; the reporter's
+  characterization doesn't. Bills they sponsored are not platform planks; cite one as a neutral bio fact instead.
 - Independents with no published information stay as name, party and city only.
 - Find a candidate's real campaign site through the FEC API (`/v1/committee/<id>/` → `website`); guessed domains
   are often parked.

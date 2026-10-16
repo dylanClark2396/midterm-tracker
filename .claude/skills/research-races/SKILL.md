@@ -31,6 +31,8 @@ It prints four lists. Handle them in this order:
 4. **Next to research:** contested races come first, then single-candidate ones. Keep about 6 research agents
    running at once.
 
+Agents share the session scratchpad, so tell them to give temp files (PR bodies, comments) unique names.
+
 Remove leftover local worktrees from dead sessions with `git worktree prune` (and delete their folders under
 `.claude/worktrees/`).
 
