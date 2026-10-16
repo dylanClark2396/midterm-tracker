@@ -36,18 +36,16 @@ candidates:
       - { text: "State representative for District 25 since 2011 (107th through 114th General Assemblies); elected the 83rd Speaker of the Tennessee House in August 2019.", sources: [*cga_h25, *cs_about, *lookout25] }
       - { text: "Previously served as House Republican Caucus Chairman, House Majority Whip, and chairman of the House Health Committee.", sources: [*cga_h25, *cs_about] }
       - { text: "Works in business development at Cumberland County Bank and sits on the bank's board of directors.", sources: [*cs_about] }
-      - { text: "B.A. from the University of Tennessee (1994); lives in Crossville with his wife and three children.", sources: [*cga_h25, *cs_about] }
+      - { text: "B.A. from the University of Tennessee (1994); married with three children.", sources: [*cga_h25, *cs_about] }
+      - { text: "Prime sponsor in 2026 of enacted House bills creating a state loan pilot program for workforce housing (HB2509) and redrawing congressional district lines (HB7003), and of a bill making records on immigration-law enforcement confidential whose Senate companion became law (HB2506).", sources: [*hb2509, *hb7003, *hb2506] }
     why_running: { text: null, sources: [] }
     platform:
       - category: economy
-        text: "Keep Tennessee business-friendly through lower taxes, fewer regulations and changes such as tort and workers' compensation reform."
+        text: "Credits lower taxes, fewer regulations, and tort and workers' compensation reform with making Tennessee one of the most business-friendly states."
         sources: [*cs_issues]
       - category: taxes
         text: "Use large budget surpluses to find new ways to return money to taxpayers, building on past cuts to the Hall income, food and inheritance taxes."
         sources: [*cs_issues]
-      - category: cost_of_living
-        text: "Sponsored a law creating a state pilot program that lends money to build or rehabilitate affordable workforce housing in each of the state's three grand divisions."
-        sources: [*hb2509]
       - category: education
         text: "Focus on reading in kindergarten through third grade: targeted investment, incentives for top early-grade teachers, full funding for intervention programs, and expanding the Imagination Library through third grade."
         sources: [*cs_issues]
@@ -55,14 +53,8 @@ candidates:
         text: "Lower health costs through competition: price and ownership transparency, a public price database, more telemedicine in rural areas, and repealing or rewriting certificate-of-need laws."
         sources: [*cs_issues]
       - category: public_safety
-        text: "Sponsored truth-in-sentencing legislation so people convicted of certain crimes serve most or all of their sentence."
+        text: "Truth in sentencing, closer to the federal system, so violent and repeat offenders serve their full sentences; he sponsored a measure requiring 85% to 100% of the sentence for certain crimes."
         sources: [*cs_issues, *lookout25]
-      - category: immigration
-        text: "Sponsored a law making state records on the operational enforcement of immigration laws confidential and closed to public inspection."
-        sources: [*hb2506]
-      - category: government
-        text: "Sponsored the 2026 law that redrew Tennessee's congressional district boundaries between censuses."
-        sources: [*hb7003]
     arguments:
       - stance: for
         text: >-
@@ -77,13 +69,16 @@ candidates:
         sources: [*cc_residency, *wpln_homes, *lookout_perdiem]
       - stance: against
         text: >-
-          In 2023, district residents asked the state attorney general to investigate whether he wrongly claimed the higher
-          daily expense allowance meant for lawmakers who live far from the Capitol while owning a Nashville home.
+          In 2023, more than a dozen district residents filed a complaint asking the state attorney general for a civil
+          investigation into whether he wrongly claimed the higher daily expense allowance for lawmakers who live
+          outside Nashville while owning a home there. He has said he returns to Crossville on weekends, breaks and
+          summers, and pointed to past speakers who owned more than one home.
         sources: [*lookout_perdiem, *wpln_homes]
       - stance: against
         text: >-
-          He sponsored and defended the 2026 congressional map that split Memphis into three districts, which
-          critics called racial gerrymandering and vowed to fight in court.
+          He sponsored and defended the 2026 congressional map that split Memphis into three districts; critics
+          called it racial gerrymandering and vowed to fight it in court. He said the map was based on population and
+          politics.
         sources: [*hb7003, *an5_map, *lookout25]
 
   - name: "Monica Mowdy"
@@ -116,16 +111,16 @@ candidates:
         text: "Make school funding a top priority; repeal the private school voucher program and the third-grade retention law; protect teacher pay and benefits."
         sources: [*bp_mowdy, *mm_issues]
       - category: health_care
-        text: "Equalize access to health care across the state, and let women make their own health decisions without government intervention."
+        text: "Equalize access to health care across the state, and give women the same equality men have to make their own health decisions without government intervention."
         sources: [*bp_mowdy, *mm_issues]
       - category: infrastructure
-        text: "Strengthen local infrastructure, including broadband expansion for rural communities."
+        text: "Strong local infrastructure; she joined residents at the Capitol to press legislators on rural broadband expansion."
         sources: [*mm_issues, *mm_news]
     arguments:
       - stance: for
         text: >-
           A longtime local pastor and former teacher, she promises to be a reachable neighbor who listens rather than
-          a career politician, running a campaign funded by residents rather than special interests.
+          a career politician, running a campaign powered by neighbors rather than special interests.
         sources: [*mm_about, *mm_home]
 
 last_verified: 2026-10-16
