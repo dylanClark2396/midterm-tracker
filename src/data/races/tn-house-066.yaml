@@ -1,23 +1,171 @@
-# Seeded from the Secretary of State's certified candidate list by
-# scripts/seed-from-certified-list.py. research_status: pending —
-# platforms and arguments not yet compiled.
+# Tennessee House, District 66 (Robertson County: Springfield, Greenbrier, Coopertown and much of White House) —
+# Rep. Sabi "Doc" Kumar, in office since 2014, faces Tamara Bavendam.
+# Candidate order follows the Secretary of State's certified candidate list.
+_sources:
+  cga_h66: &cga_h66 { url: "https://wapp.capitol.tn.gov/apps/legislatorinfo/member.aspx?district=H66", title: "Representative Sabi 'Doc' Kumar (Tennessee General Assembly)", accessed: 2026-10-16 }
+  bp_kumar: &bp_kumar { url: "https://ballotpedia.org/Sabi_Kumar", title: "Sabi Kumar (Ballotpedia)", accessed: 2026-10-16 }
+  sk_home: &sk_home { url: "http://www.sabikumar.com/", title: "Home (Kumar campaign)", accessed: 2026-10-16 }
+  sk_about: &sk_about { url: "http://www.sabikumar.com/about-1.html", title: "About (Kumar campaign)", accessed: 2026-10-16 }
+  sk_issues: &sk_issues { url: "http://www.sabikumar.com/issues.html", title: "Issues (Kumar campaign)", accessed: 2026-10-16 }
+  sk_pubs: &sk_pubs { url: "http://www.sabikumar.com/publications.html", title: "Publications, incl. \"Will Memphis Benefit from Redistricting?\" (Kumar campaign)", accessed: 2026-10-16 }
+  hb1710: &hb1710 { url: "https://wapp.capitol.tn.gov/apps/BillInfo/Default.aspx?BillNumber=HB1710&GA=114", title: "HB 1710 bill history, public benefits verification (Tennessee General Assembly)", accessed: 2026-10-16 }
+  lookout66: &lookout66 { url: "https://tennesseelookout.com/voter-guides/contests/house-district-66/", title: "Tennessee House of Representatives, 66th District voter guide (Tennessee Lookout)", accessed: 2026-10-16 }
+  smokey_debate: &smokey_debate { url: "https://smokeybarn.com/rep-kumar-meet-me-on-a-debate-stage", title: "Rep. Kumar, Meet Me on a Debate Stage (Smokey Barn News, paid announcement by the Bavendam campaign)", accessed: 2026-10-16 }
+  tb_debate: &tb_debate { url: "https://www.bavendam4robco.com/news/representative-sabi-kumar-declines-to-debate", title: "Representative Sabi Kumar Declines to Debate (Bavendam campaign)", accessed: 2026-10-16 }
+  tb_about: &tb_about { url: "https://www.bavendam4robco.com/about", title: "About (Bavendam campaign)", accessed: 2026-10-16 }
+  tb_issues: &tb_issues { url: "https://www.bavendam4robco.com/issues", title: "Issues (Bavendam campaign)", accessed: 2026-10-16 }
+  tb_endorse: &tb_endorse { url: "https://www.bavendam4robco.com/endorsements", title: "Endorsements (Bavendam campaign)", accessed: 2026-10-16 }
+  bp_bavendam: &bp_bavendam { url: "https://ballotpedia.org/Tamara_Bavendam", title: "Tamara Bavendam (Ballotpedia)", accessed: 2026-10-16 }
+  br_bavendam: &br_bavendam { url: "https://www.ballotready.org/people/tamara-bavendam", title: "Tamara Bavendam (BallotReady)", accessed: 2026-10-16 }
+
 id: tn-house-066
 office: "Tennessee House, District 66"
 level: state_house
 district: 66
-research_status: pending
+research_status: complete
 candidate_list_source: "https://sos-prod.tnsosgovfiles.com/s3fs-public/document/TNHouse_Nov2026.pdf"
+
 candidates:
   - name: "Sabi \"Doc\" Kumar"
     ballot_party: Republican
     city: "Springfield"
-    why_running: { text: null, sources: [] }
-    platform: []
-    arguments: []
+    incumbent: true
+    website: "http://www.sabikumar.com/"
+    bio_facts:
+      - { text: "State representative for District 66 since November 2014; House member of the 109th through 114th General Assemblies.", sources: [*bp_kumar, *cga_h66] }
+      - { text: "Chair of the House Insurance Committee; also serves on the Calendar & Rules, Government Operations and Health committees and the Insurance, Population Health and TennCare subcommittees.", sources: [*cga_h66, *lookout66] }
+      - { text: "Retired general and vascular surgeon who practiced in Robertson County from 1977 to 2020; trained at Mount Sinai Medical Center in Miami (residency) and the University of Miami School of Medicine (transplantation fellowship).", sources: [*sk_about, *cga_h66] }
+      - { text: "Founder of Nashville Surgical Instruments in Springfield, which sells surgical devices he patented; past chief of staff of NorthCrest Medical Center and assistant clinical professor of surgery at Vanderbilt.", sources: [*sk_about, *cga_h66, *lookout66] }
+      - { text: "Immigrated to the United States in 1970.", sources: [*sk_issues] }
+      - { text: "Says he donates his entire legislative salary and per diem to charities in Robertson County.", sources: [*sk_home] }
+    why_running:
+      text: >-
+        He pledges to work daily to serve constituents' needs for a better life, quality education and improved
+        health care options for everyone, and to listen to residents about legislation before the General Assembly.
+      sources: [*sk_home]
+    platform:
+      - category: education
+        text: "Support parental school choice and policies that give all students the best education; keep students safe at school."
+        sources: [*sk_issues]
+      - category: taxes
+        text: "Keep taxes low and budgets balanced."
+        sources: [*sk_issues]
+      - category: health_care
+        text: "Make health care available to everyone at a reasonable cost; base any use of medical marijuana on scientific evidence, as with existing FDA-approved prescription products."
+        sources: [*sk_issues]
+      - category: immigration
+        text: "Immigration must be legal, and immigration laws must be respected and enforced."
+        sources: [*sk_issues]
+      - category: abortion
+        text: "Support and sustain the life of the unborn."
+        sources: [*sk_issues]
+      - category: government
+        text: "Keep government small, efficient and non-intrusive, empowering citizens, civic groups, nonprofits and faith-based organizations to meet community needs."
+        sources: [*sk_issues]
+    arguments:
+      - stance: for
+        text: >-
+          A surgeon who cared for Robertson County patients for more than four decades, he says he gives his
+          entire legislative salary and per diem to local charities.
+        sources: [*sk_home, *sk_about]
+      - stance: for
+        text: >-
+          He says he has backed the largest-ever increases in public school and teacher pay funding every year since
+          his election, as the state rose from 49th to the mid-30s in national NAEP rankings.
+        sources: [*sk_issues]
+      - stance: for
+        text: >-
+          As chair of the House Insurance Committee, he brings more than 40 years of experience as a physician,
+          hospital board member and legislator to health care decisions.
+        sources: [*sk_issues, *cga_h66]
+      - stance: against
+        text: >-
+          His opponent says that as chair of the Insurance Committee, which oversees the TennCare subcommittee, he
+          has let the state go without expanding TennCare, leaving nearly 300,000 Tennesseans without coverage.
+        sources: [*smokey_debate, *cga_h66]
+      - stance: against
+        text: >-
+          He co-sponsored a 2026 bill requiring local governments to verify immigration status for public benefits.
+          His opponent says it makes county health workers check parents bringing children in for vaccines, which
+          she warns will scare families away from clinics.
+        sources: [*smokey_debate, *hb1710]
+      - stance: against
+        text: >-
+          His opponent says he has raised the dangerous Highway 76 and New Hall Road intersection with TDOT since
+          2022 without result: there is still no funding or date for a fix after eight crashes there this year.
+        sources: [*smokey_debate]
+      - stance: against
+        text: >-
+          His opponent faults his June op-ed backing the new congressional map that splits Memphis among three
+          districts, which he argued would give the city more influence; she says it leaves its voters outvoted.
+        sources: [*smokey_debate, *sk_pubs]
+      - stance: against
+        text: >-
+          His opponent says he has declined to debate her before the election, denying voters a chance to hear both
+          candidates face to face; a local news site reported he had not answered its own requests about a debate.
+        sources: [*tb_debate, *smokey_debate]
+      - stance: against
+        text: >-
+          His opponent says that when a reporter asked him in 2025 whether cuts to federal medical research worried
+          him as a doctor, he said they did not, though patients depend on that research.
+        sources: [*smokey_debate]
+
   - name: "Tamara Bavendam"
     ballot_party: Democratic
     city: "Springfield"
-    why_running: { text: null, sources: [] }
-    platform: []
-    arguments: []
-last_verified: 2026-10-13
+    incumbent: false
+    website: "https://www.bavendam4robco.com"
+    bio_facts:
+      - { text: "Retired urologic surgeon; bachelor's degree from Luther College (1977) and M.D. from the University of Iowa College of Medicine (1981).", sources: [*bp_bavendam, *smokey_debate, *lookout66] }
+      - { text: "Taught medicine and directed women's urology programs at the University of Washington and in Philadelphia.", sources: [*smokey_debate] }
+      - { text: "Global medical director at Pfizer from 2002 to 2012 and senior scientific officer at the National Institutes of Health from 2012 to 2021.", sources: [*br_bavendam, *smokey_debate] }
+      - { text: "Grew up in rural Iowa, the daughter of a farmer and a public school teacher; moved to Robertson County to be closer to family.", sources: [*bp_bavendam, *tb_about] }
+    why_running:
+      text: >-
+        She says she is running to represent all of District 66, putting people over party, because she is worried
+        about the future we are leaving behind. Her priorities are strong public schools, health care
+        for everyone and affordable living.
+      sources: [*bp_bavendam, *tb_about]
+    platform:
+      - category: economy
+        text: "Raise the minimum wage, support labor rights and collective bargaining, expand paid family and medical leave, and promote vocational training."
+        sources: [*tb_issues, *bp_bavendam]
+      - category: taxes
+        text: "End the sales tax on groceries, hygiene products and school supplies."
+        sources: [*tb_issues, *bp_bavendam]
+      - category: cost_of_living
+        text: "Make child care affordable, increase funding for affordable housing, and end medical debt."
+        sources: [*tb_issues, *bp_bavendam]
+      - category: education
+        text: "End education freedom scholarships (vouchers); raise teacher pay; add universal pre-K, free school meals and career-technical programs in every high school; increase rural school transportation funding; end teaching to the test."
+        sources: [*tb_issues, *bp_bavendam]
+      - category: health_care
+        text: "Expand Medicaid, protect rural hospitals, negotiate drug prices, expand mental health and addiction services, and cover preventive visits for everyone."
+        sources: [*tb_issues, *bp_bavendam]
+      - category: infrastructure
+        text: "Universal broadband, better public transportation, and fixing dangerous roads before people get hurt."
+        sources: [*tb_issues, *smokey_debate]
+      - category: government
+        text: "Fund campaigns publicly rather than through corporate PACs, and stop approving projects such as data centers in secrecy."
+        sources: [*bp_bavendam]
+      - category: agriculture
+        text: "State-level emergency protections and targeted relief for small and mid-size farms, plus fair trade policies."
+        sources: [*tb_issues, *bp_bavendam, *lookout66]
+    arguments:
+      - stance: for
+        text: >-
+          A physician and former NIH and Pfizer research leader, she spent her career pushing for better care for
+          women whose conditions had been dismissed, and promises to fight the same way for the county.
+        sources: [*smokey_debate, *bp_bavendam]
+      - stance: for
+        text: >-
+          Supporters say she was organizing and advocating for Robertson County on public schools, affordability
+          and health care long before she decided to run.
+        sources: [*tb_endorse, *tb_about]
+      - stance: for
+        text: >-
+          She has offered to debate in public before a neutral moderator and says that, while she cannot please
+          everyone, she will explain why she votes the way she does.
+        sources: [*tb_debate, *bp_bavendam]
+
+last_verified: 2026-10-16
