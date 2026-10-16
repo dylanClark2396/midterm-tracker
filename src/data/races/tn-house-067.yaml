@@ -85,15 +85,15 @@ candidates:
     why_running:
       text: >-
         He says Tennessee families deserve a state government that works for them, that every child deserves a
-        great public education and veterans deserve dignity, and that Clarksville's growth should benefit everyone,
-        not just those at the top.
+        great public education and veterans deserve dignity, and that Tennessee's growth should lift up the families
+        who live here, not just those at the top.
       sources: [*cn_glynn26, *rg_issues]
     platform:
       - category: taxes
         text: "Permanently eliminate the state grocery tax and suspend the gas tax for 90 days; tie business tax breaks to accountability; give seniors circuit-breaker relief on property taxes and utility bills."
         sources: [*rg_issues]
       - category: cost_of_living
-        text: "Increase the supply of attainable homes for first-time buyers by limiting out-of-state developers buying communities, improving tax incentives for local builders and cutting red tape."
+        text: "Increase the supply of attainable homes for first-time buyers by stopping out-of-state developers from buying communities and raising prices, improving tax incentives for local builders and cutting red tape."
         sources: [*cn_where67, *rg_issues]
       - category: education
         text: "Oppose school vouchers and charter schools; raise teacher pay, lower class-size limits, and mandate teacher working-condition surveys."
@@ -111,7 +111,7 @@ candidates:
         text: "Close the gun-show loophole, expand background checks, and keep firearms away from people who pose a danger to themselves or others."
         sources: [*rg_issues]
       - category: abortion
-        text: "Disagreed with the ruling overturning Roe v. Wade; says women should make their own pregnancy decisions without interference from politicians."
+        text: "In a 2022 statement still on his campaign site, disagreed with the ruling overturning Roe v. Wade; says women should make their own pregnancy decisions without interference from politicians."
         sources: [*rg_roe, *rg_issues]
     arguments:
       - stance: for
