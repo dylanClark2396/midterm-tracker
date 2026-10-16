@@ -1,23 +1,118 @@
-# Seeded from the Secretary of State's certified candidate list by
-# scripts/seed-from-certified-list.py. research_status: pending —
-# platforms and arguments not yet compiled.
+# Tennessee House, District 71 (all of Wayne County and parts of Hardin, Lawrence and Maury counties) —
+# Rep. Kip Capley, in office since 2022, faces Matt Day.
+# Candidate order follows the Secretary of State's certified candidate list.
+_sources:
+  cga_h71: &cga_h71 { url: "https://wapp.capitol.tn.gov/apps/legislatorinfo/member.aspx?district=H71", title: "Representative Kip Capley (Tennessee General Assembly)", accessed: 2026-10-16 }
+  bp_capley: &bp_capley { url: "https://ballotpedia.org/Kip_Capley", title: "Kip Capley (Ballotpedia)", accessed: 2026-10-16 }
+  bp_day: &bp_day { url: "https://ballotpedia.org/Matt_Day_(Tennessee)", title: "Matt Day (Tennessee) (Ballotpedia)", accessed: 2026-10-16 }
+  lookout71: &lookout71 { url: "https://tennesseelookout.com/voter-guides/contests/house-district-71/", title: "Tennessee House of Representatives, 71st District voter guide (Tennessee Lookout)", accessed: 2026-10-16 }
+  kc_home: &kc_home { url: "https://www.votecapley.com/", title: "Home - Capley for State Representative (Capley campaign)", accessed: 2026-10-16 }
+  kc_endorse: &kc_endorse { url: "https://www.votecapley.com/endorsements/", title: "Endorsements (Capley campaign)", accessed: 2026-10-16 }
+  hb1708: &hb1708 { url: "https://wapp.capitol.tn.gov/apps/BillInfo/Default.aspx?BillNumber=HB1708&GA=114", title: "HB1708 bill information (Tennessee General Assembly)", accessed: 2026-10-16 }
+  hb1802: &hb1802 { url: "https://wapp.capitol.tn.gov/apps/BillInfo/Default.aspx?BillNumber=HB1802&GA=114", title: "HB1802 bill information (Tennessee General Assembly)", accessed: 2026-10-16 }
+  pr_english: &pr_english { url: "https://tnhousegop.org/press-releases/2026/04/rep-kip-capley-passes-english-only-requirement-for-tennessee-drivers-licenses/", title: "Rep. Kip Capley passes English-only requirement for Tennessee driver's licenses (Tennessee House Republican Caucus)", accessed: 2026-10-16 }
+  pr_property: &pr_property { url: "https://tnhousegop.org/press-releases/2026/04/rep-kip-capley-expands-tennesseans-right-to-defend-private-property/", title: "Rep. Kip Capley expands Tennesseans' right to defend private property (Tennessee House Republican Caucus)", accessed: 2026-10-16 }
+  tl_2025: &tl_2025 { url: "https://tennesseelookout.com/2025/03/19/bill-requiring-english-only-drivers-license-testing-in-tennessee-fails-in-a-legislative-committee/", title: "Bill requiring English-only driver's license testing in Tennessee fails in a legislative committee (Tennessee Lookout)", accessed: 2026-10-16 }
+  tl_2026: &tl_2026 { url: "https://tennesseelookout.com/2026/03/12/tennessee-senators-move-amended-english-only-drivers-license-testing/", title: "Tennessee senators move amended English-only driver's license testing (Tennessee Lookout)", accessed: 2026-10-16 }
+  wpln_force: &wpln_force { url: "https://wpln.org/post/in-tennessee-you-cant-kill-to-protect-property-lawmakers-may-allow-wider-use-of-deadly-force", title: "In Tennessee, you can't kill to protect property. Now, lawmakers say you can. (WPLN News)", accessed: 2026-10-16 }
+  wsmv_force: &wsmv_force { url: "https://www.actionnews5.com/2026/04/24/tennessee-lawmakers-pass-bill-allowing-use-deadly-force-protect-property/", title: "Tennessee lawmakers pass bill allowing use of deadly force to protect property (Action News 5 / WSMV)", accessed: 2026-10-16 }
+
 id: tn-house-071
 office: "Tennessee House, District 71"
 level: state_house
 district: 71
-research_status: pending
+research_status: complete
 candidate_list_source: "https://sos-prod.tnsosgovfiles.com/s3fs-public/document/TNHouse_Nov2026.pdf"
+
 candidates:
   - name: "Kip Capley"
     ballot_party: Republican
     city: "Summertown"
-    why_running: { text: null, sources: [] }
-    platform: []
-    arguments: []
+    incumbent: true
+    website: "https://www.votecapley.com/"
+    bio_facts:
+      - { text: "State representative for District 71 since November 2022, succeeding David Byrd; House member of the 113th and 114th General Assemblies.", sources: [*bp_capley, *lookout71, *cga_h71] }
+      - { text: "Serves on the House Finance, Ways and Means Committee and its subcommittee, the Health Committee, and the Private Acts Committee.", sources: [*cga_h71] }
+      - { text: "B.S. in political science and history from Middle Tennessee State University; MBA in healthcare management from Trevecca Nazarene University, cum laude.", sources: [*cga_h71, *bp_capley] }
+      - { text: "Lists his occupation as business development coordinator; previously worked in a congressional office; coaches youth football and basketball in Summertown.", sources: [*cga_h71, *kc_endorse] }
+      - { text: "Sponsored HB1708, enacted in 2026, which requires written driver's license exams in English after a one-time exception and requires proof of citizenship or lawful status to register a vehicle.", sources: [*hb1708, *pr_english] }
+      - { text: "Sponsored HB1802, enacted in 2026 through its Senate companion, which allows deadly force to protect property in certain circumstances, such as preventing arson, burglary or robbery.", sources: [*hb1802, *pr_property] }
+    why_running:
+      text: >-
+        His campaign site says he wants to be a strong voice for every person in the district and take residents'
+        concerns to Nashville.
+      sources: [*kc_home]
+    platform:
+      - category: taxes
+        text: "Lower taxes to ease the burden of inflation on families while protecting small businesses and entrepreneurs."
+        sources: [*kc_home]
+      - category: health_care
+        text: "Reduce health care costs and make sure access to care is readily available."
+        sources: [*kc_home]
+      - category: abortion
+        text: "Defend the life of the unborn."
+        sources: [*kc_home]
+      - category: public_safety
+        text: "Fully support law enforcement and first responders."
+        sources: [*kc_home]
+      - category: education
+        text: "Sponsor legislation to provide improved resources for educators and students."
+        sources: [*kc_home]
+      - category: guns
+        text: "Defend constitutional rights, especially the Second Amendment."
+        sources: [*kc_home]
+    arguments:
+      - stance: for
+        text: >-
+          He says requiring written driver's exams in English makes sure drivers can understand road signs and
+          traffic laws, which he argues protects families and improves road safety.
+        sources: [*pr_english]
+      - stance: for
+        text: >-
+          He says his property-defense law lets residents use deadly force only as a last resort, so they no longer
+          have to wait and watch while a criminal destroys what they have worked for.
+        sources: [*pr_property, *wpln_force, *wsmv_force]
+      - stance: against
+        text: >-
+          Business groups and state economic development officials lobbied against his 2025 English-only driver's
+          test bill, warning it could hurt employees of international companies in Tennessee; a House subcommittee
+          voted it down.
+        sources: [*tl_2025]
+      - stance: against
+        text: >-
+          Critics testifying on the 2026 English-only driver's exam bill he carried in the House said it would make
+          roads less safe by increasing the number of unlicensed drivers.
+        sources: [*tl_2026]
+      - stance: against
+        text: >-
+          The head of the state's prosecutors' association testified that the first version of his deadly-force
+          bill was so broad that someone turning around in a driveway could trigger it.
+        sources: [*wpln_force]
+      - stance: against
+        text: >-
+          Opponents in the legislature said his deadly-force bill substantially lowers the threshold for killing
+          someone over property.
+        sources: [*wsmv_force, *wpln_force]
+
   - name: "Matt Day"
     ballot_party: Democratic
     city: "Columbia"
+    incumbent: false
+    website: "https://www.facebook.com/MattDayTN71/"
+    bio_facts:
+      - { text: "Accountant; first campaign for public office.", sources: [*lookout71] }
+      - { text: "Middle Tennessee native who describes himself as an outdoorsman, beekeeper and orchardist.", sources: [*bp_day] }
     why_running: { text: null, sources: [] }
-    platform: []
+    platform:
+      - category: health_care
+        text: "Make health care more available."
+        sources: [*bp_day]
+      - category: education
+        text: "Protect public schools."
+        sources: [*bp_day]
+      - category: taxes
+        text: "Tax relief for working families and fairer taxes."
+        sources: [*bp_day]
     arguments: []
-last_verified: 2026-10-13
+
+last_verified: 2026-10-16
