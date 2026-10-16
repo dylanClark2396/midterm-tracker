@@ -14,6 +14,7 @@
     "docs:check": "node scripts/check-docs.mjs",
     "check:contact": "node scripts/check-contact.mjs",
     "check": "astro check",
+    "research:queue": "node scripts/research-queue.mjs",
     "astro": "astro"
   },
   "dependencies": {

@@ -32,6 +32,9 @@ candidates:
 last_verified: 2026-10-15
 ```
 
+To research the pending races in bulk, or to resume research someone else started, follow the
+[research-races skill](../../.claude/skills/research-races/SKILL.md).
+
 ## Gotchas
 
 - **`research_status: pending` hides research.** A pending race page lists only names, party and city, so set
