@@ -1,23 +1,119 @@
-# Seeded from the Secretary of State's certified candidate list by
-# scripts/seed-from-certified-list.py. research_status: pending —
-# platforms and arguments not yet compiled.
+# Tennessee House, District 32 (Roane County and part of Loudon County, including Lenoir City) — open seat;
+# Rep. Monty Fritts ran for governor instead of re-election. Former Roane County Sheriff Jack Stockton faces
+# Ali Simpson.
+# Candidate order follows the Secretary of State's certified candidate list.
+_sources:
+  lookout32: &lookout32 { url: "https://tennesseelookout.com/voter-guides/contests/house-district-32/", title: "Tennessee House of Representatives, 32nd District voter guide (Tennessee Lookout)", accessed: 2026-10-15 }
+  bp_stockton: &bp_stockton { url: "https://ballotpedia.org/Jack_Stockton", title: "Jack Stockton (Ballotpedia)", accessed: 2026-10-15 }
+  bp_simpson: &bp_simpson { url: "https://ballotpedia.org/Ali_Simpson", title: "Ali Simpson (Ballotpedia)", accessed: 2026-10-15 }
+  js_home: &js_home { url: "https://jackstockton.com/", title: "Jack Stockton District 32 (Stockton campaign)", accessed: 2026-10-15 }
+  rcn_jan: &rcn_jan { url: "https://www.themountainpress.com/roane/news/stockton-planning-to-run-for-state-representative/article_24cb1e8a-e1a7-5bc8-af95-224e690c6c05.html", title: "Stockton planning to run for state representative (Roane County News)", accessed: 2026-10-15 }
+  rcn_jul: &rcn_jul { url: "https://www.themountainpress.com/roane/news/candidates-vying-for-district-32-house-seat/article_e03a3cb1-5a3e-5d17-a09c-c348b3118050.html", title: "Candidates vying for District 32 House seat (Roane County News)", accessed: 2026-10-15 }
+  rcn_aug: &rcn_aug { url: "https://www.themountainpress.com/roane/news/sheriff-stockton-moving-on-to-nov-3-election/article_b866fa2e-9cfa-56b1-b4dd-f13a06aea601.html", title: "Sheriff Stockton moving on to Nov. 3 election (Roane County News)", accessed: 2026-10-15 }
+  chamber: &chamber { url: "https://tnchamber.org/tennessee-chamber-endorses-jack-stockton-for-tennessee-house-district-32/", title: "Tennessee Chamber Endorses Jack Stockton for Tennessee House District 32 (Tennessee Chamber of Commerce & Industry)", accessed: 2026-10-15 }
+  as_home: &as_home { url: "https://www.simpson4tn32.com/", title: "Ali Simpson for Tennessee Statehouse (Simpson campaign)", accessed: 2026-10-15 }
+
 id: tn-house-032
 office: "Tennessee House, District 32"
 level: state_house
 district: 32
-research_status: pending
+research_status: complete
 candidate_list_source: "https://sos-prod.tnsosgovfiles.com/s3fs-public/document/TNHouse_Nov2026.pdf"
+
 candidates:
   - name: "Jack L. Stockton"
     ballot_party: Republican
     city: "Kingston"
-    why_running: { text: null, sources: [] }
-    platform: []
-    arguments: []
+    incumbent: false
+    website: "https://jackstockton.com"
+    bio_facts:
+      - { text: "Elected Roane County sheriff in 2006 and re-elected in 2010, 2014, 2018 and 2022, unopposed the last two times; his final term ended August 31, 2026.", sources: [*rcn_jan, *rcn_aug] }
+      - { text: "Harriman police chief for seven years before becoming sheriff; more than 40 years in law enforcement in all.", sources: [*rcn_jul, *js_home] }
+      - { text: "Served 27 years on the 911 board and two years as chairman of the TCI board; also served on courthouse security and jail studies committees.", sources: [*js_home] }
+      - { text: "Trained at the Tennessee Law Enforcement Academy and the FBI Leadership Development school; also studied at Alvin C. York Agricultural Institute and Jacksonville Theological Seminary.", sources: [*js_home] }
+      - { text: "Won the August 6, 2026 primary for this seat with about 60% of the vote in a three-candidate field.", sources: [*bp_stockton, *rcn_aug] }
+    why_running:
+      text: >-
+        He says he could do some good for everyone in the district and wants to be a voice for its people, with
+        nothing personal to gain, after retiring from law enforcement. He says two decades as sheriff prepared him
+        to lead in Nashville and to stand up for the district rather than vote as others expect.
+      sources: [*rcn_jan, *rcn_jul, *js_home]
+    platform:
+      - category: guns
+        text: "Defend the right to keep and bear arms."
+        sources: [*js_home]
+      - category: government
+        text: "Uphold the Tennessee and U.S. constitutions and protect freedom of faith and conscience for every family."
+        sources: [*js_home]
+      - category: public_safety
+        text: "Stand up for abused children and senior citizens."
+        sources: [*js_home]
+      - category: veterans
+        text: "Improve infrastructure, health care and benefits for veterans, first responders and their families."
+        sources: [*js_home]
+      - category: health_care
+        text: "Expand access to rural health care and mental health resources across the district."
+        sources: [*js_home]
+    arguments:
+      - stance: for
+        text: >-
+          More than four decades in law enforcement and five terms as sheriff show a record of leadership and
+          integrity that would make him a strong advocate for the state's economy and communities.
+        sources: [*chamber]
+      - stance: for
+        text: >-
+          He has balanced multi-million-dollar budgets for more than 27 years and says he has built strong
+          working relationships with officials and everyday residents alike.
+        sources: [*js_home]
+
   - name: "Ali Simpson"
     ballot_party: Democratic
     city: "Ten Mile"
-    why_running: { text: null, sources: [] }
-    platform: []
-    arguments: []
-last_verified: 2026-10-13
+    incumbent: false
+    website: "https://www.simpson4tn32.com"
+    bio_facts:
+      - { text: "Operates a small farm with her family in Ten Mile.", sources: [*as_home, *bp_simpson] }
+      - { text: "Board member of the Southeast Tennessee Young Farmers Coalition.", sources: [*as_home] }
+      - { text: "AmeriCorps alumna who helped establish a home weatherization program with Habitat for Humanity; former program coordinator with SCORE and the U.S. Small Business Administration.", sources: [*as_home, *bp_simpson] }
+      - { text: "Graduate of the State University of New York at Stony Brook.", sources: [*bp_simpson] }
+      - { text: "First run for public office.", sources: [*lookout32] }
+    why_running:
+      text: >-
+        She says she wants to pass policies that improve people's health, freedom and empowerment, and to reverse
+        what she calls the transfer of public wealth to corporations and special interests, returning it to the
+        people.
+      sources: [*as_home, *bp_simpson]
+    platform:
+      - category: agriculture
+        text: "Preserve farmland and make small farms more profitable: right to repair, water and soil health, fighting invasive species, and support for small processors and commercial kitchens."
+        sources: [*as_home]
+      - category: health_care
+        text: "Accept Medicaid expansion funding to help small and rural hospitals, support addiction treatment and prevention, invest in rural transportation and mobile clinics for older adults, and oppose laws that let doctors refuse to treat patients based on their beliefs."
+        sources: [*as_home, *bp_simpson]
+      - category: education
+        text: "Oppose school vouchers; provide free breakfast and lunch for all public school students; raise pay for teachers, bus drivers and janitors; fund trades and arts programs."
+        sources: [*as_home]
+      - category: economy
+        text: "Raise the minimum wage gradually to $18 an hour, stop the rapid pace of data center construction, expand affordable high-speed internet, and support small businesses."
+        sources: [*as_home]
+      - category: cost_of_living
+        text: "Reduce or remove the sales tax on groceries, ban algorithmic grocery pricing, and fight for affordable, universal child care."
+        sources: [*as_home]
+      - category: government
+        text: "Propose anti-lobbying legislation, work to put a measure on the state ballot defining what corporations can do, including whether they can make political donations, and restore voting rights for people with felony convictions."
+        sources: [*as_home, *bp_simpson]
+      - category: public_safety
+        text: "Legalize and deregulate marijuana use and cultivation."
+        sources: [*as_home, *bp_simpson]
+      - category: abortion
+        text: "Restore abortion rights."
+        sources: [*as_home]
+    arguments:
+      - stance: for
+        text: >-
+          Her work on a family farm, in a home weatherization program with Habitat for Humanity and in small-business
+          programs has shown her how modest support, such as affordable health care or a small grant, helps people
+          lift up themselves and their communities.
+        sources: [*as_home, *bp_simpson]
+
+last_verified: 2026-10-16
