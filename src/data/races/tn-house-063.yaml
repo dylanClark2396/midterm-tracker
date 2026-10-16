@@ -34,34 +34,35 @@ candidates:
     bio_facts:
       - { text: "State representative for District 63 since November 2022; House member of the 113th and 114th General Assemblies.", sources: [*bp_mccalmon, *cga_h63] }
       - { text: "Vice chair of the House Calendar & Rules Committee; also serves on the Government Operations, State & Local Government, and Transportation committees and the Public Service and Transportation subcommittees.", sources: [*cga_h63] }
-      - { text: "Worked about 10 years as an operations manager in the technology sector, then founded Bulldog Martial Arts in Franklin in 2020.", sources: [*jm_home, *bp_mccalmon] }
+      - { text: "Worked more than 10 years as an operations manager in the technology sector, then founded Bulldog Martial Arts in Franklin in 2020.", sources: [*jm_home, *bp_mccalmon] }
       - { text: "B.S. in business administration from Brandman University (now UMass Global).", sources: [*cga_h63, *bp_mccalmon] }
-      - { text: "House sponsor of a 2026 law (Public Chapter 718) on how proceeds from the sale of a county-owned public benefit hospital valued above $500 million may be used, if two-thirds of the county commission approves.", sources: [*hb2337] }
+      - { text: "House sponsor of a 2026 law (Public Chapter 718) on public benefit hospital sales; it exempts a county-owned hospital valued above $500 million from a state review of how sale proceeds are controlled, if two-thirds of the county commission approves.", sources: [*hb2337] }
       - { text: "Sponsored a 2026 private act letting the Williamson County hospital district board sell its real property and lease its facilities with county commission approval.", sources: [*hb2646, *lookout63] }
     why_running:
       text: >-
         He says Williamson County is the best place in the state to grow a business and raise a family, and he is
         running to keep it a pro-business, low-tax place and to maintain and expand the freedoms and opportunities
-        open to its residents. He says he wants to protect the American dream for the next generation.
+        open to its residents. In 2024, he said he was driven to serve to protect the American dream for the next
+        generation.
       sources: [*jm_home, *herald_jm24]
     platform:
       - category: economy
-        text: "Keep Tennessee and Williamson County a business-friendly place to start and grow a company."
+        text: "Keep Williamson County and Tennessee a pro-business place to grow a business."
         sources: [*jm_home]
       - category: taxes
         text: "Keep taxes low and leave more money in taxpayers' pockets."
         sources: [*jm_home, *herald_jm24]
       - category: education
-        text: "Let state education dollars follow the child so families can choose another school; supported the governor's school voucher plan."
+        text: "In 2024, said state education dollars should follow the child so families can choose another school, and backed the governor's school voucher plan."
         sources: [*scene_jm24]
       - category: public_safety
-        text: "Extend the longer statute of limitations for child sex abuse cases to all victims of sex crimes, children and adults alike."
+        text: "In 2024, said he wanted to extend the longer statute of limitations for child sex abuse cases to all victims of sex crimes, children and adults alike."
         sources: [*scene_jm24]
       - category: immigration
-        text: "Oppose illegal immigration."
+        text: "In 2024, said he stands against illegal immigration."
         sources: [*herald_jm24]
       - category: infrastructure
-        text: "Win more state road money for Williamson County, and support the governor's proposed choice lanes, with the private sector brought in to run them."
+        text: "In 2024, called for more state road money for Williamson County and backed the governor's proposed choice lanes, saying private-sector operation works."
         sources: [*scene_jm24]
     arguments:
       - stance: for
@@ -71,13 +72,13 @@ candidates:
         sources: [*scene_jm24]
       - stance: for
         text: >-
-          He points to his support for the largest tax cut in state history and for tougher domestic assault
-          penalties.
+          In 2024, he pointed to his support for the largest tax cut in state history and for tougher domestic
+          assault penalties.
         sources: [*herald_jm24]
       - stance: for
         text: >-
-          As a small business owner during the pandemic, he says he saw first-hand how government can burden private
-          citizens, and he brings that view to the legislature.
+          His campaign says that running a small business during the pandemic showed him first-hand how government
+          can burden private citizens, and that he brings that view to state government.
         sources: [*jm_home]
 
   - name: "Laura Andreson"
@@ -94,8 +95,8 @@ candidates:
       text: >-
         She says she became politically active when the state's abortion ban took effect in 2022 and is running
         because doctors and women in Tennessee deserve more than the limited exceptions added in 2023. She says she
-        wants health care access regardless of zip code and hopes to be a steady, reasonable voice for Tennessee
-        families.
+        wants health care access regardless of zip code and hopes to be a steady, reasonable voice during a
+        tumultuous time.
       sources: [*la_sub, *la_meet]
     platform:
       - category: economy
@@ -105,7 +106,7 @@ candidates:
         text: "More affordable housing."
         sources: [*la_issues]
       - category: education
-        text: "Fully fund public schools, reduce class sizes, pay teachers and staff better, and support students' mental health; oppose school vouchers."
+        text: "Fully fund public schools, reduce class sizes, and support students' mental health; oppose school vouchers. In 2024, also called for better pay for teachers and school staff."
         sources: [*la_issues, *bp_andreson, *scene_la26]
       - category: health_care
         text: "Protect affordable health care, expand mental health services, lower prescription drug costs, and serve rural and underserved areas; respond to Medicaid cuts and rising insurance costs."
@@ -114,16 +115,16 @@ candidates:
         text: "Plan growth responsibly and add transportation options for the suburbs to shorten commutes."
         sources: [*bp_andreson]
       - category: guns
-        text: "Protect responsible gun ownership while passing gun safety measures to reduce gun violence."
+        text: "In 2024, said responsible gun ownership should be protected but gun safety measures passed to reduce gun violence; her site says she will stand up to gun violence."
         sources: [*bp_andreson, *la_issues]
       - category: abortion
-        text: "Reform the state's abortion law, which she says endangers pregnant women and their doctors, and guard access to IVF and contraception."
+        text: "Defend reproductive freedom and reform the state's abortion law, which she said in 2024 endangers pregnant women and their doctors; warns of new laws affecting IVF and contraception."
         sources: [*bp_andreson, *la_issues, *scene_la26]
     arguments:
       - stance: for
         text: >-
-          After more than two decades as an OB/GYN caring for thousands of women and families, she would bring a
-          physician's experience to health care decisions in the legislature.
+          She says more than two decades as an OB/GYN, delivering thousands of babies and caring for families, gave
+          her a deep understanding of the challenges Tennessee families face.
         sources: [*la_meet, *la_home]
 
 last_verified: 2026-10-16
