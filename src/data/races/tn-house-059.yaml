@@ -1,23 +1,145 @@
-# Seeded from the Secretary of State's certified candidate list by
-# scripts/seed-from-certified-list.py. research_status: pending —
-# platforms and arguments not yet compiled.
+# Tennessee House, District 59 (south and west Davidson County, from Belle Meade and Bellevue to Crieve Hall and
+# Cane Ridge) — open seat; Rep. Caleb Hemmer is not seeking reelection. Bill Hancock faces Mark Proctor.
+# Candidate order follows the Secretary of State's certified candidate list.
+_sources:
+  lookout59: &lookout59 { url: "https://tennesseelookout.com/voter-guides/contests/house-district-59/", title: "Tennessee House of Representatives, 59th District voter guide (Tennessee Lookout)", accessed: 2026-10-16 }
+  banner_race: &banner_race { url: "https://nashvillebanner.com/2026/10/13/district-59-mark-proctor-bill-hancock/", title: "Open Seat, Even Partisan Divide Make Tennessee District 59 Race One to Watch (Nashville Banner)", accessed: 2026-10-16 }
+  bh_home: &bh_home { url: "https://www.billhancockfortn.com/", title: "Bill Hancock for State Representative (Hancock campaign)", accessed: 2026-10-16 }
+  mp_about: &mp_about { url: "https://www.markproctortn.com/about", title: "About (Proctor campaign)", accessed: 2026-10-16 }
+  mp_afford: &mp_afford { url: "https://www.markproctortn.com/issues/issue-1", title: "Affordable Living (Proctor campaign)", accessed: 2026-10-16 }
+  mp_schools: &mp_schools { url: "https://www.markproctortn.com/issues/issue-2", title: "Strong Public Schools (Proctor campaign)", accessed: 2026-10-16 }
+  mp_guns: &mp_guns { url: "https://www.markproctortn.com/issues/public-safety-gun-safety", title: "Public Safety & Gun Safety (Proctor campaign)", accessed: 2026-10-16 }
+  mp_women: &mp_women { url: "https://www.markproctortn.com/issues/womens-healthcare", title: "Women's Healthcare (Proctor campaign)", accessed: 2026-10-16 }
+  mp_immig: &mp_immig { url: "https://www.markproctortn.com/issues/immigration-ice", title: "Immigration & ICE (Proctor campaign)", accessed: 2026-10-16 }
+  mp_smallbiz: &mp_smallbiz { url: "https://www.markproctortn.com/issues/support-for-small-businesses-local-economy", title: "Support for Small Businesses & Local Economy (Proctor campaign)", accessed: 2026-10-16 }
+  mp_community: &mp_community { url: "https://www.markproctortn.com/issues/community-focused-leadership", title: "Community-Focused Leadership (Proctor campaign)", accessed: 2026-10-16 }
+  banner_mp_qa: &banner_mp_qa { url: "https://nashvillebanner.com/2026/07/16/mark-proctor-candidate-tennessee-district-59/", title: "Mark Proctor: Candidate for the State House, District 59 (Nashville Banner)", accessed: 2026-10-16 }
+  banner_mp_launch: &banner_mp_launch { url: "https://nashvillebanner.com/2025/11/12/caleb-hemmer-mark-proctor-state-legislature/", title: "With Caleb Hemmer Set to Retire from Statehouse, Mark Proctor Enters Race to Represent Southern Davidson County (Nashville Banner)", accessed: 2026-10-16 }
+  bp_proctor: &bp_proctor { url: "https://ballotpedia.org/Mark_Proctor_(Tennessee)", title: "Mark Proctor (Tennessee) (Ballotpedia)", accessed: 2026-10-16 }
+
 id: tn-house-059
 office: "Tennessee House, District 59"
 level: state_house
 district: 59
-research_status: pending
+research_status: complete
 candidate_list_source: "https://sos-prod.tnsosgovfiles.com/s3fs-public/document/TNHouse_Nov2026.pdf"
+
 candidates:
   - name: "Bill Hancock"
     ballot_party: Republican
     city: "Nashville"
-    why_running: { text: null, sources: [] }
-    platform: []
-    arguments: []
+    incumbent: false
+    website: "https://www.billhancockfortn.com"
+    bio_facts:
+      - { text: "Sixth-generation Tennessean and Nashville native who grew up in West Meade; son and grandson of Metro school teachers.", sources: [*bh_home] }
+      - { text: "Business degree from the University of Tennessee; built a business career in health care and real estate.", sources: [*bh_home, *banner_race] }
+      - { text: "Parent of three children.", sources: [*bh_home] }
+      - { text: "First campaign for public office; unopposed in the August 2026 primary, receiving 5,513 votes.", sources: [*lookout59, *banner_race] }
+    why_running:
+      text: >-
+        He says the community deserves a representative who will fight for its values and can work with the
+        legislature's supermajority to pass bills that benefit all Tennesseans. He says Nashville currently has no
+        seat at the table with the state's governing majority, and that this creates problems for the city.
+      sources: [*bh_home, *banner_race]
+    platform:
+      - category: taxes
+        text: "Cap property tax increases; says state rules on local property taxes can be built over time and that the Metro budget has plenty to cut."
+        sources: [*bh_home, *banner_race]
+      - category: public_safety
+        text: "Crack down on criminals to protect neighborhoods, and protect seniors from scams and abuse."
+        sources: [*bh_home]
+      - category: cost_of_living
+        text: "Make housing and child care affordable for working families."
+        sources: [*bh_home]
+      - category: infrastructure
+        text: "Push the state to fix highway infrastructure and find solutions to traffic."
+        sources: [*bh_home]
+      - category: education
+        text: "Better schools and trade opportunities for students."
+        sources: [*bh_home]
+      - category: economy
+        text: "Create jobs."
+        sources: [*bh_home]
+    arguments:
+      - stance: for
+        text: >-
+          He argues the district needs a member inside the legislature's governing majority who can speak for
+          Nashville on city-state disputes such as regional infrastructure, the airport authority and major
+          development projects.
+        sources: [*banner_race, *bh_home]
+      - stance: for
+        text: >-
+          He promises to fight for a cap on property tax increases, which he calls the top issue voters raise with
+          him, and says plenty can be cut from the local budget.
+        sources: [*bh_home, *banner_race]
+      - stance: against
+        text: >-
+          Critics, including his opponent, call his yard-sign promise to cut property taxes misleading because
+          county governments, not the legislature, set local tax rates; he responds that the state can regulate them.
+        sources: [*banner_race]
+      - stance: against
+        text: >-
+          His opponent calls the tax pledge too simple, saying residents know property taxes pay for the services
+          their community needs and wants.
+        sources: [*banner_race]
+
   - name: "Mark Proctor"
     ballot_party: Democratic
     city: "Brentwood"
-    why_running: { text: null, sources: [] }
-    platform: []
-    arguments: []
-last_verified: 2026-10-13
+    incumbent: false
+    website: "https://www.markproctortn.com"
+    bio_facts:
+      - { text: "Retired after more than 25 years with the Tennessee Highway Patrol, where he led hundreds of troopers, protected three governors, and served as captain, major and lieutenant colonel over the troopers who protect the State Capitol and legislative offices.", sources: [*mp_about, *lookout59] }
+      - { text: "Oversaw the state's handgun permit unit before permitless carry became law.", sources: [*banner_mp_qa, *banner_mp_launch] }
+      - { text: "Graduate of Austin Peay State University and the Tennessee Highway Patrol Academy.", sources: [*banner_mp_qa] }
+      - { text: "Owns and manages residential rental properties and serves on several homeowners association boards; his two daughters attend Metro Nashville public schools.", sources: [*banner_mp_qa, *lookout59] }
+      - { text: "First campaign for public office; won the August 2026 primary with 31.9% of the vote in a four-candidate field.", sources: [*lookout59, *bp_proctor] }
+    why_running:
+      text: >-
+        He says Tennessee needs steady, trusted leadership that listens before acting and puts people ahead of
+        politics, and he wants to carry his years of public service into policymaking. He says concern for his
+        daughters' safety at school after recent school shootings helped drive his decision to run.
+      sources: [*mp_about, *banner_mp_launch]
+    platform:
+      - category: cost_of_living
+        text: "Expand affordable and workforce housing through responsible development that protects existing neighborhoods, and explore targeted relief on child care and utilities."
+        sources: [*mp_afford, *banner_mp_qa]
+      - category: taxes
+        text: "Property tax relief for seniors and longtime homeowners; phase out the state grocery tax over time while reviewing corporate tax incentives."
+        sources: [*mp_afford, *banner_mp_qa]
+      - category: education
+        text: "Fully fund public schools and support teachers; opposes the school voucher program and wants private schools that take public money held to the same accountability standards."
+        sources: [*mp_schools, *bp_proctor, *banner_mp_qa]
+      - category: health_care
+        text: "Lower health care and prescription drug costs, bring back federal health care dollars, and expand access to care, including keeping rural hospitals open."
+        sources: [*mp_afford, *mp_women, *banner_mp_qa]
+      - category: guns
+        text: "Consistent handgun permit requirements with training and vetting, safe storage education, and extreme risk protection orders with due process, while respecting responsible gun ownership."
+        sources: [*mp_guns, *banner_mp_qa]
+      - category: abortion
+        text: "Says the state's abortion ban is too restrictive; supports a woman's right to choose and letting doctors provide medically necessary care without fear of prosecution."
+        sources: [*mp_women, *banner_mp_qa]
+      - category: immigration
+        text: "Opposes having state troopers or local police act as federal immigration agents, including through the 287(g) program; supports public school access for undocumented children."
+        sources: [*mp_immig, *banner_mp_qa]
+      - category: economy
+        text: "Support small businesses, raise the state minimum wage to at least the national average, and tie business incentives to clear job and wage results."
+        sources: [*mp_smallbiz, *banner_mp_qa]
+    arguments:
+      - stance: for
+        text: >-
+          He brings more than 25 years of state law enforcement leadership, including running the state's handgun
+          permit unit, to public safety and gun policy.
+        sources: [*mp_about, *banner_mp_qa]
+      - stance: for
+        text: >-
+          He promises to show up across the district's neighborhoods, listen to residents, and focus on practical
+          results over scoring political points.
+        sources: [*mp_about, *mp_community]
+      - stance: against
+        text: >-
+          His opponent accuses him of nationalizing a district race, citing mailers from a group backing him that cast
+          the opponent as a rubber stamp for national politics on reproductive rights and gun laws.
+        sources: [*banner_race]
+
+last_verified: 2026-10-16
