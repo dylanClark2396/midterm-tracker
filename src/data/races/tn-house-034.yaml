@@ -1,23 +1,150 @@
-# Seeded from the Secretary of State's certified candidate list by
-# scripts/seed-from-certified-list.py. research_status: pending —
-# platforms and arguments not yet compiled.
+# Tennessee House, District 34 (south Rutherford County: much of Murfreesboro, Eagleville, Christiana and
+# Rockvale) — Rep. Tim Rudd, in office since 2016, faces Owen Farnsworth.
+# Candidate order follows the Secretary of State's certified candidate list.
+_sources:
+  cga_h34: &cga_h34 { url: "https://wapp.capitol.tn.gov/apps/legislatorinfo/member.aspx?district=H34", title: "Representative Tim Rudd (Tennessee General Assembly)", accessed: 2026-10-15 }
+  bp_rudd: &bp_rudd { url: "https://ballotpedia.org/Tim_Rudd", title: "Tim Rudd (Ballotpedia)", accessed: 2026-10-15 }
+  lookout34: &lookout34 { url: "https://tennesseelookout.com/voter-guides/contests/house-district-34/", title: "Tennessee House of Representatives, 34th District voter guide (Tennessee Lookout)", accessed: 2026-10-15 }
+  tr_home: &tr_home { url: "https://timrudd34.com/", title: "Tim Rudd Tennessee State Representative (Rudd campaign)", accessed: 2026-10-15 }
+  tr_about: &tr_about { url: "https://timrudd34.com/about/", title: "About (Rudd campaign)", accessed: 2026-10-15 }
+  tr_issues: &tr_issues { url: "https://timrudd34.com/issues/", title: "Issues (Rudd campaign)", accessed: 2026-10-15 }
+  hb0836: &hb0836 { url: "https://wapp.capitol.tn.gov/apps/BillInfo/Default.aspx?BillNumber=HB0836&GA=111", title: "HB0836 bill information (Tennessee General Assembly)", accessed: 2026-10-16 }
+  hb1182: &hb1182 { url: "https://wapp.capitol.tn.gov/apps/BillInfo/Default.aspx?BillNumber=HB1182&GA=112", title: "HB1182 bill information (Tennessee General Assembly)", accessed: 2026-10-16 }
+  ap_signs: &ap_signs { url: "https://newschannel9.com/news/local/tennessee-bathroom-law-sponsor-now-says-it-has-penalties", title: "Tennessee bathroom law sponsor now says it has penalties (Associated Press via WTVC NewsChannel 9)", accessed: 2026-10-15 }
+  lookout_lyle: &lookout_lyle { url: "https://tennesseelookout.com/2021/03/10/tennessee-gop-measure-to-oust-nashville-judge-fails/", title: "Tennessee GOP measure to oust Nashville judge fails (Tennessee Lookout)", accessed: 2026-10-15 }
+  firefly_2024: &firefly_2024 { url: "https://tnfirefly.com/news/house-district-34-candidates-disagree-little-on-lgbtq-related-issues-charter-school-controversies", title: "House District 34 candidates disagree little on LGBTQ-related issues, charter school controversies (Tennessee Firefly)", accessed: 2026-10-15 }
+  of_home: &of_home { url: "https://www.owenfarnsworth.com/", title: "Owen For State House 34 (Farnsworth campaign)", accessed: 2026-10-15 }
+  of_policies: &of_policies { url: "https://www.owenfarnsworth.com/my-policies", title: "My Policies (Farnsworth campaign)", accessed: 2026-10-15 }
+  of_farms: &of_farms { url: "https://www.owenfarnsworth.com/farms", title: "Farms (Farnsworth campaign)", accessed: 2026-10-15 }
+  of_prices: &of_prices { url: "https://www.owenfarnsworth.com/prices", title: "Affordability (Farnsworth campaign)", accessed: 2026-10-15 }
+  of_roads: &of_roads { url: "https://www.owenfarnsworth.com/our-roads", title: "Our Roads (Farnsworth campaign)", accessed: 2026-10-15 }
+  of_health: &of_health { url: "https://www.owenfarnsworth.com/healthcare", title: "Healthcare (Farnsworth campaign)", accessed: 2026-10-15 }
+  of_edu: &of_edu { url: "https://www.owenfarnsworth.com/education", title: "Education (Farnsworth campaign)", accessed: 2026-10-15 }
+  bp_farnsworth: &bp_farnsworth { url: "https://ballotpedia.org/Owen_Farnsworth", title: "Owen Farnsworth (Ballotpedia)", accessed: 2026-10-15 }
+
 id: tn-house-034
 office: "Tennessee House, District 34"
 level: state_house
 district: 34
-research_status: pending
+research_status: complete
 candidate_list_source: "https://sos-prod.tnsosgovfiles.com/s3fs-public/document/TNHouse_Nov2026.pdf"
+
 candidates:
   - name: "Tim Rudd"
     ballot_party: Republican
     city: "Murfreesboro"
-    why_running: { text: null, sources: [] }
-    platform: []
-    arguments: []
+    incumbent: true
+    website: "https://timrudd34.com/"
+    bio_facts:
+      - { text: "State representative for District 34 since November 2016; House member of the 110th through 114th General Assemblies.", sources: [*bp_rudd, *cga_h34] }
+      - { text: "Chair of the House Elections & Campaign Finance Subcommittee; also serves on the State & Local Government and Transportation committees.", sources: [*cga_h34] }
+      - { text: "Has owned a marketing and direct-mail consulting business for more than 30 years and has been a real estate agent and affiliate broker for more than 25 years; attended Middle Tennessee State University.", sources: [*tr_about, *cga_h34] }
+      - { text: "Born in St. Petersburg, Florida; raised in Murfreesboro and Smyrna. Past member of the Rutherford County Correctional Workhouse Board and County Equalization Board, and past member of his party's state executive committee.", sources: [*tr_about] }
+      - { text: "House sponsor of a 2020 law providing that private licensed child-placing agencies cannot be required to take part in foster or adoption placements that violate their written religious or moral convictions.", sources: [*hb0836] }
+      - { text: "House sponsor of a 2021 law requiring buildings open to the public to post a notice at restroom entrances if they let either biological sex use any multi-person restroom.", sources: [*hb1182] }
+    why_running:
+      text: >-
+        He says he promised to fight for the values he shares with voters and has kept that promise on abortion,
+        gun rights, election security, religious liberty, spending and taxes, and he asks for their vote to
+        continue.
+      sources: [*tr_home]
+    platform:
+      - category: taxes
+        text: "Has led opposition to a state income tax; won't raise taxes until government waste and mismanagement are addressed, and wants to keep restraining state spending."
+        sources: [*tr_issues, *tr_about]
+      - category: education
+        text: "Supports charter schools and money following the student, private-school and home-school options, an early-literacy focus, voluntary prayer in public schools, and displaying the national motto in every K-12 school."
+        sources: [*tr_issues, *firefly_2024]
+      - category: health_care
+        text: "Supports price and ownership transparency in health care, including a public price-comparison database, and removing barriers to competition such as Certificate of Need rules."
+        sources: [*tr_issues]
+      - category: public_safety
+        text: "Stricter punishment for violent and habitual offenders and clearer, more concise sentencing guidelines."
+        sources: [*tr_issues]
+      - category: infrastructure
+        text: "Fund highway improvements without tax increases, as in the 2023 state road plan he voted for."
+        sources: [*tr_issues]
+      - category: guns
+        text: "Will never support legislation that restricts the right to own and carry a firearm; backs open carry and further strengthening gun rights."
+        sources: [*tr_issues]
+      - category: abortion
+        text: "Believes life begins at conception and pledges to protect the unborn at every opportunity."
+        sources: [*tr_issues]
+      - category: government
+        text: "Keep strengthening election security; he says he led efforts to make Tennessee's election process the most secure in the country."
+        sources: [*tr_home, *tr_issues]
+    arguments:
+      - stance: for
+        text: >-
+          He says he has backed more than $2 billion in tax cuts, including ending the Hall income tax and cutting
+          the food tax, plus senior property tax relief and the end of vehicle emissions testing.
+        sources: [*tr_issues]
+      - stance: for
+        text: >-
+          He points to results for Rutherford County: a school funding formula he backed that adds over $50 million
+          for county schools, and tens of millions secured for local highways.
+        sources: [*tr_home, *tr_issues]
+      - stance: against
+        text: >-
+          A fellow lawmaker said he gave a House committee a misleading answer when he said his 2021 restroom-sign
+          bill carried no fines or penalties; he later said a misdemeanor punishable by jail time could apply.
+        sources: [*ap_signs]
+      - stance: against
+        text: >-
+          His 2021 resolution to start removal proceedings against a sitting state trial judge over a ruling drew full opposition
+          from state and local bar associations and failed in subcommittee, whose chair warned it would set a bad
+          precedent.
+        sources: [*lookout_lyle]
+
   - name: "Owen Farnsworth"
     ballot_party: Democratic
     city: "Murfreesboro"
-    why_running: { text: null, sources: [] }
-    platform: []
-    arguments: []
-last_verified: 2026-10-13
+    incumbent: false
+    website: "https://www.owenfarnsworth.com/"
+    bio_facts:
+      - { text: "Has lived in Murfreesboro since age 14; graduated from Blackman High School and attended classes at Middle Tennessee State University.", sources: [*bp_farnsworth] }
+      - { text: "Works at Lowe's.", sources: [*bp_farnsworth] }
+    why_running:
+      text: >-
+        He says rising grocery prices, hospital closures, unchecked development of rural areas and shrinking wages
+        convinced him that enough was enough, and that if no one else would fight for people who work hard to pay
+        their bills, he had to run for a better Tennessee.
+      sources: [*of_policies, *bp_farnsworth]
+    platform:
+      - category: economy
+        text: "Raise the minimum wage to at least $25 an hour and guarantee paid leave for both mothers and fathers after a birth."
+        sources: [*bp_farnsworth]
+      - category: taxes
+        text: "Eliminate the grocery tax and make up the revenue by taxing large corporations and billionaires."
+        sources: [*bp_farnsworth]
+      - category: cost_of_living
+        text: "Take back the housing market from national rental companies so more people can own homes, and expand homeowner assistance and affordable housing programs."
+        sources: [*of_prices, *bp_farnsworth]
+      - category: education
+        text: "Universal pre-K, higher teacher pay and earlier student loan forgiveness for teachers, no public money for private schools, and expand TN Promise to make public universities free."
+        sources: [*of_edu, *bp_farnsworth]
+      - category: health_care
+        text: "Move toward universal coverage by expanding TennCare, and build rural hospitals and clinics."
+        sources: [*bp_farnsworth, *of_policies]
+      - category: infrastructure
+        text: "Start a bus rapid transit system while building permanent bus lines and passenger rail; add sidewalks on state roads, encourage frontage roads and traffic circles, and fix potholes."
+        sources: [*of_roads, *bp_farnsworth]
+      - category: abortion
+        text: "Protect access to abortion and family planning."
+        sources: [*bp_farnsworth, *of_health]
+      - category: agriculture
+        text: "Tax breaks and expanded subsidies for small and first-generation farmers, protect farmland from development, block foreign agricultural interests, and legalize hemp and marijuana farming."
+        sources: [*of_farms]
+    arguments:
+      - stance: for
+        text: >-
+          He says voters would be backing a young working Tennessean, not a career politician or a wealthy
+          developer, who has lived the cost-of-living pressures he wants to fix.
+        sources: [*of_policies, *bp_farnsworth]
+      - stance: for
+        text: >-
+          He argues that adding lanes alone has not fixed Murfreesboro traffic and offers a specific plan: bus
+          rapid transit now, with permanent bus lines and passenger rail to follow.
+        sources: [*of_roads, *bp_farnsworth]
+
+last_verified: 2026-10-16
