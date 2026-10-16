@@ -43,13 +43,13 @@ candidates:
         text: "Grow the district's economy so families and young people can stay or return to raise their children."
         sources: [*eb_about]
       - category: education
-        text: "Review and revise school materials and the companies that supply them, with Tennesseans producing them and lessons kept age-appropriate."
+        text: "Carefully review and revise current school materials and their sources, with Tennesseans producing them and lessons kept age-appropriate."
         sources: [*eb_about]
       - category: veterans
         text: "Protect veterans' rights, including their access to health care."
         sources: [*eb_about]
       - category: immigration
-        text: "Opposes resettling refugees he says are not properly vetted, citing risks to local communities and national security."
+        text: "Says unvetted refugees put national security and local communities at risk."
         sources: [*eb_about]
       - category: environment
         text: "Opposes nuclear waste storage in Tennessee and in the district, saying no economic benefit outweighs the environmental risk."
@@ -58,14 +58,9 @@ candidates:
         text: "Supports the constitutional right to keep and bear arms."
         sources: [*eb_about]
       - category: abortion
-        text: "Make adoption easier and faster as an alternative for unintended pregnancies that might otherwise end in abortion."
+        text: "Make adoption more readily available and streamline the process, citing the share of unintended pregnancies that end in abortion."
         sources: [*eb_about]
-    arguments:
-      - stance: for
-        text: >-
-          After constituents raised concerns, he wrote to the governor opposing nuclear waste storage in the
-          district and across the state, saying no economic benefit outweighs the environmental risk.
-        sources: [*eb_letter, *lookout_nuc]
+    arguments: []
 
   - name: "R. Jason Goodman"
     ballot_party: Democratic
@@ -89,16 +84,13 @@ candidates:
         text: "Properly fund public schools and spend no tax dollars on private schools; if vouchers stay, limit them by income."
         sources: [*bp_goodman]
       - category: health_care
-        text: "Expand Medicaid using the federal funding the state now turns down, covering people up to 138% of the poverty level."
+        text: "Expand Medicaid, taking the federal funding the state turns down each year that would help people earning up to 138% of the poverty level buy health insurance."
         sources: [*bp_goodman]
       - category: infrastructure
         text: "Increase transportation funding and fix Highway 62, a dangerous road many district residents drive to work in Oak Ridge."
         sources: [*bp_goodman]
       - category: guns
-        text: "A gun owner who supports Second Amendment rights."
-        sources: [*bp_goodman]
-      - category: abortion
-        text: "Restore abortion access, with reasonable restrictions and exemptions based on science and expert opinion."
+        text: "Owns guns and values his Second Amendment freedoms."
         sources: [*bp_goodman]
       - category: government
         text: "Amend the state constitution to allow citizen-led ballot initiatives."
