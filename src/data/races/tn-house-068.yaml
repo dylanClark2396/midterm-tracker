@@ -1,5 +1,5 @@
 # Tennessee House, District 68 (eastern Montgomery County, including east Clarksville and Sango) — Rep. Aron
-# Maberry, in office since 2024, faces Garfield Scott in a 2024 rematch.
+# Maberry, in office since 2024, faces Garfield Scott in a rematch of 2024.
 # Candidate order follows the Secretary of State's certified candidate list.
 _sources:
   cga_h68: &cga_h68 { url: "https://wapp.capitol.tn.gov/apps/legislatorinfo/member.aspx?district=H68", title: "Representative Aron Maberry (Tennessee General Assembly)", accessed: 2026-10-16 }
@@ -113,7 +113,7 @@ candidates:
       sources: [*gs_home, *gs_about, *cn_scott]
     platform:
       - category: economy
-        text: "Hold companies accountable for taxpayer incentives so communities aren't left paying for infrastructure built for promised jobs."
+        text: "In 2024, said companies that receive taxpayer incentives should be held to their terms so communities aren't left paying for infrastructure built for promised jobs."
         sources: [*bp_scott]
       - category: taxes
         text: "Eliminate the state grocery tax, and explore legalizing and taxing cannabis with part of the revenue going to roads."
@@ -132,7 +132,7 @@ candidates:
         sources: [*cn_qa68]
       - category: infrastructure
         text: "Build roads and utilities ahead of new development, don't rely on toll Choice Lanes, and have large commercial developments pay their fair share."
-        sources: [*gs_issues, *cn_qa68, *lookout68]
+        sources: [*gs_issues, *cn_qa68]
     arguments:
       - stance: for
         text: >-
