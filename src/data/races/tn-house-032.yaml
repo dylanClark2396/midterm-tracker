@@ -3,15 +3,15 @@
 # Ali Simpson.
 # Candidate order follows the Secretary of State's certified candidate list.
 _sources:
-  lookout32: &lookout32 { url: "https://tennesseelookout.com/voter-guides/contests/house-district-32/", title: "Tennessee House of Representatives, 32nd District voter guide (Tennessee Lookout)", accessed: 2026-10-16 }
-  bp_stockton: &bp_stockton { url: "https://ballotpedia.org/Jack_Stockton", title: "Jack Stockton (Ballotpedia)", accessed: 2026-10-16 }
-  bp_simpson: &bp_simpson { url: "https://ballotpedia.org/Ali_Simpson", title: "Ali Simpson (Ballotpedia)", accessed: 2026-10-16 }
-  js_home: &js_home { url: "https://jackstockton.com/", title: "Jack Stockton District 32 (Stockton campaign)", accessed: 2026-10-16 }
-  rcn_jan: &rcn_jan { url: "https://www.themountainpress.com/roane/news/stockton-planning-to-run-for-state-representative/article_24cb1e8a-e1a7-5bc8-af95-224e690c6c05.html", title: "Stockton planning to run for state representative (Roane County News)", accessed: 2026-10-16 }
-  rcn_jul: &rcn_jul { url: "https://www.themountainpress.com/roane/news/candidates-vying-for-district-32-house-seat/article_e03a3cb1-5a3e-5d17-a09c-c348b3118050.html", title: "Candidates vying for District 32 House seat (Roane County News)", accessed: 2026-10-16 }
-  rcn_aug: &rcn_aug { url: "https://www.themountainpress.com/roane/news/sheriff-stockton-moving-on-to-nov-3-election/article_b866fa2e-9cfa-56b1-b4dd-f13a06aea601.html", title: "Sheriff Stockton moving on to Nov. 3 election (Roane County News)", accessed: 2026-10-16 }
-  chamber: &chamber { url: "https://tnchamber.org/tennessee-chamber-endorses-jack-stockton-for-tennessee-house-district-32/", title: "Tennessee Chamber Endorses Jack Stockton for Tennessee House District 32 (Tennessee Chamber of Commerce & Industry)", accessed: 2026-10-16 }
-  as_home: &as_home { url: "https://www.simpson4tn32.com/", title: "Ali Simpson for Tennessee Statehouse (Simpson campaign)", accessed: 2026-10-16 }
+  lookout32: &lookout32 { url: "https://tennesseelookout.com/voter-guides/contests/house-district-32/", title: "Tennessee House of Representatives, 32nd District voter guide (Tennessee Lookout)", accessed: 2026-10-15 }
+  bp_stockton: &bp_stockton { url: "https://ballotpedia.org/Jack_Stockton", title: "Jack Stockton (Ballotpedia)", accessed: 2026-10-15 }
+  bp_simpson: &bp_simpson { url: "https://ballotpedia.org/Ali_Simpson", title: "Ali Simpson (Ballotpedia)", accessed: 2026-10-15 }
+  js_home: &js_home { url: "https://jackstockton.com/", title: "Jack Stockton District 32 (Stockton campaign)", accessed: 2026-10-15 }
+  rcn_jan: &rcn_jan { url: "https://www.themountainpress.com/roane/news/stockton-planning-to-run-for-state-representative/article_24cb1e8a-e1a7-5bc8-af95-224e690c6c05.html", title: "Stockton planning to run for state representative (Roane County News)", accessed: 2026-10-15 }
+  rcn_jul: &rcn_jul { url: "https://www.themountainpress.com/roane/news/candidates-vying-for-district-32-house-seat/article_e03a3cb1-5a3e-5d17-a09c-c348b3118050.html", title: "Candidates vying for District 32 House seat (Roane County News)", accessed: 2026-10-15 }
+  rcn_aug: &rcn_aug { url: "https://www.themountainpress.com/roane/news/sheriff-stockton-moving-on-to-nov-3-election/article_b866fa2e-9cfa-56b1-b4dd-f13a06aea601.html", title: "Sheriff Stockton moving on to Nov. 3 election (Roane County News)", accessed: 2026-10-15 }
+  chamber: &chamber { url: "https://tnchamber.org/tennessee-chamber-endorses-jack-stockton-for-tennessee-house-district-32/", title: "Tennessee Chamber Endorses Jack Stockton for Tennessee House District 32 (Tennessee Chamber of Commerce & Industry)", accessed: 2026-10-15 }
+  as_home: &as_home { url: "https://www.simpson4tn32.com/", title: "Ali Simpson for Tennessee Statehouse (Simpson campaign)", accessed: 2026-10-15 }
 
 id: tn-house-032
 office: "Tennessee House, District 32"
@@ -27,9 +27,9 @@ candidates:
     incumbent: false
     website: "https://jackstockton.com"
     bio_facts:
-      - { text: "Roane County sheriff from 2006 until his term ended on August 31, 2026; re-elected in 2010, 2014, 2018 and 2022, unopposed the last two times.", sources: [*rcn_jan, *rcn_aug] }
+      - { text: "Elected Roane County sheriff in 2006 and re-elected in 2010, 2014, 2018 and 2022, unopposed the last two times; his final term ended August 31, 2026.", sources: [*rcn_jan, *rcn_aug] }
       - { text: "Harriman police chief for seven years before becoming sheriff; more than 40 years in law enforcement in all.", sources: [*rcn_jul, *js_home] }
-      - { text: "Served 27 years on the 911 board and two years as chairman of the TCI board; also served on the county's courthouse security and jail studies committees.", sources: [*js_home] }
+      - { text: "Served 27 years on the 911 board and two years as chairman of the TCI board; also served on courthouse security and jail studies committees.", sources: [*js_home] }
       - { text: "Trained at the Tennessee Law Enforcement Academy and the FBI Leadership Development school; also studied at Alvin C. York Agricultural Institute and Jacksonville Theological Seminary.", sources: [*js_home] }
       - { text: "Won the August 6, 2026 primary for this seat with about 60% of the vote in a three-candidate field.", sources: [*bp_stockton, *rcn_aug] }
     why_running:
@@ -62,8 +62,8 @@ candidates:
         sources: [*chamber]
       - stance: for
         text: >-
-          He has balanced multi-million-dollar county budgets for decades and says he has built working
-          relationships with officials and residents of every political stripe.
+          He has balanced multi-million-dollar budgets for more than 27 years and says he has built strong
+          working relationships with officials and everyday residents alike.
         sources: [*js_home]
 
   - name: "Ali Simpson"
@@ -88,19 +88,19 @@ candidates:
         text: "Preserve farmland and make small farms more profitable: right to repair, water and soil health, fighting invasive species, and support for small processors and commercial kitchens."
         sources: [*as_home]
       - category: health_care
-        text: "Accept Medicaid expansion funding to help small and rural hospitals, support addiction treatment, add rural transportation and mobile clinics for older adults, and oppose the Medical Ethics Defense Act."
+        text: "Accept Medicaid expansion funding to help small and rural hospitals, support addiction treatment and prevention, invest in rural transportation and mobile clinics for older adults, and oppose laws that let doctors refuse to treat patients based on their beliefs."
         sources: [*as_home, *bp_simpson]
       - category: education
         text: "Oppose school vouchers; provide free breakfast and lunch for all public school students; raise pay for teachers, bus drivers and janitors; fund trades and arts programs."
         sources: [*as_home]
       - category: economy
-        text: "Raise the minimum wage gradually to $18 an hour, slow the pace of data center construction, expand affordable high-speed internet, and support small businesses."
+        text: "Raise the minimum wage gradually to $18 an hour, stop the rapid pace of data center construction, expand affordable high-speed internet, and support small businesses."
         sources: [*as_home]
       - category: cost_of_living
-        text: "Reduce or remove the sales tax on groceries, ban algorithmic grocery pricing, and work toward affordable, universal child care."
+        text: "Reduce or remove the sales tax on groceries, ban algorithmic grocery pricing, and fight for affordable, universal child care."
         sources: [*as_home]
       - category: government
-        text: "Propose anti-lobbying legislation, push for a state measure limiting corporate political spending, and restore voting rights for people with felony convictions."
+        text: "Propose anti-lobbying legislation, work to put a measure on the state ballot defining what corporations can do, including whether they can make political donations, and restore voting rights for people with felony convictions."
         sources: [*as_home, *bp_simpson]
       - category: public_safety
         text: "Legalize and deregulate marijuana use and cultivation."
@@ -111,8 +111,9 @@ candidates:
     arguments:
       - stance: for
         text: >-
-          Running a family farm and working on small-business and home-weatherization programs give her firsthand
-          experience with the rural livelihoods and household costs she pledges to address.
+          Her work on a family farm, in a home weatherization program with Habitat for Humanity and in small-business
+          programs has shown her how modest support, such as affordable health care or a small grant, helps people
+          lift up themselves and their communities.
         sources: [*as_home, *bp_simpson]
 
 last_verified: 2026-10-16
