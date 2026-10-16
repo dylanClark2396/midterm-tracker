@@ -1,35 +1,123 @@
-# Seeded from the Secretary of State's certified candidate list by
-# scripts/seed-from-certified-list.py. research_status: pending —
-# platforms and arguments not yet compiled.
+# Tennessee House, District 31 (Bledsoe, Rhea, Sequatchie and Van Buren counties) — open seat after Rep. Ron
+# Travis's retirement. Andy Swafford, Michael Woodlee and two independents.
+# Candidate order follows the Secretary of State's certified candidate list.
+_sources:
+  lookout31: &lookout31 { url: "https://tennesseelookout.com/voter-guides/contests/house-district-31/", title: "Tennessee House of Representatives, 31st District voter guide (Tennessee Lookout)", accessed: 2026-10-16 }
+  bp_swafford: &bp_swafford { url: "https://ballotpedia.org/Andy_Swafford", title: "Andy Swafford (Ballotpedia)", accessed: 2026-10-16 }
+  as_home: &as_home { url: "https://andyswafford.com/", title: "Vote Andy Swafford for State Representative (Swafford campaign)", accessed: 2026-10-16 }
+  bp_woodlee: &bp_woodlee { url: "https://ballotpedia.org/Michael_Woodlee", title: "Michael Woodlee (Ballotpedia, including his Candidate Connection survey)", accessed: 2026-10-16 }
+  mw_home: &mw_home { url: "https://www.woodlee4tnhouse-d31.com/", title: "Michael Woodlee for TN House District 31 (Woodlee campaign)", accessed: 2026-10-16 }
+
 id: tn-house-031
 office: "Tennessee House, District 31"
 level: state_house
 district: 31
-research_status: pending
+research_status: complete
 candidate_list_source: "https://sos-prod.tnsosgovfiles.com/s3fs-public/document/TNHouse_Nov2026.pdf"
+
 candidates:
   - name: "Andy (Andrew) J. Swafford"
     ballot_party: Republican
     city: "Pikeville"
-    why_running: { text: null, sources: [] }
-    platform: []
-    arguments: []
+    incumbent: false
+    website: "https://andyswafford.com/"
+    bio_facts:
+      - { text: "Raised on a farm in the Cold Springs community of Bledsoe County, outside Pikeville; graduate of Bledsoe County High School.", sources: [*as_home] }
+      - { text: "B.S. in plant sciences (genetics and biotechnology concentration) with a minor in entrepreneurship from the University of Tennessee.", sources: [*as_home] }
+      - { text: "Egg depot supervisor for Aviagen in Pikeville.", sources: [*as_home, *lookout31] }
+      - { text: "Member of the Bledsoe County Commission, representing District 2.", sources: [*as_home, *lookout31] }
+      - { text: "Chairman of the Bledsoe County Young Farmers and Ranchers and state chairman of the Tennessee Young Republicans.", sources: [*as_home, *lookout31] }
+    why_running:
+      text: >-
+        He says he wants the next generation to be able to build their lives in rural Tennessee instead of leaving
+        to find work, and to keep the close-knit small-town way of life he grew up with. He says he wants to make
+        Nashville work for rural Tennessee families.
+      sources: [*as_home]
+    platform:
+      - category: economy
+        text: "Bring jobs and industry to rural Tennessee so young people can stay close to home."
+        sources: [*as_home]
+      - category: taxes
+        text: "Keep taxes low and government responsive."
+        sources: [*as_home]
+      - category: education
+        text: "Protect schools and give every student a chance to succeed, protect parental rights and choice, and grow work training and technical education, including through the Tennessee College of Applied Technology."
+        sources: [*as_home]
+      - category: health_care
+        text: "Expand access to health care in rural areas."
+        sources: [*as_home]
+      - category: public_safety
+        text: "Support law enforcement and stop drug trafficking, while building addiction recovery and second-chance programs."
+        sources: [*as_home]
+      - category: abortion
+        text: "Protect innocent life."
+        sources: [*as_home]
+      - category: agriculture
+        text: "Protect farmland and property rights."
+        sources: [*as_home]
+    arguments:
+      - stance: for
+        text: >-
+          A farm-raised county commissioner who works in agriculture, he says he has traveled all four counties
+          listening to concerns about roads, schools, jobs, health care and farming.
+        sources: [*as_home]
+
   - name: "Michael Woodlee"
     ballot_party: Democratic
     city: "Spencer"
-    why_running: { text: null, sources: [] }
-    platform: []
-    arguments: []
+    incumbent: false
+    website: "https://www.woodlee4tnhouse-d31.com/"
+    bio_facts:
+      - { text: "Van Buren County native and graduate of Van Buren County High School.", sources: [*mw_home, *bp_woodlee] }
+      - { text: "Served in the U.S. Army from 2013 to 2016 as a military police officer.", sources: [*bp_woodlee, *mw_home] }
+      - { text: "Van Buren County commissioner from 2020, first for the 1st district and then the 5th; he describes himself as a two-term commissioner.", sources: [*mw_home, *bp_woodlee, *lookout31] }
+      - { text: "Works full time as a trash truck driver.", sources: [*bp_woodlee] }
+      - { text: "Serves on the board of WAGS in Bledsoe County, where he has pushed for animal shelters, spay and neuter clinics, and animal control officers.", sources: [*mw_home] }
+      - { text: "Married with seven children.", sources: [*mw_home, *lookout31] }
+    why_running:
+      text: >-
+        He says District 31 is where his children are growing up and he wants to do all he can to give them the
+        future they deserve. He says rural communities need a stronger voice in Nashville and a representative who
+        listens, answers questions and stays accessible after Election Day.
+      sources: [*mw_home, *bp_woodlee]
+    platform:
+      - category: economy
+        text: "Help existing businesses grow and attract new opportunities so children can build a good life close to home."
+        sources: [*bp_woodlee]
+      - category: cost_of_living
+        text: "Ask how proposals would be paid for and explain the tradeoffs before decisions that affect the cost of living are made."
+        sources: [*bp_woodlee]
+      - category: education
+        text: "Support rural public schools and expand career and technical education that prepares students for skilled trades and local jobs."
+        sources: [*bp_woodlee]
+      - category: health_care
+        text: "Improve access to rural health care so families don't have to drive hours for an appointment."
+        sources: [*bp_woodlee]
+      - category: infrastructure
+        text: "Work for reliable roads, broadband, water and emergency services."
+        sources: [*bp_woodlee]
+      - category: veterans
+        text: "Push for better access to veterans' services and health care."
+        sources: [*bp_woodlee]
+    arguments:
+      - stance: for
+        text: >-
+          An Army veteran and county commissioner who works full time, he promises to stay accessible, explain where
+          he stands, and put the needs of all four counties first.
+        sources: [*bp_woodlee]
+
   - name: "Keith Nolan"
     ballot_party: Independent
     city: "Dunlap"
     why_running: { text: null, sources: [] }
     platform: []
     arguments: []
+
   - name: "Randy A Sharp"
     ballot_party: Independent
     city: "Dayton"
     why_running: { text: null, sources: [] }
     platform: []
     arguments: []
-last_verified: 2026-10-13
+
+last_verified: 2026-10-16
