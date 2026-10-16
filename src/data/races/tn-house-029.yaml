@@ -1,23 +1,117 @@
-# Seeded from the Secretary of State's certified candidate list by
-# scripts/seed-from-certified-list.py. research_status: pending —
-# platforms and arguments not yet compiled.
+# Tennessee House, District 29 (eastern Hamilton County, including Ooltewah) — Rep. Greg Vital, in office since a
+# 2021 special election, faces Ryan Scofield in a rematch of 2024.
+# Candidate order follows the Secretary of State's certified candidate list.
+_sources:
+  cga_h29: &cga_h29 { url: "https://wapp.capitol.tn.gov/apps/legislatorinfo/member.aspx?district=H29", title: "Representative Greg Vital (Tennessee General Assembly)", accessed: 2026-10-16 }
+  bp_vital: &bp_vital { url: "https://ballotpedia.org/Greg_Vital", title: "Greg Vital (Ballotpedia)", accessed: 2026-10-16 }
+  bp_scofield: &bp_scofield { url: "https://ballotpedia.org/Ryan_Scofield", title: "Ryan Scofield (Ballotpedia)", accessed: 2026-10-16 }
+  lookout29: &lookout29 { url: "https://tennesseelookout.com/voter-guides/contests/house-district-29/", title: "Tennessee House of Representatives, 29th District voter guide (Tennessee Lookout)", accessed: 2026-10-16 }
+  caucus_0310: &caucus_0310 { url: "https://tnhousegop.org/member-newsroom/2026/03/rep-greg-vital-advances-legislation-supporting-veterans-public-safety-and-conservation/", title: "Rep. Greg Vital advances legislation supporting veterans, public safety and conservation (Tennessee House Republican Caucus)", accessed: 2026-10-16 }
+  hb1061: &hb1061 { url: "https://wapp.capitol.tn.gov/apps/BillInfo/Default.aspx?BillNumber=HB1061&GA=114", title: "HB1061 bill information (Tennessee General Assembly)", accessed: 2026-10-16 }
+  hb1801: &hb1801 { url: "https://wapp.capitol.tn.gov/apps/BillInfo/Default.aspx?BillNumber=HB1801&GA=114", title: "HB1801 bill information (Tennessee General Assembly)", accessed: 2026-10-16 }
+  gv_home: &gv_home { url: "https://electgregvital.com/", title: "Greg Vital - State Representative - District 29 (Vital campaign)", accessed: 2026-10-16 }
+  gv_about: &gv_about { url: "https://electgregvital.com/about/", title: "About - Greg Vital (Vital campaign)", accessed: 2026-10-16 }
+  gv_issues: &gv_issues { url: "https://electgregvital.com/issues/", title: "Issues - Greg Vital (Vital campaign)", accessed: 2026-10-16 }
+  rs_home: &rs_home { url: "https://www.ryanfortn.com/", title: "Ryan Scofield for TN House 29 (Scofield campaign)", accessed: 2026-10-16 }
+  rs_about: &rs_about { url: "https://www.ryanfortn.com/about-ryan", title: "About Ryan (Scofield campaign)", accessed: 2026-10-16 }
+
 id: tn-house-029
 office: "Tennessee House, District 29"
 level: state_house
 district: 29
-research_status: pending
+research_status: complete
 candidate_list_source: "https://sos-prod.tnsosgovfiles.com/s3fs-public/document/TNHouse_Nov2026.pdf"
+
 candidates:
   - name: "Greg Vital"
     ballot_party: Republican
     city: "Harrison"
-    why_running: { text: null, sources: [] }
-    platform: []
-    arguments: []
+    incumbent: true
+    website: "https://electgregvital.com"
+    bio_facts:
+      - { text: "State representative for District 29 since September 2021, first elected in a special election after the death of Rep. Mike Carter; House member of the 112th through 114th General Assemblies.", sources: [*bp_vital, *cga_h29, *lookout29] }
+      - { text: "Member of the House Agriculture & Natural Resources Committee and Subcommittee, the Commerce Committee and the Transportation Committee.", sources: [*cga_h29] }
+      - { text: "Co-founder and president of Morning Pointe Senior Living, a senior living and Alzheimer's care company headquartered in Ooltewah.", sources: [*cga_h29, *gv_home, *lookout29] }
+      - { text: "Served on the Collegedale City Commission from 1979 to 1982 and on the Chattanooga-Hamilton County Hospital Authority board from 1983 to 1988.", sources: [*cga_h29] }
+      - { text: "Board member and former chairman of the Land Trust for Tennessee and of the National Parks Conservation Association; named Conservation Legislator of the Year by the Tennessee Wildlife Federation in 2024.", sources: [*cga_h29] }
+      - { text: "B.S. in business administration from Southern Adventist University; has lived in Hamilton County for about 50 years, all in the Ooltewah-Georgetown area.", sources: [*cga_h29, *gv_about] }
+    why_running:
+      text: >-
+        His campaign says that after building a business and giving back to the community as a private citizen, he
+        wants to give more through public service, bringing his business experience and vision to Nashville to serve
+        District 29.
+      sources: [*gv_about, *gv_home]
+    platform:
+      - category: economy
+        text: "Keep business-friendly policies, cut burdensome regulations, write the right to work into the state constitution, and expand workforce training through community colleges and vocational programs."
+        sources: [*gv_issues]
+      - category: taxes
+        text: "Keep Tennessee among the lowest-taxed states, with lower taxes and lean state budgets."
+        sources: [*gv_issues]
+      - category: education
+        text: "Give schools the teachers, funding and resources they need; supports the state's school choice programs and its ban on teaching critical race theory."
+        sources: [*gv_issues]
+      - category: health_care
+        text: "Sponsored a bill barring ambulance providers from balance billing insured patients for covered emergency ambulance services; it passed the House 94-0 in April 2026."
+        sources: [*hb1061, *caucus_0310]
+      - category: environment
+        text: "Protect land and open spaces for future generations, champion property rights, and oppose abusive use of eminent domain."
+        sources: [*gv_issues]
+      - category: guns
+        text: "Defend gun rights; supported the state's permitless carry law and its Second Amendment sanctuary measure."
+        sources: [*gv_issues]
+      - category: abortion
+        text: "Opposes abortion and supported the state's heartbeat law."
+        sources: [*gv_issues]
+      - category: veterans
+        text: "Support service members, veterans and their families; sponsored a bill exempting Tennessee residents on active duty out of state from sales tax on vehicle purchases."
+        sources: [*gv_issues, *hb1801, *caucus_0310]
+    arguments:
+      - stance: for
+        text: >-
+          He built a senior care company headquartered in the district that employs about 400 people in Hamilton
+          County, and says that experience equips him to keep creating jobs and growing the economy.
+        sources: [*gv_home, *gv_issues]
+      - stance: for
+        text: >-
+          A longtime land conservationist, he placed his own farm under a conservation easement and was named a
+          state wildlife group's Conservation Legislator of the Year in 2024.
+        sources: [*gv_about, *cga_h29]
+
   - name: "Ryan V. Scofield"
     ballot_party: Democratic
     city: "Ooltewah"
-    why_running: { text: null, sources: [] }
-    platform: []
-    arguments: []
-last_verified: 2026-10-13
+    incumbent: false
+    website: "https://www.ryanfortn.com"
+    bio_facts:
+      - { text: "Works as a Social Security disability legal assistant.", sources: [*rs_about, *lookout29, *bp_scofield] }
+      - { text: "Serves on the executive committees of the Tennessee Democratic Party and the Hamilton County Democratic Party.", sources: [*rs_about, *lookout29] }
+      - { text: "Born in Chattanooga; spent most of his life in East Brainerd.", sources: [*bp_scofield] }
+      - { text: "Ran for House District 29 in 2024, losing to Greg Vital with 29.3% of the vote.", sources: [*bp_scofield, *lookout29] }
+    why_running:
+      text: >-
+        He says his job as a disability legal assistant puts him in touch with many Tennesseans who cannot afford
+        health insurance, are near homelessness, or feel the government is not working for them, and that the best
+        way he can serve them is as their advocate in Nashville.
+      sources: [*bp_scofield, *rs_about]
+    platform:
+      - category: education
+        text: "Keep public school funding with public schools; roll back the state voucher program and redirect that money to neighborhood schools."
+        sources: [*rs_home, *bp_scofield]
+      - category: health_care
+        text: "Expand Medicaid to cover people who earn too much to qualify but cannot afford insurance; he says this would be his first bill."
+        sources: [*bp_scofield]
+      - category: abortion
+        text: "Keep government out of reproductive health care decisions between patients and doctors."
+        sources: [*rs_home, *bp_scofield]
+      - category: government
+        text: "Create a statewide ballot initiative process and push for more open, accountable government."
+        sources: [*bp_scofield]
+    arguments:
+      - stance: for
+        text: >-
+          His daily work helping people with disability claims gives him firsthand insight into residents struggling
+          to afford health care, and he pledges to be their advocate at the Capitol.
+        sources: [*rs_about, *bp_scofield]
+
+last_verified: 2026-10-16
