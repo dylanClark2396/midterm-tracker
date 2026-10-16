@@ -1,23 +1,113 @@
-# Seeded from the Secretary of State's certified candidate list by
-# scripts/seed-from-certified-list.py. research_status: pending —
-# platforms and arguments not yet compiled.
+# Tennessee House, District 41 (Overton and Morgan counties, parts of Anderson, Fentress and Roane) — Rep. Ed
+# Butler, in office since 2022, faces R. Jason Goodman.
+# Candidate order follows the Secretary of State's certified candidate list.
+_sources:
+  cga_h41: &cga_h41 { url: "https://wapp.capitol.tn.gov/apps/legislatorinfo/member.aspx?district=H41", title: "Representative Ed Butler (Tennessee General Assembly)", accessed: 2026-10-15 }
+  bp_butler: &bp_butler { url: "https://ballotpedia.org/Ed_Butler_(Tennessee)", title: "Ed Butler (Tennessee) (Ballotpedia)", accessed: 2026-10-15 }
+  lookout41: &lookout41 { url: "https://tennesseelookout.com/voter-guides/contests/house-district-41/", title: "Tennessee House of Representatives, 41st District voter guide (Tennessee Lookout)", accessed: 2026-10-15 }
+  eb_home: &eb_home { url: "https://edbutler.org/", title: "Ed Butler for Tennessee House Representative District 41 (Butler campaign)", accessed: 2026-10-15 }
+  eb_about: &eb_about { url: "https://edbutler.org/about", title: "About Ed Butler (Butler campaign)", accessed: 2026-10-15 }
+  eb_letter: &eb_letter { url: "https://tennesseelookout.com/wp-content/uploads/2026/08/Nuclear-Waste-Letter-to-Governor.pdf", title: "Letter from Rep. Ed Butler to Gov. Bill Lee, August 10, 2026 (published by Tennessee Lookout)", accessed: 2026-10-15 }
+  lookout_nuc: &lookout_nuc { url: "https://tennesseelookout.com/2026/08/19/tennessee-republican-balks-at-nuclear-campus-waste-storage/", title: "Tennessee Republican balks at nuclear campus, waste storage (Tennessee Lookout)", accessed: 2026-10-15 }
+  hb0163: &hb0163 { url: "https://wapp.capitol.tn.gov/apps/BillInfo/Default.aspx?BillNumber=HB0163&GA=113", title: "HB0163 bill information (Tennessee General Assembly)", accessed: 2026-10-15 }
+  hb0164: &hb0164 { url: "https://wapp.capitol.tn.gov/apps/BillInfo/Default.aspx?BillNumber=HB0164&GA=113", title: "HB0164 bill information (Tennessee General Assembly)", accessed: 2026-10-15 }
+  bp_goodman: &bp_goodman { url: "https://ballotpedia.org/R._Jason_Goodman", title: "R. Jason Goodman, including Candidate Connection survey (Ballotpedia)", accessed: 2026-10-15 }
+
 id: tn-house-041
 office: "Tennessee House, District 41"
 level: state_house
 district: 41
-research_status: pending
+research_status: complete
 candidate_list_source: "https://sos-prod.tnsosgovfiles.com/s3fs-public/document/TNHouse_Nov2026.pdf"
+
 candidates:
   - name: "Ed Butler"
     ballot_party: Republican
     city: "Cookeville"
-    why_running: { text: null, sources: [] }
-    platform: []
-    arguments: []
+    incumbent: true
+    website: "https://edbutler.org"
+    bio_facts:
+      - { text: "State representative for District 41 since November 2022; House member of the 113th and 114th General Assemblies. Lost a 2018 race for the seat before winning it in 2022.", sources: [*bp_butler, *cga_h41] }
+      - { text: "Vice chair of the House Transportation Committee; also serves on the State & Local Government Committee and the Cities & Counties and Transportation subcommittees.", sources: [*cga_h41] }
+      - { text: "Fire sprinkler contractor and small business owner; Navy veteran.", sources: [*cga_h41, *lookout41, *eb_home] }
+      - { text: "Tennessee state coordinator for the Midway Route of Run For The Wall, a veterans' motorcycle ride.", sources: [*cga_h41, *eb_about] }
+      - { text: "Married with eight children, two of them adopted.", sources: [*cga_h41, *eb_about] }
+      - { text: "Sponsored 2023 laws that let courts speed up adoptions of infants left at a safe-haven facility or newborn safety device, and that count three months without visits or support as abandonment of a child under four.", sources: [*hb0164, *hb0163] }
+    why_running:
+      text: >-
+        He says he wants young people to be able to come back home to District 41, put down roots and raise their
+        families, and that his goal is economic growth so families can stay in their communities for generations.
+      sources: [*eb_about]
+    platform:
+      - category: economy
+        text: "Grow the district's economy so families and young people can stay or return to raise their children."
+        sources: [*eb_about]
+      - category: education
+        text: "Review and revise school materials and the companies that supply them, with Tennesseans producing them and lessons kept age-appropriate."
+        sources: [*eb_about]
+      - category: veterans
+        text: "Protect veterans' rights, including their access to health care."
+        sources: [*eb_about]
+      - category: immigration
+        text: "Opposes resettling refugees he says are not properly vetted, citing risks to local communities and national security."
+        sources: [*eb_about]
+      - category: environment
+        text: "Opposes nuclear waste storage in Tennessee and in the district, saying no economic benefit outweighs the environmental risk."
+        sources: [*eb_letter, *lookout_nuc]
+      - category: guns
+        text: "Supports the constitutional right to keep and bear arms."
+        sources: [*eb_about]
+      - category: abortion
+        text: "Make adoption easier and faster as an alternative for unintended pregnancies that might otherwise end in abortion."
+        sources: [*eb_about]
+    arguments:
+      - stance: for
+        text: >-
+          After constituents raised concerns, he wrote to the governor opposing nuclear waste storage in the
+          district and across the state, saying no economic benefit outweighs the environmental risk.
+        sources: [*eb_letter, *lookout_nuc]
+
   - name: "R. Jason Goodman"
     ballot_party: Democratic
     city: "Wartburg"
-    why_running: { text: null, sources: [] }
-    platform: []
-    arguments: []
-last_verified: 2026-10-13
+    incumbent: false
+    website: null
+    bio_facts:
+      - { text: "Born and raised in Morgan County and a graduate of Wartburg Central High School; moved back to the county in 2010.", sources: [*bp_goodman] }
+      - { text: "Bachelor's degree in electrical engineering from Tennessee Tech (1983); licensed professional electrical engineer in Tennessee.", sources: [*bp_goodman, *lookout41] }
+      - { text: "Worked 31 years for TVA as a field test engineer and manager of a Transmission Service Center; now an engineering contractor.", sources: [*bp_goodman, *lookout41] }
+    why_running:
+      text: >-
+        He says he is running to give voters a choice and to improve health care, education, economic development
+        and infrastructure in Tennessee.
+      sources: [*bp_goodman]
+    platform:
+      - category: cost_of_living
+        text: "Make life more affordable through child care assistance and relief from the grocery tax."
+        sources: [*bp_goodman]
+      - category: education
+        text: "Properly fund public schools and spend no tax dollars on private schools; if vouchers stay, limit them by income."
+        sources: [*bp_goodman]
+      - category: health_care
+        text: "Expand Medicaid using the federal funding the state now turns down, covering people up to 138% of the poverty level."
+        sources: [*bp_goodman]
+      - category: infrastructure
+        text: "Increase transportation funding and fix Highway 62, a dangerous road many district residents drive to work in Oak Ridge."
+        sources: [*bp_goodman]
+      - category: guns
+        text: "A gun owner who supports Second Amendment rights."
+        sources: [*bp_goodman]
+      - category: abortion
+        text: "Restore abortion access, with reasonable restrictions and exemptions based on science and expert opinion."
+        sources: [*bp_goodman]
+      - category: government
+        text: "Amend the state constitution to allow citizen-led ballot initiatives."
+        sources: [*bp_goodman]
+    arguments:
+      - stance: for
+        text: >-
+          Brings three decades of TVA engineering and management experience, including multimillion-dollar budgets
+          and crews of up to 38, and promises to decide issues on logic, science and the best available data.
+        sources: [*bp_goodman]
+
+last_verified: 2026-10-16
