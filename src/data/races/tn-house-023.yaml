@@ -2,16 +2,19 @@
 # 2018, faces independents Jeremy Bromwell and Jason Hitt.
 # Candidate order follows the Secretary of State's certified candidate list.
 _sources:
-  cga_h23: &cga_h23 { url: "https://wapp.capitol.tn.gov/apps/legislatorinfo/member.aspx?district=H23", title: "Representative Mark Cochran (Tennessee General Assembly)", accessed: 2026-10-16 }
-  sp_h23: &sp_h23 { url: "https://wapp.capitol.tn.gov/apps/LegislatorInfo/SponsorList?district=H230&ga=114", title: "Rep. Cochran: bills sponsored, 114th General Assembly (Tennessee General Assembly)", accessed: 2026-10-16 }
-  bp_cochran: &bp_cochran { url: "https://ballotpedia.org/Mark_Cochran", title: "Mark Cochran (Ballotpedia)", accessed: 2026-10-16 }
-  mc_home: &mc_home { url: "https://www.markforstaterep.com/", title: "Mark Cochran for Tennessee State Representative (Cochran campaign)", accessed: 2026-10-16 }
-  lookout23: &lookout23 { url: "https://tennesseelookout.com/voter-guides/contests/house-district-23/", title: "Tennessee House of Representatives, 23rd District voter guide (Tennessee Lookout)", accessed: 2026-10-16 }
-  firefly23: &firefly23 { url: "https://tnfirefly.com/elections/general-assembly/house/23", title: "Tennessee House District 23 Election 2026: Who Is Running (Tennessee Firefly)", accessed: 2026-10-16 }
-  jb_home: &jb_home { url: "https://jeremy4tn.com/", title: "Jeremy Bromwell - TN House District 23 (Bromwell campaign)", accessed: 2026-10-16 }
-  jb_bio: &jb_bio { url: "https://jeremy4tn.com/bio", title: "About Jeremy (Bromwell campaign)", accessed: 2026-10-16 }
-  jb_platform: &jb_platform { url: "https://jeremy4tn.com/platform", title: "Platform (Bromwell campaign)", accessed: 2026-10-16 }
-  bp_hitt: &bp_hitt { url: "https://ballotpedia.org/Jason_Hitt", title: "Jason Hitt (Ballotpedia)", accessed: 2026-10-16 }
+  cga_h23: &cga_h23 { url: "https://wapp.capitol.tn.gov/apps/legislatorinfo/member.aspx?district=H23", title: "Representative Mark Cochran (Tennessee General Assembly)", accessed: 2026-10-15 }
+  hb0545: &hb0545 { url: "https://wapp.capitol.tn.gov/apps/BillInfo/Default.aspx?BillNumber=HB0545&GA=114", title: "HB 0545, 114th General Assembly (Tennessee General Assembly)", accessed: 2026-10-15 }
+  hb0547: &hb0547 { url: "https://wapp.capitol.tn.gov/apps/BillInfo/Default.aspx?BillNumber=HB0547&GA=114", title: "HB 0547, 114th General Assembly (Tennessee General Assembly)", accessed: 2026-10-15 }
+  hb1271: &hb1271 { url: "https://wapp.capitol.tn.gov/apps/BillInfo/Default.aspx?BillNumber=HB1271&GA=114", title: "HB 1271, 114th General Assembly (Tennessee General Assembly)", accessed: 2026-10-15 }
+  hb2018: &hb2018 { url: "https://wapp.capitol.tn.gov/apps/BillInfo/Default.aspx?BillNumber=HB2018&GA=114", title: "HB 2018, 114th General Assembly (Tennessee General Assembly)", accessed: 2026-10-15 }
+  bp_cochran: &bp_cochran { url: "https://ballotpedia.org/Mark_Cochran", title: "Mark Cochran (Ballotpedia)", accessed: 2026-10-15 }
+  mc_home: &mc_home { url: "https://www.markforstaterep.com/", title: "Mark Cochran for Tennessee State Representative (Cochran campaign)", accessed: 2026-10-15 }
+  lookout23: &lookout23 { url: "https://tennesseelookout.com/voter-guides/contests/house-district-23/", title: "Tennessee House of Representatives, 23rd District voter guide (Tennessee Lookout)", accessed: 2026-10-15 }
+  firefly23: &firefly23 { url: "https://tnfirefly.com/elections/general-assembly/house/23", title: "Tennessee House District 23 Election 2026: Who Is Running (Tennessee Firefly)", accessed: 2026-10-15 }
+  jb_home: &jb_home { url: "https://jeremy4tn.com/", title: "Jeremy Bromwell - TN House District 23 (Bromwell campaign)", accessed: 2026-10-15 }
+  jb_bio: &jb_bio { url: "https://jeremy4tn.com/bio", title: "About Jeremy (Bromwell campaign)", accessed: 2026-10-15 }
+  jb_platform: &jb_platform { url: "https://jeremy4tn.com/platform", title: "Platform (Bromwell campaign)", accessed: 2026-10-15 }
+  bp_hitt: &bp_hitt { url: "https://ballotpedia.org/Jason_Hitt", title: "Jason Hitt (Ballotpedia)", accessed: 2026-10-15 }
 
 id: tn-house-023
 office: "Tennessee House, District 23"
@@ -33,31 +36,23 @@ candidates:
       - { text: "B.S. in communication and master's in public administration from the University of Tennessee.", sources: [*cga_h23] }
       - { text: "Grew up on a sixth-generation family cattle farm and worked in his father's grocery store.", sources: [*mc_home] }
       - { text: "Won the August 2026 primary with 63.3% of the vote.", sources: [*bp_cochran, *firefly23] }
+      - { text: "Sponsored HB0547 (enacted 2025), which lets a county, by a two-thirds vote of its legislative body, add a $12.50 charge to criminal court costs to fund public safety support services directed by the district attorney general.", sources: [*hb0547] }
+      - { text: "Sponsored HB0545 (enacted 2026), which requires grade 6-12 teachers to complete a free state professional development course on using artificial intelligence in the classroom.", sources: [*hb0545] }
+      - { text: "Sponsored HB2018 (enacted 2026), which requires agreements between local law enforcement agencies and federal immigration officials to include honoring immigration detainers.", sources: [*hb2018] }
+      - { text: "Sponsored HB1271 (enacted 2026), which requires government policies that refer to a person's sex to define it as male or female as determined by anatomy and genetics at birth.", sources: [*hb1271] }
     why_running:
       text: >-
-        He says he wants Tennessee to remain a place where people are free to pursue their purpose without
-        government interference, and asks voters to send him back to Nashville to keep working for McMinn and
-        Monroe counties.
+        He says he wants Tennessee to remain a place where people are free to pursue God's purpose for their lives
+        without government interference, and asks voters to send him back to Nashville to continue working on
+        behalf of McMinn and Monroe counties.
       sources: [*mc_home]
     platform:
       - category: taxes
         text: "Says he has co-sponsored nearly $1 billion in state tax cuts."
         sources: [*mc_home]
-      - category: education
-        text: "Sponsored a law requiring grade 6-12 teachers to complete a free state course on using artificial intelligence in the classroom."
-        sources: [*sp_h23]
       - category: health_care
         text: "Says he helped lead efforts to ban gender-transition surgeries for minors and to keep male athletes out of women's sports."
         sources: [*mc_home]
-      - category: public_safety
-        text: "Sponsored a law letting counties add a $12.50 charge to criminal court costs to fund public safety support chosen by the district attorney."
-        sources: [*sp_h23]
-      - category: immigration
-        text: "Sponsored a law requiring local agreements with federal immigration officials to include honoring immigration detainers."
-        sources: [*sp_h23]
-      - category: government
-        text: "Sponsored a law requiring government policies to define sex as male or female based on anatomy and genetics at birth."
-        sources: [*sp_h23]
       - category: abortion
         text: "Says he has fought to protect the lives of the unborn."
         sources: [*mc_home]
@@ -77,7 +72,7 @@ candidates:
       - { text: "Runs Grow and Flow, a small regenerative farm and yoga and movement studio in Tellico Plains; bought land in Ballplay in 2020.", sources: [*jb_bio, *lookout23] }
       - { text: "Spent about a decade in branding and storytelling for agencies and tech startups in cities including Atlanta, New York and San Francisco.", sources: [*jb_bio] }
       - { text: "Certified in trauma-sensitive yoga in 2025.", sources: [*jb_bio] }
-      - { text: "First campaign for public office; qualified for the ballot by petition.", sources: [*lookout23, *firefly23] }
+      - { text: "First campaign; qualified for the ballot by petition.", sources: [*lookout23, *firefly23] }
     why_running:
       text: >-
         He says District 23 deserves a representative focused on daily life rather than on pleasing Washington or
@@ -86,13 +81,13 @@ candidates:
       sources: [*jb_bio, *jb_home]
     platform:
       - category: cost_of_living
-        text: "Raise local wages, keep money in the district, and make it easier to start a business amid rising costs for groceries, housing and child care."
+        text: "Improve local wages, keep money in the district, and make it easier to start a business amid rising costs for groceries, housing and child care."
         sources: [*jb_platform]
       - category: education
         text: "Oppose school vouchers; fully fund public schools, pay teachers well, support smaller classes and expand vocational training and the arts."
         sources: [*jb_platform]
       - category: health_care
-        text: "Protect rural health care access, close insurance gaps, expand coverage and invest in community-based mental health and addiction care."
+        text: "Protect rural health care access, close insurance gaps, expand coverage and invest in community-based care."
         sources: [*jb_platform]
       - category: environment
         text: "Balance development with preservation, back agritourism and outdoor recreation, and help farmers to slow the loss of farmland."
@@ -107,7 +102,7 @@ candidates:
         text: "Keep local law enforcement focused on local public safety rather than expanding cooperation with federal immigration agencies."
         sources: [*jb_platform]
       - category: infrastructure
-        text: "Oppose data centers that lack community approval; require plans to protect local water and power before construction."
+        text: "Oppose data centers without community approval and protections for local water and power; require environmental impacts to be addressed before construction."
         sources: [*jb_platform]
     arguments:
       - stance: for
@@ -122,7 +117,7 @@ candidates:
     incumbent: false
     website: null
     bio_facts:
-      - { text: "Teacher with Sweetwater public schools.", sources: [*lookout23, *bp_hitt] }
+      - { text: "Teacher with Sweetwater public schools.", sources: [*lookout23] }
       - { text: "Qualified for the ballot by petition.", sources: [*firefly23] }
     why_running:
       text: >-
@@ -141,4 +136,4 @@ candidates:
         sources: [*bp_hitt]
     arguments: []
 
-last_verified: 2026-10-16
+last_verified: 2026-10-15
