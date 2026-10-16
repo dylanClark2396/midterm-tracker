@@ -6,7 +6,6 @@ _sources:
   bp_vital: &bp_vital { url: "https://ballotpedia.org/Greg_Vital", title: "Greg Vital (Ballotpedia)", accessed: 2026-10-16 }
   bp_scofield: &bp_scofield { url: "https://ballotpedia.org/Ryan_Scofield", title: "Ryan Scofield (Ballotpedia)", accessed: 2026-10-16 }
   lookout29: &lookout29 { url: "https://tennesseelookout.com/voter-guides/contests/house-district-29/", title: "Tennessee House of Representatives, 29th District voter guide (Tennessee Lookout)", accessed: 2026-10-16 }
-  caucus_0310: &caucus_0310 { url: "https://tnhousegop.org/member-newsroom/2026/03/rep-greg-vital-advances-legislation-supporting-veterans-public-safety-and-conservation/", title: "Rep. Greg Vital advances legislation supporting veterans, public safety and conservation (Tennessee House Republican Caucus)", accessed: 2026-10-16 }
   hb1061: &hb1061 { url: "https://wapp.capitol.tn.gov/apps/BillInfo/Default.aspx?BillNumber=HB1061&GA=114", title: "HB1061 bill information (Tennessee General Assembly)", accessed: 2026-10-16 }
   hb1801: &hb1801 { url: "https://wapp.capitol.tn.gov/apps/BillInfo/Default.aspx?BillNumber=HB1801&GA=114", title: "HB1801 bill information (Tennessee General Assembly)", accessed: 2026-10-16 }
   gv_home: &gv_home { url: "https://electgregvital.com/", title: "Greg Vital - State Representative - District 29 (Vital campaign)", accessed: 2026-10-16 }
@@ -29,12 +28,14 @@ candidates:
     incumbent: true
     website: "https://electgregvital.com"
     bio_facts:
-      - { text: "State representative for District 29 since September 2021, first elected in a special election after the death of Rep. Mike Carter; House member of the 112th through 114th General Assemblies.", sources: [*bp_vital, *cga_h29, *lookout29] }
+      - { text: "State representative for District 29 since September 2021, when he won a special election for the seat after the death of Rep. Mike Carter, succeeding Joan Carter; House member of the 112th through 114th General Assemblies.", sources: [*bp_vital, *gv_home, *lookout29, *cga_h29] }
       - { text: "Member of the House Agriculture & Natural Resources Committee and Subcommittee, the Commerce Committee and the Transportation Committee.", sources: [*cga_h29] }
       - { text: "Co-founder and president of Morning Pointe Senior Living, a senior living and Alzheimer's care company headquartered in Ooltewah.", sources: [*cga_h29, *gv_home, *lookout29] }
       - { text: "Served on the Collegedale City Commission from 1979 to 1982 and on the Chattanooga-Hamilton County Hospital Authority board from 1983 to 1988.", sources: [*cga_h29] }
       - { text: "Board member and former chairman of the Land Trust for Tennessee and of the National Parks Conservation Association; named Conservation Legislator of the Year by the Tennessee Wildlife Federation in 2024.", sources: [*cga_h29] }
       - { text: "B.S. in business administration from Southern Adventist University; has lived in Hamilton County for about 50 years, all in the Ooltewah-Georgetown area.", sources: [*cga_h29, *gv_about] }
+      - { text: "Sponsored HB1061, which would bar out-of-network ambulance providers from balance billing insured patients for covered emergency ambulance services; it passed the House 94-0 in April 2026, and its Senate companion failed in committee.", sources: [*hb1061] }
+      - { text: "Sponsored HB1801, which would exempt Tennessee residents on active duty stationed out of state from sales tax on vehicle purchases; it was taken off notice in a House subcommittee in April 2026.", sources: [*hb1801] }
     why_running:
       text: >-
         His campaign says that after building a business and giving back to the community as a private citizen, he
@@ -51,9 +52,9 @@ candidates:
       - category: education
         text: "Give schools the teachers, funding and resources they need; supports the state's school choice programs and its ban on teaching critical race theory."
         sources: [*gv_issues]
-      - category: health_care
-        text: "Sponsored a bill barring ambulance providers from balance billing insured patients for covered emergency ambulance services; it passed the House 94-0 in April 2026."
-        sources: [*hb1061, *caucus_0310]
+      - category: immigration
+        text: "Keep building the wall on the southern border and enforce immigration laws to the fullest extent."
+        sources: [*gv_issues]
       - category: environment
         text: "Protect land and open spaces for future generations, champion property rights, and oppose abusive use of eminent domain."
         sources: [*gv_issues]
@@ -64,12 +65,12 @@ candidates:
         text: "Opposes abortion and supported the state's heartbeat law."
         sources: [*gv_issues]
       - category: veterans
-        text: "Support service members, veterans and their families; sponsored a bill exempting Tennessee residents on active duty out of state from sales tax on vehicle purchases."
-        sources: [*gv_issues, *hb1801, *caucus_0310]
+        text: "Support active-duty service members, veterans and their families, making sure they have the resources to complete their missions and return to civilian life."
+        sources: [*gv_issues]
     arguments:
       - stance: for
         text: >-
-          He built a senior care company headquartered in the district that employs about 400 people in Hamilton
+          He built a senior care company headquartered in the district that employs more than 400 people in Hamilton
           County, and says that experience equips him to keep creating jobs and growing the economy.
         sources: [*gv_home, *gv_issues]
       - stance: for
@@ -105,7 +106,7 @@ candidates:
         text: "Keep government out of reproductive health care decisions between patients and doctors."
         sources: [*rs_home, *bp_scofield]
       - category: government
-        text: "Create a statewide ballot initiative process and push for more open, accountable government."
+        text: "Supports creating a statewide ballot initiative process so citizens can be heard, and pushing for more transparent government."
         sources: [*bp_scofield]
     arguments:
       - stance: for
