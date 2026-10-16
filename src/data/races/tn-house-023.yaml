@@ -1,29 +1,136 @@
-# Seeded from the Secretary of State's certified candidate list by
-# scripts/seed-from-certified-list.py. research_status: pending —
-# platforms and arguments not yet compiled.
+# Tennessee House, District 23 (McMinn County and part of Monroe County) — Rep. Mark Cochran, in office since
+# 2018, faces independents Jeremy Bromwell and Jason Hitt.
+# Candidate order follows the Secretary of State's certified candidate list.
+_sources:
+  cga_h23: &cga_h23 { url: "https://wapp.capitol.tn.gov/apps/legislatorinfo/member.aspx?district=H23", title: "Representative Mark Cochran (Tennessee General Assembly)", accessed: 2026-10-15 }
+  hb0545: &hb0545 { url: "https://wapp.capitol.tn.gov/apps/BillInfo/Default.aspx?BillNumber=HB0545&GA=114", title: "HB 0545, 114th General Assembly (Tennessee General Assembly)", accessed: 2026-10-15 }
+  hb0547: &hb0547 { url: "https://wapp.capitol.tn.gov/apps/BillInfo/Default.aspx?BillNumber=HB0547&GA=114", title: "HB 0547, 114th General Assembly (Tennessee General Assembly)", accessed: 2026-10-15 }
+  hb1271: &hb1271 { url: "https://wapp.capitol.tn.gov/apps/BillInfo/Default.aspx?BillNumber=HB1271&GA=114", title: "HB 1271, 114th General Assembly (Tennessee General Assembly)", accessed: 2026-10-15 }
+  hb2018: &hb2018 { url: "https://wapp.capitol.tn.gov/apps/BillInfo/Default.aspx?BillNumber=HB2018&GA=114", title: "HB 2018, 114th General Assembly (Tennessee General Assembly)", accessed: 2026-10-15 }
+  bp_cochran: &bp_cochran { url: "https://ballotpedia.org/Mark_Cochran", title: "Mark Cochran (Ballotpedia)", accessed: 2026-10-15 }
+  mc_home: &mc_home { url: "https://www.markforstaterep.com/", title: "Mark Cochran for Tennessee State Representative (Cochran campaign)", accessed: 2026-10-15 }
+  lookout23: &lookout23 { url: "https://tennesseelookout.com/voter-guides/contests/house-district-23/", title: "Tennessee House of Representatives, 23rd District voter guide (Tennessee Lookout)", accessed: 2026-10-15 }
+  firefly23: &firefly23 { url: "https://tnfirefly.com/elections/general-assembly/house/23", title: "Tennessee House District 23 Election 2026: Who Is Running (Tennessee Firefly)", accessed: 2026-10-15 }
+  jb_home: &jb_home { url: "https://jeremy4tn.com/", title: "Jeremy Bromwell - TN House District 23 (Bromwell campaign)", accessed: 2026-10-15 }
+  jb_bio: &jb_bio { url: "https://jeremy4tn.com/bio", title: "About Jeremy (Bromwell campaign)", accessed: 2026-10-15 }
+  jb_platform: &jb_platform { url: "https://jeremy4tn.com/platform", title: "Platform (Bromwell campaign)", accessed: 2026-10-15 }
+  bp_hitt: &bp_hitt { url: "https://ballotpedia.org/Jason_Hitt", title: "Jason Hitt (Ballotpedia)", accessed: 2026-10-15 }
+
 id: tn-house-023
 office: "Tennessee House, District 23"
 level: state_house
 district: 23
-research_status: pending
+research_status: complete
 candidate_list_source: "https://sos-prod.tnsosgovfiles.com/s3fs-public/document/TNHouse_Nov2026.pdf"
+
 candidates:
   - name: "Mark Cochran"
     ballot_party: Republican
     city: "Englewood"
-    why_running: { text: null, sources: [] }
-    platform: []
-    arguments: []
+    incumbent: true
+    website: "https://www.markforstaterep.com"
+    bio_facts:
+      - { text: "State representative for District 23 since November 2018; House member of the 111th through 114th General Assemblies.", sources: [*bp_cochran, *cga_h23] }
+      - { text: "Assistant Majority Leader in the 113th and 114th General Assemblies; member of the Finance, Ways and Means, Commerce, Calendar and Rules, and Ethics committees.", sources: [*cga_h23] }
+      - { text: "Began his political career in 2010 as a staff assistant in a U.S. senator's office; has served as chief of staff in the McMinn County Mayor's Office.", sources: [*lookout23, *cga_h23] }
+      - { text: "B.S. in communication and master's in public administration from the University of Tennessee.", sources: [*cga_h23] }
+      - { text: "Grew up on a sixth-generation family cattle farm and worked in his father's grocery store.", sources: [*mc_home] }
+      - { text: "Won the August 2026 primary with 63.3% of the vote.", sources: [*bp_cochran, *firefly23] }
+      - { text: "Sponsored HB0547 (enacted 2025), which lets a county, by a two-thirds vote of its legislative body, add a $12.50 charge to criminal court costs to fund public safety support services directed by the district attorney general.", sources: [*hb0547] }
+      - { text: "Sponsored HB0545 (enacted 2026), which requires grade 6-12 teachers to complete a free state professional development course on using artificial intelligence in the classroom.", sources: [*hb0545] }
+      - { text: "Sponsored HB2018 (enacted 2026), which requires agreements between local law enforcement agencies and federal immigration officials to include honoring immigration detainers.", sources: [*hb2018] }
+      - { text: "Sponsored HB1271 (enacted 2026), which requires government policies that refer to a person's sex to define it as male or female as determined by anatomy and genetics at birth.", sources: [*hb1271] }
+    why_running:
+      text: >-
+        He says he wants Tennessee to remain a place where people are free to pursue God's purpose for their lives
+        without government interference, and asks voters to send him back to Nashville to continue working on
+        behalf of McMinn and Monroe counties.
+      sources: [*mc_home]
+    platform:
+      - category: taxes
+        text: "Says he has co-sponsored nearly $1 billion in state tax cuts."
+        sources: [*mc_home]
+      - category: health_care
+        text: "Says he helped lead efforts to ban gender-transition surgeries for minors and to keep male athletes out of women's sports."
+        sources: [*mc_home]
+      - category: abortion
+        text: "Says he has fought to protect the lives of the unborn."
+        sources: [*mc_home]
+    arguments:
+      - stance: for
+        text: >-
+          Shaped by work on a family farm and in two family businesses, he points to a record that includes
+          co-sponsoring nearly $1 billion in tax cuts for Tennesseans.
+        sources: [*mc_home]
+
   - name: "Jeremy Bromwell"
     ballot_party: Independent
     city: "Tellico Plains"
-    why_running: { text: null, sources: [] }
-    platform: []
-    arguments: []
+    incumbent: false
+    website: "https://jeremy4tn.com"
+    bio_facts:
+      - { text: "Runs Grow and Flow, a small regenerative farm and yoga and movement studio in Tellico Plains; bought land in Ballplay in 2020.", sources: [*jb_bio, *lookout23] }
+      - { text: "Spent about a decade in branding and storytelling for agencies and tech startups in cities including Atlanta, New York and San Francisco.", sources: [*jb_bio] }
+      - { text: "Certified in trauma-sensitive yoga in 2025.", sources: [*jb_bio] }
+      - { text: "First campaign; qualified for the ballot by petition.", sources: [*lookout23, *firefly23] }
+    why_running:
+      text: >-
+        He says District 23 deserves a representative focused on daily life rather than on pleasing Washington or
+        chasing PAC money, and that he got on the ballot to give voters a choice. He says he will listen first and
+        bring people together to make life better in the district.
+      sources: [*jb_bio, *jb_home]
+    platform:
+      - category: cost_of_living
+        text: "Improve local wages, keep money in the district, and make it easier to start a business amid rising costs for groceries, housing and child care."
+        sources: [*jb_platform]
+      - category: education
+        text: "Oppose school vouchers; fully fund public schools, pay teachers well, support smaller classes and expand vocational training and the arts."
+        sources: [*jb_platform]
+      - category: health_care
+        text: "Protect rural health care access, close insurance gaps, expand coverage and invest in community-based care."
+        sources: [*jb_platform]
+      - category: environment
+        text: "Balance development with preservation, back agritourism and outdoor recreation, and help farmers to slow the loss of farmland."
+        sources: [*jb_platform]
+      - category: government
+        text: "Create legislative term limits and get big money out of politics; his campaign takes no PAC money."
+        sources: [*jb_platform, *jb_home]
+      - category: immigration
+        text: "Keep local law enforcement focused on local public safety rather than expanding cooperation with federal immigration agencies."
+        sources: [*jb_platform]
+      - category: infrastructure
+        text: "Oppose data centers without community approval and protections for local water and power; require environmental impacts to be addressed before construction."
+        sources: [*jb_platform]
+    arguments:
+      - stance: for
+        text: >-
+          Not tied to any party, he says he can work with anyone who has good ideas, and his campaign is funded
+          only by individual donors.
+        sources: [*jb_home]
+
   - name: "Jason Hitt"
     ballot_party: Independent
     city: "Englewood"
-    why_running: { text: null, sources: [] }
-    platform: []
+    incumbent: false
+    website: null
+    bio_facts:
+      - { text: "Teacher with Sweetwater public schools.", sources: [*lookout23] }
+      - { text: "Qualified for the ballot by petition.", sources: [*firefly23] }
+    why_running:
+      text: >-
+        He says he stands for common-sense government for everyone that serves the people rather than interest
+        groups.
+      sources: [*bp_hitt]
+    platform:
+      - category: education
+        text: "Supports public education."
+        sources: [*bp_hitt]
+      - category: guns
+        text: "Supports Second Amendment rights."
+        sources: [*bp_hitt]
+      - category: government
+        text: "Equality for all under the law."
+        sources: [*bp_hitt]
     arguments: []
-last_verified: 2026-10-13
+
+last_verified: 2026-10-15
