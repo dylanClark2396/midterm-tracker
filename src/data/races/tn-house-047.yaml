@@ -1,23 +1,122 @@
-# Seeded from the Secretary of State's certified candidate list by
-# scripts/seed-from-certified-list.py. research_status: pending —
-# platforms and arguments not yet compiled.
+# Tennessee House, District 47 (Coffee and Grundy counties) — Rep. Rush Bricken, in office since 2018, faces
+# Mike Stein.
+# Candidate order follows the Secretary of State's certified candidate list.
+_sources:
+  cga_h47: &cga_h47 { url: "https://wapp.capitol.tn.gov/apps/legislatorinfo/member.aspx?district=H47", title: "Representative Rush Bricken (Tennessee General Assembly)", accessed: 2026-10-16 }
+  bp_bricken: &bp_bricken { url: "https://ballotpedia.org/Rush_Bricken", title: "Rush Bricken (Ballotpedia)", accessed: 2026-10-16 }
+  hb2663: &hb2663 { url: "https://wapp.capitol.tn.gov/apps/BillInfo/Default.aspx?BillNumber=HB2663&GA=114", title: "HB2663 bill information (Tennessee General Assembly)", accessed: 2026-10-16 }
+  lookout47: &lookout47 { url: "https://tennesseelookout.com/voter-guides/contests/house-district-47/", title: "Tennessee House of Representatives, 47th District voter guide (Tennessee Lookout)", accessed: 2026-10-16 }
+  rb_home: &rb_home { url: "https://www.rushforstatehouse.com/", title: "Rush Bricken for State House (Bricken campaign)", accessed: 2026-10-16 }
+  rb_about: &rb_about { url: "https://www.rushforstatehouse.com/about/", title: "About (Bricken campaign)", accessed: 2026-10-16 }
+  rb_values: &rb_values { url: "https://www.rushforstatehouse.com/values/", title: "Values (Bricken campaign)", accessed: 2026-10-16 }
+  ms_home: &ms_home { url: "https://mikefortn47.com/", title: "Mike Stein for TN 47 (Stein campaign)", accessed: 2026-10-16 }
+  ms_meet: &ms_meet { url: "https://01599f02-bf49-421b-9afe-a0ff0633b14c.sitesab.com/meet-candidate/", title: "Meet Candidate (Stein campaign)", accessed: 2026-10-16 }
+  ms_issues: &ms_issues { url: "https://01599f02-bf49-421b-9afe-a0ff0633b14c.sitesab.com/issues/", title: "Issues (Stein campaign)", accessed: 2026-10-16 }
+  ms_bills: &ms_bills { url: "https://01599f02-bf49-421b-9afe-a0ff0633b14c.sitesab.com/proposed-legislation/", title: "Proposed Legislation (Stein campaign)", accessed: 2026-10-16 }
+  gch_stein: &gch_stein { url: "https://www.grundycountyherald.com/news/local-news/2026/10/13/mike-stein-democratic-nominee-for-47th-district-house/", title: "Mike Stein, nominee for 47th District House (Grundy County Herald)", accessed: 2026-10-16 }
+
 id: tn-house-047
 office: "Tennessee House, District 47"
 level: state_house
 district: 47
-research_status: pending
+research_status: complete
 candidate_list_source: "https://sos-prod.tnsosgovfiles.com/s3fs-public/document/TNHouse_Nov2026.pdf"
+
 candidates:
   - name: "Rush Bricken"
     ballot_party: Republican
     city: "Tullahoma"
-    why_running: { text: null, sources: [] }
-    platform: []
-    arguments: []
+    incumbent: true
+    website: "https://www.rushforstatehouse.com"
+    bio_facts:
+      - { text: "State representative for District 47 since November 2018; House member of the 111th through 114th General Assemblies.", sources: [*bp_bricken, *cga_h47] }
+      - { text: "Vice chair of the House Commerce Committee; also serves on the Fiscal Review and State & Local Government committees and the Business & Utilities and Elections & Campaign Finance subcommittees.", sources: [*cga_h47] }
+      - { text: "Coffee County commissioner for 22 years, including eight years as chairman of the county Budget and Finance Committee.", sources: [*cga_h47, *lookout47] }
+      - { text: "Chief executive officer of Coffee County Bank in Manchester since 2010; certified public accountant and former partner in a Tullahoma accounting firm.", sources: [*rb_about, *cga_h47] }
+      - { text: "B.S. in accounting from Auburn University; MBA from Vanderbilt University's Owen School of Management.", sources: [*rb_about, *cga_h47] }
+      - { text: "Past chairman of the Coffee County Republican Party.", sources: [*cga_h47] }
+      - { text: "Sponsored a 2026 local act, subject to local approval, setting aside 3.8 percent of Tullahoma's annual operating budget, and no less than $1.5 million, for street and road maintenance.", sources: [*hb2663] }
+    why_running:
+      text: >-
+        He says he has devoted his life to improving the community through his work, volunteering and public
+        service, and wants to keep representing the district's values and make District 47 the best it can be.
+      sources: [*rb_home, *rb_values]
+    platform:
+      - category: economy
+        text: "Back a business climate friendly to small businesses and high-paying local jobs."
+        sources: [*rb_values]
+      - category: taxes
+        text: "Keep taxes low and government small."
+        sources: [*rb_values]
+      - category: education
+        text: "Advocate for strong local schools and career training."
+        sources: [*rb_values]
+      - category: health_care
+        text: "Support free-market health care solutions that increase competition and lower costs."
+        sources: [*rb_values]
+      - category: infrastructure
+        text: "Seek more state funding for local roads and bridges."
+        sources: [*rb_values]
+      - category: environment
+        text: "Protect the area's parks, trails and recreation areas."
+        sources: [*rb_values]
+      - category: guns
+        text: "Support Second Amendment rights."
+        sources: [*rb_values]
+      - category: abortion
+        text: "Pledges to vote against abortion."
+        sources: [*rb_values]
+    arguments:
+      - stance: for
+        text: >-
+          Brings decades of financial experience as an accountant and bank chief executive, plus years chairing
+          the county budget committee, and pledges to keep taxes low.
+        sources: [*rb_about, *rb_values]
+
   - name: "Mike Stein"
     ballot_party: Democratic
     city: "Manchester"
-    why_running: { text: null, sources: [] }
-    platform: []
-    arguments: []
-last_verified: 2026-10-13
+    incumbent: false
+    website: "https://mikefortn47.com"
+    bio_facts:
+      - { text: "Teaches senior English and English as a second language at Coffee County Central High School, where he has taught for about 20 years.", sources: [*gch_stein, *ms_meet, *lookout47] }
+      - { text: "Married for more than two decades, with two daughters.", sources: [*ms_meet, *gch_stein] }
+      - { text: "Kidney cancer survivor.", sources: [*gch_stein, *ms_meet] }
+      - { text: "First campaign for public office.", sources: [*lookout47] }
+    why_running:
+      text: >-
+        He says too many families in Coffee and Grundy counties work hard and still struggle to keep up, and
+        that state leaders have failed to address their problems. He wants to focus on lowering everyday costs,
+        strengthening public schools and improving access to health care in rural Tennessee, and to give the
+        district a strong voice in Nashville.
+      sources: [*ms_home, *ms_meet, *gch_stein]
+    platform:
+      - category: economy
+        text: "Recruit businesses with good-paying jobs, support local employers, invest in workforce and trade programs, and create a state minimum wage."
+        sources: [*ms_issues]
+      - category: taxes
+        text: "Eliminate the state sales tax on groceries and pause the gas tax."
+        sources: [*gch_stein]
+      - category: cost_of_living
+        text: "Lower child care costs with grants paid from the state's unspent federal family-assistance funds."
+        sources: [*gch_stein]
+      - category: education
+        text: "Create a statewide special-education training certificate for classroom aides with a state-funded $3-an-hour raise, paid for by shifting money from the school voucher program's administration."
+        sources: [*ms_bills, *gch_stein]
+      - category: health_care
+        text: "Close the health coverage gap, raise TennCare income limits, let ambulance crews give antibiotics, and expand mental health services in schools and rural areas."
+        sources: [*ms_issues, *gch_stein]
+      - category: public_safety
+        text: "Have local police or the TBI, not campus police, lead investigations of rapes reported at colleges, send prosecutors the full interview record, and require yearly campus reporting."
+        sources: [*ms_bills]
+      - category: infrastructure
+        text: "Advocate for investment in the district's roads and infrastructure."
+        sources: [*ms_issues]
+    arguments:
+      - stance: for
+        text: >-
+          A public school teacher of 20 years and a cancer survivor, he says his firsthand experience with
+          classrooms and the health care system drives his focus on schools, rural care and family costs.
+        sources: [*ms_meet, *gch_stein]
+
+last_verified: 2026-10-16
