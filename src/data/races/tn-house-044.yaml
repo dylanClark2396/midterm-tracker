@@ -1,23 +1,118 @@
-# Seeded from the Secretary of State's certified candidate list by
-# scripts/seed-from-certified-list.py. research_status: pending —
-# platforms and arguments not yet compiled.
+# Tennessee House, District 44 (northern Sumner County, including Portland, Westmoreland and parts of Gallatin) —
+# Rep. William Lamberth, first elected in 2012 and House Majority Leader, faces Latoya Holcomb.
+# Candidate order follows the Secretary of State's certified candidate list.
+_sources:
+  cga_h44: &cga_h44 { url: "https://wapp.capitol.tn.gov/apps/legislatorinfo/member.aspx?district=H44", title: "Representative William Lamberth (Tennessee General Assembly)", accessed: 2026-10-16 }
+  bp_lamberth: &bp_lamberth { url: "https://ballotpedia.org/William_Lamberth", title: "William Lamberth (Ballotpedia)", accessed: 2026-10-16 }
+  lookout44: &lookout44 { url: "https://tennesseelookout.com/voter-guides/contests/house-district-44/", title: "Tennessee House of Representatives, 44th District voter guide (Tennessee Lookout)", accessed: 2026-10-16 }
+  wl_home: &wl_home { url: "https://votelamberth.com/", title: "William Lamberth for State Representative District 44 (Lamberth campaign)", accessed: 2026-10-16 }
+  hb0793: &hb0793 { url: "https://wapp.capitol.tn.gov/apps/BillInfo/Default.aspx?BillNumber=HB0793&GA=114", title: "HB0793 bill information (Tennessee General Assembly)", accessed: 2026-10-16 }
+  lookout_plyler: &lookout_plyler { url: "https://tennesseelookout.com/2025/02/06/tennessee-gop-bills-target-public-school-education-for-immigrant-children-without-legal-status/", title: "Tennessee GOP bills target public school education for immigrant children without legal status (Tennessee Lookout)", accessed: 2026-10-16 }
+  chalkbeat_hb836: &chalkbeat_hb836 { url: "https://www.chalkbeat.org/tennessee/2026/03/16/undocumented-immigrant-students-tracking-bill-hb-836/", title: "Tennessee House passes bill to track undocumented students in public schools (Chalkbeat)", accessed: 2026-10-16 }
+  lh_home: &lh_home { url: "https://electlatoyaholcomb.com/", title: "Elect Latoya Holcomb | State Representative – District 44 (Holcomb campaign)", accessed: 2026-10-16 }
+
 id: tn-house-044
 office: "Tennessee House, District 44"
 level: state_house
 district: 44
-research_status: pending
+research_status: complete
 candidate_list_source: "https://sos-prod.tnsosgovfiles.com/s3fs-public/document/TNHouse_Nov2026.pdf"
+
 candidates:
   - name: "William Lamberth"
     ballot_party: Republican
     city: "Portland"
-    why_running: { text: null, sources: [] }
-    platform: []
-    arguments: []
+    incumbent: true
+    website: "https://votelamberth.com/"
+    bio_facts:
+      - { text: "State representative for District 44 since his 2012 election; House member of the 108th through 114th General Assemblies.", sources: [*cga_h44, *lookout44, *bp_lamberth] }
+      - { text: "House Majority Leader since 2019; chairs the House Select Committee on Rules and serves on the Finance, Ways and Means, Government Operations, and Judiciary committees.", sources: [*cga_h44, *lookout44] }
+      - { text: "Attorney in private practice and former assistant district attorney; law degree (2004) from the College of William and Mary and bachelor's degree from the University of Tennessee, Knoxville; graduate of Portland High School.", sources: [*wl_home, *cga_h44, *bp_lamberth] }
+      - { text: "Fifth-generation Sumner County resident who grew up on a farm.", sources: [*wl_home] }
+      - { text: "Lead House sponsor of HB0793, which as introduced in 2025 would have let school districts and public charter schools refuse to enroll students unlawfully present in the United States. In March 2026 the House passed the bill (as its Senate companion, SB0836), amended to require schools to verify students' citizenship or immigration status and report the counts, 70–25.", sources: [*hb0793, *chalkbeat_hb836] }
+    why_running:
+      text: >-
+        He says he first ran in 2012 because he believes in low taxes, small government and traditional family
+        values, and that he holds to those values as he serves. He asks for continued support to work toward the
+        success of District 44 for future generations.
+      sources: [*wl_home]
+    platform:
+      - category: economy
+        text: "Eliminate regulations and keep creating an environment where businesses grow and thrive; calls small businesses the backbone of the economy."
+        sources: [*wl_home]
+      - category: taxes
+        text: "Cut taxes so the money people earn stays in their own pockets."
+        sources: [*wl_home]
+      - category: public_safety
+        text: "Support law enforcement and stricter penalties for the most serious crimes, while backing broad use of rehabilitation programs for people who sincerely seek to reform."
+        sources: [*wl_home]
+      - category: immigration
+        text: "Says people living in the country without legal permission drain taxpayer resources, with schools the first to feel it, and that the state should know how many such children are enrolled."
+        sources: [*lookout_plyler, *chalkbeat_hb836]
+      - category: guns
+        text: "Protect the Second Amendment right to bear arms."
+        sources: [*wl_home]
+      - category: abortion
+        text: "Be a steadfast defender of the unborn and protect the right to life."
+        sources: [*wl_home]
+      - category: government
+        text: "Keep government intervention in people's daily lives as small as possible."
+        sources: [*wl_home]
+    arguments:
+      - stance: for
+        text: >-
+          A former prosecutor, he says he has pushed for tougher penalties for the most heinous crimes while
+          fully supporting rehabilitation for people who want to rejoin society in a positive way.
+        sources: [*wl_home]
+      - stance: for
+        text: >-
+          He says his student immigration-status bill only asks schools for data they already gather, such as
+          birth certificates, residency records and medical records, and would not add a logistical burden.
+        sources: [*chalkbeat_hb836]
+      - stance: against
+        text: >-
+          Critics said his 2025 bill letting schools refuse to enroll children without legal immigration status
+          would punish kids for circumstances beyond their control, and an immigration-law advocate said letting
+          districts exclude such children clearly runs afoul of a 1982 Supreme Court ruling.
+        sources: [*lookout_plyler]
+      - stance: against
+        text: >-
+          Opponents argued his 2026 bill to verify and report students' immigration status is not the simple
+          data request he describes, and educators testified against it over logistical concerns and disruption
+          to local communities.
+        sources: [*chalkbeat_hb836]
+      - stance: against
+        text: >-
+          He delayed his school enrollment bill in 2025 amid pushback and concerns that it could threaten more
+          than $1 billion in federal education funding.
+        sources: [*chalkbeat_hb836]
+
   - name: "Latoya Holcomb"
     ballot_party: Democratic
     city: "Portland"
-    why_running: { text: null, sources: [] }
-    platform: []
-    arguments: []
-last_verified: 2026-10-13
+    incumbent: false
+    website: "https://electlatoyaholcomb.com/"
+    bio_facts: []
+    why_running:
+      text: >-
+        She says people in District 44 work hard every day yet find the basics harder to afford than a few years
+        ago, and she is running to change that with practical steps to restore balance for working families.
+      sources: [*lh_home]
+    platform:
+      - category: economy
+        text: "Make sure wages keep pace with the real cost of living."
+        sources: [*lh_home]
+      - category: taxes
+        text: "Eliminate the sales tax on essential grocery items."
+        sources: [*lh_home, *lookout44]
+      - category: cost_of_living
+        text: "Encourage construction of more homes, support first-time buyers, and create incentives so people can afford to live in the community where they work."
+        sources: [*lh_home]
+    arguments:
+      - stance: for
+        text: >-
+          She says hard work should be enough to cover groceries, rent and a decent life, and offers a plan built
+          on grocery tax relief, more housing and wages that keep up with prices.
+        sources: [*lh_home]
+
+last_verified: 2026-10-16
