@@ -2,18 +2,18 @@
 # in office since 2024, faces Paige Quirin.
 # Candidate order follows the Secretary of State's certified candidate list.
 _sources:
-  cga_h27: &cga_h27 { url: "https://wapp.capitol.tn.gov/apps/legislatorinfo/member.aspx?district=H27", title: "Representative Michele Reneau (Tennessee General Assembly)", accessed: 2026-10-16 }
-  bp_reneau: &bp_reneau { url: "https://ballotpedia.org/Michele_Reneau", title: "Michele Reneau (Ballotpedia)", accessed: 2026-10-16 }
-  lookout27: &lookout27 { url: "https://tennesseelookout.com/voter-guides/contests/house-district-27/", title: "Tennessee House of Representatives, 27th District voter guide (Tennessee Lookout)", accessed: 2026-10-16 }
-  whip: &whip { url: "https://tnhousegop.org/member-newsroom/2025/04/state-rep-michele-reneau-appointed-deputy-whip/", title: "State Rep. Michele Reneau appointed Deputy Whip (Tennessee House Republican Caucus)", accessed: 2026-10-16 }
-  tfp_primary: &tfp_primary { url: "https://www.timesfreepress.com/news/2026/aug/06/reneau-beats-primary-challenger-for-reelection-to/", title: "Reneau beats primary challenger for reelection to state House (Chattanooga Times Free Press)", accessed: 2026-10-16 }
-  l3_forum: &l3_forum { url: "https://www.local3news.com/local-news/decision-2026-state-rep-reneau-primary-challenger-tony-hullender-share-campaign-messages/article_d718ec04-17e2-4551-8376-93a79cdbcc07.html", title: "DECISION 2026: State Rep. Reneau & primary challenger Tony Hullender share campaign messages (Local 3 News)", accessed: 2026-10-16 }
-  wdef24: &wdef24 { url: "https://www.wdef.com/district-27-race-heating-up/", title: "District 27 race heating up (WDEF News 12)", accessed: 2026-10-16 }
-  letter: &letter { url: "https://new.chattanoogan.com/2026/7/21/521197/Reneau-Deserves-A-2nd-Term.aspx", title: "Reneau Deserves A 2nd Term (Chattanoogan.com)", accessed: 2026-10-16 }
-  mr_oped: &mr_oped { url: "https://new.chattanoogan.com/2026/7/8/520720/Michele-Reneau-Why-Tennessee-Families.aspx", title: "Michele Reneau: Why Tennessee Families Have Remained At The Center Of My Work (Chattanoogan.com)", accessed: 2026-10-16 }
-  mr_home: &mr_home { url: "https://www.electmichele.com/", title: "Elect Michele Reneau (Reneau campaign)", accessed: 2026-10-16 }
-  mr_meet: &mr_meet { url: "https://www.electmichele.com/meet", title: "Meet Michele (Reneau campaign)", accessed: 2026-10-16 }
-  mr_issues: &mr_issues { url: "https://www.electmichele.com/issues", title: "Issues (Reneau campaign)", accessed: 2026-10-16 }
+  cga_h27: &cga_h27 { url: "https://wapp.capitol.tn.gov/apps/legislatorinfo/member.aspx?district=H27", title: "Representative Michele Reneau (Tennessee General Assembly)", accessed: 2026-10-15 }
+  bp_reneau: &bp_reneau { url: "https://ballotpedia.org/Michele_Reneau", title: "Michele Reneau (Ballotpedia)", accessed: 2026-10-15 }
+  lookout27: &lookout27 { url: "https://tennesseelookout.com/voter-guides/contests/house-district-27/", title: "Tennessee House of Representatives, 27th District voter guide (Tennessee Lookout)", accessed: 2026-10-15 }
+  whip: &whip { url: "https://tnhousegop.org/member-newsroom/2025/04/state-rep-michele-reneau-appointed-deputy-whip/", title: "State Rep. Michele Reneau appointed Deputy Whip (Tennessee House Republican Caucus)", accessed: 2026-10-15 }
+  tfp_primary: &tfp_primary { url: "https://www.timesfreepress.com/news/2026/aug/06/reneau-beats-primary-challenger-for-reelection-to/", title: "Reneau beats primary challenger for reelection to state House (Chattanooga Times Free Press)", accessed: 2026-10-15 }
+  l3_forum: &l3_forum { url: "https://www.local3news.com/local-news/decision-2026-state-rep-reneau-primary-challenger-tony-hullender-share-campaign-messages/article_d718ec04-17e2-4551-8376-93a79cdbcc07.html", title: "DECISION 2026: State Rep. Reneau & primary challenger Tony Hullender share campaign messages (Local 3 News)", accessed: 2026-10-15 }
+  wdef24: &wdef24 { url: "https://www.wdef.com/district-27-race-heating-up/", title: "District 27 race heating up (WDEF News 12)", accessed: 2026-10-15 }
+  letter: &letter { url: "https://new.chattanoogan.com/2026/7/21/521197/Reneau-Deserves-A-2nd-Term.aspx", title: "Reneau Deserves A 2nd Term (Chattanoogan.com)", accessed: 2026-10-15 }
+  mr_oped: &mr_oped { url: "https://new.chattanoogan.com/2026/7/8/520720/Michele-Reneau-Why-Tennessee-Families.aspx", title: "Michele Reneau: Why Tennessee Families Have Remained At The Center Of My Work (Chattanoogan.com)", accessed: 2026-10-15 }
+  mr_home: &mr_home { url: "https://www.electmichele.com/", title: "Elect Michele Reneau (Reneau campaign)", accessed: 2026-10-15 }
+  mr_meet: &mr_meet { url: "https://www.electmichele.com/meet", title: "Meet Michele (Reneau campaign)", accessed: 2026-10-15 }
+  mr_issues: &mr_issues { url: "https://www.electmichele.com/issues", title: "Issues (Reneau campaign)", accessed: 2026-10-15 }
 
 id: tn-house-027
 office: "Tennessee House, District 27"
@@ -52,7 +52,7 @@ candidates:
         sources: [*mr_issues, *mr_oped]
       - category: health_care
         text: "Supported the law barring petroleum-based artificial dyes from public and charter school meals, citing concerns about childhood nutrition and obesity."
-        sources: [*mr_oped, *l3_forum]
+        sources: [*mr_oped]
       - category: immigration
         text: "Limit state resources to legal residents, end benefits for people in the country illegally, criminalize mass transportation of people in the country illegally, and require E-Verify for employment."
         sources: [*mr_issues]
@@ -78,8 +78,8 @@ candidates:
         sources: [*letter]
       - stance: against
         text: >-
-          Her 2026 primary challenger faulted her for voting "present" on the special-session redistricting measure,
-          saying he would have voted yes or no.
+          Her 2026 primary challenger faulted her for voting "present" on the 2026 redistricting measure, saying
+          he would have voted yes or no.
         sources: [*l3_forum]
       - stance: against
         text: >-
@@ -98,4 +98,4 @@ candidates:
     platform: []
     arguments: []
 
-last_verified: 2026-10-16
+last_verified: 2026-10-15
