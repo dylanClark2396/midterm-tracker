@@ -7,7 +7,6 @@ _sources:
   rw_about: &rw_about { url: "https://voteryanwilliams.com/about/", title: "About (Williams campaign)", accessed: 2026-10-16 }
   rw_issues: &rw_issues { url: "https://voteryanwilliams.com/issues/", title: "Issues (Williams campaign)", accessed: 2026-10-16 }
   lookout_vouchers: &lookout_vouchers { url: "https://tennesseelookout.com/2026/03/25/tennessee-republicans-back-smaller-increase-in-private-school-vouchers/", title: "Tennessee Republicans back smaller increase in private-school vouchers (Tennessee Lookout)", accessed: 2026-10-16 }
-  lookout_fedex: &lookout_fedex { url: "https://tennesseelookout.com/2026/04/13/fedex-tax-break-faces-tough-path-back-to-house-floor/", title: "FedEx tax break faces tough path back to House floor (Tennessee Lookout)", accessed: 2026-10-16 }
   ts_actblue: &ts_actblue { url: "https://secure.actblue.com/donate/trenton-strode-4", title: "Trenton Strode for TN State Representative - District 42 (Strode campaign, ActBlue)", accessed: 2026-10-16 }
 
 id: tn-house-042
@@ -33,19 +32,19 @@ candidates:
     why_running: { text: null, sources: [] }
     platform:
       - category: economy
-        text: "Keep Tennessee pro-worker and pro-growth, building on tort reform and the workers' compensation overhaul."
+        text: "Keep Tennessee pro-worker and pro-growth; points to tort reform and the workers' compensation overhaul as past steps."
         sources: [*rw_issues]
       - category: taxes
-        text: "Keep the budget balanced, debt and taxes low and the rainy-day fund strong; said he could not support a proposed $20 million sales-tax break for FedEx, which he called corporate welfare."
-        sources: [*rw_issues, *lookout_fedex]
+        text: "Keep the budget balanced, building on low state debt, low overall taxes and a record rainy-day fund."
+        sources: [*rw_issues]
       - category: education
-        text: "Build on higher standards, teacher tenure changes and charter school growth; supports parents' right to choose a school while keeping voucher costs fiscally stable."
+        text: "Points to teacher tenure changes, higher standards and more charter schools as education gains; says he supports parents' right to choose but is concerned about the fiscal stability of voucher expansion."
         sources: [*rw_issues, *lookout_vouchers]
       - category: public_safety
         text: "Put citizens' safety first, citing tougher DUI laws, accident prevention and lower domestic violence offenses."
         sources: [*rw_issues]
       - category: health_care
-        text: "Continue investment in services for people with intellectual and developmental disabilities, mental health and substance abuse."
+        text: "Credits increased state investment in services for intellectual and developmental disabilities, mental health and substance abuse with helping care for the state's most vulnerable."
         sources: [*rw_issues]
     arguments:
       - stance: for
@@ -53,11 +52,6 @@ candidates:
           A longtime lawmaker who now chairs a House finance panel, he points to balanced budgets, tax cuts and a
           record rainy-day fund and pledges to build on that record.
         sources: [*rw_issues, *rw_about, *cga_h42]
-      - stance: against
-        text: >-
-          His opponent says he keeps backing a Nashville agenda that leaves rural communities like Putnam County
-          behind while families face rising housing costs and stagnant wages.
-        sources: [*ts_actblue]
 
   - name: "Trenton Tyler Strode"
     ballot_party: Democratic
@@ -84,10 +78,10 @@ candidates:
         text: "Expand access to health care."
         sources: [*ts_actblue]
       - category: infrastructure
-        text: "Better infrastructure for Putnam County and the Upper Cumberland."
+        text: "Better infrastructure."
         sources: [*ts_actblue]
       - category: government
-        text: "Institutional reform and more accountability in Nashville."
+        text: "Institutional reform, with a representative who fights harder for working people than for political insiders."
         sources: [*ts_actblue]
     arguments:
       - stance: for
