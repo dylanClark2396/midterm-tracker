@@ -95,9 +95,6 @@ candidates:
       - category: government
         text: "Create legislative term limits and get big money out of politics; his campaign takes no PAC money."
         sources: [*jb_platform, *jb_home]
-      - category: abortion
-        text: "Says decisions about a person's body should be left to the person and their doctor."
-        sources: [*jb_platform]
       - category: immigration
         text: "Keep local law enforcement focused on local public safety rather than expanding cooperation with federal immigration agencies."
         sources: [*jb_platform]
