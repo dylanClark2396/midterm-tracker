@@ -37,12 +37,12 @@ candidates:
       - { text: "Prime House sponsor of a 2025 law raising the Tennessee Housing Development Agency's bond limit from $4 billion to $5 billion.", sources: [*hb0331] }
     why_running:
       text: >-
-        His campaign says he is seeking re-election to lead the state toward fiscal responsibility by keeping taxes
-        low, supporting schools and making neighborhoods safer.
+        His re-election campaign says it is about leading the state to fiscal responsibility: keeping taxes low,
+        supporting schools and making neighborhoods safer.
       sources: [*cb_home]
     platform:
       - category: taxes
-        text: "Keep taxes low and eliminate wasteful spending; fund education, health care and transportation without tax increases while building the rainy-day fund."
+        text: "Keep taxes low and eliminate wasteful spending."
         sources: [*cb_home]
       - category: education
         text: "Support teachers, maintain high academic standards and promote school choice."
@@ -51,7 +51,7 @@ candidates:
         text: "Increase access to health care, lower health care prices and improve health care quality."
         sources: [*cb_home]
       - category: public_safety
-        text: "Make neighborhoods safer."
+        text: "Making our neighborhoods safer."
         sources: [*cb_home]
       - category: government
         text: "Reduce excessive government regulation."
@@ -60,7 +60,7 @@ candidates:
       - stance: for
         text: >-
           As a member of the House finance committee, he helped draft a balanced state budget that raised funding
-          for education, health care and roads with no tax increase and brought the rainy-day fund to a record.
+          for education, health care and transportation with no tax increase and brought the rainy-day fund to a record.
         sources: [*cb_home]
       - stance: for
         text: >-
