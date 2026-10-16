@@ -44,7 +44,7 @@ candidates:
       - { text: "B.S. in psychology from the University of Oklahoma, M.D. from the Oklahoma College of Medicine, and anesthesiology residency at the University of Tennessee, Knoxville.", sources: [*cga_h48, *bt_about] }
       - { text: "Citizen of the Choctaw Nation of Oklahoma.", sources: [*bt_about, *ict] }
       - { text: "House sponsor of the 2025 Medical Ethics Defense Act (Public Chapter 266), which says health care providers cannot be required to take part in or pay for a procedure, treatment or service that violates their conscience; it does not apply to emergency care.", sources: [*hb1044, *fox17a] }
-      - { text: "House sponsor of a 2026 law (Public Chapter 682) that writes procedures from the federal Indian Child Welfare Act into state law for child custody cases involving an Indian child.", sources: [*hb1904, *ict] }
+      - { text: "House sponsor of HB1904 (Public Chapter 682, signed April 24, 2026), which requires state courts to apply certain procedures from the federal Indian Child Welfare Act in child custody cases involving an Indian child.", sources: [*hb1904] }
     why_running:
       text: >-
         He says he wants to keep representing the district's values and interests with integrity, and points to
@@ -52,7 +52,7 @@ candidates:
       sources: [*ict, *bt_home]
     platform:
       - category: economy
-        text: "Cut unnecessary regulations to keep unemployment low; backs measures like the Right to Earn a Living Act and the Fresh Start Act."
+        text: "Reduce unnecessary regulations for a freer market and low unemployment; backs measures like the Right to Earn a Living Act and the Fresh Start Act."
         sources: [*bt_issues]
       - category: taxes
         text: "Keep taxes and the cost of living low; says he has consistently fought for the taxpayer."
@@ -73,7 +73,7 @@ candidates:
         text: "Protect the right to keep and bear arms from being infringed."
         sources: [*bt_issues]
       - category: abortion
-        text: "Holds that life begins at conception and pledges to keep being an active voice for the unborn."
+        text: "Holds that life begins at conception and says he will continue to be a proactive voice for the unborn."
         sources: [*bt_issues]
     arguments:
       - stance: for
@@ -99,14 +99,10 @@ candidates:
         sources: [*wpln]
       - stance: against
         text: >-
-          Opponents of his conscience law, including a physician who testified, say it conflicts with the duty to
-          do no harm, lets providers turn patients away, and could erode patients' trust in their doctors.
+          Opponents of the conscience law he sponsored say it conflicts with the medical duty to do no harm, lets
+          providers turn patients away, could erode patients' trust in their doctors, and could lead to lawsuits
+          that leave judges making medical decisions.
         sources: [*fox17a, *fox17b]
-      - stance: against
-        text: >-
-          His opponent says his stated defense of unborn life is not matched by policies that fund the schools,
-          health facilities and social services that help women and children.
-        sources: [*mf_repro]
 
   - name: "Matt Ferry"
     ballot_party: Democratic
@@ -151,8 +147,8 @@ candidates:
     arguments:
       - stance: for
         text: >-
-          A Murfreesboro small business owner, he promises to focus state government on policies that help ordinary
-          residents with housing, health care and school costs.
+          A Murfreesboro small business owner, he promises to work on policies that benefit ordinary residents,
+          with priorities including full public school funding, rural hospitals and affordable housing.
         sources: [*mf_about, *mf_home]
 
 last_verified: 2026-10-16
