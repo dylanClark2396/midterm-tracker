@@ -1,23 +1,109 @@
-# Seeded from the Secretary of State's certified candidate list by
-# scripts/seed-from-certified-list.py. research_status: pending —
-# platforms and arguments not yet compiled.
+# Tennessee House, District 43 (Warren and White counties) — Rep. Paul Sherrell, in office since 2016,
+# faces Samantha Petit.
+# Candidate order follows the Secretary of State's certified candidate list.
+_sources:
+  cga_h43: &cga_h43 { url: "https://wapp.capitol.tn.gov/apps/legislatorinfo/member.aspx?district=H43", title: "Representative Paul Sherrell (Tennessee General Assembly)", accessed: 2026-10-16 }
+  bp_sherrell: &bp_sherrell { url: "https://ballotpedia.org/Paul_Sherrell", title: "Paul Sherrell (Ballotpedia)", accessed: 2026-10-16 }
+  bp_petit: &bp_petit { url: "https://ballotpedia.org/Samantha_Petit", title: "Samantha Petit (Ballotpedia)", accessed: 2026-10-16 }
+  lookout43: &lookout43 { url: "https://tennesseelookout.com/voter-guides/contests/house-district-43/", title: "Tennessee House of Representatives, 43rd District voter guide (Tennessee Lookout)", accessed: 2026-10-16 }
+  ps_home: &ps_home { url: "https://www.paulsherrellfortn.com/", title: "Paul Sherrell, State Representative 43rd District (Sherrell campaign)", accessed: 2026-10-16 }
+  msj_profile: &msj_profile { url: "https://www.mainstreetjournal.llc/state-representative-candidate-paul-sherrell/", title: "State Representative Candidate: Paul Sherrell (Main Street Journal)", accessed: 2026-10-16 }
+  msj_forum: &msj_forum { url: "https://www.mainstreetjournal.llc/if-we-had-a-good-hanging/", title: "'If we had a good hanging...' (Main Street Journal)", accessed: 2026-10-16 }
+  nc5_2023: &nc5_2023 { url: "https://www.newschannel5.com/news/a-state-lawmaker-suggested-hanging-by-a-tree-to-execute-death-row-inmates-now-hes-apologizing", title: "TN lawmaker apologizes after suggesting \"hanging by a tree\" for executions (NewsChannel 5)", accessed: 2026-10-16 }
+  ucnow_2024: &ucnow_2024 { url: "https://theucnow.com/2024/01/03/sherrell-expects-long-debate-on-idea-of-school-vouchers-in-nashville/", title: "Sherrell Expects Long Debate On Idea Of School Vouchers In Nashville (The UC Now)", accessed: 2026-10-16 }
+  ucnow_2025: &ucnow_2025 { url: "https://theucnow.com/2025/02/07/sherrell-voucher-money-will-come-from-somewhere/", title: "Sherrell: Voucher Money Will Come From Somewhere (The UC Now)", accessed: 2026-10-16 }
+  hb1706: &hb1706 { url: "https://wapp.capitol.tn.gov/apps/BillInfo/Default.aspx?BillNumber=HB1706&GA=114", title: "HB1706 bill information (Tennessee General Assembly)", accessed: 2026-10-16 }
+  hb1376: &hb1376 { url: "https://wapp.capitol.tn.gov/apps/BillInfo/Default.aspx?BillNumber=HB1376&GA=114", title: "HB1376 bill information (Tennessee General Assembly)", accessed: 2026-10-16 }
+
 id: tn-house-043
 office: "Tennessee House, District 43"
 level: state_house
 district: 43
-research_status: pending
+research_status: complete
 candidate_list_source: "https://sos-prod.tnsosgovfiles.com/s3fs-public/document/TNHouse_Nov2026.pdf"
+
 candidates:
   - name: "Paul Sherrell"
     ballot_party: Republican
     city: "Sparta"
-    why_running: { text: null, sources: [] }
-    platform: []
-    arguments: []
+    incumbent: true
+    website: "https://www.paulsherrellfortn.com"
+    bio_facts:
+      - { text: "State representative for District 43 (Warren and White counties) since November 2016; House member of the 110th through 114th General Assemblies.", sources: [*cga_h43, *bp_sherrell] }
+      - { text: "Majority floor leader of the House since 2018.", sources: [*cga_h43, *msj_profile] }
+      - { text: "Serves on the Health, Transportation, Private Acts and Government Operations committees, the Population Health Subcommittee, and the Joint Commerce, Labor, Transportation and Agriculture Committee.", sources: [*cga_h43, *msj_profile] }
+      - { text: "Grew up on a farm in White County and graduated from White County High School; attended the Tennessee Law Enforcement Academy and the TREES real estate school.", sources: [*msj_profile, *cga_h43] }
+      - { text: "Has worked as a construction worker, heavy equipment operator, real estate agent and law enforcement officer, and owned an auto parts store.", sources: [*ps_home, *msj_profile] }
+      - { text: "One of the House co-prime sponsors of a 2026 law (Public Chapter 1070) making it an offense for a person unlawfully present in the U.S. to drive a commercial vehicle in Tennessee and requiring arresting agencies to notify federal immigration authorities.", sources: [*hb1706, *lookout43] }
+      - { text: "Won the August 2026 primary with 64.2% of the vote.", sources: [*bp_sherrell] }
+    why_running:
+      text: >-
+        He says he is seeking re-election to keep serving the district and the state, and that he aims to stay
+        readily accessible to constituents who need help.
+      sources: [*msj_profile]
+    platform:
+      - category: taxes
+        text: "Study a proposal to end the state sales tax on groceries before adopting it."
+        sources: [*msj_forum]
+      - category: education
+        text: "Fund public schools first; families who choose private school should pay the tuition themselves rather than taxpayers."
+        sources: [*ucnow_2024, *ucnow_2025]
+      - category: public_safety
+        text: "Back law enforcement and capital punishment, including bringing back the firing squad or hanging as execution methods."
+        sources: [*msj_forum]
+      - category: foreign_policy
+        text: "Says the conflict with Iran is driving up fuel prices at home, and that it is better to fight such enemies overseas than at home."
+        sources: [*msj_forum]
+    arguments:
+      - stance: for
+        text: >-
+          Points to a record that includes free emergency license plates for volunteer firefighters and rescue
+          squad members, free lifetime handgun carry permits for qualifying retired officers, and continued
+          benefits for families of park rangers killed in the line of duty.
+        sources: [*ps_home, *msj_profile]
+      - stance: for
+        text: >-
+          Says he voted against school vouchers because 180 of the 200 constituents who told him how to vote
+          asked him to oppose them.
+        sources: [*ucnow_2025]
+      - stance: against
+        text: >-
+          Was criticized in 2023 for suggesting in a committee hearing that executions include hanging by a
+          tree, and apologized for poor judgment; at an October 2026 forum, after his opponent pressed him on it,
+          he said a public hanging by the courthouse could deter crime.
+        sources: [*nc5_2023, *msj_forum]
+      - stance: against
+        text: >-
+          Pressed by his opponent at an October 2026 forum about a 2025 hemp regulation and tax law, he said he
+          did not remember the bill, though records show he co-sponsored it and voted for it.
+        sources: [*msj_forum, *hb1376]
+
   - name: "Samantha Petit"
     ballot_party: Democratic
     city: "Morrison"
-    why_running: { text: null, sources: [] }
-    platform: []
-    arguments: []
-last_verified: 2026-10-13
+    incumbent: false
+    website: null
+    bio_facts:
+      - { text: "Lifelong resident of Warren County.", sources: [*lookout43] }
+      - { text: "Has worked about 20 years at McMinnville Drug Center, handling medical billing, reimbursement and other pharmacy duties; owns a travel agency and, with her husband, a restaurant.", sources: [*msj_forum] }
+      - { text: "Unopposed in the August 2026 primary.", sources: [*bp_petit] }
+    why_running:
+      text: >-
+        She says she grew frustrated with political division, extreme rhetoric on all sides and elected officials'
+        inability to work together on meaningful legislation that helps people.
+      sources: [*msj_forum]
+    platform:
+      - category: taxes
+        text: "Eliminate the state sales tax on groceries."
+        sources: [*msj_forum]
+      - category: cost_of_living
+        text: "Make the cost of living the top priority, so working families don't need two or three jobs to afford a basic standard of living."
+        sources: [*msj_forum]
+    arguments:
+      - stance: for
+        text: >-
+          Presents herself as a health care worker and small business owner rather than a career politician, who
+          would look for common ground with people she disagrees with to pass legislation that helps residents.
+        sources: [*msj_forum]
+
+last_verified: 2026-10-16
