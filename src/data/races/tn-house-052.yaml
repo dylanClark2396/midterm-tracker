@@ -5,7 +5,7 @@ _sources:
   lookout52: &lookout52 { url: "https://tennesseelookout.com/voter-guides/contests/house-district-52/", title: "Tennessee House of Representatives, 52nd District voter guide (Tennessee Lookout)", accessed: 2026-10-16 }
   mv_home: &mv_home { url: "https://www.mvetterforall.com/", title: "Neighbors For M Vetter - Empowering TN District 52 (Vetter campaign)", accessed: 2026-10-16 }
   mv_issues: &mv_issues { url: "https://www.mvetterforall.com/issues/", title: "Issues - Michele's Campaign Story (Vetter campaign)", accessed: 2026-10-16 }
-  mv_lcr: &mv_lcr { url: "https://www.mvetterforall.com/news/474/", title: "Michele Vetter Honored to Receive Endorsement from Log Cabin Republicans of Tennessee (Vetter campaign)", accessed: 2026-10-16 }
+  mv_lcr: &mv_lcr { url: "https://www.mvetterforall.com/news/474/", title: "Michele Vetter endorsement announcement (Vetter campaign)", accessed: 2026-10-16 }
   mv_fop: &mv_fop { url: "https://www.mvetterforall.com/news/michele-vetter-earns-endorsement-from-andrew-jackson-lodge-5-fraternal-order-of-police/", title: "Michele Vetter Earns Endorsement from Andrew Jackson Lodge 5 Fraternal Order of Police (Vetter campaign)", accessed: 2026-10-16 }
   bp_vetter: &bp_vetter { url: "https://ballotpedia.org/Michele_Vetter", title: "Michele Vetter (Ballotpedia)", accessed: 2026-10-16 }
   cga_h52: &cga_h52 { url: "https://wapp.capitol.tn.gov/apps/legislatorinfo/member.aspx?district=H52", title: "Representative Justin Jones (Tennessee General Assembly)", accessed: 2026-10-16 }
@@ -51,7 +51,7 @@ candidates:
       sources: [*mv_lcr]
     platform:
       - category: education
-        text: "Asks the state to conduct a full forensic audit of Metro Nashville Public Schools, including records of terminated teachers, academic fraud and financial management."
+        text: "Calls for the state to conduct a full forensic audit of Metro Nashville Public Schools covering terminated teachers' records, academic fraud and financial mismanagement."
         sources: [*mv_home]
       - category: public_safety
         text: "Give first responders the resources they need, improve coordination between local and state agencies, and invest in crime prevention."
@@ -95,7 +95,7 @@ candidates:
     platform:
       - category: health_care
         text: "Expand health care access, including expanding Medicaid."
-        sources: [*jj_meet, *jj_home, *jj_issues]
+        sources: [*jj_meet, *jj_home]
       - category: education
         text: "Opposes the governor's school voucher program."
         sources: [*jj_meet]
@@ -103,10 +103,10 @@ candidates:
         text: "Police reform and police accountability."
         sources: [*jj_meet, *jj_home]
       - category: immigration
-        text: "Opposes bills that target immigrants and refugees."
-        sources: [*jj_meet, *jj_issues]
+        text: "Opposes bills he describes as attacking immigrants."
+        sources: [*jj_meet]
       - category: environment
-        text: "Put environmental protection ahead of corporate interests and protect places such as the Duck River and old-growth Smoky Mountain forests."
+        text: "Stop corporate interests and environmental destruction from driving policy, pointing to natural assets such as the Duck River and old-growth Smoky Mountain forests."
         sources: [*jj_issues]
       - category: guns
         text: "Pass comprehensive gun reform; opposes easing access to assault weapons and shielding gun manufacturers from liability."
@@ -117,15 +117,18 @@ candidates:
     arguments:
       - stance: for
         text: >-
-          He has organized for years on health care access in Tennessee, including a 278-mile walk in 2015 about
-          rural hospital closures, and promises to keep fighting for stronger gun laws to protect children.
+          He has organized for years on health care access, including campaigns for Medicaid expansion in
+          Tennessee and a 278-mile walk in 2015 about rural hospital closures, and calls for comprehensive gun
+          reform to protect children.
         sources: [*jj_meet, *jj_issues]
       - stance: against
         text: >-
-          The House resolution expelling him in 2023 said he disrupted a floor session for nearly an hour,
-          shouting without recognition, leading chants with the gallery and using a bullhorn, and that this
-          behavior reflected adversely on the integrity and dignity of the House.
-        sources: [*hr0065_text, *hr0065]
+          In April 2023 the House adopted House Resolution 65 by a 72-25 vote, expelling him. The resolution
+          states that on March 30, 2023, he and other members shouted without recognition in the well, led
+          chants with the gallery and used a bullhorn from about 10:50 to 11:42 a.m., and that this disorderly
+          behavior reflected adversely on the integrity and dignity of the House. The Metro Nashville Council
+          reappointed him 36-0 on April 10, 2023, and he won the seat in an August 2023 special election.
+        sources: [*hr0065_text, *hr0065, *bp_jones, *lookout52]
 
   - name: "Martez Coleman"
     ballot_party: Independent
@@ -152,14 +155,14 @@ candidates:
         text: "Eliminate wasteful spending and require more transparency in how tax dollars are spent, with accountability for those who vote to spend them irresponsibly."
         sources: [*mc_platform, *mc_home]
       - category: cost_of_living
-        text: "Expand affordable housing and remove barriers to homeownership while protecting property rights; address high gas and grocery prices."
+        text: "Expand affordable housing and remove barriers to homeownership while protecting property rights; names high gas and grocery prices among the issues he cares most about."
         sources: [*mc_platform, *bp_coleman]
       - category: public_safety
         text: "Make sure police, firefighters and other first responders have the resources and training they need, with accountability and strong community partnerships."
         sources: [*mc_platform]
       - category: government
-        text: "Keep government limited, transparent and accountable; defend individual liberty, religious freedom and constitutional rights; put oversight laws on artificial intelligence in place."
-        sources: [*mc_platform, *bp_coleman]
+        text: "Keep government limited, transparent and accountable; defend individual liberty, religious freedom and constitutional rights."
+        sources: [*mc_platform]
       - category: veterans
         text: "Work with local leaders and groups to support veterans in the district."
         sources: [*mc_platform]
