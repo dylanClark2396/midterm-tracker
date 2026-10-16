@@ -41,7 +41,7 @@ candidates:
       sources: [*jt_home, *jt_about]
     platform:
       - category: economy
-        text: "Offer high school students, by their third year, apprenticeships, mentorships, industry certifications and on-the-job training in trades, farming, manufacturing, energy and technology; protect workers from being replaced by AI without safeguards, retraining or transparency."
+        text: "Give high school students, by their third year, the option of apprenticeships, mentorships, industry certifications and on-the-job training in trades, farming, manufacturing, energy and technology; protect workers from being replaced by AI without safeguards, retraining or transparency."
         sources: [*jt_issues]
       - category: taxes
         text: "Cap property tax increases on owner-occupied primary homes now, and move toward removing property taxes for homeowners 65 and older while replacing the lost revenue without shifting it onto working families."
@@ -50,7 +50,7 @@ candidates:
         text: "Bar electric utilities from raising rates on homes and businesses because of power demand from AI infrastructure and data centers, which should pay for their own energy use and grid upgrades; expand housing supply while protecting affordability."
         sources: [*jt_issues, *jt_faq]
       - category: education
-        text: "Reform the state's voucher program with income guidelines, full transparency on where funds go, financial and academic oversight and real-time enrollment tracking; keep improving public schools and expand classical education models in public and charter schools."
+        text: "Reform the state's voucher program with income guidelines, full transparency on where funds go, financial and academic oversight and real-time enrollment tracking; work to fix public schools and expand classical education models in public and charter schools."
         sources: [*jt_issues]
       - category: infrastructure
         text: "Pursue an energy strategy that uses coal where reliable, solar where efficient, and nuclear power as the long-term backbone, starting nuclear workforce training and investment now."
@@ -77,10 +77,8 @@ candidates:
       - { text: "Ran for mayor of Nashville in 2019.", sources: [*bp_clemmons] }
       - { text: "Sponsored HB0030, enacted in 2026 as Public Chapter 685, letting English learners receive the same language help on state tests that they receive in class.", sources: [*hb0030] }
     why_running:
-      text: >-
-        He says that by listening and working together, he aims to improve quality of life for Tennessee
-        families, build a stronger economy and secure a brighter future for children.
-      sources: [*jrc_home, *jrc_policy]
+      text: null
+      sources: []
     platform:
       - category: economy
         text: "Recruit companies that offer high-paying jobs and good benefits, keep supporting local businesses and entrepreneurs, and ensure equal pay for equal work."
@@ -92,7 +90,7 @@ candidates:
         text: "Invest in public schools and raise teacher pay; oppose vouchers, privatizing public education, the third-grade retention law and over-reliance on standardized testing."
         sources: [*jrc_policy]
       - category: health_care
-        text: "Expand Medicaid using federal funds, broaden mental health and substance abuse services, and legalize medical marijuana while ending prison sentences for simple possession."
+        text: "Expand Medicaid using federal funds, broaden mental health and substance abuse services, and legalize medical marijuana while end excessive punishments and prison sentences for simple possession."
         sources: [*jrc_policy]
       - category: infrastructure
         text: "Build regional and interstate commuter rail and other public transit for congested southeast Nashville and I-24, oppose toll lanes, and invest in aging roads, bridges, wastewater systems and rural broadband."
@@ -104,13 +102,14 @@ candidates:
         text: "Pass laws requiring responsible gun ownership, limiting firearms to people who are not a threat to themselves or others, and addressing gun thefts from cars."
         sources: [*jrc_policy]
       - category: abortion
-        text: "Restore the legal choice to end a pregnancy, including when a woman's life is at risk or in cases of rape or incest, and protect access to contraception and fertility treatment."
+        text: "Keep government out of decisions between a woman and her doctor; opposes state law denying the legal choice to end a pregnancy even when a woman's life is at risk or in cases of rape or incest, and says access to contraception and fertility treatment is in jeopardy."
         sources: [*jrc_policy]
     arguments:
       - stance: for
         text: >-
-          A district representative since 2014 who says he passed a law to help schools recruit qualified
-          administrators and whose mental health legislation renewed the state's focus on mental health parity.
-        sources: [*jrc_policy]
+          Has represented the district since 2014; he says he passed a law in his first term to help schools
+          recruit and hire highly qualified administrators, and that his mental health work led the state to
+          renew its focus on mental health parity.
+        sources: [*jrc_policy, *jrc_about]
 
 last_verified: 2026-10-16
