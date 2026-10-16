@@ -29,7 +29,7 @@ candidates:
     website: null
     bio_facts:
       - { text: "State representative for District 62 since winning a 2009 special election; House member of the 106th through 114th General Assemblies.", sources: [*lookout62, *cga_h62, *bp_marsh] }
-      - { text: "Speaker pro tempore of the House in the 112th General Assembly.", sources: [*cga_h62] }
+      - { text: "Speaker Pro Tempore of the 112th General Assembly.", sources: [*cga_h62] }
       - { text: "Chairs the House Ethics Committee and the Workplace Discrimination and Harassment Subcommittee; also serves on the Calendar & Rules, Commerce, Government Operations and Transportation committees.", sources: [*cga_h62] }
       - { text: "Founded the trucking company Big G Express and sold it in 2009; now its chairman emeritus. B.S. in transportation from the University of Tennessee.", sources: [*lookout62, *cga_h62] }
       - { text: "Sponsored a 2026 law designating nearly all of the Duck and Buffalo rivers and some of their tributaries as Class II pastoral scenic river areas.", sources: [*hb1510, *duck_apr] }
@@ -47,7 +47,8 @@ candidates:
       - stance: against
         text: >-
           A legislative opponent of his scenic-river bill argued its ban on landfills within two miles of the rivers
-          overrides landowners' constitutional property rights, and warned of legal costs to the state.
+          overrides landowners' constitutional property rights, and pointed to a pending landfill lawsuit in warning of
+          costs to the state.
         sources: [*duck_mar, *duck_apr]
 
   - name: "Brieanna L Akers"
@@ -71,7 +72,7 @@ candidates:
         text: "Propose a gradual state minimum wage above $7.25 with a review every two years, paired with temporary tax credits for small businesses."
         sources: [*ba_about, *ba_home, *bp_akers]
       - category: taxes
-        text: "Raise taxes modestly on large corporations to pay for eliminating the state sales tax on groceries."
+        text: "Raise taxes modestly on large corporations to pay for eliminating the grocery tax."
         sources: [*ba_about, *bp_akers]
       - category: education
         text: "End the school voucher program and give public schools more funding and resources, working with teachers and administrators."
@@ -82,11 +83,6 @@ candidates:
       - category: government
         text: "Refuse PAC money and run on support from individual residents."
         sources: [*bp_akers, *ba_about]
-    arguments:
-      - stance: for
-        text: >-
-          She pledges not to take PAC money, saying she is backed by local residents rather than big money and will
-          work for the people of the district.
-        sources: [*bp_akers, *ba_about]
+    arguments: []
 
 last_verified: 2026-10-16
