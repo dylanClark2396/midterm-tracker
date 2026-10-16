@@ -74,9 +74,11 @@ candidates:
         sources: [*bs_home, *bs_announce]
       - stance: against
         text: >-
-          His campaign bills him as a Marine, but reported Marine Corps records show his reserve service ended in
-          2000 at the rank of private for failure to participate, under other than honorable conditions. Primary
-          opponents said he misled voters; he says a medical condition cut his service short.
+          His campaign describes him as a Marine. Military records reported by the press show he enlisted in the
+          Marine Corps Reserve in 1998 and separated in August 2000 as a private, before completing his reserve
+          obligation, for "failure to participate," with his service characterized as "under other than honorable
+          conditions." A primary opponent said he was trying to deceive voters. He says an irregular heartbeat and
+          partial thyroid removal cut his service short, and that he was honorably discharged from active duty.
         sources: [*wex_usmc, *wex_record, *milcom]
       - stance: against
         text: >-
@@ -115,7 +117,7 @@ candidates:
         text: "Improve health care access statewide, including rural maternal care funding and expanded TennCare coverage for women of reproductive age; protect patient data from sharing."
         sources: [*mc_issues, *bp_cook]
       - category: public_safety
-        text: "Legalize and regulate cannabis and use its tax revenue for road repairs; oppose surveillance tools such as license-plate cameras."
+        text: "Legalize and regulate cannabis, with its tax revenue going to infrastructure repairs; oppose mass surveillance tools such as Flock cameras."
         sources: [*mc_issues, *mc_home]
       - category: environment
         text: "Strictly regulate data centers to protect land, water, air and utility rates, and invest in clean energy and mass transit."
