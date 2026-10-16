@@ -1,23 +1,138 @@
-# Seeded from the Secretary of State's certified candidate list by
-# scripts/seed-from-certified-list.py. research_status: pending —
-# platforms and arguments not yet compiled.
+# Tennessee House, District 45 (southern Sumner County, including Hendersonville) — open seat; Rep. Johnny
+# Garrett is not seeking reelection. Brian Stewart faces Mandy Cook.
+# Candidate order follows the Secretary of State's certified candidate list.
+_sources:
+  lookout45: &lookout45 { url: "https://tennesseelookout.com/voter-guides/contests/house-district-45/", title: "Tennessee House of Representatives, 45th District voter guide (Tennessee Lookout)", accessed: 2026-10-16 }
+  bp_stewart: &bp_stewart { url: "https://ballotpedia.org/Brian_Stewart_(Tennessee)", title: "Brian Stewart (Tennessee) (Ballotpedia)", accessed: 2026-10-16 }
+  bp_cook: &bp_cook { url: "https://ballotpedia.org/Mandy_Cook", title: "Mandy Cook (Ballotpedia)", accessed: 2026-10-16 }
+  wsmv45: &wsmv45 { url: "https://www.actionnews5.com/2026/09/28/election-2026-is-almost-here-heres-everything-you-need-know-about-tn-house-senate-candidates/", title: "Election 2026: Everything you need to know about TN House and Senate candidates (WSMV / Action News 5)", accessed: 2026-10-16 }
+  bs_home: &bs_home { url: "https://www.brianstewartfortn.com/", title: "Brian Stewart for State Representative (Stewart campaign)", accessed: 2026-10-16 }
+  bs_announce: &bs_announce { url: "https://mainstreetmediatn.com/articles/hendersonvillestandard/campaign-announcement-brian-stewart-for-state-house-district-45/", title: "Campaign announcement: Brian Stewart for State House District 45 (Main Street Media of Tennessee)", accessed: 2026-10-16 }
+  wex_record: &wex_record { url: "https://www.washingtonexaminer.com/news/campaigns/state/4650469/brian-stewart-tennessee-state-representative-marine-record/", title: "Tennessee Republican accused of trying to 'deceive' voters by posting training form to prove Marine service (Washington Examiner)", accessed: 2026-10-16 }
+  wex_usmc: &wex_usmc { url: "https://www.washingtonexaminer.com/videos/4644564/veteran-brian-stewart-tennessee-gop-primary-incongruent-marine-corps-standards/", title: "USMC flags candidate in Hegseth's district as 'incongruent with Marine Corps standards' (Washington Examiner)", accessed: 2026-10-16 }
+  milcom: &milcom { url: "https://www.yahoo.com/news/politics/articles/gop-candidate-running-against-veterans-161144242.html", title: "GOP Candidate Running Against Veterans Accused of Exaggerating Marine Service Record (Military.com via Yahoo News)", accessed: 2026-10-16 }
+  mc_home: &mc_home { url: "https://www.mandycook4tn.com/", title: "Mandy Cook for TN | Candidate for TN House District 45 (Cook campaign)", accessed: 2026-10-16 }
+  mc_about: &mc_about { url: "https://www.mandycook4tn.com/about", title: "About Mandy (Cook campaign)", accessed: 2026-10-16 }
+  mc_issues: &mc_issues { url: "https://www.mandycook4tn.com/issues", title: "Issues: Mandy's Platform (Cook campaign)", accessed: 2026-10-16 }
+  mc_announce: &mc_announce { url: "https://mainstreetmediatn.com/articles/gallatinnews/campaign-announcement-mandy-cook-for-tennessee-house-district-45/", title: "Campaign announcement: Mandy Cook for Tennessee House, District 45 (Main Street Media of Tennessee)", accessed: 2026-10-16 }
+
 id: tn-house-045
 office: "Tennessee House, District 45"
 level: state_house
 district: 45
-research_status: pending
+research_status: complete
 candidate_list_source: "https://sos-prod.tnsosgovfiles.com/s3fs-public/document/TNHouse_Nov2026.pdf"
+
 candidates:
   - name: "Brian Stewart"
     ballot_party: Republican
     city: "Hendersonville"
-    why_running: { text: null, sources: [] }
-    platform: []
-    arguments: []
+    incumbent: false
+    website: "https://www.brianstewartfortn.com/"
+    bio_facts:
+      - { text: "Owner of One Stop Realty and Auction since 2019.", sources: [*bs_home, *lookout45] }
+      - { text: "Raised in Goodlettsville; lives in Hendersonville.", sources: [*bs_home, *wsmv45] }
+      - { text: "President of the Sumner County Realtors Association; named Sumner County Realtor of the Year in 2021; member of Hendersonville Morning Rotary and a board member of Grace Place.", sources: [*bs_home, *bs_announce] }
+      - { text: "His campaign announcement refers to his past service on the Sumner County Commission.", sources: [*bs_announce] }
+      - { text: "Won the August 2026 three-way primary for the seat with 48.7% of the vote.", sources: [*bp_stewart] }
+    why_running:
+      text: >-
+        He says the seat is a chance to continue helping a community he loves, building on a career of helping
+        people in need through county government and local civic and charitable groups. He promises to look out for
+        Sumner County's best interests and keep education, safety and infrastructure at the forefront.
+      sources: [*bs_announce, *bs_home]
+    platform:
+      - category: economy
+        text: "Create jobs and trade education opportunities."
+        sources: [*bs_home]
+      - category: taxes
+        text: "Help keep the state budget balanced and cut taxes."
+        sources: [*bs_home, *bs_announce]
+      - category: education
+        text: "Improve education standards and support school staff."
+        sources: [*bs_home, *bs_announce]
+      - category: public_safety
+        text: "Keep neighborhoods safe, support fire, police and sheriff's departments, and protect seniors from fraud and abuse."
+        sources: [*bs_home, *bs_announce]
+      - category: immigration
+        text: "Stop illegal immigration."
+        sources: [*bs_home, *bs_announce]
+      - category: infrastructure
+        text: "Strengthen infrastructure."
+        sources: [*bs_home]
+      - category: guns
+        text: "Strongly supports the Second Amendment."
+        sources: [*bs_home]
+      - category: veterans
+        text: "Be a watchdog for military families."
+        sources: [*bs_home, *bs_announce]
+    arguments:
+      - stance: for
+        text: >-
+          A local small business owner and leader of the county's Realtors association, he points to years of civic
+          and charitable work and promises to back first responders and school staff.
+        sources: [*bs_home, *bs_announce]
+      - stance: against
+        text: >-
+          His campaign describes him as a Marine. Military records reported by the press show he enlisted in the
+          Marine Corps Reserve in 1998 and separated in August 2000 as a private, before completing his reserve
+          obligation, for "failure to participate," with his service characterized as "under other than honorable
+          conditions." A primary opponent said he was trying to deceive voters. He says an irregular heartbeat and
+          partial thyroid removal cut his service short, and that he was honorably discharged from active duty.
+        sources: [*wex_usmc, *wex_record, *milcom]
+      - stance: against
+        text: >-
+          His opponent's campaign says he has accepted thousands of dollars in contributions from the alcohol
+          industry.
+        sources: [*mc_issues]
+
   - name: "Mandy Cook"
     ballot_party: Democratic
     city: "Hendersonville"
-    why_running: { text: null, sources: [] }
-    platform: []
-    arguments: []
-last_verified: 2026-10-13
+    incumbent: false
+    website: "https://www.mandycook4tn.com/"
+    bio_facts:
+      - { text: "Licensed physical therapist assistant who works in a Nashville hospital, helping patients relearn to walk after strokes and brain injuries.", sources: [*mc_about, *mc_issues, *lookout45] }
+      - { text: "Associate's degree from Volunteer State Community College, earned through the Tennessee Reconnect program.", sources: [*mc_about, *wsmv45] }
+      - { text: "Grew up in Mount Gilead, Ohio; moved to Tennessee in 2007 and worked as a full-time musician for several years; has lived in Hendersonville since 2019.", sources: [*mc_about, *mc_announce] }
+      - { text: "Founded a Sumner County community organizing group and has led rallies, food drives and educational events.", sources: [*mc_about, *mc_announce] }
+      - { text: "First campaign for public office; unopposed in the August 2026 primary.", sources: [*lookout45, *bp_cook] }
+    why_running:
+      text: >-
+        She says state leaders are out of touch with the people they represent and that many residents feel left
+        behind. After years of organizing against bills she opposed, she wants to move from fighting legislation to
+        writing it, with a focus on lowering costs and supporting families.
+      sources: [*mc_announce, *mc_home, *mc_about]
+    platform:
+      - category: taxes
+        text: "Eliminate the state sales tax on groceries."
+        sources: [*mc_issues, *bp_cook]
+      - category: cost_of_living
+        text: "Expand childcare subsidies and eligibility for the state Child Care Certificate Program, raise the minimum wage, and regulate short-term rentals."
+        sources: [*mc_issues, *bp_cook]
+      - category: education
+        text: "Repeal the school voucher program and increase public school funding for teacher pay, smaller classes, updated facilities and more counselors and nurses."
+        sources: [*mc_issues]
+      - category: health_care
+        text: "Improve health care access statewide, including rural maternal care funding and expanded TennCare coverage for women of reproductive age; protect patient data from sharing."
+        sources: [*mc_issues, *bp_cook]
+      - category: public_safety
+        text: "Legalize and regulate cannabis, with its tax revenue going to infrastructure repairs; oppose mass surveillance tools such as Flock cameras."
+        sources: [*mc_issues, *mc_home]
+      - category: environment
+        text: "Strictly regulate data centers to protect land, water, air and utility rates, and invest in clean energy and mass transit."
+        sources: [*mc_issues, *mc_announce]
+      - category: abortion
+        text: "Introduce legislation to strengthen the medical emergency exceptions in the state's abortion ban."
+        sources: [*bp_cook]
+      - category: government
+        text: "Force recorded votes so constituents know where representatives stand; refuses corporate PAC money."
+        sources: [*bp_cook, *mc_home]
+    arguments:
+      - stance: for
+        text: >-
+          A hospital health care worker and parent, she says she takes no corporate PAC money and will answer to
+          residents rather than donors.
+        sources: [*mc_home, *mc_about, *bp_cook]
+
+last_verified: 2026-10-16
