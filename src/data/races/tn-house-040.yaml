@@ -1,23 +1,102 @@
-# Seeded from the Secretary of State's certified candidate list by
-# scripts/seed-from-certified-list.py. research_status: pending —
-# platforms and arguments not yet compiled.
+# Tennessee House, District 40 (Cannon, DeKalb, Jackson and Smith counties and part of Wilson County) —
+# Rep. Michael Hale, in office since 2022, faces Daniel Hawthorne in a 2024 rematch.
+# Candidate order follows the Secretary of State's certified candidate list.
+_sources:
+  lookout40: &lookout40 { url: "https://tennesseelookout.com/voter-guides/contests/house-district-40/", title: "Tennessee House of Representatives, 40th District voter guide (Tennessee Lookout)", accessed: 2026-10-15 }
+  cga_h40: &cga_h40 { url: "https://wapp.capitol.tn.gov/apps/legislatorinfo/member.aspx?district=H40", title: "Representative Michael Hale (Tennessee General Assembly)", accessed: 2026-10-15 }
+  bp_hale: &bp_hale { url: "https://ballotpedia.org/Michael_Hale_(Tennessee)", title: "Michael Hale (Tennessee) (Ballotpedia)", accessed: 2026-10-15 }
+  mh_home: &mh_home { url: "https://www.votemichaelhale.com/", title: "Michael Hale for State Representative (Hale campaign)", accessed: 2026-10-15 }
+  mh_about: &mh_about { url: "https://www.votemichaelhale.com/about", title: "Meet Michael (Hale campaign)", accessed: 2026-10-15 }
+  mh_issues: &mh_issues { url: "https://www.votemichaelhale.com/issues", title: "Michael On The Issues (Hale campaign)", accessed: 2026-10-15 }
+  hb0047: &hb0047 { url: "https://wapp.capitol.tn.gov/apps/BillInfo/Default.aspx?BillNumber=HB0047&GA=114", title: "HB0047 bill information (Tennessee General Assembly)", accessed: 2026-10-15 }
+  hb0793: &hb0793 { url: "https://wapp.capitol.tn.gov/apps/BillInfo/Default.aspx?BillNumber=HB0793&GA=114", title: "HB0793 bill information (Tennessee General Assembly)", accessed: 2026-10-16 }
+  tc_story: &tc_story { url: "https://tennesseelookout.com/2026/02/16/ten-commandments-could-go-up-in-tennessee-public-schools/", title: "Ten Commandments could go up in Tennessee public schools (Tennessee Lookout)", accessed: 2026-10-15 }
+  dh_home: &dh_home { url: "https://brand.page/electdanielhawthornefortnstatehousedistrict40", title: "Elect Daniel Hawthorne for TN State House District 40 (Hawthorne campaign)", accessed: 2026-10-15 }
+  dh_bio: &dh_bio { url: "https://docs.google.com/document/d/1o1oRQ7DCUvsSyZiSGcrMAk8NvuOzsAjjxxlPOH_iwpU/edit?usp=sharing", title: "Daniel Hawthorn - Bio (Hawthorne campaign)", accessed: 2026-10-15 }
+  dh_platform: &dh_platform { url: "https://docs.google.com/document/d/1wz1oDEsdzzQNqTUvfB6dNLjUlYeRDMtG7jyMZHVuXr8/edit?usp=sharing", title: "Daniel Hawthorn - Platform (Hawthorne campaign)", accessed: 2026-10-15 }
+  bp_hawthorne: &bp_hawthorne { url: "https://ballotpedia.org/Daniel_Hawthorne", title: "Daniel Hawthorne (Ballotpedia)", accessed: 2026-10-15 }
+
 id: tn-house-040
 office: "Tennessee House, District 40"
 level: state_house
 district: 40
-research_status: pending
+research_status: complete
 candidate_list_source: "https://sos-prod.tnsosgovfiles.com/s3fs-public/document/TNHouse_Nov2026.pdf"
+
 candidates:
   - name: "Michael Hale"
     ballot_party: Republican
     city: "Smithville"
+    incumbent: true
+    website: "https://www.votemichaelhale.com"
+    bio_facts:
+      - { text: "State representative for District 40 since November 2022; House member of the 113th and 114th General Assemblies.", sources: [*bp_hale, *cga_h40] }
+      - { text: "Chair of the House TennCare Subcommittee; member of the Commerce, Finance, Ways and Means, and Insurance committees and the Banking & Consumer Affairs Subcommittee.", sources: [*cga_h40] }
+      - { text: "Opened DeKalb Funeral Chapel in 1999 after attending mortuary college; associate degree from John A. Gupton Mortuary College; also a farmer.", sources: [*mh_about, *cga_h40, *bp_hale] }
+      - { text: "Born and raised in DeKalb County; has pastored churches in DeKalb and Warren counties; chairs the Smithville Housing Authority Board.", sources: [*mh_about, *cga_h40] }
+      - { text: "House sponsor of a 2026 law (Public Chapter 924) letting local school boards and charter schools allow displays of the Ten Commandments, part of the Declaration of Independence, and the preamble to the U.S. Constitution in school buildings.", sources: [*hb0047, *tc_story] }
+      - { text: "Voted against House passage of a 2026 bill on verifying students' citizenship or immigration status at public school enrollment.", sources: [*hb0793, *lookout40] }
     why_running: { text: null, sources: [] }
-    platform: []
-    arguments: []
+    platform:
+      - category: economy
+        text: "Support local small businesses and work to give people in the community access to quality jobs."
+        sources: [*mh_issues, *mh_home]
+      - category: taxes
+        text: "Keep taxes low, oppose reckless spending, and keep government small, efficient and effective."
+        sources: [*mh_issues]
+      - category: education
+        text: "Give every Tennessee student access to a world-class education, support students and teachers, and give parents a voice in their child's education."
+        sources: [*mh_issues]
+      - category: guns
+        text: "Protect Second Amendment rights and stand up for law-abiding gun owners."
+        sources: [*mh_issues]
+      - category: abortion
+        text: "Says he is 100% pro-life and that every life is precious from the moment of conception."
+        sources: [*mh_issues]
+    arguments:
+      - stance: for
+        text: >-
+          His Ten Commandments display bill leaves the choice to local school leaders, who know their communities
+          best, and gives schools legal protection if they post the documents.
+        sources: [*tc_story]
+      - stance: against
+        text: >-
+          Opponents in House debate argued his bill allowing Ten Commandments displays in public schools could
+          violate the First Amendment's ban on establishing a religion and the rights of students of other faiths.
+        sources: [*tc_story]
+
   - name: "Daniel T. Hawthorne"
     ballot_party: Democratic
     city: "Dixon Springs"
-    why_running: { text: null, sources: [] }
-    platform: []
-    arguments: []
-last_verified: 2026-10-13
+    incumbent: false
+    website: "https://brand.page/electdanielhawthornefortnstatehousedistrict40"
+    bio_facts:
+      - { text: "Public school teacher for more than a decade; began teaching in Rutherford County Schools in 2018 after teaching in Memphis and Davidson County.", sources: [*dh_home, *dh_bio, *lookout40] }
+      - { text: "Born in Lebanon and raised in Smith County; graduate of Smith County High School; master's degree in curriculum and instruction from Tennessee Technological University.", sources: [*dh_bio, *bp_hawthorne] }
+      - { text: "Married with four daughters.", sources: [*dh_home, *dh_bio] }
+      - { text: "Chair of the Smith County Democratic Party.", sources: [*lookout40] }
+      - { text: "Ran for this seat in 2024 and lost to Hale, 83.7% to 16.3%.", sources: [*bp_hawthorne] }
+    why_running:
+      text: >-
+        He says residents are tired of seeing nothing get done by elected leaders and that he was raised to fix
+        problems rather than complain about them. He says voters deserve a better choice, and he wants to support
+        public schools and help small rural farms survive.
+      sources: [*dh_bio, *dh_platform]
+    platform:
+      - category: taxes
+        text: "Avoid raising taxes on communities he says are already taxed enough, and use tax revenue from legal marijuana to increase funding for rural public schools."
+        sources: [*dh_bio, *bp_hawthorne]
+      - category: education
+        text: "Oppose charter schools and school vouchers, saying tax dollars should not go to private entities with little accountability; give rural students the same opportunities as better-funded urban schools and reinvest in vocational and technical training."
+        sources: [*dh_platform, *dh_bio]
+      - category: agriculture
+        text: "Legalize marijuana as a cash crop for small and multigenerational family farms that have struggled since tobacco declined."
+        sources: [*dh_platform, *dh_bio]
+    arguments:
+      - stance: for
+        text: >-
+          A public school teacher for more than a decade, he says the core duty of the office is voting for laws
+          that help the people who elected him rather than following party politics.
+        sources: [*dh_home, *bp_hawthorne]
+
+last_verified: 2026-10-16
