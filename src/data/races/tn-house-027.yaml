@@ -1,23 +1,101 @@
-# Seeded from the Secretary of State's certified candidate list by
-# scripts/seed-from-certified-list.py. research_status: pending —
-# platforms and arguments not yet compiled.
+# Tennessee House, District 27 (western Hamilton County, Lookout Valley to Soddy-Daisy) — Rep. Michele Reneau,
+# in office since 2024, faces Paige Quirin.
+# Candidate order follows the Secretary of State's certified candidate list.
+_sources:
+  cga_h27: &cga_h27 { url: "https://wapp.capitol.tn.gov/apps/legislatorinfo/member.aspx?district=H27", title: "Representative Michele Reneau (Tennessee General Assembly)", accessed: 2026-10-16 }
+  bp_reneau: &bp_reneau { url: "https://ballotpedia.org/Michele_Reneau", title: "Michele Reneau (Ballotpedia)", accessed: 2026-10-16 }
+  lookout27: &lookout27 { url: "https://tennesseelookout.com/voter-guides/contests/house-district-27/", title: "Tennessee House of Representatives, 27th District voter guide (Tennessee Lookout)", accessed: 2026-10-16 }
+  whip: &whip { url: "https://tnhousegop.org/member-newsroom/2025/04/state-rep-michele-reneau-appointed-deputy-whip/", title: "State Rep. Michele Reneau appointed Deputy Whip (Tennessee House Republican Caucus)", accessed: 2026-10-16 }
+  tfp_primary: &tfp_primary { url: "https://www.timesfreepress.com/news/2026/aug/06/reneau-beats-primary-challenger-for-reelection-to/", title: "Reneau beats primary challenger for reelection to state House (Chattanooga Times Free Press)", accessed: 2026-10-16 }
+  l3_forum: &l3_forum { url: "https://www.local3news.com/local-news/decision-2026-state-rep-reneau-primary-challenger-tony-hullender-share-campaign-messages/article_d718ec04-17e2-4551-8376-93a79cdbcc07.html", title: "DECISION 2026: State Rep. Reneau & primary challenger Tony Hullender share campaign messages (Local 3 News)", accessed: 2026-10-16 }
+  wdef24: &wdef24 { url: "https://www.wdef.com/district-27-race-heating-up/", title: "District 27 race heating up (WDEF News 12)", accessed: 2026-10-16 }
+  letter: &letter { url: "https://new.chattanoogan.com/2026/7/21/521197/Reneau-Deserves-A-2nd-Term.aspx", title: "Reneau Deserves A 2nd Term (Chattanoogan.com)", accessed: 2026-10-16 }
+  mr_oped: &mr_oped { url: "https://new.chattanoogan.com/2026/7/8/520720/Michele-Reneau-Why-Tennessee-Families.aspx", title: "Michele Reneau: Why Tennessee Families Have Remained At The Center Of My Work (Chattanoogan.com)", accessed: 2026-10-16 }
+  mr_home: &mr_home { url: "https://www.electmichele.com/", title: "Elect Michele Reneau (Reneau campaign)", accessed: 2026-10-16 }
+  mr_meet: &mr_meet { url: "https://www.electmichele.com/meet", title: "Meet Michele (Reneau campaign)", accessed: 2026-10-16 }
+  mr_issues: &mr_issues { url: "https://www.electmichele.com/issues", title: "Issues (Reneau campaign)", accessed: 2026-10-16 }
+
 id: tn-house-027
 office: "Tennessee House, District 27"
 level: state_house
 district: 27
-research_status: pending
+research_status: complete
 candidate_list_source: "https://sos-prod.tnsosgovfiles.com/s3fs-public/document/TNHouse_Nov2026.pdf"
+
 candidates:
   - name: "Michele Reneau"
     ballot_party: Republican
     city: "Hixson"
-    why_running: { text: null, sources: [] }
-    platform: []
-    arguments: []
+    incumbent: true
+    website: "https://www.electmichele.com"
+    bio_facts:
+      - { text: "State representative for District 27 since November 2024, after defeating the sitting representative in the 2024 primary; House member of the 114th General Assembly.", sources: [*bp_reneau, *lookout27, *cga_h27] }
+      - { text: "Serves on the House Government Operations and Transportation committees and the Transportation Subcommittee; named one of six deputy whips of the House Republican Caucus in 2025.", sources: [*cga_h27, *whip] }
+      - { text: "B.A. in political science from the College of Charleston and a master's in public administration from the University of South Carolina; first in her family to graduate from high school and college.", sources: [*cga_h27, *mr_meet, *tfp_primary] }
+      - { text: "Licensed real estate broker and small business owner; before taking office, advocated at the legislature for Tennessee's herd-share and farm-to-consumer food laws.", sources: [*mr_meet, *cga_h27] }
+      - { text: "Grew up in South Carolina; has lived in Hamilton County for about 17 years; married with five children.", sources: [*mr_meet, *tfp_primary] }
+    why_running:
+      text: >-
+        She says she ran to be a voice for Tennessee children and families, and that every vote she takes is guided
+        by whether it will strengthen families and their children's future. She says she will keep prioritizing
+        protecting taxpayers, supporting parents and defending constitutional rights.
+      sources: [*mr_oped, *tfp_primary, *l3_forum]
+    platform:
+      - category: taxes
+        text: "Lower taxes and reduce regulations to help individuals and small businesses prosper."
+        sources: [*mr_issues]
+      - category: cost_of_living
+        text: "Oppose efforts to force subsidized housing into rural and suburban areas."
+        sources: [*mr_issues]
+      - category: education
+        text: "Support local control of schools and parental rights; post all curriculum and library books online for review; cut screen time for elementary students in favor of teacher-led instruction; teach the nation's founding documents."
+        sources: [*mr_issues, *mr_oped]
+      - category: health_care
+        text: "Supported the law barring petroleum-based artificial dyes from public and charter school meals, citing concerns about childhood nutrition and obesity."
+        sources: [*mr_oped, *l3_forum]
+      - category: immigration
+        text: "Limit state resources to legal residents, end benefits for people in the country illegally, criminalize mass transportation of people in the country illegally, and require E-Verify for employment."
+        sources: [*mr_issues]
+      - category: guns
+        text: "Oppose red flag laws that would remove firearms without proper due process."
+        sources: [*mr_issues]
+      - category: abortion
+        text: "Protect every innocent life from conception to natural death."
+        sources: [*mr_issues]
+      - category: government
+        text: "Stop accepting federal funding that comes with strings attached, and guard free speech against censorship by large tech companies."
+        sources: [*mr_issues]
+    arguments:
+      - stance: for
+        text: >-
+          Says she has never missed a day of legislative session and passed laws easing adoption home-study rules
+          for non-relative guardians, limiting elementary screen time and removing artificial dyes from school meals.
+        sources: [*mr_oped, *l3_forum]
+      - stance: for
+        text: >-
+          A district voter writes that she is accessible and responsive to constituents, shows up at events across
+          the district, and sends informative newsletters during session.
+        sources: [*letter]
+      - stance: against
+        text: >-
+          Her 2026 primary challenger faulted her for voting "present" on the special-session redistricting measure,
+          saying he would have voted yes or no.
+        sources: [*l3_forum]
+      - stance: against
+        text: >-
+          Critics in her 2024 race argued that her push to reject federal funding could lead to a state income tax
+          and cost money the state relies on for disaster relief, schools and roads.
+        sources: [*wdef24]
+
   - name: "Paige Quirin"
     ballot_party: Democratic
     city: "Chattanooga"
+    incumbent: false
+    website: null
+    bio_facts:
+      - { text: "First campaign for public office; unopposed in the August 2026 primary.", sources: [*tfp_primary] }
     why_running: { text: null, sources: [] }
     platform: []
     arguments: []
-last_verified: 2026-10-13
+
+last_verified: 2026-10-16
