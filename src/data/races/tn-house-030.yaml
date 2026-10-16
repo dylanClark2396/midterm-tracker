@@ -2,17 +2,17 @@
 # Rep. Esther Helton-Haynes, in office since 2018, faces Art Rymer.
 # Candidate order follows the Secretary of State's certified candidate list.
 _sources:
-  cga_h30: &cga_h30 { url: "https://wapp.capitol.tn.gov/apps/legislatorinfo/member.aspx?district=H30", title: "Representative Esther Helton-Haynes (Tennessee General Assembly)", accessed: 2026-10-16 }
-  lookout30: &lookout30 { url: "https://tennesseelookout.com/voter-guides/contests/house-district-30/", title: "Tennessee House of Representatives, 30th District voter guide (Tennessee Lookout)", accessed: 2026-10-16 }
-  hb1241: &hb1241 { url: "https://wapp.capitol.tn.gov/apps/BillInfo/Default.aspx?BillNumber=HB1241&GA=114", title: "HB1241 bill information (Tennessee General Assembly)", accessed: 2026-10-16 }
-  lk_hb1241: &lk_hb1241 { url: "https://tennesseelookout.com/2025/02/25/tennessee-republicans-sponsor-abortion-ban-exception-bill/", title: "Tennessee Republicans sponsor abortion ban exception bill (Tennessee Lookout)", accessed: 2026-10-16 }
-  eh_about: &eh_about { url: "https://electesther.com/about-esther/", title: "About Esther (Helton-Haynes campaign)", accessed: 2026-10-16 }
-  eh_advocate: &eh_advocate { url: "https://electesther.com/advocating-for-you/", title: "Advocating For You (Helton-Haynes campaign)", accessed: 2026-10-16 }
-  eh_families: &eh_families { url: "https://electesther.com/protecting-families/", title: "Protecting Families (Helton-Haynes campaign)", accessed: 2026-10-16 }
-  eh_education: &eh_education { url: "https://electesther.com/supporting-public-education/", title: "Supporting Public Education (Helton-Haynes campaign)", accessed: 2026-10-16 }
-  eh_teampac: &eh_teampac { url: "https://electesther.com/team-pac-endorses-esther-helton-haynes/", title: "TEAM-PAC Endorses Esther-Helton Haynes (Helton-Haynes campaign)", accessed: 2026-10-16 }
-  eh_tha: &eh_tha { url: "https://electesther.com/rep-helton-haynes-names-2023-hospital-hero/", title: "THA Recognizes Rep. Esther Helton-Haynes as a 2023 Hospital Hero (Helton-Haynes campaign)", accessed: 2026-10-16 }
-  ar_site: &ar_site { url: "https://art4tn.com/whos-art/", title: "Who's Art? (Rymer campaign)", accessed: 2026-10-16 }
+  cga_h30: &cga_h30 { url: "https://wapp.capitol.tn.gov/apps/legislatorinfo/member.aspx?district=H30", title: "Representative Esther Helton-Haynes (Tennessee General Assembly)", accessed: 2026-10-15 }
+  lookout30: &lookout30 { url: "https://tennesseelookout.com/voter-guides/contests/house-district-30/", title: "Tennessee House of Representatives, 30th District voter guide (Tennessee Lookout)", accessed: 2026-10-15 }
+  hb1241: &hb1241 { url: "https://wapp.capitol.tn.gov/apps/BillInfo/Default.aspx?BillNumber=HB1241&GA=114", title: "HB1241 bill information (Tennessee General Assembly)", accessed: 2026-10-15 }
+  lk_hb1241: &lk_hb1241 { url: "https://tennesseelookout.com/2025/02/25/tennessee-republicans-sponsor-abortion-ban-exception-bill/", title: "Tennessee Republicans sponsor abortion ban exception bill (Tennessee Lookout)", accessed: 2026-10-15 }
+  eh_about: &eh_about { url: "https://electesther.com/about-esther/", title: "About Esther (Helton-Haynes campaign)", accessed: 2026-10-15 }
+  eh_advocate: &eh_advocate { url: "https://electesther.com/advocating-for-you/", title: "Advocating For You (Helton-Haynes campaign)", accessed: 2026-10-15 }
+  eh_families: &eh_families { url: "https://electesther.com/protecting-families/", title: "Protecting Families (Helton-Haynes campaign)", accessed: 2026-10-15 }
+  eh_education: &eh_education { url: "https://electesther.com/supporting-public-education/", title: "Supporting Public Education (Helton-Haynes campaign)", accessed: 2026-10-15 }
+  eh_teampac: &eh_teampac { url: "https://electesther.com/team-pac-endorses-esther-helton-haynes/", title: "TEAM-PAC Endorses Esther-Helton Haynes (Helton-Haynes campaign)", accessed: 2026-10-15 }
+  eh_tha: &eh_tha { url: "https://electesther.com/rep-helton-haynes-names-2023-hospital-hero/", title: "THA Recognizes Rep. Esther Helton-Haynes as a 2023 Hospital Hero (Helton-Haynes campaign)", accessed: 2026-10-15 }
+  ar_site: &ar_site { url: "https://art4tn.com/whos-art/", title: "Who's Art? (Rymer campaign)", accessed: 2026-10-15 }
 
 id: tn-house-030
 office: "Tennessee House, District 30"
@@ -33,11 +33,11 @@ candidates:
       - { text: "Member of the East Ridge City Council beginning in 2016.", sources: [*cga_h30, *eh_about] }
       - { text: "Nurse for nearly 44 years, many of them as a hemodialysis nurse; graduate of East Ridge High School and the Chattanooga School of Practical Nursing.", sources: [*eh_about, *cga_h30] }
       - { text: "Lifelong resident of East Ridge.", sources: [*eh_about] }
-      - { text: "Sponsored a 2025 bill (HB1241) under which a physician would not commit criminal abortion when ending a pregnancy because of a diagnosed lethal fetal anomaly; it was assigned to a House subcommittee.", sources: [*hb1241, *lk_hb1241] }
+      - { text: "Sponsored a 2025 bill (HB1241) under which a physician would not commit criminal abortion when, under set conditions, ending a pregnancy because of a diagnosed lethal fetal anomaly; it was assigned to a House subcommittee.", sources: [*hb1241, *lk_hb1241] }
     why_running:
       text: >-
-        She says she wants to keep making sure District 30's voices are heard in Nashville and to stand up for the
-        district's families, with the values of faith, family and freedom at the center of her work.
+        Her campaign says she has made it her mission to be a voice of reason in Nashville, making sure District 30's
+        voices are heard and fighting for its families' freedoms, with faith, family and freedom at the heart of her work.
       sources: [*eh_advocate]
     platform:
       - category: economy
@@ -62,7 +62,7 @@ candidates:
       - stance: for
         text: >-
           A nurse for more than four decades who chairs the House Insurance Subcommittee; hospital leaders have
-          praised her willingness to tackle difficult health care issues and protect patients' access to care.
+          praised her willingness to tackle tough health care issues and her dedication to patients' access to quality care.
         sources: [*eh_tha, *eh_about, *cga_h30]
       - stance: for
         text: >-
@@ -71,8 +71,8 @@ candidates:
         sources: [*eh_about]
       - stance: for
         text: >-
-          As a former chair of the Public Employees Subcommittee, she was credited with guiding key legislation
-          for state employees.
+          An endorsement credits her, as a former chair of the Public Employees Subcommittee, with guiding key
+          legislation for state employees and advancing policies that support the state workforce.
         sources: [*eh_teampac]
 
   - name: "Art Rymer"
@@ -86,4 +86,4 @@ candidates:
     platform: []
     arguments: []
 
-last_verified: 2026-10-16
+last_verified: 2026-10-15
