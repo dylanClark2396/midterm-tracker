@@ -1,23 +1,137 @@
-# Seeded from the Secretary of State's certified candidate list by
-# scripts/seed-from-certified-list.py. research_status: pending —
-# platforms and arguments not yet compiled.
+# Tennessee House, District 64 (most of Maury County, including most of Spring Hill and Columbia) — Rep. Scott
+# Cepicky, in office since 2018, faces Craig D'Apolito.
+# Candidate order follows the Secretary of State's certified candidate list.
+_sources:
+  cga_h64: &cga_h64 { url: "https://wapp.capitol.tn.gov/apps/legislatorinfo/member.aspx?district=H64", title: "Representative Scott Cepicky (Tennessee General Assembly)", accessed: 2026-10-16 }
+  bp_cepicky: &bp_cepicky { url: "https://ballotpedia.org/Scott_Cepicky", title: "Scott Cepicky (Ballotpedia)", accessed: 2026-10-16 }
+  lookout64: &lookout64 { url: "https://tennesseelookout.com/voter-guides/contests/house-district-64/", title: "Tennessee House of Representatives, House District 64 voter guide (Tennessee Lookout)", accessed: 2026-10-16 }
+  sc_issues: &sc_issues { url: "https://www.scottcepicky.com/issues", title: "Issues (Cepicky campaign)", accessed: 2026-10-16 }
+  sc_meet: &sc_meet { url: "https://www.scottcepicky.com/meet-scott", title: "Meet Scott (Cepicky campaign)", accessed: 2026-10-16 }
+  hb1497: &hb1497 { url: "https://wapp.capitol.tn.gov/apps/BillInfo/Default.aspx?BillNumber=HB1497&GA=114", title: "HB1497 bill information (Tennessee General Assembly)", accessed: 2026-10-16 }
+  lk_vouchers26: &lk_vouchers26 { url: "https://tennesseelookout.com/2026/04/14/tennessee-house-backs-private-school-voucher-expansion/", title: "Tennessee House backs private-school voucher expansion (Tennessee Lookout)", accessed: 2026-10-16 }
+  lk_takeover: &lk_takeover { url: "https://tennesseelookout.com/2021/03/30/bill-empowering-education-commissioner-to-take-over-school-districts-advances/", title: "Bill empowering education commissioner to take over school districts advances (Tennessee Lookout)", accessed: 2026-10-16 }
+  cb_retention: &cb_retention { url: "https://www.chalkbeat.org/tennessee/2023/3/15/23640372/tennessee-third-grade-retention-compromise-legislation-governor-bill-lee", title: "Bill to ease Tennessee's third-grade reading and retention law clears first legislative hurdle (Chalkbeat)", accessed: 2026-10-16 }
+  cb_boards: &cb_boards { url: "https://www.chalkbeat.org/tennessee/2021/10/26/22747700/partisan-school-board-elections-tennessee-legislature-cepicky-bill", title: "Would partisan school board races shift education? Tennessee lawmaker thinks it's time (Chalkbeat)", accessed: 2026-10-16 }
+  ff_forum24: &ff_forum24 { url: "https://tnfirefly.com/news/20240725/rep-scott-cepicky-calls-governor-lees-voucher-bill-terrible-despite-receiving-his-endorsement-in-next-months-primary", title: "Rep. Scott Cepicky calls Governor Lee's voucher bill \"terrible\" (Tennessee Firefly)", accessed: 2026-10-16 }
+  cd_home: &cd_home { url: "https://www.cdapolito.com/", title: "Craig D'Apolito for Tennessee House of Representatives, 64th District (D'Apolito campaign)", accessed: 2026-10-16 }
+  cd_about: &cd_about { url: "https://www.cdapolito.com/about", title: "About (D'Apolito campaign)", accessed: 2026-10-16 }
+  cd_issues: &cd_issues { url: "https://www.cdapolito.com/issues", title: "The Issues (D'Apolito campaign)", accessed: 2026-10-16 }
+
 id: tn-house-064
 office: "Tennessee House, District 64"
 level: state_house
 district: 64
-research_status: pending
+research_status: complete
 candidate_list_source: "https://sos-prod.tnsosgovfiles.com/s3fs-public/document/TNHouse_Nov2026.pdf"
+
 candidates:
   - name: "Scott Cepicky"
     ballot_party: Republican
     city: "Culleoka"
-    why_running: { text: null, sources: [] }
-    platform: []
-    arguments: []
+    incumbent: true
+    website: "https://www.scottcepicky.com"
+    bio_facts:
+      - { text: "State representative for District 64 since November 2018; House member of the 111th through 114th General Assemblies.", sources: [*bp_cepicky, *cga_h64] }
+      - { text: "Chairs the House Education Instruction Subcommittee; also serves on the Education and Insurance Committees and the Education Administration and TennCare Subcommittees.", sources: [*cga_h64] }
+      - { text: "Maury County commissioner from 2010 to 2014, serving as commission chairman from 2010 to 2012; chairman of the Maury County Republican Party from 2014 to 2017.", sources: [*cga_h64, *sc_meet] }
+      - { text: "B.A. in history from the University of Wisconsin-Madison, where he played football and baseball; played professional baseball and football, and has worked as a cattle rancher, in auto sales and service, and as a mortgage loan originator.", sources: [*cga_h64, *sc_meet] }
+      - { text: "Sponsored HB1497 (2026), which as introduced moves municipal elections to the August or November election dates and makes them partisan; it passed the House 67-26 in April 2026.", sources: [*hb1497] }
+    why_running:
+      text: >-
+        He says his wish to serve is rooted in a belief that people can be united around a politics of purpose, and
+        he asks voters to believe in their own ability to help bring change to the 64th District.
+      sources: [*sc_meet]
+    platform:
+      - category: guns
+        text: "Never support legislation that would take away the right to keep and bear arms."
+        sources: [*sc_issues]
+      - category: education
+        text: "Display the national motto \"In God We Trust\" in prominent locations in every K-12 school and allow prayer in public schools; supports expanding private-school vouchers as an opportunity for students to excel."
+        sources: [*sc_issues, *lk_vouchers26]
+      - category: abortion
+        text: "Believes life begins at conception and pledges to protect the most vulnerable at every opportunity."
+        sources: [*sc_issues]
+      - category: government
+        text: "Stand for state sovereignty under the 10th Amendment, saying the state has given up too much of its rights to the federal government; defend religious freedom at home and in public life."
+        sources: [*sc_issues]
+      - category: economy
+        text: "Reduce and minimize government regulations so small businesses can grow and create well-paying jobs."
+        sources: [*sc_issues]
+    arguments:
+      - stance: for
+        text: >-
+          In 2023 he carried a House revision of the third-grade reading law that would weigh a second test for
+          students scoring just under proficiency and direct the state board to set appeal rules, which the
+          leader of the state's largest teachers' organization called a positive step.
+        sources: [*cb_retention]
+      - stance: for
+        text: >-
+          In 2024 he was the leading House voice for letting families choose where their children go to school,
+          and he said the House plan he wrote had provisions to keep costs down and give state leaders some data on
+          how participating students perform; in 2026 he spoke for expanding the state's voucher program.
+        sources: [*ff_forum24, *lk_vouchers26]
+      - stance: for
+        text: >-
+          His 2021 bill would have let local parties choose to nominate school board candidates; he argued that
+          party labels give voters more information and make board members more accountable to the people they
+          represent.
+        sources: [*cb_boards]
+      - stance: against
+        text: >-
+          Critics said in 2021 that his bill giving the state education commissioner broad power to take over local
+          school districts and replace elected school board members would go around voters and expand a state
+          takeover model that had failed.
+        sources: [*lk_takeover]
+      - stance: against
+        text: >-
+          Critics said in 2021 that his bill bringing party labels to school board races would muddy the waters and
+          scare off people who run for school board to help children rather than for politics.
+        sources: [*cb_boards]
+      - stance: against
+        text: >-
+          In 2024, his primary challenger said the House school choice plan he wrote would have added government
+          regulation to private and home schools and taken needed money away from public schools.
+        sources: [*ff_forum24]
+
   - name: "Craig D'Apolito"
     ballot_party: Democratic
     city: "Columbia"
-    why_running: { text: null, sources: [] }
-    platform: []
-    arguments: []
-last_verified: 2026-10-13
+    incumbent: false
+    website: "https://www.cdapolito.com"
+    bio_facts:
+      - { text: "Has lived in Tennessee for more than 45 years and in Maury County since 1997; graduate of Hendersonville High School who attended Middle Tennessee State University.", sources: [*cd_about] }
+      - { text: "Worked in hospitality and customer service, then as a corrections officer at the Maury County Jail, where he was promoted to sergeant and served as the jail's Prison Rape Elimination Act coordinator.", sources: [*cd_about, *lookout64] }
+      - { text: "Left the Sheriff's Office in 2019 to run his family's century farm, which he now operates with his adult child.", sources: [*cd_about] }
+      - { text: "Served three years as an officer of a charity group raising money for children in need.", sources: [*cd_about] }
+    why_running:
+      text: >-
+        He says he decided to run after watching friends, neighbors and working families struggle with rising
+        costs and prescription drug prices, while government seemed more interested in people's personal lives
+        than in maintaining the roads. He says government should work for everyday people, and that Tennesseans
+        deserve practical leadership, responsible government and an advocate who understands working families,
+        small businesses, farmers and rural communities.
+      sources: [*cd_about]
+    platform:
+      - category: infrastructure
+        text: "Pause new data centers until new rules are enacted, and expand the requirement that data centers pay for their own electrical infrastructure so it also covers water utilities and has no exclusion for telecommunications companies."
+        sources: [*cd_issues, *lookout64]
+      - category: health_care
+        text: "Keep medical decisions between patients and doctors, add beds at the Middle Tennessee Mental Health Institute, make sure federal TennCare money is spent responsibly, and rejoin the federal Summer EBT program."
+        sources: [*cd_issues]
+      - category: economy
+        text: "Create a state minimum wage tied to inflation and abolish the lower minimum wage for tipped workers."
+        sources: [*cd_issues]
+      - category: taxes
+        text: "Remove the 4% state sales tax on groceries."
+        sources: [*cd_issues]
+      - category: education
+        text: "End school vouchers, expand Project AWARE school mental health services to every county, and keep funding school-based behavioral health liaisons."
+        sources: [*cd_issues]
+    arguments:
+      - stance: for
+        text: >-
+          As a farmer, small business owner and former jail sergeant who supervised staff and wrote policy, he
+          understands the opportunities and challenges facing working families and rural Tennessee.
+        sources: [*cd_about]
+
+last_verified: 2026-10-16
