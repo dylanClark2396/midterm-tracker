@@ -39,7 +39,7 @@ Remove leftover local worktrees from dead sessions with `git worktree prune` (an
 ## 2. Research agent (one per race)
 
 Run it with the Agent tool: `subagent_type: general-purpose`, `isolation: worktree`, `run_in_background: true`.
-Replace `<id>` (for example `tn-house-030`) and `<n>` (the district number), and fill in today's date:
+Replace `<id>` (for example `tn-house-030`) and `<n>` (the district number), and fill in today's local date (`date +%F` in America/Chicago, not UTC):
 
 > Research race `<id>` for the TN 2026 Ballot Guide (a nonpartisan voter guide for the Nov 3, 2026 Tennessee
 > general election, https://tnelection.org) and open a PR. Today is <YYYY-MM-DD>.
@@ -84,8 +84,9 @@ Replace `<id>` (for example `tn-house-030`) and `<n>` (the district number), and
 
 Run it with the same Agent settings:
 
-> Verify research PR #<n> (`data/<id>`) for the TN 2026 Ballot Guide. Run
-> `git fetch origin && git checkout -b data/<id> origin/data/<id>`, then read src/data/CLAUDE.md for the rules.
+> Verify research PR #<n> (`data/<id>`) for the TN 2026 Ballot Guide. The branch may be checked out in the
+> researcher's worktree, so run `git fetch origin && git checkout -b verify/<id> origin/data/<id>` and push with
+> `git push origin HEAD:data/<id>`. Then read src/data/CLAUDE.md for the rules.
 >
 > Open every cited URL yourself. If you get a 403, use curl with a browser user agent. For each item, confirm the
 > source supports it as written, and that it follows the rules: candidate's own materials for platform and
