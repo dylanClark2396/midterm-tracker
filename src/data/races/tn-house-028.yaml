@@ -1,29 +1,154 @@
-# Seeded from the Secretary of State's certified candidate list by
-# scripts/seed-from-certified-list.py. research_status: pending —
-# platforms and arguments not yet compiled.
+# Tennessee House, District 28 (central and east Chattanooga) — Rep. Yusuf Hakeem, in office since 2018, faces
+# two independents, former city council member Demetrus Coonrod and Johnny Horne. No Republican qualified.
+# Candidate order follows the Secretary of State's certified candidate list.
+_sources:
+  cga_h28: &cga_h28 { url: "https://wapp.capitol.tn.gov/apps/legislatorinfo/member.aspx?district=H28", title: "Representative Yusuf Hakeem (Tennessee General Assembly)", accessed: 2026-10-16 }
+  bp_hakeem: &bp_hakeem { url: "https://ballotpedia.org/Yusuf_Hakeem", title: "Yusuf Hakeem (Ballotpedia)", accessed: 2026-10-16 }
+  lookout28: &lookout28 { url: "https://tennesseelookout.com/voter-guides/contests/house-district-28/", title: "Tennessee House of Representatives, 28th District voter guide (Tennessee Lookout)", accessed: 2026-10-16 }
+  l3_hakeem: &l3_hakeem { url: "https://www.local3news.com/local-news/rep-yusuf-hakeem-announces-re-election-bid-for-house-district-28/article_566fcbea-2d50-493f-8f53-5497097d2094.html", title: "Rep. Yusuf Hakeem announces re-election bid for House District 28 (Local 3 News)", accessed: 2026-10-16 }
+  ch_launch: &ch_launch { url: "https://www.chattanoogan.com/2026/8/18/522199/Demetrus-Coonrod-Launches-Independent.aspx", title: "Demetrus Coonrod Launches Independent Campaign For House District 28 Seat (Chattanoogan.com)", accessed: 2026-10-16 }
+  ch_pac: &ch_pac { url: "https://www.chattanoogan.com/2026/9/23/523741/Coonrod-Hits-Hakeem-Corporate-PAC-Money.aspx", title: "Coonrod Hits Hakeem Corporate PAC Money (Chattanoogan.com)", accessed: 2026-10-16 }
+  jh_home: &jh_home { url: "https://www.friendsofjohnnyhorne.com/", title: "Home (Friends of Johnny Horne)", accessed: 2026-10-16 }
+  jh_gallery: &jh_gallery { url: "https://www.friendsofjohnnyhorne.com/blank-12", title: "Portfolio (Friends of Johnny Horne)", accessed: 2026-10-16 }
+
 id: tn-house-028
 office: "Tennessee House, District 28"
 level: state_house
 district: 28
-research_status: pending
+research_status: complete
 candidate_list_source: "https://sos-prod.tnsosgovfiles.com/s3fs-public/document/TNHouse_Nov2026.pdf"
+
 candidates:
   - name: "Yusuf A. Hakeem"
     ballot_party: Democratic
     city: "Chattanooga"
-    why_running: { text: null, sources: [] }
-    platform: []
-    arguments: []
+    incumbent: true
+    website: null
+    bio_facts:
+      - { text: "State representative for District 28 since November 2018; House member of the 111th through 114th General Assemblies. Serves on the Ethics Committee and the Select Committee on Rules.", sources: [*bp_hakeem, *cga_h28] }
+      - { text: "Served on the Hamilton County School Board from 1981 to 1990 and on the Chattanooga City Council from 1990 to 2006 and again from 2013 to 2017; also served seven years on the Tennessee Board of Parole and Probation.", sources: [*lookout28, *cga_h28] }
+      - { text: "Retired from General Electric; graduate of Chattanooga State and attended the University of Tennessee at Chattanooga, studying economics.", sources: [*cga_h28] }
+      - { text: "Chairman of the Bessie Smith Cultural Center board since 2016 and a deacon at Second Missionary Baptist Church.", sources: [*cga_h28] }
+    why_running:
+      text: >-
+        He says pushing the state toward extremes does nothing for Tennesseans struggling to get ahead, and that
+        since his election he has worked to lower the temperature and resist policies that divide people. He says
+        he will continue that work if voters give him another term.
+      sources: [*l3_hakeem]
+    platform:
+      - category: taxes
+        text: "Expand property tax relief for veterans."
+        sources: [*l3_hakeem]
+      - category: education
+        text: "Keep focusing on education; helped pass a law requiring Black history to be taught to students in grades five through eight."
+        sources: [*l3_hakeem]
+      - category: health_care
+        text: "Focus on health care access and strengthen consumer protections in insurance programs."
+        sources: [*l3_hakeem]
+      - category: public_safety
+        text: "Restore voting and employment rights for people with past felony convictions, and tighten oversight of kratom and nitrous oxide to limit youth access."
+        sources: [*l3_hakeem]
+      - category: abortion
+        text: "Revisit the state's abortion laws to add exceptions for rape, incest, and the life of the mother."
+        sources: [*l3_hakeem]
+      - category: government
+        text: "Create a real-time tracking system to protect children in foster care, and an emergency family medical leave program for state employees."
+        sources: [*l3_hakeem]
+    arguments:
+      - stance: for
+        text: >-
+          Points to state money he secured for the district, including $7 million for the Chattanooga Area Food
+          Bank, $10 million for Booker T. Washington State Park, and recurring funding for the Bessie Smith
+          Cultural Center.
+        sources: [*l3_hakeem]
+      - stance: against
+        text: >-
+          An opponent says his campaign took contributions from PACs tied to apartment owners, payday and
+          consumer lenders, and groups backing private school vouchers, and argues those donors work against
+          the district's needs.
+        sources: [*ch_pac]
+
   - name: "Demetrus \"Meechie\" Coonrod"
     ballot_party: Independent
     city: "Chattanooga"
-    why_running: { text: null, sources: [] }
-    platform: []
-    arguments: []
+    incumbent: false
+    website: null
+    bio_facts:
+      - { text: "Served two terms on the Chattanooga City Council, from 2017 to 2025.", sources: [*lookout28, *ch_launch] }
+      - { text: "B.A. in sociology from the University of Tennessee at Chattanooga; Leadership Chattanooga class of 2019 and Leadership Tennessee Signature Program Class X.", sources: [*ch_launch] }
+      - { text: "Second campaign for this seat; she also ran in 2024.", sources: [*lookout28] }
+    why_running:
+      text: >-
+        She says District 28 needs a representative who knows its neighborhoods and can turn residents'
+        concerns into policy, not one who simply holds a seat in Nashville. She describes the campaign as being
+        for struggling families, seniors on fixed incomes, people in recovery, and returning citizens seeking a
+        second chance.
+      sources: [*ch_launch]
+    platform:
+      - category: economy
+        text: "Expand economic opportunity and support small businesses and workers whose paychecks are not keeping up."
+        sources: [*ch_launch]
+      - category: taxes
+        text: "Eliminate the state sales tax on groceries by making out-of-state corporations pay more."
+        sources: [*ch_pac]
+      - category: cost_of_living
+        text: "Address housing and food insecurity and lower costs for families, including rising rent."
+        sources: [*ch_launch, *ch_pac]
+      - category: education
+        text: "Protect public school classrooms and give neighborhood public schools more resources."
+        sources: [*ch_pac]
+      - category: health_care
+        text: "Protect access to affordable health care and prescription drugs."
+        sources: [*ch_launch]
+      - category: public_safety
+        text: "Strengthen pathways for people returning from incarceration."
+        sources: [*ch_launch]
+      - category: government
+        text: "Demand more transparency and accountability from government; refuses corporate PAC contributions."
+        sources: [*ch_launch, *ch_pac]
+    arguments:
+      - stance: for
+        text: >-
+          Two terms on the city council, plus work with lawmakers and advocates on nearly 30 policy initiatives in
+          areas such as reentry, foster and kinship care, and health care access.
+        sources: [*ch_launch]
+      - stance: for
+        text: >-
+          Refuses corporate PAC money and says her only obligation would be to the people of the district.
+        sources: [*ch_pac]
+
   - name: "Johnny Horne"
     ballot_party: Independent
     city: "Chattanooga"
-    why_running: { text: null, sources: [] }
-    platform: []
+    incumbent: false
+    website: "https://www.friendsofjohnnyhorne.com/"
+    bio_facts:
+      - { text: "Lifelong resident of Chattanooga.", sources: [*lookout28] }
+      - { text: "Vietnam veteran.", sources: [*jh_gallery] }
+    why_running:
+      text: >-
+        His campaign says he wants to make sure local voices are heard at the Capitol and to pursue transparent
+        government that serves every citizen with dignity.
+      sources: [*jh_home]
+    platform:
+      - category: economy
+        text: "Reduce regulatory burdens so small businesses can grow and create stable jobs."
+        sources: [*jh_home]
+      - category: taxes
+        text: "Manage state money responsibly through balanced budgets and less waste."
+        sources: [*jh_home]
+      - category: education
+        text: "Support local control and parental choice in education, and give teachers the tools they need."
+        sources: [*jh_home]
+      - category: health_care
+        text: "Support transparent, affordable health care that improves access."
+        sources: [*jh_home]
+      - category: public_safety
+        text: "Give local law enforcement the resources and legislative support it needs."
+        sources: [*jh_home]
+      - category: infrastructure
+        text: "Strengthen transit and utilities to keep up with population growth."
+        sources: [*jh_home]
     arguments: []
-last_verified: 2026-10-13
+
+last_verified: 2026-10-16
