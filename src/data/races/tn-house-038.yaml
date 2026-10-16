@@ -34,14 +34,14 @@ candidates:
       - { text: "Pickett County Executive from 1994 to 1998.", sources: [*cga_h38, *bp_keisling] }
       - { text: "Insurance business owner (president of Keisling Insurance); Pickett County High School graduate who attended Belmont University.", sources: [*kk_about, *cga_h38, *bp_keisling] }
       - { text: "Named Legislator of the Year by the Upper Cumberland Development District in 2024 and 2025, among other legislative awards.", sources: [*cga_h38] }
-      - { text: "House sponsor of a 2026 bill to designate the Big South Fork of the Cumberland River in Scott County a Class II scenic river and bar new landfill permits in such a county; it passed the Senate 31-0 and failed 7-7 in the House Agriculture & Natural Resources Committee.", sources: [*hb2202] }
+      - { text: "House sponsor of a 2026 bill that, as amended in the Senate, would designate the Big South Fork of the Cumberland River in Scott County a Class II scenic river and bar new landfill permits in that county; the Senate version passed 31-0 and the House bill failed 7-7 in the Agriculture & Natural Resources Committee.", sources: [*hb2202] }
     why_running: { text: null, sources: [] }
     platform:
       - category: economy
         text: "As a small business owner, cut through the red tape that hinders business."
         sources: [*kk_issues]
       - category: taxes
-        text: "Reduce taxes and oppose over-taxation of residents and businesses; points to helping balance the state budget every year since 2010."
+        text: "Reduce taxes and oppose over-taxation of residents and businesses; points to helping balance the state budget twelve times since 2010."
         sources: [*kk_issues]
       - category: education
         text: "Support local schools, including expanded career and technical education."
@@ -74,8 +74,9 @@ candidates:
         sources: [*kk_recovery]
       - stance: against
         text: >-
-          Scott County residents organizing against a proposed out-of-state waste landfill said in 2025 that they
-          had little success getting help from him, even as the area's state senator wrote to regulators for them.
+          In a September 2025 news report, Scott County residents organizing against a proposed landfill that would
+          import out-of-state waste said they had little luck getting help from him, while the area's state senator
+          had written to regulators on their behalf.
         sources: [*wpln_landfill]
 
   - name: "Seth McMillan"
@@ -84,7 +85,7 @@ candidates:
     incumbent: false
     website: "https://www.electmcmillan.com"
     bio_facts:
-      - { text: "Certified public accountant who owns a CPA firm; cites about 25 years in public accounting and corporate leadership, including audit work at large accounting firms.", sources: [*bp_mcmillan, *br_mcmillan] }
+      - { text: "Certified public accountant who owns a CPA firm; cites about 25 years in public accounting and corporate leadership.", sources: [*bp_mcmillan] }
       - { text: "Graduate of Cumberland County High School; bachelor's degree in accounting from the University of Memphis (2001).", sources: [*bp_mcmillan, *br_mcmillan] }
       - { text: "Unopposed in the August 2026 primary.", sources: [*bp_mcmillan] }
     why_running:
@@ -95,10 +96,10 @@ candidates:
       sources: [*sm_home, *lookout38]
     platform:
       - category: economy
-        text: "Once housing supply catches up, work with economic development boards and county leaders to attract higher-paying small businesses and remote workers, aiming for local jobs paying more than $25 an hour; supports the Tennessee Waste to Jobs Act."
+        text: "Says voters want more local jobs paying over $25 an hour; once housing supply catches up, work with economic development boards and county leaders to attract higher-earning small businesses and remote workers. Lists support for the Tennessee Waste To Jobs Act."
         sources: [*bp_mcmillan, *sm_home]
       - category: taxes
-        text: "Review state laws that may be adding to inflation, such as gas or grocery taxes, for temporary relief, and raise public budgets in step with rising costs."
+        text: "Review state laws that may be adding to inflation, such as gas or grocery taxes, for temporary relief, and have public budgets rise by a similar percentage as living costs rise."
         sources: [*bp_mcmillan]
       - category: cost_of_living
         text: "Set county-by-county goals to add two-bedroom rentals, such as 1,000 more in Scott County, to shorten waiting lists and slow rent increases."
@@ -112,8 +113,8 @@ candidates:
     arguments:
       - stance: for
         text: >-
-          Brings about 25 years of accounting and corporate leadership experience and pledges to question whether
-          every bill is transparent and keeps the trust of constituents.
+          Brings about 25 years of public accounting and corporate leadership experience and pledges to question
+          whether any bill or initiative is transparent, to keep constituents' trust.
         sources: [*bp_mcmillan]
 
 last_verified: 2026-10-16
