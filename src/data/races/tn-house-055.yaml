@@ -1,23 +1,115 @@
-# Seeded from the Secretary of State's certified candidate list by
-# scripts/seed-from-certified-list.py. research_status: pending —
-# platforms and arguments not yet compiled.
+# Tennessee House, District 55 (south central Davidson County, including Berry Hill and Belmont-Hillsboro) —
+# Rep. John Ray Clemmons, in office since 2014, faces Jayla Thomas.
+# Candidate order follows the Secretary of State's certified candidate list.
+_sources:
+  lookout55: &lookout55 { url: "https://tennesseelookout.com/voter-guides/contests/house-district-55/", title: "Tennessee House of Representatives, 55th District voter guide (Tennessee Lookout)", accessed: 2026-10-16 }
+  jt_home: &jt_home { url: "https://www.jaylat4tennessee.com/", title: "Jayla Thomas for Tennessee State Representative District 55 Nashville (Thomas campaign)", accessed: 2026-10-16 }
+  jt_about: &jt_about { url: "https://www.jaylat4tennessee.com/about-jayla", title: "About Jayla (Thomas campaign)", accessed: 2026-10-16 }
+  jt_issues: &jt_issues { url: "https://www.jaylat4tennessee.com/issues", title: "Policy Priorities & Issues (Thomas campaign)", accessed: 2026-10-16 }
+  jt_faq: &jt_faq { url: "https://www.jaylat4tennessee.com/faq", title: "FAQ (Thomas campaign)", accessed: 2026-10-16 }
+  cga_h55: &cga_h55 { url: "https://wapp.capitol.tn.gov/apps/legislatorinfo/member.aspx?district=H55", title: "Representative John Ray Clemmons (Tennessee General Assembly)", accessed: 2026-10-16 }
+  bp_clemmons: &bp_clemmons { url: "https://ballotpedia.org/John_Ray_Clemmons", title: "John Ray Clemmons (Ballotpedia)", accessed: 2026-10-16 }
+  hb0030: &hb0030 { url: "https://wapp.capitol.tn.gov/apps/BillInfo/Default.aspx?BillNumber=HB0030&GA=114", title: "HB0030 bill information (Tennessee General Assembly)", accessed: 2026-10-16 }
+  jrc_home: &jrc_home { url: "https://johnrayfortennessee.com/", title: "Home (John Ray Clemmons campaign)", accessed: 2026-10-16 }
+  jrc_about: &jrc_about { url: "https://johnrayfortennessee.com/about/", title: "About (John Ray Clemmons campaign)", accessed: 2026-10-16 }
+  jrc_policy: &jrc_policy { url: "https://johnrayfortennessee.com/policy-priorities/", title: "Policy Priorities (John Ray Clemmons campaign)", accessed: 2026-10-16 }
+
 id: tn-house-055
 office: "Tennessee House, District 55"
 level: state_house
 district: 55
-research_status: pending
+research_status: complete
 candidate_list_source: "https://sos-prod.tnsosgovfiles.com/s3fs-public/document/TNHouse_Nov2026.pdf"
+
 candidates:
   - name: "Jayla Thomas"
     ballot_party: Republican
     city: "Nashville"
-    why_running: { text: null, sources: [] }
-    platform: []
-    arguments: []
+    incumbent: false
+    website: "https://www.jaylat4tennessee.com"
+    bio_facts:
+      - { text: "Commissioner on Nashville's Affordable Housing Trust Fund.", sources: [*lookout55, *jt_about] }
+      - { text: "First campaign for public office.", sources: [*lookout55] }
+      - { text: "Holds a degree in biological sciences; has worked in business consulting, mergers and acquisitions, and energy infrastructure.", sources: [*jt_about, *jt_home] }
+      - { text: "Born and raised in Las Vegas and educated in New York; a mother of two now raising her family in Nashville.", sources: [*jt_home, *jt_about] }
+    why_running:
+      text: >-
+        She says she is running because she has spent her career solving practical problems for small business
+        owners, and that Nashville's growth has outpaced its infrastructure and accountability while longtime
+        residents are priced out. She says the district needs someone who listens, collaborates and gets results
+        rather than a career politician.
+      sources: [*jt_home, *jt_about]
+    platform:
+      - category: economy
+        text: "Give high school students, by their third year, the option of apprenticeships, mentorships, industry certifications and on-the-job training in trades, farming, manufacturing, energy and technology; protect workers from being replaced by AI without safeguards, retraining or transparency."
+        sources: [*jt_issues]
+      - category: taxes
+        text: "Cap property tax increases on owner-occupied primary homes now, and move toward removing property taxes for homeowners 65 and older while replacing the lost revenue without shifting it onto working families."
+        sources: [*jt_issues]
+      - category: cost_of_living
+        text: "Bar electric utilities from raising rates on homes and businesses because of power demand from AI infrastructure and data centers, which should pay for their own energy use and grid upgrades; expand housing supply while protecting affordability."
+        sources: [*jt_issues, *jt_faq]
+      - category: education
+        text: "Reform the state's voucher program with income guidelines, full transparency on where funds go, financial and academic oversight and real-time enrollment tracking; work to fix public schools and expand classical education models in public and charter schools."
+        sources: [*jt_issues]
+      - category: infrastructure
+        text: "Pursue an energy strategy that uses coal where reliable, solar where efficient, and nuclear power as the long-term backbone, starting nuclear workforce training and investment now."
+        sources: [*jt_issues]
+    arguments:
+      - stance: for
+        text: >-
+          She brings experience in business consulting and energy infrastructure, and promises to listen,
+          collaborate and focus on results for the district instead of political fighting.
+        sources: [*jt_home, *jt_about]
+
   - name: "John Ray Clemmons"
     ballot_party: Democratic
     city: "Nashville"
-    why_running: { text: null, sources: [] }
-    platform: []
-    arguments: []
-last_verified: 2026-10-13
+    incumbent: true
+    website: "https://johnrayfortennessee.com"
+    bio_facts:
+      - { text: "State representative for District 55 since November 2014; House member of the 109th through 114th General Assemblies.", sources: [*cga_h55, *jrc_about, *bp_clemmons] }
+      - { text: "Chair of the House Democratic Caucus since November 2022.", sources: [*jrc_about, *lookout55, *cga_h55] }
+      - { text: "Member of the House Calendar & Rules Committee and the Government Operations Committee.", sources: [*cga_h55] }
+      - { text: "Attorney and Rule 31 listed mediator; co-founded a Nashville civil litigation firm in 2013.", sources: [*jrc_about, *cga_h55] }
+      - { text: "J.D. from the University of Memphis law school (2006); B.A. in history from Columbia University (1999); graduate of Lebanon High School.", sources: [*cga_h55, *jrc_about] }
+      - { text: "Former member of the Tennessee Civil Service Commission (2009-2012) and the Metro Board of Fair Commissioners (2012-2014); former president of Belmont-Hillsboro Neighbors.", sources: [*jrc_about, *cga_h55] }
+      - { text: "Ran for mayor of Nashville in 2019.", sources: [*bp_clemmons] }
+      - { text: "Sponsored HB0030, enacted in 2026 as Public Chapter 685, letting English learners receive the same language help on state tests that they receive in class.", sources: [*hb0030] }
+    why_running:
+      text: null
+      sources: []
+    platform:
+      - category: economy
+        text: "Recruit companies that offer high-paying jobs and good benefits, keep supporting local businesses and entrepreneurs, and ensure equal pay for equal work."
+        sources: [*jrc_policy]
+      - category: cost_of_living
+        text: "Invest the state's growing budget in families and lower the cost of living, pointing to rising health care costs and some of the nation's highest grocery taxes."
+        sources: [*jrc_policy]
+      - category: education
+        text: "Invest in public schools and raise teacher pay; oppose vouchers, privatizing public education, the third-grade retention law and over-reliance on standardized testing."
+        sources: [*jrc_policy]
+      - category: health_care
+        text: "Expand Medicaid using federal funds, broaden mental health and substance abuse services, and legalize medical marijuana while end excessive punishments and prison sentences for simple possession."
+        sources: [*jrc_policy]
+      - category: infrastructure
+        text: "Build regional and interstate commuter rail and other public transit for congested southeast Nashville and I-24, oppose toll lanes, and invest in aging roads, bridges, wastewater systems and rural broadband."
+        sources: [*jrc_policy]
+      - category: environment
+        text: "Act now on climate change and protect clean air, water and soil."
+        sources: [*jrc_policy]
+      - category: guns
+        text: "Pass laws requiring responsible gun ownership, limiting firearms to people who are not a threat to themselves or others, and addressing gun thefts from cars."
+        sources: [*jrc_policy]
+      - category: abortion
+        text: "Keep government out of decisions between a woman and her doctor; opposes state law denying the legal choice to end a pregnancy even when a woman's life is at risk or in cases of rape or incest, and says access to contraception and fertility treatment is in jeopardy."
+        sources: [*jrc_policy]
+    arguments:
+      - stance: for
+        text: >-
+          Has represented the district since 2014; he says he passed a law in his first term to help schools
+          recruit and hire highly qualified administrators, and that his mental health work led the state to
+          renew its focus on mental health parity.
+        sources: [*jrc_policy, *jrc_about]
+
+last_verified: 2026-10-16
