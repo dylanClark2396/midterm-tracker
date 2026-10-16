@@ -1,5 +1,5 @@
 # Tennessee House, District 40 (Cannon, DeKalb, Jackson and Smith counties and part of Wilson County) —
-# Rep. Michael Hale, in office since 2022, faces Daniel Hawthorne in a 2024 rematch.
+# Rep. Michael Hale, in office since 2022, faces Daniel Hawthorne in a rematch of 2024.
 # Candidate order follows the Secretary of State's certified candidate list.
 _sources:
   lookout40: &lookout40 { url: "https://tennesseelookout.com/voter-guides/contests/house-district-40/", title: "Tennessee House of Representatives, 40th District voter guide (Tennessee Lookout)", accessed: 2026-10-15 }
@@ -35,12 +35,12 @@ candidates:
       - { text: "Opened DeKalb Funeral Chapel in 1999 after attending mortuary college; associate degree from John A. Gupton Mortuary College; also a farmer.", sources: [*mh_about, *cga_h40, *bp_hale] }
       - { text: "Born and raised in DeKalb County; has pastored churches in DeKalb and Warren counties; chairs the Smithville Housing Authority Board.", sources: [*mh_about, *cga_h40] }
       - { text: "House sponsor of a 2026 law (Public Chapter 924) letting local school boards and charter schools allow displays of the Ten Commandments, part of the Declaration of Independence, and the preamble to the U.S. Constitution in school buildings.", sources: [*hb0047, *tc_story] }
-      - { text: "Voted against House passage of a 2026 bill on verifying students' citizenship or immigration status at public school enrollment.", sources: [*hb0793, *lookout40] }
+      - { text: "On a 2026 bill (SB0836/HB0793) requiring public school students to produce documentation of citizenship or immigration status at enrollment, voted no in the House Finance, Ways and Means Committee (March 10), yes on the previous-question motion, and no on House passage (passed 70–25, March 16).", sources: [*hb0793, *lookout40] }
     why_running: { text: null, sources: [] }
     platform:
       - category: economy
         text: "Support local small businesses and work to give people in the community access to quality jobs."
-        sources: [*mh_issues, *mh_home]
+        sources: [*mh_issues]
       - category: taxes
         text: "Keep taxes low, oppose reckless spending, and keep government small, efficient and effective."
         sources: [*mh_issues]
@@ -48,7 +48,7 @@ candidates:
         text: "Give every Tennessee student access to a world-class education, support students and teachers, and give parents a voice in their child's education."
         sources: [*mh_issues]
       - category: guns
-        text: "Protect Second Amendment rights and stand up for law-abiding gun owners."
+        text: "Treat Second Amendment rights as sacred and stand up for law-abiding gun owners."
         sources: [*mh_issues]
       - category: abortion
         text: "Says he is 100% pro-life and that every life is precious from the moment of conception."
@@ -84,7 +84,7 @@ candidates:
       sources: [*dh_bio, *dh_platform]
     platform:
       - category: taxes
-        text: "Avoid raising taxes on communities he says are already taxed enough, and use tax revenue from legal marijuana to increase funding for rural public schools."
+        text: "Says local communities are already taxed enough, and wants tax revenue from legalized marijuana used to increase funding for rural public schools."
         sources: [*dh_bio, *bp_hawthorne]
       - category: education
         text: "Oppose charter schools and school vouchers, saying tax dollars should not go to private entities with little accountability; give rural students the same opportunities as better-funded urban schools and reinvest in vocational and technical training."
@@ -96,7 +96,7 @@ candidates:
       - stance: for
         text: >-
           A public school teacher for more than a decade, he says the core duty of the office is voting for laws
-          that help the people who elected him rather than following party politics.
+          that help the people who elected him.
         sources: [*dh_home, *bp_hawthorne]
 
 last_verified: 2026-10-16
