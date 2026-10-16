@@ -10,7 +10,15 @@ const nextArg = process.argv.indexOf('--next');
 const NEXT = nextArg > -1 ? Number(process.argv[nextArg + 1]) : 6;
 const run = (cmd, args) => execFileSync(cmd, args, { encoding: 'utf8', stdio: ['ignore', 'pipe', 'inherit'] });
 
-run('git', ['fetch', '-q', 'origin']);
+// Agent worktrees share this repo's refs, so a concurrent fetch can fail with "incorrect old value"; retry.
+for (let attempt = 1; ; attempt++) {
+  try {
+    run('git', ['fetch', '-q', 'origin']);
+    break;
+  } catch (err) {
+    if (attempt === 3) throw err;
+  }
+}
 const files = run('git', ['ls-tree', '--name-only', 'origin/main', 'src/data/races/'])
   .split('\n')
   .filter((f) => f.endsWith('.yaml'));
