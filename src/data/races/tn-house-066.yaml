@@ -7,6 +7,8 @@ _sources:
   sk_home: &sk_home { url: "http://www.sabikumar.com/", title: "Home (Kumar campaign)", accessed: 2026-10-16 }
   sk_about: &sk_about { url: "http://www.sabikumar.com/about-1.html", title: "About (Kumar campaign)", accessed: 2026-10-16 }
   sk_issues: &sk_issues { url: "http://www.sabikumar.com/issues.html", title: "Issues (Kumar campaign)", accessed: 2026-10-16 }
+  sk_pubs: &sk_pubs { url: "http://www.sabikumar.com/publications.html", title: "Publications, incl. \"Will Memphis Benefit from Redistricting?\" (Kumar campaign)", accessed: 2026-10-16 }
+  hb1710: &hb1710 { url: "https://wapp.capitol.tn.gov/apps/BillInfo/Default.aspx?BillNumber=HB1710&GA=114", title: "HB 1710 bill history, public benefits verification (Tennessee General Assembly)", accessed: 2026-10-16 }
   lookout66: &lookout66 { url: "https://tennesseelookout.com/voter-guides/contests/house-district-66/", title: "Tennessee House of Representatives, 66th District voter guide (Tennessee Lookout)", accessed: 2026-10-16 }
   smokey_debate: &smokey_debate { url: "https://smokeybarn.com/rep-kumar-meet-me-on-a-debate-stage", title: "Rep. Kumar, Meet Me on a Debate Stage (Smokey Barn News, paid announcement by the Bavendam campaign)", accessed: 2026-10-16 }
   tb_debate: &tb_debate { url: "https://www.bavendam4robco.com/news/representative-sabi-kumar-declines-to-debate", title: "Representative Sabi Kumar Declines to Debate (Bavendam campaign)", accessed: 2026-10-16 }
@@ -43,7 +45,7 @@ candidates:
       sources: [*sk_home]
     platform:
       - category: education
-        text: "Support parental school choice alongside continued increases in public school funding and teacher pay; keep students safe at school."
+        text: "Support parental school choice and policies that give all students the best education; keep students safe at school."
         sources: [*sk_issues]
       - category: taxes
         text: "Keep taxes low and budgets balanced."
@@ -55,7 +57,7 @@ candidates:
         text: "Immigration must be legal, and immigration laws must be respected and enforced."
         sources: [*sk_issues]
       - category: abortion
-        text: "Protect the life of the unborn."
+        text: "Support and sustain the life of the unborn."
         sources: [*sk_issues]
       - category: government
         text: "Keep government small, efficient and non-intrusive, empowering citizens, civic groups, nonprofits and faith-based organizations to meet community needs."
@@ -78,33 +80,34 @@ candidates:
         sources: [*sk_issues, *cga_h66]
       - stance: against
         text: >-
-          He chairs the committee that oversees TennCare, yet the state still has not expanded it, leaving nearly
-          300,000 Tennesseans without coverage.
+          His opponent says that as chair of the Insurance Committee, which oversees the TennCare subcommittee, he
+          has let the state go without expanding TennCare, leaving nearly 300,000 Tennesseans without coverage.
+        sources: [*smokey_debate, *cga_h66]
+      - stance: against
+        text: >-
+          He co-sponsored a 2026 bill requiring local governments to verify immigration status for public benefits.
+          His opponent says it makes county health workers check parents bringing children in for vaccines, which
+          she warns will scare families away from clinics.
+        sources: [*smokey_debate, *hb1710]
+      - stance: against
+        text: >-
+          His opponent says he has raised the dangerous Highway 76 and New Hall Road intersection with TDOT since
+          2022 without result: there is still no funding or date for a fix after eight crashes there this year.
         sources: [*smokey_debate]
       - stance: against
         text: >-
-          He co-sponsored a 2026 bill requiring county health workers to check the immigration status of parents
-          bringing children in for vaccines, which critics warn would scare families away from clinics.
-        sources: [*smokey_debate]
+          His opponent faults his June op-ed backing the new congressional map that splits Memphis among three
+          districts, which he argued would give the city more influence; she says it leaves its voters outvoted.
+        sources: [*smokey_debate, *sk_pubs]
       - stance: against
         text: >-
-          He has raised the dangerous Highway 76 and New Hall Road intersection with TDOT since 2022, yet there is
-          still no funding or date for a fix after eight crashes there this year.
-        sources: [*smokey_debate]
-      - stance: against
-        text: >-
-          He argued that splitting majority-Black Memphis among three congressional districts would benefit the city,
-          even though by his own figures those voters would fall from 63% of one district to 31% of each of three.
-        sources: [*smokey_debate]
-      - stance: against
-        text: >-
-          He has not agreed to debate his opponent before the election, denying voters a chance to hear both
-          candidates answer questions face to face.
+          His opponent says he has declined to debate her before the election, denying voters a chance to hear both
+          candidates face to face; a local news site reported he had not answered its own requests about a debate.
         sources: [*tb_debate, *smokey_debate]
       - stance: against
         text: >-
-          Asked in 2025 whether cuts to federal medical research worried him as a doctor, he said they did not,
-          though patients depend on that research for better treatments.
+          His opponent says that when a reporter asked him in 2025 whether cuts to federal medical research worried
+          him as a doctor, he said they did not, though patients depend on that research.
         sources: [*smokey_debate]
 
   - name: "Tamara Bavendam"
@@ -120,7 +123,7 @@ candidates:
     why_running:
       text: >-
         She says she is running to represent all of District 66, putting people over party, because she is worried
-        about the future being left to the next generation. Her priorities are strong public schools, health care
+        about the future we are leaving behind. Her priorities are strong public schools, health care
         for everyone and affordable living.
       sources: [*bp_bavendam, *tb_about]
     platform:
@@ -161,8 +164,8 @@ candidates:
         sources: [*tb_endorse, *tb_about]
       - stance: for
         text: >-
-          She has offered to debate in public before a neutral moderator and pledges to explain every vote to
-          constituents, even when they disagree.
+          She has offered to debate in public before a neutral moderator and says that, while she cannot please
+          everyone, she will explain why she votes the way she does.
         sources: [*tb_debate, *bp_bavendam]
 
 last_verified: 2026-10-16
