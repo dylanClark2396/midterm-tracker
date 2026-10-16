@@ -1,23 +1,97 @@
-# Seeded from the Secretary of State's certified candidate list by
-# scripts/seed-from-certified-list.py. research_status: pending —
-# platforms and arguments not yet compiled.
+# Tennessee House, District 65 (southern and western Williamson County: Fairview and parts of Franklin and
+# Thompson's Station) — Rep. Lee Reeves, in office since 2024, faces Julian Herbert Pierre-Griffin.
+# Candidate order follows the Secretary of State's certified candidate list.
+_sources:
+  cga_h65: &cga_h65 { url: "https://wapp.capitol.tn.gov/apps/legislatorinfo/member.aspx?district=H65", title: "Representative Lee Reeves (Tennessee General Assembly)", accessed: 2026-10-16 }
+  bp_reeves: &bp_reeves { url: "https://ballotpedia.org/Lee_Reeves", title: "Lee Reeves (Ballotpedia)", accessed: 2026-10-16 }
+  bp_pg: &bp_pg { url: "https://ballotpedia.org/Julian_Pierre-Griffin", title: "Julian Pierre-Griffin (Ballotpedia)", accessed: 2026-10-16 }
+  lookout65: &lookout65 { url: "https://tennesseelookout.com/voter-guides/contests/house-district-65/", title: "Tennessee House of Representatives, 65th District voter guide (Tennessee Lookout)", accessed: 2026-10-16 }
+  lr_home: &lr_home { url: "https://www.leereeves.com/", title: "Lee Reeves for State House (Reeves campaign)", accessed: 2026-10-16 }
+  wh_2nd: &wh_2nd { url: "https://www.williamsonherald.com/news/local_news/rep-lee-reeves-seeks-2nd-term-in-tennessee-house/article_dae1feec-65f8-4c74-9a0c-6df51be4a441.html", title: "Rep. Lee Reeves seeks 2nd term in Tennessee House (Williamson Herald)", accessed: 2026-10-16 }
+  wh_foreman: &wh_foreman { url: "https://www.williamsonherald.com/news/local_news/foreman-making-another-run-for-district-65/article_d8334898-5949-4b8b-8464-7fa7a46daab1.html", title: "Foreman Making Another Run for District 65 (Williamson Herald)", accessed: 2026-10-16 }
+  ww65: &ww65 { url: "https://williamsonwrong.substack.com/p/round-two-in-district-65", title: "Round Two in District 65 (Williamson Wrong)", accessed: 2026-10-16 }
+  hb0749: &hb0749 { url: "https://wapp.capitol.tn.gov/apps/BillInfo/Default.aspx?BillNumber=HB0749&GA=114", title: "HB0749 bill information (Tennessee General Assembly)", accessed: 2026-10-16 }
+
 id: tn-house-065
 office: "Tennessee House, District 65"
 level: state_house
 district: 65
-research_status: pending
+research_status: complete
 candidate_list_source: "https://sos-prod.tnsosgovfiles.com/s3fs-public/document/TNHouse_Nov2026.pdf"
+
 candidates:
   - name: "Lee Reeves"
     ballot_party: Republican
     city: "Franklin"
-    why_running: { text: null, sources: [] }
-    platform: []
-    arguments: []
+    incumbent: true
+    website: "https://www.leereeves.com/"
+    bio_facts:
+      - { text: "State representative for District 65 since 2024; House member of the 114th General Assembly.", sources: [*cga_h65, *lookout65] }
+      - { text: "Member of the House Education Committee, the Finance, Ways and Means Committee and Subcommittee, and the K-12 Subcommittee.", sources: [*cga_h65] }
+      - { text: "Attorney whose career includes real estate law and investment; B.A. from Emory University and J.D. from Georgetown University Law Center.", sources: [*lr_home, *bp_reeves, *cga_h65] }
+      - { text: "Franklin Board of Zoning Appeals commissioner, 2023-2024; past president of the Franklin Lions Club.", sources: [*cga_h65] }
+      - { text: "Sponsored a 2025 law making it a misdemeanor to drive in Tennessee on an out-of-state license issued only to people without lawful immigration status.", sources: [*hb0749] }
+      - { text: "Ran in the 2025 special primary for the 7th Congressional District and withdrew before the October 7 vote.", sources: [*wh_2nd, *wh_foreman] }
+    why_running:
+      text: >-
+        He says he has more work to do in a second term, including passing legislation and opposing bills he does
+        not support, and that fighting for Williamson County and its towns of Franklin, Fairview and Thompson's
+        Station remains his priority. He says government works best when local and state leaders work together.
+      sources: [*wh_2nd]
+    platform:
+      - category: taxes
+        text: "Keep taxes low, balance budgets and guard taxpayer money from waste."
+        sources: [*lr_home]
+      - category: education
+        text: "Expand the state's school choice program so more families can reach education options beyond their ZIP code."
+        sources: [*lr_home]
+      - category: health_care
+        text: "Make Tennessee the healthiest state in the nation by focusing on prevention before chronic disease takes hold."
+        sources: [*lr_home]
+      - category: immigration
+        text: "Act against illegal immigration within the state while backing federal efforts to make legal immigration faster and less expensive."
+        sources: [*wh_2nd]
+      - category: infrastructure
+        text: "Keep working on improvements to Mack Hatcher Parkway with the City of Franklin and the state transportation department."
+        sources: [*wh_2nd]
+      - category: government
+        text: "Require public entities that hire lobbyists to disclose it and follow the same reporting rules as private organizations."
+        sources: [*lr_home]
+    arguments:
+      - stance: for
+        text: >-
+          He says 13 of his bills became law in his first two sessions, and he was named one of the Tennessee
+          Journal's freshman legislators of the year.
+        sources: [*wh_2nd, *lr_home]
+      - stance: for
+        text: >-
+          He says he helped secure $3 million for the state's battlefield preservation fund and an extra $15
+          million for the state's share of widening Southeast Mack Hatcher Parkway.
+        sources: [*wh_2nd]
+      - stance: against
+        text: >-
+          A primary challenger said he has not been available to constituents and that the seat should not go to
+          someone seeking a next political promotion, pointing to his run for Congress during his first term.
+        sources: [*wh_foreman]
+      - stance: against
+        text: >-
+          A local commentary argued that his vote to expand school choice sends public money to private-school
+          tuition in a county whose public schools draw families there, and that his short run for Congress
+          raises questions about his commitment to the seat.
+        sources: [*ww65]
+
   - name: "Julian Herbert Pierre-Griffin"
     ballot_party: Democratic
     city: "Franklin"
+    incumbent: false
+    website: null
+    bio_facts:
+      - { text: "Graduate of the U.S. Air Force Academy; served in the U.S. Air Force from 1986 to 2006.", sources: [*bp_pg, *lookout65] }
+      - { text: "Also holds an associate degree from Southern Illinois University.", sources: [*bp_pg] }
+      - { text: "Owns Battleground South Cigar Lounge.", sources: [*lookout65] }
+      - { text: "First campaign for public office.", sources: [*lookout65] }
     why_running: { text: null, sources: [] }
     platform: []
     arguments: []
-last_verified: 2026-10-13
+
+last_verified: 2026-10-16
