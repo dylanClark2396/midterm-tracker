@@ -41,7 +41,7 @@ candidates:
       - { text: "Has owned a marketing and direct-mail consulting business for more than 30 years and has been a real estate agent and affiliate broker for more than 25 years; attended Middle Tennessee State University.", sources: [*tr_about, *cga_h34] }
       - { text: "Born in St. Petersburg, Florida; raised in Murfreesboro and Smyrna. Past member of the Rutherford County Correctional Workhouse Board and County Equalization Board, and past member of his party's state executive committee.", sources: [*tr_about] }
       - { text: "House sponsor of a 2020 law providing that private licensed child-placing agencies cannot be required to take part in foster or adoption placements that violate their written religious or moral convictions.", sources: [*hb0836] }
-      - { text: "House sponsor of a 2021 law requiring buildings open to the public to post a notice at restroom entrances if they let either biological sex use any multi-person restroom.", sources: [*hb1182] }
+      - { text: "House sponsor of a 2021 law requiring buildings open to the public to post a notice at restroom entrances if they let a member of either biological sex use any public restroom in the building.", sources: [*hb1182] }
     why_running:
       text: >-
         He says he promised to fight for the values he shares with voters and has kept that promise on abortion,
@@ -65,19 +65,19 @@ candidates:
         text: "Fund highway improvements without tax increases, as in the 2023 state road plan he voted for."
         sources: [*tr_issues]
       - category: guns
-        text: "Will never support legislation that restricts the right to own and carry a firearm; backs open carry and further strengthening gun rights."
+        text: "Will never support legislation that strips the right to own and carry a firearm or the ability to protect one's family; backs open carry and further efforts to strengthen those rights."
         sources: [*tr_issues]
       - category: abortion
         text: "Believes life begins at conception and pledges to protect the unborn at every opportunity."
         sources: [*tr_issues]
       - category: government
-        text: "Keep strengthening election security; he says he led efforts to make Tennessee's election process the most secure in the country."
+        text: "Election security: he says he led the fight to make Tennessee's election process the most secure in the country."
         sources: [*tr_home, *tr_issues]
     arguments:
       - stance: for
         text: >-
-          He says he has backed more than $2 billion in tax cuts, including ending the Hall income tax and cutting
-          the food tax, plus senior property tax relief and the end of vehicle emissions testing.
+          He says he has supported more than $2 billion in tax cuts, voted to end the Hall income tax and cut the
+          food tax, and voted for senior property tax relief and the end of vehicle emissions testing.
         sources: [*tr_issues]
       - stance: for
         text: >-
@@ -86,14 +86,16 @@ candidates:
         sources: [*tr_home, *tr_issues]
       - stance: against
         text: >-
-          A fellow lawmaker said he gave a House committee a misleading answer when he said his 2021 restroom-sign
-          bill carried no fines or penalties; he later said a misdemeanor punishable by jail time could apply.
+          In 2021 a fellow lawmaker said he misled a House committee by saying his restroom-sign bill carried no
+          fines or penalties, after he said a misdemeanor punishable by jail time could apply. He responded that the
+          bill itself set no penalty and that the misdemeanor came from existing building-code law.
         sources: [*ap_signs]
       - stance: against
         text: >-
-          His 2021 resolution to start removal proceedings against a sitting state trial judge over a ruling drew full opposition
-          from state and local bar associations and failed in subcommittee, whose chair warned it would set a bad
-          precedent.
+          His 2021 resolution to start removal proceedings against a state trial judge over an absentee-voting
+          ruling drew full opposition from state and local bar associations and failed in a House subcommittee,
+          whose chair said advancing it would have set a bad precedent. He said the judge had disregarded state law
+          in favor of her own policies.
         sources: [*lookout_lyle]
 
   - name: "Owen Farnsworth"
@@ -102,11 +104,11 @@ candidates:
     incumbent: false
     website: "https://www.owenfarnsworth.com/"
     bio_facts:
-      - { text: "Has lived in Murfreesboro since age 14; graduated from Blackman High School and attended classes at Middle Tennessee State University.", sources: [*bp_farnsworth] }
+      - { text: "Has lived in Murfreesboro since age 14; went to Blackman High School and attended classes at MTSU (Middle Tennessee State University).", sources: [*bp_farnsworth] }
       - { text: "Works at Lowe's.", sources: [*bp_farnsworth] }
     why_running:
       text: >-
-        He says rising grocery prices, hospital closures, unchecked development of rural areas and shrinking wages
+        He says rising grocery prices, hospital closures, reckless development of rural communities and shrinking wages
         convinced him that enough was enough, and that if no one else would fight for people who work hard to pay
         their bills, he had to run for a better Tennessee.
       sources: [*of_policies, *bp_farnsworth]
@@ -133,13 +135,13 @@ candidates:
         text: "Protect access to abortion and family planning."
         sources: [*bp_farnsworth, *of_health]
       - category: agriculture
-        text: "Tax breaks and expanded subsidies for small and first-generation farmers, protect farmland from development, block foreign agricultural interests, and legalize hemp and marijuana farming."
+        text: "Tax breaks and expanded subsidies for small and first-generation farmers, protect farmland from development, block foreign agricultural interests, and legalize hemp farming and marijuana."
         sources: [*of_farms]
     arguments:
       - stance: for
         text: >-
-          He says voters would be backing a young working Tennessean, not a career politician or a wealthy
-          developer, who has lived the cost-of-living pressures he wants to fix.
+          He says voters would be backing a young man who grew up in Middle Tennessee and works for a living, not a
+          career politician or a millionaire developer, and someone who wants everyone to get help when they need it.
         sources: [*of_policies, *bp_farnsworth]
       - stance: for
         text: >-
