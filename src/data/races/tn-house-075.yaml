@@ -1,23 +1,120 @@
-# Seeded from the Secretary of State's certified candidate list by
-# scripts/seed-from-certified-list.py. research_status: pending —
-# platforms and arguments not yet compiled.
+# Tennessee House, District 75 (western and northern Montgomery County, including parts of Clarksville and the
+# Fort Campbell area) — Rep. Michael Lankford, appointed in December 2025, faces Allie Phillips.
+# Candidate order follows the Secretary of State's certified candidate list.
+_sources:
+  cga_h75: &cga_h75 { url: "https://wapp.capitol.tn.gov/apps/legislatorinfo/member.aspx?district=H75", title: "Representative Michael Lankford (Tennessee General Assembly)", accessed: 2026-10-16 }
+  bp_lankford: &bp_lankford { url: "https://ballotpedia.org/Michael_Lankford", title: "Michael Lankford (Ballotpedia)", accessed: 2026-10-16 }
+  hb1463: &hb1463 { url: "https://wapp.capitol.tn.gov/apps/BillInfo/Default.aspx?BillNumber=HB1463&GA=114", title: "HB1463 bill information (Tennessee General Assembly)", accessed: 2026-10-16 }
+  hb1989: &hb1989 { url: "https://wapp.capitol.tn.gov/apps/BillInfo/Default.aspx?BillNumber=HB1989&GA=114", title: "HB1989 bill information (Tennessee General Assembly)", accessed: 2026-10-16 }
+  hb2258: &hb2258 { url: "https://wapp.capitol.tn.gov/apps/BillInfo/Default.aspx?BillNumber=HB2258&GA=114", title: "HB2258 bill information (Tennessee General Assembly)", accessed: 2026-10-16 }
+  hb2328: &hb2328 { url: "https://wapp.capitol.tn.gov/apps/BillInfo/Default.aspx?BillNumber=HB2328&GA=114", title: "HB2328 bill information (Tennessee General Assembly)", accessed: 2026-10-16 }
+  lookout75: &lookout75 { url: "https://tennesseelookout.com/voter-guides/contests/house-district-75/", title: "Tennessee House of Representatives, 75th District voter guide (Tennessee Lookout)", accessed: 2026-10-16 }
+  cn_appointed: &cn_appointed { url: "https://clarksvillenow.com/local/michael-lankford-appointed-to-represent-state-house-district-75-in-tie-breaking-vote/", title: "Michael Lankford appointed to represent state House District 75 in tie-breaking vote (Clarksville Now)", accessed: 2026-10-16 }
+  cn_pitch: &cn_pitch { url: "https://clarksvillenow.com/local/who-will-represent-state-house-district-75-candidates-make-final-pitch-before-vote/", title: "Who will represent state House District 75? Candidates make final pitch before vote (Clarksville Now)", accessed: 2026-10-16 }
+  cn_sworn: &cn_sworn { url: "https://clarksvillenow.com/local/state-rep-michael-lankford-sworn-in-as-tennessee-house-member-for-district-75/", title: "State Rep. Michael Lankford sworn in as Tennessee House member for District 75 (Clarksville Now)", accessed: 2026-10-16 }
+  cn_ml_run: &cn_ml_run { url: "https://clarksvillenow.com/local/state-rep-michael-lankford-running-to-keep-district-75-seat/", title: "State Rep. Michael Lankford running to keep District 75 seat (Clarksville Now)", accessed: 2026-10-16 }
+  cn_picnic: &cn_picnic { url: "https://clarksvillenow.com/local/voters-hear-from-candidates-enjoy-barbecue-music-at-118th-lone-oak-picnic-photos/", title: "Voters hear from candidates, enjoy barbecue, music at 118th Lone Oak Picnic (Clarksville Now)", accessed: 2026-10-16 }
+  ml_home: &ml_home { url: "https://www.lankfordfortn.com/", title: "Michael Lankford for District 75 State Representative (Lankford campaign)", accessed: 2026-10-16 }
+  ml_meet: &ml_meet { url: "https://www.lankfordfortn.com/meet-michael", title: "Meet Michael (Lankford campaign)", accessed: 2026-10-16 }
+  bp_phillips: &bp_phillips { url: "https://ballotpedia.org/Allie_Phillips", title: "Allie Phillips (Ballotpedia)", accessed: 2026-10-16 }
+  cn_ap_launch: &cn_ap_launch { url: "https://clarksvillenow.com/local/allie-phillips-announces-campaign-for-tennessee-house-of-representatives-in-district-75/", title: "Allie Phillips announces campaign for Tennessee House of Representatives in District 75 (Clarksville Now)", accessed: 2026-10-16 }
+  ap_home: &ap_home { url: "https://www.alliep4tn.com/", title: "Allie Phillips for TN State House District 75 (Phillips campaign)", accessed: 2026-10-16 }
+  ap_press: &ap_press { url: "https://www.alliep4tn.com/press-kit", title: "Press Kit (Phillips campaign)", accessed: 2026-10-16 }
+
 id: tn-house-075
 office: "Tennessee House, District 75"
 level: state_house
 district: 75
-research_status: pending
+research_status: complete
 candidate_list_source: "https://sos-prod.tnsosgovfiles.com/s3fs-public/document/TNHouse_Nov2026.pdf"
+
 candidates:
   - name: "Michael Lankford"
     ballot_party: Republican
     city: "Palmyra"
-    why_running: { text: null, sources: [] }
-    platform: []
-    arguments: []
+    incumbent: true
+    website: "https://www.lankfordfortn.com"
+    bio_facts:
+      - { text: "Appointed state representative for District 75 by the Montgomery County Commission on December 8, 2025, after the previous representative died; the county mayor broke a 9-9 tie. Took office January 13, 2026.", sources: [*cn_appointed, *bp_lankford, *lookout75] }
+      - { text: "Montgomery County commissioner for District 6 from 2022 until his 2025 appointment to the House.", sources: [*cga_h75, *ml_meet, *cn_sworn] }
+      - { text: "Member of the House Commerce Committee and the State & Local Government Committee, and of the Business & Utilities, Departments & Agencies, and Public Service subcommittees.", sources: [*cga_h75, *ml_meet] }
+      - { text: "Commercial banker with a local community bank; lives on a farm in Palmyra.", sources: [*ml_meet, *cn_ml_run] }
+      - { text: "Lifelong Montgomery County resident and Clarksville High School graduate; B.S. in agriculture business from Austin Peay State University and M.S. in agriculture business and risk management from the University of Tennessee at Martin.", sources: [*cga_h75, *ml_meet] }
+      - { text: "Graduate of the Leadership Clarksville and Leadership Tennessee NEXT programs.", sources: [*ml_meet, *cga_h75] }
+      - { text: "Sponsored laws enacted in 2026 that let counties create self-financing central business improvement districts, named for his predecessor, and that let Montgomery County join the state's local land bank program.", sources: [*hb2258, *hb2328] }
+      - { text: "Sponsored laws enacted in 2026 recognizing the U.S. Space Force as a distinct branch of the armed forces in state law and lowering Capitol flags to half-staff each December 7 for Pearl Harbor Remembrance Day.", sources: [*hb1989, *hb1463] }
+    why_running:
+      text: >-
+        He says he wants to keep working for District 75, keep building the relationships that bring resources home,
+        and make sure Montgomery County has a strong voice in Nashville and never takes a back seat.
+      sources: [*ml_meet, *cn_ml_run]
+    platform:
+      - category: economy
+        text: "Keep Tennessee's business climate strong; says an environment where businesses and families succeed makes housing, cost of living and education more manageable."
+        sources: [*cn_picnic, *cn_ml_run, *ml_meet]
+      - category: public_safety
+        text: "Support law enforcement and first responders; says a community that isn't safe can't reach its potential."
+        sources: [*cn_ml_run, *ml_meet, *cn_picnic]
+      - category: infrastructure
+        text: "Invest in roads, bridges and infrastructure so they, along with schools and public services, keep pace with Montgomery County's growth."
+        sources: [*ml_home, *ml_meet, *cn_ml_run]
+      - category: agriculture
+        text: "Support the district's farming heritage and protect its rural communities as the county grows."
+        sources: [*ml_home, *ml_meet, *cn_ml_run]
+    arguments:
+      - stance: for
+        text: >-
+          He says his term on the county commission taught him how local decisions land on families, schools,
+          roads, farms and small businesses, and that he carries that perspective to the legislature.
+        sources: [*ml_meet]
+      - stance: for
+        text: >-
+          His campaign says he passed eight pieces of legislation in his first session while building relationships
+          that deliver results for the district.
+        sources: [*ml_meet, *cn_ml_run]
+
   - name: "Allie Phillips"
     ballot_party: Democratic
     city: "Clarksville"
-    why_running: { text: null, sources: [] }
-    platform: []
-    arguments: []
-last_verified: 2026-10-13
+    incumbent: false
+    website: "https://www.alliep4tn.com"
+    bio_facts:
+      - { text: "Ran for District 75 in 2024 and lost to the incumbent, receiving 45.3% of the vote.", sources: [*bp_phillips] }
+      - { text: "One of two finalists for the December 2025 appointment to the seat; lost on a 9-9 tie broken by the county mayor.", sources: [*cn_appointed] }
+      - { text: "Grew up in Ashland City; bachelor's degree from Middle Tennessee State University (2017).", sources: [*bp_phillips] }
+      - { text: "Previously ran an in-home daycare from her home; has also worked in communications.", sources: [*ap_press, *bp_phillips] }
+      - { text: "Lives in Clarksville with her husband and two children.", sources: [*ap_press, *cn_ap_launch] }
+      - { text: "In 2023, said she had to travel out of state for care after learning at 19 weeks that her pregnancy was not viable, which she cited as a reason for running for office.", sources: [*bp_phillips] }
+    why_running:
+      text: >-
+        She says too many Tennesseans are struggling to afford housing, health care and child care while elected
+        officials protect special interests. She says she is running to put people first, make life more affordable,
+        and bring common sense, compassion and accountability to the state House.
+      sources: [*ap_home, *ap_press, *cn_ap_launch]
+    platform:
+      - category: economy
+        text: "Protect workers' rights, including fair pay, safe workplaces and the right to organize without retaliation; push for higher-paying jobs."
+        sources: [*ap_home, *bp_phillips, *cn_pitch]
+      - category: cost_of_living
+        text: "Lower everyday costs for working families, especially housing, health care and child care."
+        sources: [*ap_home, *ap_press, *bp_phillips]
+      - category: education
+        text: "Fully fund public schools and pay educators fairly; oppose private school voucher programs that divert money from local classrooms."
+        sources: [*ap_home, *bp_phillips, *ap_press]
+      - category: infrastructure
+        text: "Invest in roads, bridges, sidewalks, utilities and broadband; expand I-24, complete Highway 374, and invest in commuter rail to Nashville."
+        sources: [*ap_home, *bp_phillips, *cn_pitch, *cn_picnic]
+      - category: abortion
+        text: "In 2023, said she was running to restore abortion access across the state; her 2026 campaign says state policies fail to account for real-life medical emergencies."
+        sources: [*bp_phillips, *ap_press]
+      - category: veterans
+        text: "Ensure veterans can get quality health care close to home, including a better-resourced VA clinic and stronger mental health services."
+        sources: [*ap_home, *cn_pitch]
+    arguments:
+      - stance: for
+        text: >-
+          She says running an in-home daycare gave her firsthand insight into the challenges facing working parents,
+          caregivers and small business owners.
+        sources: [*ap_press]
+
+last_verified: 2026-10-16
