@@ -13,7 +13,7 @@ _sources:
   ms_meet: &ms_meet { url: "https://01599f02-bf49-421b-9afe-a0ff0633b14c.sitesab.com/meet-candidate/", title: "Meet Candidate (Stein campaign)", accessed: 2026-10-16 }
   ms_issues: &ms_issues { url: "https://01599f02-bf49-421b-9afe-a0ff0633b14c.sitesab.com/issues/", title: "Issues (Stein campaign)", accessed: 2026-10-16 }
   ms_bills: &ms_bills { url: "https://01599f02-bf49-421b-9afe-a0ff0633b14c.sitesab.com/proposed-legislation/", title: "Proposed Legislation (Stein campaign)", accessed: 2026-10-16 }
-  gch_stein: &gch_stein { url: "https://www.grundycountyherald.com/news/local-news/2026/10/13/mike-stein-democratic-nominee-for-47th-district-house/", title: "Mike Stein Democratic nominee for 47th District House (Grundy County Herald)", accessed: 2026-10-16 }
+  gch_stein: &gch_stein { url: "https://www.grundycountyherald.com/news/local-news/2026/10/13/mike-stein-democratic-nominee-for-47th-district-house/", title: "Mike Stein, nominee for 47th District House (Grundy County Herald)", accessed: 2026-10-16 }
 
 id: tn-house-047
 office: "Tennessee House, District 47"
@@ -31,7 +31,7 @@ candidates:
     bio_facts:
       - { text: "State representative for District 47 since November 2018; House member of the 111th through 114th General Assemblies.", sources: [*bp_bricken, *cga_h47] }
       - { text: "Vice chair of the House Commerce Committee; also serves on the Fiscal Review and State & Local Government committees and the Business & Utilities and Elections & Campaign Finance subcommittees.", sources: [*cga_h47] }
-      - { text: "Coffee County commissioner for 22 years, including eight years as chairman of the county Budget and Finance Committee.", sources: [*cga_h47, *lookout47, *rb_about] }
+      - { text: "Coffee County commissioner for 22 years, including eight years as chairman of the county Budget and Finance Committee.", sources: [*cga_h47, *lookout47] }
       - { text: "Chief executive officer of Coffee County Bank in Manchester since 2010; certified public accountant and former partner in a Tullahoma accounting firm.", sources: [*rb_about, *cga_h47] }
       - { text: "B.S. in accounting from Auburn University; MBA from Vanderbilt University's Owen School of Management.", sources: [*rb_about, *cga_h47] }
       - { text: "Past chairman of the Coffee County Republican Party.", sources: [*cga_h47] }
@@ -64,7 +64,7 @@ candidates:
         text: "Support Second Amendment rights."
         sources: [*rb_values]
       - category: abortion
-        text: "Pledges to vote pro-life."
+        text: "Pledges to vote against abortion."
         sources: [*rb_values]
     arguments:
       - stance: for
@@ -104,7 +104,7 @@ candidates:
         text: "Create a statewide special-education training certificate for classroom aides with a state-funded $3-an-hour raise, paid for by shifting money from the school voucher program's administration."
         sources: [*ms_bills, *gch_stein]
       - category: health_care
-        text: "Expand Medicaid to close the coverage gap, raise TennCare income limits, let ambulance crews give antibiotics, and expand mental health services in schools and rural areas."
+        text: "Close the health coverage gap, raise TennCare income limits, let ambulance crews give antibiotics, and expand mental health services in schools and rural areas."
         sources: [*ms_issues, *gch_stein]
       - category: public_safety
         text: "Have local police or the TBI, not campus police, lead investigations of rapes reported at colleges, send prosecutors the full interview record, and require yearly campus reporting."
