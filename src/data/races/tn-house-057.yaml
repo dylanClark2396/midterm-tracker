@@ -70,9 +70,8 @@ candidates:
         sources: [*lk_vax]
       - stance: against
         text: >-
-          Her 2016 bill requiring public school students to use restrooms matching their sex at birth was called
-          discriminatory by opponents, and critics warned of backlash from businesses and the federal government
-          before she pulled it.
+          Opponents called her 2016 bill requiring public school students to use restrooms matching their sex at
+          birth discriminatory, and critics warned of economic backlash from businesses and the federal government.
         sources: [*npr_2016]
 
   - name: "Matt Burchfield"
@@ -105,7 +104,7 @@ candidates:
         text: "Oppose school vouchers and keep public money in public schools; fully fund classrooms, special education, career and technical education, and school counselors."
         sources: [*mb_schools, *mb_home]
       - category: health_care
-        text: "Recruit and keep more doctors, nurses and mental health providers, protect rural hospitals, and expand emergency care capacity in growing counties like Wilson."
+        text: "Recruit and keep more doctors, nurses and mental health providers, protect access to rural health care and hospital services, and invest in emergency care capacity in growing counties like Wilson."
         sources: [*mb_health]
       - category: infrastructure
         text: "Expand WeGo Star commuter rail with evening and weekend service, push for statewide road funding, and create a state impact-fee framework so new development pays its share of roads and sewers."
