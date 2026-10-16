@@ -1,23 +1,89 @@
-# Seeded from the Secretary of State's certified candidate list by
-# scripts/seed-from-certified-list.py. research_status: pending —
-# platforms and arguments not yet compiled.
+# Tennessee House, District 70 (Giles County and parts of Lawrence and Lincoln counties) — Rep. Clay Doggett,
+# in office since 2018, faces Rayanne Moos.
+# Candidate order follows the Secretary of State's certified candidate list.
+_sources:
+  cga_h70: &cga_h70 { url: "https://wapp.capitol.tn.gov/apps/legislatorinfo/member.aspx?district=H70", title: "Representative Clay Doggett (Tennessee General Assembly)", accessed: 2026-10-16 }
+  bp_doggett: &bp_doggett { url: "https://ballotpedia.org/Clay_Doggett", title: "Clay Doggett (Ballotpedia)", accessed: 2026-10-16 }
+  lookout70: &lookout70 { url: "https://tennesseelookout.com/voter-guides/contests/house-district-70/", title: "Tennessee House of Representatives, 70th District voter guide (Tennessee Lookout)", accessed: 2026-10-16 }
+  cd_home: &cd_home { url: "https://claydoggettfortn.com/", title: "Clay Doggett for Tennessee State Representative (Doggett campaign)", accessed: 2026-10-16 }
+  hb0702: &hb0702 { url: "https://wapp.capitol.tn.gov/apps/BillInfo/Default.aspx?BillNumber=HB0702&GA=113", title: "HB0702 bill information (Tennessee General Assembly)", accessed: 2026-10-16 }
+  hb2682: &hb2682 { url: "https://wapp.capitol.tn.gov/apps/BillInfo/Default.aspx?BillNumber=HB2682&GA=113", title: "HB2682 bill information (Tennessee General Assembly)", accessed: 2026-10-16 }
+  hb2685: &hb2685 { url: "https://wapp.capitol.tn.gov/apps/BillInfo/Default.aspx?BillNumber=HB2685&GA=113", title: "HB2685 bill information (Tennessee General Assembly)", accessed: 2026-10-16 }
+  hb2375: &hb2375 { url: "https://wapp.capitol.tn.gov/apps/BillInfo/Default.aspx?BillNumber=HB2375&GA=114", title: "HB2375 bill information (Tennessee General Assembly)", accessed: 2026-10-16 }
+  hjr0094: &hjr0094 { url: "https://wapp.capitol.tn.gov/apps/BillInfo/Default.aspx?BillNumber=HJR0094&GA=113", title: "HJR0094 bill information (Tennessee General Assembly)", accessed: 2026-10-16 }
+  sjr0009: &sjr0009 { url: "https://wapp.capitol.tn.gov/apps/BillInfo/Default.aspx?BillNumber=SJR0009&GA=114", title: "SJR0009 bill information (Tennessee General Assembly)", accessed: 2026-10-16 }
+  yal_campus: &yal_campus { url: "https://yaliberty.substack.com/p/the-college-student-taking-on-the", title: "The College Student Taking on the Tennessee Establishment (Young Americans for Liberty)", accessed: 2026-10-16 }
+  rm_actblue: &rm_actblue { url: "https://secure.actblue.com/donate/choosemoosfortn", title: "Choose Moos for TN! (Moos campaign donation page on ActBlue)", accessed: 2026-10-16 }
+
 id: tn-house-070
 office: "Tennessee House, District 70"
 level: state_house
 district: 70
-research_status: pending
+research_status: complete
 candidate_list_source: "https://sos-prod.tnsosgovfiles.com/s3fs-public/document/TNHouse_Nov2026.pdf"
+
 candidates:
   - name: "Clay Doggett"
     ballot_party: Republican
     city: "Pulaski"
+    incumbent: true
+    website: "https://claydoggettfortn.com"
+    bio_facts:
+      - { text: "State representative for District 70 since November 2018; House member of the 111th through 114th General Assemblies.", sources: [*bp_doggett, *cga_h70] }
+      - { text: "Chairs the House Criminal Justice Subcommittee; also serves on the Judiciary and Agriculture & Natural Resources committees, the Private Acts Committee and the Children and Family Affairs Subcommittee.", sources: [*cga_h70, *lookout70] }
+      - { text: "Former correctional officer with the Giles County Sheriff's Office; owns a pressure washing business.", sources: [*lookout70] }
+      - { text: "B.A. in history and B.A. in political science from the University of Alabama in Huntsville; attended the Tennessee Law Enforcement Training Academy.", sources: [*cga_h70] }
+      - { text: "Born and raised in Giles County, where he lives with his wife and their four children.", sources: [*cd_home] }
+      - { text: "Sponsored the 2023 One Pill Will Kill Act, which added fentanyl and related drugs to the substances that qualify for certain felony offenses.", sources: [*hb0702] }
+      - { text: "Sponsored 2024 laws letting law enforcement agencies hire retired members of the state retirement system as full-time school resource officers through June 2026, and requiring recorded votes when county commissions raise county employees' pay or benefits.", sources: [*hb2682, *hb2685] }
+      - { text: "Co-sponsored the crime victims' rights constitutional amendment (HJR 94 and SJR 9) that appears on the November 2026 ballot.", sources: [*hjr0094, *sjr0009] }
+      - { text: "Sponsored a 2026 bill, which did not pass, to create a rural revenue equity fund for counties with large shares of greenbelt farmland.", sources: [*hb2375] }
     why_running: { text: null, sources: [] }
-    platform: []
-    arguments: []
+    platform:
+      - category: guns
+        text: "Uphold Second Amendment gun rights, which he says he has championed through legislation."
+        sources: [*cd_home]
+      - category: government
+        text: "Reduce government overreach and defend local decision-making authority."
+        sources: [*cd_home]
+    arguments:
+      - stance: for
+        text: >-
+          He says his years as a law enforcement officer and small-business owner shaped his view that government
+          must stay accountable to the people, and that he understands the needs of local farmers, families and
+          public servants.
+        sources: [*cd_home]
+      - stance: against
+        text: >-
+          Advocates of a 2026 bill to allow lawful firearm carry on college campuses said that, as committee chair,
+          he stalled the bill for weeks without giving it a hearing.
+        sources: [*yal_campus]
+
   - name: "Rayanne Moos"
     ballot_party: Democratic
     city: "Lawrenceburg"
-    why_running: { text: null, sources: [] }
-    platform: []
-    arguments: []
-last_verified: 2026-10-13
+    incumbent: false
+    website: null
+    bio_facts:
+      - { text: "General manager at TitleMax, a car-title lending company.", sources: [*lookout70] }
+      - { text: "First campaign for public office.", sources: [*lookout70] }
+    why_running:
+      text: >-
+        She says she is running because she believes the district can be the change it wants to see, and she wants
+        to educate and empower voters to make a difference.
+      sources: [*rm_actblue]
+    platform:
+      - category: education
+        text: "Oppose school vouchers, which she says take funding away from public schools."
+        sources: [*rm_actblue]
+      - category: government
+        text: "Oppose further legislation on noncitizen voting, saying election commissions already do that job competently."
+        sources: [*rm_actblue]
+    arguments:
+      - stance: for
+        text: >-
+          She promises to focus the legislature's time and energy on policies that reach even the most rural
+          communities.
+        sources: [*rm_actblue]
+
+last_verified: 2026-10-16
