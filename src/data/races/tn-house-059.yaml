@@ -38,35 +38,25 @@ candidates:
     why_running:
       text: >-
         He says the community deserves a representative who will fight for its values and can work with the
-        legislature's supermajority to pass bills that benefit all Tennesseans. He says Nashville currently has no
-        seat at the table with the state's governing majority, and that this creates problems for the city.
-      sources: [*bh_home, *banner_race]
+        legislature to get bills passed that benefit all Tennesseans.
+      sources: [*bh_home]
     platform:
       - category: taxes
         text: "Cap property tax increases; says state rules on local property taxes can be built over time and that the Metro budget has plenty to cut."
         sources: [*bh_home, *banner_race]
       - category: public_safety
-        text: "Crack down on criminals to protect neighborhoods, and protect seniors from scams and abuse."
+        text: "Crack down on criminals and protect our local neighborhoods; protect seniors from falling victim to scams and abuse."
         sources: [*bh_home]
       - category: cost_of_living
         text: "Make housing and child care affordable for working families."
         sources: [*bh_home]
       - category: infrastructure
-        text: "Push the state to fix highway infrastructure and find solutions to traffic."
+        text: "Force the state to fix our highway infrastructure and find solutions to traffic."
         sources: [*bh_home]
       - category: education
         text: "Better schools and trade opportunities for students."
         sources: [*bh_home]
-      - category: economy
-        text: "Create jobs."
-        sources: [*bh_home]
     arguments:
-      - stance: for
-        text: >-
-          He argues the district needs a member inside the legislature's governing majority who can speak for
-          Nashville on city-state disputes such as regional infrastructure, the airport authority and major
-          development projects.
-        sources: [*banner_race, *bh_home]
       - stance: for
         text: >-
           He promises to fight for a cap on property tax increases, which he calls the top issue voters raise with
@@ -74,8 +64,8 @@ candidates:
         sources: [*bh_home, *banner_race]
       - stance: against
         text: >-
-          Critics, including his opponent, call his yard-sign promise to cut property taxes misleading because
-          county governments, not the legislature, set local tax rates; he responds that the state can regulate them.
+          Critics call his yard-sign promise to cut property taxes misleading because county governments, not the
+          legislature, set local tax rates; he responds that the state has authority over how those rates are set.
         sources: [*banner_race]
       - stance: against
         text: >-
@@ -120,7 +110,7 @@ candidates:
         text: "Says the state's abortion ban is too restrictive; supports a woman's right to choose and letting doctors provide medically necessary care without fear of prosecution."
         sources: [*mp_women, *banner_mp_qa]
       - category: immigration
-        text: "Opposes having state troopers or local police act as federal immigration agents, including through the 287(g) program; supports public school access for undocumented children."
+        text: "Opposes having state troopers or local police serve as federal immigration agents and opposes expanding the Highway Patrol's role through the 287(g) program; supports public school access for undocumented children."
         sources: [*mp_immig, *banner_mp_qa]
       - category: economy
         text: "Support small businesses, raise the state minimum wage to at least the national average, and tie business incentives to clear job and wage results."
@@ -136,10 +126,5 @@ candidates:
           He promises to show up across the district's neighborhoods, listen to residents, and focus on practical
           results over scoring political points.
         sources: [*mp_about, *mp_community]
-      - stance: against
-        text: >-
-          His opponent accuses him of nationalizing a district race, citing mailers from a group backing him that cast
-          the opponent as a rubber stamp for national politics on reproductive rights and gun laws.
-        sources: [*banner_race]
 
 last_verified: 2026-10-16
