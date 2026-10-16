@@ -2,16 +2,14 @@
 # faces Daniel F. Jones.
 # Candidate order follows the Secretary of State's certified candidate list.
 _sources:
-  cga_h24: &cga_h24 { url: "https://wapp.capitol.tn.gov/apps/legislatorinfo/member.aspx?district=H24", title: "Representative Kevin Raper (Tennessee General Assembly)", accessed: 2026-10-16 }
-  bp_raper: &bp_raper { url: "https://ballotpedia.org/Kevin_Raper", title: "Kevin Raper (Ballotpedia)", accessed: 2026-10-16 }
-  bp_h24: &bp_h24 { url: "https://ballotpedia.org/Tennessee_House_of_Representatives_District_24", title: "Tennessee House of Representatives District 24 (Ballotpedia)", accessed: 2026-10-16 }
-  lookout24: &lookout24 { url: "https://tennesseelookout.com/voter-guides/contests/house-district-24/", title: "House District 24, 24th District voter guide (Tennessee Lookout)", accessed: 2026-10-16 }
-  lookout_vouchers: &lookout_vouchers { url: "https://tennesseelookout.com/2025/01/28/east-tennessee-republican-feels-heat-to-vote-for-vouchers/", title: "East Tennessee Republican feels heat to vote for vouchers (Tennessee Lookout)", accessed: 2026-10-16 }
-  chattanoogan_laws: &chattanoogan_laws { url: "https://new.chattanoogan.com/2026/7/8/520721/Laws-Passed-Advancing-Education.aspx", title: "Laws Passed Advancing Education, Accessibility And Rehabilitation During 114th General Assembly (Chattanoogan.com)", accessed: 2026-10-16 }
-  kr_home: &kr_home { url: "https://kevinrapertn.com/", title: "Elect Kevin Raper - District 24 House of Representatives - Cleveland TN (Raper campaign)", accessed: 2026-10-16 }
-  kr_about: &kr_about { url: "https://kevinrapertn.com/about/", title: "About Kevin Raper (Raper campaign)", accessed: 2026-10-16 }
-  kr_issues: &kr_issues { url: "https://kevinrapertn.com/issues/", title: "Issues - Kevin Raper (Raper campaign)", accessed: 2026-10-16 }
-  br_jones: &br_jones { url: "https://www.ballotready.org/people/daniel-jones-892aa231-c6a4-4401-b308-2570bd0709f7", title: "Daniel Jones (BallotReady)", accessed: 2026-10-16 }
+  cga_h24: &cga_h24 { url: "https://wapp.capitol.tn.gov/apps/legislatorinfo/member.aspx?district=H24", title: "Representative Kevin Raper (Tennessee General Assembly)", accessed: 2026-10-15 }
+  bp_raper: &bp_raper { url: "https://ballotpedia.org/Kevin_Raper", title: "Kevin Raper (Ballotpedia)", accessed: 2026-10-15 }
+  lookout24: &lookout24 { url: "https://tennesseelookout.com/voter-guides/contests/house-district-24/", title: "House District 24, 24th District voter guide (Tennessee Lookout)", accessed: 2026-10-15 }
+  lookout_vouchers: &lookout_vouchers { url: "https://tennesseelookout.com/2025/01/28/east-tennessee-republican-feels-heat-to-vote-for-vouchers/", title: "East Tennessee Republican feels heat to vote for vouchers (Tennessee Lookout)", accessed: 2026-10-15 }
+  chattanoogan_laws: &chattanoogan_laws { url: "https://new.chattanoogan.com/2026/7/8/520721/Laws-Passed-Advancing-Education.aspx", title: "Laws Passed Advancing Education, Accessibility And Rehabilitation During 114th General Assembly (Chattanoogan.com)", accessed: 2026-10-15 }
+  kr_home: &kr_home { url: "https://kevinrapertn.com/", title: "Elect Kevin Raper - District 24 House of Representatives - Cleveland TN (Raper campaign)", accessed: 2026-10-15 }
+  kr_about: &kr_about { url: "https://kevinrapertn.com/about/", title: "About Kevin Raper (Raper campaign)", accessed: 2026-10-15 }
+  kr_issues: &kr_issues { url: "https://kevinrapertn.com/issues/", title: "Issues - Kevin Raper (Raper campaign)", accessed: 2026-10-15 }
 
 id: tn-house-024
 office: "Tennessee House, District 24"
@@ -33,12 +31,12 @@ candidates:
       - { text: "Retired educator who worked more than 30 years as a teacher, principal and coach; came to Cleveland in 1990 to teach math and coach at Bradley Central High School.", sources: [*kr_about, *cga_h24, *lookout24] }
       - { text: "B.S. in mathematics education from the University of Tennessee, Knoxville; M.Ed. from Tusculum University; education specialist degree from Tennessee Technological University.", sources: [*cga_h24, *bp_raper] }
       - { text: "Voted against the governor's private school voucher bill in the House Education Committee in January 2025.", sources: [*lookout_vouchers] }
-      - { text: "In 2026 sponsored laws on notifying juvenile courts when truant students leave school, signs for rest areas with adult-sized changing tables, training for juvenile court guardians ad litem, and education assessments for people in state prisons.", sources: [*chattanoogan_laws] }
+      - { text: "Sponsored laws passed in the 114th General Assembly on notifying juvenile courts when students in truancy interventions withdraw without enrolling elsewhere, signs for rest areas with adult-sized changing tables, training for juvenile court guardians ad litem, and yearly education assessments for people serving felony sentences in state prisons.", sources: [*chattanoogan_laws] }
     why_running:
       text: >-
-        He says his family's seven generations in East Tennessee and his ties to the community inspired him to run,
-        and that he is seeking another term after prayer and encouragement from local residents. He says he will
-        keep working to put families and the community first and to make Cleveland and Bradley County a better
+        He says his family, friends and relationships in the area, where his family has lived for seven generations,
+        inspired him to run, and that he is seeking another term after prayer and encouragement from local
+        residents. He says he will keep working to put families and the community first and to make Cleveland and Bradley County a better
         place to live.
       sources: [*kr_home, *kr_about]
     platform:
@@ -52,19 +50,19 @@ candidates:
         text: "Supported 2024 laws strengthening homeowner protections against squatters and speeding up their removal."
         sources: [*kr_issues, *kr_about]
       - category: education
-        text: "Backs added money for the state school funding formula, including teacher raises toward a $50,000 minimum starting salary, and local work with court officials to reduce chronic absenteeism and truancy."
+        text: "Points to added money for the state school funding formula, including teacher raises aimed at a $50,000 minimum starting salary by 2026, and says he worked with local officials and a judge to reduce chronic absenteeism and truancy."
         sources: [*kr_issues]
       - category: health_care
-        text: "Supports laws barring gender changes for minors and requiring student athletes to compete by sex at birth; backed mental health support, including for PTSD, for all first responders."
+        text: "Lists shielding minors from gender-altering surgery among his accomplishments, pointing to a law barring gender changes before age 18."
         sources: [*kr_issues, *kr_about]
       - category: public_safety
-        text: "Sponsored a law to support school employees who are physically assaulted; backs funding for a school resource officer in every school and tougher penalties for driving under the influence."
+        text: "Says he sponsored a law to support school employees who are physically assaulted; points to state money for a school resource officer in every school and a law increasing penalties for driving under the influence."
         sources: [*kr_issues]
       - category: environment
         text: "Has met with state environmental regulators and the landfill operator about health and safety for residents near the local landfill."
         sources: [*kr_issues]
       - category: abortion
-        text: "Backs the state's strict abortion law and lists protecting the rights of the unborn among his accomplishments."
+        text: "Lists protecting the rights of the unborn among his accomplishments and points to strict abortion legislation passed during his first term."
         sources: [*kr_issues, *kr_about]
     arguments:
       - stance: for
@@ -90,9 +88,8 @@ candidates:
     website: null
     bio_facts:
       - { text: "Ran for Cleveland City Council in 2024.", sources: [*lookout24] }
-      - { text: "Ran for this House seat in 2020.", sources: [*br_jones, *bp_h24] }
     why_running: { text: null, sources: [] }
     platform: []
     arguments: []
 
-last_verified: 2026-10-16
+last_verified: 2026-10-15
