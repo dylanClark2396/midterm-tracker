@@ -1,5 +1,5 @@
 # Tennessee House, District 44 (northern Sumner County, including Portland, Westmoreland and parts of Gallatin) —
-# Rep. William Lamberth, in office since 2012 and House Majority Leader, faces Latoya Holcomb.
+# Rep. William Lamberth, first elected in 2012 and House Majority Leader, faces Latoya Holcomb.
 # Candidate order follows the Secretary of State's certified candidate list.
 _sources:
   cga_h44: &cga_h44 { url: "https://wapp.capitol.tn.gov/apps/legislatorinfo/member.aspx?district=H44", title: "Representative William Lamberth (Tennessee General Assembly)", accessed: 2026-10-16 }
@@ -29,7 +29,7 @@ candidates:
       - { text: "House Majority Leader since 2019; chairs the House Select Committee on Rules and serves on the Finance, Ways and Means, Government Operations, and Judiciary committees.", sources: [*cga_h44, *lookout44] }
       - { text: "Attorney in private practice and former assistant district attorney; law degree (2004) from the College of William and Mary and bachelor's degree from the University of Tennessee, Knoxville; graduate of Portland High School.", sources: [*wl_home, *cga_h44, *bp_lamberth] }
       - { text: "Fifth-generation Sumner County resident who grew up on a farm.", sources: [*wl_home] }
-      - { text: "Lead House sponsor of HB0793, which as introduced in 2025 would have let school districts and public charter schools refuse to enroll students unlawfully present in the United States. An amended version requiring schools to verify and report students' immigration status passed the House 70–25 in March 2026.", sources: [*hb0793, *chalkbeat_hb836] }
+      - { text: "Lead House sponsor of HB0793, which as introduced in 2025 would have let school districts and public charter schools refuse to enroll students unlawfully present in the United States. In March 2026 the House passed the bill (as its Senate companion, SB0836), amended to require schools to verify students' citizenship or immigration status and report the counts, 70–25.", sources: [*hb0793, *chalkbeat_hb836] }
     why_running:
       text: >-
         He says he first ran in 2012 because he believes in low taxes, small government and traditional family
@@ -38,7 +38,7 @@ candidates:
       sources: [*wl_home]
     platform:
       - category: economy
-        text: "Eliminate regulations and keep building an environment where businesses, especially small businesses, can grow."
+        text: "Eliminate regulations and keep creating an environment where businesses grow and thrive; calls small businesses the backbone of the economy."
         sources: [*wl_home]
       - category: taxes
         text: "Cut taxes so the money people earn stays in their own pockets."
@@ -53,7 +53,7 @@ candidates:
         text: "Protect the Second Amendment right to bear arms."
         sources: [*wl_home]
       - category: abortion
-        text: "Protect the unborn and the right to life."
+        text: "Be a steadfast defender of the unborn and protect the right to life."
         sources: [*wl_home]
       - category: government
         text: "Keep government intervention in people's daily lives as small as possible."
@@ -66,20 +66,20 @@ candidates:
         sources: [*wl_home]
       - stance: for
         text: >-
-          He says his student immigration-status bill only asks schools for data they largely already gather,
-          such as birth certificates and residency records, and would not add a logistical burden.
+          He says his student immigration-status bill only asks schools for data they already gather, such as
+          birth certificates, residency records and medical records, and would not add a logistical burden.
         sources: [*chalkbeat_hb836]
       - stance: against
         text: >-
-          Critics said his 2025 bill letting schools turn away children without legal immigration status would
-          punish kids for circumstances beyond their control and conflicts with a 1982 Supreme Court ruling
-          guaranteeing them a public education.
+          Critics said his 2025 bill letting schools refuse to enroll children without legal immigration status
+          would punish kids for circumstances beyond their control, and an immigration-law advocate said letting
+          districts exclude such children clearly runs afoul of a 1982 Supreme Court ruling.
         sources: [*lookout_plyler]
       - stance: against
         text: >-
-          Opponents argued his 2026 bill to verify and report students' immigration status is a vehicle to
-          challenge that Supreme Court ruling rather than a simple data request, and educators testified about
-          logistical problems and disruption to local communities.
+          Opponents argued his 2026 bill to verify and report students' immigration status is not the simple
+          data request he describes, and educators testified against it over logistical concerns and disruption
+          to local communities.
         sources: [*chalkbeat_hb836]
       - stance: against
         text: >-
