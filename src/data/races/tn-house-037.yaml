@@ -1,23 +1,119 @@
-# Seeded from the Secretary of State's certified candidate list by
-# scripts/seed-from-certified-list.py. research_status: pending —
-# platforms and arguments not yet compiled.
+# Tennessee House, District 37 (central Rutherford County, including parts of Murfreesboro and MTSU) — Rep. Charlie
+# Baum, in office since 2018, faces Mary Ann Young.
+# Candidate order follows the Secretary of State's certified candidate list.
+_sources:
+  cga_h37: &cga_h37 { url: "https://wapp.capitol.tn.gov/apps/legislatorinfo/member.aspx?district=H37", title: "Representative Charlie Baum (Tennessee General Assembly)", accessed: 2026-10-16 }
+  bp_baum: &bp_baum { url: "https://ballotpedia.org/Charlie_Baum", title: "Charlie Baum (Ballotpedia)", accessed: 2026-10-16 }
+  hb0494: &hb0494 { url: "https://wapp.capitol.tn.gov/apps/BillInfo/Default.aspx?BillNumber=HB0494&GA=114", title: "HB0494 bill information (Tennessee General Assembly)", accessed: 2026-10-16 }
+  hb2408: &hb2408 { url: "https://wapp.capitol.tn.gov/apps/BillInfo/Default.aspx?BillNumber=HB2408&GA=114", title: "HB2408 bill information (Tennessee General Assembly)", accessed: 2026-10-16 }
+  hb1744: &hb1744 { url: "https://wapp.capitol.tn.gov/apps/BillInfo/Default.aspx?BillNumber=HB1744&GA=114", title: "HB1744 bill information (Tennessee General Assembly)", accessed: 2026-10-16 }
+  hb0331: &hb0331 { url: "https://wapp.capitol.tn.gov/apps/BillInfo/Default.aspx?BillNumber=HB0331&GA=114", title: "HB0331 bill information (Tennessee General Assembly)", accessed: 2026-10-16 }
+  cb_home: &cb_home { url: "https://baumforstatehouse.com/", title: "Charlie Baum for State House (Baum campaign)", accessed: 2026-10-15 }
+  lookout37: &lookout37 { url: "https://tennesseelookout.com/voter-guides/contests/house-district-37/", title: "Tennessee House of Representatives, 37th District voter guide (Tennessee Lookout)", accessed: 2026-10-15 }
+  my_home: &my_home { url: "https://maryannyoungfortn.com/", title: "Mary Ann Young (Young campaign)", accessed: 2026-10-15 }
+  bp_young: &bp_young { url: "https://ballotpedia.org/Mary_Ann_Young", title: "Mary Ann Young (Ballotpedia)", accessed: 2026-10-15 }
+
 id: tn-house-037
 office: "Tennessee House, District 37"
 level: state_house
 district: 37
-research_status: pending
+research_status: complete
 candidate_list_source: "https://sos-prod.tnsosgovfiles.com/s3fs-public/document/TNHouse_Nov2026.pdf"
+
 candidates:
   - name: "Charlie Baum"
     ballot_party: Republican
     city: "Murfreesboro"
-    why_running: { text: null, sources: [] }
-    platform: []
-    arguments: []
+    incumbent: true
+    website: "https://baumforstatehouse.com"
+    bio_facts:
+      - { text: "State representative for District 37 since November 2018; House member of the 111th through 114th General Assemblies.", sources: [*bp_baum, *cga_h37] }
+      - { text: "Chair of the House Higher Education Subcommittee; member of the Education Committee and the Finance, Ways, and Means Committee.", sources: [*cga_h37, *lookout37] }
+      - { text: "Economics professor at Middle Tennessee State University since 1999; chaired its Department of Economics and Finance from 2008 to 2014.", sources: [*cb_home, *cga_h37] }
+      - { text: "B.A. in economics from Wake Forest University and Ph.D. in economics from the University of North Carolina at Chapel Hill.", sources: [*cga_h37] }
+      - { text: "Rutherford County commissioner from 2010 to 2018, chairing the commission's Audit Committee.", sources: [*cga_h37, *cb_home] }
+      - { text: "Prime House sponsor of the 2025 law letting businesses offer voluntary portable benefits to independent workers.", sources: [*hb0494] }
+      - { text: "Prime House sponsor of 2026 laws requiring automated telephone solicitors to keep records of their monthly calls, and letting businesses round cash transactions to the nearest nickel when exact change isn't available.", sources: [*hb2408, *hb1744] }
+      - { text: "Prime House sponsor of a 2025 law raising the Tennessee Housing Development Agency's bond limit from $4 billion to $5 billion.", sources: [*hb0331] }
+    why_running:
+      text: >-
+        His re-election campaign says it is about leading the state to fiscal responsibility: keeping taxes low,
+        supporting schools and making neighborhoods safer.
+      sources: [*cb_home]
+    platform:
+      - category: taxes
+        text: "Keep taxes low and eliminate wasteful spending."
+        sources: [*cb_home]
+      - category: education
+        text: "Support teachers, maintain high academic standards and promote school choice."
+        sources: [*cb_home]
+      - category: health_care
+        text: "Increase access to health care, lower health care prices and improve health care quality."
+        sources: [*cb_home]
+      - category: public_safety
+        text: "Making our neighborhoods safer."
+        sources: [*cb_home]
+      - category: government
+        text: "Reduce excessive government regulation."
+        sources: [*cb_home]
+    arguments:
+      - stance: for
+        text: >-
+          As a member of the House finance committee, he helped draft a balanced state budget that raised funding
+          for education, health care and transportation with no tax increase and brought the rainy-day fund to a record.
+        sources: [*cb_home]
+      - stance: for
+        text: >-
+          An economist and former university department chair whose research on employment, wages and benefits
+          has been cited by national news outlets.
+        sources: [*cb_home]
+
   - name: "Mary Ann Young"
     ballot_party: Democratic
     city: "Murfreesboro"
-    why_running: { text: null, sources: [] }
-    platform: []
-    arguments: []
-last_verified: 2026-10-13
+    incumbent: false
+    website: "https://maryannyoungfortn.com"
+    bio_facts:
+      - { text: "About 28 years in financial technology and business-to-business payments, most recently as a director of digital customer experience at Corpay.", sources: [*my_home, *bp_young] }
+      - { text: "Bachelor's degree from Middle Tennessee State University.", sources: [*bp_young] }
+      - { text: "Has lived in Murfreesboro for nearly 30 years and raised three sons there.", sources: [*my_home] }
+      - { text: "Won the August 2026 primary with 59.6% of the vote; this is her first campaign for office.", sources: [*bp_young, *lookout37] }
+    why_running:
+      text: >-
+        She says she got involved after neighborhood fights over warehouse development and annexation, and is
+        running so the district has a representative who listens, with a focus on responsible growth, better
+        infrastructure and protecting education funding.
+      sources: [*my_home, *bp_young]
+    platform:
+      - category: taxes
+        text: "Eliminate the grocery tax by closing corporate loopholes, expand property tax relief for working families and seniors, and pause the fuel sales tax until fuel prices fall."
+        sources: [*my_home, *bp_young]
+      - category: cost_of_living
+        text: "Build starter homes and affordable communities rather than more townhomes, condos and apartments."
+        sources: [*my_home]
+      - category: education
+        text: "End school vouchers, fully fund public schools and pre-K programs, and fully fund school breakfast and lunch."
+        sources: [*my_home, *bp_young]
+      - category: health_care
+        text: "Expand Medicaid so rural hospitals can reopen, and reopen maternity and reproductive care centers."
+        sources: [*my_home, *bp_young]
+      - category: abortion
+        text: "Repeal the state's abortion ban and protect access to reproductive care."
+        sources: [*bp_young]
+      - category: infrastructure
+        text: "Fully fund road and bridge repairs instead of toll or choice lanes; legalize and regulate cannabis and dedicate part of the revenue to roads."
+        sources: [*my_home, *bp_young]
+      - category: environment
+        text: "Place a moratorium on data centers and require water reporting and permits for them; stop the Middle Point Landfill expansion."
+        sources: [*my_home, *bp_young]
+      - category: government
+        text: "Write local zoning control into law, expand the Jackson Law, and keep warehouse development in industrial zones away from homes."
+        sources: [*my_home]
+    arguments:
+      - stance: for
+        text: >-
+          Nearly three decades in financial technology taught her to dig into complicated systems, find where they
+          fail people and fix them, a skill she promises to bring to the legislature.
+        sources: [*my_home, *bp_young]
+
+last_verified: 2026-10-16
