@@ -1,29 +1,173 @@
-# Seeded from the Secretary of State's certified candidate list by
-# scripts/seed-from-certified-list.py. research_status: pending —
-# platforms and arguments not yet compiled.
+# Tennessee House, District 52 (east central Davidson County, around the airport and Priest Lake) — Rep. Justin
+# Jones, in office since 2022, faces Michele Vetter and independent Martez Coleman.
+# Candidate order follows the Secretary of State's certified candidate list.
+_sources:
+  lookout52: &lookout52 { url: "https://tennesseelookout.com/voter-guides/contests/house-district-52/", title: "Tennessee House of Representatives, 52nd District voter guide (Tennessee Lookout)", accessed: 2026-10-16 }
+  mv_home: &mv_home { url: "https://www.mvetterforall.com/", title: "Neighbors For M Vetter - Empowering TN District 52 (Vetter campaign)", accessed: 2026-10-16 }
+  mv_issues: &mv_issues { url: "https://www.mvetterforall.com/issues/", title: "Issues - Michele's Campaign Story (Vetter campaign)", accessed: 2026-10-16 }
+  mv_lcr: &mv_lcr { url: "https://www.mvetterforall.com/news/474/", title: "Michele Vetter Honored to Receive Endorsement from Log Cabin Republicans of Tennessee (Vetter campaign)", accessed: 2026-10-16 }
+  mv_fop: &mv_fop { url: "https://www.mvetterforall.com/news/michele-vetter-earns-endorsement-from-andrew-jackson-lodge-5-fraternal-order-of-police/", title: "Michele Vetter Earns Endorsement from Andrew Jackson Lodge 5 Fraternal Order of Police (Vetter campaign)", accessed: 2026-10-16 }
+  bp_vetter: &bp_vetter { url: "https://ballotpedia.org/Michele_Vetter", title: "Michele Vetter (Ballotpedia)", accessed: 2026-10-16 }
+  cga_h52: &cga_h52 { url: "https://wapp.capitol.tn.gov/apps/legislatorinfo/member.aspx?district=H52", title: "Representative Justin Jones (Tennessee General Assembly)", accessed: 2026-10-16 }
+  bp_jones: &bp_jones { url: "https://ballotpedia.org/Justin_Jones_(Tennessee_state_representative)", title: "Justin Jones (Tennessee state representative) (Ballotpedia)", accessed: 2026-10-16 }
+  jj_home: &jj_home { url: "https://votejustinjones.com/", title: "Homepage - Justin Jones (Jones campaign)", accessed: 2026-10-16 }
+  jj_issues: &jj_issues { url: "https://votejustinjones.com/issues/", title: "Issues - Justin Jones (Jones campaign)", accessed: 2026-10-16 }
+  jj_meet: &jj_meet { url: "https://votejustinjones.com/meet-justin/", title: "Meet Justin - Justin Jones (Jones campaign)", accessed: 2026-10-16 }
+  hb0430: &hb0430 { url: "https://wapp.capitol.tn.gov/apps/BillInfo/Default.aspx?BillNumber=HB0430&GA=114", title: "HB0430 bill information (Tennessee General Assembly)", accessed: 2026-10-16 }
+  hb0432: &hb0432 { url: "https://wapp.capitol.tn.gov/apps/BillInfo/Default.aspx?BillNumber=HB0432&GA=114", title: "HB0432 bill information (Tennessee General Assembly)", accessed: 2026-10-16 }
+  hb0435: &hb0435 { url: "https://wapp.capitol.tn.gov/apps/BillInfo/Default.aspx?BillNumber=HB0435&GA=114", title: "HB0435 bill information (Tennessee General Assembly)", accessed: 2026-10-16 }
+  hb2191: &hb2191 { url: "https://wapp.capitol.tn.gov/apps/BillInfo/Default.aspx?BillNumber=HB2191&GA=114", title: "HB2191 bill information (Tennessee General Assembly)", accessed: 2026-10-16 }
+  hr0065: &hr0065 { url: "https://wapp.capitol.tn.gov/apps/BillInfo/Default.aspx?BillNumber=HR0065&GA=113", title: "HR0065 bill information (Tennessee General Assembly)", accessed: 2026-10-16 }
+  hr0065_text: &hr0065_text { url: "https://capitol.tn.gov/Bills/113/Bill/HR0065.pdf", title: "House Resolution 65 (Tennessee General Assembly)", accessed: 2026-10-16 }
+  mc_home: &mc_home { url: "https://colemanfordistrict52.com/", title: "Martez Coleman for TN House District 52 (Coleman campaign)", accessed: 2026-10-16 }
+  mc_platform: &mc_platform { url: "https://colemanfordistrict52.com/platform.php", title: "My Platform (Coleman campaign)", accessed: 2026-10-16 }
+  mc_about: &mc_about { url: "https://colemanfordistrict52.com/about.php", title: "About Martez Coleman (Coleman campaign)", accessed: 2026-10-16 }
+  bp_coleman: &bp_coleman { url: "https://ballotpedia.org/Martez_Coleman", title: "Martez Coleman (Ballotpedia)", accessed: 2026-10-16 }
+
 id: tn-house-052
 office: "Tennessee House, District 52"
 level: state_house
 district: 52
-research_status: pending
+research_status: complete
 candidate_list_source: "https://sos-prod.tnsosgovfiles.com/s3fs-public/document/TNHouse_Nov2026.pdf"
+
 candidates:
   - name: "Michele Vetter"
     ballot_party: Republican
     city: "Nashville"
-    why_running: { text: null, sources: [] }
-    platform: []
-    arguments: []
+    incumbent: false
+    website: "https://www.mvetterforall.com/"
+    bio_facts:
+      - { text: "Founded the Priest Lake Peninsula neighborhood network, a group formed to keep the lakefront neighborhoods safe and to push back on large developments.", sources: [*lookout52, *mv_home] }
+      - { text: "Has lived in Nashville since 1986 and in the Priest Lake Park area since 2007; describes herself as a business owner and community organizer.", sources: [*bp_vetter, *mv_home] }
+      - { text: "Ran for Metro Nashville Council District 29 in 2023, finishing third of four candidates with 18.6% of the vote.", sources: [*bp_vetter] }
+      - { text: "Endorsed by Andrew Jackson Lodge 5 of the Fraternal Order of Police.", sources: [*mv_fop] }
+      - { text: "Unopposed in the August 2026 primary for the seat.", sources: [*bp_vetter] }
+    why_running:
+      text: >-
+        She says she decided to run because she believes people accomplish more by focusing on what unites them
+        than on what divides them, and that every resident of District 52 deserves a representative who listens,
+        treats them with respect and works on the issues of daily life.
+      sources: [*mv_lcr]
+    platform:
+      - category: education
+        text: "Asks the state to conduct a full forensic audit of Metro Nashville Public Schools, including records of terminated teachers, academic fraud and financial management."
+        sources: [*mv_home]
+      - category: public_safety
+        text: "Give first responders the resources they need, improve coordination between local and state agencies, and invest in crime prevention."
+        sources: [*mv_issues, *mv_fop]
+      - category: infrastructure
+        text: "Expand and improve roads, highways and public services to keep up with growth, and plan development so it protects established neighborhoods."
+        sources: [*mv_issues]
+      - category: environment
+        text: "Keep lakes clean, parks safe and green spaces maintained, and give communities a voice when large developments threaten residential areas."
+        sources: [*mv_issues]
+    arguments:
+      - stance: for
+        text: >-
+          A Priest Lake resident for nearly two decades who organized neighbors around safety and lakefront
+          development, she promises to represent every resident and bring people together on practical local
+          problems.
+        sources: [*mv_home, *mv_lcr]
+
   - name: "Justin Jones"
     ballot_party: Democratic
     city: "Nashville"
-    why_running: { text: null, sources: [] }
-    platform: []
-    arguments: []
+    incumbent: true
+    website: "https://votejustinjones.com/"
+    bio_facts:
+      - { text: "State representative for District 52 since 2022; House member of the 113th and 114th General Assemblies.", sources: [*cga_h52, *lookout52] }
+      - { text: "Expelled from the House on April 6, 2023, by a 72-25 vote over a protest on the House floor; the Metro Nashville Council reappointed him 36-0 on April 10, and he won the seat back in a special election.", sources: [*bp_jones, *hr0065, *lookout52] }
+      - { text: "Born in Oakland, California; B.A. in political science from Fisk University; policy and activism fellow at Fisk's John Lewis Center for Social Justice.", sources: [*cga_h52, *bp_jones, *jj_meet] }
+      - { text: "Author of a 2022 book on a 62-day protest outside the State Capitol, published by Vanderbilt University Press.", sources: [*cga_h52] }
+      - { text: "Served on the board of directors of the Tennessee Healthcare Campaign.", sources: [*jj_meet, *bp_jones] }
+      - { text: "Sponsored the Protect Kids Not Guns Act, which would require locked storage of firearms, ban magazines holding more than 10 rounds, route most gun sales through licensed dealers, and create extreme risk protection orders.", sources: [*hb0430] }
+      - { text: "Sponsored an agricultural right-to-repair bill requiring equipment makers to provide parts, tools and documentation to owners and independent repair shops.", sources: [*hb0432] }
+      - { text: "Sponsored a bill requiring hospitals that accept public money for uncompensated care to cancel an equal amount of patient debt.", sources: [*hb0435] }
+      - { text: "Sponsored a bill to create a state fund for grants of up to $10,000 to family farmers hurt by tariffs.", sources: [*hb2191] }
+      - { text: "Unopposed in the August 2026 primary for the seat.", sources: [*bp_jones] }
+    why_running:
+      text: >-
+        He says he first ran because he was tired of asking lawmakers to meet with their constituents and believed
+        he could serve people whose voices were not being heard. His campaign says his platform centers on
+        rebuilding democracy, protecting the environment and stronger gun laws to keep children safe.
+      sources: [*jj_meet]
+    platform:
+      - category: health_care
+        text: "Expand health care access, including expanding Medicaid."
+        sources: [*jj_meet, *jj_home, *jj_issues]
+      - category: education
+        text: "Opposes the governor's school voucher program."
+        sources: [*jj_meet]
+      - category: public_safety
+        text: "Police reform and police accountability."
+        sources: [*jj_meet, *jj_home]
+      - category: immigration
+        text: "Opposes bills that target immigrants and refugees."
+        sources: [*jj_meet, *jj_issues]
+      - category: environment
+        text: "Put environmental protection ahead of corporate interests and protect places such as the Duck River and old-growth Smoky Mountain forests."
+        sources: [*jj_issues]
+      - category: guns
+        text: "Pass comprehensive gun reform; opposes easing access to assault weapons and shielding gun manufacturers from liability."
+        sources: [*jj_issues]
+      - category: government
+        text: "Protect dissent and open debate in the legislature, and oppose cutting off debate or removing members of the public from the gallery."
+        sources: [*jj_issues]
+    arguments:
+      - stance: for
+        text: >-
+          He has organized for years on health care access in Tennessee, including a 278-mile walk in 2015 about
+          rural hospital closures, and promises to keep fighting for stronger gun laws to protect children.
+        sources: [*jj_meet, *jj_issues]
+      - stance: against
+        text: >-
+          The House resolution expelling him in 2023 said he disrupted a floor session for nearly an hour,
+          shouting without recognition, leading chants with the gallery and using a bullhorn, and that this
+          behavior reflected adversely on the integrity and dignity of the House.
+        sources: [*hr0065_text, *hr0065]
+
   - name: "Martez Coleman"
     ballot_party: Independent
     city: "Antioch"
-    why_running: { text: null, sources: [] }
-    platform: []
-    arguments: []
-last_verified: 2026-10-13
+    incumbent: false
+    website: "https://colemanfordistrict52.com/"
+    bio_facts:
+      - { text: "Nashville native and graduate of John Overton High School; degree in business finance from Lipscomb University.", sources: [*mc_about, *bp_coleman] }
+      - { text: "Mortgage banker with nearly three decades in the industry, currently with Novus Home Mortgage; lender advisor for the Nashville Mortgage Bankers Association.", sources: [*mc_about, *lookout52] }
+      - { text: "Has ministered to incarcerated people at the DeBerry Special Needs Facility for more than 30 years.", sources: [*mc_about] }
+      - { text: "Ran for Metro Nashville Council District 8 in 2023, losing 51.6% to 47.9%, and for District 33 in 2019 and in a 2017 special election.", sources: [*bp_coleman, *lookout52] }
+      - { text: "Father of three.", sources: [*mc_about] }
+    why_running:
+      text: >-
+        He says he is running because the state is strongest when families thrive, businesses grow, neighborhoods
+        are safe and everyone has a chance to succeed. He promises to lead with integrity and common sense, listen
+        before he leads, and put the district ahead of political division and special interests.
+      sources: [*mc_platform, *mc_home]
+    platform:
+      - category: economy
+        text: "Encourage job creation, entrepreneurship and small businesses; reduce unnecessary regulations and support workforce development."
+        sources: [*mc_platform]
+      - category: taxes
+        text: "Eliminate wasteful spending and require more transparency in how tax dollars are spent, with accountability for those who vote to spend them irresponsibly."
+        sources: [*mc_platform, *mc_home]
+      - category: cost_of_living
+        text: "Expand affordable housing and remove barriers to homeownership while protecting property rights; address high gas and grocery prices."
+        sources: [*mc_platform, *bp_coleman]
+      - category: public_safety
+        text: "Make sure police, firefighters and other first responders have the resources and training they need, with accountability and strong community partnerships."
+        sources: [*mc_platform]
+      - category: government
+        text: "Keep government limited, transparent and accountable; defend individual liberty, religious freedom and constitutional rights; put oversight laws on artificial intelligence in place."
+        sources: [*mc_platform, *bp_coleman]
+      - category: veterans
+        text: "Work with local leaders and groups to support veterans in the district."
+        sources: [*mc_platform]
+    arguments:
+      - stance: for
+        text: >-
+          A lifelong Nashvillian who has spent nearly 30 years helping families buy homes, he promises to focus on
+          housing affordability and everyday costs and to put the district ahead of political fights.
+        sources: [*mc_about, *mc_platform, *bp_coleman]
+
+last_verified: 2026-10-16
