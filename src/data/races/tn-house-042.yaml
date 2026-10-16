@@ -1,23 +1,93 @@
-# Seeded from the Secretary of State's certified candidate list by
-# scripts/seed-from-certified-list.py. research_status: pending —
-# platforms and arguments not yet compiled.
+# Tennessee House, District 42 (western Putnam County, including Cookeville) — Rep. Ryan Williams, in office
+# since 2011, faces Trenton Tyler Strode.
+# Candidate order follows the Secretary of State's certified candidate list.
+_sources:
+  cga_h42: &cga_h42 { url: "https://wapp.capitol.tn.gov/apps/legislatorinfo/member.aspx?district=H42", title: "Representative Ryan Williams (Tennessee General Assembly)", accessed: 2026-10-16 }
+  lookout42: &lookout42 { url: "https://tennesseelookout.com/voter-guides/contests/house-district-42/", title: "Tennessee House of Representatives, 42nd District voter guide (Tennessee Lookout)", accessed: 2026-10-16 }
+  rw_about: &rw_about { url: "https://voteryanwilliams.com/about/", title: "About (Williams campaign)", accessed: 2026-10-16 }
+  rw_issues: &rw_issues { url: "https://voteryanwilliams.com/issues/", title: "Issues (Williams campaign)", accessed: 2026-10-16 }
+  lookout_vouchers: &lookout_vouchers { url: "https://tennesseelookout.com/2026/03/25/tennessee-republicans-back-smaller-increase-in-private-school-vouchers/", title: "Tennessee Republicans back smaller increase in private-school vouchers (Tennessee Lookout)", accessed: 2026-10-16 }
+  ts_actblue: &ts_actblue { url: "https://secure.actblue.com/donate/trenton-strode-4", title: "Trenton Strode for TN State Representative - District 42 (Strode campaign, ActBlue)", accessed: 2026-10-16 }
+
 id: tn-house-042
 office: "Tennessee House, District 42"
 level: state_house
 district: 42
-research_status: pending
+research_status: complete
 candidate_list_source: "https://sos-prod.tnsosgovfiles.com/s3fs-public/document/TNHouse_Nov2026.pdf"
+
 candidates:
   - name: "Ryan D. Williams"
     ballot_party: Republican
     city: "Cookeville"
+    incumbent: true
+    website: "https://voteryanwilliams.com/"
+    bio_facts:
+      - { text: "State representative for District 42 since being elected in 2010; House member of the 107th through 114th General Assemblies.", sources: [*cga_h42, *lookout42] }
+      - { text: "Chair of the House Finance, Ways and Means Subcommittee; also serves on the Finance, Ways and Means, Health, and Rules committees and the Council on Pensions.", sources: [*cga_h42, *lookout42] }
+      - { text: "Majority caucus chairman in the 110th General Assembly.", sources: [*cga_h42] }
+      - { text: "Former Cookeville City Council member and city planning commissioner.", sources: [*cga_h42] }
+      - { text: "Director of business development at J&S Construction Company; earlier a sales representative, then vice president and partner, at a Dalton, Georgia, company. B.S. in biology from Carson-Newman.", sources: [*rw_about, *cga_h42] }
+      - { text: "In 2026 filed an amendment to cut the proposed expansion of the state's private-school voucher program from 20,000 to 15,000 new vouchers for 2026-27.", sources: [*lookout_vouchers] }
     why_running: { text: null, sources: [] }
-    platform: []
-    arguments: []
+    platform:
+      - category: economy
+        text: "Keep Tennessee pro-worker and pro-growth; points to tort reform and the workers' compensation overhaul as past steps."
+        sources: [*rw_issues]
+      - category: taxes
+        text: "Keep the budget balanced, building on low state debt, low overall taxes and a record rainy-day fund."
+        sources: [*rw_issues]
+      - category: education
+        text: "Points to teacher tenure changes, higher standards and more charter schools as education gains; says he supports parents' right to choose but is concerned about the fiscal stability of voucher expansion."
+        sources: [*rw_issues, *lookout_vouchers]
+      - category: public_safety
+        text: "Put citizens' safety first, citing tougher DUI laws, accident prevention and lower domestic violence offenses."
+        sources: [*rw_issues]
+      - category: health_care
+        text: "Credits increased state investment in services for intellectual and developmental disabilities, mental health and substance abuse with helping care for the state's most vulnerable."
+        sources: [*rw_issues]
+    arguments:
+      - stance: for
+        text: >-
+          A longtime lawmaker who now chairs a House finance panel, he points to balanced budgets, tax cuts and a
+          record rainy-day fund and pledges to build on that record.
+        sources: [*rw_issues, *rw_about, *cga_h42]
+
   - name: "Trenton Tyler Strode"
     ballot_party: Democratic
     city: "Cookeville"
-    why_running: { text: null, sources: [] }
-    platform: []
-    arguments: []
-last_verified: 2026-10-13
+    incumbent: false
+    website: null
+    bio_facts:
+      - { text: "Healthcare finance professional and certified medical coder and auditor.", sources: [*lookout42] }
+      - { text: "Born and raised in Putnam County.", sources: [*ts_actblue] }
+    why_running:
+      text: >-
+        He says families in the county face rising housing costs, property reappraisal pressure, underfunded schools
+        and wages that lag behind, and that he is running to fight for stronger schools, better infrastructure,
+        health care access, institutional reform and an economy that works for everybody.
+      sources: [*ts_actblue]
+    platform:
+      - category: economy
+        text: "An economy that works for everybody, with wages that keep up with costs."
+        sources: [*ts_actblue]
+      - category: education
+        text: "Stronger, better-funded schools."
+        sources: [*ts_actblue]
+      - category: health_care
+        text: "Expand access to health care."
+        sources: [*ts_actblue]
+      - category: infrastructure
+        text: "Better infrastructure."
+        sources: [*ts_actblue]
+      - category: government
+        text: "Institutional reform, with a representative who fights harder for working people than for political insiders."
+        sources: [*ts_actblue]
+    arguments:
+      - stance: for
+        text: >-
+          Born and raised in the county, he says he knows its strengths and struggles firsthand and that his
+          campaign is powered by people rather than special interests.
+        sources: [*ts_actblue]
+
+last_verified: 2026-10-16
