@@ -60,13 +60,13 @@ candidates:
         text: "Raise standards and hold the Davidson County school board accountable for reading results; build a new technical and vocational high school in Old Hickory."
         sources: [*er_issues, *er_launch, *bp_romero]
       - category: cost_of_living
-        text: "Keep the district affordable for working families by expanding affordable housing, drawing on her work on the state housing agency."
+        text: "Keep District 60 a place working families can afford to live, building on her work on the state housing agency to make affordable housing a reality."
         sources: [*er_issues, *bp_romero]
     arguments:
       - stance: for
         text: >-
           Rose from poverty and a forced marriage at 14 to become a teacher, business owner and state housing
-          commissioner, and says she will focus on local roads, schools and safety rather than national fights.
+          commissioner, and says she will focus on local roads, schools and safety rather than culture wars.
         sources: [*er_about, *er_launch]
       - stance: for
         text: >-
@@ -80,11 +80,11 @@ candidates:
     incumbent: true
     website: "https://www.brooksforstatehouse.com"
     bio_facts:
-      - { text: "State representative for District 60 since November 2024, when she won the open seat with 53.8% of the vote; House member of the 114th General Assembly.", sources: [*bp_brooks, *cga_h60] }
+      - { text: "State representative for District 60 since November 2024, when she won the open seat with 53.8% of the vote; House member of the 114th General Assembly.", sources: [*bp_brooks, *cga_h60, *wsmv60] }
       - { text: "B.A. in law and criminal justice from John Jay; certificate in nonprofit management from Tennessee State University.", sources: [*cga_h60, *wsmv60] }
       - { text: "Has worked as a probation and parole officer; born and raised in Brooklyn, New York, the daughter of two police officers.", sources: [*lookout60, *wsmv60] }
       - { text: "Her son Akilah DaSilva was killed in the 2018 shooting at a Nashville Waffle House; she has four children.", sources: [*lookout60, *lookout_mar25, *cga_h60] }
-      - { text: "House sponsor of HB0947, \"Akilah's Law,\" to make it a crime to knowingly give a firearm to someone who was a mental institution patient within five years; it cleared a House subcommittee in 2025 and failed in the Senate Judiciary Committee in March 2026.", sources: [*hb0947, *lookout_mar25] }
+      - { text: "House sponsor of HB0947, \"Akilah's Law,\" to make it a crime to knowingly sell or transfer a firearm to someone who was a mental institution patient within the previous five years; it cleared a House subcommittee in 2025, and its Senate companion failed in the Senate Judiciary Committee in March 2026.", sources: [*hb0947, *lookout_mar25] }
       - { text: "Unopposed in her August 2026 primary.", sources: [*bp_brooks] }
     why_running:
       text: >-
@@ -122,9 +122,9 @@ candidates:
         sources: [*sb_results, *sb_about]
       - stance: for
         text: >-
-          A prosecutor testified that her firearm bill fills a real gap, since Tennessee law could not have
-          punished someone who handed guns back to a person barred from having them; a psychiatrist said it would
-          save lives.
+          At a hearing on her firearm bill, a prosecutor in the Waffle House case testified that Tennessee law could
+          not have punished someone who returned guns to a person barred from having them; a psychiatrist testified
+          for the bill, citing firearm suicides.
         sources: [*lookout_mar25]
       - stance: against
         text: >-
@@ -133,8 +133,8 @@ candidates:
         sources: [*lookout_apr25]
       - stance: against
         text: >-
-          Her opponent says the district's current representative has been consumed by divisive national debates
-          while local needs like road funding go ignored, and has not gotten property tax relief passed.
-        sources: [*er_issues, *er_petition]
+          Her opponent says the district has not had a strong advocate on property taxes and that its current
+          representation has not been effective in getting a property tax bill passed.
+        sources: [*er_petition]
 
 last_verified: 2026-10-16
