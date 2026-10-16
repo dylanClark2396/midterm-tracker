@@ -1,23 +1,126 @@
-# Seeded from the Secretary of State's certified candidate list by
-# scripts/seed-from-certified-list.py. research_status: pending —
-# platforms and arguments not yet compiled.
+# Tennessee House, District 25 (Cumberland County and eastern Putnam County, based in Crossville) — House Speaker
+# Cameron Sexton, in office since 2011, faces Monica Mowdy.
+# Candidate order follows the Secretary of State's certified candidate list.
+_sources:
+  cga_h25: &cga_h25 { url: "https://wapp.capitol.tn.gov/apps/legislatorinfo/member.aspx?district=H25", title: "Representative Cameron Sexton (Tennessee General Assembly)", accessed: 2026-10-16 }
+  lookout25: &lookout25 { url: "https://tennesseelookout.com/voter-guides/contests/house-district-25/", title: "Tennessee House of Representatives, 25th District voter guide (Tennessee Lookout)", accessed: 2026-10-16 }
+  cs_about: &cs_about { url: "https://www.cameronsexton.com/about/", title: "Meet Cameron (Sexton campaign)", accessed: 2026-10-16 }
+  cs_issues: &cs_issues { url: "https://www.cameronsexton.com/issues/", title: "Issues (Sexton campaign)", accessed: 2026-10-16 }
+  hb7003: &hb7003 { url: "https://wapp.capitol.tn.gov/apps/BillInfo/Default.aspx?BillNumber=HB7003&GA=114", title: "HB7003 bill information (Tennessee General Assembly)", accessed: 2026-10-16 }
+  hb2509: &hb2509 { url: "https://wapp.capitol.tn.gov/apps/BillInfo/Default.aspx?BillNumber=HB2509&GA=114", title: "HB2509 bill information (Tennessee General Assembly)", accessed: 2026-10-16 }
+  hb2506: &hb2506 { url: "https://wapp.capitol.tn.gov/apps/BillInfo/Default.aspx?BillNumber=HB2506&GA=114", title: "HB2506 bill information (Tennessee General Assembly)", accessed: 2026-10-16 }
+  cc_residency: &cc_residency { url: "https://www.crossville-chronicle.com/news/resident-urges-election-commission-to-deny-sextons-petition-for-reelection/article_908246fa-369a-4cf2-9c6a-14bbcc3fe7b3.html", title: "Resident urges election commission to deny Sexton's petition for reelection (Crossville Chronicle)", accessed: 2026-10-16 }
+  wpln_homes: &wpln_homes { url: "https://wpln.org/post/tennessee-house-speaker-cameron-sexton-owns-houses-in-crossville-and-nashville-questions-rise-over-which-is-his-home/", title: "Tennessee House Speaker Cameron Sexton owns houses in Crossville and Nashville. Questions rise over which is his 'home.' (WPLN News)", accessed: 2026-10-16 }
+  lookout_perdiem: &lookout_perdiem { url: "https://tennesseelookout.com/2023/05/02/cumberland-co-dems-file-civil-complaint-with-attorney-general-over-tn-house-speakers-residency/", title: "Cumberland Co. Dems file civil complaint with Attorney General over TN House Speaker's residency (Tennessee Lookout)", accessed: 2026-10-16 }
+  an5_map: &an5_map { url: "https://www.actionnews5.com/2026/05/08/tennessee-gop-approves-congressional-map-dividing-memphis-diluting-black-vote/", title: "Tennessee GOP approves congressional map dividing Memphis, diluting Black vote (Action News 5)", accessed: 2026-10-16 }
+  mm_home: &mm_home { url: "https://www.electmonica.com/", title: "Monica Mowdy for Tennessee House District 25 (Mowdy campaign)", accessed: 2026-10-16 }
+  mm_about: &mm_about { url: "https://www.electmonica.com/about.html", title: "About Monica (Mowdy campaign)", accessed: 2026-10-16 }
+  mm_issues: &mm_issues { url: "https://www.electmonica.com/issues.html", title: "Issues (Mowdy campaign)", accessed: 2026-10-16 }
+  mm_news: &mm_news { url: "https://www.electmonica.com/news.html", title: "News (Mowdy campaign)", accessed: 2026-10-16 }
+  bp_mowdy: &bp_mowdy { url: "https://ballotpedia.org/Monica_Mowdy", title: "Monica Mowdy (Ballotpedia)", accessed: 2026-10-16 }
+
 id: tn-house-025
 office: "Tennessee House, District 25"
 level: state_house
 district: 25
-research_status: pending
+research_status: complete
 candidate_list_source: "https://sos-prod.tnsosgovfiles.com/s3fs-public/document/TNHouse_Nov2026.pdf"
+
 candidates:
   - name: "Cameron Sexton"
     ballot_party: Republican
     city: "Crossville"
+    incumbent: true
+    website: "https://www.cameronsexton.com"
+    bio_facts:
+      - { text: "State representative for District 25 since 2011 (107th through 114th General Assemblies); elected the 83rd Speaker of the Tennessee House in August 2019.", sources: [*cga_h25, *cs_about, *lookout25] }
+      - { text: "Previously served as House Republican Caucus Chairman, House Majority Whip, and chairman of the House Health Committee.", sources: [*cga_h25, *cs_about] }
+      - { text: "Works in business development at Cumberland County Bank and sits on the bank's board of directors.", sources: [*cs_about] }
+      - { text: "B.A. from the University of Tennessee (1994); married with three children.", sources: [*cga_h25, *cs_about] }
+      - { text: "Prime sponsor in 2026 of enacted House bills creating a state loan pilot program for workforce housing (HB2509) and redrawing congressional district lines (HB7003), and of a bill making records on immigration-law enforcement confidential whose Senate companion became law (HB2506).", sources: [*hb2509, *hb7003, *hb2506] }
     why_running: { text: null, sources: [] }
-    platform: []
-    arguments: []
+    platform:
+      - category: economy
+        text: "Credits lower taxes, fewer regulations, and tort and workers' compensation reform with making Tennessee one of the most business-friendly states."
+        sources: [*cs_issues]
+      - category: taxes
+        text: "Use large budget surpluses to find new ways to return money to taxpayers, building on past cuts to the Hall income, food and inheritance taxes."
+        sources: [*cs_issues]
+      - category: education
+        text: "Focus on reading in kindergarten through third grade: targeted investment, incentives for top early-grade teachers, full funding for intervention programs, and expanding the Imagination Library through third grade."
+        sources: [*cs_issues]
+      - category: health_care
+        text: "Lower health costs through competition: price and ownership transparency, a public price database, more telemedicine in rural areas, and repealing or rewriting certificate-of-need laws."
+        sources: [*cs_issues]
+      - category: public_safety
+        text: "Truth in sentencing, closer to the federal system, so violent and repeat offenders serve their full sentences; he sponsored a measure requiring 85% to 100% of the sentence for certain crimes."
+        sources: [*cs_issues, *lookout25]
+    arguments:
+      - stance: for
+        text: >-
+          He credits tax cuts, lighter regulation, and tort and workers' compensation reforms he has backed with
+          making Tennessee one of the most business-friendly states and helping add hundreds of thousands of jobs.
+        sources: [*cs_issues]
+      - stance: against
+        text: >-
+          Residents have questioned whether he really lives in the district since his family moved into a Nashville
+          home bought in 2021, and in 2026 some asked the county election commission to reject his reelection
+          petition. He says his home is in Crossville.
+        sources: [*cc_residency, *wpln_homes, *lookout_perdiem]
+      - stance: against
+        text: >-
+          In 2023, more than a dozen district residents filed a complaint asking the state attorney general for a civil
+          investigation into whether he wrongly claimed the higher daily expense allowance for lawmakers who live
+          outside Nashville while owning a home there. He has said he returns to Crossville on weekends, breaks and
+          summers, and pointed to past speakers who owned more than one home.
+        sources: [*lookout_perdiem, *wpln_homes]
+      - stance: against
+        text: >-
+          He sponsored and defended the 2026 congressional map that split Memphis into three districts; critics
+          called it racial gerrymandering and vowed to fight it in court. He said the map was based on population and
+          politics.
+        sources: [*hb7003, *an5_map, *lookout25]
+
   - name: "Monica Mowdy"
     ballot_party: Democratic
     city: "Crossville"
-    why_running: { text: null, sources: [] }
-    platform: []
-    arguments: []
-last_verified: 2026-10-13
+    incumbent: false
+    website: "https://www.electmonica.com"
+    bio_facts:
+      - { text: "Pastor of WellSpring United Methodist Church in Cumberland County; entered ministry in 2004 and has served Homestead, Grassy Cove and Dorton United Methodist churches.", sources: [*mm_about, *lookout25] }
+      - { text: "Former public school teacher and teacher trainer, and an advocate for early care and education.", sources: [*mm_about, *lookout25] }
+      - { text: "Bachelor's degree from Oklahoma State University (1983); degree from Asbury Theological Seminary (2008).", sources: [*bp_mowdy] }
+      - { text: "Has lived in Tennessee for nearly 30 years, most of them in Cumberland County.", sources: [*mm_about] }
+    why_running:
+      text: >-
+        She says the people of the Cumberland Plateau deserve a representative who is immersed in life there, and
+        that she is not running to build a political career but to show up, listen and fight for District 25
+        residents, starting with health care access and public schools.
+      sources: [*mm_about]
+    platform:
+      - category: economy
+        text: "Create real economic opportunity for working families in the Upper Cumberland."
+        sources: [*mm_issues]
+      - category: taxes
+        text: "Challenge a tax structure that leans on sales, gas and property taxes and keeps property taxes low while sales taxes rise, which she says hurts middle- and low-income workers."
+        sources: [*bp_mowdy]
+      - category: cost_of_living
+        text: "Address high grocery, fuel and housing costs alongside low wages."
+        sources: [*bp_mowdy]
+      - category: education
+        text: "Make school funding a top priority; repeal the private school voucher program and the third-grade retention law; protect teacher pay and benefits."
+        sources: [*bp_mowdy, *mm_issues]
+      - category: health_care
+        text: "Equalize access to health care across the state, and give women the same equality men have to make their own health decisions without government intervention."
+        sources: [*bp_mowdy, *mm_issues]
+      - category: infrastructure
+        text: "Strong local infrastructure; she joined residents at the Capitol to press legislators on rural broadband expansion."
+        sources: [*mm_issues, *mm_news]
+    arguments:
+      - stance: for
+        text: >-
+          A longtime local pastor and former teacher, she promises to be a reachable neighbor who listens rather than
+          a career politician, running a campaign powered by neighbors rather than special interests.
+        sources: [*mm_about, *mm_home]
+
+last_verified: 2026-10-16
