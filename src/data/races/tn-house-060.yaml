@@ -1,23 +1,140 @@
-# Seeded from the Secretary of State's certified candidate list by
-# scripts/seed-from-certified-list.py. research_status: pending —
-# platforms and arguments not yet compiled.
+# Tennessee House, District 60 (eastern Davidson County: Donelson, Hermitage, Old Hickory) — Rep. Shaundelle
+# Brooks, in office since 2024, faces Eva Angelina Romero.
+# Candidate order follows the Secretary of State's certified candidate list.
+_sources:
+  er_home: &er_home { url: "https://electevaromero.com/", title: "Eva Romero for Tennessee House – District 60 (Romero campaign)", accessed: 2026-10-16 }
+  er_about: &er_about { url: "https://electevaromero.com/about/", title: "Meet Eva (Romero campaign)", accessed: 2026-10-16 }
+  er_issues: &er_issues { url: "https://electevaromero.com/issues/", title: "Issues (Romero campaign)", accessed: 2026-10-16 }
+  er_launch: &er_launch { url: "https://electevaromero.com/former-child-bride-turned-tn-housing-commissioner-eva-romero-announces-campaign-for-tennessee-state-house-district-60/", title: "Former Child Bride Turned TN Housing Commissioner, Eva Romero Announces Campaign for Tennessee State House, District 60 (Romero campaign)", accessed: 2026-10-16 }
+  er_petition: &er_petition { url: "https://electevaromero.com/eva-romero-launches-property-tax-petition-to-more-than-20000-house-district-60-voters/", title: "Eva Romero Launches Property Tax Petition to More Than 20,000 House District 60 Voters (Romero campaign)", accessed: 2026-10-16 }
+  bp_romero: &bp_romero { url: "https://ballotpedia.org/Eva_Romero", title: "Eva Romero (Ballotpedia)", accessed: 2026-10-16 }
+  sb_home: &sb_home { url: "https://www.brooksforstatehouse.com/", title: "Shaundelle Brooks for State House - Tennessee District 60 (Brooks campaign)", accessed: 2026-10-16 }
+  sb_about: &sb_about { url: "https://www.brooksforstatehouse.com/about", title: "About Shaundelle (Brooks campaign)", accessed: 2026-10-16 }
+  sb_work: &sb_work { url: "https://www.brooksforstatehouse.com/continuing-work", title: "Continuing the Work (Brooks campaign)", accessed: 2026-10-16 }
+  sb_results: &sb_results { url: "https://www.brooksforstatehouse.com/results", title: "Results That Matter (Brooks campaign)", accessed: 2026-10-16 }
+  sb_akilah: &sb_akilah { url: "https://www.brooksforstatehouse.com/akilahs-law", title: "Akilah's Law: Turning Tragedy into Protection (Brooks campaign)", accessed: 2026-10-16 }
+  bp_brooks: &bp_brooks { url: "https://ballotpedia.org/Shaundelle_Brooks", title: "Shaundelle Brooks (Ballotpedia)", accessed: 2026-10-16 }
+  cga_h60: &cga_h60 { url: "https://wapp.capitol.tn.gov/apps/legislatorinfo/member.aspx?district=H60", title: "Representative Shaundelle Brooks (Tennessee General Assembly)", accessed: 2026-10-16 }
+  hb0947: &hb0947 { url: "https://wapp.capitol.tn.gov/apps/BillInfo/Default.aspx?BillNumber=HB0947&GA=114", title: "HB0947 bill information (Tennessee General Assembly)", accessed: 2026-10-16 }
+  lookout60: &lookout60 { url: "https://tennesseelookout.com/voter-guides/contests/house-district-60/", title: "Tennessee House of Representatives, 60th District voter guide (Tennessee Lookout)", accessed: 2026-10-16 }
+  lookout_mar25: &lookout_mar25 { url: "https://tennesseelookout.com/2025/03/31/giving-guns-to-certain-mental-health-patients-could-become-a-crime-in-tennessee/", title: "Giving guns to certain mental health patients could become a crime in Tennessee (Tennessee Lookout)", accessed: 2026-10-16 }
+  lookout_apr25: &lookout_apr25 { url: "https://tennesseelookout.com/2025/04/11/bill-to-bar-giving-guns-to-certain-mental-health-patients-stalls-until-2026/", title: "Bill to bar giving guns to certain mental health patients stalls until 2026 (Tennessee Lookout)", accessed: 2026-10-16 }
+  wsmv60: &wsmv60 { url: "https://www.wsmv.com/2026/09/30/after-bruising-primary-fights-state-house-district-60-nominees-turn-sights-november-election-night-battle/", title: "State House District 60 nominees turn sights on November (WSMV)", accessed: 2026-10-16 }
+
 id: tn-house-060
 office: "Tennessee House, District 60"
 level: state_house
 district: 60
-research_status: pending
+research_status: complete
 candidate_list_source: "https://sos-prod.tnsosgovfiles.com/s3fs-public/document/TNHouse_Nov2026.pdf"
+
 candidates:
   - name: "Eva Angelina Romero"
     ballot_party: Republican
     city: "Nashville"
-    why_running: { text: null, sources: [] }
-    platform: []
-    arguments: []
+    incumbent: false
+    website: "https://electevaromero.com"
+    bio_facts:
+      - { text: "Real estate broker who holds a Century 21 franchise in Tennessee; co-founded Solace Oral Surgery & Implant Center with her husband.", sources: [*er_about, *lookout60] }
+      - { text: "Appointed by the governor as a commissioner of the Tennessee Housing Development Agency.", sources: [*er_about, *lookout60, *wsmv60] }
+      - { text: "Former high school history teacher; bachelor's degree from National University (2011) and a degree from Belmont University (2014).", sources: [*er_about, *bp_romero] }
+      - { text: "Mother of five who lives in Old Hickory Village; volunteers with Hope Smiles, Interfaith Dental Clinic and the American Red Cross.", sources: [*er_about] }
+      - { text: "Unopposed in her August 2026 primary.", sources: [*bp_romero] }
+    why_running:
+      text: >-
+        She says she is running to fix roads, fund schools and make streets safer rather than to fight culture
+        wars, because District 60 families feel their voice in the state House has gone silent. She says she
+        knows these neighborhoods, lives in them and will work with everyone to get things done.
+      sources: [*er_launch, *er_about]
+    platform:
+      - category: taxes
+        text: "Sponsor a law capping annual residential and small business property tax increases at 2% and freezing property taxes on primary homes for residents 65 and older; supports Amendment 2 to ban a state property tax on homes."
+        sources: [*er_petition, *er_issues, *bp_romero]
+      - category: public_safety
+        text: "Support Metro Police and pass state legislation barring local officials from blocking police access to license plate readers and other public safety technology and data."
+        sources: [*er_issues, *er_launch, *bp_romero]
+      - category: infrastructure
+        text: "Bring road funding to congested spots like Bell Road, Elm Hill Pike and Lebanon Road, remove bike lane poles, and secure the district's share of state transportation money."
+        sources: [*er_launch, *er_issues]
+      - category: education
+        text: "Raise standards and hold the Davidson County school board accountable for reading results; build a new technical and vocational high school in Old Hickory."
+        sources: [*er_issues, *er_launch, *bp_romero]
+      - category: cost_of_living
+        text: "Keep the district affordable for working families by expanding affordable housing, drawing on her work on the state housing agency."
+        sources: [*er_issues, *bp_romero]
+    arguments:
+      - stance: for
+        text: >-
+          Rose from poverty and a forced marriage at 14 to become a teacher, business owner and state housing
+          commissioner, and says she will focus on local roads, schools and safety rather than national fights.
+        sources: [*er_about, *er_launch]
+      - stance: for
+        text: >-
+          She mailed a property tax petition to more than 20,000 district voters and says she will sponsor a
+          stronger cap than the 3% bill that failed, so seniors and young families are not taxed out of their homes.
+        sources: [*er_petition]
+
   - name: "Shaundelle Brooks"
     ballot_party: Democratic
     city: "Hermitage"
-    why_running: { text: null, sources: [] }
-    platform: []
-    arguments: []
-last_verified: 2026-10-13
+    incumbent: true
+    website: "https://www.brooksforstatehouse.com"
+    bio_facts:
+      - { text: "State representative for District 60 since November 2024, when she won the open seat with 53.8% of the vote; House member of the 114th General Assembly.", sources: [*bp_brooks, *cga_h60] }
+      - { text: "B.A. in law and criminal justice from John Jay; certificate in nonprofit management from Tennessee State University.", sources: [*cga_h60, *wsmv60] }
+      - { text: "Has worked as a probation and parole officer; born and raised in Brooklyn, New York, the daughter of two police officers.", sources: [*lookout60, *wsmv60] }
+      - { text: "Her son Akilah DaSilva was killed in the 2018 shooting at a Nashville Waffle House; she has four children.", sources: [*lookout60, *lookout_mar25, *cga_h60] }
+      - { text: "House sponsor of HB0947, \"Akilah's Law,\" to make it a crime to knowingly give a firearm to someone who was a mental institution patient within five years; it cleared a House subcommittee in 2025 and failed in the Senate Judiciary Committee in March 2026.", sources: [*hb0947, *lookout_mar25] }
+      - { text: "Unopposed in her August 2026 primary.", sources: [*bp_brooks] }
+    why_running:
+      text: >-
+        She says she entered public service after losing her son to gun violence, resolving that no other family
+        should suffer the same preventable loss. She is running for re-election to keep delivering safer
+        neighborhoods, stronger families and leadership rooted in accountability and compassion.
+      sources: [*sb_about, *sb_akilah, *sb_home]
+    platform:
+      - category: guns
+        text: "Close gaps that let high-risk people get firearms, including people recently institutionalized for serious mental illness."
+        sources: [*sb_akilah]
+      - category: public_safety
+        text: "Strengthen violence prevention and mental health crisis response, and give first responders more resources, training and mental health support."
+        sources: [*sb_work]
+      - category: economy
+        text: "Support fair wages and economic stability for working families, and help small businesses and local economic growth."
+        sources: [*sb_work, *sb_results]
+      - category: cost_of_living
+        text: "Increase access to affordable housing and stabilize growing communities."
+        sources: [*sb_work]
+      - category: health_care
+        text: "Expand community-based public health resources and support access to health care."
+        sources: [*sb_work, *sb_results]
+      - category: education
+        text: "Expand education and workforce training pathways and invest in youth opportunity programs."
+        sources: [*sb_work]
+      - category: government
+        text: "Increase transparency and community engagement so leadership stays accessible and accountable."
+        sources: [*sb_work]
+    arguments:
+      - stance: for
+        text: >-
+          Points to a first-term record of championing Akilah's Law and making mental health a public safety
+          priority, and says she is a public servant, not a career politician.
+        sources: [*sb_results, *sb_about]
+      - stance: for
+        text: >-
+          A prosecutor testified that her firearm bill fills a real gap, since Tennessee law could not have
+          punished someone who handed guns back to a person barred from having them; a psychiatrist said it would
+          save lives.
+        sources: [*lookout_mar25]
+      - stance: against
+        text: >-
+          A mental health policy advocate warned that her firearm bill's wording could cover almost any mental
+          health or addiction care in the past five years and deter people from seeking treatment.
+        sources: [*lookout_apr25]
+      - stance: against
+        text: >-
+          Her opponent says the district's current representative has been consumed by divisive national debates
+          while local needs like road funding go ignored, and has not gotten property tax relief passed.
+        sources: [*er_issues, *er_petition]
+
+last_verified: 2026-10-16
