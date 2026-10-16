@@ -1,23 +1,119 @@
-# Seeded from the Secretary of State's certified candidate list by
-# scripts/seed-from-certified-list.py. research_status: pending —
-# platforms and arguments not yet compiled.
+# Tennessee House, District 57 (western Wilson County, including Mt. Juliet and part of Lebanon) — Rep. Susan
+# Lynn, in the House 2002-2010 and since 2012, faces Matt Burchfield.
+# Candidate order follows the Secretary of State's certified candidate list.
+_sources:
+  lookout57: &lookout57 { url: "https://tennesseelookout.com/voter-guides/contests/house-district-57/", title: "Tennessee House of Representatives, 57th District voter guide (Tennessee Lookout)", accessed: 2026-10-16 }
+  cga_h57: &cga_h57 { url: "https://wapp.capitol.tn.gov/apps/legislatorinfo/member.aspx?district=H57", title: "Representative Susan Lynn (Tennessee General Assembly)", accessed: 2026-10-16 }
+  bp_lynn: &bp_lynn { url: "https://ballotpedia.org/Susan_Lynn", title: "Susan Lynn (Ballotpedia)", accessed: 2026-10-16 }
+  bp_burch: &bp_burch { url: "https://ballotpedia.org/Matt_Burchfield", title: "Matt Burchfield (Ballotpedia)", accessed: 2026-10-16 }
+  sl_bio: &sl_bio { url: "https://susanlynn.us/bio.html", title: "Bio: Susan Lynn State Representative (Lynn campaign)", accessed: 2026-10-16 }
+  hb0411: &hb0411 { url: "https://wapp.capitol.tn.gov/apps/BillInfo/Default.aspx?BillNumber=HB0411&GA=114", title: "HB0411 bill information (Tennessee General Assembly)", accessed: 2026-10-16 }
+  hb1153: &hb1153 { url: "https://wapp.capitol.tn.gov/apps/BillInfo/Default.aspx?BillNumber=HB1153&GA=114", title: "HB1153 bill information (Tennessee General Assembly)", accessed: 2026-10-16 }
+  hb1155: &hb1155 { url: "https://wapp.capitol.tn.gov/apps/BillInfo/Default.aspx?BillNumber=HB1155&GA=114", title: "HB1155 bill information (Tennessee General Assembly)", accessed: 2026-10-16 }
+  hb1156: &hb1156 { url: "https://wapp.capitol.tn.gov/apps/BillInfo/Default.aspx?BillNumber=HB1156&GA=114", title: "HB1156 bill information (Tennessee General Assembly)", accessed: 2026-10-16 }
+  hb2471: &hb2471 { url: "https://wapp.capitol.tn.gov/apps/BillInfo/Default.aspx?BillNumber=HB2471&GA=114", title: "HB2471 bill information (Tennessee General Assembly)", accessed: 2026-10-16 }
+  lk_vax: &lk_vax { url: "https://tennesseelookout.com/2025/03/05/tennessee-bill-to-eliminate-parental-responsibility-for-vaccinating-children-shelved/", title: "Tennessee bill to eliminate parental responsibility for vaccinating children shelved (Tennessee Lookout)", accessed: 2026-10-16 }
+  lk_vote: &lk_vote { url: "https://tennesseelookout.com/2026/03/17/lawmakers-ease-financial-hurdles-for-regaining-voting-rights-after-felony-convictions/", title: "Lawmakers ease financial hurdles for regaining voting rights after felony convictions (Tennessee Lookout)", accessed: 2026-10-16 }
+  npr_2016: &npr_2016 { url: "https://www.npr.org/sections/thetwo-way/2016/04/19/474821679/tennessee-tables-gender-identity-bill-after-sponsor-says-tweaks-needed", title: "Tennessee Tables Gender Identity Bill After Sponsor Says Tweaks Needed (NPR)", accessed: 2026-10-16 }
+  mb_home: &mb_home { url: "https://www.mattforwilsoncounty.com/", title: "Matt Burchfield for Tennessee State House (Burchfield campaign)", accessed: 2026-10-16 }
+  mb_about: &mb_about { url: "https://www.mattforwilsoncounty.com/about", title: "About | Burchfield TN House (Burchfield campaign)", accessed: 2026-10-16 }
+  mb_health: &mb_health { url: "https://www.mattforwilsoncounty.com/post/healthcare-in-tennessee-access-to-care-shouldn-t-depend-on-where-you-live", title: "Healthcare in Tennessee: Access to Care Shouldn't Depend on Where You Live (Burchfield campaign)", accessed: 2026-10-16 }
+  mb_schools: &mb_schools { url: "https://www.mattforwilsoncounty.com/post/tennessee-publics-chool-funding-wilson-county", title: "Tennessee Public School Funding Crisis: What It Means for Wilson County Families (Burchfield campaign)", accessed: 2026-10-16 }
+  mb_growth: &mb_growth { url: "https://www.mattforwilsoncounty.com/post/wilson-county-is-growing-fast-who-is-paying-for-it", title: "Wilson County Is Growing Fast. Who Is Paying for It? (Burchfield campaign)", accessed: 2026-10-16 }
+
 id: tn-house-057
 office: "Tennessee House, District 57"
 level: state_house
 district: 57
-research_status: pending
+research_status: complete
 candidate_list_source: "https://sos-prod.tnsosgovfiles.com/s3fs-public/document/TNHouse_Nov2026.pdf"
+
 candidates:
   - name: "Susan M Lynn"
     ballot_party: Republican
     city: "Old Hickory"
+    incumbent: true
+    website: "https://susanlynn.us"
+    bio_facts:
+      - { text: "First elected to the state House in 2002 and served through 2010, when she ran for the state Senate; returned to the House in 2012. House member of the 103rd through 106th and 109th through 114th General Assemblies.", sources: [*lookout57, *cga_h57, *sl_bio] }
+      - { text: "Member of the House Commerce and Health committees and the Banking & Consumer Affairs Subcommittee; formerly chaired the House Government Operations Committee and the Consumer and Human Resources Subcommittee.", sources: [*cga_h57, *sl_bio] }
+      - { text: "Owns and operates Susan Lynn and Company, a business services firm; B.S. in economics, with certifications in financial management, Six Sigma, LEAN and continuous quality improvement.", sources: [*sl_bio, *cga_h57] }
+      - { text: "Sponsored Lucca's Law, enacted in 2025, which addresses TennCare coverage of treatment for the pediatric neuropsychiatric disorders PANDAS and PANS.", sources: [*hb0411] }
+      - { text: "Sponsored a 2025 bill to remove the parental responsibility in state law to have children vaccinated according to federal or pediatric guidelines; a House subcommittee sent it to summer study.", sources: [*hb1156, *lk_vax] }
+      - { text: "Sponsored bills to require free school breakfast and lunch for disadvantaged students, to ban the sale of cell-cultured food products, and (in 2026) to bar public water systems from adding fluoride to drinking water.", sources: [*hb1153, *hb1155, *hb2471] }
+      - { text: "Unopposed in the August 2026 primary for the seat.", sources: [*bp_lynn] }
     why_running: { text: null, sources: [] }
-    platform: []
-    arguments: []
+    platform:
+      - category: taxes
+        text: "Firmly opposes a state income tax."
+        sources: [*sl_bio]
+      - category: health_care
+        text: "Says state law should not defer to a federal agency's childhood vaccine schedule without the state reviewing it, and that parents should not face legal jeopardy for not following it."
+        sources: [*lk_vax]
+      - category: guns
+        text: "Supports the Second Amendment."
+        sources: [*sl_bio]
+      - category: government
+        text: "Opposed dropping court-fee payments from the process for restoring voting rights after a felony conviction, saying the requirement is an incentive to pay off those debts."
+        sources: [*lk_vote]
+    arguments:
+      - stance: for
+        text: >-
+          Her campaign says that in a fast-growing district she has brought state road projects home, including work
+          on Mt. Juliet Road and Route 109.
+        sources: [*sl_bio]
+      - stance: against
+        text: >-
+          A legislative attorney contradicted her case for her 2025 childhood vaccine bill, saying current law is not
+          unconstitutional and does not penalize parents. A fellow lawmaker defended the federal guidance, citing
+          children dying of measles in 2025, and the bill was shelved.
+        sources: [*lk_vax]
+      - stance: against
+        text: >-
+          Opponents called her 2016 bill requiring public school students to use restrooms matching their sex at
+          birth discriminatory, and critics warned of economic backlash from businesses and the federal government.
+        sources: [*npr_2016]
+
   - name: "Matt Burchfield"
     ballot_party: Democratic
     city: "Mt Juliet"
-    why_running: { text: null, sources: [] }
-    platform: []
-    arguments: []
-last_verified: 2026-10-13
+    incumbent: false
+    website: "https://www.mattforwilsoncounty.com"
+    bio_facts:
+      - { text: "Video production manager and college instructor; teaches cinematography, directing and video techniques at Nossi College of Art and Design in Nashville and is creative director for Lee Company.", sources: [*mb_about, *lookout57] }
+      - { text: "Raised by a police detective mother and a Navy Force Master Chief stepfather; raised two sons largely on his own and coached youth basketball for seven years.", sources: [*mb_about] }
+      - { text: "Won the August 2026 primary for the seat with 74.8% of the vote.", sources: [*bp_burch] }
+    why_running:
+      text: >-
+        He says Wilson County families are working harder and still falling behind, facing congested roads and
+        rising costs, while state government has focused on culture-war fights instead of real problems. He says he
+        is running to get things done: direct tax dollars to the people who live and work here, grow the economy for
+        working families, and ensure every Tennessean has full civil rights and representation.
+      sources: [*mb_about]
+    platform:
+      - category: economy
+        text: "Require enforceable clawbacks so companies that receive state incentives return the money if they don't create the jobs they promised."
+        sources: [*mb_growth]
+      - category: taxes
+        text: "Spend tax dollars on infrastructure, education and health care rather than corporate handouts."
+        sources: [*mb_about]
+      - category: cost_of_living
+        text: "Restrict corporate bulk buying of residential homes, which he says is driving up prices."
+        sources: [*mb_home]
+      - category: education
+        text: "Oppose school vouchers and keep public money in public schools; fully fund classrooms, special education, career and technical education, and school counselors."
+        sources: [*mb_schools, *mb_home]
+      - category: health_care
+        text: "Recruit and keep more doctors, nurses and mental health providers, protect access to rural health care and hospital services, and invest in emergency care capacity in growing counties like Wilson."
+        sources: [*mb_health]
+      - category: infrastructure
+        text: "Expand WeGo Star commuter rail with evening and weekend service, push for statewide road funding, and create a state impact-fee framework so new development pays its share of roads and sewers."
+        sources: [*mb_growth]
+    arguments:
+      - stance: for
+        text: >-
+          He comes from a career managing teams, budgets and logistics rather than politics, and promises to put
+          families' daily needs, like traffic and costs, ahead of culture-war fights.
+        sources: [*mb_about]
+
+last_verified: 2026-10-16
