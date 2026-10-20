@@ -11,7 +11,7 @@ _sources:
   pk_about: &pk_about { url: "https://www.vote4perry.com/about", title: "About (Vote 4 Perry, Keenan campaign)", accessed: 2026-10-16 }
   pk_announce: &pk_announce { url: "https://www.vote4perry.com/post/how-to-make-your-voice-heard-in-elections", title: "Campaign Announcement (Vote 4 Perry, Keenan campaign)", accessed: 2026-10-16 }
   ksg_qa: &ksg_qa { url: "https://www.ksgazette.com/q-a-meet-perry-keenan-republican-candidate-for-tennessee-house-district-78/", title: "Q&A: Meet Perry Keenan, candidate for Tennessee House District 78 (Kingston Springs Gazette)", accessed: 2026-10-16 }
-  ksg_forum: &ksg_forum { url: "https://www.ksgazette.com/education-growth-and-sober-living-dominate-district-78-candidate-forum/", title: "Education, growth and sober living dominate District 78 candidate forum (Kingston Springs Gazette)", accessed: 2026-10-16 }
+  ksg_forum: &ksg_forum { url: "https://www.ksgazette.com/education-growth-and-sober-living-dominate-district-78-candidate-forum/", title: "Education, growth, sober living dominate District 78 candidate forum (Kingston Springs Gazette)", accessed: 2026-10-16 }
   ksg_enters: &ksg_enters { url: "https://www.ksgazette.com/former-pleasant-view-mayor-perry-keenan-enters-race-for-open-house-district-78-seat/", title: "Former Pleasant View Mayor Perry Keenan enters race for open House District 78 seat (Kingston Springs Gazette)", accessed: 2026-10-16 }
   hcg_home: &hcg_home { url: "https://hillary4tn.com/", title: "Home (Hillary for Tennessee, Capes-Gwinn campaign)", accessed: 2026-10-16 }
 
@@ -72,8 +72,8 @@ candidates:
         sources: [*ksg_qa, *pk_about]
       - stance: for
         text: >-
-          Endorsed by the district's retiring representative and several state House and Senate leaders; he says
-          those relationships would let him get to work for the district on day one.
+          Says endorsements from state House leaders and other state lawmakers give him working relationships that
+          would let him get to work for the district on day one.
         sources: [*ksg_qa]
 
   - name: "Hillary Capes-Gwinn"
@@ -100,4 +100,4 @@ candidates:
           face, knows what it is like to struggle to pay for gas and groceries, and is not a career politician.
         sources: [*hcg_home]
 
-last_verified: 2026-10-16
+last_verified: 2026-10-20
