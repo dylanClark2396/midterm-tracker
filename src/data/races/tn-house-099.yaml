@@ -35,7 +35,7 @@ candidates:
       - { text: "Shelby County Register of Deeds from 2000 to 2018.", sources: [*bp_leatherwood, *lookout99, *tl_meet] }
       - { text: "B.S. in geology from the University of Memphis and a teaching certificate from Middle Tennessee State University; worked in the energy industry and taught at Millington Central High School for eight years.", sources: [*tl_meet, *cga_h99] }
       - { text: "Won the August 6, 2026 Republican primary with 65.7% of the vote.", sources: [*bp_leatherwood] }
-      - { text: "Sponsored a 2022 bill (HB0233) to create a common-law marriage contract for one man and one woman; a House committee sent it to summer study in April 2022.", sources: [*hb0233, *ap_dead] }
+      - { text: "Sponsored HB0233 in the 2021-2022 General Assembly, a bill to create a common-law marriage contract for one man and one woman; at his request a House committee sent it to summer study in April 2022.", sources: [*hb0233, *ap_dead] }
       - { text: "House sponsor of a 2023 bill to cap Department of Children's Services social worker caseloads at 20, then 18; it did not pass that session.", sources: [*lookout_dcs] }
     why_running:
       text: >-
@@ -48,10 +48,10 @@ candidates:
         text: "Expand a business-friendly environment by reducing regulations, and increase workforce development."
         sources: [*tl_issues]
       - category: taxes
-        text: "Keep balancing the state budget without raising taxes; points to cutting more than $35 million in taxes, repealing the professional privilege tax on 15 professions, the gym tax and the ammunition tax, and building the rainy-day fund to $2.2 billion."
+        text: "Reduce taxes while balancing the budget; points to balancing it every year without raising taxes, cutting more than $35 million in taxes, repealing the professional privilege tax on 15 professions, the gym tax and the ammunition tax, and building the rainy-day fund to $2.2 billion."
         sources: [*tl_issues]
       - category: education
-        text: "Increase funding for K-12 public schools, including $40 million for school resource officers and other safety measures and $25 million for vocational and technical training."
+        text: "More funding for K-12 public schools; says he fought for $40 million for school resource officers and other safety measures and $25 million for vocational and technical training."
         sources: [*tl_issues]
       - category: public_safety
         text: "Give law enforcement the resources and tools it needs, oppose defunding or dismantling police departments, and keep supporting the Memphis Safe Task Force that brought federal officers, the National Guard and more state troopers to Memphis."
@@ -78,14 +78,15 @@ candidates:
         sources: [*tl_meet, *lookout99]
       - stance: against
         text: >-
-          Critics said his 2022 bill creating a marriage contract limited to one man and one woman was an attempt
+          Critics said his bill creating a marriage contract limited to one man and one woman was an attempt
           to get around the 2015 Supreme Court ruling on same-sex marriage and could lead to costly legal battles.
         sources: [*ap_explainer, *ap_dead, *lookout_marriage]
       - stance: against
         text: >-
           Fellow lawmakers warned that his marriage-contract bill, first filed without a minimum age, could open a
           loophole for child marriage, allow bigamy, and leave survivors without inheritance, insurance or pension
-          rights because the state would not recognize the unions.
+          rights because the state would not recognize the unions. He later amended it to require both parties to be
+          18 and to make filing the contract mandatory.
         sources: [*ap_explainer, *lookout_marriage]
 
   - name: "William P Mouzon"
@@ -97,7 +98,7 @@ candidates:
       - { text: "Born in Detroit and raised in Newark, New Jersey; served in the U.S. Navy from 1973 to 1977.", sources: [*bp_mouzon] }
       - { text: "Network engineer who has worked in the telecommunications industry for more than 30 years; attended college on the GI Bill.", sources: [*bp_mouzon] }
       - { text: "Volunteer prison minister and mentor for more than 15 years before the COVID-19 pandemic.", sources: [*bp_mouzon] }
-      - { text: "Ran for this seat in 2024 as an independent and received 24.7% of the vote.", sources: [*bp_leatherwood, *bp_mouzon] }
+      - { text: "Ran for this seat in 2024 and received 24.7% of the vote.", sources: [*bp_leatherwood, *bp_mouzon] }
     why_running:
       text: >-
         In his 2024 candidate survey he said he wants the people of Tennessee to have a true voice in their
@@ -106,7 +107,7 @@ candidates:
       sources: [*bp_mouzon]
     platform:
       - category: government
-        text: "Give Tennessee citizens the power to petition to put measures on the ballot, the first bill he says he would file; supports term limits for legislators."
+        text: "Give Tennessee citizens the power to petition to put measures on the ballot, the first bill he said in 2024 he would file; supports term limits for legislators."
         sources: [*bp_mouzon]
       - category: abortion
         text: "Restore women's reproductive freedom and abortion rights."
@@ -123,8 +124,8 @@ candidates:
     arguments:
       - stance: for
         text: >-
-          A Navy veteran with more than 30 years as a telecommunications network engineer, he argues that lawmakers
-          with real-world experience outside politics would serve the state better.
+          A Navy veteran with more than 30 years as a telecommunications network engineer, he argued in his 2024
+          candidate survey that lawmakers with real-world experience outside politics would serve the state better.
         sources: [*bp_mouzon]
 
 last_verified: 2026-10-20
