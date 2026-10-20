@@ -10,8 +10,8 @@ _sources:
   kc_endorse: &kc_endorse { url: "https://www.votecapley.com/endorsements/", title: "Endorsements (Capley campaign)", accessed: 2026-10-16 }
   hb1708: &hb1708 { url: "https://wapp.capitol.tn.gov/apps/BillInfo/Default.aspx?BillNumber=HB1708&GA=114", title: "HB1708 bill information (Tennessee General Assembly)", accessed: 2026-10-16 }
   hb1802: &hb1802 { url: "https://wapp.capitol.tn.gov/apps/BillInfo/Default.aspx?BillNumber=HB1802&GA=114", title: "HB1802 bill information (Tennessee General Assembly)", accessed: 2026-10-16 }
-  pr_english: &pr_english { url: "https://tnhousegop.org/press-releases/2026/04/rep-kip-capley-passes-english-only-requirement-for-tennessee-drivers-licenses/", title: "Rep. Kip Capley passes English-only requirement for Tennessee driver's licenses (Tennessee House Republican Caucus)", accessed: 2026-10-16 }
-  pr_property: &pr_property { url: "https://tnhousegop.org/press-releases/2026/04/rep-kip-capley-expands-tennesseans-right-to-defend-private-property/", title: "Rep. Kip Capley expands Tennesseans' right to defend private property (Tennessee House Republican Caucus)", accessed: 2026-10-16 }
+  pr_english: &pr_english { url: "https://tnhousegop.org/press-releases/2026/04/rep-kip-capley-passes-english-only-requirement-for-tennessee-drivers-licenses/", title: "Rep. Kip Capley passes English-only requirement for Tennessee driver's licenses (Tennessee House caucus press release)", accessed: 2026-10-16 }
+  pr_property: &pr_property { url: "https://tnhousegop.org/press-releases/2026/04/rep-kip-capley-expands-tennesseans-right-to-defend-private-property/", title: "Rep. Kip Capley expands Tennesseans' right to defend private property (Tennessee House caucus press release)", accessed: 2026-10-16 }
   tl_2025: &tl_2025 { url: "https://tennesseelookout.com/2025/03/19/bill-requiring-english-only-drivers-license-testing-in-tennessee-fails-in-a-legislative-committee/", title: "Bill requiring English-only driver's license testing in Tennessee fails in a legislative committee (Tennessee Lookout)", accessed: 2026-10-16 }
   tl_2026: &tl_2026 { url: "https://tennesseelookout.com/2026/03/12/tennessee-senators-move-amended-english-only-drivers-license-testing/", title: "Tennessee senators move amended English-only driver's license testing (Tennessee Lookout)", accessed: 2026-10-16 }
   wpln_force: &wpln_force { url: "https://wpln.org/post/in-tennessee-you-cant-kill-to-protect-property-lawmakers-may-allow-wider-use-of-deadly-force", title: "In Tennessee, you can't kill to protect property. Now, lawmakers say you can. (WPLN News)", accessed: 2026-10-16 }
@@ -74,25 +74,24 @@ candidates:
         sources: [*pr_property, *wpln_force, *wsmv_force]
       - stance: against
         text: >-
-          Business groups and state economic development officials lobbied against his 2025 English-only driver's
-          test bill, warning it could hurt employees of international companies in Tennessee; a House subcommittee
-          voted it down.
+          His 2025 bill to make driver's license tests English-only was voted down in a House subcommittee after
+          concerns that it could hurt executives and workers at international companies doing business in Tennessee.
         sources: [*tl_2025]
       - stance: against
         text: >-
-          Critics testifying on the 2026 English-only driver's exam bill he carried in the House said it would make
-          roads less safe by increasing the number of unlicensed drivers.
+          A resident testifying against the 2026 English-only driver's exam bill, which he carried in the House, said
+          it would make roads less safe by increasing the number of unlicensed drivers.
         sources: [*tl_2026]
       - stance: against
         text: >-
-          The head of the state's prosecutors' association testified that the first version of his deadly-force
-          bill was so broad that someone turning around in a driveway could trigger it.
+          Testimony against an early version of his deadly-force bill warned it was so broad that someone stepping
+          into a yard or turning around in a driveway could trigger it.
         sources: [*wpln_force]
       - stance: against
         text: >-
-          Opponents in the legislature said his deadly-force bill substantially lowers the threshold for killing
-          someone over property.
-        sources: [*wsmv_force, *wpln_force]
+          A lawmaker opposing his deadly-force bill said it substantially lowers the threshold for killing someone
+          over property.
+        sources: [*wsmv_force]
 
   - name: "Matt Day"
     ballot_party: Democratic
@@ -115,4 +114,4 @@ candidates:
         sources: [*bp_day]
     arguments: []
 
-last_verified: 2026-10-16
+last_verified: 2026-10-20
