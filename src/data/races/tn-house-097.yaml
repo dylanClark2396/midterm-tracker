@@ -1,23 +1,104 @@
-# Seeded from the Secretary of State's certified candidate list by
-# scripts/seed-from-certified-list.py. research_status: pending —
-# platforms and arguments not yet compiled.
+# Tennessee House, District 97 (central Shelby County: parts of East Memphis and Cordova) — Rep. John Gillespie,
+# in office since 2020, faces Jesse Huseth in a rematch of 2024.
+# Candidate order follows the Secretary of State's certified candidate list.
+_sources:
+  cga_h97: &cga_h97 { url: "https://wapp.capitol.tn.gov/apps/legislatorinfo/member.aspx?district=H97", title: "Representative John Gillespie (Tennessee General Assembly)", accessed: 2026-10-20 }
+  bp_gillespie: &bp_gillespie { url: "https://ballotpedia.org/John_Gillespie", title: "John Gillespie (Ballotpedia)", accessed: 2026-10-20 }
+  bp_huseth: &bp_huseth { url: "https://ballotpedia.org/Jesse_Huseth", title: "Jesse Huseth (Ballotpedia)", accessed: 2026-10-20 }
+  hb0005: &hb0005 { url: "https://wapp.capitol.tn.gov/apps/BillInfo/Default.aspx?BillNumber=HB0005&GA=113", title: "HB0005 bill information (Tennessee General Assembly)", accessed: 2026-10-20 }
+  lookout97: &lookout97 { url: "https://tennesseelookout.com/voter-guides/contests/house-district-97/", title: "Tennessee House of Representatives, 97th District voter guide (Tennessee Lookout)", accessed: 2026-10-20 }
+  lookout97_2024: &lookout97_2024 { url: "https://tennesseelookout.com/2024/10/08/former-educator-businessman-faces-crime-focused-incumbent-in-district-97/", title: "Former educator, businessman faces crime-focused incumbent in district 97 (Tennessee Lookout)", accessed: 2026-10-20 }
+  lookout_stops: &lookout_stops { url: "https://tennesseelookout.com/2024/03/05/gillespie-postpones-bill-overturning-memphis-ordinance-to-end-police-textual-stops/", title: "Gillespie postpones bill overturning Memphis ordinance to end police 'textual' stops (Tennessee Lookout)", accessed: 2026-10-20 }
+  wpln_stops: &wpln_stops { url: "https://wpln.org/post/tennessee-rolls-back-police-reform-passed-after-the-death-of-tyre-nichols/", title: "Tennessee rolls back police reform passed after the death of Tyre Nichols (WPLN News)", accessed: 2026-10-20 }
+  jg_home: &jg_home { url: "https://repjohngillespie.com/", title: "Home - John Gillespie for Tennessee House District 97 (Gillespie campaign)", accessed: 2026-10-20 }
+  jg_about: &jg_about { url: "https://repjohngillespie.com/about/", title: "About - John Gillespie for Tennessee House District 97 (Gillespie campaign)", accessed: 2026-10-20 }
+  jg_issues: &jg_issues { url: "https://repjohngillespie.com/issues/", title: "Issues - John Gillespie for Tennessee House District 97 (Gillespie campaign)", accessed: 2026-10-20 }
+  jh_home: &jh_home { url: "https://jessefor97.com/", title: "Jesse for 97 - Jesse Huseth for TN House 97 (Huseth campaign)", accessed: 2026-10-20 }
+  jh_policies: &jh_policies { url: "https://jessefor97.com/policies/", title: "Policies of the Campaign - Jesse for 97 (Huseth campaign)", accessed: 2026-10-20 }
+
 id: tn-house-097
 office: "Tennessee House, District 97"
 level: state_house
 district: 97
-research_status: pending
+research_status: complete
 candidate_list_source: "https://sos-prod.tnsosgovfiles.com/s3fs-public/document/TNHouse_Nov2026.pdf"
+
 candidates:
   - name: "John Gillespie"
     ballot_party: Republican
     city: "Memphis"
-    why_running: { text: null, sources: [] }
-    platform: []
-    arguments: []
+    incumbent: true
+    website: "https://repjohngillespie.com"
+    bio_facts:
+      - { text: "State representative for District 97 since November 2020; won re-election in 2022 and in 2024, when he defeated Jesse Huseth with 51.7% of the vote.", sources: [*bp_gillespie] }
+      - { text: "Vice chair of the House Finance, Ways and Means Committee; also serves on the Health Committee, the Finance, Ways and Means Subcommittee, the Population Health Subcommittee and the Council on Pensions.", sources: [*cga_h97] }
+      - { text: "Memphis native with a B.A. in political science from High Point University in North Carolina.", sources: [*cga_h97, *jg_about] }
+      - { text: "Worked in banking at First Tennessee and in the mortgage division of Evolve Bank and Trust, then as grant coordinator at Trezevant Episcopal Home.", sources: [*jg_about, *bp_gillespie] }
+      - { text: "Serves on the board of directors of the Memphis Shelby County Crime Commission.", sources: [*cga_h97, *jg_about] }
+      - { text: "Prime sponsor of a 2023 law requiring that people convicted of rape, aggravated rape or especially aggravated kidnapping be sentenced within at least Range II.", sources: [*hb0005] }
+    why_running:
+      text: >-
+        He says he is running to get good things done for the community and to be an effective advocate for Shelby
+        County, which he calls home and does not want to see left behind other parts of the state.
+      sources: [*jg_home]
+    platform:
+      - category: education
+        text: "Give parents a strong voice in their children's education."
+        sources: [*jg_issues, *lookout97_2024]
+    arguments:
+      - stance: for
+        text: >-
+          He has made violent crime in Memphis and Shelby County the focus of his time in office, backing laws
+          that keep violent offenders in prison longer and deny probation to people who use a gun in a crime.
+        sources: [*lookout97, *jg_issues]
+      - stance: against
+        text: >-
+          He sponsored the law that voided a Memphis ordinance against police stops for minor violations such as a
+          broken taillight. Critics said those stops don't reduce crime and that the law strips cities of the power
+          to set their own policing rules.
+        sources: [*lookout_stops, *wpln_stops]
+      - stance: against
+        text: >-
+          The truth-in-sentencing law he backs drew opposition from criminal justice advocates, who warned that
+          removing early-release incentives could undercut rehabilitation programs and swell prison populations.
+        sources: [*lookout97_2024]
+
   - name: "Jesse Huseth"
     ballot_party: Democratic
     city: "Memphis"
-    why_running: { text: null, sources: [] }
-    platform: []
-    arguments: []
-last_verified: 2026-10-13
+    incumbent: false
+    website: "https://jessefor97.com"
+    bio_facts:
+      - { text: "Lifelong Memphian and University of Memphis graduate; he and his wife are raising two daughters in his childhood home in District 97.", sources: [*jh_home, *lookout97_2024] }
+      - { text: "Former Shelby County Schools teacher who taught eighth-grade history and science for two years and still volunteers as a track coach; now a business owner.", sources: [*lookout97_2024, *jh_home] }
+      - { text: "Lost to Gillespie in the 2024 race for this seat with 48.3% of the vote.", sources: [*bp_huseth] }
+    why_running:
+      text: >-
+        He says leadership should work for all Tennesseans, not just the wealthy, and that he will fight for working
+        families. He says local and state governments must set budgets and policies that genuinely support Memphis
+        residents.
+      sources: [*jh_home]
+    platform:
+      - category: education
+        text: "End private school vouchers and redirect the money to statewide pre-K, raise teacher pay, and commit to significantly raising the public education budget over the next ten years."
+        sources: [*jh_policies]
+      - category: health_care
+        text: "Expand Medicaid so Tennesseans' federal tax dollars stay in the state, cover people who can't afford insurance, and ease pressure on Shelby County's strained health care system."
+        sources: [*jh_policies]
+      - category: abortion
+        text: "Repeal the state abortion ban, which he links to fewer OB/GYN residency applicants and worse maternal and infant outcomes."
+        sources: [*jh_policies]
+      - category: public_safety
+        text: "Make state funding for a Shelby County crime lab his first priority, to cut delays in testing evidence."
+        sources: [*jh_policies]
+      - category: guns
+        text: "Repeal permitless carry, let courts issue extreme risk protection orders, and require secure storage of guns in vehicles."
+        sources: [*jh_policies]
+    arguments:
+      - stance: for
+        text: >-
+          He wants the state to help fund a crime lab in Shelby County so DNA evidence and rape kits are tested faster,
+          arguing that long testing backlogs are part of why suspects can't be held.
+        sources: [*jh_policies, *lookout97_2024]
+
+last_verified: 2026-10-20
