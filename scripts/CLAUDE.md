@@ -5,7 +5,7 @@ it). None of them is imported by the site.
 
 | Script | Run by | Purpose |
 | --- | --- | --- |
-| [check-links.mjs](check-links.mjs) | CI on every push and weekly; `npm run check:links` | Internal links and anchors in `dist/`, plus every external URL in the YAML and in `src/**/*.{astro,ts}` |
+| [check-links.mjs](check-links.mjs) | CI: PRs (changed files only), main pushes (internal only), weekly (everything); `npm run check:links` | Internal links and anchors in `dist/`, plus every external URL in the YAML and in `src/**/*.{astro,ts}` |
 | [check-docs.mjs](check-docs.mjs) | CI; `npm run docs:check` | Relative links in every `CLAUDE.md` |
 | [check-contact.mjs](check-contact.mjs) | CI; `npm run check:contact` | Contact form and Worker agree on field names, topics and `maxlength`s (parses both files with regexes, so keep `TOPICS`/`LIMITS` as plain object literals) |
 | [build-district-maps.mjs](build-district-maps.mjs) | By hand, rarely | Regenerates [../public/maps/](../public/maps/) GeoJSON (needs network and `npx mapshaper`) |

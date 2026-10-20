@@ -9,12 +9,16 @@
 //     so they're summarized as one line per host instead of a warning per URL.
 //     405 counts as reachable: the server is there, it just wants another method.
 //
-// Usage: node scripts/check-links.mjs [--internal-only | --external-only]
+// Usage: node scripts/check-links.mjs [--internal-only | --external-only] [--changed-since <git ref>]
+//   --changed-since limits the external pass to files changed between <ref> and HEAD.
 import { readFileSync, readdirSync, statSync, existsSync } from 'node:fs';
 import { join, extname } from 'node:path';
+import { execFileSync } from 'node:child_process';
 import { parse } from 'yaml';
 
-const args = new Set(process.argv.slice(2));
+const argv = process.argv.slice(2);
+const args = new Set(argv);
+const since = argv.includes('--changed-since') ? argv[argv.indexOf('--changed-since') + 1] : null;
 const BASE = ''; // site is served from the domain root
 const DIST = 'dist';
 const UA = 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/130.0 Safari/537.36';
@@ -70,10 +74,14 @@ function collectExternal() {
     else if (Array.isArray(node)) node.forEach((n) => visit(n, file));
     else if (node && typeof node === 'object') Object.values(node).forEach((n) => visit(n, file));
   };
-  for (const file of walk('src/data').filter((f) => ['.yaml', '.yml'].includes(extname(f)))) {
+  const changed = since
+    ? new Set(execFileSync('git', ['diff', '--name-only', since, 'HEAD'], { encoding: 'utf8' }).split('\n').filter(Boolean))
+    : null;
+  const wanted = (f) => !changed || changed.has(f.replaceAll('\\', '/'));
+  for (const file of walk('src/data').filter((f) => ['.yaml', '.yml'].includes(extname(f)) && wanted(f))) {
     visit(parse(readFileSync(file, 'utf8')), file);
   }
-  for (const file of walk('src').filter((f) => ['.astro', '.ts'].includes(extname(f)))) {
+  for (const file of walk('src').filter((f) => ['.astro', '.ts'].includes(extname(f)) && wanted(f))) {
     for (const [u] of readFileSync(file, 'utf8').matchAll(/https?:\/\/[^\s"'`<>)]+/g)) {
       // Skip template literals and map tile URL templates ({z}/{x}/{y}).
       if (!/[{}]/.test(u)) add(u.replace(/[.,;]+$/, ''), file);
