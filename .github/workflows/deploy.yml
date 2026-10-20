@@ -61,5 +61,7 @@ jobs:
           path: dist
       - uses: cloudflare/wrangler-action@v3
         with:
+          # The action's default Wrangler (3.x) can't deploy an assets-only Worker.
+          wranglerVersion: '4.151.3'
           apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
           command: deploy
