@@ -1,5 +1,5 @@
 # Tennessee House, District 97 (central Shelby County: parts of East Memphis and Cordova) — Rep. John Gillespie,
-# in office since 2020, faces Jesse Huseth in a 2024 rematch.
+# in office since 2020, faces Jesse Huseth in a rematch of 2024.
 # Candidate order follows the Secretary of State's certified candidate list.
 _sources:
   cga_h97: &cga_h97 { url: "https://wapp.capitol.tn.gov/apps/legislatorinfo/member.aspx?district=H97", title: "Representative John Gillespie (Tennessee General Assembly)", accessed: 2026-10-20 }
@@ -42,23 +42,14 @@ candidates:
         County, which he calls home and does not want to see left behind other parts of the state.
       sources: [*jg_home]
     platform:
-      - category: public_safety
-        text: "Keep violent felons in prison for their full sentences, stiffen penalties for aggravated assault and crimes committed with a firearm, tighten bail and its enforcement, and add state troopers on Memphis interstates."
-        sources: [*jg_issues]
-      - category: taxes
-        text: "Cut taxes on small businesses and keep Tennessee ranked at the top for fiscal stability."
-        sources: [*jg_issues]
-      - category: economy
-        text: "Oppose costly mandates on small businesses."
-        sources: [*jg_issues]
       - category: education
-        text: "Strengthen school safety, fund more career and technical courses for high school students, give parents a strong voice in their children's education, and hold Memphis-Shelby County Schools accountable to parents and taxpayers."
-        sources: [*jg_issues]
+        text: "Give parents a strong voice in their children's education."
+        sources: [*jg_issues, *lookout97_2024]
     arguments:
       - stance: for
         text: >-
-          He has made violent crime in Memphis and Shelby County the focus of his time in office, sponsoring laws
-          that keep violent offenders in prison longer and deny probation to those who use a gun.
+          He has made violent crime in Memphis and Shelby County the focus of his time in office, backing laws
+          that keep violent offenders in prison longer and deny probation to people who use a gun in a crime.
         sources: [*lookout97, *jg_issues]
       - stance: against
         text: >-
@@ -89,10 +80,10 @@ candidates:
       sources: [*jh_home]
     platform:
       - category: education
-        text: "End private school vouchers and redirect the money to statewide pre-K, raise teacher pay, and adopt a ten-year plan to substantially increase public school funding."
+        text: "End private school vouchers and redirect the money to statewide pre-K, raise teacher pay, and commit to significantly raising the public education budget over the next ten years."
         sources: [*jh_policies]
       - category: health_care
-        text: "Expand Medicaid to bring federal dollars back to Tennessee and ease the strain on local hospitals."
+        text: "Expand Medicaid so Tennesseans' federal tax dollars stay in the state, cover people who can't afford insurance, and ease pressure on Shelby County's strained health care system."
         sources: [*jh_policies]
       - category: abortion
         text: "Repeal the state abortion ban, which he links to fewer OB/GYN residency applicants and worse maternal and infant outcomes."
@@ -103,13 +94,10 @@ candidates:
       - category: guns
         text: "Repeal permitless carry, let courts issue extreme risk protection orders, and require secure storage of guns in vehicles."
         sources: [*jh_policies]
-      - category: infrastructure
-        text: "Invest in Memphis' infrastructure."
-        sources: [*jh_home]
     arguments:
       - stance: for
         text: >-
-          He wants a state-funded crime lab in Shelby County so DNA evidence and rape kits are tested faster,
+          He wants the state to help fund a crime lab in Shelby County so DNA evidence and rape kits are tested faster,
           arguing that long testing backlogs are part of why suspects can't be held.
         sources: [*jh_policies, *lookout97_2024]
 
