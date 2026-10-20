@@ -16,7 +16,7 @@ _sources:
   tl_darkmoney: &tl_darkmoney { url: "https://tennesseelookout.com/2025/08/13/dark-money-group-goes-after-tennessee-republican-in-congressional-race/", title: "Dark money group goes after congressional candidate (Tennessee Lookout)", accessed: 2026-10-16 }
   wkms: &wkms { url: "https://www.wkms.org/government-politics/2025-10-02/dark-money-groups-outspend-tennessee-congressional-candidates-oppose-republican-jody-barrett", title: "Dark money groups outspend Tennessee congressional candidates (WKMS)", accessed: 2026-10-16 }
   lh_murray: &lh_murray { url: "https://www.lewisherald.com/story/2026/10/15/news/murray-for-tn-state-house-district-69/12988.html", title: "Murray for TN State House District 69 (Lewis County Herald)", accessed: 2026-10-16 }
-  tndp: &tndp { url: "https://tndp.org/team-details/", title: "Team (Tennessee Democratic Party)", accessed: 2026-10-16 }
+  tndp: &tndp { url: "https://tndp.org/county-parties/", title: "County Parties (Tennessee Democratic Party)", accessed: 2026-10-20 }
 
 id: tn-house-069
 office: "Tennessee House, District 69"
@@ -75,8 +75,8 @@ candidates:
     arguments:
       - stance: for
         text: >-
-          He argues current law leaves out-of-state and mail-order abortions unpunished, and that his 2026 measure
-          would give the unborn the same legal protection as everyone else.
+          He argues current state law doesn't cover abortions done out of state or with pills sent by mail, and
+          that his 2026 measure would give the unborn the same legal protection as everyone else.
         sources: [*tl_abortion]
       - stance: for
         text: >-
@@ -90,13 +90,13 @@ candidates:
         sources: [*wkms]
       - stance: against
         text: >-
-          Critics of his 2026 abortion measure warned it could expose women who have abortions to murder charges
-          and even execution, and said they fear it will return in 2027.
+          Critics of his 2026 abortion measure, which could have let women who have abortions be charged with
+          murder, said they are deeply concerned it will return in 2027.
         sources: [*tl_abortion]
       - stance: against
         text: >-
-          Another lawmaker raised student-privacy concerns about his 2026 bill requiring the
-          state to report voucher recipients' personal details.
+          Another lawmaker raised student-privacy concerns about his 2026 bill requiring the state to report data
+          on each voucher recipient, including household income.
         sources: [*tl_vouchers]
       - stance: against
         text: >-
@@ -150,4 +150,4 @@ candidates:
           each county to keep hearing from constituents.
         sources: [*lh_murray]
 
-last_verified: 2026-10-16
+last_verified: 2026-10-20
