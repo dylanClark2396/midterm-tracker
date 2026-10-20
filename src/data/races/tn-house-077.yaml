@@ -42,16 +42,16 @@ candidates:
         text: "Opposes red flag laws and is committed to protecting the right to keep and bear arms."
         sources: [*rg_home]
       - category: economy
-        text: "Continue business-friendly policies that create jobs and promote economic growth."
+        text: "Continue business-friendly policies that create jobs and promote economic prosperity."
         sources: [*rg_home]
       - category: abortion
-        text: "Supports Tennessee's permanent ban on abortion; says life begins at conception."
+        text: "Supports a permanent ban on abortion; says life starts at conception."
         sources: [*rg_home]
       - category: agriculture
-        text: "Support farmers and ranchers by advocating for the district's agricultural needs."
+        text: "Support farmers and ranchers by advocating for the community's needs."
         sources: [*rg_home]
       - category: education
-        text: "Prioritize local control of education and freedom for teachers in the classroom, along with school investment and higher teacher pay."
+        text: "Prioritize local education and give teachers freedom in the classroom, along with investing in schools and raising teacher pay."
         sources: [*rg_home]
       - category: taxes
         text: "Keep Tennessee among the lowest-taxed states and let taxpayers keep more of their money by avoiding excessive regulation."
@@ -80,4 +80,4 @@ candidates:
     platform: []
     arguments: []
 
-last_verified: 2026-10-16
+last_verified: 2026-10-20
