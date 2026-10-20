@@ -28,7 +28,7 @@ candidates:
       - { text: "Bradley County commissioner from 2010 to 2014, serving as vice chairman and as chairman of its education committee.", sources: [*lookout_s1, *cga_s1, *bp_lowe] }
       - { text: "B.A. from Lee University, M.P.A. from the University of Tennessee at Chattanooga, and Ph.D. in education policy from the University of Tennessee at Knoxville.", sources: [*cga_s1, *bp_lowe] }
       - { text: "College professor of public policy, author and business owner; former executive director of the Cleveland State Community College Foundation.", sources: [*camp, *bp_lowe] }
-      - { text: "Supported the governor's 2025 private school voucher plan.", sources: [*lookout_s1] }
+      - { text: "Supported the governor's private school voucher plan.", sources: [*lookout_s1] }
     why_running: { text: null, sources: [] }
     platform:
       - category: economy
@@ -41,7 +41,7 @@ candidates:
         text: "Support private school choice, teacher merit pay and added school funding (he cites $2 billion), parental consent rules, and ending diversity, equity and inclusion programs."
         sources: [*camp]
       - category: health_care
-        text: "Expand youth mental health counseling and intervention, and keep the ban he sponsored on gender-transition surgery for minors."
+        text: "Lead on youth mental health by expanding youth development counseling and intervention."
         sources: [*camp]
       - category: public_safety
         text: "Go after drug cartels and fentanyl distributors."
@@ -61,17 +61,18 @@ candidates:
       - stance: for
         text: >-
           On his 2026 bill letting patients sue doctors who coerced them into gender treatment, he said lawmakers
-          heard testimony from people it would help and the state should not wait for a full count of cases to act.
+          heard testimony from people who would be affected and the state should not wait for a full count of cases to act.
         sources: [*lookout_coercion]
       - stance: against
         text: >-
-          Passed a 2026 Senate bill letting patients sue doctors over gender treatment up to 30 years later without
-          offering evidence that such coercion happens; opponents said it is vague and could invite discrimination.
+          Passed a 2026 Senate bill letting patients sue doctors for coercing them into gender treatment up to 30
+          years later; opposing senators said it was vague and could lead to discrimination without evidence.
         sources: [*lookout_coercion]
       - stance: against
         text: >-
           Sponsored the Senate version of a 2025 bill to drop the required 2-mile buffer between scenic rivers and
-          landfills, a change critics warned would put the state's waterways at serious risk.
+          landfills; river advocates warned a nearby landfill would risk harmful pollution. His office said it would
+          not move that year.
         sources: [*lookout_rivers]
 
 last_verified: 2026-10-20
