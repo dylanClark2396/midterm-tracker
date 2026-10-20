@@ -64,6 +64,8 @@ To research the pending races in bulk, or to resume research someone else starte
   column stays empty.
 - Neutral record facts that nobody argues about are bio facts, not arguments. A party office held is a valid bio
   fact; trivia about party switching is not.
+- No labels in source titles or planks either: shorten a page title that contains one ("Vote X | Conservative" →
+  "Vote X"), and describe a policy target generically instead of naming an organization.
 - Criminal charges never go in, even if dismissed.
 - A news report of the candidate's own announcement, speech or interview counts as their own material; the reporter's
   characterization doesn't. Bills they sponsored are not platform planks; cite one as a neutral bio fact instead.
