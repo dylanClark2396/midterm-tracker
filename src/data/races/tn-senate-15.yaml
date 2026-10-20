@@ -1,17 +1,51 @@
-# Seeded from the Secretary of State's certified candidate list by
-# scripts/seed-from-certified-list.py. research_status: pending —
-# platforms and arguments not yet compiled.
+# Tennessee Senate, District 15 (Cumberland, Jackson, Putnam, Smith, Van Buren and White counties) — Sen. Paul
+# Bailey, in the Senate since 2014, is unopposed.
+# Candidate order follows the Secretary of State's certified candidate list.
+_sources:
+  pb_home: &pb_home { url: "https://paulbaileyfortn.com/", title: "Home - Paul Bailey for Senate (Bailey campaign)", accessed: 2026-10-20 }
+  pb_about: &pb_about { url: "https://paulbaileyfortn.com/about/", title: "About Senator Bailey (Bailey campaign)", accessed: 2026-10-20 }
+  pb_upd321: &pb_upd321 { url: "https://paulbaileyfortn.com/capitol-hill-update-3-21-2026/", title: "Capitol Hill Update 3/21/2026 (Bailey campaign)", accessed: 2026-10-20 }
+  cga_s15: &cga_s15 { url: "https://wapp.capitol.tn.gov/apps/legislatorinfo/member.aspx?district=S15", title: "Senator Paul Bailey (Tennessee General Assembly)", accessed: 2026-10-20 }
+  bp_bailey: &bp_bailey { url: "https://ballotpedia.org/Paul_Bailey_(Tennessee)", title: "Paul Bailey (Tennessee) (Ballotpedia)", accessed: 2026-10-20 }
+  lookout15: &lookout15 { url: "https://tennesseelookout.com/voter-guides/contests/state-senate-district-15/", title: "State Senate, 15th District voter guide (Tennessee Lookout)", accessed: 2026-10-20 }
+  lk_speaker: &lk_speaker { url: "https://tennesseelookout.com/2026/10/13/tennessee-senate-leaders-predict-no-move-to-expel-member-before-speaker-vote/", title: "Tennessee Senate leaders predict no move to expel member before speaker vote (Tennessee Lookout)", accessed: 2026-10-20 }
+  lk_sebt: &lk_sebt { url: "https://tennesseelookout.com/2026/04/13/in-rebuke-to-gov-bill-lee-tennessee-republicans-fight-to-restore-summer-food-program-for-kids/", title: "Lawmakers fight to restore summer food program for kids (Tennessee Lookout)", accessed: 2026-10-20 }
+  sb1911: &sb1911 { url: "https://wapp.capitol.tn.gov/apps/BillInfo/Default.aspx?BillNumber=SB1911&GA=114", title: "SB1911 bill information (Tennessee General Assembly)", accessed: 2026-10-20 }
+
 id: tn-senate-15
 office: "Tennessee Senate, District 15"
 level: state_senate
 district: 15
-research_status: pending
+research_status: complete
 candidate_list_source: "https://sos-prod.tnsosgovfiles.com/s3fs-public/document/TNSenate_Nov2026.pdf"
+
 candidates:
   - name: "Paul Bailey"
     ballot_party: Republican
     city: "Sparta"
+    incumbent: true
+    website: "https://paulbaileyfortn.com/"
+    bio_facts:
+      - { text: "State senator for District 15 since November 2014; Senate member of the 109th through 114th General Assemblies. Before that he filled the unexpired term of Rep. Charles Curtis in House District 42.", sources: [*bp_bailey, *cga_s15, *pb_about] }
+      - { text: "Chair of the Senate Commerce and Labor Committee since 2018 and a member of the Fiscal Review and Transportation and Safety committees; chaired the Senate Transportation Committee in 2017.", sources: [*cga_s15, *pb_about, *bp_bailey] }
+      - { text: "Former chairman of the White County Commission and past chairman of the White County Republican Party.", sources: [*pb_about, *lookout15] }
+      - { text: "General manager of CB Trucking, a family trucking business with about 100 employees that he and his father started; also a small farmer. Attended Tennessee Tech University.", sources: [*pb_about, *cga_s15, *bp_bailey] }
+      - { text: "Running against the Senate majority leader for Senate speaker, a post that also makes its holder lieutenant governor; the majority caucus votes on November 10.", sources: [*lk_speaker, *lookout15] }
+      - { text: "Senate sponsor of a 2026 bill (SB1911) requiring the state to apply for federal summer food-assistance funds for children; it cleared the Senate Health and Welfare Committee but did not pass.", sources: [*sb1911, *lk_sebt] }
+      - { text: "Sponsored a 2026 bill, passed by the Senate, barring the state from inventorying foster parents' legally owned firearms or requiring access to locked storage during routine inspections.", sources: [*pb_upd321] }
     why_running: { text: null, sources: [] }
-    platform: []
-    arguments: []
-last_verified: 2026-10-13
+    platform:
+      - category: economy
+        text: "Advocate for growth and prosperity in rural Tennessee as well as its fast-growing urban and suburban areas."
+        sources: [*pb_about]
+      - category: government
+        text: "Keep state government small."
+        sources: [*pb_about]
+    arguments:
+      - stance: for
+        text: >-
+          He helped build a family trucking business that now employs about 100 people, and his campaign says he
+          brings that business experience to the Senate as an advocate for rural growth.
+        sources: [*pb_about]
+
+last_verified: 2026-10-20
