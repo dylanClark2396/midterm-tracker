@@ -1,23 +1,130 @@
-# Seeded from the Secretary of State's certified candidate list by
-# scripts/seed-from-certified-list.py. research_status: pending —
-# platforms and arguments not yet compiled.
+# Tennessee House, District 63 (southeast Williamson County: parts of Brentwood and Franklin, Nolensville,
+# Thompson's Station) — Rep. Jake McCalmon, in office since 2022, faces Laura Andreson in a 2024 rematch.
+# Candidate order follows the Secretary of State's certified candidate list.
+_sources:
+  cga_h63: &cga_h63 { url: "https://wapp.capitol.tn.gov/apps/legislatorinfo/member.aspx?district=H63", title: "Representative Jake McCalmon (Tennessee General Assembly)", accessed: 2026-10-16 }
+  bp_mccalmon: &bp_mccalmon { url: "https://ballotpedia.org/Jake_McCalmon", title: "Jake McCalmon (Ballotpedia)", accessed: 2026-10-16 }
+  hb2337: &hb2337 { url: "https://wapp.capitol.tn.gov/apps/BillInfo/Default.aspx?BillNumber=HB2337&GA=114", title: "HB2337 bill information (Tennessee General Assembly)", accessed: 2026-10-16 }
+  hb2646: &hb2646 { url: "https://wapp.capitol.tn.gov/apps/BillInfo/Default.aspx?BillNumber=HB2646&GA=114", title: "HB2646 bill information (Tennessee General Assembly)", accessed: 2026-10-16 }
+  jm_home: &jm_home { url: "https://votejakemccalmon.com/", title: "Jake McCalmon - State Representative - House District 63 (McCalmon campaign)", accessed: 2026-10-16 }
+  herald_jm24: &herald_jm24 { url: "https://www.williamsonherald.com/state-representative-house-district-63-jake-mccalmon/article_7810b0f6-8ff4-11ef-826e-a3e861076f39.html", title: "State Representative, House District 63: Jake McCalmon (Williamson Herald)", accessed: 2026-10-16 }
+  scene_jm24: &scene_jm24 { url: "https://www.williamsonscene.com/news/mccalmon-pitches-local-emphasis-in-bid-for-reelection/article_e9aa23bc-9672-11ef-9ada-7358d6de68e4.html", title: "McCalmon Pitches Local Emphasis in Bid for Reelection (Williamson Scene)", accessed: 2026-10-16 }
+  lookout63: &lookout63 { url: "https://tennesseelookout.com/voter-guides/contests/house-district-63/", title: "Tennessee House of Representatives, 63rd District voter guide (Tennessee Lookout)", accessed: 2026-10-16 }
+  la_home: &la_home { url: "https://www.laurafortn63.com/", title: "Dr. Laura Andreson for TN63 (Andreson campaign)", accessed: 2026-10-16 }
+  la_meet: &la_meet { url: "https://www.laurafortn63.com/meet-aura", title: "Meet Laura (Andreson campaign)", accessed: 2026-10-16 }
+  la_issues: &la_issues { url: "https://www.laurafortn63.com/issues", title: "On The Issues (Andreson campaign)", accessed: 2026-10-16 }
+  la_sub: &la_sub { url: "https://andreson.substack.com/p/standing-up-for-change", title: "Standing up for change. (Laura Andreson, Substack)", accessed: 2026-10-16 }
+  bp_andreson: &bp_andreson { url: "https://ballotpedia.org/Laura_Andreson", title: "Laura Andreson (Ballotpedia)", accessed: 2026-10-16 }
+  scene_la26: &scene_la26 { url: "https://www.williamsonscene.com/news/laura-andreson-to-run-for-state-house-district-63-seat-in-2026/article_49dedc5c-82b4-4682-af08-94543889977a.html", title: "Laura Andreson to Run for State House District 63 Seat in 2026 (Williamson Scene)", accessed: 2026-10-16 }
+  lookout_suit: &lookout_suit { url: "https://tennesseelookout.com/2023/09/12/a-new-challenge-to-tennessees-abortion-ban/", title: "A new challenge to Tennessee's abortion ban (Tennessee Lookout)", accessed: 2026-10-16 }
+
 id: tn-house-063
 office: "Tennessee House, District 63"
 level: state_house
 district: 63
-research_status: pending
+research_status: complete
 candidate_list_source: "https://sos-prod.tnsosgovfiles.com/s3fs-public/document/TNHouse_Nov2026.pdf"
+
 candidates:
   - name: "Jake McCalmon"
     ballot_party: Republican
     city: "Franklin"
-    why_running: { text: null, sources: [] }
-    platform: []
-    arguments: []
+    incumbent: true
+    website: "https://votejakemccalmon.com"
+    bio_facts:
+      - { text: "State representative for District 63 since November 2022; House member of the 113th and 114th General Assemblies.", sources: [*bp_mccalmon, *cga_h63] }
+      - { text: "Vice chair of the House Calendar & Rules Committee; also serves on the Government Operations, State & Local Government, and Transportation committees and the Public Service and Transportation subcommittees.", sources: [*cga_h63] }
+      - { text: "Worked more than 10 years as an operations manager in the technology sector, then founded Bulldog Martial Arts in Franklin in 2020.", sources: [*jm_home, *bp_mccalmon] }
+      - { text: "B.S. in business administration from Brandman University (now UMass Global).", sources: [*cga_h63, *bp_mccalmon] }
+      - { text: "House sponsor of a 2026 law (Public Chapter 718) on public benefit hospital sales; it exempts a county-owned hospital valued above $500 million from a state review of how sale proceeds are controlled, if two-thirds of the county commission approves.", sources: [*hb2337] }
+      - { text: "Sponsored a 2026 private act letting the Williamson County hospital district board sell its real property and lease its facilities with county commission approval.", sources: [*hb2646, *lookout63] }
+    why_running:
+      text: >-
+        He says Williamson County is the best place in the state to grow a business and raise a family, and he is
+        running to keep it a pro-business, low-tax place and to maintain and expand the freedoms and opportunities
+        open to its residents. In 2024, he said he was driven to serve to protect the American dream for the next
+        generation.
+      sources: [*jm_home, *herald_jm24]
+    platform:
+      - category: economy
+        text: "Keep Williamson County and Tennessee a pro-business place to grow a business."
+        sources: [*jm_home]
+      - category: taxes
+        text: "Keep taxes low and leave more money in taxpayers' pockets."
+        sources: [*jm_home, *herald_jm24]
+      - category: education
+        text: "In 2024, said state education dollars should follow the child so families can choose another school, and backed the governor's school voucher plan."
+        sources: [*scene_jm24]
+      - category: public_safety
+        text: "In 2024, said he wanted to extend the longer statute of limitations for child sex abuse cases to all victims of sex crimes, children and adults alike."
+        sources: [*scene_jm24]
+      - category: immigration
+        text: "In 2024, said he stands against illegal immigration."
+        sources: [*herald_jm24]
+      - category: infrastructure
+        text: "In 2024, called for more state road money for Williamson County and backed the governor's proposed choice lanes, saying private-sector operation works."
+        sources: [*scene_jm24]
+    arguments:
+      - stance: for
+        text: >-
+          He says he helped double the time limit for bringing child sex abuse and trafficking cases, from 15 years
+          to 30.
+        sources: [*scene_jm24]
+      - stance: for
+        text: >-
+          In 2024, he pointed to his support for the largest tax cut in state history and for tougher domestic
+          assault penalties.
+        sources: [*herald_jm24]
+      - stance: for
+        text: >-
+          His campaign says that running a small business during the pandemic showed him first-hand how government
+          can burden private citizens, and that he brings that view to state government.
+        sources: [*jm_home]
+
   - name: "Laura Andreson"
     ballot_party: Democratic
     city: "Franklin"
-    why_running: { text: null, sources: [] }
-    platform: []
-    arguments: []
-last_verified: 2026-10-13
+    incumbent: false
+    website: "https://www.laurafortn63.com"
+    bio_facts:
+      - { text: "OB/GYN for more than 20 years; now works as a hospitalist, seeing patients only in the hospital.", sources: [*la_meet, *la_sub] }
+      - { text: "Grew up on a small farm in North Dakota; degree in clinical laboratory science from the University of North Dakota; D.O. from Des Moines University (2002); residency at the University of Minnesota (2006).", sources: [*la_sub, *bp_andreson] }
+      - { text: "Ran for this seat in 2024 and lost to McCalmon; this is her second campaign for District 63.", sources: [*scene_la26, *lookout63] }
+      - { text: "One of two physician plaintiffs in a 2023 lawsuit arguing that the medical exceptions in Tennessee's abortion law are unclear.", sources: [*lookout_suit] }
+    why_running:
+      text: >-
+        She says she became politically active when the state's abortion ban took effect in 2022 and is running
+        because doctors and women in Tennessee deserve more than the limited exceptions added in 2023. She says she
+        wants health care access regardless of zip code and hopes to be a steady, reasonable voice during a
+        tumultuous time.
+      sources: [*la_sub, *la_meet]
+    platform:
+      - category: economy
+        text: "Fair wages and strong worker protections."
+        sources: [*la_issues]
+      - category: cost_of_living
+        text: "More affordable housing."
+        sources: [*la_issues]
+      - category: education
+        text: "Fully fund public schools, reduce class sizes, and support students' mental health; oppose school vouchers. In 2024, also called for better pay for teachers and school staff."
+        sources: [*la_issues, *bp_andreson, *scene_la26]
+      - category: health_care
+        text: "Protect affordable health care, expand mental health services, lower prescription drug costs, and serve rural and underserved areas; respond to Medicaid cuts and rising insurance costs."
+        sources: [*la_issues, *scene_la26]
+      - category: infrastructure
+        text: "Plan growth responsibly and add transportation options for the suburbs to shorten commutes."
+        sources: [*bp_andreson]
+      - category: guns
+        text: "In 2024, said responsible gun ownership should be protected but gun safety measures passed to reduce gun violence; her site says she will stand up to gun violence."
+        sources: [*bp_andreson, *la_issues]
+      - category: abortion
+        text: "Defend reproductive freedom and reform the state's abortion law, which she said in 2024 endangers pregnant women and their doctors; warns of new laws affecting IVF and contraception."
+        sources: [*bp_andreson, *la_issues, *scene_la26]
+    arguments:
+      - stance: for
+        text: >-
+          She says more than two decades as an OB/GYN, delivering thousands of babies and caring for families, gave
+          her a deep understanding of the challenges Tennessee families face.
+        sources: [*la_meet, *la_home]
+
+last_verified: 2026-10-16

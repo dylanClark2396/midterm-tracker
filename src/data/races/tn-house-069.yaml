@@ -1,23 +1,153 @@
-# Seeded from the Secretary of State's certified candidate list by
-# scripts/seed-from-certified-list.py. research_status: pending —
-# platforms and arguments not yet compiled.
+# Tennessee House, District 69 (Hickman, Lewis and part of Dickson counties) — Rep. Jody Barrett, in office
+# since 2022, faces Rachael Murray.
+# Candidate order follows the Secretary of State's certified candidate list.
+_sources:
+  cga_h69: &cga_h69 { url: "https://wapp.capitol.tn.gov/apps/legislatorinfo/member.aspx?district=H69", title: "Representative Jody Barrett (Tennessee General Assembly)", accessed: 2026-10-16 }
+  bp_barrett: &bp_barrett { url: "https://ballotpedia.org/Jody_Barrett", title: "Jody Barrett (Ballotpedia)", accessed: 2026-10-16 }
+  bp_murray: &bp_murray { url: "https://ballotpedia.org/Rachael_Murray", title: "Rachael Murray (Ballotpedia)", accessed: 2026-10-16 }
+  lookout69: &lookout69 { url: "https://tennesseelookout.com/voter-guides/contests/house-district-69/", title: "Tennessee House of Representatives, 69th District voter guide (Tennessee Lookout)", accessed: 2026-10-16 }
+  jb_home: &jb_home { url: "https://www.jodybarrett.com/", title: "Jody Barrett For Tennessee (Barrett campaign)", accessed: 2026-10-16 }
+  jb_issues: &jb_issues { url: "https://www.jodybarrett.com/issues", title: "Issues (Barrett campaign)", accessed: 2026-10-16 }
+  jb_duck: &jb_duck { url: "https://www.jodybarrett.com/news/duck-river-update", title: "Duck River Update (Barrett campaign)", accessed: 2026-10-16 }
+  hb0570: &hb0570 { url: "https://wapp.capitol.tn.gov/apps/BillInfo/Default.aspx?BillNumber=HB0570&GA=114", title: "HB0570 bill information (Tennessee General Assembly)", accessed: 2026-10-16 }
+  hb1544: &hb1544 { url: "https://wapp.capitol.tn.gov/apps/BillInfo/Default.aspx?BillNumber=HB1544&GA=114", title: "HB1544 bill information (Tennessee General Assembly)", accessed: 2026-10-16 }
+  tl_abortion: &tl_abortion { url: "https://tennesseelookout.com/2026/03/10/tennessee-lawmakers-turn-back-restrictive-abortion-bill/", title: "Tennessee lawmakers turn back restrictive abortion bill (Tennessee Lookout)", accessed: 2026-10-16 }
+  tl_vouchers: &tl_vouchers { url: "https://tennesseelookout.com/2026/02/11/tennessee-house-panel-kills-private-school-voucher-transparency-bill/", title: "Tennessee House panel kills private-school voucher transparency bill (Tennessee Lookout)", accessed: 2026-10-16 }
+  tl_darkmoney: &tl_darkmoney { url: "https://tennesseelookout.com/2025/08/13/dark-money-group-goes-after-tennessee-republican-in-congressional-race/", title: "Dark money group goes after congressional candidate (Tennessee Lookout)", accessed: 2026-10-16 }
+  wkms: &wkms { url: "https://www.wkms.org/government-politics/2025-10-02/dark-money-groups-outspend-tennessee-congressional-candidates-oppose-republican-jody-barrett", title: "Dark money groups outspend Tennessee congressional candidates (WKMS)", accessed: 2026-10-16 }
+  lh_murray: &lh_murray { url: "https://www.lewisherald.com/story/2026/10/15/news/murray-for-tn-state-house-district-69/12988.html", title: "Murray for TN State House District 69 (Lewis County Herald)", accessed: 2026-10-16 }
+  tndp: &tndp { url: "https://tndp.org/team-details/", title: "Team (Tennessee Democratic Party)", accessed: 2026-10-16 }
+
 id: tn-house-069
 office: "Tennessee House, District 69"
 level: state_house
 district: 69
-research_status: pending
+research_status: complete
 candidate_list_source: "https://sos-prod.tnsosgovfiles.com/s3fs-public/document/TNHouse_Nov2026.pdf"
+
 candidates:
   - name: "Jody Barrett"
     ballot_party: Republican
     city: "Dickson"
-    why_running: { text: null, sources: [] }
-    platform: []
-    arguments: []
+    incumbent: true
+    website: "https://www.jodybarrett.com"
+    bio_facts:
+      - { text: "State representative for District 69 since November 2022; House member of the 113th and 114th General Assemblies.", sources: [*bp_barrett, *cga_h69] }
+      - { text: "Member of the House Education Committee, its Education Instruction Subcommittee, and the Naming & Designating Committee.", sources: [*cga_h69] }
+      - { text: "Attorney; B.A. in history from Lincoln Memorial University (1996) and J.D. from the University of Mississippi School of Law (1999).", sources: [*cga_h69, *bp_barrett] }
+      - { text: "Dickson County attorney and school board attorney from 2002 to 2006; the county's delinquent tax attorney since 2002, and attorney for the Dickson Housing Authority, the county Industrial Development Board and the county Emergency Communications Board.", sources: [*cga_h69] }
+      - { text: "Founding board chair of the Dickson County Family YMCA.", sources: [*cga_h69] }
+      - { text: "Lives on a farm in Dickson County with his wife; they have three children.", sources: [*jb_home, *cga_h69] }
+      - { text: "Finished second of 11 candidates, with 25.3% of the vote, in the October 2025 special primary for the 7th Congressional District.", sources: [*bp_barrett, *lookout69] }
+      - { text: "Voted against creating the state's private-school voucher program in 2025.", sources: [*tl_vouchers, *tl_darkmoney] }
+      - { text: "In 2026 sponsored HB1544, which would have required the state to report voucher recipients' county, prior school, private school, grade and household income, and the program's total cost; it failed in the House K-12 Subcommittee.", sources: [*hb1544, *tl_vouchers] }
+      - { text: "In 2026 sponsored an amendment to HB0570 that would have treated abortion as criminal homicide, including for women who obtain one; it failed for lack of a motion in the House Population Health Subcommittee.", sources: [*hb0570, *tl_abortion, *lookout69] }
+    why_running:
+      text: >-
+        He says he serves to protect Tennessee's future and its way of life, which he describes as built on
+        faith, family and individual liberty.
+      sources: [*jb_home]
+    platform:
+      - category: economy
+        text: "Lower taxes and cut red tape to help small businesses and keep attracting high-paying jobs."
+        sources: [*jb_issues]
+      - category: cost_of_living
+        text: "Fight excessive property tax increases, wasteful government spending, and unfunded programs to bring down the cost of living."
+        sources: [*jb_issues]
+      - category: education
+        text: "Support parents' choice of school setting, expand vocational and technical programs and magnet schools, and keep government regulation away from homeschool families and private schools."
+        sources: [*jb_issues]
+      - category: immigration
+        text: "Make state laws and policy discourage people who break immigration law from settling in Tennessee, while welcoming those who come legally."
+        sources: [*jb_issues]
+      - category: environment
+        text: "In 2024, called for balancing growth with long-term protection of the Duck River and local water sources."
+        sources: [*jb_duck]
+      - category: guns
+        text: "Protect the right of law-abiding citizens to keep and bear arms for self-defense and recreation."
+        sources: [*jb_issues]
+      - category: agriculture
+        text: "Protect Tennessee farmland from development and foreign investment, and promote agricultural innovation and market access."
+        sources: [*jb_issues]
+      - category: veterans
+        text: "Ensure veterans receive the benefits and health care they earned, with more state support for county Veterans Service Officers."
+        sources: [*jb_issues]
+    arguments:
+      - stance: for
+        text: >-
+          He argues current law leaves out-of-state and mail-order abortions unpunished, and that his 2026 measure
+          would give the unborn the same legal protection as everyone else.
+        sources: [*tl_abortion]
+      - stance: for
+        text: >-
+          He says lawmakers need data on whether voucher money is going mostly to students already in private
+          school so the program can be adjusted.
+        sources: [*tl_vouchers]
+      - stance: for
+        text: >-
+          He points to an independent voting record, including votes against a 2024 franchise tax change that
+          refunded about $700 million mostly to out-of-state businesses and against expanding school vouchers.
+        sources: [*wkms]
+      - stance: against
+        text: >-
+          Critics of his 2026 abortion measure warned it could expose women who have abortions to murder charges
+          and even execution, and said they fear it will return in 2027.
+        sources: [*tl_abortion]
+      - stance: against
+        text: >-
+          Another lawmaker raised student-privacy concerns about his 2026 bill requiring the
+          state to report voucher recipients' personal details.
+        sources: [*tl_vouchers]
+      - stance: against
+        text: >-
+          During his 2025 congressional run, an outside group's ads attacked him for voting against the state's
+          private-school voucher program.
+        sources: [*tl_darkmoney, *wkms]
+
   - name: "Rachael Murray"
     ballot_party: Democratic
     city: "Hohenwald"
-    why_running: { text: null, sources: [] }
-    platform: []
-    arguments: []
-last_verified: 2026-10-13
+    incumbent: false
+    website: null
+    bio_facts:
+      - { text: "Has lived in Lewis County for five years; she and her husband are the third generation to live in his family's farmhouse there.", sources: [*lh_murray] }
+      - { text: "Chair of the Lewis County Democratic Party.", sources: [*tndp] }
+      - { text: "First campaign for public office; won the August 2026 primary with 67.8% of the vote.", sources: [*lookout69, *bp_murray] }
+    why_running:
+      text: >-
+        She says voters across Lewis, Hickman and Dickson counties feel the General Assembly has forgotten rural
+        counties, and that it is time for ordinary people to have a seat at the table.
+      sources: [*lh_murray]
+    platform:
+      - category: taxes
+        text: "Audit corporate state taxes and close corporate tax loopholes so large corporations pay what they owe."
+        sources: [*lh_murray]
+      - category: cost_of_living
+        text: "Roll back the state grocery tax, and temporarily the state gas tax, to give residents quick relief."
+        sources: [*lh_murray]
+      - category: education
+        text: "Roll back the school voucher program and reinvest that money in public schools."
+        sources: [*lh_murray]
+      - category: health_care
+        text: "Accept federal Medicaid expansion funds to widen TennCare coverage and give rural hospitals another funding stream."
+        sources: [*lh_murray]
+      - category: infrastructure
+        text: "Pause new AI data centers and license-plate camera networks until the state sets guardrails on their resource use, health and environmental effects, and privacy."
+        sources: [*lh_murray]
+      - category: government
+        text: "Investigate suspicious government contracts, and hold a town hall in each county of the district every year."
+        sources: [*lh_murray]
+      - category: agriculture
+        text: "Increase state support for rural counties, whose property tax base is smaller than more populated areas'."
+        sources: [*lh_murray]
+      - category: veterans
+        text: "Fully fund social services for veterans and people with disabilities, and make sure the programs reach the people they serve."
+        sources: [*lh_murray]
+    arguments:
+      - stance: for
+        text: >-
+          She promises a legislator focused on rural residents' needs and says she will hold yearly town halls in
+          each county to keep hearing from constituents.
+        sources: [*lh_murray]
+
+last_verified: 2026-10-16

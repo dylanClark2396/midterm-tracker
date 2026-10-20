@@ -1,0 +1,11 @@
+// Redirects www.tnelection.org to the apex, where the site Worker (../../wrangler.jsonc) serves.
+// Deployed by hand with `npx wrangler deploy` from this directory; it rarely changes.
+{
+  "name": "tnelection-www-redirect",
+  "account_id": "dbba7422f9a1e4754f4a6631214a25c5",
+  "main": "src/index.js",
+  "compatibility_date": "2026-09-01",
+  "workers_dev": false,
+  "preview_urls": false,
+  "routes": [{ "pattern": "www.tnelection.org", "custom_domain": true }]
+}

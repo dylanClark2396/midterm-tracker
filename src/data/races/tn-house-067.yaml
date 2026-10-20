@@ -1,23 +1,123 @@
-# Seeded from the Secretary of State's certified candidate list by
-# scripts/seed-from-certified-list.py. research_status: pending —
-# platforms and arguments not yet compiled.
+# Tennessee House, District 67 (central Clarksville, Montgomery County) — Rep. Ronnie Glynn, in office since 2022,
+# faces school board chairman Chris Lanier.
+# Candidate order follows the Secretary of State's certified candidate list.
+_sources:
+  lookout67: &lookout67 { url: "https://tennesseelookout.com/voter-guides/contests/house-district-67/", title: "Tennessee House of Representatives, 67th District voter guide (Tennessee Lookout)", accessed: 2026-10-16 }
+  cn_where67: &cn_where67 { url: "https://clarksvillenow.com/local/where-do-they-stand-tennessee-house-district-67-candidates-on-improving-schools-roads-health-care/", title: "Where do they stand? Tennessee House District 67 candidates on improving schools, roads, health care (Clarksville Now)", accessed: 2026-10-16 }
+  cn_forum67: &cn_forum67 { url: "https://clarksvillenow.com/local/state-house-candidates-talk-class-size-vouchers-mental-health-in-education-forum/", title: "State House candidates talk class size, vouchers, mental health in education forum (Clarksville Now)", accessed: 2026-10-16 }
+  cn_lanier: &cn_lanier { url: "https://clarksvillenow.com/local/chris-lanier-announces-campaign-for-state-house-district-67/", title: "Chris Lanier announces campaign for state House, District 67 (Clarksville Now)", accessed: 2026-10-16 }
+  cn_glynn26: &cn_glynn26 { url: "https://clarksvillenow.com/local/rep-ronnie-glynn-seeks-re-election-in-tennessee-house-district-67/", title: "Rep. Ronnie Glynn seeks re-election in Tennessee House District 67 (Clarksville Now)", accessed: 2026-10-16 }
+  cl_home: &cl_home { url: "https://www.lanierfortn.com/", title: "Chris Lanier for State Representative (Lanier campaign)", accessed: 2026-10-16 }
+  bp_lanier: &bp_lanier { url: "https://ballotpedia.org/Chris_Lanier", title: "Chris Lanier (Ballotpedia)", accessed: 2026-10-16 }
+  rg_home: &rg_home { url: "https://www.ronnieglynnforstaterep.com/", title: "Ronnie Glynn for State Rep (Glynn campaign)", accessed: 2026-10-16 }
+  rg_issues: &rg_issues { url: "https://www.ronnieglynnforstaterep.com/issues", title: "Issues (Glynn campaign)", accessed: 2026-10-16 }
+  rg_roe: &rg_roe { url: "https://www.ronnieglynnforstaterep.com/pressreleases/blog-post-title-one-5pye5", title: "Statement on Roe v. Wade (Glynn campaign)", accessed: 2026-10-16 }
+  cga_h67: &cga_h67 { url: "https://wapp.capitol.tn.gov/apps/legislatorinfo/member.aspx?district=H67", title: "Representative Ronnie Glynn (Tennessee General Assembly)", accessed: 2026-10-16 }
+  bp_glynn: &bp_glynn { url: "https://ballotpedia.org/Ronnie_Glynn", title: "Ronnie Glynn (Ballotpedia)", accessed: 2026-10-16 }
+  hb0975: &hb0975 { url: "https://wapp.capitol.tn.gov/apps/BillInfo/Default.aspx?BillNumber=HB0975&GA=113", title: "HB0975 bill information (Tennessee General Assembly)", accessed: 2026-10-16 }
+  hb2143: &hb2143 { url: "https://wapp.capitol.tn.gov/apps/BillInfo/Default.aspx?BillNumber=HB2143&GA=114", title: "HB2143 bill information (Tennessee General Assembly)", accessed: 2026-10-16 }
+  hb0937: &hb0937 { url: "https://wapp.capitol.tn.gov/apps/BillInfo/Default.aspx?BillNumber=HB0937&GA=114", title: "HB0937 bill information (Tennessee General Assembly)", accessed: 2026-10-16 }
+
 id: tn-house-067
 office: "Tennessee House, District 67"
 level: state_house
 district: 67
-research_status: pending
+research_status: complete
 candidate_list_source: "https://sos-prod.tnsosgovfiles.com/s3fs-public/document/TNHouse_Nov2026.pdf"
+
 candidates:
   - name: "Chris Lanier"
     ballot_party: Republican
     city: "Clarksville"
-    why_running: { text: null, sources: [] }
-    platform: []
-    arguments: []
+    incumbent: false
+    website: "https://www.lanierfortn.com"
+    bio_facts:
+      - { text: "Chairman of the Clarksville-Montgomery County School Board, after serving as vice chair; has represented school board District 6 since September 2024.", sources: [*cl_home, *cn_lanier, *bp_lanier] }
+      - { text: "Has owned and operated Lanier Lawn & Landscaping for more than 26 years.", sources: [*cl_home, *cn_lanier, *lookout67] }
+      - { text: "Lifelong Clarksville resident and Clarksville High School graduate; degree in agriculture with a minor in business from Austin Peay State University.", sources: [*cl_home, *cn_lanier] }
+      - { text: "Past president and longtime board member of the Kiwanis Club of Clarksville; Leadership Clarksville graduate (Class of 2023).", sources: [*cl_home, *cn_lanier] }
+    why_running:
+      text: >-
+        He says Clarksville is home and he is running to serve District 67 with practical leadership, a strong work
+        ethic and a focus on the issues that matter most to local families, including school quality, school
+        safety and student mental health.
+      sources: [*cn_lanier, *cl_home]
+    platform:
+      - category: infrastructure
+        text: "Make District 67 a priority for projects like widening I-24; prioritize transportation in the state budget, use public-private partnerships, and require transparent oversight of road spending."
+        sources: [*cl_home, *cn_where67]
+      - category: education
+        text: "Reduce state testing requirements by letting district benchmark tests replace other tests; expand career and technical education; fund phased class-size reductions and competitive teacher pay."
+        sources: [*cn_where67, *cn_forum67]
+      - category: public_safety
+        text: "Increase funding and training for law enforcement, seek tougher penalties for violent crime, and strengthen school safety measures and mental health resources for first responders."
+        sources: [*cn_where67, *cl_home]
+      - category: cost_of_living
+        text: "Expand workforce housing by streamlining zoning rules, giving developers incentives to build affordable units, and including housing in future infrastructure projects."
+        sources: [*cn_where67]
+      - category: health_care
+        text: "Expand telehealth for rural communities, promote health savings accounts, and reduce rules that make it hard for health care providers to operate."
+        sources: [*cn_where67]
+      - category: veterans
+        text: "Champion legislation that gives veterans education, employment and business opportunities while keeping strong state veterans' services and benefits."
+        sources: [*cl_home]
+    arguments:
+      - stance: for
+        text: >-
+          As chairman of the county school board, a lifelong resident and a business owner for more than 26
+          years, he says he brings practical, local leadership and knows the issues facing students, parents and
+          teachers.
+        sources: [*cl_home, *cn_lanier]
+
   - name: "Ronnie L. Glynn"
     ballot_party: Democratic
     city: "Clarksville"
-    why_running: { text: null, sources: [] }
-    platform: []
-    arguments: []
-last_verified: 2026-10-13
+    incumbent: true
+    website: "https://www.ronnieglynnforstaterep.com"
+    bio_facts:
+      - { text: "State representative for District 67 since November 2022; House member of the 113th and 114th General Assemblies.", sources: [*bp_glynn, *cga_h67] }
+      - { text: "Retired Army master sergeant after 23 years of service, including the 82nd Airborne Division, 7th Special Forces Group and 101st Airborne Division and three combat deployments to Afghanistan and Iraq.", sources: [*rg_home, *cn_glynn26, *cga_h67] }
+      - { text: "B.S. in business administration from Trident University International (2012); owns Jumpmaster Inflatables and Jumpmaster Trucking.", sources: [*cga_h67, *rg_home, *cn_glynn26] }
+      - { text: "Former chair of the Montgomery County Democratic Party; mentor with Big Brothers Big Sisters and TN Achieve.", sources: [*cga_h67, *rg_home] }
+      - { text: "Sponsored a 2023 law (HB0975) on retirees rehired in state-retirement-covered jobs, requiring the new employer to pay into the retirement system.", sources: [*hb0975, *rg_issues] }
+      - { text: "Sponsored a 2026 law (HB2143) requiring the state veterans services department to study county veterans service offices and report by the end of 2026.", sources: [*hb2143] }
+      - { text: "Sponsored a bill (HB0937) to restore voting rights automatically for people who complete their sentence, including parole or probation.", sources: [*hb0937] }
+    why_running:
+      text: >-
+        He says Tennessee families deserve a state government that works for them, that every child deserves a
+        great public education and veterans deserve dignity, and that Tennessee's growth should lift up the families
+        who live here, not just those at the top.
+      sources: [*cn_glynn26, *rg_issues]
+    platform:
+      - category: taxes
+        text: "Permanently eliminate the state grocery tax and suspend the gas tax for 90 days; tie business tax breaks to accountability; give seniors circuit-breaker relief on property taxes and utility bills."
+        sources: [*rg_issues]
+      - category: cost_of_living
+        text: "Increase the supply of attainable homes for first-time buyers by stopping out-of-state developers from buying communities and raising prices, improving tax incentives for local builders and cutting red tape."
+        sources: [*cn_where67, *rg_issues]
+      - category: education
+        text: "Oppose school vouchers and charter schools; raise teacher pay, lower class-size limits, and mandate teacher working-condition surveys."
+        sources: [*rg_issues, *cn_where67, *cn_forum67]
+      - category: health_care
+        text: "Expand and fully fund Medicaid, raise TennCare payments, and invest in rural hospitals, clinics and preventive care."
+        sources: [*rg_issues, *cn_where67]
+      - category: public_safety
+        text: "Give police and first responders the pay, training, equipment and resources they need, along with mental health resources and youth mentorship and after-school programs."
+        sources: [*rg_issues, *cn_where67]
+      - category: infrastructure
+        text: "Find additional state revenue to improve existing roads and interchanges, and push for Montgomery County's fair share of state road dollars."
+        sources: [*cn_where67]
+      - category: guns
+        text: "Close the gun-show loophole, expand background checks, and keep firearms away from people who pose a danger to themselves or others."
+        sources: [*rg_issues]
+      - category: abortion
+        text: "In a 2022 statement still on his campaign site, disagreed with the ruling overturning Roe v. Wade; says women should make their own pregnancy decisions without interference from politicians."
+        sources: [*rg_roe, *rg_issues]
+    arguments:
+      - stance: for
+        text: >-
+          A 23-year Army veteran in the House since 2022, he says he passed a law protecting retired teachers'
+          pensions and helped bring two new hospitals and a Boys & Girls Club to Clarksville.
+        sources: [*rg_home, *rg_issues, *cn_where67]
+
+last_verified: 2026-10-16

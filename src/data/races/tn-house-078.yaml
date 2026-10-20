@@ -1,23 +1,103 @@
-# Seeded from the Secretary of State's certified candidate list by
-# scripts/seed-from-certified-list.py. research_status: pending —
-# platforms and arguments not yet compiled.
+# Tennessee House, District 78 (all of Cheatham County and part of eastern Dickson County) — open seat after
+# Rep. Mary Littleton's retirement; Perry Keenan faces Hillary Capes-Gwinn.
+# Candidate order follows the Secretary of State's certified candidate list.
+_sources:
+  lookout78: &lookout78 { url: "https://tennesseelookout.com/voter-guides/contests/house-district-78/", title: "Tennessee House of Representatives, 78th District voter guide (Tennessee Lookout)", accessed: 2026-10-16 }
+  wsmv78: &wsmv78 { url: "https://www.wsmv.com/2026/09/28/election-2026-is-almost-here-heres-everything-you-need-know-about-tn-house-senate-candidates/", title: "Election 2026: Everything you need to know about TN House and Senate candidates (WSMV)", accessed: 2026-10-16 }
+  post78: &post78 { url: "https://mainstreetmediatn.com/articles/dicksonpost/nov-3-election-candidates-list-early-voting-starts-next-week/", title: "Nov. 3 Election Candidates List, Early Voting Starts Next Week (Dickson Post, Main Street Media of Tennessee)", accessed: 2026-10-16 }
+  bp_keenan: &bp_keenan { url: "https://ballotpedia.org/Perry_Keenan", title: "Perry Keenan (Ballotpedia)", accessed: 2026-10-16 }
+  bp_capes: &bp_capes { url: "https://ballotpedia.org/Hillary_Capes-Gwinn", title: "Hillary Capes-Gwinn (Ballotpedia)", accessed: 2026-10-16 }
+  pk_home: &pk_home { url: "https://www.vote4perry.com/", title: "Home (Vote 4 Perry, Keenan campaign)", accessed: 2026-10-16 }
+  pk_about: &pk_about { url: "https://www.vote4perry.com/about", title: "About (Vote 4 Perry, Keenan campaign)", accessed: 2026-10-16 }
+  pk_announce: &pk_announce { url: "https://www.vote4perry.com/post/how-to-make-your-voice-heard-in-elections", title: "Campaign Announcement (Vote 4 Perry, Keenan campaign)", accessed: 2026-10-16 }
+  ksg_qa: &ksg_qa { url: "https://www.ksgazette.com/q-a-meet-perry-keenan-republican-candidate-for-tennessee-house-district-78/", title: "Q&A: Meet Perry Keenan, candidate for Tennessee House District 78 (Kingston Springs Gazette)", accessed: 2026-10-16 }
+  ksg_forum: &ksg_forum { url: "https://www.ksgazette.com/education-growth-and-sober-living-dominate-district-78-candidate-forum/", title: "Education, growth and sober living dominate District 78 candidate forum (Kingston Springs Gazette)", accessed: 2026-10-16 }
+  ksg_enters: &ksg_enters { url: "https://www.ksgazette.com/former-pleasant-view-mayor-perry-keenan-enters-race-for-open-house-district-78-seat/", title: "Former Pleasant View Mayor Perry Keenan enters race for open House District 78 seat (Kingston Springs Gazette)", accessed: 2026-10-16 }
+  hcg_home: &hcg_home { url: "https://hillary4tn.com/", title: "Home (Hillary for Tennessee, Capes-Gwinn campaign)", accessed: 2026-10-16 }
+
 id: tn-house-078
 office: "Tennessee House, District 78"
 level: state_house
 district: 78
-research_status: pending
+research_status: complete
 candidate_list_source: "https://sos-prod.tnsosgovfiles.com/s3fs-public/document/TNHouse_Nov2026.pdf"
+
 candidates:
   - name: "Perry Keenan"
     ballot_party: Republican
     city: "Ashland City"
-    why_running: { text: null, sources: [] }
-    platform: []
-    arguments: []
+    incumbent: false
+    website: "https://www.vote4perry.com"
+    bio_facts:
+      - { text: "Pleasant View alderman and vice mayor from 2004 to 2008 and mayor from 2012 to 2020.", sources: [*pk_about, *lookout78] }
+      - { text: "Chair of the Cheatham County Republican Party from April 2023 to December 2025.", sources: [*pk_about, *lookout78] }
+      - { text: "Former Pleasant View parks and recreation board member and Cheatham County planning commissioner.", sources: [*post78] }
+      - { text: "Independent insurance agent and small business owner who also renovates residential homes; has worked in real estate.", sources: [*pk_about, *wsmv78] }
+      - { text: "Born and raised in Cheatham County; 1989 graduate of Cheatham County Central High School; associate's degree in business from Nashville State Community College and bachelor's in business and marketing from Austin Peay State University.", sources: [*pk_about, *wsmv78] }
+      - { text: "Won the August 6, 2026 primary with 55.9% of the vote over John Louallen.", sources: [*bp_keenan] }
+    why_running:
+      text: >-
+        He says he and his wife have seen neighbors struggle with rising grocery costs and the need for better roads
+        and stronger schools, and that District 78 deserves a voice in Nashville that will protect its values and
+        residents' wallets. In a July 2026 interview he said he has a passion for serving the district where he was
+        born and raised.
+      sources: [*pk_announce, *ksg_qa]
+    platform:
+      - category: economy
+        text: "Cut red tape so government gets out of the way of small business owners."
+        sources: [*pk_announce]
+      - category: taxes
+        text: "Vote to permanently ban any state property tax; in July 2026 he called for a study of reducing or eliminating the state tax on groceries."
+        sources: [*pk_announce, *ksg_qa]
+      - category: education
+        text: "Parents should lead in education while local public schools stay fully funded and focused on the basics; wants more emphasis on career and technical education and more transparency in how state school scholarship dollars are spent."
+        sources: [*pk_announce, *ksg_forum, *ksg_qa]
+      - category: health_care
+        text: "Address problems with sober living homes through state and federal cooperation, since federal housing and disability protections limit local officials, while urging operators to hold themselves accountable."
+        sources: [*ksg_forum]
+      - category: public_safety
+        text: "Keep state funding and grants flowing to police, fire and EMS, and keep open lines of communication with local first responders."
+        sources: [*ksg_qa]
+      - category: infrastructure
+        text: "Push to move the district's road needs to the front of the state's list, starting with long-delayed safety improvements on Highway 49 and improvements on Highway 48."
+        sources: [*pk_announce, *ksg_qa]
+      - category: government
+        text: "Have the state help local governments manage growth by strengthening planning commissions and local zoning authority."
+        sources: [*ksg_forum]
+    arguments:
+      - stance: for
+        text: >-
+          Brings about 16 years of local public service in the district, including eight years as mayor of Pleasant
+          View, experience he says has prepared him to work with the district's mayors at the state level.
+        sources: [*ksg_qa, *pk_about]
+      - stance: for
+        text: >-
+          Endorsed by the district's retiring representative and several state House and Senate leaders; he says
+          those relationships would let him get to work for the district on day one.
+        sources: [*ksg_qa]
+
   - name: "Hillary Capes-Gwinn"
     ballot_party: Democratic
     city: "White Bluff"
-    why_running: { text: null, sources: [] }
+    incumbent: false
+    website: "https://hillary4tn.com"
+    bio_facts:
+      - { text: "Middle school science teacher in Dickson County.", sources: [*hcg_home, *lookout78, *post78] }
+      - { text: "Founded Resilient Mothers of Tennessee, a volunteer effort that runs Christmas assistance, school supply drives and birthday programs for local families.", sources: [*hcg_home, *lookout78] }
+      - { text: "Directs student theater productions.", sources: [*hcg_home] }
+      - { text: "Won the August 6, 2026 primary with 50.3% of the vote over Aniya Farmer.", sources: [*bp_capes] }
+    why_running:
+      text: >-
+        She says the district deserves a strong, practical voice who understands the real-life impact of decisions
+        made in Nashville, and that she wants to support local schools, strengthen families and help the district
+        grow without losing what makes it home.
+      sources: [*hcg_home]
     platform: []
-    arguments: []
-last_verified: 2026-10-13
+    arguments:
+      - stance: for
+        text: >-
+          A middle school science teacher who says she has seen firsthand the challenges local families and schools
+          face, knows what it is like to struggle to pay for gas and groceries, and is not a career politician.
+        sources: [*hcg_home]
+
+last_verified: 2026-10-16

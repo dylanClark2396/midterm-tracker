@@ -1,23 +1,143 @@
-# Seeded from the Secretary of State's certified candidate list by
-# scripts/seed-from-certified-list.py. research_status: pending —
-# platforms and arguments not yet compiled.
+# Tennessee House, District 68 (eastern Montgomery County, including east Clarksville and Sango) — Rep. Aron
+# Maberry, in office since 2024, faces Garfield Scott in a rematch of 2024.
+# Candidate order follows the Secretary of State's certified candidate list.
+_sources:
+  cga_h68: &cga_h68 { url: "https://wapp.capitol.tn.gov/apps/legislatorinfo/member.aspx?district=H68", title: "Representative Aron Maberry (Tennessee General Assembly)", accessed: 2026-10-16 }
+  bp_maberry: &bp_maberry { url: "https://ballotpedia.org/Aron_Maberry", title: "Aron Maberry (Ballotpedia)", accessed: 2026-10-16 }
+  bp_scott: &bp_scott { url: "https://ballotpedia.org/Garfield_Scott", title: "Garfield Scott (Ballotpedia)", accessed: 2026-10-16 }
+  lookout68: &lookout68 { url: "https://tennesseelookout.com/voter-guides/contests/house-district-68/", title: "Tennessee House of Representatives, 68th District voter guide (Tennessee Lookout)", accessed: 2026-10-16 }
+  cn_qa68: &cn_qa68 { url: "https://clarksvillenow.com/local/where-do-they-stand-tennessee-house-district-68-candidates-on-schools-cost-of-housing-health-care/", title: "Where do they stand? Tennessee House District 68 candidates on schools, cost of housing, health care (Clarksville Now)", accessed: 2026-10-16 }
+  cn_maberry: &cn_maberry { url: "https://clarksvillenow.com/local/rep-aron-maberry-seeks-re-election-in-tennessee-house-district-68/", title: "Rep. Aron Maberry seeks re-election in Tennessee House District 68 (Clarksville Now)", accessed: 2026-10-16 }
+  cn_scott: &cn_scott { url: "https://clarksvillenow.com/local/garfield-scott-running-for-tennessee-house-district-68/", title: "Garfield Scott running for Tennessee House District 68 (Clarksville Now)", accessed: 2026-10-16 }
+  lk_hb1665: &lk_hb1665 { url: "https://tennesseelookout.com/2026/06/04/lgbtq-advocates-blast-law-blocking-doctors-from-gender-questions/", title: "Advocates blast law blocking doctors from gender questions (Tennessee Lookout)", accessed: 2026-10-16 }
+  hb0310: &hb0310 { url: "https://wapp.capitol.tn.gov/apps/BillInfo/Default.aspx?BillNumber=HB0310&GA=114", title: "HB0310 bill information (Tennessee General Assembly)", accessed: 2026-10-16 }
+  hb0524: &hb0524 { url: "https://wapp.capitol.tn.gov/apps/BillInfo/Default.aspx?BillNumber=HB0524&GA=114", title: "HB0524 bill information (Tennessee General Assembly)", accessed: 2026-10-16 }
+  hb0825: &hb0825 { url: "https://wapp.capitol.tn.gov/apps/BillInfo/Default.aspx?BillNumber=HB0825&GA=114", title: "HB0825 bill information (Tennessee General Assembly)", accessed: 2026-10-16 }
+  hb1665: &hb1665 { url: "https://wapp.capitol.tn.gov/apps/BillInfo/Default.aspx?BillNumber=HB1665&GA=114", title: "HB1665 bill information (Tennessee General Assembly)", accessed: 2026-10-16 }
+  am_about: &am_about { url: "https://votemaberry.com/about-aron-maberry/", title: "Meet Aron Maberry (Maberry campaign)", accessed: 2026-10-16 }
+  am_why: &am_why { url: "https://votemaberry.com/what-i-am-running-for/", title: "Why I am running for State Representative District 68 (Maberry campaign)", accessed: 2026-10-16 }
+  am_issues: &am_issues { url: "https://votemaberry.com/on-the-issues/", title: "On the Issues (Maberry campaign)", accessed: 2026-10-16 }
+  am_results: &am_results { url: "https://votemaberry.com/two-years-of-results-for-district-68/", title: "Two Years of Results for District 68 (Maberry campaign)", accessed: 2026-10-16 }
+  am_amend2: &am_amend2 { url: "https://votemaberry.com/vote-yes-on-amendment-2-no-state-property-tax-ever/", title: "Vote YES on Amendment 2: No State Property Tax. Ever. (Maberry campaign)", accessed: 2026-10-16 }
+  gs_home: &gs_home { url: "https://www.garfieldscottfortn68.com/", title: "Garfield Scott for TN 68 (Scott campaign)", accessed: 2026-10-16 }
+  gs_about: &gs_about { url: "https://www.garfieldscottfortn68.com/about-garfield-scott.html", title: "About Garfield Scott (Scott campaign)", accessed: 2026-10-16 }
+  gs_issues: &gs_issues { url: "https://www.garfieldscottfortn68.com/garfield-scott-campaign-issues.html", title: "Garfield Scott Campaign Issues (Scott campaign)", accessed: 2026-10-16 }
+
 id: tn-house-068
 office: "Tennessee House, District 68"
 level: state_house
 district: 68
-research_status: pending
+research_status: complete
 candidate_list_source: "https://sos-prod.tnsosgovfiles.com/s3fs-public/document/TNHouse_Nov2026.pdf"
+
 candidates:
   - name: "Aron Maberry"
     ballot_party: Republican
     city: "Clarksville"
-    why_running: { text: null, sources: [] }
-    platform: []
-    arguments: []
+    incumbent: true
+    website: "https://votemaberry.com"
+    bio_facts:
+      - { text: "State representative for District 68 since November 2024, when he won the open seat with 68% of the vote; House member of the 114th General Assembly.", sources: [*bp_maberry, *cga_h68] }
+      - { text: "Member of the House Education, Government Operations and Transportation committees and the K-12 and Education Instruction subcommittees.", sources: [*cga_h68] }
+      - { text: "Clarksville-Montgomery County School Board member for District 7 from 2022 to 2026.", sources: [*bp_maberry, *cga_h68] }
+      - { text: "Pastor since 2007; on the staff of Mosaic Church in Clarksville since 2015, where he is Next-Gen Pastor.", sources: [*am_about, *lookout68] }
+      - { text: "Grew up in Clarksville and graduated from Rossview High School in 2003; degree in pastoral leadership from Valor Christian College, 2007.", sources: [*am_about, *cga_h68] }
+      - { text: "Sponsored the 2025 law presuming that qualifying PTSD diagnoses in law enforcement officers and emergency medical responders were incurred in the line of duty for workers' compensation.", sources: [*hb0310, *am_results] }
+      - { text: "Sponsored the 2025 law letting eligible cases from other counties transfer into Montgomery County's veterans treatment court, and a 2025 law requiring social media and internet safety instruction in grades 6 through 12.", sources: [*hb0524, *hb0825, *am_results] }
+      - { text: "Sponsored the 2026 law restricting certain gender-related questions that health care providers and insurers may direct at minors.", sources: [*hb1665, *lk_hb1665] }
+    why_running:
+      text: >-
+        He says his calling to public service grew out of two decades in church leadership and from seeing what
+        pandemic school closures did to local children and families, which led him to run for school board. He
+        says he is seeking re-election to keep delivering results for Montgomery County on schools, roads, health
+        care access and public safety.
+      sources: [*am_why, *cn_maberry, *bp_maberry]
+    platform:
+      - category: taxes
+        text: "Keep taxes low, cut government waste and balance the budget; supports Amendment 2 to bar any state property tax in the state constitution."
+        sources: [*am_issues, *am_amend2]
+      - category: cost_of_living
+        text: "Increase housing supply by easing barriers to development, and limit how fast local property-tax collections can grow without voter approval."
+        sources: [*cn_qa68]
+      - category: education
+        text: "Support public schools alongside Education Freedom Scholarships and wider school choice, with emphasis on parental rights and school safety."
+        sources: [*am_issues, *cn_qa68]
+      - category: health_care
+        text: "Reform the state's Certificate of Need laws and remove barriers so more hospitals and providers can open in Montgomery County."
+        sources: [*am_issues, *cn_qa68]
+      - category: public_safety
+        text: "Increase penalties for violent and repeat offenders, protect crime victims, and give first responders mental health resources."
+        sources: [*am_issues, *cn_qa68]
+      - category: immigration
+        text: "Back bills that discourage illegal relocation to Tennessee and reserve state resources for legal residents."
+        sources: [*am_issues]
+      - category: infrastructure
+        text: "Press the state transportation department to speed widening of I-24, Trenton Road and Highway 237, and plan roads ahead of growth."
+        sources: [*am_issues, *cn_qa68]
+      - category: guns
+        text: "Oppose red flag laws that would allow firearms to be taken without due process."
+        sources: [*am_issues]
+    arguments:
+      - stance: for
+        text: >-
+          He points to a 70% bill-passage rate in his first session, among the highest in the House, including
+          laws extending PTSD coverage to first responders and opening the local veterans treatment court to
+          more veterans.
+        sources: [*am_results, *cn_maberry]
+      - stance: for
+        text: >-
+          He campaigned in 2024 on bringing a new hospital to Clarksville and spoke at the state hearings where
+          two new hospital proposals were approved in July 2025.
+        sources: [*am_results, *cn_qa68]
+      - stance: against
+        text: >-
+          Critics of his 2026 law limiting doctors' gender questions to minors call it censorship of medical
+          speech and say a doctor may be the only person some young patients can confide in.
+        sources: [*lk_hb1665]
+
   - name: "Garfield Scott"
     ballot_party: Democratic
     city: "Clarksville"
-    why_running: { text: null, sources: [] }
-    platform: []
-    arguments: []
-last_verified: 2026-10-13
+    incumbent: false
+    website: "https://www.garfieldscottfortn68.com"
+    bio_facts:
+      - { text: "Lifelong Clarksville resident raised in the St. Bethlehem community, one of ten children; attended Clarksville public schools and worked on his family's cattle, grain and tobacco farm.", sources: [*gs_about, *cn_scott] }
+      - { text: "Retired after nearly 40 years as a professional truck driver.", sources: [*gs_about, *lookout68] }
+      - { text: "Trustee of the Montgomery County Democratic Party.", sources: [*gs_about, *cn_scott] }
+      - { text: "Ran for this seat in 2024 and received 32% of the vote.", sources: [*bp_scott] }
+    why_running:
+      text: >-
+        He says Montgomery County residents deserve a strong voice in Nashville and that every constituent in
+        the district should have a seat at the table, whatever their politics. He says the area's fast growth
+        must be matched by investment in roads, public schools, affordable health care and working families.
+      sources: [*gs_home, *gs_about, *cn_scott]
+    platform:
+      - category: economy
+        text: "In 2024, said companies that receive taxpayer incentives should be held to their terms so communities aren't left paying for infrastructure built for promised jobs."
+        sources: [*bp_scott]
+      - category: taxes
+        text: "Eliminate the state grocery tax, and explore legalizing and taxing cannabis with part of the revenue going to roads."
+        sources: [*gs_issues, *cn_qa68]
+      - category: cost_of_living
+        text: "Expand affordable and starter housing through incentives and public-private partnerships, and limit large investors buying single-family homes."
+        sources: [*gs_issues, *cn_qa68]
+      - category: education
+        text: "Keep public money in public schools rather than private-school vouchers; pay teachers competitively and fund tutoring and early help."
+        sources: [*gs_issues, *cn_qa68]
+      - category: health_care
+        text: "Expand Medicaid and address rising premiums, deductibles and prescription drug costs."
+        sources: [*cn_qa68]
+      - category: public_safety
+        text: "Give first responders more resources, training and mental health support, and strengthen mental health and addiction services."
+        sources: [*cn_qa68]
+      - category: infrastructure
+        text: "Build roads and utilities ahead of new development, don't rely on toll Choice Lanes, and have large commercial developments pay their fair share."
+        sources: [*gs_issues, *cn_qa68]
+    arguments:
+      - stance: for
+        text: >-
+          A lifelong resident of the district, he says nearly 40 years of driving trucks showed him firsthand
+          how local roads have failed to keep pace with growth.
+        sources: [*gs_about, *gs_issues]
+
+last_verified: 2026-10-16

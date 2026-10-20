@@ -1,23 +1,137 @@
-# Seeded from the Secretary of State's certified candidate list by
-# scripts/seed-from-certified-list.py. research_status: pending —
-# platforms and arguments not yet compiled.
+# Tennessee House, District 35 (Trousdale County and most of Sumner County, including Gallatin) — Rep. William
+# Slater, in office since 2022, faces Phil Barnes.
+# Candidate order follows the Secretary of State's certified candidate list.
+_sources:
+  cga_h35: &cga_h35 { url: "https://wapp.capitol.tn.gov/apps/legislatorinfo/member.aspx?district=H35", title: "Representative William Slater (Tennessee General Assembly)", accessed: 2026-10-15 }
+  bp_slater: &bp_slater { url: "https://ballotpedia.org/William_Slater", title: "William Slater (Ballotpedia)", accessed: 2026-10-15 }
+  bp_barnes: &bp_barnes { url: "https://ballotpedia.org/Phil_Barnes", title: "Phil Barnes (Ballotpedia)", accessed: 2026-10-15 }
+  lookout35: &lookout35 { url: "https://tennesseelookout.com/voter-guides/contests/house-district-35/", title: "Tennessee House of Representatives, 35th District voter guide (Tennessee Lookout)", accessed: 2026-10-15 }
+  lookout_esa: &lookout_esa { url: "https://tennesseelookout.com/2026/04/22/tennessee-senate-kills-private-school-voucher-testing-bill/", title: "Tennessee Senate kills private-school voucher testing bill (Tennessee Lookout)", accessed: 2026-10-15 }
+  ws_home: &ws_home { url: "https://slaterforhouse.com/", title: "Slater For TN House District 35 (Slater campaign)", accessed: 2026-10-15 }
+  ws_bio: &ws_bio { url: "https://slaterforhouse.com/slater-for-tn-house-district-35/bio", title: "Bio (Slater campaign)", accessed: 2026-10-15 }
+  ws_life: &ws_life { url: "https://slaterforhouse.com/slater-for-tn-house-district-35/protecting-life", title: "Protecting Life (Slater campaign)", accessed: 2026-10-15 }
+  ws_2a: &ws_2a { url: "https://slaterforhouse.com/slater-for-tn-house-district-35/pro-2nd-amendment", title: "Pro Second Amendment (Slater campaign)", accessed: 2026-10-15 }
+  ws_edu: &ws_edu { url: "https://slaterforhouse.com/slater-for-tn-house-district-35/quality-education", title: "Quality Education (Slater campaign)", accessed: 2026-10-15 }
+  ws_const: &ws_const { url: "https://slaterforhouse.com/slater-for-tn-house-district-35/defending-the-constitution", title: "Defending the Constitution (Slater campaign)", accessed: 2026-10-15 }
+  rel_taskforce: &rel_taskforce { url: "https://tnhousegop.org/press-releases/2025/07/rep-william-slater-appointed-to-key-state-education-task-forces/", title: "Rep. William Slater appointed to key state education task forces (Tennessee House Republican Caucus)", accessed: 2026-10-15 }
+  rel_tss: &rel_tss { url: "https://tnhousegop.org/press-releases/2026/08/rep-william-slater-honored-with-action-hero-award-for-tennessee-student-advocacy/", title: "Rep. William Slater honored with Action Hero Award for Tennessee student advocacy (Tennessee House Republican Caucus)", accessed: 2026-10-15 }
+  hb2177: &hb2177 { url: "https://wapp.capitol.tn.gov/apps/BillInfo/Default.aspx?BillNumber=HB2177&GA=114", title: "HB2177 bill information (Tennessee General Assembly)", accessed: 2026-10-15 }
+  hb1729: &hb1729 { url: "https://wapp.capitol.tn.gov/apps/BillInfo/Default.aspx?BillNumber=HB1729&GA=114", title: "HB1729 bill information (Tennessee General Assembly)", accessed: 2026-10-15 }
+  hb1495: &hb1495 { url: "https://wapp.capitol.tn.gov/apps/BillInfo/Default.aspx?BillNumber=HB1495&GA=114", title: "HB1495 bill information (Tennessee General Assembly)", accessed: 2026-10-15 }
+  hb1555: &hb1555 { url: "https://wapp.capitol.tn.gov/apps/BillInfo/Default.aspx?BillNumber=HB1555&GA=114", title: "HB1555 bill information (Tennessee General Assembly)", accessed: 2026-10-15 }
+  pb_home: &pb_home { url: "https://trekforward.org/", title: "Phil Barnes, Trek Forward (Barnes campaign)", accessed: 2026-10-15 }
+  pb_about: &pb_about { url: "https://trekforward.org/about.html", title: "About Phil (Barnes campaign)", accessed: 2026-10-15 }
+  pb_issues: &pb_issues { url: "https://trekforward.org/issues.html", title: "Issues (Barnes campaign)", accessed: 2026-10-15 }
+  pb_record: &pb_record { url: "https://trekforward.org/slater.html", title: "Slater's Voting Record (Barnes campaign)", accessed: 2026-10-15 }
+  hb774_23: &hb774_23 { url: "https://wapp.capitol.tn.gov/apps/BillInfo/Default.aspx?BillNumber=HB0774&GA=113", title: "HB0774 bill information and votes (Tennessee General Assembly)", accessed: 2026-10-16 }
+  hb946_23: &hb946_23 { url: "https://wapp.capitol.tn.gov/apps/BillInfo/Default.aspx?BillNumber=HB0946&GA=113", title: "HB0946 bill information and votes (Tennessee General Assembly)", accessed: 2026-10-16 }
+  sb172_23: &sb172_23 { url: "https://wapp.capitol.tn.gov/apps/BillInfo/Default.aspx?BillNumber=SB0172&GA=113", title: "SB0172 bill information and votes (Tennessee General Assembly)", accessed: 2026-10-16 }
+
 id: tn-house-035
 office: "Tennessee House, District 35"
 level: state_house
 district: 35
-research_status: pending
+research_status: complete
 candidate_list_source: "https://sos-prod.tnsosgovfiles.com/s3fs-public/document/TNHouse_Nov2026.pdf"
+
 candidates:
   - name: "William Slater"
     ballot_party: Republican
     city: "Gallatin"
+    incumbent: true
+    website: "https://slaterforhouse.com"
+    bio_facts:
+      - { text: "State representative for District 35 since November 2022; House member of the 113th and 114th General Assemblies.", sources: [*bp_slater, *cga_h35] }
+      - { text: "Chair of the House Education Administration Subcommittee; also serves on the Education Committee, the Insurance Committee and the K-12 Subcommittee.", sources: [*cga_h35, *lookout35] }
+      - { text: "Dean at Welch College in Gallatin since 2017, where he teaches graduate students; previously a school headmaster in Tennessee for 21 years.", sources: [*ws_bio, *cga_h35, *lookout35] }
+      - { text: "B.S. from Hyles-Anderson College, M.Ed. in educational leadership from the University of South Florida, and J.D. from the Nashville School of Law.", sources: [*cga_h35, *bp_slater] }
+      - { text: "President of Improve Hendersonville; former chair of the Hendersonville Chamber of Commerce and of the Sumner County Republican Party.", sources: [*cga_h35] }
+      - { text: "Sponsored 2026 laws streamlining renewal of high-performing public charter schools (HB2177), adding the Classic Learning Test alongside the ACT and SAT and changing home school testing rules (HB1729), and raising the hour and capacity limits for license-exempt adult respite care programs (HB1495).", sources: [*hb2177, *rel_tss, *hb1729, *hb1495] }
+      - { text: "Sponsored a 2026 bill to raise court costs for violations of the state's hands-free driving law; it failed on the House floor.", sources: [*hb1555] }
+      - { text: "In 2026 the House version of a bill he sponsored would have lifted the enrollment cap on the state's Education Savings Account private-school voucher program; the effort ended when the Senate version fell one vote short.", sources: [*lookout_esa] }
     why_running: { text: null, sources: [] }
-    platform: []
-    arguments: []
+    platform:
+      - category: abortion
+        text: "Believes life begins at conception; will stand for life and work to make adoption a more viable option for families."
+        sources: [*ws_life]
+      - category: guns
+        text: "Defend the right to keep and bear arms; state and local laws should never infringe on it for law-abiding citizens."
+        sources: [*ws_2a]
+      - category: education
+        text: "Quality education for every student regardless of zip code; says private-school voucher programs in other states have not caused public schools to lose large numbers of students."
+        sources: [*ws_edu, *lookout_esa]
+      - category: government
+        text: "Defend religious liberty, free speech and state sovereignty, and stand against big government and federal overreach."
+        sources: [*ws_const]
+    arguments:
+      - stance: for
+        text: >-
+          The House leader who appointed him to two state education task forces in 2025 said his background in
+          education and leadership made him an ideal choice and would help bring better outcomes for students.
+        sources: [*rel_taskforce]
+      - stance: for
+        text: >-
+          A student-advocacy group gave him a 2026 award, saying he made the case for reducing barriers to open
+          enrollment and carried legislation that streamlines approval of high-performing public charter schools.
+        sources: [*rel_tss]
+      - stance: against
+        text: >-
+          His opponent faults his 2023 vote to bar local governments from requiring private employers to pay
+          wages or benefits beyond state law, arguing it keeps wages low.
+        sources: [*pb_record, *hb774_23]
+      - stance: against
+        text: >-
+          His opponent criticizes his 2023 vote to count natural gas as clean energy under local energy mandates,
+          saying it sidesteps environmental protections.
+        sources: [*pb_record, *hb946_23]
+      - stance: against
+        text: >-
+          His opponent criticizes his 2023 vote allowing adults to carry concealed pocket knives on school grounds
+          when voting there, saying it puts concealed weapons at polling places and asking whether guns come next.
+        sources: [*pb_record, *sb172_23]
+      - stance: against
+        text: >-
+          Critics said the House version of his 2026 voucher bill, which lifted the enrollment cap and ended state
+          payments to districts that lose students, would financially devastate the local governments whose
+          school districts were affected.
+        sources: [*lookout_esa]
+
   - name: "Phil Barnes"
     ballot_party: Democratic
     city: "Hendersonville"
-    why_running: { text: null, sources: [] }
-    platform: []
-    arguments: []
-last_verified: 2026-10-13
+    incumbent: false
+    website: "https://trekforward.org"
+    bio_facts:
+      - { text: "U.S. Air Force veteran who later worked for Lockheed Missiles & Space Company until 1996, then in graphic design.", sources: [*pb_about, *lookout35] }
+      - { text: "Moved to Sumner County in 2002 and has lived in District 35 since 2019.", sources: [*pb_about] }
+      - { text: "Led the scene shop of a Nashville event-planning company for 18 years; now works in commercial finish carpentry and designs sets for Hendersonville Performing Arts Company.", sources: [*pb_about] }
+      - { text: "Won the August 2026 primary to advance to the general election.", sources: [*bp_barnes] }
+    why_running:
+      text: >-
+        He says democracy starts with a choice, and voters who can only vote for incumbents have none. He says he is
+        concerned about the direction of bills in the state legislature and wants to move toward a better future.
+      sources: [*pb_about, *pb_home]
+    platform:
+      - category: education
+        text: "End private-school vouchers; failing that, bar families whose children were already in private school before the program began, and fund the program from the state lottery instead of the public school budget."
+        sources: [*pb_issues, *lookout35]
+      - category: government
+        text: "Make the voter registration card an accepted voter ID, and keep government from imposing religious beliefs through law, including faculty-led prayer in public schools."
+        sources: [*pb_issues]
+      - category: guns
+        text: "Stop sales of military-style weapons to the public; require gun licensing with annual certified training and liability insurance; hold owners accountable for unsafe storage."
+        sources: [*pb_issues]
+      - category: economy
+        text: "Overhaul public assistance so people who start earning don't lose benefits before they can support themselves, and fix payment lags that leave working recipients short."
+        sources: [*pb_issues]
+      - category: veterans
+        text: "Introduce a bill so that only Vietnam veterans' names may appear on named signs along TN-386, Vietnam Veterans Memorial Highway."
+        sources: [*pb_issues]
+    arguments:
+      - stance: for
+        text: >-
+          A U.S. Air Force veteran, he says voters deserve a real choice, and he lays out what he would fight for
+          rather than only why not to vote for his opponent.
+        sources: [*pb_about, *pb_issues, *pb_home]
+
+last_verified: 2026-10-16

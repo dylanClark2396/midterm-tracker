@@ -1,23 +1,149 @@
-# Seeded from the Secretary of State's certified candidate list by
-# scripts/seed-from-certified-list.py. research_status: pending —
-# platforms and arguments not yet compiled.
+# Tennessee House, District 61 (part of northern Williamson County, including Brentwood) — Rep. Gino Bulso,
+# in office since 2022, faces Becca Ripley.
+# Candidate order follows the Secretary of State's certified candidate list.
+_sources:
+  cga_h61: &cga_h61 { url: "https://wapp.capitol.tn.gov/apps/legislatorinfo/member.aspx?district=H61", title: "Representative Gino Bulso (Tennessee General Assembly)", accessed: 2026-10-16 }
+  bp_bulso: &bp_bulso { url: "https://ballotpedia.org/Gino_Bulso", title: "Gino Bulso (Ballotpedia)", accessed: 2026-10-16 }
+  hb1473: &hb1473 { url: "https://wapp.capitol.tn.gov/apps/BillInfo/Default.aspx?BillNumber=HB1473&GA=114", title: "HB1473 bill information (Tennessee General Assembly)", accessed: 2026-10-16 }
+  gb_home: &gb_home { url: "https://votegino.com/", title: "Gino Bulso for State Representative (Bulso campaign)", accessed: 2026-10-16 }
+  gb_issues: &gb_issues { url: "https://votegino.com/issues/", title: "Issues (Bulso campaign)", accessed: 2026-10-16 }
+  gb_leg: &gb_leg { url: "https://votegino.com/legislative-accomplishments/", title: "Legislative Accomplishments (Bulso campaign)", accessed: 2026-10-16 }
+  wsmv61: &wsmv61 { url: "https://www.wsmv.com/2026/09/28/house-district-61-tests-whether-winds-political-change-are-blowing-williamson-county/", title: "House District 61 tests whether winds of political change are blowing in Williamson County (WSMV)", accessed: 2026-10-16 }
+  scene_hb1473: &scene_hb1473 { url: "https://www.nashvillescene.com/news/pithinthewind/same-sex-marriage-bill-passes-house/article_041a81c0-ee16-4b7c-9a0b-e580ed9ccbc1.html", title: "State House passes marriage bill (Nashville Scene)", accessed: 2026-10-16 }
+  wsmv_olivia: &wsmv_olivia { url: "https://www.wsmv.com/2024/03/20/bill-passes-that-would-allow-schools-show-anti-abortion-groups-fetal-development-video/", title: "Bill passes that would allow schools to show fetal development video (WSMV)", accessed: 2026-10-16 }
+  wscene24: &wscene24 { url: "https://www.williamsonscene.com/news/rep-gino-bulso-pledges-to-continue-legislative-agenda-if-reelected-in-contested-race/article_3706726c-8c3e-11ef-a2d7-1ba5a74647fc.html", title: "Rep. Gino Bulso Pledges to Continue Legislative Agenda if Reelected in Contested Race (Williamson Scene)", accessed: 2026-10-16 }
+  lookout61: &lookout61 { url: "https://tennesseelookout.com/voter-guides/contests/house-district-61/", title: "Tennessee House of Representatives, 61st District voter guide (Tennessee Lookout)", accessed: 2026-10-16 }
+  br_home: &br_home { url: "https://electbeccaripley.com/", title: "Becca Ripley (Ripley campaign)", accessed: 2026-10-16 }
+  br_about: &br_about { url: "https://electbeccaripley.com/about-becca", title: "About Becca (Ripley campaign)", accessed: 2026-10-16 }
+  br_issues: &br_issues { url: "https://electbeccaripley.com/issues", title: "On The Issues (Ripley campaign)", accessed: 2026-10-16 }
+
 id: tn-house-061
 office: "Tennessee House, District 61"
 level: state_house
 district: 61
-research_status: pending
+research_status: complete
 candidate_list_source: "https://sos-prod.tnsosgovfiles.com/s3fs-public/document/TNHouse_Nov2026.pdf"
+
 candidates:
   - name: "Gino Bulso"
     ballot_party: Republican
     city: "Brentwood"
-    why_running: { text: null, sources: [] }
-    platform: []
-    arguments: []
+    incumbent: true
+    website: "https://votegino.com"
+    bio_facts:
+      - { text: "State representative for District 61 since November 2022; House member of the 113th and 114th General Assemblies. Won reelection in 2024 with 62.1% of the vote.", sources: [*bp_bulso, *cga_h61, *wsmv61] }
+      - { text: "Chair of the House Naming & Designating Committee; also serves on the Calendar & Rules, Education and Judiciary committees and the Children and Family Affairs and K-12 subcommittees.", sources: [*cga_h61] }
+      - { text: "Attorney and managing partner of the Brentwood law firm Bulso, PLC; B.Ph. from Cornell College (1983) and law degree from Emory University (1986).", sources: [*cga_h61, *bp_bulso, *gb_home] }
+      - { text: "Chaired the Tennessee Supreme Court's Advisory Committee on the Rules of Practice and Procedure; legal counsel to the Williamson County Republican Party in 2019 and 2020; founded the National Lawyers Association in 1992.", sources: [*gb_home, *gb_issues, *wsmv61] }
+      - { text: "Ran in the October 2025 special primary for U.S. House District 7, finishing third of 11 candidates with 10.9% of the vote.", sources: [*bp_bulso] }
+      - { text: "Sponsored HB1473 (2026), which says private citizens and organizations are not bound by the 2015 Obergefell v. Hodges decision to recognize a marriage between two people of the same sex; it passed the House 68-24, and the Senate Judiciary Committee deferred it to 2027.", sources: [*hb1473, *scene_hb1473] }
+      - { text: "Sponsored the 2024 Baby Olivia Act, which requires family life instruction to include a fetal development video of at least three minutes and names one such video as an option for schools.", sources: [*wsmv_olivia, *gb_leg] }
+      - { text: "One of three representatives who introduced resolutions in April 2023 to expel three House members after they took part in a March 30, 2023, protest; the House expelled two of them.", sources: [*bp_bulso] }
+    why_running:
+      text: >-
+        He says his primary obligation is to represent constituents' concerns and abide by the federal and state
+        constitutions, and he is seeking reelection to keep Tennessee prosperous and debt-free and to be a clear
+        voice for Williamson County, where he and his wife chose to raise their family more than 25 years ago.
+      sources: [*gb_home]
+    platform:
+      - category: economy
+        text: "Oppose using taxpayer money to pay private corporations to move to Tennessee or otherwise benefit private companies."
+        sources: [*gb_issues]
+      - category: taxes
+        text: "Use the Tenth Amendment to push back on excessive federal spending, which he blames for inflation, and keep Tennessee debt-free."
+        sources: [*gb_issues, *gb_home]
+      - category: public_safety
+        text: "Empower law enforcement against rising crime; in 2024 he said public safety would be at the top of his list if reelected."
+        sources: [*gb_home, *wscene24]
+      - category: immigration
+        text: "Support lawful immigration; in 2024 he said local, state and federal agencies should cooperate on enforcing immigration laws, and that people here illegally should leave for a time before they could be considered for citizenship."
+        sources: [*gb_issues, *wscene24]
+      - category: infrastructure
+        text: "Manage Williamson County's growth responsibly and push for adequate infrastructure to keep up with it."
+        sources: [*gb_issues, *gb_home]
+      - category: guns
+        text: "Protect the right to keep and bear arms while strengthening security at schools and in communities."
+        sources: [*gb_issues]
+      - category: abortion
+        text: "Always vote to protect an unborn child's right to life."
+        sources: [*gb_issues]
+    arguments:
+      - stance: for
+        text: >-
+          He passed sixteen bills in his first two-year term, including a law that lets the House and Senate
+          speakers hire outside lawyers, at no cost to the state, to defend Tennessee's rights in federal court.
+        sources: [*gb_leg]
+      - stance: for
+        text: >-
+          He points to a state grant program that pays for a school resource officer in every school as part of
+          a record he is proud of.
+        sources: [*gb_home]
+      - stance: for
+        text: >-
+          He says his marriage bill is only meant to clarify how the 2015 ruling applies to public versus private
+          entities, and argues the court overstepped its bounds in that decision.
+        sources: [*scene_hb1473]
+      - stance: against
+        text: >-
+          A fellow lawmaker said his marriage bill goes beyond its caption, violating the state constitution, and
+          is sure to be challenged in court; an advocate warned it could let small community banks or clinics
+          refuse to treat legally married couples as married.
+        sources: [*scene_hb1473]
+      - stance: against
+        text: >-
+          During the 2024 House debate on his Baby Olivia Act, a fellow lawmaker cited a national association of
+          obstetricians and gynecologists that called the video named in the bill misinformation designed to
+          manipulate viewers' emotions.
+        sources: [*wsmv_olivia]
+      - stance: against
+        text: >-
+          In 2024, the county school district disputed his claim that he and parents got a book removed from an
+          elementary school library, saying the book had never been in circulation there.
+        sources: [*wscene24]
+      - stance: against
+        text: >-
+          In 2024, local law enforcement officials suggested that the burglary ring he cited when calling public
+          safety his top priority may be overstated, saying the burglaries were serious but not an epidemic of
+          crime.
+        sources: [*wscene24]
+
   - name: "Becca Ripley"
     ballot_party: Democratic
     city: "Brentwood"
-    why_running: { text: null, sources: [] }
-    platform: []
-    arguments: []
-last_verified: 2026-10-13
+    incumbent: false
+    website: "https://electbeccaripley.com"
+    bio_facts:
+      - { text: "Graduate of the University of Minnesota; master's degree in conflict analysis and resolution from George Mason University.", sources: [*br_about, *lookout61] }
+      - { text: "Served in the Peace Corps and worked with the International Organization for Migration at the U.S. Embassy in Moscow; has lived in Hungary and Russia.", sources: [*br_about, *lookout61, *wsmv61] }
+      - { text: "Co-founder of a property management company.", sources: [*br_about, *wsmv61] }
+      - { text: "Lives in Williamson County with her two sons, who attend local public schools.", sources: [*br_about, *wsmv61] }
+      - { text: "First campaign for public office.", sources: [*lookout61, *wsmv61] }
+    why_running:
+      text: >-
+        She says she wants to replace political fear with empathy and community hope, cutting through the
+        political noise to bring common sense, a global perspective and community values back to Tennessee. She
+        says living abroad showed her how fragile civil liberties can be, and she wants every Tennessee family to
+        have the safety, support and freedom to thrive.
+      sources: [*br_home, *br_about]
+    platform:
+      - category: cost_of_living
+        text: "Make sure the next generation can afford to build a life in Tennessee, starting with buying a first home."
+        sources: [*br_issues]
+      - category: education
+        text: "Pay public school teachers competitively, keep classrooms focused on learning rather than politics, and oppose book bans."
+        sources: [*br_issues, *br_about]
+      - category: health_care
+        text: "Make health care affordable and protect individual privacy, including the freedom of families and their doctors to make their own health care decisions."
+        sources: [*br_issues]
+      - category: public_safety
+        text: "Make neighborhoods and schools places where children feel secure."
+        sources: [*br_issues]
+    arguments:
+      - stance: for
+        text: >-
+          Her campaign says her training in conflict resolution and her international service, including in the
+          Peace Corps and at the U.S. Embassy in Moscow, equip her for complex, high-stakes situations and to cut
+          through political noise.
+        sources: [*br_home, *br_about]
+
+last_verified: 2026-10-16

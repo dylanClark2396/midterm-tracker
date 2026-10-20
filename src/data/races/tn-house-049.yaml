@@ -1,23 +1,125 @@
-# Seeded from the Secretary of State's certified candidate list by
-# scripts/seed-from-certified-list.py. research_status: pending —
-# platforms and arguments not yet compiled.
+# Tennessee House, District 49 (western Rutherford County: Smyrna, La Vergne and Murfreesboro suburbs) —
+# Rep. Mike Sparks, in office since 2010, faces Connie Casha.
+# Candidate order follows the Secretary of State's certified candidate list.
+_sources:
+  cga_h49: &cga_h49 { url: "https://wapp.capitol.tn.gov/apps/legislatorinfo/member.aspx?district=H49", title: "Representative Mike Sparks (Tennessee General Assembly)", accessed: 2026-10-16 }
+  bp_sparks: &bp_sparks { url: "https://ballotpedia.org/Mike_Sparks_(Tennessee)", title: "Mike Sparks (Tennessee) (Ballotpedia)", accessed: 2026-10-16 }
+  lookout49: &lookout49 { url: "https://tennesseelookout.com/voter-guides/contests/house-district-49/", title: "Tennessee House of Representatives, 49th District voter guide (Tennessee Lookout)", accessed: 2026-10-16 }
+  ms_home: &ms_home { url: "https://votemikesparks.com/", title: "Mike Sparks (Sparks campaign)", accessed: 2026-10-16 }
+  ms_oped: &ms_oped { url: "https://votemikesparks.com/state-rep-sparks-op-ed-children-are-facing-a-mental-health-crisis-chess-and-music-therapy-offer-solutions/", title: "State Rep. Sparks Op-Ed: Children are facing a mental health crisis. Chess and music therapy offer solutions (Sparks campaign)", accessed: 2026-10-16 }
+  ms_health: &ms_health { url: "https://www.murfreesboropost.com/opinion/no-better-name-for-healthcare-system-than-cattywampus/article_bac4928e-67d4-11ea-ad46-9b4e012a5a5d.html", title: "No better name for healthcare system than 'cattywampus' (Main Street Media of Tennessee)", accessed: 2026-10-16 }
+  hb1790: &hb1790 { url: "https://wapp.capitol.tn.gov/apps/BillInfo/Default.aspx?BillNumber=HB1790&GA=114", title: "HB1790 bill information (Tennessee General Assembly)", accessed: 2026-10-16 }
+  hb2086: &hb2086 { url: "https://wapp.capitol.tn.gov/apps/BillInfo/Default.aspx?BillNumber=HB2086&GA=114", title: "HB2086 bill information (Tennessee General Assembly)", accessed: 2026-10-16 }
+  pr_bus: &pr_bus { url: "https://tnhousegop.org/press-releases/2026/02/rep-mike-sparks-sen-janice-bowling-propose-legislation-to-address-school-bus-driver-shortage/", title: "Rep. Mike Sparks, Sen. Janice Bowling propose legislation to address school bus driver shortage (Tennessee House Republican Caucus)", accessed: 2026-10-16 }
+  pr_food: &pr_food { url: "https://tnhousegop.org/press-releases/2026/02/rep-mike-sparks-proposes-tax-cut-on-healthy-foods/", title: "Rep. Mike Sparks proposes tax cut on healthy foods (Tennessee House Republican Caucus)", accessed: 2026-10-16 }
+  wsmv_food: &wsmv_food { url: "https://www.wsmv.com/2026/02/12/tennessee-lawmaker-proposes-eliminating-tax-fresh-fruits-vegetables/", title: "Tennessee lawmaker proposes eliminating tax on fresh fruits and vegetables (WSMV)", accessed: 2026-10-16 }
+  firefly_bus: &firefly_bus { url: "https://tnfirefly.com/news/rutherford-county-board-backs-house-rep-mike-sparks-push-to-lower-school-bus-driver-age-amid-shortages", title: "Rutherford County Board Backs House Rep. Mike Sparks' Push to Lower School Bus Driver Age Amid Shortages (Tennessee Firefly)", accessed: 2026-10-16 }
+  lookout_juv: &lookout_juv { url: "https://tennesseelookout.com/2023/01/18/legislation-aims-at-averting-excessive-jailing-of-juveniles/", title: "Legislation aims at averting excessive jailing of juveniles (Tennessee Lookout)", accessed: 2026-10-16 }
+  lookout_zoning: &lookout_zoning { url: "https://tennesseelookout.com/2024/06/04/report-identifies-single-family-zoning-as-hurdle-in-making-tennessees-housing-market-affordable/", title: "Report identifies single-family zoning as hurdle in making Tennessee's housing market affordable (Tennessee Lookout)", accessed: 2026-10-16 }
+  lookout_2024: &lookout_2024 { url: "https://tennesseelookout.com/2024/10/07/suburban-growth-fuels-democrats-hopes-of-flipping-smyrna-la-vergne-state-house-seat/", title: "Suburban growth and the Smyrna-La Vergne state House seat (Tennessee Lookout)", accessed: 2026-10-16 }
+  cc_home: &cc_home { url: "https://conniecasha4tndistrict-49.com/", title: "Connie Casha for Tennessee House District 49 (Casha campaign)", accessed: 2026-10-16 }
+  cc_about: &cc_about { url: "https://conniecasha4tndistrict-49.com/about.html", title: "Meet Connie Casha (Casha campaign)", accessed: 2026-10-16 }
+  cc_issues: &cc_issues { url: "https://conniecasha4tndistrict-49.com/issues.html", title: "Our Priorities (Casha campaign)", accessed: 2026-10-16 }
+  bp_casha: &bp_casha { url: "https://ballotpedia.org/Connie_Casha", title: "Connie Casha (Ballotpedia)", accessed: 2026-10-16 }
+
 id: tn-house-049
 office: "Tennessee House, District 49"
 level: state_house
 district: 49
-research_status: pending
+research_status: complete
 candidate_list_source: "https://sos-prod.tnsosgovfiles.com/s3fs-public/document/TNHouse_Nov2026.pdf"
+
 candidates:
   - name: "Mike Sparks"
     ballot_party: Republican
     city: "Smyrna"
+    incumbent: true
+    website: "https://votemikesparks.com/"
+    bio_facts:
+      - { text: "State representative for District 49 since 2010; House member of the 107th through 114th General Assemblies.", sources: [*bp_sparks, *cga_h49] }
+      - { text: "Vice chair of the House Private Acts Committee; also serves on the Finance, Ways and Means, Government Operations and Insurance committees.", sources: [*cga_h49] }
+      - { text: "Rutherford County commissioner from 2002 to 2010 and a member of Smyrna's planning commission from 2001 to 2010.", sources: [*cga_h49, *lookout49] }
+      - { text: "Smyrna business owner and author; started a car dealership that sold cars online and now owns a salon with his wife; co-hosts a weekly community-issues radio show on WGNS.", sources: [*ms_home, *cga_h49] }
+      - { text: "Associate's degree in mass communication from Motlow State Community College and a degree from Middle Tennessee State University; trained as an EMT at Volunteer State Community College.", sources: [*cga_h49, *ms_home] }
+      - { text: "Sponsored HB1790 (2026) to lower the minimum age for a school bus driver endorsement from 25 to 23; the Senate version passed 32-0, and the House bill was taken off notice in a Finance, Ways and Means subcommittee.", sources: [*hb1790, *pr_bus] }
+      - { text: "Sponsored HB2086 (2026), the Fresh Food Affordability Act, to exempt fresh fruits and vegetables from the state sales tax on food; the bill was taken off notice in a House Finance, Ways and Means subcommittee.", sources: [*hb2086, *pr_food] }
+      - { text: "In 2023 proposed legislation barring police from questioning children without a lawyer, parent or guardian present, and requiring that such interviews be recorded.", sources: [*lookout_juv] }
+      - { text: "Asked the state's Advisory Commission on Intergovernmental Relations to study how impact fees affect housing prices.", sources: [*lookout_zoning] }
     why_running: { text: null, sources: [] }
-    platform: []
-    arguments: []
+    platform:
+      - category: health_care
+        text: "Wants hospitals and insurers to make their prices public to rein in health care costs, and wants to address children's mental and behavioral health through ideas like chess in schools and music therapy."
+        sources: [*ms_health, *ms_oped]
+      - category: immigration
+        text: "In 2024, said illegal immigration was to blame for strained county finances in Rutherford County."
+        sources: [*lookout_2024]
+    arguments:
+      - stance: for
+        text: >-
+          He has proposed ending the state sales tax on fresh fruits and vegetables, saying it would ease
+          grocery bills for families and encourage healthier eating.
+        sources: [*pr_food, *wsmv_food]
+      - stance: for
+        text: >-
+          He has pushed to let 23-year-olds drive school buses under existing training rules, saying a bigger
+          pool of drivers would give children safe, reliable rides to school; the county school board backed it.
+        sources: [*pr_bus, *firefly_bus]
+      - stance: for
+        text: >-
+          He proposed requiring a lawyer or parent to be present before police question a child, and recording
+          those interviews, noting that many other states already require this and that Tennessee has no rules
+          to make sure children know they have a right to a lawyer.
+        sources: [*lookout_juv]
+      - stance: against
+        text: >-
+          Two school board members who voted against backing his proposal to lower the bus driver age said
+          younger drivers are a liability for the school system and that requested data on whether age adds
+          risk was never provided.
+        sources: [*firefly_bus]
+      - stance: against
+        text: >-
+          A local juvenile court attorney said his proposal on questioning children would not get at the root
+          of the problem, arguing children in minor cases should be summoned to court rather than detained.
+        sources: [*lookout_juv]
+
   - name: "Connie Casha"
     ballot_party: Democratic
     city: "Smyrna"
-    why_running: { text: null, sources: [] }
-    platform: []
-    arguments: []
-last_verified: 2026-10-13
+    incumbent: false
+    website: "https://conniecasha4tndistrict-49.com/"
+    bio_facts:
+      - { text: "Worked 15 years at the Tennessee Department of Education, where she helped develop the state's voluntary pre-K program and oversaw its growth from 30 pilot classrooms to 934 classrooms serving 18,000 children.", sources: [*cc_about, *lookout49] }
+      - { text: "Director of Early Learning Programs and an adjunct in the College of Education at Middle Tennessee State University for nearly 10 years before retiring to run for office.", sources: [*cc_about, *lookout49] }
+      - { text: "Earlier spent seven years at Outlook Nashville as a teacher and later director of a program for children with and without disabilities from birth to age four.", sources: [*cc_about] }
+      - { text: "Bachelor's degree in psychology from Saint Louis University (1981) with a teaching license in general and special education; master's degree in early childhood special education from Middle Tennessee State University (1992).", sources: [*cc_about, *bp_casha] }
+      - { text: "Long-time Smyrna resident; received a Lifetime Achievement Award from the Tennessee Commission on Children and Youth.", sources: [*cc_home, *cc_about] }
+    why_running:
+      text: >-
+        She says she is running to keep working on solutions to the problems that keep Tennessee children and
+        families from thriving, and that families deserve strong public schools, affordable health care,
+        accessible child care and an economy that works for everyone.
+      sources: [*cc_home, *cc_about]
+    platform:
+      - category: economy
+        text: "Set a minimum wage tied to the cost of living or inflation."
+        sources: [*bp_casha]
+      - category: taxes
+        text: "Exempt groceries and personal hygiene products from the sales tax."
+        sources: [*bp_casha]
+      - category: cost_of_living
+        text: "Expand child care scholarships and subsidies, cap child care costs at 7% of family income, and support incentives to build homes under $250,000."
+        sources: [*cc_issues, *bp_casha]
+      - category: education
+        text: "Fully fund public schools by moving money from education vouchers to public school funding, raise teacher salaries, and support literacy, early learning, and career and technical education."
+        sources: [*cc_issues, *bp_casha]
+      - category: health_care
+        text: "Expand health insurance access, Medicaid access, preventive and maternal care, and mental health services, and lower prescription drug costs."
+        sources: [*cc_issues]
+    arguments:
+      - stance: for
+        text: >-
+          She oversaw the growth of the state's voluntary pre-K program from 30 pilot classrooms to 934 serving
+          18,000 children, and brings decades of work with children and families to the job.
+        sources: [*cc_about, *cc_home]
+
+last_verified: 2026-10-16
