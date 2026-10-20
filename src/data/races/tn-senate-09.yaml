@@ -1,17 +1,35 @@
-# Seeded from the Secretary of State's certified candidate list by
-# scripts/seed-from-certified-list.py. research_status: pending —
-# platforms and arguments not yet compiled.
+# Tennessee Senate, District 9 (Cocke, Greene, Hamblen, Sevier and Unicoi counties) — Sen. Steve Southerland,
+# in the Senate since 2002, is the only candidate on the ballot.
+# Candidate order follows the Secretary of State's certified candidate list.
+_sources:
+  cga_s9: &cga_s9 { url: "https://wapp.capitol.tn.gov/apps/legislatorinfo/member.aspx?district=S9", title: "Senator Steve Southerland (Tennessee General Assembly)", accessed: 2026-10-20 }
+  bp_ss: &bp_ss { url: "https://ballotpedia.org/Steve_Southerland_(Tennessee)", title: "Steve Southerland (Tennessee) (Ballotpedia)", accessed: 2026-10-20 }
+  lookout9: &lookout9 { url: "https://tennesseelookout.com/voter-guides/contests/state-senate-district-9/", title: "State Senate, 9th District voter guide (Tennessee Lookout)", accessed: 2026-10-20 }
+  firefly9: &firefly9 { url: "https://tnfirefly.com/elections/general-assembly/senate/9", title: "Tennessee Senate District 9 Election 2026: Who Is Running (Tennessee Firefly)", accessed: 2026-10-20 }
+  sb2227: &sb2227 { url: "https://wapp.capitol.tn.gov/apps/BillInfo/Default.aspx?BillNumber=SB2227&GA=110", title: "SB2227 bill information (Tennessee General Assembly)", accessed: 2026-10-20 }
+
 id: tn-senate-09
 office: "Tennessee Senate, District 9"
 level: state_senate
 district: 9
-research_status: pending
+research_status: complete
 candidate_list_source: "https://sos-prod.tnsosgovfiles.com/s3fs-public/document/TNSenate_Nov2026.pdf"
+
 candidates:
   - name: "Steve Southerland"
     ballot_party: Republican
     city: "Morristown"
+    incumbent: true
+    website: null
+    bio_facts:
+      - { text: "State senator since 2002 and a Senate member of the 103rd through 114th General Assemblies; represented District 1 until 2022 and District 9 since then.", sources: [*cga_s9, *bp_ss] }
+      - { text: "Senate Deputy Speaker; vice chair of the Joint Judiciary and Government Committee and second vice chair of the Senate Commerce and Labor Committee; also serves on Fiscal Review, Senate Government Operations, and the Joint Education, Health and General Welfare Committee.", sources: [*cga_s9] }
+      - { text: "Chaired the Senate Environment, Conservation and Tourism Committee in 2009–2012 and the Senate Energy, Agriculture and Natural Resources Committee in 2013–2024.", sources: [*bp_ss] }
+      - { text: "Mortgage broker; attended Walters State Community College.", sources: [*cga_s9, *bp_ss] }
+      - { text: "Senate sponsor of a 2018 law (Public Chapter 1057) calling for a privately funded monument to unborn children on the State Capitol campus.", sources: [*sb2227, *lookout9] }
+      - { text: "Unopposed in the August 2026 primary and the only candidate on the November ballot.", sources: [*bp_ss, *firefly9] }
     why_running: { text: null, sources: [] }
     platform: []
     arguments: []
-last_verified: 2026-10-13
+
+last_verified: 2026-10-20
