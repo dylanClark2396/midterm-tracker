@@ -16,6 +16,8 @@ it). None of them is imported by the site.
 
 - `check-links.mjs` needs a fresh `npm run build` for the internal pass. Use `-- --internal-only` to skip the
   network. 401/403/429 responses are warnings on purpose: news sites block bots but the pages exist for readers.
+  Cloudflare challenges (the Tennessee Lookout and others) block every scripted request, even from home IPs, so
+  they're grouped into one warning per host and those URLs go unchecked. Don't try to get past the challenge.
 - Some sources block automated fetches entirely. That's fine for the checker (warning), but when researching, a
   `curl` with a browser user agent often works where a plain fetch gets 403.
 - `build-district-maps.mjs`: the Comptroller's congressional download needs the disclaimer cookie already in the

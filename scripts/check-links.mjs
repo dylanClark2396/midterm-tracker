@@ -5,6 +5,9 @@
 //  2. External: every URL in src/data/**/*.yaml and src/**/*.astro must resolve.
 //     404/410 and DNS failures fail the check. 401/403/429 (bot protection) and
 //     transient errors are reported as warnings, since the page exists for humans.
+//     Cloudflare challenges (cf-mitigated: challenge) can't be passed by a script,
+//     so they're summarized as one line per host instead of a warning per URL.
+//     405 counts as reachable: the server is there, it just wants another method.
 //
 // Usage: node scripts/check-links.mjs [--internal-only | --external-only]
 import { readFileSync, readdirSync, statSync, existsSync } from 'node:fs';
@@ -92,7 +95,8 @@ async function probe(url) {
         });
         res.body?.cancel().catch(() => {});
         last = { status: res.status };
-        if (res.ok) return last;
+        if (res.ok || res.status === 405) return last;
+        if (res.headers.get('cf-mitigated') === 'challenge') return { ...last, challenged: true };
         if (method === 'HEAD') continue; // some servers reject HEAD; retry with GET
         if ([404, 410].includes(res.status)) return last;
       } catch (err) {
@@ -110,18 +114,27 @@ async function checkExternal() {
   const list = [...urls.keys()];
   let i = 0;
   let ok = 0;
+  const challenged = new Map(); // host -> count
   const worker = async () => {
     while (i < list.length) {
       const url = list[i++];
       const r = await probe(url);
       const where = urls.get(url);
-      if (r.status && r.status < 400) ok++;
+      if (r.status && (r.status < 400 || r.status === 405)) ok++;
+      else if (r.challenged) {
+        const host = new URL(url).hostname.replace(/^www\./, '');
+        challenged.set(host, (challenged.get(host) ?? 0) + 1);
+      }
       else if (r.status === 404 || r.status === 410 || r.error === 'ENOTFOUND') fail(`${url} (${r.status ?? r.error}) in ${where}`);
       else warn(`${url} (${r.status ?? r.error}) in ${where} — reachable by browser? check manually`);
     }
   };
   await Promise.all(Array.from({ length: 8 }, worker));
-  console.log(`External: ${ok}/${list.length} URLs returned OK.`);
+  for (const [host, n] of [...challenged].sort((a, b) => b[1] - a[1])) {
+    warn(`${host}: ${n} URL(s) not checkable (Cloudflare bot challenge) — spot-check in a browser`);
+  }
+  const skipped = [...challenged.values()].reduce((a, b) => a + b, 0);
+  console.log(`External: ${ok}/${list.length} URLs returned OK${skipped ? `, ${skipped} behind a Cloudflare challenge` : ''}.`);
 }
 
 if (!args.has('--external-only')) checkInternal();
