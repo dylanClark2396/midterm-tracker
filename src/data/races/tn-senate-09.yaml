@@ -24,7 +24,7 @@ candidates:
     bio_facts:
       - { text: "State senator since 2002 and a Senate member of the 103rd through 114th General Assemblies; represented District 1 until 2022 and District 9 since then.", sources: [*cga_s9, *bp_ss] }
       - { text: "Senate Deputy Speaker; vice chair of the Joint Judiciary and Government Committee and second vice chair of the Senate Commerce and Labor Committee; also serves on Fiscal Review, Senate Government Operations, and the Joint Education, Health and General Welfare Committee.", sources: [*cga_s9] }
-      - { text: "Chaired the Senate Environment, Conservation and Tourism Committee in 2009–2012 and the Senate Energy, Agriculture and Natural Resources Committee in 2013–2024.", sources: [*bp_ss] }
+      - { text: "Chaired the Senate Environment, Conservation and Tourism Committee in 2009–2012 and the Senate Energy, Agriculture and Natural Resources Committee in the 2013–2014, 2015, 2017, 2019–2020, 2021–2022 and 2023–2024 sessions.", sources: [*bp_ss] }
       - { text: "Mortgage broker; attended Walters State Community College.", sources: [*cga_s9, *bp_ss] }
       - { text: "Senate sponsor of a 2018 law (Public Chapter 1057) calling for a privately funded monument to unborn children on the State Capitol campus.", sources: [*sb2227, *lookout9] }
       - { text: "Unopposed in the August 2026 primary and the only candidate on the November ballot.", sources: [*bp_ss, *firefly9] }
