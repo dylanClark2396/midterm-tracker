@@ -29,13 +29,13 @@ candidates:
       - { text: "House Majority Assistant Leader; earlier served as Majority Assistant Floor Leader in the 110th General Assembly.", sources: [*cga_h94, *rg_about] }
       - { text: "Member of the House Finance, Ways and Means Committee and its subcommittee, and of the Health Committee and its subcommittee.", sources: [*cga_h94] }
       - { text: "Fayette County commissioner from 2006 to 2010; chairman of the Fayette County Republican Party from 2000 to 2004; former chairman of the Rossville Christian Academy school board.", sources: [*cga_h94, *rg_about] }
-      - { text: "Insurance agent and president of Boyle Insurance Co.; earlier spent 17 years as vice president and then president of Insurance Associates of Tennessee.", sources: [*lookout94, *rg_about] }
-      - { text: "Graduate of Rossville Christian Academy and UT Martin's WestStar leadership program; studied business at Liberty University.", sources: [*cga_h94, *rg_about] }
+      - { text: "Insurance agent. Tennessee Lookout lists him as president of Boyle Insurance Co.; his campaign says he served 17 years as vice president and then president of Insurance Associates of Tennessee.", sources: [*lookout94, *rg_about] }
+      - { text: "Graduate of Rossville Christian Academy and of UT Martin WestStar; studied business at Liberty University.", sources: [*cga_h94, *rg_about] }
       - { text: "House sponsor of HB2845, which as amended became the 2024 Tennessee Prevention of Drunk Driving Act, creating a task force to study impaired driving and boating.", sources: [*hb2845] }
     why_running:
       text: >-
-        He says he felt called to serve his community in the state House, inspired by 2016 campaign promises on
-        job creation, border security and holding China accountable.
+        He says he felt called to serve his community in the state House, inspired by campaign promises of job
+        creation, border security and holding China accountable.
       sources: [*rg_about]
     platform:
       - category: economy
@@ -57,7 +57,7 @@ candidates:
         text: "Protect the right to bear arms and support permitless carry."
         sources: [*rg_issues]
       - category: immigration
-        text: "Secure the southern border before broader immigration reform; support state laws against sanctuary cities and cooperation with federal immigration enforcement."
+        text: "Secure the southern border before broader immigration reform; support state laws against sanctuary cities and backing for federal immigration enforcement."
         sources: [*rg_issues]
       - category: infrastructure
         text: "Expand high-speed broadband service to rural communities."
