@@ -87,7 +87,7 @@ candidates:
       - { text: "In 2023, said she had to travel out of state for care after learning at 19 weeks that her pregnancy was not viable, which she cited as a reason for running for office.", sources: [*bp_phillips] }
     why_running:
       text: >-
-        She says too many Tennesseans are struggling to afford housing, health care and child care while elected
+        She says too many Tennesseans are struggling to afford housing, health care and child care while most elected
         officials protect special interests. She says she is running to put people first, make life more affordable,
         and bring common sense, compassion and accountability to the state House.
       sources: [*ap_home, *ap_press, *cn_ap_launch]
@@ -117,4 +117,4 @@ candidates:
           caregivers and small business owners.
         sources: [*ap_press]
 
-last_verified: 2026-10-16
+last_verified: 2026-10-20
