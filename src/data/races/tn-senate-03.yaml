@@ -8,7 +8,7 @@ _sources:
   rc_home: &rc_home { url: "https://www.rustycrowetn.com/", title: "Senator Rusty Crowe (Crowe campaign)", accessed: 2026-10-20 }
   rc_issues: &rc_issues { url: "https://www.rustycrowetn.com/issues", title: "Issues (Crowe campaign)", accessed: 2026-10-20 }
   rc_meet: &rc_meet { url: "https://www.rustycrowetn.com/meetrusty", title: "Meet Rusty (Crowe campaign)", accessed: 2026-10-20 }
-  wcyb_pitch: &wcyb_pitch { url: "https://wcyb.com/news/local/crowe-pohlgeers-make-pitch-to-voters-ahead-of-state-senate-primary", title: "Crowe, Pohlgeers make pitch to voters ahead of state Senate primary (WCYB)", accessed: 2026-10-20 }
+  wcyb_pitch: &wcyb_pitch { url: "https://wcyb.com/news/local/crowe-pohlgeers-make-pitch-to-voters-ahead-of-state-senate-primary", title: "Candidates make pitch to voters ahead of state Senate primary (WCYB)", accessed: 2026-10-20 }
   wcyb_forum: &wcyb_forum { url: "https://wcyb.com/news/local/ballad-health-and-property-taxes-dominate-discussions-at-east-tennessee-candidate-forum", title: "Ballad Health and property taxes dominate discussions at East Tennessee candidate forum (WCYB)", accessed: 2026-10-20 }
   wjhl_issues: &wjhl_issues { url: "https://www.yahoo.com/news/politics/articles/district-3-state-senate-candidates-230444447.html", title: "District 3 state senate candidates weigh in on area issues (WJHL via Yahoo News)", accessed: 2026-10-20 }
 
@@ -39,26 +39,26 @@ candidates:
       sources: [*wcyb_pitch]
     platform:
       - category: taxes
-        text: "Keep Tennessee free of a state income tax and a state property tax, hold to balanced budgets with no new taxes, and ease property taxes for veterans and seniors."
-        sources: [*rc_issues, *rc_home]
+        text: "Opposes a state income tax and a state property tax, supports balanced budgets with no new taxes, and says it is logical to limit how much the state and local governments can tax."
+        sources: [*rc_issues, *rc_home, *wcyb_forum]
       - category: education
-        text: "Give parents the final say over what children are taught, keep books and curriculum age-appropriate, bar teaching of divisive concepts, and bring back phonics and cursive; review school voucher results before raising that funding."
+        text: "Says parents, not government, should have the final say in what their children are taught; supports age-appropriate books and curriculum, phonics-based reading and cursive writing; wants data showing school vouchers work before that funding is increased."
         sources: [*rc_issues, *wjhl_issues]
       - category: health_care
-        text: "Bring more hospital competition to the region by ending certificate-of-need rules, protect patients from surprise medical bills, expand home and community-based care, and remove harmful food dyes from school meals."
-        sources: [*rc_issues, *wcyb_pitch]
+        text: "Wants more hospital competition in the region, and says the state agreement overseeing the region's hospital merger is no longer needed because state health regulators and the Attorney General already handle that oversight."
+        sources: [*wcyb_pitch, *wjhl_issues]
       - category: public_safety
-        text: "Crack down on human trafficking and elder abuse, and look into whether psychotropic medications play a role in violent mass attacks."
+        text: "Wants a closer look at whether psychotropic medications play a role in violent mass attacks, and backs strong laws to crack down on human trafficking."
         sources: [*rc_issues]
       - category: guns
         text: "Protect the constitutional right to keep and bear arms without infringement."
         sources: [*rc_issues]
       - category: abortion
-        text: "Voted for Tennessee's fetal heartbeat abortion law and says he will keep working to protect unborn life."
+        text: "Says protecting life before birth is non-negotiable and that he will keep working to protect it, citing his vote for the state's fetal heartbeat abortion law."
         sources: [*rc_issues]
       - category: agriculture
-        text: "Keep foreign adversaries from buying Tennessee land, and balance new industry and development against farmland."
-        sources: [*rc_issues, *wjhl_issues]
+        text: "Balance new industry and development against the region's farmland and agricultural land."
+        sources: [*wjhl_issues]
     arguments:
       - stance: for
         text: >-
@@ -73,7 +73,7 @@ candidates:
       - stance: for
         text: >-
           He says he has pushed for more health care competition in the region, including starting the committee
-          work to end certificate-of-need rules sooner than first planned.
+          work to end certificate-of-need rules.
         sources: [*wcyb_pitch]
       - stance: for
         text: >-
@@ -82,12 +82,13 @@ candidates:
         sources: [*rc_issues, *rc_meet]
       - stance: against
         text: >-
-          After 36 years in office, it is time for a change and a new voice in the seat.
+          His primary opponent says that after 36 years in office it is time for a change and something different.
         sources: [*wcyb_pitch]
       - stance: against
         text: >-
-          He voted for the law that allowed the Ballad Health merger and lists the company as a source of income,
-          and a competing hospital is unlikely to come to the area while he sits on the Senate's health committee.
+          His primary opponent faults his vote for the law that allowed the region's hospital merger and notes he
+          lists the merged hospital system as a source of income, and says a competing hospital is unlikely to come
+          to the area while he sits on the Senate health committee.
         sources: [*wcyb_pitch, *wcyb_forum]
 
 last_verified: 2026-10-20
