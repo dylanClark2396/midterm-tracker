@@ -5,7 +5,7 @@ it). None of them is imported by the site.
 
 | Script | Run by | Purpose |
 | --- | --- | --- |
-| [check-links.mjs](check-links.mjs) | CI on every push and weekly; `npm run check:links` | Internal links and anchors in `dist/`, plus every external URL in the YAML and in `src/**/*.{astro,ts}` |
+| [check-links.mjs](check-links.mjs) | CI: PRs (changed files only), main pushes (internal only), weekly (everything); `npm run check:links` | Internal links and anchors in `dist/`, plus every external URL in the YAML and in `src/**/*.{astro,ts}` |
 | [check-docs.mjs](check-docs.mjs) | CI; `npm run docs:check` | Relative links in every `CLAUDE.md` |
 | [check-contact.mjs](check-contact.mjs) | CI; `npm run check:contact` | Contact form and Worker agree on field names, topics and `maxlength`s (parses both files with regexes, so keep `TOPICS`/`LIMITS` as plain object literals) |
 | [build-district-maps.mjs](build-district-maps.mjs) | By hand, rarely | Regenerates [../public/maps/](../public/maps/) GeoJSON (needs network and `npx mapshaper`) |
@@ -16,6 +16,9 @@ it). None of them is imported by the site.
 
 - `check-links.mjs` needs a fresh `npm run build` for the internal pass. Use `-- --internal-only` to skip the
   network. 401/403/429 responses are warnings on purpose: news sites block bots but the pages exist for readers.
+  Cloudflare challenges Node's `fetch` on some sites (the Tennessee Lookout and others), even from home IPs. Those
+  URLs are retried with `curl`, which those sites currently let through. Anything still challenged is grouped into
+  one warning per host and goes unchecked. Don't add workarounds beyond that, such as headless browsers.
 - Some sources block automated fetches entirely. That's fine for the checker (warning), but when researching, a
   `curl` with a browser user agent often works where a plain fetch gets 403.
 - `build-district-maps.mjs`: the Comptroller's congressional download needs the disclaimer cookie already in the

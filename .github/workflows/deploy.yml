@@ -22,6 +22,9 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
+        with:
+          # PRs check out a merge commit; its first parent (HEAD^1) is the base branch.
+          fetch-depth: 2
       - uses: actions/setup-node@v4
         with:
           node-version: 22
@@ -37,7 +40,15 @@ jobs:
       - run: npm run docs:check
       - run: npm run build
       # Fails on broken internal links, missing anchors, and dead (404/410/DNS) source URLs.
-      - run: npm run check:links
+      # PRs probe only URLs in changed files; pushes to main skip the network (the PR already
+      # checked them); the weekly schedule and manual runs probe every URL.
+      - name: Check links
+        run: |
+          case "${{ github.event_name }}" in
+            pull_request) npm run check:links -- --changed-since HEAD^1 ;;
+            push) npm run check:links -- --internal-only ;;
+            *) npm run check:links ;;
+          esac
       - uses: actions/upload-artifact@v4
         if: github.event_name != 'pull_request'
         with:
