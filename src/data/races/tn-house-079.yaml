@@ -31,7 +31,7 @@ candidates:
       - { text: "Member of the Bethel University Board of Trustees, treasurer of the Huntingdon Industrial Board, and former president of the Tennessee Chiropractic Association.", sources: [*cga_h79, *bm_about] }
       - { text: "Won the open seat in 2022 with 81.2% of the general election vote; unopposed in the 2024 general election and the 2026 primary.", sources: [*bp_martin] }
       - { text: "Sponsored HJR0069 (2025), a resolution urging the state to adopt a plan to make Tennessee healthy; it passed the House 90-0 and the Senate 32-0.", sources: [*hjr0069] }
-      - { text: "His 2025 bills included measures on insurance coverage of biomarker testing for cancer, ambulance reimbursement, support for the Megasite of West Tennessee, and barring electronic service providers from tipping off people whose phone records are subpoenaed in child exploitation cases.", sources: [*bm_news] }
+      - { text: "His 2025 bills, as described in his newsletters, included measures on biomarker coverage to help diagnose cancer faster, ambulance reimbursement, support for the Megasite of West Tennessee, and closing a loophole that lets electronic service providers tip off people whose phones are under subpoena in child exploitation cases.", sources: [*bm_news] }
     why_running:
       text: >-
         He says he is running to build a prosperous future for his family, his business and his community, and to
@@ -47,9 +47,9 @@ candidates:
     arguments:
       - stance: for
         text: >-
-          A chiropractor who has treated thousands of patients in the Huntingdon area, he brings hands-on health
-          care experience to his work chairing the House Health Subcommittee.
-        sources: [*bm_about, *cga_h79]
+          As a chiropractor and clinical director of his own practice, he has seen and helped thousands of
+          patients in the Huntingdon area, his campaign says.
+        sources: [*bm_about]
 
   - name: "Kirk D Carter"
     ballot_party: Independent
