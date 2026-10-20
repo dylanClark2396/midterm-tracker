@@ -1,23 +1,130 @@
-# Seeded from the Secretary of State's certified candidate list by
-# scripts/seed-from-certified-list.py. research_status: pending —
-# platforms and arguments not yet compiled.
+# Tennessee House, District 99 (northeast Shelby County: Millington, Arlington, Lakeland, parts of Bartlett) —
+# Rep. Tom Leatherwood, in office since 2018, faces William P Mouzon.
+# Candidate order follows the Secretary of State's certified candidate list.
+_sources:
+  cga_h99: &cga_h99 { url: "https://wapp.capitol.tn.gov/apps/legislatorinfo/member.aspx?district=H99", title: "Representative Tom Leatherwood (Tennessee General Assembly)", accessed: 2026-10-20 }
+  bp_leatherwood: &bp_leatherwood { url: "https://ballotpedia.org/Tom_Leatherwood", title: "Tom Leatherwood (Ballotpedia)", accessed: 2026-10-20 }
+  bp_mouzon: &bp_mouzon { url: "https://ballotpedia.org/William_Mouzon", title: "William Mouzon (Ballotpedia)", accessed: 2026-10-20 }
+  lookout99: &lookout99 { url: "https://tennesseelookout.com/voter-guides/contests/house-district-99/", title: "Tennessee House of Representatives, 99th District voter guide (Tennessee Lookout)", accessed: 2026-10-20 }
+  tl_home: &tl_home { url: "https://tomleatherwood.com/", title: "Tom Leatherwood - State Representative (Leatherwood campaign)", accessed: 2026-10-20 }
+  tl_meet: &tl_meet { url: "https://tomleatherwood.com/meet-tom/", title: "Meet Tom (Leatherwood campaign)", accessed: 2026-10-20 }
+  tl_issues: &tl_issues { url: "https://tomleatherwood.com/issues/", title: "Issues (Leatherwood campaign)", accessed: 2026-10-20 }
+  hb0233: &hb0233 { url: "https://wapp.capitol.tn.gov/apps/BillInfo/Default.aspx?BillNumber=HB0233&GA=112", title: "HB0233 bill information (Tennessee General Assembly)", accessed: 2026-10-20 }
+  lookout_dcs: &lookout_dcs { url: "https://tennesseelookout.com/2023/05/02/dcs-social-worker-caseload-bill-fails-to-pass-at-end-of-session/", title: "DCS social worker caseload bill fails to pass at end of session (Tennessee Lookout)", accessed: 2026-10-20 }
+  lookout_marriage: &lookout_marriage { url: "https://tennesseelookout.com/2022/04/07/marriage-bill-creating-path-around-same-sex-unions-causes-ruckus-in-house-committee/", title: "Marriage bill causes ruckus in House committee (Tennessee Lookout)", accessed: 2026-10-20 }
+  ap_explainer: &ap_explainer { url: "https://newschannel9.com/news/local/explainer-anti-lgbtq-marriage-bill-sparks-criticism", title: "Explainer: Marriage bill sparks criticism (Associated Press via WTVC NewsChannel 9)", accessed: 2026-10-20 }
+  ap_dead: &ap_dead { url: "https://newschannel9.com/news/local/tennessee-anti-lgbtq-marriage-bill-dead-for-annual-session", title: "Tennessee marriage bill dead for annual session (Associated Press via WTVC NewsChannel 9)", accessed: 2026-10-20 }
+
 id: tn-house-099
 office: "Tennessee House, District 99"
 level: state_house
 district: 99
-research_status: pending
+research_status: complete
 candidate_list_source: "https://sos-prod.tnsosgovfiles.com/s3fs-public/document/TNHouse_Nov2026.pdf"
+
 candidates:
   - name: "Tom Leatherwood"
     ballot_party: Republican
     city: "Arlington"
-    why_running: { text: null, sources: [] }
-    platform: []
-    arguments: []
+    incumbent: true
+    website: "https://tomleatherwood.com"
+    bio_facts:
+      - { text: "State representative for District 99 since November 2018; House member of the 111th through 114th General Assemblies.", sources: [*cga_h99, *bp_leatherwood, *lookout99] }
+      - { text: "Vice chair of the House Health Committee; also serves on the State & Local Government Committee and the Elections & Campaign Finance and Health subcommittees.", sources: [*cga_h99] }
+      - { text: "State senator from 1992 to 2000 (98th through 101st General Assemblies), where he was vice chairman of the Education Committee; did not seek a third term, as he had pledged.", sources: [*cga_h99, *lookout99, *tl_meet] }
+      - { text: "Shelby County Register of Deeds from 2000 to 2018.", sources: [*bp_leatherwood, *lookout99, *tl_meet] }
+      - { text: "B.S. in geology from the University of Memphis and a teaching certificate from Middle Tennessee State University; worked in the energy industry and taught at Millington Central High School for eight years.", sources: [*tl_meet, *cga_h99] }
+      - { text: "Won the August 6, 2026 Republican primary with 65.7% of the vote.", sources: [*bp_leatherwood] }
+      - { text: "Sponsored a 2022 bill (HB0233) to create a common-law marriage contract for one man and one woman; a House committee sent it to summer study in April 2022.", sources: [*hb0233, *ap_dead] }
+      - { text: "House sponsor of a 2023 bill to cap Department of Children's Services social worker caseloads at 20, then 18; it did not pass that session.", sources: [*lookout_dcs] }
+    why_running:
+      text: >-
+        He says he wants to keep listening to and working with district residents on the needs of the district and
+        the state, and to keep passing laws that support law enforcement and education, lower taxes, reduce
+        regulations and expand workforce development to make life easier for Tennessee families.
+      sources: [*tl_issues]
+    platform:
+      - category: economy
+        text: "Expand a business-friendly environment by reducing regulations, and increase workforce development."
+        sources: [*tl_issues]
+      - category: taxes
+        text: "Keep balancing the state budget without raising taxes; points to cutting more than $35 million in taxes, repealing the professional privilege tax on 15 professions, the gym tax and the ammunition tax, and building the rainy-day fund to $2.2 billion."
+        sources: [*tl_issues]
+      - category: education
+        text: "Increase funding for K-12 public schools, including $40 million for school resource officers and other safety measures and $25 million for vocational and technical training."
+        sources: [*tl_issues]
+      - category: public_safety
+        text: "Give law enforcement the resources and tools it needs, oppose defunding or dismantling police departments, and keep supporting the Memphis Safe Task Force that brought federal officers, the National Guard and more state troopers to Memphis."
+        sources: [*tl_issues]
+      - category: immigration
+        text: "Require all law enforcement agencies in the state to cooperate fully with federal immigration officials, with local governments that don't comply at risk of losing state grants; work against illegal immigration."
+        sources: [*tl_issues]
+      - category: guns
+        text: "Defend the constitutional right to keep and bear arms."
+        sources: [*tl_issues]
+      - category: abortion
+        text: "Believes life begins at conception and should be protected, and will keep defending that position."
+        sources: [*tl_issues]
+    arguments:
+      - stance: for
+        text: >-
+          He says he helped cut more than $35 million in state taxes, including repealing the professional privilege
+          tax on 15 professions, and helped build the state's rainy-day fund to a record $2.2 billion.
+        sources: [*tl_issues]
+      - stance: for
+        text: >-
+          He kept his promise to serve only two terms in the state Senate, and says that as Register of Deeds he
+          streamlined the office, cut expenses and fees, and ran it on customer fees at no cost to taxpayers.
+        sources: [*tl_meet, *lookout99]
+      - stance: against
+        text: >-
+          Critics said his 2022 bill creating a marriage contract limited to one man and one woman was an attempt
+          to get around the 2015 Supreme Court ruling on same-sex marriage and could lead to costly legal battles.
+        sources: [*ap_explainer, *ap_dead, *lookout_marriage]
+      - stance: against
+        text: >-
+          Fellow lawmakers warned that his marriage-contract bill, first filed without a minimum age, could open a
+          loophole for child marriage, allow bigamy, and leave survivors without inheritance, insurance or pension
+          rights because the state would not recognize the unions.
+        sources: [*ap_explainer, *lookout_marriage]
+
   - name: "William P Mouzon"
     ballot_party: Independent
     city: "Bartlett"
-    why_running: { text: null, sources: [] }
-    platform: []
-    arguments: []
-last_verified: 2026-10-13
+    incumbent: false
+    website: null
+    bio_facts:
+      - { text: "Born in Detroit and raised in Newark, New Jersey; served in the U.S. Navy from 1973 to 1977.", sources: [*bp_mouzon] }
+      - { text: "Network engineer who has worked in the telecommunications industry for more than 30 years; attended college on the GI Bill.", sources: [*bp_mouzon] }
+      - { text: "Volunteer prison minister and mentor for more than 15 years before the COVID-19 pandemic.", sources: [*bp_mouzon] }
+      - { text: "Ran for this seat in 2024 as an independent and received 24.7% of the vote.", sources: [*bp_leatherwood, *bp_mouzon] }
+    why_running:
+      text: >-
+        In his 2024 candidate survey he said he wants the people of Tennessee to have a true voice in their
+        government, to listen to constituents and represent them with integrity, and to support laws that improve
+        everyday Tennesseans' lives.
+      sources: [*bp_mouzon]
+    platform:
+      - category: government
+        text: "Give Tennessee citizens the power to petition to put measures on the ballot, the first bill he says he would file; supports term limits for legislators."
+        sources: [*bp_mouzon]
+      - category: abortion
+        text: "Restore women's reproductive freedom and abortion rights."
+        sources: [*bp_mouzon]
+      - category: economy
+        text: "Bring new industries and skilled jobs to West Tennessee and a fairer share of the state's wealth and opportunity to the region."
+        sources: [*bp_mouzon]
+      - category: education
+        text: "Protect the public school system."
+        sources: [*bp_mouzon]
+      - category: public_safety
+        text: "Stop criminal records from blocking people who have served their sentences from getting jobs."
+        sources: [*bp_mouzon]
+    arguments:
+      - stance: for
+        text: >-
+          A Navy veteran with more than 30 years as a telecommunications network engineer, he argues that lawmakers
+          with real-world experience outside politics would serve the state better.
+        sources: [*bp_mouzon]
+
+last_verified: 2026-10-20
