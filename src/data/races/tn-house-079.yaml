@@ -1,23 +1,61 @@
-# Seeded from the Secretary of State's certified candidate list by
-# scripts/seed-from-certified-list.py. research_status: pending —
-# platforms and arguments not yet compiled.
+# Tennessee House, District 79 (parts of Carroll, Gibson and Henderson counties) — Rep. Brock Martin, in office
+# since 2022, faces Kirk D Carter.
+# Candidate order follows the Secretary of State's certified candidate list.
+_sources:
+  cga_h79: &cga_h79 { url: "https://wapp.capitol.tn.gov/apps/legislatorinfo/member.aspx?district=H79", title: "Representative Brock Martin (Tennessee General Assembly)", accessed: 2026-10-20 }
+  bp_martin: &bp_martin { url: "https://ballotpedia.org/Brock_Martin", title: "Brock Martin (Ballotpedia)", accessed: 2026-10-20 }
+  hjr0069: &hjr0069 { url: "https://wapp.capitol.tn.gov/apps/BillInfo/Default.aspx?BillNumber=HJR0069&GA=114", title: "HJR0069 bill information (Tennessee General Assembly)", accessed: 2026-10-20 }
+  lookout79: &lookout79 { url: "https://tennesseelookout.com/voter-guides/contests/house-district-79/", title: "Tennessee House of Representatives, 79th District voter guide (Tennessee Lookout)", accessed: 2026-10-20 }
+  bm_home: &bm_home { url: "https://www.brockmartinfortn.com/", title: "Brock Martin for State Representative (Martin campaign)", accessed: 2026-10-20 }
+  bm_about: &bm_about { url: "https://www.brockmartinfortn.com/about", title: "Get to Know Brock (Martin campaign)", accessed: 2026-10-20 }
+  bm_news: &bm_news { url: "https://www.brockmartinfortn.com/news", title: "Brock's Newsroom (Martin campaign)", accessed: 2026-10-20 }
+
 id: tn-house-079
 office: "Tennessee House, District 79"
 level: state_house
 district: 79
-research_status: pending
+research_status: complete
 candidate_list_source: "https://sos-prod.tnsosgovfiles.com/s3fs-public/document/TNHouse_Nov2026.pdf"
+
 candidates:
   - name: "Brock Martin"
     ballot_party: Republican
     city: "Huntingdon"
-    why_running: { text: null, sources: [] }
-    platform: []
-    arguments: []
+    incumbent: true
+    website: "https://www.brockmartinfortn.com"
+    bio_facts:
+      - { text: "State representative for District 79 since November 2022; House member of the 113th and 114th General Assemblies.", sources: [*bp_martin, *cga_h79] }
+      - { text: "Chair of the House Health Subcommittee; also serves on the Commerce, Health and Insurance committees.", sources: [*cga_h79, *lookout79] }
+      - { text: "Chiropractor; he and his wife opened Southern Chiropractic and Acupuncture in Huntingdon, where he is clinical director.", sources: [*bm_about, *bp_martin] }
+      - { text: "Born in Carroll County and raised in Camden; graduate of Camden Central High School and Bethel University, with a Doctor of Chiropractic from Logan College of Chiropractic (2010).", sources: [*bm_about, *cga_h79] }
+      - { text: "Member of the Bethel University Board of Trustees, treasurer of the Huntingdon Industrial Board, and former president of the Tennessee Chiropractic Association.", sources: [*cga_h79, *bm_about] }
+      - { text: "Won the open seat in 2022 with 81.2% of the general election vote; unopposed in the 2024 general election and the 2026 primary.", sources: [*bp_martin] }
+      - { text: "Sponsored HJR0069 (2025), a resolution urging the state to adopt a plan to make Tennessee healthy; it passed the House 90-0 and the Senate 32-0.", sources: [*hjr0069] }
+      - { text: "His 2025 bills, as described in his newsletters, included measures on biomarker coverage to help diagnose cancer faster, ambulance reimbursement, support for the Megasite of West Tennessee, and closing a loophole that lets electronic service providers tip off people whose phones are under subpoena in child exploitation cases.", sources: [*bm_news] }
+    why_running:
+      text: >-
+        He says he is running to build a prosperous future for his family, his business and his community, and to
+        be a voice for small business owners, whom he calls the heartbeat of rural counties.
+      sources: [*bm_home]
+    platform:
+      - category: economy
+        text: "Speak for small business owners in rural counties and limit government intervention so businesses can thrive."
+        sources: [*bm_home]
+      - category: health_care
+        text: "Supports repealing certificate-of-need rules to allow more competition among hospitals and outpatient clinics, which he says will lower costs and improve care."
+        sources: [*bm_news]
+    arguments:
+      - stance: for
+        text: >-
+          As a chiropractor and clinical director of his own practice, he has seen and helped thousands of
+          patients in the Huntingdon area, his campaign says.
+        sources: [*bm_about]
+
   - name: "Kirk D Carter"
     ballot_party: Independent
     city: "Dyer"
     why_running: { text: null, sources: [] }
     platform: []
     arguments: []
-last_verified: 2026-10-13
+
+last_verified: 2026-10-20
