@@ -2,7 +2,7 @@
 import { defineConfig } from 'astro/config';
 import sitemap from '@astrojs/sitemap';
 
-// GitHub Pages with the custom domain tnelection.org (DNS on Cloudflare).
+// Served by a Cloudflare Worker with static assets (wrangler.jsonc) on tnelection.org.
 export default defineConfig({
   site: 'https://tnelection.org',
   trailingSlash: 'always',

@@ -87,8 +87,12 @@ live, which files must change together, and links to per-folder guides.
 
 ## Deployment
 
-`.github/workflows/deploy.yml` runs on every push to `main`: validate → build → link check → deploy to GitHub Pages
-with `actions/deploy-pages`. It also re-checks links weekly. Source URLs that return 404/410 or fail DNS fail the
+The site is a Cloudflare Worker that serves the static build (`dist/`) as assets on `tnelection.org`; see
+`wrangler.jsonc`. `www.tnelection.org` redirects to the apex through a small Worker in `workers/www-redirect/`.
+
+`.github/workflows/deploy.yml` runs on every push to `main`: validate → build → link check → `wrangler deploy`. It
+needs a `CLOUDFLARE_API_TOKEN` repository secret (a token from the "Edit Cloudflare Workers" template). To deploy by
+hand: `npm run build && npx wrangler deploy`. The workflow also re-checks links weekly. Source URLs that return 404/410 or fail DNS fail the
 check; sites that block automated requests (401/403/429) are reported as warnings.
 
 ## Corrections

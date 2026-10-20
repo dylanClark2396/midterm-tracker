@@ -13,7 +13,7 @@ permissions:
   contents: read
 
 concurrency:
-  group: pages-${{ github.ref }}
+  group: deploy-${{ github.ref }}
   cancel-in-progress: true
 
 jobs:
@@ -38,22 +38,28 @@ jobs:
       - run: npm run build
       # Fails on broken internal links, missing anchors, and dead (404/410/DNS) source URLs.
       - run: npm run check:links
-      - uses: actions/upload-pages-artifact@v3
+      - uses: actions/upload-artifact@v4
         if: github.event_name != 'pull_request'
         with:
+          name: dist
           path: dist
 
   deploy:
-    name: Deploy to GitHub Pages
+    name: Deploy to Cloudflare
     needs: validate
     if: github.ref == 'refs/heads/main' && github.event_name != 'pull_request'
     runs-on: ubuntu-latest
-    permissions:
-      pages: write
-      id-token: write
     environment:
-      name: github-pages
-      url: ${{ steps.deployment.outputs.page_url }}
+      name: cloudflare
+      url: https://tnelection.org/
     steps:
-      - id: deployment
-        uses: actions/deploy-pages@v4
+      # For wrangler.jsonc (Worker name, account, custom domain, asset settings).
+      - uses: actions/checkout@v4
+      - uses: actions/download-artifact@v4
+        with:
+          name: dist
+          path: dist
+      - uses: cloudflare/wrangler-action@v3
+        with:
+          apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          command: deploy
