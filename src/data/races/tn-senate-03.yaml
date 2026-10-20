@@ -1,17 +1,93 @@
-# Seeded from the Secretary of State's certified candidate list by
-# scripts/seed-from-certified-list.py. research_status: pending —
-# platforms and arguments not yet compiled.
+# Tennessee Senate, District 3 (Carter, Johnson and Washington counties) — Sen. Rusty Crowe, in office since 1990,
+# is the only candidate on the November ballot after winning the August 2026 primary.
+# Candidate order follows the Secretary of State's certified candidate list.
+_sources:
+  cga_s3: &cga_s3 { url: "https://wapp.capitol.tn.gov/apps/legislatorinfo/member.aspx?district=S3", title: "Senator Rusty Crowe (Tennessee General Assembly)", accessed: 2026-10-20 }
+  bp_crowe: &bp_crowe { url: "https://ballotpedia.org/Rusty_Crowe", title: "Rusty Crowe (Ballotpedia)", accessed: 2026-10-20 }
+  lookout3: &lookout3 { url: "https://tennesseelookout.com/voter-guides/contests/state-senate-district-3/", title: "State Senate, 3rd District voter guide (Tennessee Lookout)", accessed: 2026-10-20 }
+  rc_home: &rc_home { url: "https://www.rustycrowetn.com/", title: "Senator Rusty Crowe (Crowe campaign)", accessed: 2026-10-20 }
+  rc_issues: &rc_issues { url: "https://www.rustycrowetn.com/issues", title: "Issues (Crowe campaign)", accessed: 2026-10-20 }
+  rc_meet: &rc_meet { url: "https://www.rustycrowetn.com/meetrusty", title: "Meet Rusty (Crowe campaign)", accessed: 2026-10-20 }
+  wcyb_pitch: &wcyb_pitch { url: "https://wcyb.com/news/local/crowe-pohlgeers-make-pitch-to-voters-ahead-of-state-senate-primary", title: "Crowe, Pohlgeers make pitch to voters ahead of state Senate primary (WCYB)", accessed: 2026-10-20 }
+  wcyb_forum: &wcyb_forum { url: "https://wcyb.com/news/local/ballad-health-and-property-taxes-dominate-discussions-at-east-tennessee-candidate-forum", title: "Ballad Health and property taxes dominate discussions at East Tennessee candidate forum (WCYB)", accessed: 2026-10-20 }
+  wjhl_issues: &wjhl_issues { url: "https://www.yahoo.com/news/politics/articles/district-3-state-senate-candidates-230444447.html", title: "District 3 state senate candidates weigh in on area issues (WJHL via Yahoo News)", accessed: 2026-10-20 }
+
 id: tn-senate-03
 office: "Tennessee Senate, District 3"
 level: state_senate
 district: 3
-research_status: pending
+research_status: complete
 candidate_list_source: "https://sos-prod.tnsosgovfiles.com/s3fs-public/document/TNSenate_Nov2026.pdf"
+
 candidates:
   - name: "Rusty Crowe"
     ballot_party: Republican
     city: "Johnson City"
-    why_running: { text: null, sources: [] }
-    platform: []
-    arguments: []
-last_verified: 2026-10-13
+    incumbent: true
+    website: "https://www.rustycrowetn.com"
+    bio_facts:
+      - { text: "State senator for District 3 since 1990; Senate member of the 97th through 114th General Assemblies.", sources: [*cga_s3, *bp_crowe] }
+      - { text: "Chair of the Senate Health and Welfare Committee; also serves on the Senate Education and Government Operations committees.", sources: [*cga_s3, *rc_meet, *lookout3] }
+      - { text: "Born in Johnson City in 1947; B.S. in criminal justice from East Tennessee State University and J.D. from Atlanta Law School.", sources: [*cga_s3, *rc_meet, *bp_crowe] }
+      - { text: "Served in the U.S. Army Security Agency in Southeast Asia during the Vietnam War, 1967 to 1971.", sources: [*cga_s3, *rc_meet, *lookout3] }
+      - { text: "Worked at East Tennessee State University for more than 20 years, including as director of personnel; has consulted on business development in wound care and hyperbaric medicine for more than 15 years.", sources: [*rc_meet, *bp_crowe] }
+      - { text: "Won the August 6, 2026 primary with 59.8% of the vote and is the only candidate for this seat on the November ballot.", sources: [*bp_crowe, *lookout3] }
+    why_running:
+      text: >-
+        He says he thought about retiring but heard an outcry from the community asking him to stay as the
+        senior senator on the floor, and that his focus in a new term will be recovery from Hurricane Helene.
+      sources: [*wcyb_pitch]
+    platform:
+      - category: taxes
+        text: "Keep Tennessee free of a state income tax and a state property tax, hold to balanced budgets with no new taxes, and ease property taxes for veterans and seniors."
+        sources: [*rc_issues, *rc_home]
+      - category: education
+        text: "Give parents the final say over what children are taught, keep books and curriculum age-appropriate, bar teaching of divisive concepts, and bring back phonics and cursive; review school voucher results before raising that funding."
+        sources: [*rc_issues, *wjhl_issues]
+      - category: health_care
+        text: "Bring more hospital competition to the region by ending certificate-of-need rules, protect patients from surprise medical bills, expand home and community-based care, and remove harmful food dyes from school meals."
+        sources: [*rc_issues, *wcyb_pitch]
+      - category: public_safety
+        text: "Crack down on human trafficking and elder abuse, and look into whether psychotropic medications play a role in violent mass attacks."
+        sources: [*rc_issues]
+      - category: guns
+        text: "Protect the constitutional right to keep and bear arms without infringement."
+        sources: [*rc_issues]
+      - category: abortion
+        text: "Voted for Tennessee's fetal heartbeat abortion law and says he will keep working to protect unborn life."
+        sources: [*rc_issues]
+      - category: agriculture
+        text: "Keep foreign adversaries from buying Tennessee land, and balance new industry and development against farmland."
+        sources: [*rc_issues, *wjhl_issues]
+    arguments:
+      - stance: for
+        text: >-
+          After more than three decades in office he would be the senior senator on the floor, bringing
+          experience and committee leadership that benefits Northeast Tennessee.
+        sources: [*wcyb_pitch, *rc_home]
+      - stance: for
+        text: >-
+          He has helped keep a state income tax out of Tennessee, supported balanced budgets, and helped the state
+          earn a AAA bond rating.
+        sources: [*rc_issues, *rc_home, *wcyb_pitch]
+      - stance: for
+        text: >-
+          He says he has pushed for more health care competition in the region, including starting the committee
+          work to end certificate-of-need rules sooner than first planned.
+        sources: [*wcyb_pitch]
+      - stance: for
+        text: >-
+          A Vietnam War veteran himself, he has been a go-to senator for Tennessee veterans and has received one of
+          the top honors veterans give to a sitting legislator.
+        sources: [*rc_issues, *rc_meet]
+      - stance: against
+        text: >-
+          After 36 years in office, it is time for a change and a new voice in the seat.
+        sources: [*wcyb_pitch]
+      - stance: against
+        text: >-
+          He voted for the law that allowed the Ballad Health merger and lists the company as a source of income,
+          and a competing hospital is unlikely to come to the area while he sits on the Senate's health committee.
+        sources: [*wcyb_pitch, *wcyb_forum]
+
+last_verified: 2026-10-20
