@@ -29,7 +29,7 @@ candidates:
     bio_facts:
       - { text: "State senator for District 19 since November 2022; Senate member of the 113th and 114th General Assemblies. Won a five-candidate open primary for the seat in 2022.", sources: [*bp_oliver, *cga_s19, *co_bio] }
       - { text: "Member of the Senate Energy, Agriculture and Natural Resources Committee. In May 2026 she was reassigned from the Government Operations Committee to the State and Local Government Committee.", sources: [*cga_s19, *lookout_suspend] }
-      - { text: "Vice chair of the Senate Democratic Caucus and of the Tennessee Black Caucus of State Legislators.", sources: [*co_home, *co_issues] }
+      - { text: "Vice chair of the Senate Democratic Caucus.", sources: [*co_home, *co_issues] }
       - { text: "Co-founder and former co-executive director of The Equity Alliance, a statewide nonprofit advocacy organization; former congressional aide and communications staffer for U.S. Rep. Jim Cooper; owner of OEM Consulting Group.", sources: [*co_bio, *bp_oliver, *lookout19] }
       - { text: "B.S. in human and organizational development from Vanderbilt University (2005); Master of Public Administration from the University of Tennessee, Knoxville (2008).", sources: [*cga_s19, *bp_oliver, *co_bio] }
       - { text: "Grew up in Little Rock, Arkansas, and moved to Nashville to attend Vanderbilt; lives in Bordeaux. Married, with three children.", sources: [*co_bio, *bp_oliver, *cga_s19] }
