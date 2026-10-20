@@ -1,17 +1,91 @@
-# Seeded from the Secretary of State's certified candidate list by
-# scripts/seed-from-certified-list.py. research_status: pending —
-# platforms and arguments not yet compiled.
+# Tennessee Senate, District 19 (Davidson County: downtown, North and East Nashville, Antioch, Madison,
+# Goodlettsville) — Sen. Charlane Oliver, in office since 2022, is the only candidate on the ballot.
+# Candidate order follows the Secretary of State's certified candidate list.
+_sources:
+  cga_s19: &cga_s19 { url: "https://wapp.capitol.tn.gov/apps/legislatorinfo/member.aspx?district=S19", title: "Senator Charlane Oliver (Tennessee General Assembly)", accessed: 2026-10-20 }
+  bp_oliver: &bp_oliver { url: "https://ballotpedia.org/Charlane_Oliver", title: "Charlane Oliver (Ballotpedia)", accessed: 2026-10-20 }
+  lookout19: &lookout19 { url: "https://tennesseelookout.com/voter-guides/contests/state-senate-district-19/", title: "State Senate, 19th District voter guide (Tennessee Lookout)", accessed: 2026-10-20 }
+  co_home: &co_home { url: "https://www.oliverfortnsenate.com/", title: "Charlane Oliver for Tennessee State Senate, District 19 (Oliver campaign)", accessed: 2026-10-20 }
+  co_bio: &co_bio { url: "https://www.oliverfortnsenate.com/charlane", title: "Bio (Oliver campaign)", accessed: 2026-10-20 }
+  co_issues: &co_issues { url: "https://www.oliverfortnsenate.com/issues", title: "Senator Oliver's Issues (Oliver campaign)", accessed: 2026-10-20 }
+  lookout_suspend: &lookout_suspend { url: "https://tennesseelookout.com/2026/05/27/tennessee-democratic-senator-suspended-from-committee-over-special-session-protest/", title: "Senator suspended from committee over special session protest (Tennessee Lookout)", accessed: 2026-10-20 }
+  lookout_suit: &lookout_suit { url: "https://tennesseelookout.com/2026/09/29/nashville-democrat-sues-tennessee-lieutenant-governor-over-committee-suspension-other-restrictions/", title: "Nashville senator sues Tennessee lieutenant governor over committee suspension, other restrictions (Tennessee Lookout)", accessed: 2026-10-20 }
+  scene_punish: &scene_punish { url: "https://www.nashvillescene.com/news/pithinthewind/charlane-oliver-punishment-protest/article_80e4e206-fbcd-4b82-b5ae-29d60ed910ba.html", title: "Charlane Oliver Faces Punishment for Special Session Protest (Nashville Scene)", accessed: 2026-10-20 }
+  scene_challenge: &scene_challenge { url: "https://www.nashvillescene.com/news/pithinthewind/charlane-oliver-challenges-protest-punishments/article_4423d429-65c5-46e7-be46-cae3966a27f4.html", title: "Charlane Oliver Challenges Special Session Protest Punishments (Nashville Scene)", accessed: 2026-10-20 }
+
 id: tn-senate-19
 office: "Tennessee Senate, District 19"
 level: state_senate
 district: 19
-research_status: pending
+research_status: complete
 candidate_list_source: "https://sos-prod.tnsosgovfiles.com/s3fs-public/document/TNSenate_Nov2026.pdf"
+
 candidates:
   - name: "Charlane Oliver"
     ballot_party: Democratic
     city: "Nashville"
-    why_running: { text: null, sources: [] }
-    platform: []
-    arguments: []
-last_verified: 2026-10-13
+    incumbent: true
+    website: "https://www.oliverfortnsenate.com/"
+    bio_facts:
+      - { text: "State senator for District 19 since November 2022; Senate member of the 113th and 114th General Assemblies. Won a five-candidate open primary for the seat in 2022.", sources: [*bp_oliver, *cga_s19, *co_bio] }
+      - { text: "Member of the Senate Energy, Agriculture and Natural Resources Committee. In May 2026 she was reassigned from the Government Operations Committee to the State and Local Government Committee.", sources: [*cga_s19, *lookout_suspend] }
+      - { text: "Vice chair of the Senate Democratic Caucus and of the Tennessee Black Caucus of State Legislators.", sources: [*co_home, *co_issues] }
+      - { text: "Co-founder and former co-executive director of The Equity Alliance, a statewide nonprofit advocacy organization; former congressional aide and communications staffer for U.S. Rep. Jim Cooper; owner of OEM Consulting Group.", sources: [*co_bio, *bp_oliver, *lookout19] }
+      - { text: "B.S. in human and organizational development from Vanderbilt University (2005); Master of Public Administration from the University of Tennessee, Knoxville (2008).", sources: [*cga_s19, *bp_oliver, *co_bio] }
+      - { text: "Grew up in Little Rock, Arkansas, and moved to Nashville to attend Vanderbilt; lives in Bordeaux. Married, with three children.", sources: [*co_bio, *bp_oliver, *cga_s19] }
+      - { text: "In September 2026 filed a lawsuit against the Senate speaker challenging her committee reassignment and the limits placed on her per diem and travel reimbursement.", sources: [*lookout_suit] }
+    why_running:
+      text: >-
+        She says District 19 needs bold leadership because Nashvillians are being pushed out by rising housing
+        and living costs, schools are underfunded and threatened by gun violence, and health care is out of reach
+        for the uninsured and underinsured. She describes her agenda as lifting up working families, protecting
+        vulnerable communities, supporting women and survivors, and strengthening democracy.
+      sources: [*co_issues, *co_home]
+    platform:
+      - category: guns
+        text: "Universal background checks, removing gun ownership rights from domestic abusers, and support for violence interruption programs."
+        sources: [*co_issues]
+      - category: health_care
+        text: "Expand health care access to more than 250,000 uninsured Tennesseans, work to eliminate medical debt, and fund mental health resources."
+        sources: [*co_issues]
+      - category: abortion
+        text: "Defend a woman's right to make her own reproductive medical decisions."
+        sources: [*co_issues]
+      - category: cost_of_living
+        text: "Make property taxes affordable so seniors can stay in their homes, protect homeowners from harassment by predatory developers, and hold large corporations accountable for gentrification and rising housing costs."
+        sources: [*co_issues]
+      - category: education
+        text: "Secure more state formula funding for Metro Nashville Public Schools, raise pay for educators and support staff, keep public schools from privatization, tighten fiscal oversight of charter schools, and secure overdue land-grant funding for Tennessee State University."
+        sources: [*co_issues]
+      - category: government
+        text: "Make it easier to vote, restore voting rights to people returning from incarceration, and require the Attorney General to publicly report what state lawsuits cost."
+        sources: [*co_issues]
+      - category: economy
+        text: "Livable wages and paid family leave; repeal state preemption laws that keep Metro Nashville from setting a livable wage; help small businesses through supplier diversity, procurement and technical assistance."
+        sources: [*co_issues]
+      - category: public_safety
+        text: "End state contracts with private prisons and pay fair compensation rates for indigent defense."
+        sources: [*co_issues]
+    arguments:
+      - stance: for
+        text: >-
+          She points to two decades of community organizing, including building a statewide advocacy nonprofit
+          from $250 of her own money into a $2.5 million organization that ran large voter registration drives,
+          and commits to year-round engagement with District 19 residents.
+        sources: [*co_bio, *co_issues]
+      - stance: for
+        text: >-
+          She says her May 2026 protest on the Senate floor was a direct response to congressional maps that strip
+          communities of fair representation, and that she will not be silenced or intimidated in fighting for the
+          people who elected her.
+        sources: [*scene_punish, *lookout_suspend, *lookout_suit]
+      - stance: against
+        text: >-
+          On the final day of the May 2026 redistricting special session she stood on her Senate desk with a
+          protest banner. The Senate's presiding officer called it a clear violation of Senate decorum and
+          "beneath the dignity of this institution," removed her from the Government Operations Committee, and
+          cut her per diem and state-funded conference travel; his office later called her conduct a
+          disruption that put a performance ahead of her duties.
+        sources: [*lookout_suspend, *scene_punish, *scene_challenge]
+
+last_verified: 2026-10-20
