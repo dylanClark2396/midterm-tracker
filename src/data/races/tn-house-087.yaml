@@ -1,23 +1,52 @@
-# Seeded from the Secretary of State's certified candidate list by
-# scripts/seed-from-certified-list.py. research_status: pending —
-# platforms and arguments not yet compiled.
+# Tennessee House, District 87 (part of South Memphis, including Whitehaven) — Rep. Karen Camper, in office
+# since 2008, faces Reggie William Hall.
+# Candidate order follows the Secretary of State's certified candidate list.
+_sources:
+  lookout87: &lookout87 { url: "https://tennesseelookout.com/voter-guides/contests/house-district-87/", title: "Tennessee House of Representatives, 87th District voter guide (Tennessee Lookout)", accessed: 2026-10-20 }
+  bp_hall: &bp_hall { url: "https://ballotpedia.org/Reggie_Hall_(Tennessee)", title: "Reggie Hall (Tennessee) (Ballotpedia)", accessed: 2026-10-20 }
+  br_hall: &br_hall { url: "https://www.ballotready.org/people/reggie-hall-2f5d7d70-93a7-4b5c-b97f-0d799028ae2f", title: "Reggie Hall (BallotReady)", accessed: 2026-10-20 }
+  cga_h87: &cga_h87 { url: "https://wapp.capitol.tn.gov/apps/legislatorinfo/member.aspx?district=H87", title: "Representative Karen Camper (Tennessee General Assembly)", accessed: 2026-10-20 }
+  bp_camper: &bp_camper { url: "https://ballotpedia.org/Karen_Camper", title: "Karen Camper (Ballotpedia)", accessed: 2026-10-20 }
+  kc_home: &kc_home { url: "https://www.leaderkarencamper.com/", title: "Karen Camper (Camper campaign)", accessed: 2026-10-20 }
+  lookout_cmte: &lookout_cmte { url: "https://tennesseelookout.com/2026/05/13/tennessee-house-speaker-suspends-dems-for-decorum-violation/", title: "Tennessee House speaker suspends minority members from committees, citing decorum violation (Tennessee Lookout)", accessed: 2026-10-20 }
+
 id: tn-house-087
 office: "Tennessee House, District 87"
 level: state_house
 district: 87
-research_status: pending
+research_status: complete
 candidate_list_source: "https://sos-prod.tnsosgovfiles.com/s3fs-public/document/TNHouse_Nov2026.pdf"
+
 candidates:
   - name: "Reggie William Hall"
     ballot_party: Republican
     city: "Memphis"
+    incumbent: false
+    website: null
+    bio_facts:
+      - { text: "Born in Memphis; South Memphis resident and graduate of Hamilton High School.", sources: [*bp_hall] }
+      - { text: "Bachelor's degree from Middle Tennessee State University (2001); executive director of the H.A.L.L.S. Program since 2013.", sources: [*br_hall] }
+      - { text: "Small business owner who has worked in mental health, rehabilitation and transportation.", sources: [*bp_hall] }
+      - { text: "Ran for Memphis mayor in 2023, receiving about 0.1 percent of the vote.", sources: [*lookout87, *bp_hall] }
     why_running: { text: null, sources: [] }
     platform: []
     arguments: []
+
   - name: "Karen Camper"
     ballot_party: Democratic
     city: "Memphis"
+    incumbent: true
+    website: "https://www.leaderkarencamper.com"
+    bio_facts:
+      - { text: "State representative for District 87 since 2008, when she was appointed after Rep. Gary Rowe died in office; House member of the 105th through 114th General Assemblies.", sources: [*lookout87, *cga_h87] }
+      - { text: "Elected leader of her party's House caucus (House minority leader) in November 2018, the first Black legislator to lead a party caucus in the Tennessee House.", sources: [*kc_home, *lookout87] }
+      - { text: "Retired from the U.S. Army as a Chief Warrant Officer Three after 21 years of service.", sources: [*kc_home, *cga_h87] }
+      - { text: "Attended the University of Tennessee at Knoxville; former substitute teacher in the Memphis City Schools and owner of a music business.", sources: [*cga_h87, *bp_camper, *kc_home] }
+      - { text: "Past president of the National Foundation for Women Legislators.", sources: [*kc_home] }
+      - { text: "Ran for Memphis mayor in 2023.", sources: [*bp_camper] }
+      - { text: "Voted against the congressional map redrawn in the May 2026 special session; afterward the House Speaker removed her and the other members of her House caucus from standing committees for the rest of 2026, citing the session's closing floor protest.", sources: [*lookout_cmte] }
     why_running: { text: null, sources: [] }
     platform: []
     arguments: []
-last_verified: 2026-10-13
+
+last_verified: 2026-10-20
