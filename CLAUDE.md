@@ -12,8 +12,10 @@ labels**, with every claim footnoted to a source. User-facing detail (method, co
 - **Content**: YAML in [src/data/](src/data/), validated by Zod in [src/content.config.ts](src/content.config.ts).
 - **Browser code**: Leaflet map on `/districts/` ([src/scripts/district-finder.ts](src/scripts/district-finder.ts)).
 - **Contact form backend**: a Cloudflare Worker in [workers/contact/](workers/contact/), deployed separately.
+- **Hosting**: a Cloudflare Worker that only serves `dist/` as static assets ([wrangler.jsonc](wrangler.jsonc)), on
+  the `tnelection.org` custom domain; [workers/www-redirect/](workers/www-redirect/) sends `www.` to the apex.
 - **CI/deploy**: [.github/workflows/deploy.yml](.github/workflows/deploy.yml) runs validate → build → link check,
-  then deploys to GitHub Pages on `main`.
+  then `wrangler deploy` on `main` (needs the `CLOUDFLARE_API_TOKEN` repo secret).
 
 ## How content becomes a page
 
@@ -84,8 +86,8 @@ There is no test suite. CI runs validate → check → check:contact → docs:ch
 | `ballot_party` enum | `PARTIES` in the [seed script](scripts/seed-from-certified-list.py) |
 | Issue categories | Only [categories.yaml](src/data/categories.yaml); the schema and the compare table read it, and its order is the row order |
 | Contact form fields, topics, or `maxlength`s in [contact.astro](src/pages/contact.astro) | `TOPICS` and `LIMITS` in [workers/contact/src/index.js](workers/contact/src/index.js) (`npm run check:contact` catches a mismatch), then redeploy the Worker by hand |
-| Site domain (`site` in [astro.config.mjs](astro.config.mjs)) | [public/robots.txt](public/robots.txt), `ALLOWED_ORIGINS` in [wrangler.jsonc](workers/contact/wrangler.jsonc), the Message-ID domain in the Worker |
-| Worker name or account | `CONTACT_ENDPOINT` in [site.ts](src/lib/site.ts) |
+| Site domain (`site` in [astro.config.mjs](astro.config.mjs)) | `routes` in [wrangler.jsonc](wrangler.jsonc) and [the www redirect](workers/www-redirect/wrangler.jsonc), [public/robots.txt](public/robots.txt), `ALLOWED_ORIGINS` in [wrangler.jsonc](workers/contact/wrangler.jsonc), the Message-ID domain in the Worker |
+| Contact Worker name or account | `CONTACT_ENDPOINT` in [site.ts](src/lib/site.ts) |
 | Map file names in [build-district-maps.mjs](scripts/build-district-maps.mjs) | `LAYERS[].file` in [district-finder.ts](src/scripts/district-finder.ts) |
 | Light-theme `--ink` / `--accent` in [base.css](src/styles/base.css) | `--map-ink` / `--map-accent` in the same file, which the district map reads (the map is always light) |
 | Default argument tab or ordering rules | The explanation on [method.astro](src/pages/method.astro) |

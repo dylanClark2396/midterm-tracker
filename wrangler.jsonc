@@ -1,0 +1,19 @@
+// The site: a Cloudflare Worker that only serves the static build in dist/ (no Worker script).
+// CI deploys it on every push to main (.github/workflows/deploy.yml); by hand: `npm run build && npx wrangler deploy`.
+{
+  "name": "tnelection-site",
+  "account_id": "dbba7422f9a1e4754f4a6631214a25c5",
+  "compatibility_date": "2026-09-01",
+  // Served only on the custom domain, so search engines don't index a second copy.
+  // www.tnelection.org redirects here through workers/www-redirect/.
+  "workers_dev": false,
+  "preview_urls": false,
+  "routes": [{ "pattern": "tnelection.org", "custom_domain": true }],
+  "assets": {
+    "directory": "./dist",
+    // /races/x redirects to /races/x/, matching trailingSlash: 'always' in astro.config.mjs.
+    "html_handling": "auto-trailing-slash",
+    // Unknown paths get dist/404.html with a 404 status.
+    "not_found_handling": "404-page"
+  }
+}
