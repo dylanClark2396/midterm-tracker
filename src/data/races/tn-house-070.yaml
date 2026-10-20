@@ -77,7 +77,7 @@ candidates:
         text: "Oppose school vouchers, which she says take funding away from public schools."
         sources: [*rm_actblue]
       - category: government
-        text: "Oppose further legislation on noncitizen voting, saying election commissions already do that job competently."
+        text: "Oppose further legislation aimed at restricting noncitizen voting, saying election commissions already do that job competently."
         sources: [*rm_actblue]
     arguments:
       - stance: for
