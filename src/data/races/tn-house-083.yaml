@@ -1,23 +1,96 @@
-# Seeded from the Secretary of State's certified candidate list by
-# scripts/seed-from-certified-list.py. research_status: pending —
-# platforms and arguments not yet compiled.
+# Tennessee House, District 83 (part of Shelby County, including Cordova, Germantown and part of Memphis) —
+# Rep. Mark White, in office since 2010, faces Margaret Price.
+# Candidate order follows the Secretary of State's certified candidate list.
+_sources:
+  cga_h83: &cga_h83 { url: "https://wapp.capitol.tn.gov/apps/legislatorinfo/member.aspx?district=H83", title: "Representative Mark White (Tennessee General Assembly)", accessed: 2026-10-20 }
+  bp_white: &bp_white { url: "https://ballotpedia.org/Mark_White_(Tennessee)", title: "Mark White (Tennessee) (Ballotpedia)", accessed: 2026-10-20 }
+  lookout83: &lookout83 { url: "https://tennesseelookout.com/voter-guides/contests/house-district-83/", title: "Tennessee House of Representatives, 83rd District voter guide (Tennessee Lookout)", accessed: 2026-10-20 }
+  hb0662: &hb0662 { url: "https://wapp.capitol.tn.gov/apps/BillInfo/Default.aspx?BillNumber=HB0662&GA=114", title: "HB0662 bill information (Tennessee General Assembly)", accessed: 2026-10-20 }
+  ff_agree: &ff_agree { url: "https://www.tnfirefly.com/news/memphis-lawmakers-reach-agreement-on-plan-to-enable-state-intervention-into-memphis-shelby-county-schools", title: "Memphis Lawmakers Reach Agreement on Plan to Enable State Intervention into Memphis-Shelby County Schools (Tennessee Firefly)", accessed: 2026-10-20 }
+  lk_teeth: &lk_teeth { url: "https://tennesseelookout.com/2025/12/24/house-gop-to-push-forward-memphis-school-takeover-plan-with-teeth/", title: "Memphis school takeover plan with 'teeth' (Tennessee Lookout)", accessed: 2026-10-20 }
+  flyer_dead: &flyer_dead { url: "https://www.memphisflyer.com/memphis-schools-takeover-bill-dead-until-next-year", title: "Memphis schools \"takeover\" bill dead until next year (Memphis Flyer)", accessed: 2026-10-20 }
+  mp_home: &mp_home { url: "https://www.votepricetnhouse.com/", title: "Margaret Price for TN House, District 83 (Price campaign)", accessed: 2026-10-20 }
+  mp_about: &mp_about { url: "https://www.votepricetnhouse.com/about-margaret", title: "About Margaret Price (Price campaign)", accessed: 2026-10-20 }
+  mp_issues: &mp_issues { url: "https://www.votepricetnhouse.com/issues", title: "Issues (Price campaign)", accessed: 2026-10-20 }
+
 id: tn-house-083
 office: "Tennessee House, District 83"
 level: state_house
 district: 83
-research_status: pending
+research_status: complete
 candidate_list_source: "https://sos-prod.tnsosgovfiles.com/s3fs-public/document/TNHouse_Nov2026.pdf"
+
 candidates:
   - name: "Mark White"
     ballot_party: Republican
     city: "Memphis"
+    incumbent: true
+    website: null
+    bio_facts:
+      - { text: "Elected in a 2009 special election and has represented District 83 since 2010; House member of the 106th through 114th General Assemblies.", sources: [*lookout83, *bp_white, *cga_h83] }
+      - { text: "Chair of the House Education Committee; also serves on the Calendar & Rules and Health committees and the Education Administration and K-12 subcommittees.", sources: [*cga_h83, *lookout83] }
+      - { text: "Former principal of Harding Academy in Memphis and later a small business owner; director of the College of Leadership and Public Service at Lipscomb University.", sources: [*bp_white, *cga_h83] }
+      - { text: "B.S. in education from the University of Memphis; master's degree in conflict management from Lipscomb University.", sources: [*cga_h83, *bp_white] }
+      - { text: "Federal appointee to the National Assessment Governing Board, which oversees the National Assessment of Educational Progress.", sources: [*cga_h83] }
+      - { text: "House sponsor of HB0662, enacted in 2026 as Public Chapter 1057, which creates a state-appointed educational oversight board for Memphis-Shelby County Schools.", sources: [*hb0662, *ff_agree] }
     why_running: { text: null, sources: [] }
     platform: []
-    arguments: []
+    arguments:
+      - stance: for
+        text: >-
+          He argues that years of low performance in Memphis-Shelby County Schools call for an oversight board with
+          real authority over budgets and contracts, saying an elected board alone cannot fix decades of bureaucracy.
+        sources: [*lk_teeth, *ff_agree]
+      - stance: against
+        text: >-
+          Critics, including district leaders, say his oversight board for Memphis schools takes decisions away from
+          locally elected board members and voters, and note that earlier state intervention failed to improve outcomes.
+        sources: [*lk_teeth, *flyer_dead]
+
   - name: "Margaret Price"
     ballot_party: Democratic
     city: "Memphis"
-    why_running: { text: null, sources: [] }
-    platform: []
-    arguments: []
-last_verified: 2026-10-13
+    incumbent: false
+    website: "https://www.votepricetnhouse.com"
+    bio_facts:
+      - { text: "Born in Memphis and raised in District 83; a mother whose career includes work with nonprofits, local businesses and government.", sources: [*mp_about] }
+      - { text: "First campaign for public office.", sources: [*lookout83] }
+    why_running:
+      text: >-
+        She says the opportunities her parents' generation had, such as affordable education and stable jobs, are
+        harder to find for her generation and their children, and she wants to fight for a future that works for
+        everyone in the community. She says she would bring honesty, transparency and accountability to the district.
+      sources: [*mp_about]
+    platform:
+      - category: education
+        text: "End the state's private school voucher program; fully fund K-12 public schools, raise teacher pay and retention, and invest in universal pre-K, special education and career and technical education."
+        sources: [*mp_issues, *mp_about]
+      - category: economy
+        text: "Expand worker rights and workforce development, and make high-quality childcare and eldercare more affordable and available."
+        sources: [*mp_issues, *mp_home]
+      - category: health_care
+        text: "Expand TennCare, require transparent health care pricing, and strengthen mental health and addiction services."
+        sources: [*mp_issues]
+      - category: public_safety
+        text: "Give law enforcement resources, mental health programs and training support, and invest in prevention and youth opportunity."
+        sources: [*mp_issues]
+      - category: guns
+        text: "Require universal background checks while upholding the Second Amendment."
+        sources: [*mp_issues]
+      - category: cost_of_living
+        text: "Adopt housing policies that keep homes affordable and plan for growth that protects neighborhoods."
+        sources: [*mp_about]
+      - category: infrastructure
+        text: "Invest in roads, utilities and new technology for residents' benefit, with local input, worker protections and privacy rights as AI and data centers expand."
+        sources: [*mp_about, *mp_issues]
+      - category: government
+        text: "Make state decisions transparent, showing how public dollars are used and how priorities are set, with input from local communities."
+        sources: [*mp_issues, *mp_home]
+    arguments:
+      - stance: for
+        text: >-
+          She promises to listen first to parents, educators, workers, seniors and small business owners, and to
+          govern with transparency and accountability rather than political theater.
+        sources: [*mp_issues, *mp_about]
+
+last_verified: 2026-10-20
