@@ -1,23 +1,128 @@
-# Seeded from the Secretary of State's certified candidate list by
-# scripts/seed-from-certified-list.py. research_status: pending —
-# platforms and arguments not yet compiled.
+# Tennessee House, District 89 (northwest Knox County: Karns, Hardin Valley, Solway) — Rep. Justin Lafferty,
+# in office since 2018, faces Randy Debord.
+# Candidate order follows the Secretary of State's certified candidate list.
+_sources:
+  cga_h89: &cga_h89 { url: "https://wapp.capitol.tn.gov/apps/legislatorinfo/member.aspx?district=H89", title: "Representative Justin Lafferty (Tennessee General Assembly)", accessed: 2026-10-20 }
+  bp_lafferty: &bp_lafferty { url: "https://ballotpedia.org/Justin_Lafferty", title: "Justin Lafferty (Ballotpedia)", accessed: 2026-10-20 }
+  bp_debord: &bp_debord { url: "https://ballotpedia.org/Randy_Debord", title: "Randy Debord (Ballotpedia)", accessed: 2026-10-20 }
+  hb2581: &hb2581 { url: "https://wapp.capitol.tn.gov/apps/BillInfo/Default.aspx?BillNumber=HB2581&GA=114", title: "HB2581 bill information (Tennessee General Assembly)", accessed: 2026-10-20 }
+  compass89: &compass89 { url: "https://compassknox.com/2026/10/08/election-2026-state-house-districts-19-and-89/", title: "Election 2026: State House Districts 19 and 89 (Compass Knox)", accessed: 2026-10-20 }
+  lookout89: &lookout89 { url: "https://tennesseelookout.com/voter-guides/contests/house-district-89/", title: "Tennessee House of Representatives, 89th District voter guide (Tennessee Lookout)", accessed: 2026-10-20 }
+  wvlt_tenure: &wvlt_tenure { url: "https://www.wvlt.tv/2026/02/19/tennessee-representative-pauses-push-strip-public-university-professors-tenure-status/", title: "Tennessee representative pauses push to strip public university professors of tenure status (WVLT)", accessed: 2026-10-20 }
+  wvlt_bills: &wvlt_bills { url: "https://www.actionnews5.com/2026/02/11/lawmakers-discussing-bills-eliminate-future-tenure-public-university-professors-tennessee/", title: "Tennessee bills could strip professors of tenure status (WVLT, via Action News 5)", accessed: 2026-10-20 }
+  jl_home: &jl_home { url: "https://www.voteforlafferty.com/", title: "Meet Justin (Lafferty campaign)", accessed: 2026-10-20 }
+  jl_issues: &jl_issues { url: "https://www.voteforlafferty.com/platform", title: "Issues (Lafferty campaign)", accessed: 2026-10-20 }
+  rd_home: &rd_home { url: "https://randydebord.com/", title: "Vote Randy DeBord: Tennessee House Representative District 89 (DeBord campaign)", accessed: 2026-10-20 }
+
 id: tn-house-089
 office: "Tennessee House, District 89"
 level: state_house
 district: 89
-research_status: pending
+research_status: complete
 candidate_list_source: "https://sos-prod.tnsosgovfiles.com/s3fs-public/document/TNHouse_Nov2026.pdf"
+
 candidates:
   - name: "Justin Lafferty"
     ballot_party: Republican
     city: "Knoxville"
-    why_running: { text: null, sources: [] }
-    platform: []
-    arguments: []
+    incumbent: true
+    website: "https://www.voteforlafferty.com/"
+    bio_facts:
+      - { text: "State representative for District 89 since November 2018; House member of the 111th through 114th General Assemblies.", sources: [*bp_lafferty, *cga_h89, *lookout89] }
+      - { text: "Chair of the House Government Operations Committee; also serves on the Calendar & Rules, Commerce and Insurance committees and the Business & Utilities Subcommittee.", sources: [*cga_h89, *lookout89] }
+      - { text: "Small-business owner who has owned rental properties in the Knoxville area for about 20 years.", sources: [*cga_h89, *jl_issues, *compass89] }
+      - { text: "Graduate of Farragut High School; attended Pellissippi State, then earned a B.S. in political science with a minor in business administration from the University of Tennessee, Knoxville.", sources: [*cga_h89, *jl_home] }
+      - { text: "Endorsed by the National Federation of Independent Business, the Knoxville Fraternal Order of Police and the Knoxville Firefighters Association.", sources: [*cga_h89] }
+      - { text: "Co-sponsored the law creating a list of “divisive concepts” that Tennessee public universities may not teach.", sources: [*compass89] }
+      - { text: "Signed the U.S. Term Limits pledge.", sources: [*bp_lafferty] }
+    why_running:
+      text: >-
+        He says he serves to protect the freedoms that service members have fought to defend, and promises to be
+        the district's voice in Nashville on rapid growth, infrastructure needs, rising health care costs and
+        improving education.
+      sources: [*jl_home]
+    platform:
+      - category: abortion
+        text: "Protect life and end funding for abortion providers."
+        sources: [*jl_issues]
+      - category: education
+        text: "Equip schools and teachers with up-to-date technology, expand vocational and workforce-readiness paths, and return curriculum to the basics with strong civics and history."
+        sources: [*jl_issues]
+      - category: taxes
+        text: "Keep taxes low with no state income tax, refrain from unnecessary spending, and reduce taxes where possible."
+        sources: [*jl_issues]
+      - category: guns
+        text: "Protect the right to bear arms, relying on education and responsible gun ownership rather than new gun laws."
+        sources: [*jl_issues]
+      - category: immigration
+        text: "Enforce immigration laws and control the borders."
+        sources: [*jl_issues]
+      - category: infrastructure
+        text: "Maintain and improve highways, services and rural internet to attract business and support manufacturing."
+        sources: [*jl_issues]
+      - category: economy
+        text: "Cut unnecessary regulation that he says holds back job creation, innovation and entrepreneurs."
+        sources: [*jl_issues]
+      - category: health_care
+        text: "Reduce government's role in health care: allow insurance sales across state lines, curb frivolous lawsuits, and keep drug costs in check."
+        sources: [*jl_issues]
+    arguments:
+      - stance: for
+        text: >-
+          After two decades owning Knoxville rental properties, he says he meets people almost every year who moved from
+          high-cost states they could no longer afford, and he promises to keep Tennessee's taxes and state
+          spending low so the state does not follow them.
+        sources: [*jl_issues]
+      - stance: against
+        text: >-
+          A 2021 House floor speech mentioning the Three-Fifths Compromise drew national attention. One news outlet
+          said he apparently defended the compromise; another said he seemed to get its effect backward, implying
+          it weakened slaveholding states' political power when it actually increased it.
+        sources: [*compass89, *lookout89]
+      - stance: against
+        text: >-
+          He sponsored a 2026 bill to stop public universities from granting new tenure. University of Tennessee
+          officials said it would directly affect their ability to recruit and keep top faculty, and a community
+          college faculty leader warned it could make the state less competitive. He later withdrew the bill.
+        sources: [*hb2581, *wvlt_bills, *wvlt_tenure, *compass89]
+
   - name: "Randy Debord"
     ballot_party: Democratic
     city: "Powell"
-    why_running: { text: null, sources: [] }
-    platform: []
-    arguments: []
-last_verified: 2026-10-13
+    incumbent: false
+    website: "https://randydebord.com/"
+    bio_facts:
+      - { text: "Worked 27 years as an operator for the Tennessee Valley Authority, running and maintaining equipment and supervising personnel; retired at 48.", sources: [*rd_home, *compass89, *lookout89] }
+      - { text: "Cared for his children after their mother's death, and for his mother and brother until their deaths.", sources: [*rd_home, *compass89] }
+      - { text: "Charter member of the First Families of Tennessee.", sources: [*rd_home] }
+      - { text: "Unopposed in the August 2026 primary for the seat.", sources: [*bp_debord] }
+    why_running:
+      text: >-
+        He says his campaign is about restoring trust, protecting opportunity and keeping Tennessee a place where
+        families can build a future and businesses can grow, and that after retiring and caring for his family he
+        is ready to put his experience to work for the district and its children.
+      sources: [*rd_home]
+    platform:
+      - category: education
+        text: "Raise state public school funding by $5,000 per student and reform how education money is allocated."
+        sources: [*rd_home]
+      - category: economy
+        text: "Offer tax breaks to companies that locate in Tennessee to encourage higher pay for a well-educated workforce."
+        sources: [*rd_home]
+      - category: cost_of_living
+        text: "Treat affordable housing as a top priority and plan for it."
+        sources: [*rd_home]
+      - category: health_care
+        text: "Make good, affordable health care a priority, especially for an aging population."
+        sources: [*rd_home]
+      - category: infrastructure
+        text: "Focus on infrastructure for a fast-growing district, including Oak Ridge Highway as a vital corridor to Oak Ridge."
+        sources: [*rd_home, *compass89]
+    arguments:
+      - stance: for
+        text: >-
+          After 27 years at TVA running costly equipment and supervising, directly or indirectly, hundreds of workers, he says he can turn
+          good ideas into actionable plans and favors practical, step-by-step changes over sweeping ones.
+        sources: [*rd_home]
+
+last_verified: 2026-10-20
