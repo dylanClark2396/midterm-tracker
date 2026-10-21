@@ -1,17 +1,94 @@
-# Seeded from the Secretary of State's certified candidate list by
-# scripts/seed-from-certified-list.py. research_status: pending —
-# platforms and arguments not yet compiled.
+# Tennessee Senate, District 25 (Crockett, Decatur, Dyer, Henderson, Lake, Madison and Perry counties) —
+# Sen. Ed Jackson, in the Senate since 2014, is the only candidate on the ballot.
+# Candidate order follows the Secretary of State's certified candidate list.
+_sources:
+  cga_s25: &cga_s25 { url: "https://wapp.capitol.tn.gov/apps/legislatorinfo/member.aspx?district=S25", title: "Senator Ed Jackson (Tennessee General Assembly)", accessed: 2026-10-20 }
+  bp_jackson: &bp_jackson { url: "https://ballotpedia.org/Ed_Jackson", title: "Ed Jackson (Ballotpedia)", accessed: 2026-10-20 }
+  lookout25: &lookout25 { url: "https://tennesseelookout.com/voter-guides/contests/state-senate-district-25/", title: "State Senate, 25th District voter guide (Tennessee Lookout)", accessed: 2026-10-20 }
+  ej_home: &ej_home { url: "https://www.edjacksonforsenate.com/", title: "Ed Jackson for Senate (Jackson campaign)", accessed: 2026-10-20 }
+  tha2024: &tha2024 { url: "https://tha.com/2024/07/16/tha-recognizes-sen-ed-jackson-as-a-2024-hospital-hero/", title: "THA Recognizes Sen. Ed Jackson as a 2024 Hospital Hero (Tennessee Hospital Association)", accessed: 2026-10-20 }
+  sb1915: &sb1915 { url: "https://wapp.capitol.tn.gov/apps/BillInfo/Default.aspx?BillNumber=SB1915&GA=114", title: "SB1915 bill information (Tennessee General Assembly)", accessed: 2026-10-20 }
+  sb0971: &sb0971 { url: "https://wapp.capitol.tn.gov/apps/BillInfo/Default.aspx?BillNumber=SB0971&GA=111", title: "SB0971 bill information (Tennessee General Assembly)", accessed: 2026-10-20 }
+  lookout_feb: &lookout_feb { url: "https://tennesseelookout.com/2026/02/09/tennessee-gop-bill-would-require-immigration-checks-for-local-government-aid/", title: "Bill would require immigration checks for local government aid (Tennessee Lookout)", accessed: 2026-10-20 }
+  lookout_mar: &lookout_mar { url: "https://tennesseelookout.com/2026/03/31/tennessee-senate-adopts-non-citizen-jobs-benefits-bills/", title: "Tennessee Senate adopts non-citizen jobs, benefits bills (Tennessee Lookout)", accessed: 2026-10-20 }
+  chn2019: &chn2019 { url: "https://www.courthousenews.com/tennessee-senate-passes-crackdown-on-voter-registration-drives/", title: "Tennessee Senate Passes Crackdown on Voter-Registration Drives (Courthouse News Service)", accessed: 2026-10-20 }
+
 id: tn-senate-25
 office: "Tennessee Senate, District 25"
 level: state_senate
 district: 25
-research_status: pending
+research_status: complete
 candidate_list_source: "https://sos-prod.tnsosgovfiles.com/s3fs-public/document/TNSenate_Nov2026.pdf"
+
 candidates:
   - name: "Ed Jackson"
     ballot_party: Republican
     city: "Jackson"
-    why_running: { text: null, sources: [] }
-    platform: []
-    arguments: []
-last_verified: 2026-10-13
+    incumbent: true
+    website: "https://www.edjacksonforsenate.com"
+    bio_facts:
+      - { text: "State senator since 2014; Senate member of the 109th through 114th General Assemblies. Elected in District 27 in 2014 and 2018 and in District 25 in 2022; unopposed in the August 2026 primary.", sources: [*cga_s25, *bp_jackson, *ej_home] }
+      - { text: "Chair of the Senate Government Operations Committee; member of the Senate Health and Welfare, State and Local Government, and Rules committees and two joint committees; co-chair of the Senate Veterans Caucus.", sources: [*cga_s25, *ej_home] }
+      - { text: "Jackson native; graduated from Jackson High School and Memphis State University; served seven years in the Tennessee National Guard's 30th Armored unit.", sources: [*ej_home, *cga_s25] }
+      - { text: "Spent 30 years in sales with the Tennant Company; he and his wife owned three small businesses in Jackson, one named Business of the Year by the Jackson Chamber of Commerce in 2012.", sources: [*ej_home, *cga_s25] }
+      - { text: "Eagle Scout; named a 2024 Hospital Hero by the Tennessee Hospital Association.", sources: [*ej_home, *tha2024] }
+      - { text: "Senate sponsor of a 2026 law (SB1915) adding local governments to the agencies that must verify citizenship or lawful presence before giving out public benefits.", sources: [*sb1915, *lookout_mar] }
+      - { text: "Senate sponsor of a 2019 bill (SB0971) setting rules, fines and penalties for voter registration drives that try to register 100 or more people.", sources: [*sb0971, *chn2019] }
+    why_running:
+      text: >-
+        His campaign says that, with voters' support, he will keep working to protect Tennessee values, grow the
+        economy, reform the state's systems and make life better for families across West Tennessee.
+      sources: [*ej_home]
+    platform:
+      - category: immigration
+        text: "Fight illegal immigration."
+        sources: [*ej_home]
+      - category: economy
+        text: "Grow the economy and reduce regulations."
+        sources: [*ej_home]
+      - category: taxes
+        text: "Cut taxes."
+        sources: [*ej_home]
+      - category: public_safety
+        text: "Support law enforcement and fight violent crime."
+        sources: [*ej_home]
+      - category: education
+        text: "Improve schools."
+        sources: [*ej_home]
+      - category: government
+        text: "Ensure merit decides scholarships, promotions and hiring."
+        sources: [*ej_home]
+      - category: abortion
+        text: "Stand up for the unborn."
+        sources: [*ej_home]
+      - category: guns
+        text: "Protect Second Amendment rights."
+        sources: [*ej_home]
+    arguments:
+      - stance: for
+        text: >-
+          Credited with nearly a decade of work on behalf of hospitals and access to rural health care, and
+          honored for it in 2024.
+        sources: [*tha2024]
+      - stance: for
+        text: >-
+          His 2026 law makes local agencies verify citizenship or legal status before handing out public benefits,
+          so that tax dollars serve only people lawfully in the country.
+        sources: [*lookout_feb, *sb1915]
+      - stance: for
+        text: >-
+          Says voter registration drives must be run responsibly so that late and incomplete forms don't overwhelm
+          election offices or compromise election security.
+        sources: [*chn2019]
+      - stance: against
+        text: >-
+          Critics said his benefits-verification bill saves no money, is unclear about which benefits it covers,
+          and exposes local governments to large legal liability.
+        sources: [*lookout_mar]
+      - stance: against
+        text: >-
+          Critics said his bill putting criminal penalties and fines on voter registration drives would chill
+          community efforts to register voters in a state with low turnout.
+        sources: [*chn2019]
+
+last_verified: 2026-10-20
