@@ -1,23 +1,122 @@
-# Seeded from the Secretary of State's certified candidate list by
-# scripts/seed-from-certified-list.py. research_status: pending —
-# platforms and arguments not yet compiled.
+# Tennessee House, District 80 (all of Hardeman County and parts of Haywood and Madison counties) — open seat;
+# Rep. Johnny Shaw, in office since 2000, is retiring. Bolivar Mayor Julian McTizic faces Andrea Bond Johnson.
+# Candidate order follows the Secretary of State's certified candidate list.
+_sources:
+  lookout80: &lookout80 { url: "https://tennesseelookout.com/voter-guides/contests/house-district-80/", title: "Tennessee House of Representatives, 80th District voter guide (Tennessee Lookout)", accessed: 2026-10-20 }
+  jm_home: &jm_home { url: "https://www.mctizicfortn.com/", title: "Julian McTizic for State Representative (McTizic campaign)", accessed: 2026-10-20 }
+  bp_mctizic: &bp_mctizic { url: "https://ballotpedia.org/Julian_McTizic", title: "Julian McTizic (Ballotpedia)", accessed: 2026-10-20 }
+  hp_jm_launch: &hp_jm_launch { url: "https://hatchiepress.com/bolivar-mayor-julian-mctizic-to-run-for-state-house-in-2026/", title: "Bolivar Mayor Julian McTizic to Run for State House in 2026 (Hatchie Press)", accessed: 2026-10-20 }
+  hp_jm_tml: &hp_jm_tml { url: "https://hatchiepress.com/julian-mctizic-elected-tennessee-municipal-league-president/", title: "Bolivar Mayor Julian McTizic Elected as Tennessee Municipal League President (Hatchie Press)", accessed: 2026-10-20 }
+  abj_home: &abj_home { url: "https://www.andreabondjohnsontn.com/", title: "Andrea Bond Johnson for Tennessee House District 80 (Bond Johnson campaign)", accessed: 2026-10-20 }
+  abj_about: &abj_about { url: "https://www.andreabondjohnsontn.com/about", title: "About (Bond Johnson campaign)", accessed: 2026-10-20 }
+  bp_johnson: &bp_johnson { url: "https://ballotpedia.org/Andrea_Bond-Johnson", title: "Andrea Bond-Johnson (Ballotpedia)", accessed: 2026-10-20 }
+  hp_abj_launch: &hp_abj_launch { url: "https://hatchiepress.com/andrea-bond-johnson-district-80-candidate-tennessee/", title: "Andrea Bond Johnson Launches Campaign to Defend District 80 and Deliver for Working Families (Hatchie Press)", accessed: 2026-10-20 }
+  hp_abj_endorse: &hp_abj_endorse { url: "https://hatchiepress.com/state-representative-johnny-shaw-endorses-andrea-bond-johnson-for-tn-house-district-80/", title: "Endorsement of Andrea Bond Johnson for TN House District 80 (Bond Johnson campaign ad, Hatchie Press)", accessed: 2026-10-20 }
+
 id: tn-house-080
 office: "Tennessee House, District 80"
 level: state_house
 district: 80
-research_status: pending
+research_status: complete
 candidate_list_source: "https://sos-prod.tnsosgovfiles.com/s3fs-public/document/TNHouse_Nov2026.pdf"
+
 candidates:
   - name: "Julian A. McTizic"
     ballot_party: Republican
     city: "Bolivar"
-    why_running: { text: null, sources: [] }
-    platform: []
-    arguments: []
+    incumbent: false
+    website: "https://www.mctizicfortn.com"
+    bio_facts:
+      - { text: "Mayor of Bolivar since 2017, re-elected in 2021; previously served four years on the Bolivar city council.", sources: [*hp_jm_launch, *lookout80] }
+      - { text: "Elected president of the Tennessee Municipal League for 2025-2026.", sources: [*hp_jm_tml, *lookout80] }
+      - { text: "Insurance agent for 11 years; serves on the executive board of the Southwest Tennessee Development District and is a Tennessee Certified Economic Developer through the University of Tennessee.", sources: [*hp_jm_launch] }
+      - { text: "Born and raised in Bolivar; married with four sons.", sources: [*hp_jm_launch, *jm_home] }
+      - { text: "Unopposed in the August 2026 primary.", sources: [*bp_mctizic] }
+    why_running:
+      text: >-
+        He says running is a chance to continue his work helping the community he loves, after a career focused on
+        helping people in need. He says he will keep looking for ways to bring industry to West Tennessee and that
+        his campaign is built on faith, family and unity.
+      sources: [*hp_jm_launch, *jm_home]
+    platform:
+      - category: taxes
+        text: "Cut the gas tax, the grocery tax and property taxes to help families with rising costs."
+        sources: [*jm_home, *hp_jm_launch]
+      - category: infrastructure
+        text: "Build new roads and improve existing ones."
+        sources: [*jm_home]
+      - category: economy
+        text: "Help the new vehicle plant in West Tennessee get off the ground, add jobs, and recruit more industry to the region."
+        sources: [*jm_home]
+      - category: health_care
+        text: "Reduce health care costs and improve access to quality care in rural West Tennessee."
+        sources: [*jm_home, *hp_jm_launch]
+      - category: cost_of_living
+        text: "Encourage better and less expensive child care options."
+        sources: [*jm_home]
+      - category: agriculture
+        text: "Protect farmers and their land from government takeover."
+        sources: [*jm_home]
+      - category: education
+        text: "Improve education."
+        sources: [*hp_jm_launch]
+      - category: public_safety
+        text: "Protect seniors from fraud and abuse."
+        sources: [*hp_jm_launch]
+    arguments:
+      - stance: for
+        text: >-
+          As mayor, he says he recruited industries that brought about $15 million in capital investment to Bolivar
+          and brought people together across lines of race and background to get results.
+        sources: [*hp_jm_launch, *jm_home]
+
   - name: "Andrea Bond Johnson"
     ballot_party: Democratic
     city: "Brownsville"
-    why_running: { text: null, sources: [] }
-    platform: []
-    arguments: []
-last_verified: 2026-10-13
+    incumbent: false
+    website: "https://www.andreabondjohnsontn.com"
+    bio_facts:
+      - { text: "Owner and CEO of an insurance agency; works as an investment advisor representative at LifeMark Securities Corp.", sources: [*abj_about, *abj_home, *lookout80] }
+      - { text: "Bachelor's degree from Tennessee State University and an MBA from the University of Tennessee.", sources: [*hp_abj_launch, *lookout80] }
+      - { text: "Serves on the Industrial Development Board, the Brownsville Rotary Club board and the Haywood County Boys & Girls Club; formerly on the Brownsville Planning Commission and the Tennessee State University Foundation Board.", sources: [*hp_abj_launch] }
+      - { text: "Ran for Tennessee House District 82 in 2018 and 2020, losing both general elections.", sources: [*bp_johnson, *lookout80] }
+      - { text: "Won a three-way primary in August 2026 with 49.7% of the vote.", sources: [*bp_johnson] }
+    why_running:
+      text: >-
+        She says she is running to put people first so families can afford life, count on health care, earn fair
+        pay and see real opportunity. She says the district deserves a representative who listens, tells the truth
+        and gets things done, as she says she has done in business.
+      sources: [*abj_home, *hp_abj_launch]
+    platform:
+      - category: cost_of_living
+        text: "Lower everyday costs such as groceries, gas and health insurance, and strengthen child care, elder care and family leave for caregivers."
+        sources: [*abj_home, *abj_about, *hp_abj_launch]
+      - category: health_care
+        text: "Expand TennCare and protect rural hospitals from closing."
+        sources: [*hp_abj_launch, *abj_home]
+      - category: education
+        text: "Raise teacher pay and classroom funding for public schools and refocus education away from political agendas."
+        sources: [*hp_abj_launch, *abj_about]
+      - category: economy
+        text: "Grow small businesses and expand workforce training that leads to good jobs with fair pay."
+        sources: [*abj_home, *abj_about]
+      - category: agriculture
+        text: "Help farmers with market instability caused by trade disputes and keep farm profits local."
+        sources: [*hp_abj_launch]
+      - category: infrastructure
+        text: "Invest in infrastructure and broadband to strengthen small towns."
+        sources: [*hp_abj_launch]
+      - category: public_safety
+        text: "Strengthen public safety and community well-being."
+        sources: [*abj_about]
+      - category: government
+        text: "Keep government accountable, accessible, transparent and responsive to every community in the district."
+        sources: [*abj_about]
+    arguments:
+      - stance: for
+        text: >-
+          An endorsement says she will listen to all sides before deciding, build consensus whenever possible and
+          look for practical solutions.
+        sources: [*hp_abj_endorse]
+
+last_verified: 2026-10-20
