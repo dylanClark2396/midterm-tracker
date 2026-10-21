@@ -27,12 +27,12 @@ candidates:
     incumbent: true
     website: null
     bio_facts:
-      - { text: "Elected in a 2009 special election and has represented District 83 since 2010; House member of the 106th through 114th General Assemblies.", sources: [*lookout83, *bp_white, *cga_h83] }
+      - { text: "Won a special election for District 83 and has represented it since 2010; House member of the 106th through 114th General Assemblies.", sources: [*lookout83, *bp_white, *cga_h83] }
       - { text: "Chair of the House Education Committee; also serves on the Calendar & Rules and Health committees and the Education Administration and K-12 subcommittees.", sources: [*cga_h83, *lookout83] }
       - { text: "Former principal of Harding Academy in Memphis and later a small business owner; director of the College of Leadership and Public Service at Lipscomb University.", sources: [*bp_white, *cga_h83] }
       - { text: "B.S. in education from the University of Memphis; master's degree in conflict management from Lipscomb University.", sources: [*cga_h83, *bp_white] }
       - { text: "Federal appointee to the National Assessment Governing Board, which oversees the National Assessment of Educational Progress.", sources: [*cga_h83] }
-      - { text: "House sponsor of HB0662, enacted in 2026 as Public Chapter 1057, which creates a state-appointed educational oversight board for Memphis-Shelby County Schools.", sources: [*hb0662, *ff_agree] }
+      - { text: "House sponsor of HB0662, a plan for a state-appointed oversight board for Memphis-Shelby County Schools; its Senate companion became Public Chapter 1057 in 2026.", sources: [*hb0662, *ff_agree] }
     why_running: { text: null, sources: [] }
     platform: []
     arguments:
@@ -40,7 +40,7 @@ candidates:
         text: >-
           He argues that years of low performance in Memphis-Shelby County Schools call for an oversight board with
           real authority over budgets and contracts, saying an elected board alone cannot fix decades of bureaucracy.
-        sources: [*lk_teeth, *ff_agree]
+        sources: [*lk_teeth, *ff_agree, *flyer_dead]
       - stance: against
         text: >-
           Critics, including district leaders, say his oversight board for Memphis schools takes decisions away from
@@ -66,10 +66,10 @@ candidates:
         text: "End the state's private school voucher program; fully fund K-12 public schools, raise teacher pay and retention, and invest in universal pre-K, special education and career and technical education."
         sources: [*mp_issues, *mp_about]
       - category: economy
-        text: "Expand worker rights and workforce development, and make high-quality childcare and eldercare more affordable and available."
+        text: "Expand worker rights and workforce development, make high-quality childcare more affordable and accessible, and support caregivers, including those caring for aging relatives."
         sources: [*mp_issues, *mp_home]
       - category: health_care
-        text: "Expand TennCare, require transparent health care pricing, and strengthen mental health and addiction services."
+        text: "Expand TennCare, require transparent health care pricing, and strengthen mental health care."
         sources: [*mp_issues]
       - category: public_safety
         text: "Give law enforcement resources, mental health programs and training support, and invest in prevention and youth opportunity."
