@@ -8,7 +8,7 @@ _sources:
   cga_h87: &cga_h87 { url: "https://wapp.capitol.tn.gov/apps/legislatorinfo/member.aspx?district=H87", title: "Representative Karen Camper (Tennessee General Assembly)", accessed: 2026-10-20 }
   bp_camper: &bp_camper { url: "https://ballotpedia.org/Karen_Camper", title: "Karen Camper (Ballotpedia)", accessed: 2026-10-20 }
   kc_home: &kc_home { url: "https://www.leaderkarencamper.com/", title: "Karen Camper (Camper campaign)", accessed: 2026-10-20 }
-  lookout_cmte: &lookout_cmte { url: "https://tennesseelookout.com/2026/05/13/tennessee-house-speaker-suspends-dems-for-decorum-violation/", title: "Tennessee House speaker suspends minority members from committees, citing decorum violation (Tennessee Lookout)", accessed: 2026-10-20 }
+  lookout_cmte: &lookout_cmte { url: "https://tennesseelookout.com/2026/05/13/tennessee-house-speaker-suspends-dems-for-decorum-violation/", title: "Tennessee House speaker suspends members from committees, citing decorum violation (Tennessee Lookout)", accessed: 2026-10-20 }
 
 id: tn-house-087
 office: "Tennessee House, District 87"
@@ -44,7 +44,7 @@ candidates:
       - { text: "Attended the University of Tennessee at Knoxville; former substitute teacher in the Memphis City Schools and owner of a music business.", sources: [*cga_h87, *bp_camper, *kc_home] }
       - { text: "Past president of the National Foundation for Women Legislators.", sources: [*kc_home] }
       - { text: "Ran for Memphis mayor in 2023.", sources: [*bp_camper] }
-      - { text: "Voted against the congressional map redrawn in the May 2026 special session; afterward the House Speaker removed her and the other members of her House caucus from standing committees for the rest of 2026, citing the session's closing floor protest.", sources: [*lookout_cmte] }
+      - { text: "Voted against the congressional map redrawn in the May 2026 special session; afterward the House Speaker removed her and the other members of her House caucus from standing committees and subcommittees for the rest of 2026 (except where House rules require their membership), citing the session's closing floor protest.", sources: [*lookout_cmte] }
     why_running: { text: null, sources: [] }
     platform: []
     arguments: []
