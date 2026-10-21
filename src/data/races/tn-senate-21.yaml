@@ -1,17 +1,34 @@
-# Seeded from the Secretary of State's certified candidate list by
-# scripts/seed-from-certified-list.py. research_status: pending —
-# platforms and arguments not yet compiled.
+# Tennessee Senate, District 21 (central Nashville and inner suburbs, Davidson County) — Sen. Jeff Yarbro,
+# in office since 2014, is the only candidate on the certified list.
+# Candidate order follows the Secretary of State's certified candidate list.
+_sources:
+  cga_s21: &cga_s21 { url: "https://wapp.capitol.tn.gov/apps/legislatorinfo/member.aspx?district=S21", title: "Senator Jeff Yarbro (Tennessee General Assembly)", accessed: 2026-10-20 }
+  bp_yarbro: &bp_yarbro { url: "https://ballotpedia.org/Jeff_Yarbro", title: "Jeff Yarbro (Ballotpedia)", accessed: 2026-10-20 }
+  lookout21: &lookout21 { url: "https://tennesseelookout.com/voter-guides/contests/state-senate-district-21/", title: "State Senate, 21st District voter guide (Tennessee Lookout)", accessed: 2026-10-20 }
+  wsmv: &wsmv { url: "https://www.wsmv.com/2026/09/28/election-2026-is-almost-here-heres-everything-you-need-know-about-tn-house-senate-candidates/", title: "Election 2026: Everything you need to know about TN House and Senate candidates (WSMV)", accessed: 2026-10-20 }
+
 id: tn-senate-21
 office: "Tennessee Senate, District 21"
 level: state_senate
 district: 21
-research_status: pending
+research_status: complete
 candidate_list_source: "https://sos-prod.tnsosgovfiles.com/s3fs-public/document/TNSenate_Nov2026.pdf"
+
 candidates:
   - name: "Jeff Yarbro"
     ballot_party: Democratic
     city: "Nashville"
+    incumbent: true
+    website: null
+    bio_facts:
+      - { text: "State senator for District 21 since November 2014; Senate member of the 109th through 114th General Assemblies.", sources: [*bp_yarbro, *cga_s21] }
+      - { text: "Served as Senate minority leader from 2018 to January 2023.", sources: [*bp_yarbro] }
+      - { text: "Serves on the Senate Finance, Ways and Means; Health and Welfare; State and Local Government; and Rules committees, and on the Fiscal Review Committee and Council on Pensions.", sources: [*cga_s21] }
+      - { text: "Born and raised in Dyersburg; B.A. from Harvard University and law degree from the University of Virginia; attorney at Bass Berry & Sims.", sources: [*lookout21, *cga_s21, *wsmv] }
+      - { text: "Ran for mayor of Nashville in 2023, finishing fourth in the August 2023 election.", sources: [*bp_yarbro] }
+      - { text: "Unopposed in the August 6, 2026 primary.", sources: [*bp_yarbro] }
     why_running: { text: null, sources: [] }
     platform: []
     arguments: []
-last_verified: 2026-10-13
+
+last_verified: 2026-10-20
