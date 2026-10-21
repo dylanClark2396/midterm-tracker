@@ -1,17 +1,84 @@
-# Seeded from the Secretary of State's certified candidate list by
-# scripts/seed-from-certified-list.py. research_status: pending —
-# platforms and arguments not yet compiled.
+# Tennessee Senate, District 33 (South and Southwest Memphis, with small parts of Collierville and other Shelby
+# County areas) — Sen. London Lamar, in office since 2022, is unopposed.
+# Candidate order follows the Secretary of State's certified candidate list.
+_sources:
+  cga_s33: &cga_s33 { url: "https://wapp.capitol.tn.gov/apps/legislatorinfo/member.aspx?district=S33", title: "Senator London Lamar (Tennessee General Assembly)", accessed: 2026-10-20 }
+  bp_lamar: &bp_lamar { url: "https://ballotpedia.org/London_Lamar", title: "London Lamar (Ballotpedia)", accessed: 2026-10-20 }
+  lookout33: &lookout33 { url: "https://tennesseelookout.com/voter-guides/contests/state-senate-district-33/", title: "State Senate, 33rd District voter guide (Tennessee Lookout)", accessed: 2026-10-20 }
+  mlk50: &mlk50 { url: "https://mlk50.com/2026/07/29/in-district-9-race-lamar-and-pearson-showcase-a-split-in-democratic-party/", title: "In District 9 race, Lamar and Pearson showcase a split (MLK50: Justice Through Journalism)", accessed: 2026-10-20 }
+  cbs2018: &cbs2018 { url: "https://www.cbsnews.com/news/london-lamar-democrat-calls-tennessee-racist-some-voters-uneducated/", title: "Newly elected lawmaker calls Tennessee racist, some voters \"uneducated\" (CBS News)", accessed: 2026-10-20 }
+  ll_home: &ll_home { url: "https://www.londonlamar.com/", title: "London for State Senator (Lamar campaign)", accessed: 2026-10-20 }
+  ll_about: &ll_about { url: "https://www.londonlamar.com/aboutlondon", title: "About (Lamar campaign)", accessed: 2026-10-20 }
+  ll_herstory: &ll_herstory { url: "https://www.londonlamar.com/about-london-lamar", title: "About London Lamar (Lamar campaign)", accessed: 2026-10-20 }
+  ll_schools: &ll_schools { url: "https://www.londonlamar.com/services-7", title: "Strong Schools (Lamar campaign)", accessed: 2026-10-20 }
+  ll_health: &ll_health { url: "https://www.londonlamar.com/copy-of-strong-schools", title: "Healthy Families (Lamar campaign)", accessed: 2026-10-20 }
+  ll_safe: &ll_safe { url: "https://www.londonlamar.com/copy-of-healthy-families", title: "Safe Communities (Lamar campaign)", accessed: 2026-10-20 }
+
 id: tn-senate-33
 office: "Tennessee Senate, District 33"
 level: state_senate
 district: 33
-research_status: pending
+research_status: complete
 candidate_list_source: "https://sos-prod.tnsosgovfiles.com/s3fs-public/document/TNSenate_Nov2026.pdf"
+
 candidates:
   - name: "London Lamar"
     ballot_party: Democratic
     city: "Memphis"
-    why_running: { text: null, sources: [] }
-    platform: []
-    arguments: []
-last_verified: 2026-10-13
+    incumbent: true
+    website: "https://www.londonlamar.com"
+    bio_facts:
+      - { text: "State senator for District 33 since March 2022, when she was appointed to fill a vacancy; elected to the seat in November 2022. State representative for District 91 from 2018 to 2022.", sources: [*bp_lamar, *lookout33, *cga_s33] }
+      - { text: "Chair of the Senate Democratic Caucus; member of the Senate Finance, Ways and Means Committee, the Senate Judiciary Committee and the Joint Ways and Means Committee.", sources: [*cga_s33, *ll_herstory] }
+      - { text: "Won the August 6, 2026 primary for this seat with about 76% of the vote; also ran for U.S. House District 9 in 2026 and lost that primary.", sources: [*bp_lamar] }
+      - { text: "Has passed 23 bills, including a law requiring the state health department to cover maternal mental health disorders in continuing education and a study of certified nurse midwives; named 2022 legislator of the year by the Rural Health Association of Tennessee.", sources: [*mlk50] }
+      - { text: "Memphis native and third-generation resident of the district; graduated from Central High School in 2009 and earned a B.A. in political science from Saint Mary's College in 2013.", sources: [*ll_about, *cga_s33, *lookout33] }
+      - { text: "CEO of The L2 Company and a consultant; previously worked as a public education organizer and co-founded a political action committee that trains young Memphis leaders seeking office.", sources: [*bp_lamar, *ll_about] }
+    why_running:
+      text: >-
+        She says she fights for families and the future of the district by pressing for strong schools, healthy
+        families and safe communities, and that people's priorities must come before politics.
+      sources: [*ll_home, *ll_herstory]
+    platform:
+      - category: education
+        text: "Fully fund public schools, with more money for special education, at-risk students and Title I schools; a 10% statewide raise for teachers; full reading and math proficiency by third grade; lead-free schools, more school safety officers and more local control."
+        sources: [*ll_schools]
+      - category: health_care
+        text: "Expand state-funded health coverage and CoverKids; insurance coverage for doulas, community health workers and school nurses; lower prescription costs; free preventive care; mental health counseling for all; and lower infant and maternal death rates."
+        sources: [*ll_health]
+      - category: public_safety
+        text: "Build community-police relationships with accountability and de-escalation training; more support to reduce domestic violence; conflict-resolution training in K-12; funding for youth jobs, summer programs and reentry; alternatives to incarceration, expungement and legalized marijuana."
+        sources: [*ll_safe]
+      - category: guns
+        text: "Reduce gun violence and reverse permitless carry."
+        sources: [*ll_safe]
+      - category: government
+        text: "Protect voting rights."
+        sources: [*ll_safe]
+      - category: environment
+        text: "Reduce toxins and create a healthier environment."
+        sources: [*ll_health]
+    arguments:
+      - stance: for
+        text: >-
+          She points to 23 bills passed into law, including maternal health measures, as proof that she can work
+          within the legislature to turn residents' problems into results.
+        sources: [*mlk50]
+      - stance: for
+        text: >-
+          Her campaign says she has helped secure more than $40 million in resources for Shelby County.
+        sources: [*ll_herstory]
+      - stance: against
+        text: >-
+          Shortly after her first election in 2018, she said in a since-deleted video that Tennessee is racist and
+          that most voters who backed the other party were uneducated; some constituents found the remarks
+          troubling, and she apologized for overgeneralizing.
+        sources: [*cbs2018]
+      - stance: against
+        text: >-
+          During her 2026 congressional primary, critics said her conciliatory approach was not persuasive, and a
+          Memphis resident said her criticism of a fellow lawmaker's confrontation with state troopers put her on
+          the wrong side of history.
+        sources: [*mlk50]
+
+last_verified: 2026-10-20
