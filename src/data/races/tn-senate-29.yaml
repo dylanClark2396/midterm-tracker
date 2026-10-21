@@ -1,17 +1,56 @@
-# Seeded from the Secretary of State's certified candidate list by
-# scripts/seed-from-certified-list.py. research_status: pending —
-# platforms and arguments not yet compiled.
+# Tennessee Senate, District 29 (South and Downtown Memphis, Millington and northern Shelby County) —
+# Sen. Raumesh Akbari, in office since 2018, is unopposed.
+# Candidate order follows the Secretary of State's certified candidate list.
+_sources:
+  cga_s29: &cga_s29 { url: "https://wapp.capitol.tn.gov/apps/legislatorinfo/member.aspx?district=S29", title: "Senator Raumesh Akbari (Tennessee General Assembly)", accessed: 2026-10-20 }
+  bp_akbari: &bp_akbari { url: "https://ballotpedia.org/Raumesh_Akbari", title: "Raumesh Akbari (Ballotpedia)", accessed: 2026-10-20 }
+  lookout29: &lookout29 { url: "https://tennesseelookout.com/voter-guides/contests/state-senate-district-29/", title: "State Senate, 29th District voter guide (Tennessee Lookout)", accessed: 2026-10-20 }
+  mtnpress: &mtnpress { url: "https://www.themountainpress.com/lafollette/opinion/leader-akbari-delivers-prebuttal-to-state-of-the-state/article_c2cfddac-6866-5c38-be95-03c8b7660590.html", title: "Leader Akbari delivers prebuttal to State of the State (LaFollette Press)", accessed: 2026-10-20 }
+  flyer: &flyer { url: "https://www.memphisflyer.com/democrats-mount-economic-argument-ahead-of-gov-s-state-of-the-state/", title: "Economic agenda set ahead of Gov.'s State of the State (Memphis Flyer)", accessed: 2026-10-20 }
+
 id: tn-senate-29
 office: "Tennessee Senate, District 29"
 level: state_senate
 district: 29
-research_status: pending
+research_status: complete
 candidate_list_source: "https://sos-prod.tnsosgovfiles.com/s3fs-public/document/TNSenate_Nov2026.pdf"
+
 candidates:
   - name: "Raumesh Akbari"
     ballot_party: Democratic
     city: "Memphis"
-    why_running: { text: null, sources: [] }
-    platform: []
+    incumbent: true
+    website: null
+    bio_facts:
+      - { text: "State senator for District 29 since November 2018; Senate member of the 111th through 114th General Assemblies.", sources: [*bp_akbari, *cga_s29] }
+      - { text: "Represented District 91 in the Tennessee House from 2013, when she won a special election, until 2018 (108th through 110th General Assemblies).", sources: [*bp_akbari, *cga_s29, *lookout29] }
+      - { text: "Senate minority leader since January 2023.", sources: [*bp_akbari] }
+      - { text: "Second vice chair of the Senate Education Committee; also serves on the Commerce and Labor, Calendar, and Ethics committees.", sources: [*cga_s29] }
+      - { text: "Attorney; B.A. from Washington University in St. Louis (2006) and J.D. from Saint Louis University School of Law (2009).", sources: [*cga_s29, *lookout29] }
+      - { text: "Board member of the National Civil Rights Museum.", sources: [*cga_s29, *mtnpress] }
+      - { text: "Unopposed on the November 2026 ballot.", sources: [*lookout29, *bp_akbari] }
+    why_running:
+      text: >-
+        In a February 2026 address, she said she did not run for office to make life easier for people already
+        doing fine, but for working parents, grandparents raising grandchildren, young couples trying to buy a
+        first home, and workers who still worry about paying the light bill.
+      sources: [*mtnpress]
+    platform:
+      - category: economy
+        text: "Raise the minimum wage so that a full-time job supports a decent life, and invest in thriving local businesses."
+        sources: [*mtnpress, *flyer]
+      - category: taxes
+        text: "End the state sales tax on groceries."
+        sources: [*mtnpress, *flyer]
+      - category: education
+        text: "Invest in strong public schools and make child care and early education affordable."
+        sources: [*mtnpress, *flyer]
+      - category: health_care
+        text: "Expand health coverage so no family fears a medical bill more than a diagnosis."
+        sources: [*mtnpress, *flyer]
+      - category: infrastructure
+        text: "Invest in safe infrastructure."
+        sources: [*mtnpress, *flyer]
     arguments: []
-last_verified: 2026-10-13
+
+last_verified: 2026-10-20
