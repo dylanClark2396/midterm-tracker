@@ -43,7 +43,7 @@ candidates:
       sources: [*jl_home]
     platform:
       - category: abortion
-        text: "Protect life and end public funding for abortion providers."
+        text: "Protect life and end funding for abortion providers."
         sources: [*jl_issues]
       - category: education
         text: "Equip schools and teachers with up-to-date technology, expand vocational and workforce-readiness paths, and return curriculum to the basics with strong civics and history."
@@ -69,22 +69,22 @@ candidates:
     arguments:
       - stance: for
         text: >-
-          After two decades owning Knoxville rental properties, he says he regularly meets people who moved from
+          After two decades owning Knoxville rental properties, he says he meets people almost every year who moved from
           high-cost states they could no longer afford, and he promises to keep Tennessee's taxes and state
           spending low so the state does not follow them.
         sources: [*jl_issues]
       - stance: against
         text: >-
-          A 2021 House floor remark about the Three-Fifths Compromise drew national attention; a local news outlet
-          said he got its effect backward, implying it weakened slaveholding states when it actually strengthened
-          them.
+          A 2021 House floor speech mentioning the Three-Fifths Compromise drew national attention. One news outlet
+          said he apparently defended the compromise; another said he seemed to get its effect backward, implying
+          it weakened slaveholding states' political power when it actually increased it.
         sources: [*compass89, *lookout89]
       - stance: against
         text: >-
           He sponsored a 2026 bill to stop public universities from granting new tenure. University of Tennessee
-          officials said it would hurt their ability to recruit and keep top faculty, and a community college
-          faculty leader warned it would make the state less competitive. He later pulled the bill back.
-        sources: [*hb2581, *wvlt_bills, *wvlt_tenure]
+          officials said it would directly affect their ability to recruit and keep top faculty, and a community
+          college faculty leader warned it could make the state less competitive. He later withdrew the bill.
+        sources: [*hb2581, *wvlt_bills, *wvlt_tenure, *compass89]
 
   - name: "Randy Debord"
     ballot_party: Democratic
@@ -116,12 +116,12 @@ candidates:
         text: "Make good, affordable health care a priority, especially for an aging population."
         sources: [*rd_home]
       - category: infrastructure
-        text: "Prepare roads for growth, including Oak Ridge Highway as a vital corridor to Oak Ridge."
+        text: "Focus on infrastructure for a fast-growing district, including Oak Ridge Highway as a vital corridor to Oak Ridge."
         sources: [*rd_home, *compass89]
     arguments:
       - stance: for
         text: >-
-          After 27 years at TVA running costly equipment and supervising hundreds of workers, he says he can turn
+          After 27 years at TVA running costly equipment and supervising, directly or indirectly, hundreds of workers, he says he can turn
           good ideas into actionable plans and favors practical, step-by-step changes over sweeping ones.
         sources: [*rd_home]
 
