@@ -11,7 +11,7 @@ _sources:
   abj_about: &abj_about { url: "https://www.andreabondjohnsontn.com/about", title: "About (Bond Johnson campaign)", accessed: 2026-10-20 }
   bp_johnson: &bp_johnson { url: "https://ballotpedia.org/Andrea_Bond-Johnson", title: "Andrea Bond-Johnson (Ballotpedia)", accessed: 2026-10-20 }
   hp_abj_launch: &hp_abj_launch { url: "https://hatchiepress.com/andrea-bond-johnson-district-80-candidate-tennessee/", title: "Andrea Bond Johnson Launches Campaign to Defend District 80 and Deliver for Working Families (Hatchie Press)", accessed: 2026-10-20 }
-  hp_abj_endorse: &hp_abj_endorse { url: "https://hatchiepress.com/state-representative-johnny-shaw-endorses-andrea-bond-johnson-for-tn-house-district-80/", title: "State Representative Johnny Shaw Endorses Andrea Bond Johnson for TN House District 80 (Hatchie Press)", accessed: 2026-10-20 }
+  hp_abj_endorse: &hp_abj_endorse { url: "https://hatchiepress.com/state-representative-johnny-shaw-endorses-andrea-bond-johnson-for-tn-house-district-80/", title: "Endorsement of Andrea Bond Johnson for TN House District 80 (Bond Johnson campaign ad, Hatchie Press)", accessed: 2026-10-20 }
 
 id: tn-house-080
 office: "Tennessee House, District 80"
@@ -46,7 +46,7 @@ candidates:
         text: "Build new roads and improve existing ones."
         sources: [*jm_home]
       - category: economy
-        text: "Help the new electric-vehicle plant in West Tennessee get off the ground, add jobs, and recruit more industry to the region."
+        text: "Help the new vehicle plant in West Tennessee get off the ground, add jobs, and recruit more industry to the region."
         sources: [*jm_home]
       - category: health_care
         text: "Reduce health care costs and improve access to quality care in rural West Tennessee."
@@ -115,8 +115,8 @@ candidates:
     arguments:
       - stance: for
         text: >-
-          The district's retiring longtime representative endorsed her, saying she will listen to all sides, build
-          consensus and look for practical solutions.
+          An endorsement says she will listen to all sides before deciding, build consensus whenever possible and
+          look for practical solutions.
         sources: [*hp_abj_endorse]
 
 last_verified: 2026-10-20
