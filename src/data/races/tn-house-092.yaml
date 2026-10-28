@@ -40,7 +40,7 @@ candidates:
     website: "https://toddfortn.com"
     bio_facts:
       - { text: "State representative for District 92 since November 2020; House member of the 112th through 114th General Assemblies.", sources: [*bp_warner, *cga_h92] }
-      - { text: "Member of the House State & Local Government Committee, the Naming & Designating Committee and the Public Service Subcommittee; served on the Disaster Relief and Immigration committees of an extraordinary session.", sources: [*cga_h92] }
+      - { text: "Member of the House State & Local Government Committee, the Naming & Designating Committee and the Public Service Subcommittee.", sources: [*cga_h92] }
       - { text: "Former member of the Marshall County School Board and former alderman for the Town of Chapel Hill.", sources: [*cga_h92, *tw_home] }
       - { text: "Raised on a dairy farm in Chapel Hill and grows corn and soybeans; worked six years for United Telephone before starting his own business, and has been self-employed since. Graduated from Forrest High School in 1989.", sources: [*tw_home, *bp_warner] }
       - { text: "Voted against the state's private school voucher program in 2025 and has supported repealing the state sales tax on groceries.", sources: [*lookout92, *firefly_quarry] }
@@ -58,7 +58,7 @@ candidates:
         text: "Stand strong against illegal immigration and improve border security."
         sources: [*tw_home]
       - category: agriculture
-        text: "Protect family farmers so future generations can keep farming."
+        text: "Protect family farmers so future generations can thrive."
         sources: [*tw_home]
       - category: education
         text: "Empower teachers, parents and students."
@@ -81,7 +81,7 @@ candidates:
     incumbent: false
     website: "https://www.terimai4tn.com"
     bio_facts:
-      - { text: "Attorney in the complex litigation group at Morgan & Morgan; previously worked as a legal assistant for about 25 years.", sources: [*tm_about, *bp_mai, *lookout92] }
+      - { text: "Works in the complex litigation group at the Morgan & Morgan law firm; previously worked as a legal assistant for 25 years.", sources: [*tm_about, *bp_mai, *lookout92] }
       - { text: "Bachelor's degree from St. Edward's University (1993), earned while working full time; law degree from Florida Coastal School of Law (2014), started at age 55.", sources: [*tm_about, *bp_mai] }
       - { text: "Born and raised in Texas; moved to Spring Hill in January 2021 after taking a job with the U.S. Small Business Administration.", sources: [*tm_about, *tm_announce] }
       - { text: "Has held a leadership role in the Williamson County Democratic Party.", sources: [*tm_announce, *scene_mai] }
@@ -120,8 +120,8 @@ candidates:
     arguments:
       - stance: for
         text: >-
-          She put herself through college while working full time and raising a child, then finished law school
-          after 55, and promises open communication with every resident of the district.
+          She put herself through college while working full time and raising a child, then went to law school
+          at 55, and promises open communication with every resident of the district.
         sources: [*bp_mai, *tm_about, *tm_home]
 
-last_verified: 2026-10-20
+last_verified: 2026-10-28
