@@ -1,23 +1,127 @@
-# Seeded from the Secretary of State's certified candidate list by
-# scripts/seed-from-certified-list.py. research_status: pending —
-# platforms and arguments not yet compiled.
+# Tennessee House, District 92 (all of Marshall County and part of Williamson County) — Rep. Todd Warner, in office
+# since 2020, faces Teri Mai in a rematch of 2024.
+# Candidate order follows the Secretary of State's certified candidate list.
+_sources:
+  cga_h92: &cga_h92 { url: "https://wapp.capitol.tn.gov/apps/legislatorinfo/member.aspx?district=H92", title: "Representative Todd Warner (Tennessee General Assembly)", accessed: 2026-10-20 }
+  bp_warner: &bp_warner { url: "https://ballotpedia.org/Todd_Warner", title: "Todd Warner (Ballotpedia)", accessed: 2026-10-20 }
+  bp_mai: &bp_mai { url: "https://ballotpedia.org/Teri_Mai", title: "Teri Mai (Ballotpedia)", accessed: 2026-10-20 }
+  lookout92: &lookout92 { url: "https://tennesseelookout.com/voter-guides/contests/house-district-92/", title: "Tennessee House of Representatives, 92nd District voter guide (Tennessee Lookout)", accessed: 2026-10-20 }
+  firefly92: &firefly92 { url: "https://tnfirefly.com/elections/general-assembly/house/92", title: "Tennessee House District 92 Election 2026: Who Is Running (Tennessee Firefly)", accessed: 2026-10-20 }
+  firefly_quarry: &firefly_quarry { url: "https://tnfirefly.com/news/rep-warners-quarry-lake-project-rejected-by-marshall-county-board-following-outcry-of-destroying-neighbors-homes", title: "Rep. Warner's Quarry Lake Project Rejected by Marshall County Board Following Outcry of 'Destroying' Neighbors' Homes (Tennessee Firefly)", accessed: 2026-10-20 }
+  wsmv_quarry: &wsmv_quarry { url: "https://www.wsmv.com/2025/09/11/concerned-residents-working-stop-politician-creating-new-quarry-marshall-county/", title: "Concerned residents working to stop politician from creating new quarry in Marshall County (WSMV)", accessed: 2026-10-20 }
+  lookout_cd9: &lookout_cd9 { url: "https://tennesseelookout.com/2026/05/12/tennessees-new-9th-district-draws-republican-race/", title: "Tennessee's new 9th District draws race (Tennessee Lookout)", accessed: 2026-10-20 }
+  tw_home: &tw_home { url: "https://toddfortn.com/", title: "State Representative Todd Warner - Home (Warner campaign)", accessed: 2026-10-20 }
+  scene_mai: &scene_mai { url: "https://www.williamsonscene.com/news/democrat-teri-mai-challenging-warner-for-house-district-92-seat/article_221158bc-d803-11ee-97c3-fb28e673eb07.html", title: "Teri Mai challenging Warner for House District 92 seat (Williamson Scene)", accessed: 2026-10-20 }
+  tm_home: &tm_home { url: "https://www.terimai4tn.com/", title: "Teri Mai for Tennessee House District 92 (Mai campaign)", accessed: 2026-10-20 }
+  tm_about: &tm_about { url: "https://www.terimai4tn.com/about-teri-mai/", title: "About Teri Mai (Mai campaign)", accessed: 2026-10-20 }
+  tm_issues: &tm_issues { url: "https://www.terimai4tn.com/issue-statements/", title: "Issue Statements (Mai campaign)", accessed: 2026-10-20 }
+  tm_announce: &tm_announce { url: "https://www.terimai4tn.com/campaign-announcement/", title: "Teri Mai announces bid for Tennessee House of Representatives (Mai campaign)", accessed: 2026-10-20 }
+  tm_grocery: &tm_grocery { url: "https://www.terimai4tn.com/grocery-tax/", title: "End the Grocery Tax (Mai campaign)", accessed: 2026-10-20 }
+  tm_vouchers: &tm_vouchers { url: "https://www.terimai4tn.com/school-vouchers/", title: "End School Vouchers (Mai campaign)", accessed: 2026-10-20 }
+  tm_wage: &tm_wage { url: "https://www.terimai4tn.com/womens-right-to-reproductive-freedom-and-bodily-autonomy/", title: "Establish a Livable Wage (Mai campaign)", accessed: 2026-10-20 }
+  tm_unions: &tm_unions { url: "https://www.terimai4tn.com/labor-unions/", title: "Support Labor Unions (Mai campaign)", accessed: 2026-10-20 }
+  tm_health: &tm_health { url: "https://www.terimai4tn.com/healthcare/", title: "Protect Healthcare Access (Mai campaign)", accessed: 2026-10-20 }
+  tm_mental: &tm_mental { url: "https://www.terimai4tn.com/minimum-wage/", title: "Mental Health & Opioid Recovery (Mai campaign)", accessed: 2026-10-20 }
+  tm_infra: &tm_infra { url: "https://www.terimai4tn.com/infrastructure-broadband/", title: "Infrastructure & Broadband (Mai campaign)", accessed: 2026-10-20 }
+  tm_arming: &tm_arming { url: "https://www.terimai4tn.com/arming-faculty-and-staff-is-dangerous-and-irresponsible/", title: "Arming Faculty and Staff is Dangerous and Irresponsible (Mai campaign)", accessed: 2026-10-20 }
+
 id: tn-house-092
 office: "Tennessee House, District 92"
 level: state_house
 district: 92
-research_status: pending
+research_status: complete
 candidate_list_source: "https://sos-prod.tnsosgovfiles.com/s3fs-public/document/TNHouse_Nov2026.pdf"
+
 candidates:
   - name: "Todd Warner"
     ballot_party: Republican
     city: "Lewisburg"
+    incumbent: true
+    website: "https://toddfortn.com"
+    bio_facts:
+      - { text: "State representative for District 92 since November 2020; House member of the 112th through 114th General Assemblies.", sources: [*bp_warner, *cga_h92] }
+      - { text: "Member of the House State & Local Government Committee, the Naming & Designating Committee and the Public Service Subcommittee.", sources: [*cga_h92] }
+      - { text: "Former member of the Marshall County School Board and former alderman for the Town of Chapel Hill.", sources: [*cga_h92, *tw_home] }
+      - { text: "Raised on a dairy farm in Chapel Hill and grows corn and soybeans; worked six years for United Telephone before starting his own business, and has been self-employed since. Graduated from Forrest High School in 1989.", sources: [*tw_home, *bp_warner] }
+      - { text: "Voted against the state's private school voucher program in 2025 and has supported repealing the state sales tax on groceries.", sources: [*lookout92, *firefly_quarry] }
+      - { text: "Ran for the U.S. House in the redrawn 9th Congressional District in 2026 and finished second in the August 6 primary with 26.3% of the vote.", sources: [*bp_warner, *lookout_cd9] }
+      - { text: "Won the August 2026 primary for this seat with 52.2% of the vote; defeated Teri Mai in the 2024 general election, 74.5% to 25.5%.", sources: [*bp_warner, *firefly92] }
     why_running: { text: null, sources: [] }
-    platform: []
-    arguments: []
+    platform:
+      - category: guns
+        text: "Fight for and protect the Second Amendment right to bear arms."
+        sources: [*tw_home]
+      - category: economy
+        text: "Support small businesses and help owners succeed by stopping over-regulation and removing needless bureaucratic obstacles."
+        sources: [*tw_home]
+      - category: immigration
+        text: "Stand strong against illegal immigration and improve border security."
+        sources: [*tw_home]
+      - category: agriculture
+        text: "Protect family farmers so future generations can thrive."
+        sources: [*tw_home]
+      - category: education
+        text: "Empower teachers, parents and students."
+        sources: [*tw_home]
+    arguments:
+      - stance: for
+        text: >-
+          An eighth-generation farmer and longtime small-business owner who says he has pushed back on
+          over-regulation and kept his word as a watchdog for constitutional rights.
+        sources: [*tw_home]
+      - stance: against
+        text: >-
+          Marshall County neighbors opposed a lake project on his farm that they called a rock quarry, citing
+          blasting damage to homes and risks to wells; the county zoning board unanimously denied it.
+        sources: [*firefly_quarry, *wsmv_quarry, *lookout_cd9]
+
   - name: "Teri Mai"
     ballot_party: Democratic
     city: "Spring Hill"
-    why_running: { text: null, sources: [] }
-    platform: []
-    arguments: []
-last_verified: 2026-10-13
+    incumbent: false
+    website: "https://www.terimai4tn.com"
+    bio_facts:
+      - { text: "Works in the complex litigation group at the Morgan & Morgan law firm; previously worked as a legal assistant for 25 years.", sources: [*tm_about, *bp_mai, *lookout92] }
+      - { text: "Bachelor's degree from St. Edward's University (1993), earned while working full time; law degree from Florida Coastal School of Law (2014), started at age 55.", sources: [*tm_about, *bp_mai] }
+      - { text: "Born and raised in Texas; moved to Spring Hill in January 2021 after taking a job with the U.S. Small Business Administration.", sources: [*tm_about, *tm_announce] }
+      - { text: "Has held a leadership role in the Williamson County Democratic Party.", sources: [*tm_announce, *scene_mai] }
+      - { text: "Lost the 2024 general election for this seat to Todd Warner, 25.5% to 74.5%; unopposed in the August 2026 primary.", sources: [*bp_mai, *firefly92] }
+    why_running:
+      text: >-
+        She says she wants to make Tennessee a more family-friendly, affordable place to live and to give her
+        neighbors a voice at the Capitol, including those who don't agree with her. She says representation
+        shouldn't be reserved for the wealthy and well-connected.
+      sources: [*bp_mai, *tm_home]
+    platform:
+      - category: economy
+        text: "Establish a livable minimum wage so a full-time worker can cover rent, utilities, transportation and food; support labor unions."
+        sources: [*bp_mai, *tm_wage, *tm_unions]
+      - category: taxes
+        text: "Eliminate the state sales tax on groceries."
+        sources: [*bp_mai, *tm_grocery]
+      - category: education
+        text: "End the private school voucher program and fully fund public schools."
+        sources: [*bp_mai, *tm_vouchers]
+      - category: health_care
+        text: "Protect health care access as rural hospitals close, and expand access to mental health care and opioid addiction recovery."
+        sources: [*tm_issues, *tm_health, *tm_mental]
+      - category: infrastructure
+        text: "Improve roads, bridges and high-speed internet in rural areas of the district."
+        sources: [*tm_infra]
+      - category: guns
+        text: "Pass gun safety measures such as safe storage and stronger permitting laws; oppose allowing teachers and staff to carry guns in schools."
+        sources: [*tm_about, *scene_mai, *tm_arming]
+      - category: abortion
+        text: "Protect women's reproductive rights and the right to bodily autonomy."
+        sources: [*tm_about, *tm_announce]
+      - category: government
+        text: "Pursue election reforms that make voting safe and accessible for every eligible voter, including restoring voting rights to people who have served their sentences."
+        sources: [*tm_announce, *scene_mai]
+    arguments:
+      - stance: for
+        text: >-
+          She put herself through college while working full time and raising a child, then went to law school
+          at 55, and promises open communication with every resident of the district.
+        sources: [*bp_mai, *tm_about, *tm_home]
+
+last_verified: 2026-10-28
