@@ -23,8 +23,9 @@ pnpm-debug.log*
 # jetbrains setting folder
 .idea/
 
-# agent worktrees
+# agent worktrees and headless research logs
 .claude/worktrees/
+.claude/research-logs/
 
 # wrangler local state
 .wrangler/

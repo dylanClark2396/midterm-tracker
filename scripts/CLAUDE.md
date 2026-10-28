@@ -10,6 +10,7 @@ it). None of them is imported by the site.
 | [check-contact.mjs](check-contact.mjs) | CI; `npm run check:contact` | Contact form and Worker agree on field names, topics and `maxlength`s (parses both files with regexes, so keep `TOPICS`/`LIMITS` as plain object literals) |
 | [build-district-maps.mjs](build-district-maps.mjs) | By hand, rarely | Regenerates [../public/maps/](../public/maps/) GeoJSON (needs network and `npx mapshaper`) |
 | [research-queue.mjs](research-queue.mjs) | `npm run research:queue`; the [research-races skill](../.claude/skills/research-races/SKILL.md) | Where race research stands: PRs to merge or verify, claimed branches, next races (needs `gh`) |
+| [research-runner.mjs](research-runner.mjs) | `npm run research:run -- [--jobs N] [--model sonnet] [--adopt]` | The research-races skill as a script: one headless `claude -p` run each for research and verify, then merge on green (needs `gh`, `claude`) |
 | [seed-from-certified-list.py](seed-from-certified-list.py) | By hand when the state updates its lists | Creates or refreshes `pending` race files; writes [../data-staging/seed-report.md](../data-staging/seed-report.md) |
 
 ## Gotchas
@@ -28,4 +29,8 @@ it). None of them is imported by the site.
   (`us-house-01`, `tn-senate-05`, `tn-house-012`). Its levels must match
   [../src/lib/levels.ts](../src/lib/levels.ts), and `PARTIES` must match the schema's `ballot_party` enum. Use
   `--dry-run` first. Set `FEC_API_KEY` to cross-check federal candidates.
+- `research-runner.mjs` keeps its prompts in sync with the [skill](../.claude/skills/research-races/SKILL.md) by
+  hand; change both. Its Claude runs use `--permission-mode dontAsk` with an allowlist, so the runner (not the
+  agent) opens the PR, comments, labels and merges. It leaves other sessions' PRs and claims alone unless
+  `--adopt` is passed, and keeps the worktree of any race that fails for inspection.
 - The user-agent string is copied into each script on purpose; they're independent single-file tools.

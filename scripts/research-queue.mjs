@@ -3,7 +3,7 @@
 // State lives only in git and GitHub: `research_status` on origin/main, open `data/*` PRs (with or
 // without the `verified` label), and `data/*` branches without a PR. Nothing else to keep in sync.
 //
-// Usage: node scripts/research-queue.mjs [--next N]   (run from the project root; needs git and gh)
+// Usage: node scripts/research-queue.mjs [--next N] [--json]   (run from the project root; needs git and gh)
 import { execFileSync } from 'node:child_process';
 
 const nextArg = process.argv.indexOf('--next');
@@ -56,14 +56,26 @@ const queue = pending
   .sort((a, b) => (b.candidates > 1) - (a.candidates > 1) || a.level - b.level || a.district - b.district);
 const contested = pending.filter((r) => r.candidates > 1).length;
 
+// A branch is pushed (at main's commit) as a claim before research starts, so "0 commits" means
+// research is running elsewhere or was cut off before its first commit.
+const ahead = (b) => Number(run('git', ['rev-list', '--count', `origin/main..origin/${b}`]).trim());
+
+if (process.argv.includes('--json')) {
+  // For research-runner.mjs.
+  console.log(JSON.stringify({
+    verified: verified.map((p) => ({ number: p.number, id: p.headRefName.slice(5) })),
+    unverified: unverified.map((p) => ({ number: p.number, id: p.headRefName.slice(5) })),
+    orphans: orphanBranches.map((b) => ({ id: b.slice(5), ahead: ahead(b) })),
+    queue: queue.map((r) => ({ id: r.id, candidates: r.candidates })),
+  }));
+  process.exit(0);
+}
+
 const list = (rows, fmt) => (rows.length ? rows.map((r) => `  ${fmt(r)}`).join('\n') : '  (none)');
 console.log(`Researched: ${races.length - pending.length} of ${races.length}. Pending on main: ${pending.length} ` +
   `(${contested} contested, ${pending.length - contested} single-candidate).\n`);
 console.log(`1. Verified PRs, merge when CI is green:\n${list(verified, (p) => `#${p.number} ${p.headRefName}`)}\n`);
 console.log(`2. PRs that still need the verifier pass:\n${list(unverified, (p) => `#${p.number} ${p.headRefName}`)}\n`);
-// A branch is pushed (at main's commit) as a claim before research starts, so "0 commits" means
-// research is running elsewhere or was cut off before its first commit.
-const ahead = (b) => Number(run('git', ['rev-list', '--count', `origin/main..origin/${b}`]).trim());
 console.log(`3. data/* branches with no PR (claimed; if no session is working on them, they were interrupted):\n` +
   list(orphanBranches, (b) => `${b}  (${ahead(b)} commits past main)`) + '\n');
 console.log(`4. Next ${Math.min(NEXT, queue.length)} to research:\n` +
