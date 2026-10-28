@@ -12,6 +12,9 @@ point. Nothing is tracked in memory or in this file.
 The owner has authorized merging research PRs without review once CI is green and the verifier pass is done.
 Feature PRs are different: never merge those without asking.
 
+To run this without an orchestrating session, use `npm run research:run` (see
+[scripts/research-runner.mjs](../../../scripts/research-runner.mjs)); it does the same steps with headless runs.
+
 ## 1. See where things stand
 
 ```sh
