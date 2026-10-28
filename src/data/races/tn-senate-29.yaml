@@ -31,9 +31,10 @@ candidates:
       - { text: "Unopposed on the November 2026 ballot.", sources: [*lookout29, *bp_akbari] }
     why_running:
       text: >-
-        In a February 2026 address, she said she did not run for office to make life easier for people already
-        doing fine, but for working parents, grandparents raising grandchildren, young couples trying to buy a
-        first home, and workers who still worry about paying the light bill.
+        In a video message released ahead of the governor's 2026 State of the State address, she said she did
+        not run for office to make life easier for people already doing fine, but for working parents,
+        grandparents raising grandchildren, young couples trying to buy a first home, and workers who still
+        worry about paying the light bill.
       sources: [*mtnpress]
     platform:
       - category: economy
@@ -53,4 +54,4 @@ candidates:
         sources: [*mtnpress, *flyer]
     arguments: []
 
-last_verified: 2026-10-20
+last_verified: 2026-10-28
