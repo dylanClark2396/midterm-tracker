@@ -61,8 +61,8 @@ candidates:
     arguments:
       - stance: for
         text: >-
-          She points to 23 bills passed into law, including maternal health measures, as proof that she can work
-          within the legislature to turn residents' problems into results.
+          She points to 23 bills she has passed in the legislature, including maternal health measures, as proof
+          that she can work within the system to turn residents' problems into results.
         sources: [*mlk50]
       - stance: for
         text: >-
@@ -76,9 +76,9 @@ candidates:
         sources: [*cbs2018]
       - stance: against
         text: >-
-          During her 2026 congressional primary, critics said her conciliatory approach was not persuasive, and a
-          Memphis resident said her criticism of a fellow lawmaker's confrontation with state troopers put her on
-          the wrong side of history.
+          During her 2026 congressional primary, a Memphis rhetoric expert said the way she maneuvers to win over
+          voters is not persuasive, and a Memphis resident said her criticism of a fellow lawmaker's confrontation
+          with state troopers meant she was choosing the wrong side of history.
         sources: [*mlk50]
 
 last_verified: 2026-10-20
