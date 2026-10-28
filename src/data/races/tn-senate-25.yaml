@@ -72,18 +72,18 @@ candidates:
         sources: [*tha2024]
       - stance: for
         text: >-
-          His 2026 law makes local agencies verify citizenship or legal status before handing out public benefits,
-          so that tax dollars serve only people lawfully in the country.
+          His 2026 law makes local agencies verify citizenship or legal status before handing out public benefits;
+          the bill's House sponsor said the aim is for tax dollars to serve people who are legally in the country.
         sources: [*lookout_feb, *sb1915]
       - stance: for
         text: >-
-          Says voter registration drives must be run responsibly so that late and incomplete forms don't overwhelm
-          election offices or compromise election security.
+          Says registering voters must be done responsibly and without compromising election security, and that
+          some paid registration drives may be driven by money and the wish to collect voter data.
         sources: [*chn2019]
       - stance: against
         text: >-
-          Critics said his benefits-verification bill saves no money, is unclear about which benefits it covers,
-          and exposes local governments to large legal liability.
+          A Senate critic said his benefits-verification bill saves no money, is unclear about which benefits it
+          covers, and exposes local governments to large legal liability.
         sources: [*lookout_mar]
       - stance: against
         text: >-
@@ -91,4 +91,4 @@ candidates:
           community efforts to register voters in a state with low turnout.
         sources: [*chn2019]
 
-last_verified: 2026-10-20
+last_verified: 2026-10-28
