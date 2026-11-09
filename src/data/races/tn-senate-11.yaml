@@ -6,7 +6,7 @@ _sources:
   bw_home: &bw_home { url: "https://www.bofortn.com/", title: "Senator Bo Watson (Watson campaign)", accessed: 2026-10-13 }
   bw_about: &bw_about { url: "https://www.bofortn.com/about", title: "About Bo (Watson campaign)", accessed: 2026-10-13 }
   bw_deliver: &bw_deliver { url: "https://www.bofortn.com/delivering-for-district-11", title: "Delivering for District 11 (Watson campaign)", accessed: 2026-10-13 }
-  bw_endorse: &bw_endorse { url: "https://www.bofortn.com/endorsements", title: "Endorsements (Watson campaign)", accessed: 2026-10-13 }
+  bw_endorse: &bw_endorse { url: "https://web.archive.org/web/20261010181153/https://www.bofortn.com/endorsements", title: "Endorsements (Watson campaign, archived)", accessed: 2026-10-13 }
   local3_watson: &local3_watson { url: "https://www.local3news.com/local-news/republican-bo-watson-announces-2026-re-election-bid-for-tennessee-state-senate/article_aaf798a4-aa4c-44a2-b6d3-dc1a616e5c18.html", title: "Republican Bo Watson announces 2026 re-election bid for Tennessee State Senate (Local 3 News)", accessed: 2026-10-13 }
   wdef_sb836: &wdef_sb836 { url: "https://www.wdef.com/?p=2129474", title: "Undocumented student bill stalls out in Tennessee Legislature (WDEF)", accessed: 2026-10-13 }
   firefly_sb836: &firefly_sb836 { url: "https://tnfirefly.com/news/hamilton-county-senator-bo-watson-faces-pushback-from-chattanooga-educators-and-business-leaders-for-bill-impacting-undocumented-students", title: "Hamilton County Senator Bo Watson faces pushback from Chattanooga educators and business leaders for bill impacting undocumented students (Tennessee Firefly)", accessed: 2026-10-13 }
