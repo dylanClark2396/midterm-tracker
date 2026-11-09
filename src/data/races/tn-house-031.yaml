@@ -5,7 +5,7 @@ _sources:
   lookout31: &lookout31 { url: "https://tennesseelookout.com/voter-guides/contests/house-district-31/", title: "Tennessee House of Representatives, 31st District voter guide (Tennessee Lookout)", accessed: 2026-10-15 }
   as_home: &as_home { url: "https://andyswafford.com/", title: "Vote Andy Swafford for State Representative (Swafford campaign)", accessed: 2026-10-15 }
   bp_woodlee: &bp_woodlee { url: "https://ballotpedia.org/Michael_Woodlee", title: "Michael Woodlee (Ballotpedia, including his Candidate Connection survey)", accessed: 2026-10-15 }
-  mw_home: &mw_home { url: "https://www.woodlee4tnhouse-d31.com/", title: "Michael Woodlee for TN House District 31 (Woodlee campaign)", accessed: 2026-10-15 }
+  mw_home: &mw_home { url: "https://web.archive.org/web/20261023021534/https://www.woodlee4tnhouse-d31.com/", title: "Michael Woodlee for TN House District 31 (Woodlee campaign, archived)", accessed: 2026-10-15 }
 
 id: tn-house-031
 office: "Tennessee House, District 31"
@@ -62,7 +62,7 @@ candidates:
     ballot_party: Democratic
     city: "Spencer"
     incumbent: false
-    website: "https://www.woodlee4tnhouse-d31.com/"
+    website: "https://web.archive.org/web/20261023021534/https://www.woodlee4tnhouse-d31.com/"
     bio_facts:
       - { text: "Van Buren County native and graduate of Van Buren County High School.", sources: [*mw_home, *bp_woodlee] }
       - { text: "Served in the U.S. Army from 2013 to 2016 as a military police officer.", sources: [*bp_woodlee, *mw_home] }

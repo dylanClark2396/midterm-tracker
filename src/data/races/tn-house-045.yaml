@@ -12,8 +12,8 @@ _sources:
   wex_usmc: &wex_usmc { url: "https://www.washingtonexaminer.com/videos/4644564/veteran-brian-stewart-tennessee-gop-primary-incongruent-marine-corps-standards/", title: "USMC flags candidate in Hegseth's district as 'incongruent with Marine Corps standards' (Washington Examiner)", accessed: 2026-10-16 }
   milcom: &milcom { url: "https://www.yahoo.com/news/politics/articles/gop-candidate-running-against-veterans-161144242.html", title: "GOP Candidate Running Against Veterans Accused of Exaggerating Marine Service Record (Military.com via Yahoo News)", accessed: 2026-10-16 }
   mc_home: &mc_home { url: "https://www.mandycook4tn.com/", title: "Mandy Cook for TN | Candidate for TN House District 45 (Cook campaign)", accessed: 2026-10-16 }
-  mc_about: &mc_about { url: "https://www.mandycook4tn.com/about", title: "About Mandy (Cook campaign)", accessed: 2026-10-16 }
-  mc_issues: &mc_issues { url: "https://www.mandycook4tn.com/issues", title: "Issues: Mandy's Platform (Cook campaign)", accessed: 2026-10-16 }
+  mc_about: &mc_about { url: "https://web.archive.org/web/20261031171723/https://www.mandycook4tn.com/about", title: "About Mandy (Cook campaign, archived)", accessed: 2026-10-16 }
+  mc_issues: &mc_issues { url: "https://web.archive.org/web/20261019181648/https://www.mandycook4tn.com/issues", title: "Issues: Mandy's Platform (Cook campaign, archived)", accessed: 2026-10-16 }
   mc_announce: &mc_announce { url: "https://mainstreetmediatn.com/articles/gallatinnews/campaign-announcement-mandy-cook-for-tennessee-house-district-45/", title: "Campaign announcement: Mandy Cook for Tennessee House, District 45 (Main Street Media of Tennessee)", accessed: 2026-10-16 }
 
 id: tn-house-045
