@@ -15,6 +15,7 @@
     "check:contact": "node scripts/check-contact.mjs",
     "check": "astro check",
     "research:queue": "node scripts/research-queue.mjs",
+    "research:run": "node scripts/research-runner.mjs",
     "astro": "astro"
   },
   "dependencies": {
